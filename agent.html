@@ -22,7 +22,7 @@
   <main class="agent-shell">
     <header class="agent-head">
       <div>
-        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.1</span>
+        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.2</span>
         <h1>AI kiadási ügynök</h1>
         <p>Írd le közérthetően, mit szeretnél módosítani. Az ügynök előkészíti az új verziót, lefuttatja az ellenőrzéseket, majd jóváhagyás után kiadható.</p>
       </div>
@@ -124,7 +124,7 @@
             <input id="agent-endpoint" value="Netlify Functions (beépítve)" disabled>
           </label>
           <p><strong>Minimum beállítás:</strong> Netlify → Project configuration → Environment variables → <code>OPENAI_API_KEY</code>.<br>
-Opcionálisan <code>OPENAI_MODEL</code> (alapértelmezés: <code>gpt-5</code>). Automatikus production feltöltéshez még <code>NETLIFY_AUTH_TOKEN</code> és <code>NETLIFY_SITE_ID</code> kell; ezek nélkül a jóváhagyott új ZIP egyszerűen letölthető.</p>
+Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gpt-5-mini</code>, a költségtakarékos működéshez. Automatikus production feltöltéshez még <code>NETLIFY_AUTH_TOKEN</code> és <code>NETLIFY_SITE_ID</code> kell; ezek nélkül a jóváhagyott új ZIP egyszerűen letölthető.</p>
           <div class="agent-settings__actions">
             <button id="agent-save-settings" class="button button--secondary" type="button">Mentés</button>
             <button id="agent-demo" class="button button--secondary" type="button">Demó folyamat</button>
@@ -151,6 +151,16 @@ Opcionálisan <code>OPENAI_MODEL</code> (alapértelmezés: <code>gpt-5</code>). 
         <article>
           <h3>Ellenőrzések</h3>
           <div id="agent-checks" class="agent-check-list"></div>
+          <div class="agent-usage-card" id="agent-usage-card" hidden>
+            <div class="agent-usage-card__head"><strong>AI használat</strong><span id="agent-usage-model"></span></div>
+            <div class="agent-usage-grid">
+              <div><span>Input</span><strong id="agent-usage-input">–</strong></div>
+              <div><span>Output</span><strong id="agent-usage-output">–</strong></div>
+              <div><span>Összes token</span><strong id="agent-usage-total">–</strong></div>
+              <div class="agent-usage-cost"><span>Becsült API-költség</span><strong id="agent-usage-cost">–</strong></div>
+            </div>
+            <small>Tájékoztató becslés az API által visszaadott tokenhasználat alapján.</small>
+          </div>
         </article>
       </div>
 
@@ -165,7 +175,7 @@ Opcionálisan <code>OPENAI_MODEL</code> (alapértelmezés: <code>gpt-5</code>). 
 
     <footer class="agent-footer">
       <p>© OFA Nonprofit Kft. Minden jog fenntartva. <span id="agent-year"></span></p>
-      <span>BETA 3.1 · Netlify AI backend example</span>
+      <span>BETA 3.2 · Költségtakarékos AI backend</span>
     </footer>
   </main>
 

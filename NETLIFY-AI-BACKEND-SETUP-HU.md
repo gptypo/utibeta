@@ -45,7 +45,7 @@ Hozd létre:
 
 Opcionális:
 
-`OPENAI_MODEL = gpt-5`
+`OPENAI_MODEL = gpt-5-mini`
 
 Az API-kulcs nincs a böngészőben és nincs a ZIP forráskódjába írva.
 
@@ -141,3 +141,14 @@ Ez **példa / pilot backend**, nem teljes Git-alapú release rendszer.
 A modell teljes fájltartalmakat ad vissza, a backend ezeket egy BETA 3.0 alap ZIP másolatába írja. Emiatt minden AI-buildet át kell nézni kiadás előtt.
 
 A következő, intézményi szintű lépcső GitHub branch + pull request + Deploy Preview workflow lenne.
+
+
+---
+
+## BETA 3.2 – költségtakarékos alapbeállítás
+
+Az alapmodell most `gpt-5-mini`. Az AI Agent mindkét API-hívás tokenhasználatát összeadja, és az elkészült build mellett kijelzi az input, output, összes token és a becsült USD API-költséget. A tényleges számlázás forrása mindig az OpenAI Platform Usage/Billing felülete.
+
+Ha összetettebb módosításnál erősebb modell kell, a Netlify `OPENAI_MODEL` environment variable átírható `gpt-5` értékre kódmódosítás nélkül.
+
+A költségbecslés a `gpt-5-mini`, `gpt-5` és `gpt-5-nano` modellekhez van beépítve. Más modellnél a tokeneket kijelzi, de USD összeget nem találgat.

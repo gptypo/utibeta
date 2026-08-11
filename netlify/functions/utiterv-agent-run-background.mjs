@@ -117,7 +117,28 @@ export default async (req, context) => {
     }
 
     const client=new OpenAI({apiKey:process.env.OPENAI_API_KEY});
-    const model=process.env.OPENAI_MODEL||"gpt-5";
+    const model=process.env.OPENAI_MODEL||"gpt-5-mini";
+    const PRICE_PER_M={
+      "gpt-5-mini":{input:0.25,cachedInput:0.025,output:2.00},
+      "gpt-5":{input:1.25,cachedInput:0.125,output:10.00},
+      "gpt-5-nano":{input:0.05,cachedInput:0.005,output:0.40}
+    };
+    const usageTotal={input_tokens:0,cached_input_tokens:0,output_tokens:0,total_tokens:0};
+    function addUsage(resp){
+      const u=resp?.usage||{};
+      const cached=u.input_tokens_details?.cached_tokens||0;
+      usageTotal.input_tokens+=(u.input_tokens||0);
+      usageTotal.cached_input_tokens+=cached;
+      usageTotal.output_tokens+=(u.output_tokens||0);
+      usageTotal.total_tokens+=(u.total_tokens||((u.input_tokens||0)+(u.output_tokens||0)));
+    }
+    function costEstimate(){
+      const p=PRICE_PER_M[model];
+      if(!p)return null;
+      const uncached=Math.max(0,usageTotal.input_tokens-usageTotal.cached_input_tokens);
+      const usd=(uncached*p.input+usageTotal.cached_input_tokens*p.cachedInput+usageTotal.output_tokens*p.output)/1_000_000;
+      return {currency:"USD",estimatedUsd:Number(usd.toFixed(6)),pricePerMillion:p};
+    }
     const zip=new AdmZip(await readFile(BASE_ZIP));
     const files=entryIndex(zip);
     const attachments=await attachmentContext(job);
@@ -155,6 +176,7 @@ ${files.join("\n")}` }]
         }
       ]
     });
+    addUsage(selection);
     const picked=parseJson(selection.output_text,"Fájlkiválasztás");
     const paths=(picked.paths||[]).filter(p=>files.includes(p)&&safePath(p)).slice(0,10);
     if(!paths.length) throw new Error("Az AI nem választott módosítható fájlt.");
@@ -198,6 +220,7 @@ ${sources}` }]
       ]
     });
 
+    addUsage(editResp);
     const edit=parseJson(editResp.output_text,"Kódmódosítás");
     const changed=[];
     for(const f of edit.files||[]){
@@ -229,7 +252,8 @@ ${sources}` }]
       changedFiles:changed,
       checks,
       artifactUrl:`/.netlify/functions/utiterv-agent-artifact?id=${encodeURIComponent(jobId)}`,
-      previewUrl:null
+      previewUrl:null,
+      aiUsage:{model,inputTokens:usageTotal.input_tokens,cachedInputTokens:usageTotal.cached_input_tokens,outputTokens:usageTotal.output_tokens,totalTokens:usageTotal.total_tokens,cost:costEstimate()}
     });
   }catch(error){
     if(jobId){
