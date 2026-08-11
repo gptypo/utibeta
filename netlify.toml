@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["netlify/functions/_assets/utiterv-base.zip"]
+
+# Az AI-kulcsot NE írd ebbe a fájlba.
+# Netlify UI → Project configuration → Environment variables:
+# OPENAI_API_KEY = ...
+# Opcionális:
+# OPENAI_MODEL = gpt-5
+# NETLIFY_AUTH_TOKEN = ...   # csak automatikus production deployhoz
+# NETLIFY_SITE_ID = ...      # csak automatikus production deployhoz

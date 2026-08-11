@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1114" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Útiterv">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=beta-1.0-launcher-outline-fix">
+  <meta name="description" content="Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.">
+  <link rel="manifest" href="manifest.webmanifest?v=beta-1.2.5-career-competency-polish">
+  <link rel="stylesheet" href="css/pwa.css?v=beta-1.2.6">
+  
+  <link rel="icon" href="assets/icons/favicon-32.png?v=beta-1.0-launcher-outline-fix" type="image/png">
+  <link rel="stylesheet" href="css/app.css?v=beta-1.2.7">
+  <link rel="stylesheet" href="css/foundation.css?v=beta-1.0-winwin-integrated">
+  <script>try{const t=localStorage.getItem('utiterv-theme');const d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.style.colorScheme=d?'dark':'light'}catch{}</script>
+  <title>Útiterv a Jövőbe</title>
+<link rel="stylesheet" href="css/theme.css?v=beta-1.2.7">
+<link rel="stylesheet" href="css/color-system.css?v=8.3.0">
+</head>
+<body>
+  <section id="splash" class="splash" aria-label="Alkalmazás indítása">
+    <div class="splash__mark">
+      <img class="splash__pin" src="assets/SVG_ASSETS/LOGO/LOGO_PINPOINT_CON.svg" alt="">
+      <img class="splash__rocket" src="assets/SVG_ASSETS/LOGO/LOGO_ROCKET_CON.svg" alt="">
+    </div>
+    <img class="splash__wordmark" src="assets/SVG_ASSETS/LOGO/LOGO_TIPO.svg" alt="Útiterv a Jövőbe">
+    <button class="splash__skip" type="button" data-skip-splash>Ugrás</button>
+  </section>
+
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <button class="brand" type="button" data-route="home" aria-label="Főoldal">
+        <img src="assets/SVG_ASSETS/LOGO/LOGO_CON.svg" alt="">
+        <span>Útiterv a Jövőbe</span>
+      </button>
+      <div class="topbar__actions">
+        <button class="version version--button" type="button" data-route="system" aria-label="Design system megnyitása">BETA 3.1</button>
+        <button class="menu-button" type="button" data-menu-open aria-label="Főmenü megnyitása" aria-controls="app-menu" aria-expanded="false" hidden>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <footer class="app-footer"><span>© OFA Nonprofit Kft. Minden jog fenntartva. <span data-copyright-year></span></span><button type="button" data-route="privacy">Adatvédelem és impresszum</button></footer>
+
+    <div class="menu-backdrop" data-menu-close hidden></div>
+    <aside id="app-menu" class="app-menu" aria-label="Fő navigáció" aria-hidden="true" tabindex="-1">
+      <div class="app-menu__head">
+        <div><span class="eyebrow eyebrow--dark">Útiterv</span><h2>Merre tovább?</h2></div>
+        <button class="menu-close" type="button" data-menu-close aria-label="Menü bezárása">×</button>
+      </div>
+      <nav class="app-menu__nav">
+        <button type="button" data-route="home"><span class="app-menu__home">⌂</span><span><strong>Főoldal</strong><small>Vissza a témákhoz</small></span></button>
+        <button type="button" data-route="onmagam"><img src="assets/SVG_ASSETS/SML_CONS/QG_SMALL_ICON.svg" alt=""><span><strong>QUIT &amp; GO</strong><small>Önmagam</small></span></button>
+        <button type="button" data-route="helyzeteim"><img src="assets/SVG_ASSETS/SML_CONS/QW_SMALL_ICON.svg" alt=""><span><strong>QUICK WIN</strong><small>Helyzeteim</small></span></button>
+        <button type="button" data-route="kapcsolataim"><img src="assets/SVG_ASSETS/SML_CONS/WW_SMALL_ICON.svg" alt=""><span><strong>WIN-WIN</strong><small>Kapcsolataim</small></span></button>
+        <button type="button" data-route="bonus"><img src="assets/SVG_ASSETS/SML_CONS/GG_SMALL_ICON.svg" alt=""><span><strong>GALAXY GUIDE</strong><small>Tudástár</small></span></button>
+        <button type="button" data-route="privacy"><span class="app-menu__privacy" aria-hidden="true">⌁</span><span><strong>Adatvédelem</strong><small>Helyi adattárolás és jogi információk</small></span></button>
+      </nav>
+    </aside>
+  </div>
+
+  <script>
+    (() => {
+      const showStartupError = error => {
+        const splash = document.querySelector('#splash');
+        const app = document.querySelector('#app');
+        if (splash) splash.hidden = true;
+        if (app) app.hidden = false;
+        const view = document.querySelector('#view');
+        if (!view) return;
+        view.innerHTML = `<section class="startup-error"><span class="eyebrow eyebrow--dark">Indítási hiba</span><h1>Az alkalmazás nem tudott elindulni.</h1><p>Frissítsd az oldalt a <strong>Ctrl + F5</strong> billentyűkkel. Ha ez nem segít, töröld a localhost webhelyadatait, majd indítsd újra a Live Servert.</p><details><summary>Technikai részletek</summary><pre>${String(error?.message || error || 'Ismeretlen hiba')}</pre></details></section>`;
+      };
+      window.addEventListener('error', event => showStartupError(event.error || event.message));
+      window.addEventListener('unhandledrejection', event => showStartupError(event.reason));
+    })();
+  </script>
+  <script type="module" src="js/theme.js?v=beta-1.0-winwin-integrated"></script>
+  <script type="module" src="js/pwa.js?v=beta-3.0"></script>
+  <script type="module" src="js/studio-runtime.js?v=beta-1.0-winwin-integrated"></script>
+  <script type="module" src="js/app.js?v=beta-3.1"></script>
+  <script>document.querySelector('[data-copyright-year]').textContent = new Date().getFullYear();</script>
+</body>
+</html>
