@@ -1,0 +1,60 @@
+{
+  "schema": "utiterv-module-v5",
+  "id": "helyzeteim",
+  "slug": "quick-win",
+  "title": "Helyzeteim",
+  "code": "quick<br>WIN",
+  "className": "qw",
+  "icon": "QW_BIG_ICON.svg",
+  "thin": "QW_BIG_ICON_thin.svg",
+  "lead": "Kis lépések, gyors eredmények",
+  "time": 18,
+  "sections": [
+    {
+      "id": "world",
+      "title": "A munka világa",
+      "file": "world.json"
+    },
+    {
+      "id": "jobhunt",
+      "title": "Állásvadászat",
+      "file": "jobhunt.json"
+    },
+    {
+      "id": "interview",
+      "title": "Interjú Q&A",
+      "file": "interview.json"
+    },
+    {
+      "id": "cv",
+      "title": "CV",
+      "file": "cv.json"
+    },
+    {
+      "id": "linkedin",
+      "title": "LinkedIn",
+      "file": "linkedin.json"
+    },
+    {
+      "id": "firstday",
+      "title": "Első nap",
+      "file": "firstday.json"
+    },
+    {
+      "id": "redflags",
+      "title": "Vészjelek",
+      "file": "redflags.json"
+    },
+    {
+      "id": "legal",
+      "title": "Munkajogi alapok",
+      "file": "legal.json"
+    },
+    {
+      "id": "scenarios",
+      "title": "Gyakorlás",
+      "file": "scenarios.json"
+    }
+  ],
+  "heroIconMode": "auto"
+}

@@ -1,0 +1,299 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "digital",
+  "title": "Digitális tér",
+  "data": {
+    "digitalBehavior": [
+      {
+        "title": "E-mail etikett a munkahelyen",
+        "content": "Legyen egyértelmű tárgya, megszólítása és formális elköszönése. Légy tömör: ha az e-mail több mint 5 bekezdés, inkább telefonálj. A „Szia” cégen belül általában oké, ügyfeleknek kevésbé."
+      },
+      {
+        "title": "Teams / Slack chat: mikor, mit, hogyan?",
+        "content": "A chat gyors kérdésekre és rövid visszajelzésekre való. Nagyobb témákat, döntéseket e-mailben vagy hívásban intézz – így nyom marad. Tiszteld mások „elfoglalt” státuszát, ne küldj tucatnyi egymondatos üzenetet."
+      },
+      {
+        "title": "Emoji-használat – mikor megfelelő?",
+        "content": "Belső chaten lazábbak a szabályok, de ügyfelekkel és felettesekkel tartózkodj az emojiktól, amíg meg nem ismered a kultúrát. A szmájlik kulturálisan is félreérthetők."
+      },
+      {
+        "title": "Szakmai LinkedIn-jelenlét",
+        "content": "Építsd a profilod: profilfotó, összefoglaló, munkatapasztalat, készségek. A HR-esek rendszeresen keresnek LinkedIn-en. Szólj a cégről pozitívan, ha megosztasz róluk tartalmat."
+      },
+      {
+        "title": "Privát vs. szakmai online jelenlét",
+        "content": "Ami felkerül a netre, az ott is marad. A HR gyakran megnézi a közösségi profilokat felvétel előtt és után is. A privát tartalmakat tartsd privát beállításon – vagy gondolkodj el, mielőtt posztolsz."
+      },
+      {
+        "title": "Videóhívás etikettje",
+        "content": "Nézd a kamerát, ne a saját képedet. Mutasd az arcodat. Csöndes, jól megvilágított helyen ülj. Ha nem te beszélsz, némítsd le magad. Időben csatlakozz – az online késés ugyanolyan udvariatlan."
+      },
+      {
+        "title": "Céges eszközök és adatok védelme",
+        "content": "A céges eszközöket csak munkára használd, ne telepíts jóvá nem hagyott szoftvereket. A céges adatok – ügyféladatok, pénzügyi infó – titkosak. Adatbiztonsági incidenst azonnal jelezz IT-nak."
+      },
+      {
+        "title": "Telefon használata munkaidőben",
+        "content": "A munkahelyen a személyes telefonhasználat korlátozható. Meetingen, ügyféllel vagy vezető jelenlétében tedd le a telefont. A folyamatos görgetés nemcsak zavaró, hanem elmarasztalható is."
+      },
+      {
+        "title": "Jelszók és fiókbiztonság",
+        "content": "Sosem add meg a céges jelszavadat senkinek – még az IT-nak sem szükséges. Jelszóváltáskor használj egyedi, erős jelszót. Ha gyanús e-mailt kapsz (phishing), ne kattints – jelezd a kollégáknak."
+      },
+      {
+        "title": "Fájlok elnevezése és megosztása",
+        "content": "Mindig érthető fájlnevet adj a dokumentumoknak: például „Projekt_alap_v2_2025jan.docx”. A „végleges_final_2_TÉNYLEGESEN_végső” típusú nevek konfúziót okoznak. A céges tárhelyen kívülre ne küldj bizalmas fájlokat."
+      },
+      {
+        "title": "Munkahelyi csoportchat kultúra",
+        "content": "A csoportos csatornákban mindig olvasd el az előzményeket, mielőtt kérdezel. Ne taggelj (@) mindenkit, ha csak egy-két embernek szól az üzenet. A GIF-ek és belsős viccek a csapat kultúrájától függenek – eleinte figyelj, aztán alkalmazkodj."
+      },
+      {
+        "title": "Digitális jelenlét az első hetekben",
+        "content": "Eleinte inkább kevesebbet posztolj a munkáról a közösségi médiában – még nem ismered a cég kommunikációs szabályait. Kérdezd meg, van-e közösségimédia-szabályzat. Az első benyomás online is számít."
+      }
+    ],
+    "digitálisViselkedésQuiz": [
+      {
+        "situation": "Fontos döntést hoztál egy chat-üzenetben egy kollégával. Mit teszel utána?",
+        "options": [
+          {
+            "text": "Semmit – ott van a chatben, ha szükséges.",
+            "isOptimal": false,
+            "feedback": "A chat üzenetek könnyen elvesznek. Fontos döntéseket e-mailben kell összefoglalni, hogy nyom maradjon."
+          },
+          {
+            "text": "Kibővítem a csoportchatbe, hogy mindenki tudja.",
+            "isOptimal": false,
+            "feedback": "Ha a döntés csak kettőtöket érint, a csoportba írás zavaró lehet. E-mail a megfelelő eszköz."
+          },
+          {
+            "text": "Összefoglalom e-mailben: „Ahogy ma megbeszéltük, a döntés a következő...”",
+            "isOptimal": true,
+            "feedback": "Így mindenki félreértés nélkül tudja a megállapodást, és visszakereshető."
+          }
+        ]
+      },
+      {
+        "situation": "Videóhíváson vagy, és a hang nem jó a te mikrofonodon. Mit teszel?",
+        "options": [
+          {
+            "text": "Folytatom – majd megértik, amit mondok.",
+            "isOptimal": false,
+            "feedback": "A rossz hangminőség frusztráló és akadályozza a kommunikációt. Előbb jelezd a problémát."
+          },
+          {
+            "text": "Jelzem gyorsan a chatbe: „Problémám van a mikrofonommal – 1 percen belül visszavagyok.”",
+            "isOptimal": true,
+            "feedback": "Gyors, kezdeményező és nem zavarод ezzel a meetinget hosszan. Ez általában ezt várják viselkedés."
+          },
+          {
+            "text": "Kikapcsolom a kamerát – majd csak hallgatom a többieket.",
+            "isOptimal": false,
+            "feedback": "A kamera kikapcsolása elvágja a vizuális kommunikációt. Inkább írásban jelezd a technikai problémát."
+          }
+        ]
+      },
+      {
+        "situation": "A munkahelyi e-mailedre privát barátod ír egy emlékeztetőt. Mit teszel?",
+        "options": [
+          {
+            "text": "Jelzem barátomnak, hogy ezt a privát számomra küldje, és a céges e-mailt csak munkára használom.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes határhúzás. A céges kommunikációs eszközöket csak munkára szabad használni."
+          },
+          {
+            "text": "Válaszolok a céges e-mailből – gyorsabb így.",
+            "isOptimal": false,
+            "feedback": "A céges e-mail-cím privát üzenetekre való használata nem megfelelő, és az adatok védelme is kérdéses."
+          },
+          {
+            "text": "Olvasom, de nem válaszolok – munkahelyen vagyok.",
+            "isOptimal": false,
+            "feedback": "Az olvasás már határt sért. Érdemes a barátodnak jelezni, hogy privát emailre írjon."
+          }
+        ]
+      },
+      {
+        "situation": "Egy ügyféllel chatelsz Teams-en, és vicces emojit szeretnél küldeni. Mit teszel?",
+        "options": [
+          {
+            "text": "Elküldöm – barátságosabb lesz az üzenet.",
+            "isOptimal": false,
+            "feedback": "Ügyfélkommunikációban – különösen eleinte – az emoji nem megfelelő, amíg nem ismered a stílusát."
+          },
+          {
+            "text": "Megkérdezem a kollégámat, hogy ez az ügyfél szokott-e emojit használni.",
+            "isOptimal": false,
+            "feedback": "Ez nem rossz gondolat, de felesleges – az ügyfélstílus a kommunikáció alatt kiderül magától is."
+          },
+          {
+            "text": "Megtartóztatom magam, és formális hangvételt tartok, amíg az ügyfél stílusa nem derül ki.",
+            "isOptimal": true,
+            "feedback": "Ez a biztonságos megközelítés. Ha az ügyfél barátibb stílusban ír, akkor igazodhatsz hozzá."
+          }
+        ]
+      },
+      {
+        "situation": "Egy munkás meetinget elmulasztottál. A felvétel elérhető. Mit teszel?",
+        "options": [
+          {
+            "text": "Megvárom, hogy valaki elmondja, mi hangzott el.",
+            "isOptimal": false,
+            "feedback": "Ez passzív és mások idejét terheli. Ha felvétel van, néz meg te magad."
+          },
+          {
+            "text": "Megnézem a felvételt, és ha van nyitott kérdésem, megkérdezem a legérintettebb kollégát.",
+            "isOptimal": true,
+            "feedback": "Ez a profi és önálló hozzáállás. Felvételből tanulni ugyanolyan érték, mint élőben részt venni."
+          },
+          {
+            "text": "Nem teszek semmit – úgysem volt fontos.",
+            "isOptimal": false,
+            "feedback": "Ha meetingre hívtak, az általában azért volt, mert fontos. A távolmaradás utólagos érdeklődés nélkül nem profi."
+          }
+        ]
+      },
+      {
+        "situation": "A linkedines profilodon régi, amatőr profilfotó van. Fontosnak tartod megváltoztatni?",
+        "options": [
+          {
+            "text": "Igen – profi, jó fényviszonyú, mosolygós fotót töltök fel, amin látszik az arcom.",
+            "isOptimal": true,
+            "feedback": "A profilfotó növeli a hitelességet és a profil elérhetőségét. Ez megéri a befektetést."
+          },
+          {
+            "text": "Nem – a munka számít, nem a fotó.",
+            "isOptimal": false,
+            "feedback": "A profilfotó az első benyomás. A HR és ügyfelek is megnézik – egy jó fotó sokat számít."
+          },
+          {
+            "text": "Törölöm a profilfotót – így semleges maradok.",
+            "isOptimal": false,
+            "feedback": "A fotó nélküli profil bizalmatlanságot kelt. Jobb egy egyszerű, de valódi fotó, mint semmi."
+          }
+        ]
+      },
+      {
+        "situation": "A céges laptopodra szeretnéd telepíteni a kedvenc zenei lejátszódat. Mit teszel?",
+        "options": [
+          {
+            "text": "Telepítem – senki nem fogja észrevenni.",
+            "isOptimal": false,
+            "feedback": "Jóvá nem hagyott szoftver telepítése biztonsági kockázat és vállalati szabályzat megsértése."
+          },
+          {
+            "text": "Megkérdezem az IT-t, hogy engedélyezett-e, mielőtt telepítem.",
+            "isOptimal": true,
+            "feedback": "Ez az egyetlen helyes út. Az IT-val való egyeztetés véd téged is, a céget is."
+          },
+          {
+            "text": "A telefonomon hallgatom – a céges laptopra csak céges dolgok kerülnek.",
+            "isOptimal": false,
+            "feedback": "Nem rossz megközelítés, de ha valóban szükséges a munkakomfort, kérdezd meg az IT-t a lehetőségekről."
+          }
+        ]
+      },
+      {
+        "situation": "Egy kolléga gyanús e-mailt kapott céges cím látszatával, amelyikben jelszót kérnek. Mit tanácsosol?",
+        "options": [
+          {
+            "text": "Adja meg a jelszót – biztosan az IT kéri.",
+            "isOptimal": false,
+            "feedback": "Az IT soha nem kér jelszót e-mailben. Ez phishing kísérlet – azonnal jelezni kell."
+          },
+          {
+            "text": "Törölje az e-mailt, és ne szóljon senkinek – nem baj, ha nem csinál semmit.",
+            "isOptimal": false,
+            "feedback": "A törlés nem elég – mások is kaphatták, és az IT-nak tudnia kell az esetleges biztonsági résről."
+          },
+          {
+            "text": "Ne kattintson semmire, és azonnal jelezze az IT-nak a gyanús e-mailt.",
+            "isOptimal": true,
+            "feedback": "Helyes – a gyanús emailek jelzése közösségi felelősség. Az IT meg tudja vizsgálni és intézkedni."
+          }
+        ]
+      },
+      {
+        "situation": "Munkáról posztolni szeretnél a közösségi médiádra. Mit ellenőrzöl előtte?",
+        "options": [
+          {
+            "text": "Megnézem, van-e céges közösségimédia-szabályzat, és nem teszem ki a bizalmas infókat.",
+            "isOptimal": true,
+            "feedback": "Ez a felelős hozzáállás. A céges szabályzat ismerete véd téged is és a munkáltatódat is."
+          },
+          {
+            "text": "Semmit – a saját profilom, csinálhatok, amit akarok.",
+            "isOptimal": false,
+            "feedback": "Sok cégnek van közösségimédia-szabályzata. A cégre vonatkozó tartalmak könnyen visszaüthetnek."
+          },
+          {
+            "text": "Előbb megkérdezem a főnököm, hogy posztolhatok-e bármit.",
+            "isOptimal": false,
+            "feedback": "Minden poszthoz jóváhagyást kérni túlzott. Elegendő a szabályzatot ismerni és betartani."
+          }
+        ]
+      },
+      {
+        "situation": "Fontos dokumentumot kell megosztanod egy külső partnerrel. Hogyan küldöd?",
+        "options": [
+          {
+            "text": "Csatolom a Gmail-emhez – egyszerűbb.",
+            "isOptimal": false,
+            "feedback": "A céges dokumentumok privát emailből való küldése biztonsági és adatvédelmi kockázat."
+          },
+          {
+            "text": "A céges e-mail rendszeren vagy az engedélyezett megosztórendszeren keresztül küldöm.",
+            "isOptimal": true,
+            "feedback": "Ez a biztonságos és elfogadható módszer. A dokumentum így a cég rendszerein belül marad."
+          },
+          {
+            "text": "WhatsApp-on küldöm – gyorsabb és biztos megkapja.",
+            "isOptimal": false,
+            "feedback": "A céges dokumentumok privát üzenetküldőn való megosztása komoly adatvédelmi probléma."
+          }
+        ]
+      },
+      {
+        "situation": "Egy meetingen az összes résztvevő kikapcsolta a kameráját. Te is kikapcsold?",
+        "options": [
+          {
+            "text": "Megtartom bekapcsolva, hacsak nincs konkrét okom kikapcsolni (Például technikai probléma).",
+            "isOptimal": true,
+            "feedback": "A bekapcsolt kamera aktív részvételt mutat és erősíti a bizalmat – különösen pályakezdőként."
+          },
+          {
+            "text": "Igen – ha ők igen, én is.",
+            "isOptimal": false,
+            "feedback": "A kamerát bekapcsolta tartani akkor is javítja a jelenlétedet és a kapcsolatot, ha mások nem teszik."
+          },
+          {
+            "text": "Megkérdezem a szervezőt, hogy kell-e bekapcsolni.",
+            "isOptimal": false,
+            "feedback": "Nem kell engedélyt kérni – alapértelmezetten bekapcsolt kamerával részt venni profi hozzáállás."
+          }
+        ]
+      },
+      {
+        "situation": "Egy hosszú Slack-szálban nem olvasod az összes előzményt, és olyat kérdezel, amire már válaszoltak. Mi lesz a következmény?",
+        "options": [
+          {
+            "text": "Semmi – mindenki elfoglalt, nem veszik észre.",
+            "isOptimal": false,
+            "feedback": "A kollégák észreveszik, és ez megbízhatatlannak és figyelmetlennek mutat."
+          },
+          {
+            "text": "Egy kicsit feszélyező lesz, de a közvetlen kérdezés általában elfogadható.",
+            "isOptimal": false,
+            "feedback": "Igen, de kerülhető, ha pár másodpercet szánunk az előzmények átfutására."
+          },
+          {
+            "text": "Elveszítem a hitelességemet és mások idejét is terhelem – ezért mindig olvasom az előzményeket előbb.",
+            "isOptimal": true,
+            "feedback": "Az előzmények átfutása 30 másodperc, de megmutatja, hogy figyelsz és tiszteled a csapatod idejét."
+          }
+        ]
+      }
+    ]
+  }
+}

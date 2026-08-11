@@ -1,0 +1,334 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "legal",
+  "title": "Munkajogi alapok",
+  "data": {
+    "legalBasics": [
+      {
+        "title": "Munkaszerződés",
+        "subtitle": "Mit érdemes ellenőrizned aláírás előtt?",
+        "content": "A munkaszerződést írásba kell foglalni. Az alapbérben és a munkakörben mindenképp meg kell állapodni; a szerződésben általában a munkaviszony időtartama, a munkahely és más fontos feltételek is szerepelnek. Olvasd el aláírás előtt, és kérdezz rá mindenre, ami nem világos.",
+        "goodToKnow": "A munkáltató több fontos feltételről külön írásbeli tájékoztatást is adhat. Ami számodra lényeges – például a bér, a munkakör, a munkaidő vagy a munkavégzés helye –, arról legyen egyértelmű írásos dokumentumod."
+      },
+      {
+        "title": "Próbaidő",
+        "subtitle": "Mit jelent, és mire érdemes figyelned?",
+        "content": "A próbaidő főszabály szerint legfeljebb 3 hónap; kollektív szerződés alapján legfeljebb 6 hónap lehet. Ez alatt mindkét fél indoklás nélkül, azonnali hatállyal megszüntetheti a munkaviszonyt. A nyilatkozatot írásban kell közölni.",
+        "goodToKnow": "A próbaidő neked is próba: figyeld meg, hogy érthető-e a betanítás, tisztelettel bánnak-e veled, és megfelelnek-e a valóságban a megbeszélt feltételek."
+      },
+      {
+        "title": "Munkaidő",
+        "subtitle": "Mikor és mennyit dolgozol?",
+        "content": "Teljes munkaidőben általában napi 8, heti 40 óra a munkaidő. A beosztást a munkáltató határozza meg és előre közli. Ha még nem töltötted be a 18. életévedet, külön védelmi szabályok vonatkoznak rád: például éjszakai munka és túlóra nem rendelhető el.",
+        "goodToKnow": "A beosztás közlésére és módosítására határidők vonatkoznak. Ha váratlanul változtatnak rajta, kérdezd meg, mikor és milyen szabály alapján történt a módosítás."
+      },
+      {
+        "title": "Munkaközi szünet",
+        "subtitle": "Mikor jár, és mit jelent?",
+        "content": "Felnőtt munkavállalónál 6 órát meghaladó napi munkaidő esetén legalább 20 perc, 9 óra felett további 25 perc munkaközi szünet jár. Ha még nem vagy 18 éves, 4 és fél óra felett legalább 30, 6 óra felett legalább 45 perc szünetet kell biztosítani.",
+        "goodToKnow": "A munkaközi szünet főszabály szerint nem része a munkaidőnek, de a munkahelyi szabályok vagy a megállapodás ennél kedvezőbbek is lehetnek. Nézd meg a tájékoztatást, vagy kérdezz rá."
+      },
+      {
+        "title": "Túlóra / rendkívüli munkaidő",
+        "subtitle": "Mit jelent, és hogyan kezelik?",
+        "content": "A rendes munkaidőn felüli munkavégzésért főszabály szerint bérpótlék vagy – a szabályoktól és a megállapodástól függően – szabadidő jár. A pontos mérték attól is függ, hogy rendes munkanapon, pihenőnapon vagy munkaszüneti napon dolgozol. 18 év alatti munkavállalónak túlóra nem rendelhető el.",
+        "goodToKnow": "Tartsd számon a plusz óráidat, és kérdezd meg előre, hogyan számolják el őket. Ha még nem vagy 18 éves, jelezd, hogy rád a fiatal munkavállalók külön szabályai vonatkoznak."
+      },
+      {
+        "title": "Szabadság",
+        "subtitle": "Hogyan működik?",
+        "content": "Az alapszabadság évi 20 munkanap. Ha még nem töltötted be a 18. életévedet, évente további 5 munkanap pótszabadság jár. Év közben kezdődő munkaviszonynál a szabadság arányos része illet meg. A szabadságot főszabály szerint a munkáltató adja ki, a munkavállaló előzetes meghallgatása után.",
+        "goodToKnow": "Évente 7 munkanapot – a munkaviszony első 3 hónapját kivéve – a kérésed szerinti időpontban kell kiadni, ha legalább 15 nappal korábban jelzed. A szabadságot pénzben főszabály szerint csak a munkaviszony megszűnésekor lehet megváltani."
+      },
+      {
+        "title": "Munkabér",
+        "subtitle": "Mit érdemes tudnod a fizetésedről és a bérjegyzékről?",
+        "content": "A bérjegyzéken látod a bruttó béredet, a levonásokat és a kifizetett nettó összeget. Teljes munkaidőben az alapbér nem lehet a rád irányadó minimálbérnél alacsonyabb. Ha valami nem egyértelmű, kérj részletes magyarázatot.",
+        "goodToKnow": "2026-ban teljes munkaidőnél a havi minimálbér bruttó 322 800 Ft. A legalább középfokú végzettséget vagy szakképzettséget igénylő munkakörök garantált bérminimuma bruttó 373 200 Ft. Nem az számít, hogy neked van-e végzettséged, hanem hogy a munkakör megköveteli-e."
+      },
+      {
+        "title": "Felmondás és a munkaviszony megszűnése",
+        "subtitle": "Milyen alapfogalmakat érdemes ismerned?",
+        "content": "Határozatlan idejű munkaviszonynál a munkavállalói felmondás felmondási ideje főszabály szerint 30 nap. A munkaviszony hossza miatti hosszabbodás a munkáltatói felmondásnál számít. A munkáltatói felmondást általában meg kell indokolni, de vannak törvényi kivételek. A megszüntető nyilatkozatot írásban kell közölni.",
+        "goodToKnow": "Próbaidő alatt nem rendes felmondásról, hanem indoklás nélküli, azonnali hatályú megszüntetésről van szó. Végkielégítés csak meghatározott feltételek mellett jár, ezért konkrét helyzetben érdemes szakértőtől segítséget kérni."
+      },
+      {
+        "title": "Betegszabadság és keresőképtelenség",
+        "subtitle": "Mi a teendőd, ha beteg vagy?",
+        "content": "Ha beteg vagy és nem tudsz dolgozni, mielőbb értesítsd a munkahelyedet, és gondoskodj a keresőképtelenség orvosi igazolásáról. Saját betegség esetén évente legfeljebb 15 munkanap betegszabadság jár, erre a távolléti díj 70%-a fizetendő. Ezt követően – ha jogosult vagy – táppénz járhat.",
+        "goodToKnow": "A betegszabadság és a táppénz nem ugyanaz, és nem minden keresőképtelenségi eset indul betegszabadsággal. Az ügyintézés módjáról a munkáltató vagy a társadalombiztosítási szerv tud pontos tájékoztatást adni."
+      },
+      {
+        "title": "Munkavédelem",
+        "subtitle": "Milyen alapvető szabályok védenek munka közben?",
+        "content": "A munkáltatónak biztosítania kell az egészséget nem veszélyeztető és biztonságos munkavégzés feltételeit, ideértve a szükséges oktatást és védőeszközöket. Ha egy utasítás közvetlenül és súlyosan veszélyeztetné az életedet, egészségedet vagy testi épségedet, megtagadhatod a végrehajtását; mások közvetlen veszélyeztetése esetén meg is kell tagadnod.",
+        "goodToKnow": "Minden munkavállalónak munkavédelmi oktatásban kell részesülnie a munkába lépéskor. Ha ez nem történt meg, kérdezz rá – ez a munkáltató kötelezettsége."
+      },
+      {
+        "title": "Munkaköri feladatok",
+        "subtitle": "Mit várhat el tőled a munkáltató?",
+        "content": "A munkáltató átmenetileg a munkaszerződéstől eltérő feladatot vagy munkahelyet is kijelölhet, de ennek törvényi korlátai vannak. Veszélyes, jogellenes vagy számodra nem egyértelmű utasításnál kérj pontosítást, és szükség esetén kérj segítséget.",
+        "goodToKnow": "Ha rendszeresen olyan feladatokat végzesz, amik nem szerepelnek a szerződésedben, kérd a munkaköri leírásod frissítését – ez a jogaidat is védi."
+      },
+      {
+        "title": "Jogok és kötelezettségek",
+        "subtitle": "Mit várhatsz el te, és mit vár el tőled a munkáltató?",
+        "content": "Jogod van: biztonságos körülményekhez, határidőre kifizetett bérhez, diszkriminációmentességhez, szakszervezeti tagsághoz. Kötelességed: elvégezni a vállalt feladatokat, betartani a munkarendet, együttműködni.",
+        "goodToKnow": "A munkajogi szabályoktól nem minden esetben lehet a munkavállaló hátrányára eltérni, de vannak olyan kérdések is, amelyekben a szerződés vagy a kollektív szerződés eltérő szabályt tartalmazhat. Konkrét vitánál kérj személyre szabott segítséget."
+      }
+    ],
+    "legalBasicsQuiz": [
+      {
+        "situation": "Aláírás előtt állsz a munkaszerződéssel. Van benne egy bekezdés, amit nem értesz. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Aláírom – ha valami nem stimmelt, majd jelzem utána.",
+            "isOptimal": false,
+            "feedback": "Az aláírás után a feltételek kötelezőek – amit nem értesz, azt aláírás ELŐTT kell tisztázni. Kérj magyarázatot vagy haladékot."
+          },
+          {
+            "text": "Elolvasom háromszor, és ha akkor sem értem, aláírom.",
+            "isOptimal": false,
+            "feedback": "Ha háromszor sem érted, az azt jelenti, hogy kérdezni kell, nem aláírni. Kérj magyarázatot."
+          },
+          {
+            "text": "Megkérdezem, mit jelent a bekezdés, vagy haladékot kérek, hogy utánanézhessek.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes magatartás! Senki nem válik rögtön jogásszá, de az aláírás előtti kérdezés és értés a te felelősséged."
+          }
+        ]
+      },
+      {
+        "situation": "Próbaidő alatt írásban, azonnali hatállyal megszüntetik a munkaviszonyodat, indoklás nélkül. Lehetséges ez?",
+        "options": [
+          {
+            "text": "Igen. Próbaidő alatt mindkét fél indoklás nélkül, azonnali hatállyal megszüntetheti a munkaviszonyt, de ezt írásban kell közölni.",
+            "isOptimal": true,
+            "feedback": "Így van. Ez kölcsönös lehetőség, de fontos, hogy a megszüntető nyilatkozatot még a próbaidő alatt, írásban közöljék."
+          },
+          {
+            "text": "Nem jogos – indoklás nélkül nem lehet felmondani.",
+            "isOptimal": false,
+            "feedback": "Próbaidő alatt indoklás nélkül is megszüntethető a munkaviszony. Ez nem rendes felmondás, hanem azonnali hatályú megszüntetés, amelyet írásban kell közölni."
+          },
+          {
+            "text": "Nem jogos – bíróságra viszem.",
+            "isOptimal": false,
+            "feedback": "A próbaidő alatti, azonnali hatályú megszüntetés önmagában jogszerű lehet. Először ellenőrizd, hogy a nyilatkozatot még a próbaidő alatt és írásban közölték-e."
+          }
+        ]
+      },
+      {
+        "situation": "Elmúltál 18 éves, és a beosztás szerinti napi munkaidőd több mint 6 óra, de nem biztosítanak szünetet. Mi a helyzet?",
+        "options": [
+          {
+            "text": "Nincs jogom – a főnök dönt a szünetekről.",
+            "isOptimal": false,
+            "feedback": "6 órát meghaladó napi munkaidőnél felnőtt munkavállalónak legalább 20 perc munkaközi szünet jár. 18 év alatt ennél kedvezőbb szabályok érvényesek."
+          },
+          {
+            "text": "Legalább 20 perc munkaközi szünet jár. Ha még nem vagy 18 éves, 6 órát meghaladó munkaidőnél legalább 45 perc jár.",
+            "isOptimal": true,
+            "feedback": "Így van. A szünet mértéke az életkortól és a napi munkaidő hosszától is függ."
+          },
+          {
+            "text": "Kérhetek szünetet, de ez a főnök jóindulatától függ.",
+            "isOptimal": false,
+            "feedback": "A törvényi minimum nem a vezető jóindulatától függ. A munkahely ennél kedvezőbb szabályt adhat, de rosszabbat nem."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd arra kéri, hogy hétvégén is dolgozz, de nem mondja, hogyan kompenzálja. Mit kérdezel?",
+        "options": [
+          {
+            "text": "Megkérdezem, hogy ez rendes vagy rendkívüli munkaidő-e, és milyen pótlékot vagy pihenőidőt kapok érte.",
+            "isOptimal": true,
+            "feedback": "Ez a jó kérdés. A hétvégi munka díjazása függ a beosztástól, a nap típusától és attól, hogy rendkívüli munkaidőről van-e szó. Ha még nem vagy 18 éves, túlóra nem rendelhető el."
+          },
+          {
+            "text": "Semmit – ha a főnök kéri, megcsinálom.",
+            "isOptimal": false,
+            "feedback": "A rendkívüli munkaidő kompenzációja törvényes jog. A „majd meglátjuk” nem elfogadható válasz egy konkrét kérésre."
+          },
+          {
+            "text": "Megtagadom – hétvégén nem dolgozom.",
+            "isOptimal": false,
+            "feedback": "A megtagadás is opció, de először kérdezz rá a kompenzációra. Lehet, hogy jogos és jól kompenzált a kérés."
+          }
+        ]
+      },
+      {
+        "situation": "Két hete dolgozol, és elmarad a fizetésed. Milyen lépéseket tegyél?",
+        "options": [
+          {
+            "text": "Megvárom a következő hónapot – biztosan lesz benne az is.",
+            "isOptimal": false,
+            "feedback": "A bér kifizetésének határideje törvényi kötelezettség. Ne várd meg, míg kettő marad el – jelezd időben."
+          },
+          {
+            "text": "Azonnal felmondok és hatósághoz fordulok.",
+            "isOptimal": false,
+            "feedback": "Az első lépés az írásos jelzés. Ha arra sem reagálnak, jöhet a hatóság, de előbb adj esélyt a rendezésre."
+          },
+          {
+            "text": "Írásban (e-mailben) jelzem a munkáltatónak, hogy a megbeszélt fizetési határidő elmúlt, és kérem a rendezést.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes, dokumentált eljárás. Az írott jelzés nyomot hagy, és ha nem rendeződik, munkajogi lépések alapja lehet."
+          }
+        ]
+      },
+      {
+        "situation": "Beteg lettél, és másnapra nem tudsz bemenni dolgozni. Mi a helyes eljárás?",
+        "options": [
+          {
+            "text": "Bemegyek dolgozni, mert nem akarom, hogy hiányzónak nézzenek az első hetekben.",
+            "isOptimal": false,
+            "feedback": "Betegen dolgozni ronthatja az állapotodat, és másokat is megfertőzhetsz. Jelezd időben, hogy nem tudsz munkába állni, és intézd az orvosi igazolást."
+          },
+          {
+            "text": "Értesítem a munkahelyemet még a munkaidő kezdete előtt, és elmegyek orvoshoz igazolásért.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes és elvárható eljárás. Az időben jelzés professzionális, az orvosi igazolás a jogaid védelme."
+          },
+          {
+            "text": "Nem szólok semmit, hátha nem veszik észre a hiányomat.",
+            "isOptimal": false,
+            "feedback": "A nem jelzett hiányzás fegyelmi következményekkel járhat. Az értesítés alapvető kötelezettség."
+          }
+        ]
+      },
+      {
+        "situation": "A munkáltatód azt mondja, hogy „nincs szükség munkaszerződésre, elég a szóbeli megállapodás”. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Elfogadom – a szó is kötelez.",
+            "isOptimal": false,
+            "feedback": "Munkaviszonyban a munkaszerződésnek ÍRÁSBAN kell lennie – ez törvényi előírás. A szóbeli megállapodás nem helyettesíti."
+          },
+          {
+            "text": "Elfogadom, de mindent lejegyzetelek magamnak.",
+            "isOptimal": false,
+            "feedback": "A saját feljegyzésed nem helyettesíti a törvényes írásos szerződést. Kérd a hivatalos dokumentumot."
+          },
+          {
+            "text": "Ragaszkodom az írásos szerződéshez, és jelzem, hogy törvény szerint kötelező.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes és törvényes álláspont. Az írásos szerződés mindkét felet védi. Ha valaki megtagadja, az komoly red flag."
+          }
+        ]
+      },
+      {
+        "situation": "Megkapod a bérjegyzékedet, de nem érted, miért annyi a nettó béred, amennyit utaltak. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Megkérem a HR-t vagy a bérszámfejtőt, hogy magyarázzák el a levonásokat.",
+            "isOptimal": true,
+            "feedback": "Pontosan! A bérjegyzék értelmezése a te jogod. Egy egyszerű kérdéssel megértheted, mi mennyi és miért."
+          },
+          {
+            "text": "Elfogadom – a cégek biztos jól számolnak.",
+            "isOptimal": false,
+            "feedback": "A bérjegyzéken rajta van minden levonás – a te pénzed, a te felelősséged ellenőrizni. Kérdezz, ha nem egyértelmű."
+          },
+          {
+            "text": "Megnézem az interneten, hogyan kell kiszámolni, és ha eltér, azonnal panaszt teszek.",
+            "isOptimal": false,
+            "feedback": "Az online számítás hasznos, de előbb kérdezz a munkahelyen – lehet, hogy van oka az eltérésnek (Például cafeteria, adókedvezmény)."
+          }
+        ]
+      },
+      {
+        "situation": "A munkáltató azt mondja: „Nálunk nincs szabadság az első évben.” Ez törvényes?",
+        "options": [
+          {
+            "text": "Igen, törvényes – az első évben ki kell érdemelni a szabadságot.",
+            "isOptimal": false,
+            "feedback": "Nem törvényes. A szabadság a munkaviszony első napjától arányosan jár – az első évben is."
+          },
+          {
+            "text": "Nem biztos – ez valószínűleg a céges szabályzaton múlik.",
+            "isOptimal": false,
+            "feedback": "A törvény elsőbbséget élvez a belső szabályzattal szemben. Ami törvény, azt a munkáltató nem korlátozhatja belső szabályzattal."
+          },
+          {
+            "text": "Nem. A szabadság a munkaviszony kezdetétől arányosan jár, de a kiadás időpontját főszabály szerint a munkáltató határozza meg.",
+            "isOptimal": true,
+            "feedback": "Pontosan. Az első évben is jár arányos szabadság. Évente 7 munkanapot – az első 3 hónap kivételével és megfelelő előzetes jelzéssel – a kérésed szerinti időpontban kell kiadni."
+          }
+        ]
+      },
+      {
+        "situation": "A munkáltató olyan feladatot rendel el, ami az élet- és balesetveszélyt jelent megfelelő védőfelszerelés nélkül. Mit teszel?",
+        "options": [
+          {
+            "text": "Elvégzem – a munkáltató utasításait kell követni.",
+            "isOptimal": false,
+            "feedback": "A törvény véd téged! Életveszélyes feladatot megfelelő védőfelszerelés nélkül JOGOD VAN megtagadni. Ez nem engedetlenség, hanem önvédelem."
+          },
+          {
+            "text": "Megtagadom a feladatot és jelzem, hogy megfelelő védőfelszerelés nélkül nem végzem el – ez törvényi jogom.",
+            "isOptimal": true,
+            "feedback": "Ez a törvényes és helyes lépés. A munkavédelmi törvény alapján ez a jog megilleti a munkavállalókat."
+          },
+          {
+            "text": "Elvégzem, de utána panaszt teszek.",
+            "isOptimal": false,
+            "feedback": "Ha elvégzed és baj történik, az nem hozható helyre. A jelzésnek és megtagadásnak ELŐTTE kell megtörténnie."
+          }
+        ]
+      },
+      {
+        "situation": "A munkáltató felmondott neked, de nem adott indoklást. Nem vagy próbaidőn. Biztosan jogellenes?",
+        "options": [
+          {
+            "text": "Igen, törvényes – a munkáltató bármikor felmondhat.",
+            "isOptimal": false,
+            "feedback": "A munkáltatói felmondást főszabály szerint indokolni kell, de léteznek törvényi kivételek. Előbb nézd meg a jogviszonyod és a dokumentum pontos típusát."
+          },
+          {
+            "text": "Nem feltétlenül. Főszabály szerint kell indoklás, de vannak kivételek, ezért ellenőrzöm a megszüntetés jogcímét és a helyzetemet.",
+            "isOptimal": true,
+            "feedback": "Ez a pontos megközelítés. Nem mindegy, hogy felmondásról, próbaidős azonnali megszüntetésről vagy más jogcímről van szó."
+          },
+          {
+            "text": "Igen, törvényes – ez a munkáltató joga, nincs mit tenni.",
+            "isOptimal": false,
+            "feedback": "Ez nem igaz. Tájékozódj munkajogi tanácsadónál, mielőtt bármit elfogadnál."
+          }
+        ]
+      },
+      {
+        "situation": "Összefoglalva: mi a legfontosabb dolog, amit pályakezdőként a munkajogról tudni kell?",
+        "options": [
+          {
+            "text": "A munkaszerződés, a bér, a szabadság és a biztonság területén jogaim vannak, és ezeket nem kell elviseléssel, hanem tudással és jelzéssel érvényesíteni.",
+            "isOptimal": true,
+            "feedback": "Ez a lényeg! A jogok ismerete nem konfliktusos – hanem felelős magatartás. Tudj, kérdezz, jelezz."
+          },
+          {
+            "text": "A törvény mindig a munkáltató oldalán áll, ezért érdemes alkalmazkodni.",
+            "isOptimal": false,
+            "feedback": "A törvény mindkét felet védi, de a jogokat ismerni kell ahhoz, hogy érvényesíteni lehessen őket."
+          },
+          {
+            "text": "Munkajogi kérdésekben mindig csak ügyvéddel szabad tárgyalni.",
+            "isOptimal": false,
+            "feedback": "Az ügyvéd segítség, de nem feltétel. Sok kérdésre a HR, a munkajogi segélyszolgálat vagy az online forrás is válasz ad. Kérdezz bátran."
+          }
+        ]
+      }
+    ]
+  },
+  "expertReview": {
+    "version": "7.1",
+    "reviewedAt": "2026-07-27",
+    "scope": [
+      "munkajogi alapok",
+      "fiatal munkavállalók védelme",
+      "2026-os minimálbér",
+      "kapcsolódó kvízek"
+    ],
+    "notice": "Közérthető általános tájékoztatás; egyedi ügyben nem helyettesít jogi tanácsot."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "generations",
+  "title": "Generációk",
+  "data": {
+    "generationCards": [
+      {
+        "front": "Négy generáció, egy munkahely",
+        "back": "Ma akár négy generáció is dolgozhat együtt. A különbségek kihívást, de egyben lehetőséget is jelentenek."
+      },
+      {
+        "front": "Más motivál minket",
+        "back": "Van, akinek a stabilitás, másnak a fejlődés vagy a rugalmasság fontos. A különböző motivációk megértése segíti az együttműködést."
+      },
+      {
+        "front": "Másképp kommunikálunk",
+        "back": "Egyesek a személyes beszélgetést, mások az online üzeneteket részesítik előnyben. Fontos megtalálni a közös kommunikációs csatornát."
+      },
+      {
+        "front": "A tapasztalat érték",
+        "back": "Az idősebb kollégák évek alatt megszerzett tudása felbecsülhetetlen segítség lehet a fiatalabb generációk számára."
+      },
+      {
+        "front": "Az új szemlélet is érték",
+        "back": "A fiatalabb generációk friss ötleteket, digitális megoldásokat és új nézőpontokat hoznak a szervezetbe."
+      },
+      {
+        "front": "A tudás kétirányú",
+        "back": "Nemcsak a fiatalok tanulhatnak az idősebbektől. A digitális készségek és új trendek megosztása is érték."
+      },
+      {
+        "front": "Előbb értsd meg, aztán ítélj!",
+        "back": "A generációs különbségek mögött eltérő tapasztalatok és élethelyzetek állnak. Az empátia segít lebontani az előítéleteket."
+      },
+      {
+        "front": "A sokszínű csapat erősebb",
+        "back": "A különböző korosztályok eltérő nézőpontjai jobb döntéseket és kreatívabb megoldásokat eredményezhetnek."
+      },
+      {
+        "front": "A visszajelzés minden generációnak fontos",
+        "back": "A rendszeres és tiszteletteljes visszajelzés segíti a fejlődést és erősíti a bizalmat."
+      },
+      {
+        "front": "A változás mindenkit érint",
+        "back": "A technológiai és munkaerőpiaci változásokhoz minden generációnak alkalmazkodnia kell."
+      },
+      {
+        "front": "A mentorálás közös fejlődést jelent",
+        "back": "A mentorprogramok lehetőséget adnak a tudásmegosztásra és a kölcsönös tanulásra."
+      },
+      {
+        "front": "A közös cél fontosabb, mint a korkülönbség",
+        "back": "A sikeres csapatokat nem az életkor, hanem az együttműködés, a tisztelet és a közös célok teszik eredményessé."
+      }
+    ],
+    "generationClosing": {
+      "front": "A generációk nem versenytársak",
+      "back": "Minden generáció más tapasztalatot, tudást és nézőpontot hoz a munkahelyre. A valódi WIN-WIN akkor jön létre, amikor ezek az erősségek kiegészítik egymást."
+    }
+  }
+}

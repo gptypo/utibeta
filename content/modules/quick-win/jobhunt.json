@@ -1,0 +1,58 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "jobhunt",
+  "title": "Állásvadászat Z módra",
+  "data": {
+    "jobHuntCards": [
+      {
+        "front": "Ne ugyanazt a CV-t küldd mindenhova!",
+        "back": "Igazítsd az önéletrajzodat az adott pozícióhoz. Emeld ki a releváns tapasztalataidat és készségeidet."
+      },
+      {
+        "front": "Ne csak jelentkezz, kutass is!",
+        "back": "Interjú előtt nézz utána a cégnek, a tevékenységének és az értékeinek. A felkészültség magabiztosságot ad."
+      },
+      {
+        "front": "A LinkedIn a digitális névjegykártyád",
+        "back": "Legyen profi profilképed, naprakész információid és rövid szakmai bemutatkozásod."
+      },
+      {
+        "front": "A motivációs levél, több esetben még szükséges",
+        "back": "Néhány személyes mondattal mutasd meg, miért érdekel a pozíció és miért lennél jó választás."
+      },
+      {
+        "front": "Készülj az interjúkérdésekre!",
+        "back": "Gondold át előre, hogyan mutatnád be magad, az erősségeidet és a tapasztalataidat."
+      },
+      {
+        "front": "Érkezz időben!",
+        "back": "Online és személyes interjú esetén is fontos a pontosság. Az első benyomás számít."
+      },
+      {
+        "front": "Merj kérdezni!",
+        "back": "A jó kérdések érdeklődést mutatnak. Kérdezz a csapatról, a feladatokról vagy a fejlődési lehetőségekről."
+      },
+      {
+        "front": "Építs kapcsolatokat!",
+        "back": "A networking segíthet olyan lehetőségekhez jutni, amelyek nem jelennek meg az állásportálokon."
+      },
+      {
+        "front": "Mutasd meg a projektjeidet!",
+        "back": "Portfólió, GitHub, prezentáció vagy saját projekt. A gyakorlati példák hitelesen mutatják meg a tudásodat."
+      },
+      {
+        "front": "Ne csak egy helyre jelentkezz!",
+        "back": "Párhuzamosan több releváns pozíciót is pályázz meg, így növeled az esélyeidet."
+      },
+      {
+        "front": "Figyelj az online jelenlétedre!",
+        "back": "Gondold át, mi látható rólad a közösségi médiában. Az online profilod is rólad mesél."
+      },
+      {
+        "front": "Az elutasítás nem kudarc",
+        "back": "Minden interjú és pályázat tapasztalat. Tanulj belőlük és használd fel a következő lehetőségnél."
+      }
+    ],
+    "jobHuntClosing": "Az álláskeresés nem szerencse kérdése, hanem tudatos felkészülésé. Minél több eszközt használsz és minél tudatosabban készülsz, annál közelebb kerülsz a számodra megfelelő munkahelyhe"
+  }
+}

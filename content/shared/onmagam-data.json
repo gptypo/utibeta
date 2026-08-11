@@ -1,0 +1,553 @@
+{
+  "schema": "utiterv-shared-v5",
+  "onmagamData": {
+    "preboardingData": [
+      {
+        "question": "Mire számíts az első munkanapodon?",
+        "answer": "Az első nap leginkább az ismerkedésről szól. Megmutatják a munkahelyet, bemutatnak a kollégáknak, és elmondják a legfontosabb tudnivalókat. Teljesen rendben van, ha elsőre nem jegyzel meg mindent. Figyelj, kérdezz nyugodtan, és írd fel, ami fontos lehet."
+      },
+      {
+        "question": "Mikor érkezz az első munkanapodon?",
+        "answer": "Érdemes 10–15 perccel korábban odaérni. Így nem kell kapkodnod, és már az első napon látszik, hogy komolyan veszed a munkát."
+      },
+      {
+        "question": "Hogyan mutatkozz be?",
+        "answer": "Elég egy rövid, természetes bemutatkozás: mondd el a nevedet, hogy hol dolgozol, és hogy most kezdtél. Például: „Szia, Anna vagyok, ma kezdtem a logisztikai csapatban. Örülök, hogy megismerhetlek!”"
+      },
+      {
+        "question": "Mit érdemes megkérdezned az első napokban?",
+        "answer": "Érdemes tisztázni, mi lesz a feladatod, kitől kérhetsz segítséget, milyen szabályokra figyelj, és mit várnak tőled az első időszakban."
+      },
+      {
+        "question": "Hogyan kommunikálj a vezetőddel?",
+        "answer": "Beszélj tisztelettel, egyértelműen és röviden. Ha problémát jelzel, mondd el azt is, mire jutottál eddig, vagy milyen megoldás jöhet szóba."
+      },
+      {
+        "question": "Mit tegyél, ha nem értesz egy feladatot?",
+        "answer": "Kérdezz nyugodtan. Egy rövid pontosítás sokkal jobb, mint rosszul megcsinálni a feladatot. Mondhatod például: „Szeretném jól megcsinálni. Megmutatnád még egyszer, mire figyeljek?”"
+      },
+      {
+        "question": "Mit tegyél, ha hibázol?",
+        "answer": "Ne próbáld eltitkolni. Szólj időben, vállald a felelősséget, és koncentrálj arra, hogyan lehet kijavítani. A hibából akkor lesz tapasztalat, ha tanulsz belőle."
+      },
+      {
+        "question": "Mit tegyél, ha túl sok feladatot kapsz egyszerre?",
+        "answer": "Először állíts fel egy sorrendet. Ha nem egyértelmű, melyik feladat a legsürgősebb, kérdezd meg: „Melyikkel kezdjek? Melyik a legfontosabb?”"
+      },
+      {
+        "question": "Hogyan kérj segítséget?",
+        "answer": "Először gondold át, pontosan hol akadtál el, majd fogalmazd meg konkrétan a kérdésedet. A segítségkérés teljesen természetes – pályakezdőként a tanulási folyamat része."
+      },
+      {
+        "question": "Hogyan fogadd a kritikát vagy a visszajelzést?",
+        "answer": "Hallgasd végig, ne reagálj azonnal védekezően. Gondold át, mit tudsz belőle hasznosítani, és ha valami nem világos, kérdezz vissza."
+      },
+      {
+        "question": "Mit tegyél, ha konfliktusod van egy kollégával?",
+        "answer": "Beszélj vele nyugodtan és négyszemközt. A személyeskedés helyett a konkrét helyzetről beszélj, és próbáljatok olyan megoldást találni, amely mindkettőtök számára elfogadható."
+      },
+      {
+        "question": "Mi a legfontosabb pályakezdőként?",
+        "answer": "Nem az, hogy az első naptól mindent tudj. Légy kíváncsi, megbízható, tanulj a helyzetekből, merj kérdezni és mutasd meg, hogy szeretnél fejlődni."
+      }
+    ],
+    "survivalGuideData": [
+      {
+        "month": 1,
+        "title": "Mit tegyél, ha bizonytalan vagy?",
+        "content": "Teljesen rendben van, ha még nem tudsz mindent. Gondold végig, meddig jutottál, és pontosan hol akadtál el. Ezután konkrét kérdéssel fordulj a mentorodhoz vagy a vezetődhöz.",
+        "takeaway": "Nem az számít, hogy mindent tudj, hanem hogy merj kérdezni és keresd a megoldást."
+      },
+      {
+        "month": 2,
+        "title": "Hogyan kérj segítséget?",
+        "content": "Mondd el pontosan, hol akadtál el, és kérdezz bátran. Például: „Az X résznél elakadtam, mert Y nem világos. Tudnál segíteni?” A segítségkérés a tanulás része, teljesen természetes.",
+        "takeaway": "Ha pontosan meg tudod mondani, hol akadtál el, már félúton vagy a megoldás felé."
+      },
+      {
+        "month": 3,
+        "title": "Mit tegyél, ha valami nem sikerül elsőre?",
+        "content": "Ne kudarcként nézz rá, hanem tapasztalatként. Gondold végig, mi nem működött, változtass rajta, majd próbáld újra. A fejlődés próbálkozásokból épül fel.",
+        "takeaway": "Nem az számít, hogy elsőre sikerült-e, hanem az, hogy mit tanultál belőle."
+      },
+      {
+        "month": 4,
+        "title": "Hogyan fogadd a kritikát és a visszajelzést?",
+        "content": "Hallgasd végig, kérdezz vissza, ha valami nem világos, és keresd meg benne azt, amit fel tudsz használni. Nem kell rögtön védekezned: a jó visszajelzés abban segít, hogy fejlődj.",
+        "takeaway": "A visszajelzés nem ítélet, hanem kapaszkodó a fejlődéshez."
+      },
+      {
+        "month": 5,
+        "title": "Hogyan építs önbizalmat?",
+        "content": "Ne csak azt nézd, amit még nem tudsz. Vedd észre a kisebb sikereidet és azt is, mennyit fejlődtél. Készíthetsz egy „büszkeséglistát”, ahová felírod, mire vagy büszke az adott héten.",
+        "takeaway": "Az önbizalom a kisebb sikerek észrevételével épül."
+      },
+      {
+        "month": 6,
+        "title": "Mit tegyél, ha hibázol?",
+        "content": "Vállald a hibát, szólj időben, és keresd a megoldást. Nem maga a hiba határoz meg, hanem az, ahogyan reagálsz rá. Az őszinte felelősségvállalás bizalmat épít.",
+        "takeaway": "Hibázni emberi dolog. A felelősségvállalásból viszont erősség lehet."
+      },
+      {
+        "month": 7,
+        "title": "Mit tegyél, ha túl sok a feladat?",
+        "content": "Ne próbálj mindent egyszerre megoldani. Állíts fel sorrendet, és tisztázd, mi a legsürgősebb. Kérdezd meg a vezetődet, ha nem vagy biztos – jobb előre egyeztetni, mint kapkodni.",
+        "takeaway": "Ha sok a feladat, ne egyszerre próbálj mindennel végezni. Haladj fontossági sorrendben, egy lépéssel egyszerre."
+      },
+      {
+        "month": 8,
+        "title": "Hogyan kezeld, ha összehasonlítod magad másokkal?",
+        "content": "Ne más pályájához mérd a saját indulásodat. Figyeld inkább azt, hogy te honnan indultál, és mennyit fejlődtél. Mindenki más tempóban, más úton jár.",
+        "takeaway": "A saját fejlődésedet a korábbi önmagadhoz érdemes mérned, nem másokhoz."
+      },
+      {
+        "month": 9,
+        "title": "Mit tegyél, ha konfliktusba kerülsz?",
+        "content": "Ne reagálj azonnal indulatból. Tisztázd a helyzetet, mondd el a saját nézőpontodat, és keresd a közös megoldást. A legtöbb munkahelyi konfliktus félreértésből vagy tisztázatlan elvárásokból fakad.",
+        "takeaway": "Konfliktusban az első reakciódat ne kövesd – állj meg, tisztázz, keress közös megoldást."
+      },
+      {
+        "month": 10,
+        "title": "Mit tegyél, ha elveszíted a motivációdat?",
+        "content": "Gondold végig, miért kezdted el, mit szeretnél elérni, és keress egyetlen kis lépést, amit még ma meg tudsz tenni. A motiváció nem mindig érzelem – néha döntés kérdése.",
+        "takeaway": "Ha elveszted a motivációt, keress egyetlen kis lépést, amit most meg tudsz tenni."
+      },
+      {
+        "month": 11,
+        "title": "Mit tegyél, ha úgy érzed, nem vagy elég jó?",
+        "content": "Pályakezdőként nem az a feladatod, hogy mindent tudj. Az a fontos, hogy képes és hajlandó legyél tanulni és fejlődni. Mindenki érezte ezt az érzést – ez azt jelzi, hogy számodra is fontos a munkád minősége.",
+        "takeaway": "Pályakezdőként tanulni a feladatod, nem mindent tudni – a fejlődési hajlandóság többet ér a tudásnál."
+      },
+      {
+        "month": 12,
+        "title": "Hogyan állj fel egy nehéz helyzet után?",
+        "content": "Gondold végig: Mi történt? Mit tanultál belőle? Mit csinálnál másképp? Mi legyen a következő lépésed? Aki képes visszanézni és levonni a következtetést, az minden nehézségből erősebben jön ki.",
+        "takeaway": "Minden nehéz helyzet tart egy tanulságot – aki képes visszanézni és tanulni, az erősebb lesz tőle."
+      }
+    ],
+    "blueCollarExamples": [
+      {
+        "icon": "ChefHat",
+        "from": "Szakács",
+        "steps": [
+          "Szakács",
+          "Mesterszakács",
+          "Michelin-séf / saját étterem"
+        ],
+        "motivation": "A konyha a kreativitás és a precizitás találkozási pontja – aki szeret kísérletezni és tanulni, az a csúcsra is felkerülhet.",
+        "skills": [
+          "Precizitás",
+          "Csapatmunka",
+          "Stressztűrés"
+        ]
+      },
+      {
+        "icon": "Zap",
+        "from": "Villanyszerelő",
+        "steps": [
+          "Villanyszerelő",
+          "Vezető szerelő",
+          "Saját vállalkozás"
+        ],
+        "motivation": "A digitalizáció és az okosotthonok kora az elektromos szakértőket a jövő nélkülözhetetlen embereivé teszi.",
+        "skills": [
+          "Biztonsági tudatosság",
+          "Problémamegoldás",
+          "Digitális készség"
+        ]
+      },
+      {
+        "icon": "Hammer",
+        "from": "Asztalos",
+        "steps": [
+          "Asztalos",
+          "Egyedi mestertervező",
+          "Saját márka & ügyfélkör"
+        ],
+        "motivation": "A kézművesség sosem megy ki a divatból – az egyedi faalkotások iránti igény folyamatosan nő, itthon és külföldön.",
+        "skills": [
+          "Kézügyesség",
+          "Precizitás",
+          "Kreativitás"
+        ]
+      },
+      {
+        "icon": "Flame",
+        "from": "Hegesztő",
+        "steps": [
+          "Hegesztő",
+          "Nemzetközi specialista",
+          "Automatizálási szakértő"
+        ],
+        "motivation": "Az ipar 4.0 a hegesztőkből is tech-szakértőket nevel – aki lépést tart, az a legjobban fizetett szakemberek közé kerül.",
+        "skills": [
+          "Precizitás",
+          "Minőségtudatosság",
+          "Tanulási képesség"
+        ]
+      },
+      {
+        "icon": "Wrench",
+        "from": "Autószerelő",
+        "steps": [
+          "Autószerelő",
+          "EV & hibrid szakértő",
+          "Műhelyvezető"
+        ],
+        "motivation": "Az elektromos forradalom az autószerelőket a legkeresettebb és legjobban fizetett szakemberek közé emelte.",
+        "skills": [
+          "Műszaki érzék",
+          "Problémamegoldás",
+          "Precizitás"
+        ]
+      },
+      {
+        "icon": "Scissors",
+        "from": "Fodrász",
+        "steps": [
+          "Fodrász",
+          "Mester-fodrász & oktató",
+          "Saját szalon"
+        ],
+        "motivation": "Egy jó fodrász több mint hajat vág – bizalmat épít, és emberek önbizalmát erősíti napról napra.",
+        "skills": [
+          "Ügyfélorientáltság",
+          "Kézügyesség",
+          "Empátia"
+        ]
+      },
+      {
+        "icon": "Wheat",
+        "from": "Pék",
+        "steps": [
+          "Pék",
+          "Kézműves pék",
+          "Saját pékség"
+        ],
+        "motivation": "A kovász és a kreativitás kombinációja életre szóló mesterséget jelent – a jó pék termékei reggeltől estig emberek napját indítják el.",
+        "skills": [
+          "Kreativitás",
+          "Minőségtudatosság",
+          "Időgazdálkodás"
+        ]
+      },
+      {
+        "icon": "Cake",
+        "from": "Cukrász",
+        "steps": [
+          "Cukrász",
+          "Mestercukrász",
+          "Saját cukrászda / márka"
+        ],
+        "motivation": "A cukrászatban a tudomány és a művészet találkozik – egy jó cukrász alkotásai emberek legemlékezetesebb pillanatait ékesítik.",
+        "skills": [
+          "Precizitás",
+          "Kreativitás",
+          "Esztétikai érzék"
+        ]
+      },
+      {
+        "icon": "Sparkles",
+        "from": "Kozmetikus",
+        "steps": [
+          "Kozmetikus",
+          "Speciális területi szakértő",
+          "Saját stúdió"
+        ],
+        "motivation": "A bőrápolástól az egyedi szépségprotokollokig: aki szeret emberekkel foglalkozni és folyamatosan fejlődni, a saját stúdió a következő lépés.",
+        "skills": [
+          "Empátia",
+          "Kézügyesség",
+          "Szakmai kommunikáció"
+        ]
+      },
+      {
+        "icon": "Settings2",
+        "from": "Gépésztechnikus",
+        "steps": [
+          "Gépésztechnikus",
+          "CNC / robotikai specialista",
+          "Termelési vezető"
+        ],
+        "motivation": "Az ipar 4.0 forradalma a gépésztechnikust robotikai specialistává és gyártásoptimalizálóvá teszi – a jövő gyárainak kulcsfigurája.",
+        "skills": [
+          "Digitális készség",
+          "Kritikai gondolkodás",
+          "Precizitás"
+        ]
+      },
+      {
+        "icon": "Package",
+        "from": "Logisztikai munkatárs",
+        "steps": [
+          "Logisztikai munkatárs",
+          "Műszakvezető",
+          "Logisztikai vezető"
+        ],
+        "motivation": "Minden termék, amit megrendelsz, átmegy egy logisztikai szakemberen – a jó szervezőből csapatvezető, majd menedzser lehet.",
+        "skills": [
+          "Szervezőkészség",
+          "Együttműködés",
+          "Digitális készség"
+        ]
+      },
+      {
+        "icon": "Video",
+        "from": "Tartalomkészítő",
+        "steps": [
+          "Tartalomkészítő / influenszer",
+          "Professzionális digitális alkotó",
+          "Saját márka / kreatív vállalkozás"
+        ],
+        "motivation": "A valódi digitális alkotó nem a követők számát hajtja, hanem értéket teremt: kreativitás, videókészítés, storytelling, marketing és vállalkozói szemlélet – ez a digitális kézművesség.",
+        "skills": [
+          "Kreativitás",
+          "Kommunikáció",
+          "Digitális készség"
+        ]
+      }
+    ],
+    "onmagamQuizItems": [
+      {
+        "situation": "Az első héten egy feladatot kapsz, amiről nem vagy biztos, hogyan kell csinálni. Mit teszel?",
+        "options": [
+          {
+            "text": "Megállok, átgondolom, mit tudok már, és konkrét kérdéssel fordulok a mentoromhoz.",
+            "isOptimal": true,
+            "feedback": "A bizonytalanság pályakezdőként normális. A kulcs: ne találgass, ne bénulj le – hanem átgondolva, konkrétan kérdezz. Ez mutatja, hogy felelősséget vállalsz a fejlődésedért."
+          },
+          {
+            "text": "Úgy csinálom, ahogy gondolom – majd kiderül, jó-e.",
+            "isOptimal": false,
+            "feedback": "A találgatás kockázatos. Ha rosszul végzed el, több idő megy a javításra, mintha célzott kérdéssel indultál volna."
+          },
+          {
+            "text": "Nem csinálom meg, amíg valaki nem mutatja meg lépésről lépésre.",
+            "isOptimal": false,
+            "feedback": "A passzív várakozás sem megoldás. Kérdezz konkrétan és önállóan – ez a fejlődés kulcsa."
+          }
+        ]
+      },
+      {
+        "situation": "Elakadtál egy feladatnál. Hogyan kérsz segítséget, hogy ne tűnjön tehetetlennek?",
+        "options": [
+          {
+            "text": "\"Nem értem a feladatot. Meg tudod csinálni helyettem?\"",
+            "isOptimal": false,
+            "feedback": "Ez túl általános, és azt jelzi, hogy nem próbálkoztál önállóan. Konkretizáld, hol és miért akadtál el."
+          },
+          {
+            "text": "Megpróbálom magam kitalálni, bármeddig tart is.",
+            "isOptimal": false,
+            "feedback": "A kitartás érték, de ha sokáig elakadsz, a segítségkérés teljesen természetes – sőt, az önállóság jele."
+          },
+          {
+            "text": "\"Elakadtam az X lépésnél, mert Y nem világos. Tudnál segíteni?\"",
+            "isOptimal": true,
+            "feedback": "A konkrét, célzott segítségkérés azt jelzi, hogy önállóan is próbálkoztál. Az \"X-nél akadtam el, mert Y\" formula professzionalizmust mutat – teljesen természeteset."
+          }
+        ]
+      },
+      {
+        "situation": "Egy fontos feladatot kétszer is megpróbálsz, de nem sikerül általában ezt várjákak szerint. Mit gondolsz?",
+        "options": [
+          {
+            "text": "Ez azt jelenti, hogy nem vagyok alkalmas erre a munkára.",
+            "isOptimal": false,
+            "feedback": "Két próbálkozás után levonni ezt a következtetést korai. A kudarc fejlődési lehetőség, nem alkalmatlanság."
+          },
+          {
+            "text": "Normális – elemzem, mi nem működött, és kérek visszajelzést a javításhoz.",
+            "isOptimal": true,
+            "feedback": "A kudarc nem alkalmatlanságot jelez – fejlődési lehetőséget jelez. Aki elemez és visszajelzést kér, az tanul. Aki feladja vagy figyelmen kívül hagyja, az nem."
+          },
+          {
+            "text": "Majd legközelebb sikerül – nem érdemes sokat gondolkodni rajta.",
+            "isOptimal": false,
+            "feedback": "A tudatos elemzés nélküli továbblépés nem tanít semmit. Érdemes megvizsgálni, mi nem működött."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd azt mondja, hogy munkád nem érte el az elvárásokat. Mi az első reakciód?",
+        "options": [
+          {
+            "text": "Hallgatom végig, megköszönöm, és megkérdezem, min kellene változtatnom.",
+            "isOptimal": true,
+            "feedback": "A visszajelzés csak akkor hasznos, ha befogadod. Az azonnali védekezés lezárja a tanulási lehetőséget. A \"köszönöm + mit javítsak?\" kombináció azt jelzi, hogy fontos neked a fejlődés."
+          },
+          {
+            "text": "Megmagyarázom, miért csináltam így, és miért nem teljesen az én hibám.",
+            "isOptimal": false,
+            "feedback": "Az azonnali védekezés lezárja a tanulási lehetőséget, és gyengíti a bizalmat. Hallgass, értsd meg, majd reagálj."
+          },
+          {
+            "text": "Bólintok, de belül tudom, hogy igazságtalan volt a megjegyzés.",
+            "isOptimal": false,
+            "feedback": "A belső ellenállás megakadályozza, hogy tanulj a visszajelzésből. Ha valóban igazságtalan, tegyél fel tisztázó kérdéseket."
+          }
+        ]
+      },
+      {
+        "situation": "Úgy érzed, a körülötted dolgozó kollégák sokkal magabiztosabbak nálad. Mit teszel?",
+        "options": [
+          {
+            "text": "Kerülöm a szituációkat, ahol esetleg nem teljesítek jól.",
+            "isOptimal": false,
+            "feedback": "Az elkerülés rövidtávon véd, de hosszútávon megakadályozza, hogy fejlődj és valódi magabiztosságot szerezz."
+          },
+          {
+            "text": "Másolom, ahogy ők viselkednek, hogy én is magabiztosabbnak tűnjek.",
+            "isOptimal": false,
+            "feedback": "A látszat-magabiztosság nem épít valódi önbizalmat. A saját fejlődési utad figyelése sokkal hasznosabb."
+          },
+          {
+            "text": "Figyelem, honnan indultam, és minden héten feljegyzek egy dolgot, amit jól csináltam.",
+            "isOptimal": true,
+            "feedback": "Az önbizalom nem adottság, hanem szokás. Aki figyeli a saját fejlődését és elismeri a kis sikereit, az fokozatosan valódi magabiztosságot épít – nem egy előadást."
+          }
+        ]
+      },
+      {
+        "situation": "Véletlenül hibás adatot rögzítettél egy dokumentumban, amit a főnököd már látott. Mit teszel?",
+        "options": [
+          {
+            "text": "Megvárom – hátha senki nem veszi észre.",
+            "isOptimal": false,
+            "feedback": "A hiba eltitkolása kockázatos. Ha kiderül, a bizalom sérül. Az időben jelzett hiba sokkal kevesebb következménnyel jár."
+          },
+          {
+            "text": "Azonnal jelzem a főnökömnek a hibát, és megkérdezem, hogyan javítsam.",
+            "isOptimal": true,
+            "feedback": "A hibákat érdemes azonnal jelezni, mielőtt tovagyűrűznek. Az önkéntes beismerés és a megoldáskeresés sokkal jobb benyomást kelt, mintha valaki más fedezi fel, és épít bizalmat."
+          },
+          {
+            "text": "Csendben kijavítom, és nem szólok senkinek.",
+            "isOptimal": false,
+            "feedback": "Ha a javítás nem terjed ki minden érintett helyre, a probléma megmarad. Az átláthatóság itt is fontosabb a gyors megoldásnál."
+          }
+        ]
+      },
+      {
+        "situation": "Egyszerre három sürgős feladatot kaptál, és nem tudod, hol kezdj. Mit teszel?",
+        "options": [
+          {
+            "text": "Egyszerre próbálom csinálni mindhárom feladatot, hogy gyorsan végezzek.",
+            "isOptimal": false,
+            "feedback": "A párhuzamos kapkodás ritkán vezet jó eredményre – általában mindhárom feladat minősége romlik."
+          },
+          {
+            "text": "Megvárom, amíg a főnököm visszajön, és addig nem csinálok semmit.",
+            "isOptimal": false,
+            "feedback": "A passzív várakozás nem vezet előre. Addig is felállíthatod a sorrendet, és elkezdheted a legvalószínűbb elsőt."
+          },
+          {
+            "text": "Leírom a feladatokat, felállítok sorrendet, és szükség esetén egyeztetek a főnökömmel.",
+            "isOptimal": true,
+            "feedback": "A fontossági sorrendok felállítása és az egyeztetés megment a felesleges hibáktól. A legtöbb munkavégzési hiba fontossági sorrendkezelési hibából fakad."
+          }
+        ]
+      },
+      {
+        "situation": "Egy veled egyidőben kezdett kollégád gyorsabban tanul és már önállóan dolgozik. Mit gondolsz?",
+        "options": [
+          {
+            "text": "Mindenki más tempóban fejlődik – a kérdés az, hogy én honnan indultam és mennyit haladtam.",
+            "isOptimal": true,
+            "feedback": "A fejlődés nem verseny. Mindenki más háttérrel és tanulási stílussal érkezik. A saját ütemedben haladni és a saját fejlődésedet figyelni sokkal hasznosabb, mint másokon aggódni."
+          },
+          {
+            "text": "Ez azt jelenti, hogy lassabb és alkalmatlanabb vagyok nála.",
+            "isOptimal": false,
+            "feedback": "A fejlődési tempó nem képességet mér, hanem tapasztalatot, korábbi tudást és tanulási stílust. Ne ebből vonjál le következtetést."
+          },
+          {
+            "text": "Sietnem kell, különben mindenki észreveszi, hogy le vagyok maradva.",
+            "isOptimal": false,
+            "feedback": "A kapkodás a saját fejlődésedet rontja. Fókuszálj a saját utadra, ne a látszatra."
+          }
+        ]
+      },
+      {
+        "situation": "Egy kollégád nyilvánosan bírálta a munkádat, és ezt igazságtalannak érzed. Mit teszel?",
+        "options": [
+          {
+            "text": "Azonnal visszaszólok, hogy megvédjem magam a többiek előtt.",
+            "isOptimal": false,
+            "feedback": "A nyilvános vita ritkán vezet megoldáshoz – inkább feszültséget teremt és elvonja a figyelmet a valódi problémáról."
+          },
+          {
+            "text": "Megvárom, amíg lehiggadok, majd négyszemközt tisztázom a helyzetet.",
+            "isOptimal": true,
+            "feedback": "A nyilvános vita ritkán vezet megoldáshoz – inkább feszültséget teremt. A higgadt, négyszemközti tisztázás hatékonyabb, és azt mutatja, hogy érett módon kezeled a konfliktust."
+          },
+          {
+            "text": "Nem szólok semmit, de ezután kerülöm a kollégámat.",
+            "isOptimal": false,
+            "feedback": "Az elkerülés feloldatlanul hagyja a helyzetet, és hosszabb távon a munkahelyi légkört rontja."
+          }
+        ]
+      },
+      {
+        "situation": "Az ötödik hónapban azon kapod magad, hogy semmi sem motivál, és alig bírsz munkába menni. Mit teszel?",
+        "options": [
+          {
+            "text": "Addig csinálom így, amíg elmúlik magától – ez valószínűleg csak egy rossz időszak.",
+            "isOptimal": false,
+            "feedback": "Az okok nélküli várakozás ritkán segít. A motiváció visszaszerzéséhez aktív lépések kellenek."
+          },
+          {
+            "text": "Azonnal felmondok – ha nincs motiváció, nincs értelme folytatni.",
+            "isOptimal": false,
+            "feedback": "Egy nehéz időszak még nem jelenti, hogy ez a rossz munkahely. Vizsgáld meg az okokat, mielőtt drasztikus döntést hozol."
+          },
+          {
+            "text": "Átgondolom az okokat, emlékeztetem magam, miért kezdtem el, és keresek egy kis lépést, amit ma meg tudok tenni.",
+            "isOptimal": true,
+            "feedback": "A motiváció hullámzik – ez normális. Aki megvizsgálja az okokat és keres egy konkrét kis lépést, az újra lendületet kap. Az okokat figyelmen kívül hagyni vagy drasztikusan reagálni ritkán vezet jó helyre."
+          }
+        ]
+      },
+      {
+        "situation": "Egy megbeszélésen rájössz, hogy a körülötted lévők sokkal tapasztaltabbak. Mit gondolsz?",
+        "options": [
+          {
+            "text": "Pályakezdőként ez teljesen normális – a tapasztalat idővel jön, az én feladatom most a tanulás.",
+            "isOptimal": true,
+            "feedback": "Az \"impostor-szindróma\" – amikor úgy érzed, nem vagy elég jó – szinte minden pályakezdőnél megjelenik. A tapasztalat megszerezhető. A kíváncsiság és a tanulási hajlandóság a legértékesebb ebben a szakaszban."
+          },
+          {
+            "text": "Lebuktam – mindenki látja, hogy nem vagyok elég jó erre a munkára.",
+            "isOptimal": false,
+            "feedback": "Ez az impostor-szindróma tipikus megnyilvánulása. Pályakezdőnek még nem kell mindent tudnod – a tanulás a feladatod."
+          },
+          {
+            "text": "Ezután inkább nem szólok hozzá az ilyen megbeszéléseken.",
+            "isOptimal": false,
+            "feedback": "A visszahúzódás megakadályoz abban, hogy láthatóvá válj és fejlődj. A bátortalan kérdés is értékesebb, mint a hallgatás."
+          }
+        ]
+      },
+      {
+        "situation": "Az első évben volt egy helyzet, ahol csúnyán megszégyenültél egy hiba miatt. Hogyan dolgozod fel?",
+        "options": [
+          {
+            "text": "Igyekszem elfelejteni – jobb, ha nem gondolok rá.",
+            "isOptimal": false,
+            "feedback": "Az elfelejtés semmit nem tanít, és a következő hasonló helyzetet sem készíti elő jobban."
+          },
+          {
+            "text": "Visszanézem: mi történt, mit tanultam belőle, mit csinálnék másképp, és mi a következő lépésem.",
+            "isOptimal": true,
+            "feedback": "A nehéz helyzetek a legfontosabb tanulási lehetőségek. Aki visszanéz tudatosan – Mi történt? Mit tanultam? Mit tennék másképp? az erősebben jön ki belőle. Az elfelejtés semmit nem tanít."
+          },
+          {
+            "text": "Onnantól mindent háromszor ellenőrzök, hogy soha ne fordulhasson elő újra.",
+            "isOptimal": false,
+            "feedback": "A túlzott ellenőrzés csökkenti a hatékonyságot és fenntartja a szorongást. A tudatos feldolgozás hatékonyabb."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+import {project} from './project-content.js';
+const data=project.modules.onmagam;
+export const preboardingData=data.preboardingData;
+export const survivalGuideData=data.survivalGuideData;
+export const blueCollarExamples=data.blueCollarExamples;
+export const onmagamQuizItems=data.onmagamQuizItems;
+export const onmagamQuiz=data.onmagamQuiz;
+export const mindfulnessExercises=data.mindfulnessExercises;
+export const marketFacts=data.marketFacts||[];
+export const marketFactsClosing=data.marketFactsClosing||'';

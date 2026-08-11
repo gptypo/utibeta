@@ -1,0 +1,334 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "glossary",
+  "title": "Fogalomtár",
+  "data": {
+    "glossary": [
+      {
+        "term": "Munkaszerződés",
+        "definition": "Írásos megállapodás, amelyben legalább az alapbéredet és a munkakörödet rögzíteni kell. A munkahely, a munkaviszony időtartama és más fontos feltételek is szerepelhetnek benne vagy a kapcsolódó írásos tájékoztatásban.",
+        "when": "Az első munkanapodon (vagy még előtte) kapod kézhez. Aláírás előtt olvasd el figyelmesen – az itt rögzített feltételek jogi kötelezettséget jelentenek mindkét félre.",
+        "tip": "Ha valami nem egyértelmű, kérdezz rá bátran, mielőtt aláírod. Kérj egy másolatot magadnak, és őrizd meg biztonságos helyen."
+      },
+      {
+        "term": "Munkaköri leírás",
+        "definition": "Megmutatja, milyen feladatok és felelősségek tartoznak a munkakörödhöz. Ez a dokumentum pontosítja, mit várnak el tőled napi szinten.",
+        "when": "A felvételi folyamat során vagy a munkába álláskor kapsz ilyet. Ha valaki azt kéri tőled, hogy olyat is csinálj, ami nincs benne, érdemes tisztázni a helyzetet.",
+        "tip": "Nem kőbe vésett: a feladatok idővel változhatnak. Ha sok újabb elvárás jelenik meg, jelezd, hogy frissítsék a leírást."
+      },
+      {
+        "term": "Próbaidő",
+        "definition": "A munkaviszony elején kiköthető időszak, amely főszabály szerint legfeljebb 3 hónap. Ez alatt mindkét fél indoklás nélkül, azonnali hatállyal megszüntetheti a munkaviszonyt, írásban.",
+        "when": "Az első munkanapodtól számítva tart. Ilyenkor különösen fontos a pontosság, a megbízhatóság és a nyitott hozzáállás.",
+        "tip": "A próbaidő nemcsak arról szól, hogy téged figyelnek. Te is megnézheted, valóban megfelel-e neked a munkahely és betartják-e a megbeszélteket."
+      },
+      {
+        "term": "Munkaidő",
+        "definition": "Az az időszak, amikor a munkádat a munkáltató előírásai szerint végzed, és ezért munkabér jár. A teljes munkaidő általában napi 8 óra, heti 40 óra.",
+        "when": "Minden munkanapodon a beosztás szerint. A beosztáson felüli munka rendkívüli munkaidő lehet. Ha még nem vagy 18 éves, túlóra és éjszakai munka nem rendelhető el.",
+        "tip": "A munkaidődet munkavégzéssel kell töltened, de a jogszabályban előírt szüneteket is igénybe veheted. Figyeld a saját energiaszintjeidet."
+      },
+      {
+        "term": "Munkarend",
+        "definition": "Meghatározza, hogyan oszlik el a munkaidőd: mikor kezdesz, mikor fejezed be, milyen napszakban dolgozol, és van-e váltásos vagy rugalmas időbeosztás.",
+        "when": "A munkarendet a munkáltató állapítja meg, a konkrét munkaidő-beosztást pedig előre kell közölnie. A részleteket a munkaszerződéshez kapcsolódó tájékoztatás, belső szabályzat vagy beosztás tartalmazhatja.",
+        "tip": "Nézd meg, hogy a munkarend kötött-e vagy rugalmas – ez nagyban befolyásolja a mindennapjaidat. Iskolai képzéssel kombinálható-e? Érdemes előre megkérdezni."
+      },
+      {
+        "term": "Munkabér",
+        "definition": "A munkádért járó díjazás, amit a munkáltató fizet. A bruttó bér a szerződésben szereplő összeg; a nettó az, amit ténylegesen megkapsz, adók és járulékok levonása után.",
+        "when": "Általában havonta, meghatározott napon utalják. A bércsúszás – ha a bért késve fizetik – nem elfogadható és jogilag sem megengedett.",
+        "tip": "A bércsíket (fizetési kimutatást) őrizd meg. Ellenőrizd, hogy a nettó összeg egyezik-e azzal, amit a szerződésben olvastál."
+      },
+      {
+        "term": "Szabadság",
+        "definition": "Fizetett távollét, amely minden naptári évben megillet. Az alapszabadság 20 munkanap; 18 éves korig évente további 5 munkanap pótszabadság jár.",
+        "when": "A szabadságot főszabály szerint a munkáltató adja ki. Évente 7 munkanapot – az első 3 hónap kivételével – a kérésed szerinti időpontban kell kiadnia, ha legalább 15 nappal előre jelzed.",
+        "tip": "A szabadság jár, de az időpontot egyeztetni kell. Pénzben főszabály szerint csak a munkaviszony megszűnésekor váltható meg."
+      },
+      {
+        "term": "Túlóra",
+        "definition": "Köznyelvi neve a rendkívüli munkaidő több esetének. Az elszámolás függ attól, mikor és milyen beosztás mellett dolgozol; bérpótlék vagy meghatározott esetben szabadidő járhat. 18 év alatt túlóra nem rendelhető el.",
+        "when": "Például akkor merülhet fel, ha a beosztás szerinti napi munkaidődön túl kell dolgoznod. Mindig kérdezd meg, hogyan tartják nyilván és számolják el.",
+        "tip": "Jogod van megkérdezni, hogy a túlórát pénzben vagy szabadnapban kompenzálják-e. Tartós, ellenszolgáltatás nélküli túlmunka red flag."
+      },
+      {
+        "term": "Betanítás",
+        "definition": "Az a folyamat, amely során megtanulod az új munkaköröd feladatait, a munkahely működését, a belső rendszereket és az elvárásokat.",
+        "when": "Az első napokon, heteken zajlik. Általában egy kolléga vagy vezető vezet végig a folyamaton.",
+        "tip": "Ha a betanítás hiányos vagy elmarad, jelezd – jogod van megkapni a szükséges tudást a feladataid elvégzéséhez. Jegyezz, kérdezz, ismételj."
+      },
+      {
+        "term": "Visszajelzés",
+        "definition": "Információ arról, hogyan végzed a munkádat, miben vagy eredményes, és miben érdemes fejlődnöd. Lehet szóbeli, formális teljesítményértékelés keretében vagy közvetlen, mindennapos visszajelzés.",
+        "when": "Munka közben folyamatosan, de formálisan általában negyedévente vagy félévente értékelő megbeszélés formájában.",
+        "tip": "A visszajelzést – még ha kritikus is – érdemes meghallgatni és megérteni, mielőtt reagálsz. Kérhetsz te is visszajelzést bármikor: „Miben fejlődhetnék a legtöbbet?”"
+      },
+      {
+        "term": "Határidő",
+        "definition": "Az az időpont, ameddig egy feladatot el kell végezned. A határidők betartása a megbízhatóság és a szakmaiság alapja.",
+        "when": "Szinte minden munkahelyi feladatnál jelen van. Ha egy határidőt nem tudsz tartani, azt minél korábban jelezni kell – nem a lejárat után.",
+        "tip": "Ha egyszerre több határidőd is van, kérdezd meg a vezetődet, melyik a legfontosabb. Jobb előre kérdezni, mint utólag magyarázkodni."
+      },
+      {
+        "term": "Csapatmunka",
+        "definition": "Közös munkavégzés másokkal egy meghatározott cél elérése érdekében. Magában foglalja az egyeztetést, a feladatok megosztását és a közös felelősségvállalást.",
+        "when": "Szinte minden munkahelyen jelen van – akár közvetlen együttdolgozás formájában, akár információ megosztásával más részlegekkel.",
+        "tip": "A jó csapatmunka nem azt jelenti, hogy mindenki mindig egyetért. Azt jelenti, hogy képesek vagytok nyíltan kommunikálni, és a közös célt előbbre helyezitek az egyénin."
+      }
+    ],
+    "fogalomtárQuiz": [
+      {
+        "situation": "Az első nap megkapod a munkaköri leírásodat. Mikor érdemes elolvasni?",
+        "options": [
+          {
+            "text": "Aláírás előtt figyelmesen elolvasom, és ha valami nem egyértelmű, megkérdezem.",
+            "isOptimal": true,
+            "feedback": "Ez az egyetlen helyes sorrend. Amit aláírsz, arra kötelezted magad – ismerd meg előbb."
+          },
+          {
+            "text": "Majd ha szükségem lesz rá – addig is dolgozom.",
+            "isOptimal": false,
+            "feedback": "A munkaköri leírás meghatározza, mi a feladatod. Ha nem ismered, elvárhatnak olyat, ami nem kötelező."
+          },
+          {
+            "text": "Csak az aláírandó részt nézem meg.",
+            "isOptimal": false,
+            "feedback": "Az egész dokumentum kötelező erővel bír – nem elég csak a végét megnézni."
+          }
+        ]
+      },
+      {
+        "situation": "Próbaidő alatt vagy és a vezető azt mondja, hogy jól halad a betanulás, de van fejlődési lehetőség. Hogyan értelmezed ezt?",
+        "options": [
+          {
+            "text": "Ez már felmondást jelent – biztosan nem vagyok jó ebben a munkában.",
+            "isOptimal": false,
+            "feedback": "A fejlődési visszajelzés próbaidőn teljesen normális és szükséges – nem felmondás."
+          },
+          {
+            "text": "Ez konstruktív visszajelzés – megkérdezem, mi az, amire konkrétan odafigyelhetne.",
+            "isOptimal": true,
+            "feedback": "Ez az érett reakció. A próbaidő éppen arra való, hogy tanulj és alkalmazkodj – a visszajelzés ajándék."
+          },
+          {
+            "text": "Nem reagálok – majd a cselekedeteimmel mutatom meg, hogy fejlődöm.",
+            "isOptimal": false,
+            "feedback": "A visszajelzés megbeszélése fontosabb, mint a néma cselekvés. Kérdezz és pontosíts."
+          }
+        ]
+      },
+      {
+        "situation": "Elmúltál 18 éves, havibéres vagy, és a vezető azt kéri, hogy maradj a beosztásod után 2 órával. Mit érdemes tisztázni?",
+        "options": [
+          {
+            "text": "Mindig maradnom kell – a vezető kéri, ez a kötelességem.",
+            "isOptimal": false,
+            "feedback": "A havibér önmagában nem jelenti azt, hogy a beosztáson felüli munka ingyenes. Kérdezz rá a nyilvántartásra és az ellentételezésre."
+          },
+          {
+            "text": "Soha nem kell maradnom – a munkaidőm pontosan le van rögzítve.",
+            "isOptimal": false,
+            "feedback": "A rendkívüli munkaidő elrendelhető, de szabályai és ellentételezése vannak. Ha még nem vagy 18 éves, túlóra nem rendelhető el."
+          },
+          {
+            "text": "Megkérdezem, hogyan rögzítik és milyen pótlékkal vagy szabadidővel számolják el a plusz 2 órát.",
+            "isOptimal": true,
+            "feedback": "Ez a pontos és nyugodt reakció. A plusz munka nyilvántartására és elszámolására érdemes konkrét választ kérni."
+          }
+        ]
+      },
+      {
+        "situation": "A fizetési kimutatáson a bruttó és nettó szám is szerepel. Melyiket érdemes figyelni?",
+        "options": [
+          {
+            "text": "A bruttót – az a „valódi” fizetésem.",
+            "isOptimal": false,
+            "feedback": "A bruttó a kiindulópont, de a nettó az, amit ténylegesen megkapsz. Mindkettőt ismerni kell."
+          },
+          {
+            "text": "Egyiket sem – a bank majd jelzi, ha bejön a fizetés.",
+            "isOptimal": false,
+            "feedback": "A bércsík ellenőrzése kötelező pénzügyi felelősség. Hibák ritkán, de előfordulnak."
+          },
+          {
+            "text": "Mindkettőt – a bruttót a szerződéssel vetem össze, a nettót a beérkező összeggel.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes pénzügyi tudatosság. Ha a nettó nem egyezik, jelezd a HR-nek vagy számfejtőnek."
+          }
+        ]
+      },
+      {
+        "situation": "Visszajelzést kapsz, és az nem tetszik neked. Mi a helyes reakció?",
+        "options": [
+          {
+            "text": "Meghallgatom, megköszönöm, és átgondolom, mi az, amivel haladni tudok belőle.",
+            "isOptimal": true,
+            "feedback": "A visszajelzés akkor is értékes, ha nehéz hallani. A reflexió segít szelektálni, mi a hasznos."
+          },
+          {
+            "text": "Azonnal visszajelzem, hogy ez nem igaz és nem fogadom el.",
+            "isOptimal": false,
+            "feedback": "A védekezés lezárja a tanulás lehetőségét. Hallgasd meg teljesen, mielőtt reagálsz."
+          },
+          {
+            "text": "Elfogadom, amit mondanak – biztosan igazuk van.",
+            "isOptimal": false,
+            "feedback": "Kritikus gondolkodás nélkül elfogadni sem jó. Gondolkodj el rajta, és ha valóban nem érzel, kérdezz rá."
+          }
+        ]
+      },
+      {
+        "situation": "A határidőd holnap van, és biztosan nem tudod tartani. Ma van erről tudomásod. Mikor szólsz?",
+        "options": [
+          {
+            "text": "Holnap, a határidő napján – hiszen addig lehet, hogy valahogy megoldom.",
+            "isOptimal": false,
+            "feedback": "A késő jelzés nem ad lehetőséget a tervek átszabásához. Mindig előre jelezd a problémát."
+          },
+          {
+            "text": "Ma azonnal megkérdezem a vezetőmet, és jelzem az új várható határidőt.",
+            "isOptimal": true,
+            "feedback": "A korai jelzés megbízhatóságot mutat és lehetőséget ad a vezetődnek az újratervezésre."
+          },
+          {
+            "text": "Nem szólok – majd látják, ha csúszik.",
+            "isOptimal": false,
+            "feedback": "Ez a legrosszabb lehetőség. A kommunikáció hiánya bizalomveszteséggel jár."
+          }
+        ]
+      },
+      {
+        "situation": "Szabadságot szeretnél kivenni. Hogyan kell ezt intézni?",
+        "options": [
+          {
+            "text": "Elküldöm az e-mailt a vezetődnek az utolsó pillanatban – majd jóváhagyja.",
+            "isOptimal": false,
+            "feedback": "A szabadság időpontját nem érdemes kész tényként közölni. Jelezd időben az igényedet, és várd meg a jóváhagyást."
+          },
+          {
+            "text": "Előre jelzem a vezetőmnek, benyújtom a kérelmet az előírt formában, és megvárom a jóváhagyást.",
+            "isOptimal": true,
+            "feedback": "A szabadságot a munkáltató adja ki, ezért kérni és egyeztetni kell. Évente 7 munkanapra külön munkavállalói rendelkezési szabály vonatkozik, megfelelő előzetes jelzéssel."
+          },
+          {
+            "text": "Egyszerűen nem megyek be azon a napon – nem kötelező engedélyt kérni.",
+            "isOptimal": false,
+            "feedback": "Ez a jó gyakorlat. Jelezd időben, mikor szeretnél szabadságot, és egyeztess a munkahelyeddel."
+          }
+        ]
+      },
+      {
+        "situation": "Betanítás közben nem érted az egyik folyamatot. Mikor érdemes kérdezni?",
+        "options": [
+          {
+            "text": "Soha – majd kitalálom magamtól, ne tűnjek gyengének.",
+            "isOptimal": false,
+            "feedback": "A kérdezés teljesen természetes, hanem tanulási eszköz. A kérdező gyorsabban tanul, mint aki hallgat."
+          },
+          {
+            "text": "Csak akkor kérdezek, ha a vezető éppen ráér.",
+            "isOptimal": false,
+            "feedback": "Várni nem mindig lehetséges. Írj egy rövid üzenetet kérdéssel – ő jelzi, mikor tud válaszolni."
+          },
+          {
+            "text": "Azonnal, amikor felmerül a kérdés – vagy rögtön a betanítás után.",
+            "isOptimal": true,
+            "feedback": "A friss kérdés a leghatékonyabb. Ne gyűjtögesd a kérdéseket napokig – kérdezz amint felmerül."
+          }
+        ]
+      },
+      {
+        "situation": "A munkarenddel kapcsolatban szeretnéd módosítani a kezdési időpontodat. Mi a helyes lépés?",
+        "options": [
+          {
+            "text": "Megkérdezem a vezetőmet: „Lenne lehetőség megbeszélni a munkaidő-beosztásomat?”",
+            "isOptimal": true,
+            "feedback": "Ez az egyetlen helyes út. Egyeztetni kell, és a módosítást írásban rögzíteni."
+          },
+          {
+            "text": "Egyszerűen korábban kezdek – majd észreveszik, hogy ez jobban megy nekem.",
+            "isOptimal": false,
+            "feedback": "A munkarend egy megállapodás. Egyoldalú módosítása szabálysértés lehet."
+          },
+          {
+            "text": "Kérem a HR-t, hogy módosítsák a szerződésemet.",
+            "isOptimal": false,
+            "feedback": "A HR általában a vezető javaslatára módosít. Először a közvetlen feletteseddel egyezz."
+          }
+        ]
+      },
+      {
+        "situation": "A munkabéredet mindig egy héttel késve utalják. Ez probléma?",
+        "options": [
+          {
+            "text": "Nem – legalább megkapom.",
+            "isOptimal": false,
+            "feedback": "A munkabér késedelmes fizetése jogellenes. Ezt nem szabad szó nélkül elfogadni."
+          },
+          {
+            "text": "Igen – jelzem a HR-nek és a vezetőmnek, hogy ez visszatérő probléma.",
+            "isOptimal": true,
+            "feedback": "A munkabér esedékességkor jár. A késedelmes fizetés jogos panasz alapja és jelezni kell."
+          },
+          {
+            "text": "Megvárom, hogy mások is panaszkodjanak – talán rendszerszintű hiba.",
+            "isOptimal": false,
+            "feedback": "Ne várd meg, hogy mások fellépjenek. Saját bérügyedben Te vagy az érintett – jelezd Te is."
+          }
+        ]
+      },
+      {
+        "situation": "A csapatmunkában az egyik kolléga nem teszi a részét. Mit teszel?",
+        "options": [
+          {
+            "text": "Megcsinálom az ő részét is – nem akarok konfliktust.",
+            "isOptimal": false,
+            "feedback": "Ez rövid távon megoldja a problémát, de hosszú távon igazságtalan és fenntarthatatlan."
+          },
+          {
+            "text": "Azonnal szólok a vezetőnek, hogy nem teljesít.",
+            "isOptimal": false,
+            "feedback": "A közvetlen jelzés megelőz sok felesleges konfliktust. Először próbáld meg négyszemközt."
+          },
+          {
+            "text": "Négyszemközt, barátian jelzem, hogy a feladatmegosztás egyenlőtlen, és megkérdezem, mi akadályozza.",
+            "isOptimal": true,
+            "feedback": "Ez a konstruktív és felnőtt megközelítés. Sokszor a kolléga maga is tudja, de szüksége van egy nyitó kérdésre."
+          }
+        ]
+      },
+      {
+        "situation": "A munkaszerződésedben olyan feltétel van, amit nem értesz pontosan. Mit teszel aláírás előtt?",
+        "options": [
+          {
+            "text": "Megkérdezem a HR-t vagy egy ismerőst, aki ért hozzá, és csak utána írom alá.",
+            "isOptimal": true,
+            "feedback": "Ez a felelős döntés. Egy kérdés nem sérti meg a munkáltatót – inkább mutatja, hogy komolyan veszed."
+          },
+          {
+            "text": "Aláírom – biztosan szokásos szöveg, mindenki aláírja.",
+            "isOptimal": false,
+            "feedback": "Amit nem értesz, azt ne írd alá. A szerződés jogilag kötelező, minden feltételt ismerned kell."
+          },
+          {
+            "text": "Kihúzom az érthetetlen részt és úgy írom alá.",
+            "isOptimal": false,
+            "feedback": "A szerződés egyoldalú módosítása érvénytelenítheti azt, és jogi problémát okozhat."
+          }
+        ]
+      }
+    ]
+  },
+  "expertReview": {
+    "version": "7.1",
+    "reviewedAt": "2026-07-27",
+    "scope": [
+      "munkajogi fogalmak",
+      "szabadság",
+      "próbaidő",
+      "rendkívüli munkaidő"
+    ],
+    "notice": "Közérthető általános tájékoztatás; egyedi ügyben nem helyettesít jogi tanácsot."
+  }
+}

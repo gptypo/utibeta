@@ -1,0 +1,105 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "materials",
+  "title": "Tudástár",
+  "data": {
+    "bonusMaterials": [
+      {
+        "id": "article-first-salary",
+        "category": "Szakmai cikkek",
+        "icon": "Newspaper",
+        "title": "Az első béralku – így csináld",
+        "description": "Hogyan kérj fizetést úgy, hogy meg is kapd? Taktikák és mondatok pályakezdőknek az első tárgyaláshoz.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "article-career-z-gen",
+        "category": "Szakmai cikkek",
+        "icon": "Newspaper",
+        "title": "Karrierút tervezés Z generációsoknak",
+        "description": "Hogyan építs karriert anélkül, hogy kiégnél 30 éves korodra? Életutak, váltások, tudatos döntések.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "article-linkedin",
+        "category": "Szakmai cikkek",
+        "icon": "Newspaper",
+        "title": "LinkedIn profil – így keresnek majd téged",
+        "description": "Profilépítési tippek, amivel a HR-esek és fejvadászok aktívan téged fognak keresni.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "article-top5-mistakes",
+        "category": "Szakmai cikkek",
+        "icon": "Newspaper",
+        "title": "A pályakezdő 5 leggyakoribb hibája",
+        "description": "Amit majdnem mindenki elront az első munkahelyen, és hogyan kerüld el ezeket te is.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "guide-cv",
+        "category": "Részletes útmutatók",
+        "icon": "FileText",
+        "title": "Önéletrajz, ami átjut a szűrőn",
+        "description": "A HR-esek 6 másodpercet szánnak egy CV-re. Így tedd ütőssé a tiédet – ATS-kompatibilis formátumban.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "video-interview",
+        "category": "Videók",
+        "icon": "Video",
+        "title": "Sikeres állásinterjú – mit keresnek valójában?",
+        "description": "Szakértői tippek és tipikus kérdések. Felkészítő anyag az első és a sokadik interjúhoz egyaránt.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "video-feedback",
+        "category": "Videók",
+        "icon": "Video",
+        "title": "Hogyan kérj visszajelzést a főnöködtől?",
+        "description": "Konkrét technikák és mondatok arra, hogyan kapj fejlesztő visszajelzést rendszeres értékelőkön kívül is.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "download-weekly-planner",
+        "category": "Letölthető anyagok",
+        "icon": "Download",
+        "title": "Heti tervező és fókusz sablon",
+        "description": "Nyomtasd ki vagy használd digitálisan, hogy rendszerezd a teendőidet és megmaradj a pályán.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "download-labor-law",
+        "category": "Letölthető anyagok",
+        "icon": "Download",
+        "title": "Munkajogi gyorstalpaló PDF",
+        "description": "Minden fontos szabályozás – minimálbér, próbaidő, túlóra, felmondás – egy rövid, érthető dokumentumban.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "story-first-mistake",
+        "category": "Szakmai történetek",
+        "icon": "MessageCircle",
+        "title": "Ezt rontottam el az első munkahelyemen",
+        "description": "Valós történetek arról, hogyan álltak fel fiatalok egy-egy nagyobb hiba után. Tanulságos és bátorító.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "calc-salary",
+        "category": "Kalkulátorok & eszközök",
+        "icon": "Calculator",
+        "title": "Bruttó–nettó bér kalkulátor",
+        "description": "Tudd meg, mennyi marad a fizetésedből adók és járulékok után. Gyors, ingyenes, naprakész.",
+        "status": "coming-soon"
+      },
+      {
+        "id": "ofa-utiterv",
+        "category": "OFA programok",
+        "icon": "Target",
+        "title": "Útiterv a Jövőbe – programinformáció",
+        "description": "Az OFA Nonprofit Kft. pályaorientációs programjának részletei, képzési lehetőségek és kapcsolatfelvétel.",
+        "status": "coming-soon"
+      }
+    ]
+  }
+}

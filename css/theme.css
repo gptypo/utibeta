@@ -1,0 +1,1220 @@
+:root{--theme-bg:#fff;--theme-bg-soft:#f3f6f7;--theme-surface:#fff;--theme-surface-2:#eef3f4;--theme-text:#050505;--theme-text-soft:#526168;--theme-border:rgba(23,33,38,.12);--theme-shadow:0 18px 50px rgba(0,0,0,.12);--theme-topbar:rgba(255,255,255,.88);--theme-input:#fff}
+html[data-theme="dark"]{--paper:#0b1114;--surface:#111a1f;--ink:#f4f8f7;--muted:#a6b4b8;--nav:#050809;--theme-bg:#0b1114;--theme-bg-soft:#0e171b;--theme-surface:#142026;--theme-surface-2:#1a282e;--theme-text:#f4f8f7;--theme-text-soft:#afbdc1;--theme-border:rgba(226,242,239,.13);--theme-shadow:0 18px 54px rgba(0,0,0,.38);--theme-topbar:rgba(11,17,20,.88);--theme-input:#101b20;color-scheme:dark}
+body{background:var(--theme-bg);color:var(--theme-text)}
+.app{background:linear-gradient(180deg,var(--theme-bg) 0%,var(--theme-bg-soft) 100%)}
+.topbar{background:var(--theme-topbar);border-bottom-color:var(--theme-border)}
+.brand,.version,.menu-button,.theme-toggle{color:var(--theme-text)}
+.theme-toggle{width:42px;height:42px;border:1px solid var(--theme-border);border-radius:50%;background:var(--theme-surface);display:grid;place-items:center;cursor:pointer;font-size:20px;line-height:1;box-shadow:0 7px 20px rgba(0,0,0,.08);transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.theme-toggle:hover{transform:translateY(-1px);border-color:var(--turq)}.theme-toggle:focus-visible{outline:3px solid rgba(20,232,201,.35);outline-offset:2px}
+.splash{background:var(--theme-bg)}.splash__skip{color:var(--theme-text-soft)}
+.progress-card,.content-card,.system-section,.principle-grid article,.quality-card,.studio-sidebar,.studio-canvas-panel,.editor-content-tools,.quality-panel--collapsible,.copy-qa-item{background:var(--theme-surface)!important;color:var(--theme-text);border-color:var(--theme-border)!important;box-shadow:var(--theme-shadow)}
+.progress-card p,.content-card p,.section-title span,.eyebrow--dark,.quality-card p,.editor-head p,.editor-help,.empty-state,.copy-qa-overview p{color:var(--theme-text-soft)!important}
+.progress-ring{background:conic-gradient(var(--turq) calc(var(--progress)*1%),var(--theme-surface-2) 0)}.progress-ring:after,.copy-qa-score:before{background:var(--theme-surface)}
+.notice{background:color-mix(in srgb,var(--turq) 10%,var(--theme-surface))}
+.button--secondary,.icon-button,.studio-history-button,.studio-device-switch button,.studio-mode-switch button,.content-tool-nav button,.copy-qa-item-actions button,.quality-locate{background:var(--theme-surface-2)!important;color:var(--theme-text)!important;border-color:var(--theme-border)!important}
+input,textarea,select{background:var(--theme-input)!important;color:var(--theme-text)!important;border-color:var(--theme-border)!important}
+.app-menu{background:var(--theme-surface)!important;color:var(--theme-text)}.app-menu__head,.app-menu__nav button{border-color:var(--theme-border)!important}.app-menu__nav button{color:var(--theme-text)}
+html[data-theme="dark"] .hero__cloud{color:var(--theme-bg)}
+html[data-theme="dark"] .chip{background:#153730;color:#65f3df}
+html[data-theme="dark"] .button--light{background:#f4f8f7;color:#071014}
+html[data-theme="dark"] .toast,html[data-theme="dark"] .pwa-toast{background:#edf8f5;color:#071014}
+html[data-theme="dark"] .pwa-dialog,html[data-theme="dark"] .pwa-banner{background:#142026;color:#f4f8f7;border-color:var(--theme-border)}
+html[data-theme="dark"] .pwa-dialog::backdrop{background:rgba(0,0,0,.72)}
+html[data-theme="dark"] .editor-body{background:#0b1114;color:#f4f8f7}
+html[data-theme="dark"] .editor-head,html[data-theme="dark"] .studio-canvas-head{color:#f4f8f7}
+html[data-theme="dark"] .studio-canvas{background:#071014}
+html[data-theme="dark"] .studio-tree button,html[data-theme="dark"] .studio-component-grid button,html[data-theme="dark"] details>summary{color:#f4f8f7;border-color:var(--theme-border)}
+html[data-theme="dark"] code,html[data-theme="dark"] pre{color:#b9fff2}
+.theme-settings{margin:18px 0;padding:20px;border-radius:22px;background:var(--theme-surface);border:1px solid var(--theme-border)}.theme-settings__row{display:flex;align-items:center;justify-content:space-between;gap:16px}.theme-settings h3{margin:0 0 5px}.theme-settings p{margin:0;color:var(--theme-text-soft)}.theme-choice{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.theme-choice button{border:1px solid var(--theme-border);background:var(--theme-surface-2);color:var(--theme-text);border-radius:999px;padding:9px 13px;font-weight:800;cursor:pointer}.theme-choice button:hover{border-color:var(--turq)}
+@media(max-width:520px){.theme-toggle{width:38px;height:38px}.version--button{display:none}}
+
+
+/* 8.1.2 — CSS-first light/dark theme foundation
+   The visual theme is driven by html[data-theme]. The header switch is
+   intentionally hidden for now; future controls can reuse the same state. */
+:root,
+html[data-theme="light"]{
+  --green:#14e8c9;
+  --calm-turquoise:#14e8c9;
+}
+
+html[data-theme="dark"]{
+  --green:#14e8c9;
+  --calm-turquoise:#14e8c9;
+}
+
+/* Keep every originally turquoise module/surface turquoise in dark mode. */
+html[data-theme="dark"] .module-card.qw,
+html[data-theme="dark"] .page-head.qw,
+html[data-theme="dark"] .recommendation-card{
+  background:var(--turq) !important;
+  color:#050505 !important;
+}
+
+.module-card.qw,
+.page-head.qw,
+.recommendation-card,
+.pwa-button,
+.editor-tabs button.is-active{
+  color:#050505 !important;
+}
+
+/* The #14e8c9 accent remains unchanged, especially in Calm/Mindfulness UI. */
+html[data-theme="dark"] .mindfulness-icon,
+html[data-theme="dark"] .accordion-icon,
+html[data-theme="dark"] .topic-icon,
+html[data-theme="dark"] .grounding-icon,
+html[data-theme="dark"] .grounding-count strong,
+html[data-theme="dark"] .mindfulness-complete__icon,
+html[data-theme="dark"] .body-scan-timer strong,
+html[data-theme="dark"] .guided-audio-orb,
+html[data-theme="dark"] .mindfulness-steps li::marker{
+  color:#14e8c9 !important;
+}
+html[data-theme="dark"] .grounding-dots span.is-on,
+html[data-theme="dark"] .body-scan-progress i,
+html[data-theme="dark"] .guided-controls .guided-play{
+  background:#14e8c9 !important;
+  border-color:#14e8c9 !important;
+}
+html[data-theme="dark"] .mindfulness-timer{
+  border-color:#14e8c9 !important;
+}
+html[data-theme="dark"] .mindfulness-takeaway{
+  border-left-color:#14e8c9 !important;
+}
+
+/* Home: Continue section becomes a calm light-grey card with dark content. */
+html[data-theme="dark"] .continue-inline{
+  background:#e7ebec !important;
+  color:#172126 !important;
+}
+html[data-theme="dark"] .continue-inline .eyebrow,
+html[data-theme="dark"] .continue-inline .display-title,
+html[data-theme="dark"] .continue-inline .continue-inline__copy,
+html[data-theme="dark"] .continue-inline .continue-inline__copy p,
+html[data-theme="dark"] .continue-inline .continue-inline__copy strong,
+html[data-theme="dark"] .continue-inline .circle-button{
+  color:#172126 !important;
+}
+html[data-theme="dark"] .continue-inline .circle-button{
+  background:#cfd6d8 !important;
+}
+
+/* Home: Önmagam module card follows the same light-grey/dark-text rule. */
+html[data-theme="dark"] .module-card.qg{
+  background:#e7ebec !important;
+  color:#172126 !important;
+}
+html[data-theme="dark"] .module-card.qg *{
+  color:#172126 !important;
+}
+
+/* Other home cards preserve their original light-mode palette. */
+html[data-theme="dark"] .module-card.ww{background:var(--blue) !important;color:#fff !important}
+html[data-theme="dark"] .module-card.gg{background:#696773 !important;color:var(--turq) !important}
+
+/* Hamburger remains readable on both themes. */
+.menu-button{background:#050505 !important;color:#fff !important}
+.menu-button span{background:#fff !important}
+.menu-button:hover{background:#172126 !important}
+
+/* 8.1.3 — Dark surface hierarchy refinement */
+html[data-theme="dark"]{
+  --dark-card:#111a1f;
+  --dark-card-2:#142026;
+  --dark-outline:rgba(225,240,237,.22);
+  --dark-outline-soft:rgba(225,240,237,.13);
+  --dark-copy:#f4f8f7;
+  --dark-copy-soft:#aebdc1;
+}
+
+/* Surfaces that were dark in light mode stay dark and gain separation. */
+html[data-theme="dark"] .continue-card,
+html[data-theme="dark"] .module-card.qg,
+html[data-theme="dark"] .page-head.qg,
+html[data-theme="dark"] .recommendation-card__icon,
+html[data-theme="dark"] .button:not(.button--light):not(.button--secondary),
+html[data-theme="dark"] .circle-button{
+  border:1px solid var(--dark-outline) !important;
+  box-shadow:0 14px 34px rgba(0,0,0,.3),inset 0 0 0 1px rgba(255,255,255,.025);
+}
+html[data-theme="dark"] .module-card.qg,
+html[data-theme="dark"] .page-head.qg,
+html[data-theme="dark"] .continue-card{
+  background:#050809 !important;
+}
+html[data-theme="dark"] .module-card.qg,
+html[data-theme="dark"] .module-card.qg *,
+html[data-theme="dark"] .page-head.qg,
+html[data-theme="dark"] .page-head.qg *{
+  color:var(--turq) !important;
+}
+
+/* Subpage cards stay dark; subtle outlines replace light card fills. */
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .progress-card,
+html[data-theme="dark"] .qa-card,
+html[data-theme="dark"] .month-card,
+html[data-theme="dark"] .quiz-card,
+html[data-theme="dark"] .career-card,
+html[data-theme="dark"] .breath-card,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .custom-card,
+html[data-theme="dark"] .mindfulness-card,
+html[data-theme="dark"] .mindfulness-accordion__item,
+html[data-theme="dark"] .breathing-accordion__item,
+html[data-theme="dark"] .flip-card__face,
+html[data-theme="dark"] .phrase-card,
+html[data-theme="dark"] .digital-card,
+html[data-theme="dark"] .beta-card,
+html[data-theme="dark"] .topic-card,
+html[data-theme="dark"] .quality-card,
+html[data-theme="dark"] .principle-grid article{
+  background:var(--dark-card) !important;
+  color:var(--dark-copy) !important;
+  border:1px solid var(--dark-outline-soft) !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.22) !important;
+}
+html[data-theme="dark"] .content-card p,
+html[data-theme="dark"] .qa-answer,
+html[data-theme="dark"] .month-card>p,
+html[data-theme="dark"] .career-card p,
+html[data-theme="dark"] .breath-card span,
+html[data-theme="dark"] .accordion-body,
+html[data-theme="dark"] .custom-card p,
+html[data-theme="dark"] .empty-custom,
+html[data-theme="dark"] .mindfulness-card p,
+html[data-theme="dark"] .grounding-card p,
+html[data-theme="dark"] .body-scan-card p,
+html[data-theme="dark"] .guided-audio-intro p{
+  color:var(--dark-copy-soft) !important;
+}
+html[data-theme="dark"] .content-card h2,
+html[data-theme="dark"] .content-card h3,
+html[data-theme="dark"] .qa-card h3,
+html[data-theme="dark"] .month-card h3,
+html[data-theme="dark"] .quiz-card h3,
+html[data-theme="dark"] .career-card h3,
+html[data-theme="dark"] .breath-card strong,
+html[data-theme="dark"] .accordion-item summary,
+html[data-theme="dark"] .custom-card h3,
+html[data-theme="dark"] .mindfulness-card h3{
+  color:var(--dark-copy) !important;
+}
+html[data-theme="dark"] .accordion-body,
+html[data-theme="dark"] .qa-answer{
+  border-color:var(--dark-outline-soft) !important;
+}
+html[data-theme="dark"] .accordion-body aside,
+html[data-theme="dark"] .month-card aside,
+html[data-theme="dark"] .quiz-feedback,
+html[data-theme="dark"] .mindfulness-takeaway,
+html[data-theme="dark"] .career-steps span{
+  background:var(--dark-card-2) !important;
+  color:var(--dark-copy-soft) !important;
+  border-color:var(--dark-outline-soft) !important;
+}
+html[data-theme="dark"] .quiz-options button,
+html[data-theme="dark"] .guided-controls button,
+html[data-theme="dark"] .pager button,
+html[data-theme="dark"] .topic-tabs button{
+  background:var(--dark-card-2) !important;
+  color:var(--dark-copy) !important;
+  border-color:var(--dark-outline-soft) !important;
+}
+
+/* Turquoise accents and icons never shift to blue in dark mode. */
+html[data-theme="dark"] .mindfulness-icon,
+html[data-theme="dark"] .accordion-icon,
+html[data-theme="dark"] .topic-icon,
+html[data-theme="dark"] .grounding-icon,
+html[data-theme="dark"] .mindfulness-complete__icon,
+html[data-theme="dark"] [class*="turq"],
+html[data-theme="dark"] [data-accent="turquoise"]{
+  color:#14e8c9 !important;
+  border-color:currentColor !important;
+}
+html[data-theme="dark"] .mindfulness-icon svg,
+html[data-theme="dark"] .accordion-icon svg,
+html[data-theme="dark"] .topic-icon svg,
+html[data-theme="dark"] .grounding-icon svg,
+html[data-theme="dark"] [data-accent="turquoise"] svg{
+  color:#14e8c9 !important;
+  fill:currentColor;
+  stroke:currentColor;
+}
+html[data-theme="dark"] .grounding-dots span.is-on,
+html[data-theme="dark"] .body-scan-progress i,
+html[data-theme="dark"] .guided-controls .guided-play,
+html[data-theme="dark"] .step-counter i{
+  background:#14e8c9 !important;
+  border-color:#14e8c9 !important;
+}
+
+/* Dark edge fades below subpage heroes. */
+html[data-theme="dark"] .journey-tabs-shell::before{
+  background:linear-gradient(90deg,var(--theme-bg) 0%,rgba(11,17,20,.94) 34%,rgba(11,17,20,0) 100%) !important;
+}
+html[data-theme="dark"] .journey-tabs-shell::after{
+  background:linear-gradient(270deg,var(--theme-bg) 0%,rgba(11,17,20,.94) 34%,rgba(11,17,20,0) 100%) !important;
+}
+
+/* 8.1.4 — Dark-mode contrast and navigation-card pass */
+html[data-theme="dark"]{
+  --dark-card:#171f23;
+  --dark-card-2:#1d282d;
+  --dark-dropdown:#1a2429;
+  --dark-copy:#f5faf9;
+  --dark-copy-soft:#c0cccf;
+  --dark-turquoise-border:#14e8c9;
+}
+
+/* Previous / next navigation remains dark grey, including the boundary cards. */
+html[data-theme="dark"] .pager button,
+html[data-theme="dark"] .pager button[data-topic-direction],
+html[data-theme="dark"] .pager button[data-topic-direction="-1"],
+html[data-theme="dark"] .topic-boundary-nav .button,
+html[data-theme="dark"] .topic-boundary-nav button{
+  background:var(--dark-card-2) !important;
+  color:var(--dark-copy) !important;
+  border:1px solid rgba(20,232,201,.42) !important;
+  box-shadow:none !important;
+}
+html[data-theme="dark"] .pager button:disabled,
+html[data-theme="dark"] .topic-boundary-nav button:disabled{
+  color:#8d9a9e !important;
+  border-color:rgba(20,232,201,.18) !important;
+}
+html[data-theme="dark"] .pager>span,
+html[data-theme="dark"] .pager span{
+  background:var(--dark-card) !important;
+  color:var(--dark-copy) !important;
+  border-color:rgba(20,232,201,.38) !important;
+}
+
+/* Every card and dropdown surface stays dark grey. */
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .progress-card,
+html[data-theme="dark"] .qa-card,
+html[data-theme="dark"] .month-card,
+html[data-theme="dark"] .quiz-card,
+html[data-theme="dark"] .career-card,
+html[data-theme="dark"] .breath-card,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .custom-card,
+html[data-theme="dark"] .mindfulness-card,
+html[data-theme="dark"] .mindfulness-accordion__item,
+html[data-theme="dark"] .breathing-accordion__item,
+html[data-theme="dark"] .flip-card__face,
+html[data-theme="dark"] .phrase-card,
+html[data-theme="dark"] .digital-card,
+html[data-theme="dark"] .beta-card,
+html[data-theme="dark"] .topic-card,
+html[data-theme="dark"] .single-topic-card,
+html[data-theme="dark"] .quiz-summary,
+html[data-theme="dark"] .app-menu,
+html[data-theme="dark"] details,
+html[data-theme="dark"] select,
+html[data-theme="dark"] .dropdown,
+html[data-theme="dark"] [role="listbox"]{
+  background:var(--dark-card) !important;
+  color:var(--dark-copy) !important;
+  border-color:rgba(226,242,239,.16) !important;
+}
+html[data-theme="dark"] details>summary,
+html[data-theme="dark"] .accordion-item summary,
+html[data-theme="dark"] .mindfulness-accordion__item summary,
+html[data-theme="dark"] .breathing-accordion__item summary,
+html[data-theme="dark"] option,
+html[data-theme="dark"] optgroup{
+  background:var(--dark-dropdown) !important;
+  color:var(--dark-copy) !important;
+}
+
+/* No dark-grey copy is allowed on a black/grey surface. */
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .content-card h1,
+html[data-theme="dark"] .content-card h2,
+html[data-theme="dark"] .content-card h3,
+html[data-theme="dark"] .content-card h4,
+html[data-theme="dark"] .qa-card,
+html[data-theme="dark"] .qa-card h3,
+html[data-theme="dark"] .month-card,
+html[data-theme="dark"] .month-card h3,
+html[data-theme="dark"] .quiz-card,
+html[data-theme="dark"] .quiz-card h3,
+html[data-theme="dark"] .career-card,
+html[data-theme="dark"] .career-card h3,
+html[data-theme="dark"] .breath-card,
+html[data-theme="dark"] .breath-card strong,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .accordion-item summary,
+html[data-theme="dark"] .custom-card,
+html[data-theme="dark"] .custom-card h3,
+html[data-theme="dark"] .mindfulness-card,
+html[data-theme="dark"] .mindfulness-card h3,
+html[data-theme="dark"] .flip-card__face,
+html[data-theme="dark"] .flip-card__face strong,
+html[data-theme="dark"] .single-topic-card,
+html[data-theme="dark"] .single-topic-card h3,
+html[data-theme="dark"] .quiz-feedback strong,
+html[data-theme="dark"] .app-menu,
+html[data-theme="dark"] .app-menu button,
+html[data-theme="dark"] label,
+html[data-theme="dark"] summary{
+  color:var(--dark-copy) !important;
+}
+html[data-theme="dark"] .content-card p,
+html[data-theme="dark"] .content-card li,
+html[data-theme="dark"] .qa-answer,
+html[data-theme="dark"] .month-card>p,
+html[data-theme="dark"] .month-card aside span,
+html[data-theme="dark"] .quiz-feedback p,
+html[data-theme="dark"] .quiz-summary p,
+html[data-theme="dark"] .career-card p,
+html[data-theme="dark"] .breath-card span,
+html[data-theme="dark"] .accordion-body,
+html[data-theme="dark"] .accordion-body p,
+html[data-theme="dark"] .custom-card p,
+html[data-theme="dark"] .empty-custom,
+html[data-theme="dark"] .mindfulness-card p,
+html[data-theme="dark"] .mindfulness-summary small,
+html[data-theme="dark"] .flip-card__face span,
+html[data-theme="dark"] .flip-card__face small,
+html[data-theme="dark"] .single-topic-card p,
+html[data-theme="dark"] .guide-head p,
+html[data-theme="dark"] .section-title span{
+  color:var(--dark-copy-soft) !important;
+}
+
+/* Surfaces that intentionally remain black/dark get a turquoise outline. */
+html[data-theme="dark"] .continue-card,
+html[data-theme="dark"] .module-card.qg,
+html[data-theme="dark"] .page-head.qg,
+html[data-theme="dark"] .recommendation-card__icon,
+html[data-theme="dark"] .button:not(.button--light):not(.button--secondary),
+html[data-theme="dark"] .circle-button,
+html[data-theme="dark"] .guided-controls button{
+  border-color:var(--dark-turquoise-border) !important;
+}
+
+/* Preserve black copy on genuinely turquoise surfaces. */
+html[data-theme="dark"] .module-card.qw,
+html[data-theme="dark"] .module-card.qw *,
+html[data-theme="dark"] .page-head.qw,
+html[data-theme="dark"] .page-head.qw *,
+html[data-theme="dark"] .recommendation-card,
+html[data-theme="dark"] .recommendation-card *,
+html[data-theme="dark"] [style*="background:#14e8c9"],
+html[data-theme="dark"] [style*="background: #14e8c9"]{
+  color:#050505 !important;
+}
+
+
+/* 8.2.1 — brand-safe dark-mode interaction fixes */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"]{
+  --calm-turquoise:#14e8c9;
+  --green:#14e8c9;
+}
+
+/* Topic buttons directly below module heroes remain flat. */
+.topic-tabs button,
+.journey-tabs button{
+  box-shadow:none !important;
+}
+
+/* Topic-boundary navigation is always turquoise with black copy. */
+.topic-boundary-nav .topic-boundary-nav__button,
+.topic-boundary-nav .button,
+.topic-boundary-nav button,
+html[data-theme="dark"] .topic-boundary-nav .topic-boundary-nav__button,
+html[data-theme="dark"] .topic-boundary-nav .button,
+html[data-theme="dark"] .topic-boundary-nav button{
+  background:#14e8c9 !important;
+  color:#050505 !important;
+  border-color:#14e8c9 !important;
+  box-shadow:none !important;
+}
+.topic-boundary-nav button:disabled,
+html[data-theme="dark"] .topic-boundary-nav button:disabled{
+  background:#14e8c9 !important;
+  color:rgba(5,5,5,.52) !important;
+  border-color:#14e8c9 !important;
+  opacity:.55;
+}
+
+/* White active hamburger-menu item must keep black text in dark mode. */
+html[data-theme="dark"] .app-menu__nav button.is-active{
+  background:#fff !important;
+  color:#050505 !important;
+}
+html[data-theme="dark"] .app-menu__nav button.is-active strong,
+html[data-theme="dark"] .app-menu__nav button.is-active small,
+html[data-theme="dark"] .app-menu__nav button.is-active span{
+  color:#050505 !important;
+}
+
+/* Any legacy #172126 copy becomes the canonical light dark-mode copy. */
+html[data-theme="dark"] .topic-tabs button.is-active,
+html[data-theme="dark"] .guide-head h2,
+html[data-theme="dark"] .qa-card h3,
+html[data-theme="dark"] .month-card h3,
+html[data-theme="dark"] .quiz-card h3,
+html[data-theme="dark"] .breath-card strong,
+html[data-theme="dark"] .pager button,
+html[data-theme="dark"] .quiz-feedback strong,
+html[data-theme="dark"] .button--secondary,
+html[data-theme="dark"] [style*="color:#172126"],
+html[data-theme="dark"] [style*="color: #172126"]{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+
+/* A discovered quiz answer keeps its semantic color on dark surfaces. */
+html[data-theme="dark"] .quiz-options button.is-good,
+html[data-theme="dark"] .quiz-options button.is-good.is-viewed{
+  background:#14e8c9 !important;
+  border-color:#14e8c9 !important;
+  color:#050505 !important;
+}
+html[data-theme="dark"] .quiz-options button.is-not-best,
+html[data-theme="dark"] .quiz-options button.is-not-best.is-viewed{
+  background:#e5484d !important;
+  border-color:#e5484d !important;
+  color:#fff !important;
+}
+html[data-theme="dark"] .quiz-options button.is-good b{
+  background:rgba(5,5,5,.14) !important;
+  color:#050505 !important;
+}
+html[data-theme="dark"] .quiz-options button.is-not-best b{
+  background:rgba(255,255,255,.18) !important;
+  color:#fff !important;
+}
+
+
+/* 8.2.2 — flat hero navigation and refined dark swipe surfaces */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"]{
+  --green:var(--color-turquoise,#14e8c9);
+  --calm-turquoise:var(--color-turquoise,#14e8c9);
+}
+
+/* The topic rail below each hero is text-only: no fill, border or shadow. */
+.topic-tabs button,
+.journey-tabs button,
+html[data-theme="dark"] .topic-tabs button,
+html[data-theme="dark"] .journey-tabs button{
+  background:transparent !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+}
+.topic-tabs button.is-active,
+.journey-tabs button.is-active,
+html[data-theme="dark"] .topic-tabs button.is-active,
+html[data-theme="dark"] .journey-tabs button.is-active{
+  background:transparent !important;
+  color:var(--theme-text) !important;
+  border-color:transparent !important;
+}
+
+/* Legacy dark ink must never remain dark on a dark neutral surface. */
+html[data-theme="dark"] [style*="color:#172126"],
+html[data-theme="dark"] [style*="color: #172126"],
+html[data-theme="dark"] .guide-head h2,
+html[data-theme="dark"] .quiz-card h3,
+html[data-theme="dark"] .quiz-feedback strong,
+html[data-theme="dark"] .breath-card strong,
+html[data-theme="dark"] .mindfulness-accordion__copy strong,
+html[data-theme="dark"] .breathing-accordion__copy strong{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+
+/* Swipeable content cards use a dark-grey shell rather than a white outline. */
+html[data-theme="dark"] .quiz-card[data-quiz-swipe],
+html[data-theme="dark"] .carousel-shell .carousel-stage > *,
+html[data-theme="dark"] .carousel-stage .content-card,
+html[data-theme="dark"] .carousel-stage .mindfulness-card{
+  background:#172126 !important;
+  border-color:#35434a !important;
+  color:var(--dark-copy,#f5faf9) !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.24) !important;
+}
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] h3,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] p,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] span,
+html[data-theme="dark"] .carousel-shell .carousel-stage > * h2,
+html[data-theme="dark"] .carousel-shell .carousel-stage > * h3,
+html[data-theme="dark"] .carousel-shell .carousel-stage > * p,
+html[data-theme="dark"] .carousel-shell .carousel-stage > * li{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-count,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe]::after{
+  color:var(--dark-copy-soft,#aebdc1) !important;
+}
+
+/* Keep answer-state colours intact after the generic swipe-card text rule. */
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good span,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good b{
+  background:var(--color-turquoise,#14e8c9) !important;
+  border-color:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+}
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-not-best,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-not-best span,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-not-best b{
+  color:#fff !important;
+}
+
+
+/* 8.2.3 — temporary fresh-state bootstrap and turquoise-only accents */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"]{
+  --green:var(--color-turquoise,#14e8c9);
+  --success:var(--color-turquoise,#14e8c9);
+}
+
+/* Quick Win checklist uses the same dark card surface as the rest of the app. */
+html[data-theme="dark"] .checklist label{
+  background:var(--dark-card,#172126) !important;
+  border-color:var(--dark-border,#35434a) !important;
+  box-shadow:none !important;
+}
+html[data-theme="dark"] .checklist span{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+html[data-theme="dark"] .checklist input{
+  accent-color:var(--color-turquoise,#14e8c9) !important;
+}
+
+/* All dropdown/accordion direction indicators keep the turquoise accent. */
+html[data-theme="dark"] .accordion-chevron,
+html[data-theme="dark"] .mindfulness-accordion__chevron,
+html[data-theme="dark"] .breathing-accordion__chevron,
+html[data-theme="dark"] .guided-transcript__chevron,
+html[data-theme="dark"] .dropdown-arrow,
+html[data-theme="dark"] select{
+  color:var(--color-turquoise,#14e8c9) !important;
+}
+
+/* Side cards in swipe carousels are outlines, not pale filled cards. */
+.carousel-peek,
+html[data-theme="dark"] .carousel-peek{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:2px solid var(--theme-border,#35434a) !important;
+}
+html[data-theme="dark"] .carousel-peek{
+  border-color:var(--dark-border,#35434a) !important;
+}
+
+/* Dark text formerly used inside green controls becomes neutral black on turquoise. */
+.breath-orb span,
+.breath-orb strong,
+html[data-theme="dark"] .breath-orb span,
+html[data-theme="dark"] .breath-orb strong{
+  color:#050505 !important;
+}
+
+/* 8.2.4 — calm-module surfaces, carousel peeks and splash contrast */
+
+/* Carousel side previews are secondary dark cards, not pale or hollow shapes. */
+html[data-theme="dark"] .carousel-peek,
+html[data-theme="dark"] .carousel-peek--left,
+html[data-theme="dark"] .carousel-peek--right{
+  background:var(--dark-card-2,#1d282d) !important;
+  border-color:var(--dark-border,#35434a) !important;
+  box-shadow:none !important;
+}
+
+/* Nyugalom / mindfulness containers stay inside the dark surface hierarchy. */
+html[data-theme="dark"] .mindfulness-accordion,
+html[data-theme="dark"] .breathing-accordion,
+html[data-theme="dark"] .mindfulness-experience{
+  color:var(--dark-copy,#f5faf9);
+}
+html[data-theme="dark"] .mindfulness-accordion__item,
+html[data-theme="dark"] .breathing-accordion__item,
+html[data-theme="dark"] .mindfulness-card,
+html[data-theme="dark"] .breath-player,
+html[data-theme="dark"] .guided-player,
+html[data-theme="dark"] .guided-audio-card,
+html[data-theme="dark"] .grounding-card,
+html[data-theme="dark"] .body-scan-card,
+html[data-theme="dark"] .mindfulness-intro,
+html[data-theme="dark"] .mindfulness-complete{
+  background:var(--dark-card,#171f23) !important;
+  border-color:var(--dark-border,#35434a) !important;
+  color:var(--dark-copy,#f5faf9) !important;
+  box-shadow:none !important;
+}
+html[data-theme="dark"] .mindfulness-accordion__item > summary,
+html[data-theme="dark"] .breathing-accordion__item > summary,
+html[data-theme="dark"] .mindfulness-accordion__item[open] > summary,
+html[data-theme="dark"] .breathing-accordion__item[open] > summary,
+html[data-theme="dark"] .mindfulness-accordion__body,
+html[data-theme="dark"] .breathing-accordion__body{
+  background:var(--dark-card-2,#1d282d) !important;
+  border-color:var(--dark-border,#35434a) !important;
+  color:var(--dark-copy,#f5faf9) !important;
+}
+html[data-theme="dark"] .mindfulness-takeaway,
+html[data-theme="dark"] .accordion-body aside,
+html[data-theme="dark"] .guided-progress,
+html[data-theme="dark"] .gratitude-fields input,
+html[data-theme="dark"] .guided-controls button:not(.guided-play){
+  background:var(--dark-card-2,#1d282d) !important;
+  border-color:var(--dark-border,#35434a) !important;
+  color:var(--dark-copy,#f5faf9) !important;
+}
+html[data-theme="dark"] .mindfulness-description,
+html[data-theme="dark"] .guided-audio-intro p,
+html[data-theme="dark"] .breathing-accordion__body > p,
+html[data-theme="dark"] .mindfulness-steps,
+html[data-theme="dark"] .guided-time,
+html[data-theme="dark"] .guided-volume,
+html[data-theme="dark"] .gratitude-fields label{
+  color:var(--dark-copy-soft,#c0cccf) !important;
+}
+
+/* The logo SVG intentionally keeps black lettering, so the splash remains light. */
+html[data-theme="dark"] .splash{
+  background:#fff !important;
+  color:#050505 !important;
+}
+html[data-theme="dark"] .splash__skip{
+  color:#5f686c !important;
+}
+
+/* 8.2.5 — flip-card contrast and light-mode preservation
+   Light values mirror the original UI; dark mode only remaps semantic roles. */
+:root,
+html[data-theme="light"]{
+  --light-page:#ffffff;
+  --light-card:#ffffff;
+  --light-card-alt:#e8fffb;
+  --light-copy:#172126;
+  --light-copy-soft:#607077;
+  --light-line:#d9e7e3;
+  --light-line-alt:#bfe9e3;
+  --flip-label-bg:var(--color-turquoise,#14e8c9);
+  --flip-label-copy:#050505;
+  --flip-front-bg:var(--light-card);
+  --flip-front-line:var(--light-line);
+  --flip-back-bg:var(--light-card-alt);
+  --flip-back-line:var(--light-line-alt);
+}
+
+html[data-theme="dark"]{
+  --flip-label-bg:var(--color-turquoise,#14e8c9);
+  --flip-label-copy:#050505;
+  --flip-front-bg:var(--dark-card,#111a1f);
+  --flip-front-line:var(--dark-outline-soft,rgba(225,240,237,.13));
+  --flip-back-bg:var(--dark-card-2,#1d282d);
+  --flip-back-line:color-mix(in srgb,var(--color-turquoise,#14e8c9) 38%,transparent);
+}
+
+/* Keep a clear front/back distinction on every rotating card. */
+.flip-card__front{
+  background:var(--flip-front-bg) !important;
+  border-color:var(--flip-front-line) !important;
+}
+.flip-card__back{
+  background:var(--flip-back-bg) !important;
+  border-color:var(--flip-back-line) !important;
+}
+html[data-theme="dark"] .flip-card__front,
+html[data-theme="dark"] .flip-card__back{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+
+/* The label/title is turquoise with dark copy on both sides and both themes. */
+.flip-card__face > strong{
+  align-self:flex-start;
+  display:inline-flex;
+  max-width:100%;
+  padding:.42rem .68rem;
+  border-radius:999px;
+  background:var(--flip-label-bg) !important;
+  color:var(--flip-label-copy) !important;
+  line-height:1.15;
+}
+html[data-theme="dark"] .flip-card__face > strong,
+html[data-theme="dark"] .flip-card__front > strong,
+html[data-theme="dark"] .flip-card__back > strong{
+  color:var(--flip-label-copy) !important;
+}
+
+/* Subpage navigation under heroes stays visually identical to the original,
+   except that buttons are intentionally background-free in light mode too. */
+.topic-tabs button,
+.journey-tabs button,
+html[data-theme="light"] .topic-tabs button,
+html[data-theme="light"] .journey-tabs button,
+.topic-tabs button.is-active,
+.journey-tabs button.is-active,
+html[data-theme="light"] .topic-tabs button.is-active,
+html[data-theme="light"] .journey-tabs button.is-active{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+/* 8.3.1 — Win-Win flip cards preserve the original light-side logic. */
+.flip-card--winwin .flip-card__face > strong{
+  display:block;
+  align-self:stretch;
+  max-width:none;
+  padding:0;
+  border-radius:0;
+  background:transparent !important;
+  color:inherit !important;
+  line-height:inherit;
+}
+
+/* In dark mode the reverse side deliberately stays light turquoise,
+   matching the original light-mode interaction and preserving contrast. */
+html[data-theme="dark"] .flip-card--winwin .flip-card__back{
+  background:var(--light-card-alt,#e8fffb) !important;
+  border-color:var(--light-line-alt,#bfe9e3) !important;
+  color:var(--light-copy,#172126) !important;
+}
+html[data-theme="dark"] .flip-card--winwin .flip-card__back > strong,
+html[data-theme="dark"] .flip-card--winwin .flip-card__back > span,
+html[data-theme="dark"] .flip-card--winwin .flip-card__back > small{
+  color:var(--light-copy,#172126) !important;
+}
+
+/* Only the two-perspective card keeps labels. */
+.flip-card--two-sides .perspective-label{
+  display:inline-flex;
+  align-self:flex-start;
+  width:auto;
+  padding:.42rem .68rem;
+  border-radius:999px;
+  background:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+  font-weight:800;
+  line-height:1.15;
+}
+html[data-theme="dark"] .flip-card--two-sides .perspective-label{
+  background:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+}
+
+/* Hero-adjacent topic navigation is always visually weightless. */
+.topic-tabs button,
+.topic-tabs button:hover,
+.topic-tabs button:focus-visible,
+.topic-tabs button.is-active,
+.journey-tabs button,
+.journey-tabs button:hover,
+.journey-tabs button:focus-visible,
+.journey-tabs button.is-active,
+html[data-theme="dark"] .topic-tabs button,
+html[data-theme="dark"] .topic-tabs button:hover,
+html[data-theme="dark"] .topic-tabs button:focus-visible,
+html[data-theme="dark"] .topic-tabs button.is-active,
+html[data-theme="dark"] .journey-tabs button,
+html[data-theme="dark"] .journey-tabs button:hover,
+html[data-theme="dark"] .journey-tabs button:focus-visible,
+html[data-theme="dark"] .journey-tabs button.is-active{
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+
+/* 8.3.2 — semantic flip and quiz states
+   A revealed flip side is fully turquoise in every theme. The two-perspective
+   cards are informational, so both sides intentionally keep the same surface. */
+.flip-card:not(.flip-card--two-sides) .flip-card__back,
+html[data-theme="light"] .flip-card:not(.flip-card--two-sides) .flip-card__back,
+html[data-theme="dark"] .flip-card:not(.flip-card--two-sides) .flip-card__back{
+  background:var(--color-turquoise,#14e8c9) !important;
+  border-color:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+}
+.flip-card:not(.flip-card--two-sides) .flip-card__back > strong,
+.flip-card:not(.flip-card--two-sides) .flip-card__back > span,
+.flip-card:not(.flip-card--two-sides) .flip-card__back > small,
+.flip-card:not(.flip-card--two-sides) .flip-card__back b,
+html[data-theme="dark"] .flip-card:not(.flip-card--two-sides) .flip-card__back > strong,
+html[data-theme="dark"] .flip-card:not(.flip-card--two-sides) .flip-card__back > span,
+html[data-theme="dark"] .flip-card:not(.flip-card--two-sides) .flip-card__back > small,
+html[data-theme="dark"] .flip-card:not(.flip-card--two-sides) .flip-card__back b{
+  color:#050505 !important;
+}
+
+/* Pro phrases, Digital space and every Win-Win flip use normal headings,
+   never pill/label styling. */
+.flip-card--winwin .flip-card__face > strong,
+html[data-theme="light"] .flip-card--winwin .flip-card__face > strong,
+html[data-theme="dark"] .flip-card--winwin .flip-card__face > strong{
+  display:block !important;
+  align-self:stretch !important;
+  max-width:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  line-height:inherit !important;
+}
+.flip-card--winwin .flip-card__front > strong{
+  color:inherit !important;
+}
+.flip-card--winwin .flip-card__back > strong{
+  color:#050505 !important;
+}
+
+/* “Két oldal” is not a right/wrong interaction: both faces share one surface.
+   Only its perspective labels remain turquoise with dark text. */
+.flip-card--two-sides .flip-card__front,
+.flip-card--two-sides .flip-card__back,
+html[data-theme="light"] .flip-card--two-sides .flip-card__front,
+html[data-theme="light"] .flip-card--two-sides .flip-card__back{
+  background:var(--light-card,#ffffff) !important;
+  border-color:var(--light-line,#d9e7e3) !important;
+  color:var(--light-copy,#172126) !important;
+}
+html[data-theme="dark"] .flip-card--two-sides .flip-card__front,
+html[data-theme="dark"] .flip-card--two-sides .flip-card__back{
+  background:var(--dark-card,#111a1f) !important;
+  border-color:var(--dark-outline-soft,rgba(225,240,237,.13)) !important;
+  color:var(--dark-copy,#f5faf9) !important;
+}
+html[data-theme="dark"] .flip-card--two-sides .flip-card__face > strong,
+html[data-theme="dark"] .flip-card--two-sides .flip-card__face > span,
+html[data-theme="dark"] .flip-card--two-sides .flip-card__face > small{
+  color:var(--dark-copy,#f5faf9) !important;
+}
+.flip-card--two-sides .perspective-label,
+html[data-theme="light"] .flip-card--two-sides .perspective-label,
+html[data-theme="dark"] .flip-card--two-sides .perspective-label{
+  background:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+}
+
+/* A correct quiz answer is always a full turquoise state, never a tint. */
+.quiz-options button.is-good,
+.quiz-options button.is-good.is-viewed,
+html[data-theme="light"] .quiz-options button.is-good,
+html[data-theme="light"] .quiz-options button.is-good.is-viewed,
+html[data-theme="dark"] .quiz-options button.is-good,
+html[data-theme="dark"] .quiz-options button.is-good.is-viewed,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good{
+  background:var(--color-turquoise,#14e8c9) !important;
+  border-color:var(--color-turquoise,#14e8c9) !important;
+  color:#050505 !important;
+}
+.quiz-options button.is-good span,
+.quiz-options button.is-good b,
+html[data-theme="light"] .quiz-options button.is-good span,
+html[data-theme="light"] .quiz-options button.is-good b,
+html[data-theme="dark"] .quiz-options button.is-good span,
+html[data-theme="dark"] .quiz-options button.is-good b,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good span,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-good b{
+  color:#050505 !important;
+}
+
+
+/* 8.3.3 — Pro mondatok / Digitális tér headings and journey-tab transparency.
+   These cards now share the exact Win-Win / Kommunikáció heading treatment. */
+.flip-card--winwin .flip-card__face > strong,
+html[data-theme="light"] .flip-card--winwin .flip-card__face > strong,
+html[data-theme="dark"] .flip-card--winwin .flip-card__face > strong{
+  display:block !important;
+  align-self:stretch !important;
+  max-width:none !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  font-size:clamp(1.28rem,5vw,1.65rem) !important;
+  line-height:1.05 !important;
+  letter-spacing:-.025em !important;
+  text-transform:none !important;
+}
+
+/* The topic journey bar is visually part of the page background in dark mode. */
+html[data-theme="dark"] .topic-tabs.journey-tabs button,
+html[data-theme="dark"] .topic-tabs.journey-tabs button:hover,
+html[data-theme="dark"] .topic-tabs.journey-tabs button:focus,
+html[data-theme="dark"] .topic-tabs.journey-tabs button:focus-visible,
+html[data-theme="dark"] .topic-tabs.journey-tabs button:active,
+html[data-theme="dark"] .topic-tabs.journey-tabs button.is-active{
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+}
+
+
+/* 8.3.4 — shadowless home hero and supportive quiz guidance states. */
+.hero,
+html[data-theme="light"] .hero,
+html[data-theme="dark"] .hero{
+  box-shadow:none !important;
+}
+
+/* Non-optimal quiz choices are neutral guidance, not error states. */
+:root{
+  --quiz-guidance-bg:#d9e0e2;
+  --quiz-guidance-border:#b7c2c6;
+  --quiz-guidance-copy:#172126;
+  --quiz-guidance-badge:#dce3e5;
+}
+html[data-theme="dark"]{
+  --quiz-guidance-bg:var(--dark-card-2,#1d282d);
+  --quiz-guidance-border:#45545b;
+  --quiz-guidance-copy:var(--dark-copy,#f5faf9);
+  --quiz-guidance-badge:#35434a;
+}
+.quiz-options button.is-not-best,
+.quiz-options button.is-not-best.is-viewed,
+html[data-theme="light"] .quiz-options button.is-not-best,
+html[data-theme="light"] .quiz-options button.is-not-best.is-viewed,
+html[data-theme="dark"] .quiz-options button.is-not-best,
+html[data-theme="dark"] .quiz-options button.is-not-best.is-viewed,
+html[data-theme="dark"] .quiz-card[data-quiz-swipe] .quiz-options button.is-not-best{
+  background:var(--quiz-guidance-bg) !important;
+  border-color:var(--quiz-guidance-border) !important;
+  color:var(--quiz-guidance-copy) !important;
+}
+.quiz-options button.is-not-best span,
+.quiz-options button.is-not-best b,
+html[data-theme="light"] .quiz-options button.is-not-best span,
+html[data-theme="light"] .quiz-options button.is-not-best b,
+html[data-theme="dark"] .quiz-options button.is-not-best span,
+html[data-theme="dark"] .quiz-options button.is-not-best b{
+  color:var(--quiz-guidance-copy) !important;
+}
+.quiz-options button.is-not-best b{
+  background:var(--quiz-guidance-badge) !important;
+}
+.quiz-feedback.is-guidance,
+html[data-theme="light"] .quiz-feedback.is-guidance,
+html[data-theme="dark"] .quiz-feedback.is-guidance{
+  background:var(--quiz-guidance-bg) !important;
+  border-color:var(--quiz-guidance-border) !important;
+}
+.quiz-feedback.is-guidance strong,
+.quiz-feedback.is-guidance p,
+.quiz-feedback.is-guidance .quiz-feedback__hint,
+html[data-theme="dark"] .quiz-feedback.is-guidance strong,
+html[data-theme="dark"] .quiz-feedback.is-guidance p,
+html[data-theme="dark"] .quiz-feedback.is-guidance .quiz-feedback__hint{
+  color:var(--quiz-guidance-copy) !important;
+}
+
+
+/* 8.3.5 — persistent theme controls and manual local-data reset. */
+.home-settings{
+  margin:clamp(34px,7vw,72px) 0 12px;
+  padding:clamp(20px,4vw,30px);
+  border:1px solid var(--theme-border);
+  border-radius:24px;
+  background:var(--theme-surface);
+  color:var(--theme-text);
+}
+.home-settings__head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.home-settings__head h2{margin:4px 0 6px;font-size:clamp(1.35rem,3vw,1.8rem)}
+.home-settings__head p,.home-settings__reset p{margin:0;color:var(--theme-text-soft)}
+.home-settings__status{flex:0 0 auto;padding:7px 11px;border-radius:999px;background:var(--theme-surface-2);font-size:.8rem}
+.home-theme-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:20px;padding:5px;border:1px solid var(--theme-border);border-radius:18px;background:var(--theme-surface-2)}
+.home-theme-switch button{min-height:46px;border:0;border-radius:13px;background:transparent;color:var(--theme-text);font:inherit;font-weight:850;cursor:pointer;transition:background .18s ease,color .18s ease,transform .18s ease}
+.home-theme-switch button:hover{transform:translateY(-1px)}
+.home-theme-switch button.is-active{background:var(--turq);color:#050505;box-shadow:0 2px 0 rgba(5,5,5,.16)}
+.home-theme-switch button:focus-visible,.home-reset-button:focus-visible{outline:3px solid rgba(20,232,201,.4);outline-offset:3px}
+.home-settings__reset{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:20px;padding-top:20px;border-top:1px solid var(--theme-border)}
+.home-settings__reset strong{display:block;margin-bottom:4px}
+.home-reset-button{flex:0 0 auto}
+.home-settings__version{display:block;margin-top:18px;color:var(--theme-text-soft)}
+.theme-choice button.is-active{background:var(--turq);border-color:var(--turq);color:#050505}
+@media(max-width:620px){
+  .home-settings__head,.home-settings__reset{align-items:stretch;flex-direction:column}
+  .home-settings__status{align-self:flex-start}
+  .home-reset-button{width:100%}
+  .home-theme-switch button span{display:block;font-size:.75rem;margin-top:2px}
+}
+
+.grounding-icon.grounding-icon--outline svg,
+html[data-theme="dark"] .grounding-icon.grounding-icon--outline svg{fill:none!important;stroke:currentColor!important;}
+
+/* BETA 1.0 – expanded content dark-mode support */
+html[data-theme="dark"] .module-progress,
+html[data-theme="dark"] .quiz-progress-panel,
+html[data-theme="dark"] .cv-compare-card,
+html[data-theme="dark"] .content-expander,
+html[data-theme="dark"] .competency-dialog,
+html[data-theme="dark"] .guided-transcript{background:var(--theme-surface)!important;border-color:var(--theme-border)!important;color:var(--theme-text)!important}
+html[data-theme="dark"] .module-progress__head strong,
+html[data-theme="dark"] .module-progress__item>b,
+html[data-theme="dark"] .quiz-progress-panel__head strong,
+html[data-theme="dark"] .quiz-progress-metrics b,
+html[data-theme="dark"] .quiz-review summary,
+html[data-theme="dark"] .series-closing strong,
+html[data-theme="dark"] .cv-compare-card h3,
+html[data-theme="dark"] .content-expander>summary,
+html[data-theme="dark"] .competency-dialog h3,
+html[data-theme="dark"] .guided-transcript>summary,
+html[data-theme="dark"] .guided-transcript h4{color:var(--theme-text)!important}
+html[data-theme="dark"] .module-progress__item,
+html[data-theme="dark"] .quiz-development,
+html[data-theme="dark"] .quiz-review article p,
+html[data-theme="dark"] .series-closing p,
+html[data-theme="dark"] .competency-dialog section p,
+html[data-theme="dark"] .guided-transcript__body>p:not(.is-cue){color:var(--theme-text-soft)!important}
+html[data-theme="dark"] .quiz-progress-metrics span,
+html[data-theme="dark"] .series-closing,
+html[data-theme="dark"] .cv-quick-rule,
+html[data-theme="dark"] .guided-transcript__help{background:var(--theme-surface-2)!important}
+html[data-theme="dark"] .cv-do{background:#0d2a24!important;border-color:#1b4a3f!important}html[data-theme="dark"] .cv-dont{background:#2c1d19!important;border-color:#513229!important}
+html[data-theme="dark"] .quiz-feedback.is-guidance{background:var(--blue)!important;border-color:var(--blue)!important}html[data-theme="dark"] .quiz-feedback.is-guidance *{color:#fff!important}
+
+/* BETA 1.1 added content */
+html[data-theme="dark"] .module-progress,
+html[data-theme="dark"] .quiz-progress-panel,
+html[data-theme="dark"] .cv-tip-list article,
+html[data-theme="dark"] .guided-transcript,
+html[data-theme="dark"] .competency-dialog{background:var(--ds-surface,#1d282d);border-color:var(--ds-border,#405057);color:var(--ds-text,#f5faf9)}
+html[data-theme="dark"] .module-progress__head strong,
+html[data-theme="dark"] .module-progress__item>b,
+html[data-theme="dark"] .quiz-progress-panel__head strong,
+html[data-theme="dark"] .competency-dialog h3,
+html[data-theme="dark"] .guided-transcript>summary{color:var(--ds-text,#f5faf9)}
+html[data-theme="dark"] .module-progress__item,
+html[data-theme="dark"] .quiz-development,
+html[data-theme="dark"] .cv-tip-list article p,
+html[data-theme="dark"] .competency-dialog section p,
+html[data-theme="dark"] .guided-transcript__body>p:not(.guided-transcript__help){color:var(--ds-text-muted,#d5dfdc)}
+html[data-theme="dark"] .series-closing,
+html[data-theme="dark"] .guided-transcript__help{background:#23363a;color:var(--ds-text-muted,#d5dfdc)}
+
+
+/* BETA 1.1 — flip-card hierarchy polish */
+.flip-card__face{
+  text-align:center;
+  align-items:center;
+}
+.flip-card__face > span,
+.flip-card__face > strong{
+  width:100%;
+  text-align:center;
+}
+.flip-card__face > small:not(.perspective-label){
+  align-self:center;
+  justify-content:center;
+}
+.flip-card__front .flip-card__question{
+  font-size:clamp(1.3rem,5vw,1.72rem) !important;
+  line-height:1.18 !important;
+  letter-spacing:-.025em !important;
+  text-transform:none !important;
+  font-weight:700 !important;
+  margin:auto 0 !important;
+}
+/* Only the two-perspective WIN-WIN card keeps its audience label. */
+.flip-card:not(.flip-card--two-sides) .flip-card__front .perspective-label{display:none!important}
+
+/* BETA 1.1 – keep quiz guidance neutral in both themes */
+html[data-theme="dark"] body .quiz-feedback.is-guidance{
+  background:var(--dark-card-2,#1d282d)!important;
+  border-color:#45545b!important;
+}
+html[data-theme="dark"] body .quiz-feedback.is-guidance strong,
+html[data-theme="dark"] body .quiz-feedback.is-guidance p,
+html[data-theme="dark"] body .quiz-feedback.is-guidance .quiz-feedback__hint{
+  color:var(--dark-copy,#f5faf9)!important;
+}
+
+
+/* BETA 1.1.1 — flip-card alignment and front-face hierarchy */
+.flip-card__face{
+  text-align:center!important;
+  align-items:center!important;
+  justify-content:center;
+}
+.flip-card__face > span,
+.flip-card__face > strong{
+  text-align:center!important;
+}
+/* Front faces use plain centered typography: no pill/label background. */
+.flip-card__front > strong,
+.flip-card__front .flip-card__question,
+html[data-theme="light"] .flip-card__front > strong,
+html[data-theme="dark"] .flip-card__front > strong{
+  display:block!important;
+  align-self:center!important;
+  width:100%!important;
+  max-width:none!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  color:inherit!important;
+  text-align:center!important;
+}
+/* Back-side labels may remain turquoise, but are centered rather than left aligned. */
+.flip-card__back > strong:not(.flip-card__question),
+html[data-theme="light"] .flip-card__back > strong:not(.flip-card__question),
+html[data-theme="dark"] .flip-card__back > strong:not(.flip-card__question){
+  align-self:center!important;
+  width:auto!important;
+  max-width:100%!important;
+  text-align:center!important;
+}
+.flip-card__face > small:not(.perspective-label){align-self:center!important;justify-content:center!important;text-align:center!important}
+/* Exception: the two-perspective Win-Win card keeps only its generation/perspective label. */
+.flip-card--two-sides .perspective-label{display:inline-flex!important;align-self:center!important}
+
+html[data-theme="dark"] .guided-transcript__toggle{color:var(--ds-text,#f5faf9)!important}
+html[data-theme="dark"] .guided-transcript__toggle:hover{background:#23363a!important}
+
+/* BETA 1.1.3 — unified vertical centering for every flip-card face */
+.flip-card__face{
+  position:relative!important;
+  justify-content:center!important;
+  align-items:center!important;
+  text-align:center!important;
+  padding:1.35rem 1.15rem 4.2rem!important;
+}
+.flip-card__face > strong,
+.flip-card__face > span{
+  text-align:center!important;
+}
+/* Keep the interaction hint anchored to the bottom so it does not shift the
+   actual card content away from the visual centre. */
+.flip-card__face > small:not(.perspective-label){
+  position:absolute!important;
+  left:1rem!important;
+  right:1rem!important;
+  bottom:1rem!important;
+  width:auto!important;
+  margin:0!important;
+  padding:0!important;
+  align-self:auto!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+/* The front question used to carry auto margins; those made Win-Win's
+   Amatőr/Profi composition sit differently from the other flip cards. */
+.flip-card__front .flip-card__question{
+  margin:0 0 .75rem!important;
+}
+/* Two-perspective labels remain part of the centred content group. */
+.flip-card--two-sides .perspective-label{
+  margin:0 0 .75rem!important;
+  align-self:center!important;
+}
+
+html[data-theme="dark"] .module-intro-dialog{background:#182126;color:#f5faf9}html[data-theme="dark"] .module-intro-dialog__inner p{color:#c8d3d0}html[data-theme="dark"] .quiz-finish-note{background:#202d32}html[data-theme="dark"] .quiz-finish-note p{color:#c8d3d0}

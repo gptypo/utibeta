@@ -1,0 +1,261 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "scenarios",
+  "title": "Gyakorlás",
+  "data": {
+    "helyzeteiScenarios": [
+      {
+        "title": "Nem érted a feladatot",
+        "situation": "A főnököd egy feladatot ad, amit nem teljesen értesz. Sejted nagyjából, miről lehet szó, de a részletek nem egyértelműek. Mit teszel?",
+        "options": [
+          {
+            "text": "Úgy teszek, mintha érteném – majd menet közben kitalálom.",
+            "isOptimal": false,
+            "feedback": "Ez a legkockázatosabb döntés. Ha rossz irányba indulsz el, az elveszített időt és esetleg egy hibás végeredményt jelent. Senki nem vár tőled mindentudást – a kérdezés a hatékony munka alapja."
+          },
+          {
+            "text": "Megpróbálom egyedül kitalálni a saját meglátásaim alapján.",
+            "isOptimal": false,
+            "feedback": "Önállóság értékes, de egy félreértett feladat tévútra visz. Ha elakadsz, több időt veszítesz, mintha elsőre kérdeztél volna. Próbálj meg először tisztázni."
+          },
+          {
+            "text": "Megkérdezem a főnökömet: „Jól értem, hogy X-et kell tennem Y formában Z-ig?”",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb döntés. Egy rövid pontosítás megelőz egy nagy hibát, és megmutatja, hogy figyelsz a részletekre. A kérdezés teljesen természetes – hanem a profizmus jele."
+          }
+        ]
+      },
+      {
+        "title": "Hibáztál egy feladatban",
+        "situation": "Rájössz, hogy egy feladatban hibát vétettél. A hiba még javítható, de a főnök még nem tudja. Mit teszel?",
+        "options": [
+          {
+            "text": "Jelzem a hibát, és egyúttal megoldási javaslattal jövök.",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb út. Mindenki hibázik – ami megkülönböztet, az az, hogyan kezeled. A jelzés + megoldás kettőse megmutatja, hogy felelős és megbízható vagy."
+          },
+          {
+            "text": "Eltitkolom – hátha nem veszi észre.",
+            "isOptimal": false,
+            "feedback": "A titkolás szinte mindig kiderül, és akkor sokkal rosszabb a helyzet. A bizalomvesztés tartós, és a hiba is nagyobb lesz, ha nem kezelik időben."
+          },
+          {
+            "text": "Másra hárítom – megmondom, hogy a feladat nem volt egyértelmű.",
+            "isOptimal": false,
+            "feedback": "A felelősség áthárítása rombolja a bizalmat és a hitelességedet. A kollégák és a vezető idővel átlátják, ha valaki nem vállalja a saját hibáit."
+          }
+        ]
+      },
+      {
+        "title": "Több sürgős feladat egyszerre",
+        "situation": "Egyszerre három feladatot kapsz, mindegyiket „sürgősnek” mondják. Nem tudod mindet egyszerre elvégezni. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Találomra kiválasztom az egyiket és azzal kezdem.",
+            "isOptimal": false,
+            "feedback": "A véletlen nem jó fontossági sorrendi stratégia. Könnyen előfordulhat, hogy a legkritikusabb feladat marad a végére – ami komoly következményekkel járhat."
+          },
+          {
+            "text": "Megkérdezem a főnökömet, melyik a legfontosabb, és abból kezdem.",
+            "isOptimal": true,
+            "feedback": "Ez a professzionális megközelítés. A fontossági sorrendok tisztázása megmutatja, hogy rendszerszemléletű vagy, és megvéd attól, hogy a „sürgős” mindent felülírjon. Egy kérdés sok zavart előz meg."
+          },
+          {
+            "text": "Mindháromhoz egyszerre hozzákezdek, amennyire lehet párhuzamosan.",
+            "isOptimal": false,
+            "feedback": "A párhuzamos munka vonzónak tűnik, de a figyelem megosztása lassít és hibázáshoz vezet. A legtöbb feladat fókuszált figyelmet igényel."
+          }
+        ]
+      },
+      {
+        "title": "Késni fogsz a munkahelyedről",
+        "situation": "Reggel kiderül, hogy legalább 20 percet késni fogsz. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Még az érkezési idő előtt üzenetet küldök, hogy késni fogok és mikor leszek ott.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes és elvárt eljárás. Az időben küldött értesítés megmutatja, hogy felelős és megbízható vagy. A vezető és a csapat tud tervezni, és sokkal jobban fogadja a késést."
+          },
+          {
+            "text": "Nem szólok – minél kevesebb feltűnés, annál jobb.",
+            "isOptimal": false,
+            "feedback": "A nem jelzett késés megbízhatatlannak mutat, és a munkahelyen felesleges találgatást és aggódást okoz. Az értesítés elmaradása rosszabb benyomást kelt, mint maga a késés."
+          },
+          {
+            "text": "Megérkezés után elmagyarázom, mi történt – addigra talán már el is felejtik.",
+            "isOptimal": false,
+            "feedback": "Az utólagos magyarázat a fait accomplit kezeli, nem előzi meg. A visszamenőleges indoklás kevésbé hat felelősnek, mint az előzetes értesítés."
+          }
+        ]
+      },
+      {
+        "title": "Kritikus visszajelzést kapsz",
+        "situation": "A vezető elmondja, hogy egy feladatot rosszul csináltál, és a kritika elég éles. Mit teszel?",
+        "options": [
+          {
+            "text": "Megsértődsz és nem szólsz többet – belül viszont dühös vagy.",
+            "isOptimal": false,
+            "feedback": "A néma sértődés sem a helyzetet, sem a kapcsolatot nem javítja. A visszajelzés – még ha éles is – tanulási lehetőség. A passzív reakció elvárásokat kommunikál, nem megoldást."
+          },
+          {
+            "text": "Meghallgatod, megköszönöd, majd tisztázó kérdést teszel fel: „Mit csináljak másképp legközelebb?”",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb reakció. A meghallgatás + köszönet + kérdés hármasa megmutatja, hogy fejlődsz és komolyan veszed a visszajelzést. A legjobb munkavállalók nem hibátlanok – hanem tanulni képesek."
+          },
+          {
+            "text": "Vitatkozni kezdesz és megvéded a döntésedet.",
+            "isOptimal": false,
+            "feedback": "Az azonnali védekezés lezárja a párbeszédet. Lehet, hogy részben igazad van, de a módszer elvonja a figyelmet a lényegről. Hallgasd meg előbb az egészet."
+          }
+        ]
+      },
+      {
+        "title": "Konfliktus egy kollégával",
+        "situation": "Az egyik kollégáddal feszültség van köztetek – valamilyen félreértés vagy nézeteltérés miatt. Napok óta tart. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Kerülöm őt és remélem, hogy magától elmúlik.",
+            "isOptimal": false,
+            "feedback": "A kerülés a feszültséget nem oldja, csak elodázza. Munkahelyen a tartós elkerülés mindkét felet érinti, és idővel a csapat egészére is kihat."
+          },
+          {
+            "text": "Másoknak panaszkodom – hátha valaki közbeavatkozik.",
+            "isOptimal": false,
+            "feedback": "A panaszkodás tovább terjeszti a konfliktust és a pletykát. A mások által „megoldott” helyzet ritkán stabil. A közvetlen kommunikáció hatékonyabb és komolyabb."
+          },
+          {
+            "text": "Négyszemközt, nyugodtan megkérem egy rövid egyeztetésre, és őszintén megbeszéljük a helyzetet.",
+            "isOptimal": true,
+            "feedback": "Ez a felnőtt és hatékony megközelítés. A legtöbb munkahelyi konfliktus félreértésből fakad. Egy nyugodt, direkt megbeszélés a legtöbbször megoldja, és a kapcsolatot is erősíti."
+          }
+        ]
+      },
+      {
+        "title": "Kolléga segítséget kér",
+        "situation": "Egy kollégád megkéri, hogy segíts neki egy feladatban. Neked is sok a dolgod, és éppen egy sürgős határidős feladaton dolgozol. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Azonnal elutasítom – nekem is van munkám, nem érek rá.",
+            "isOptimal": false,
+            "feedback": "Az azonnali elutasítás hidegnek hat, és rontja a csapatdinamikát. Ha valaha neked is szükséged lesz segítségre, emlékezni fognak erre a pillanatra."
+          },
+          {
+            "text": "Mindent félbehagyok és segítek – a kolléga fontos.",
+            "isOptimal": false,
+            "feedback": "A saját sürgős feladatod elhagyása sem jó döntés – a határidőid és a felelősségeid ugyanolyan fontosak. A segítségnyújtás egyensúlyt igényel."
+          },
+          {
+            "text": "Elmondom, hogy most sürgős feladatom van, de megegyezünk, mikor és hogyan tudok segíteni.",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb megközelítés. Megvédi a saját feladataidat és megmutatja, hogy a kolléga számít. Az egyeztetés nem elutasítás – hanem felelős együttműködés."
+          }
+        ]
+      },
+      {
+        "title": "Nem biztonságos feladatot kérnek",
+        "situation": "Olyasmit kérnek tőled, ami szerinted veszélyes – nincs meg a szükséges védőfelszerelés, vagy a feladat kockázatosnak tűnik. Mit teszel?",
+        "options": [
+          {
+            "text": "Jelzem az aggályomat konkrétan, és megkérdezem, hogyan végezhető el biztonságosan.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes eljárás. A munkavédelem mindkét fél érdeke. Egy konkrét jelzés („Nincs védőszemüvegem ehhez a feladathoz – mi a megoldás?”) megvéd téged és orvosolható. Ha a helyzet komoly veszélyt jelent, jogod van megtagadni."
+          },
+          {
+            "text": "Szó nélkül megcsinálom – nem akarok problémás lenni.",
+            "isOptimal": false,
+            "feedback": "A „ne legyél problémás” szemlélet a saját biztonságodat veszélyezteti. A munkavédelmi törvény alapján jogod van megtagadni a veszélyes feladatot, és ez nem engedetlenség."
+          },
+          {
+            "text": "Egyszerűen megtagadom, magyarázat nélkül.",
+            "isOptimal": false,
+            "feedback": "A magyarázat nélküli megtagadás konfrontációhoz vezet. Hatékonyabb, ha jelzed az aggodalmadat – így lehetőséget adsz arra, hogy orvosolják a problémát."
+          }
+        ]
+      },
+      {
+        "title": "Nem tudod tartani a határidőt",
+        "situation": "Rájössz, hogy egy feladat nem fog elkészülni időre. A határidő másnap reggel van. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Megvárom, amíg a határidő lejár – majd akkor derül ki.",
+            "isOptimal": false,
+            "feedback": "A csúszás utólagos kiderülése mindig rosszabb, mint az előzetes jelzés. A vezető elveszíti az esélyt, hogy segítsen vagy átrendezze a fontossági sorrendokat, és a bizalom is sérül."
+          },
+          {
+            "text": "Azonnal jelzem a főnöknek, meddig végzek, és megkérdezem, mit tegyek.",
+            "isOptimal": true,
+            "feedback": "Ez a profi megközelítés. Az időben jelzett csúszás kezelhető, az utólag kiderülő nem. „Nem fogom tudni befejezni holnap reggelig – a reális határidőm X. Mi legyen a következő lépés?” – egy ilyen mondat megvéd."
+          },
+          {
+            "text": "Kifogást keresek – valami közbejött, ami nem rajtam múlott.",
+            "isOptimal": false,
+            "feedback": "A kifogás átmenetileg enyhítheti a helyzetet, de tartósan nem véd. Ha rendszeressé válik, a megbízhatatlanság képzetét kelti. Az őszinte jelzés mindig hitelesebb."
+          }
+        ]
+      },
+      {
+        "title": "Munkahelyi pletykába próbálnak bevonni",
+        "situation": "Az ebédnél az egyik kolléga egy másik kollégáról pletykálni kezd, és téged is belekever – véleményt kér. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Aktívan bekapcsolódom és kiegészítem, amit tudok.",
+            "isOptimal": false,
+            "feedback": "A pletyka gyorsan visszaüt – amit te mondasz, az is továbbjut. A munkahelyi bizalom törékeny, és aki pletykál, arról mindenki feltételezi, hogy róluk is pletykál."
+          },
+          {
+            "text": "Kimaradok – valami semleges megjegyzéssel elterelem, és tényekre, saját tapasztalataimra koncentrálok.",
+            "isOptimal": true,
+            "feedback": "Ez a legbölcsebb döntés. A kimaradás nem gyávaság – hanem önvédelem és professzionalizmus. Egy semleges „Nem nagyon ismerem a helyzetet.” vagy témaváltás elegáns és hatékony módszer."
+          },
+          {
+            "text": "Továbbadok mindent, amit hallottam, de nem kommentálom.",
+            "isOptimal": false,
+            "feedback": "Az információ továbbadása is részvétel. A passzív átadás nem véd meg a következményektől, és hozzájárul a mérgező légkörhöz."
+          }
+        ]
+      },
+      {
+        "title": "Sértő üzenet munkahelyi chaten",
+        "situation": "Egy munkahelyi csoportos chaten olyan üzenetet kapsz valakitől, amit sértőnek érzel – lehet, hogy szándékos, lehet, hogy nem. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Privátban megkérdezem az illetőt, mire gondolt, és ha szükséges, jelzem a negatív hatást.",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb első lépés. Lehet, hogy félreértés volt – privát tisztázással mindkettőtök számára nyitva marad a visszavonulás lehetősége. Ha komoly sérelem történt, utána dönthetsz a következő lépésről (HR, vezető)."
+          },
+          {
+            "text": "Azonnal indulatosan válaszolok a csoportban.",
+            "isOptimal": false,
+            "feedback": "Az azonnali, indulatos nyilvános válasz eszkalálja a helyzetet és rólad is rossz képet fest. Az írott szó marad, és mindenki látja."
+          },
+          {
+            "text": "Nyilvánosan visszavágok, de higgadtan – hadd tudja mindenki, mit gondolok.",
+            "isOptimal": false,
+            "feedback": "A nyilvános konfrontáció is kockázatos, még ha higgadt is. Mindenkit bevonja egy személyes ügybe, és gyakran elmérgesíti a helyzetet."
+          }
+        ]
+      },
+      {
+        "title": "Észreveszel egy problémát",
+        "situation": "Munka közben észreveszed, hogy valami nincs rendben – Például egy folyamatban hiba van, vagy valami veszélyt jelezhet –, de senki más nem szól. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Figyelmen kívül hagyom – biztosan tudnak róla, ha én is látom.",
+            "isOptimal": false,
+            "feedback": "A „biztos tudnak róla” feltételezés veszélyes. Sok probléma azért nem kerül napirendre, mert mindenki azt hiszi, más már szólt. A néma elvárás nem megoldás."
+          },
+          {
+            "text": "Megvárom, hogy más jelezze – nem szeretném, ha problémásnak látnának.",
+            "isOptimal": false,
+            "feedback": "A „ne legyél kellemetlen” ösztön megérthető, de egy jelzett probléma általában elismerésre talál – nem ellenérzésre. A hallgatás viszont a helyzetet rontja."
+          },
+          {
+            "text": "Megfelelő módon jelzem az illetékes személynek – konkrétan, tényszerűen, megoldásorientáltan.",
+            "isOptimal": true,
+            "feedback": "Ez a felelős munkavállalói magatartás. Nem kell hősnek lenni – elég egy mondat: „Észrevettem, hogy X-szel valami nem stimmel – érdemes megnézni.” A jelzés segít, a hallgatás nem."
+          }
+        ]
+      }
+    ]
+  }
+}

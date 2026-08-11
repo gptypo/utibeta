@@ -1,0 +1,300 @@
+/* Útiterv Studio 8.2 — unified colour system
+   Four core colours drive both themes. Components consume semantic tokens. */
+:root,
+html[data-theme="light"] {
+  /* Core palette */
+  --color-turquoise: #14e8c9;
+  --color-blue: #007fff;
+  --color-black: #050505;
+  --color-gray: #696773;
+
+  /* Compatibility aliases */
+  --turq: var(--color-turquoise);
+  --blue: var(--color-blue);
+  --ink: var(--color-black);
+  --muted: var(--color-gray);
+  --green: #14e8c9;
+  --calm-turquoise: #14e8c9;
+
+  /* Semantic theme tokens */
+  --ui-page: #ffffff;
+  --ui-page-soft: #f3f6f7;
+  --ui-surface: #ffffff;
+  --ui-surface-muted: #eef3f4;
+  --ui-surface-inactive: #e4eaeb;
+  --ui-surface-strong: var(--color-black);
+  --ui-text: #050505;
+  --ui-text-muted: #526168;
+  --ui-text-on-strong: #ffffff;
+  --ui-text-on-turquoise: var(--color-black);
+  --ui-text-on-blue: #ffffff;
+  --ui-border: rgba(23,33,38,.12);
+  --ui-border-strong: #dfe9e7;
+  --ui-accent: var(--color-turquoise);
+  --ui-accent-secondary: var(--color-blue);
+  --ui-shadow: 0 18px 50px rgba(0,0,0,.12);
+  --ui-topbar: rgba(255,255,255,.88);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  /* Brand colours remain identical across themes. */
+  --color-turquoise: #14e8c9;
+  --color-blue: #007fff;
+  --color-black: #050505;
+  --color-gray: #696773;
+  --green: #14e8c9;
+  --calm-turquoise: #14e8c9;
+
+  /* Only semantic roles change. */
+  --ui-page: var(--color-black);
+  --ui-page-soft: color-mix(in srgb, var(--color-gray) 18%, var(--color-black));
+  --ui-surface: color-mix(in srgb, var(--color-gray) 27%, var(--color-black));
+  --ui-surface-muted: color-mix(in srgb, var(--color-gray) 38%, var(--color-black));
+  --ui-surface-inactive: color-mix(in srgb, var(--color-gray) 55%, var(--color-black));
+  --ui-surface-strong: var(--color-black);
+  --ui-text: #ffffff;
+  --ui-text-muted: color-mix(in srgb, var(--color-gray) 40%, white);
+  --ui-text-on-strong: #ffffff;
+  --ui-text-on-turquoise: var(--color-black);
+  --ui-text-on-blue: #ffffff;
+  --ui-border: color-mix(in srgb, var(--color-gray) 58%, transparent);
+  --ui-border-strong: var(--color-turquoise);
+  --ui-accent: var(--color-turquoise);
+  --ui-accent-secondary: var(--color-blue);
+  --ui-shadow: 0 14px 38px rgba(0,0,0,.34);
+  --ui-topbar: color-mix(in srgb, var(--color-black) 88%, transparent);
+  color-scheme: dark;
+}
+
+/* Bridge legacy theme variables to the new semantic layer. */
+:root,
+html[data-theme] {
+  --paper: var(--ui-page);
+  --surface: var(--ui-surface-muted);
+  --nav: var(--color-black);
+  --theme-bg: var(--ui-page);
+  --theme-bg-soft: var(--ui-page-soft);
+  --theme-surface: var(--ui-surface);
+  --theme-surface-2: var(--ui-surface-muted);
+  --theme-text: var(--ui-text);
+  --theme-text-soft: var(--ui-text-muted);
+  --theme-border: var(--ui-border);
+  --theme-shadow: var(--ui-shadow);
+  --theme-topbar: var(--ui-topbar);
+  --theme-input: var(--ui-surface);
+}
+
+
+/* Design-system colour remapping is dark-only. Light mode keeps the original 8.1 component palette. */
+html[data-theme="dark"] {
+  --ds-color-primary: var(--ui-accent);
+  --ds-color-primary-soft: color-mix(in srgb, var(--ui-accent) 14%, var(--ui-surface));
+  --ds-color-ink: var(--ui-text);
+  --ds-color-copy: var(--ui-text-muted);
+  --ds-color-muted: var(--ui-text-muted);
+  --ds-color-line: var(--ui-border);
+  --ds-color-surface: var(--ui-surface);
+}
+
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] .app{ background: var(--ui-page); color: var(--ui-text); }
+html[data-theme="dark"] .app{ background: linear-gradient(180deg, var(--ui-page), var(--ui-page-soft)); }
+html[data-theme="dark"] .topbar{ background: var(--ui-topbar); border-bottom-color: var(--ui-border); }
+
+/* Standard surfaces: cards, dropdowns and editor panels use one role. */
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .progress-card,
+html[data-theme="dark"] .qa-card,
+html[data-theme="dark"] .month-card,
+html[data-theme="dark"] .quiz-card,
+html[data-theme="dark"] .career-card,
+html[data-theme="dark"] .breath-card,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .custom-card,
+html[data-theme="dark"] .mindfulness-card,
+html[data-theme="dark"] .mindfulness-accordion__item,
+html[data-theme="dark"] .breathing-accordion__item,
+html[data-theme="dark"] .flip-card__face,
+html[data-theme="dark"] .phrase-card,
+html[data-theme="dark"] .digital-card,
+html[data-theme="dark"] .beta-card,
+html[data-theme="dark"] .topic-card,
+html[data-theme="dark"] .single-topic-card,
+html[data-theme="dark"] .quiz-summary,
+html[data-theme="dark"] .system-section,
+html[data-theme="dark"] .principle-grid article,
+html[data-theme="dark"] .quality-card,
+html[data-theme="dark"] .studio-sidebar,
+html[data-theme="dark"] .studio-canvas-panel,
+html[data-theme="dark"] .editor-content-tools,
+html[data-theme="dark"] .quality-panel--collapsible,
+html[data-theme="dark"] .copy-qa-item,
+html[data-theme="dark"] .app-menu,
+html[data-theme="dark"] details,
+html[data-theme="dark"] .dropdown,
+html[data-theme="dark"] [role="listbox"],
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select{
+  background: var(--ui-surface) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-border) !important;
+  box-shadow: var(--ui-shadow);
+}
+
+/* Text is always readable on neutral surfaces. */
+html[data-theme="dark"] .content-card h1,
+html[data-theme="dark"] .content-card h2,
+html[data-theme="dark"] .content-card h3,
+html[data-theme="dark"] .content-card h4,
+html[data-theme="dark"] .qa-card h3,
+html[data-theme="dark"] .month-card h3,
+html[data-theme="dark"] .quiz-card h3,
+html[data-theme="dark"] .career-card h3,
+html[data-theme="dark"] .accordion-item summary,
+html[data-theme="dark"] .custom-card h3,
+html[data-theme="dark"] .mindfulness-card h3,
+html[data-theme="dark"] .flip-card__face strong,
+html[data-theme="dark"] .single-topic-card h3,
+html[data-theme="dark"] .app-menu,
+html[data-theme="dark"] .app-menu button,
+html[data-theme="dark"] label,
+html[data-theme="dark"] summary{
+  color: var(--ui-text) !important;
+}
+html[data-theme="dark"] .content-card p,
+html[data-theme="dark"] .content-card li,
+html[data-theme="dark"] .qa-answer,
+html[data-theme="dark"] .month-card>p,
+html[data-theme="dark"] .quiz-feedback p,
+html[data-theme="dark"] .quiz-summary p,
+html[data-theme="dark"] .career-card p,
+html[data-theme="dark"] .breath-card span,
+html[data-theme="dark"] .accordion-body,
+html[data-theme="dark"] .accordion-body p,
+html[data-theme="dark"] .custom-card p,
+html[data-theme="dark"] .empty-custom,
+html[data-theme="dark"] .mindfulness-card p,
+html[data-theme="dark"] .mindfulness-summary small,
+html[data-theme="dark"] .flip-card__face span,
+html[data-theme="dark"] .flip-card__face small,
+html[data-theme="dark"] .single-topic-card p,
+html[data-theme="dark"] .guide-head p,
+html[data-theme="dark"] .section-title span,
+html[data-theme="dark"] .eyebrow--dark{
+  color: var(--ui-text-muted) !important;
+}
+
+/* Neutral controls and inactive states. */
+html[data-theme="dark"] .button--secondary,
+html[data-theme="dark"] .icon-button,
+html[data-theme="dark"] .studio-history-button,
+html[data-theme="dark"] .studio-device-switch button,
+html[data-theme="dark"] .studio-mode-switch button,
+html[data-theme="dark"] .content-tool-nav button,
+html[data-theme="dark"] .copy-qa-item-actions button,
+html[data-theme="dark"] .quality-locate,
+html[data-theme="dark"] .quiz-options button,
+html[data-theme="dark"] .guided-controls button,
+html[data-theme="dark"] .pager button,
+html[data-theme="dark"] .topic-tabs button,
+html[data-theme="dark"] details>summary,
+html[data-theme="dark"] option,
+html[data-theme="dark"] optgroup{
+  background: var(--ui-surface-muted) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-border) !important;
+}
+html[data-theme="dark"] button:disabled,
+html[data-theme="dark"] [aria-disabled="true"],
+html[data-theme="dark"] .is-inactive{
+  background: var(--ui-surface-inactive) !important;
+  color: var(--ui-text-muted) !important;
+  opacity: .72;
+}
+
+/* Fixed brand surfaces never change between light and dark. */
+.module-card.qw,.page-head.qw,.recommendation-card,
+.pwa-button,.editor-tabs button.is-active {
+  background: var(--color-turquoise) !important;
+  color: var(--ui-text-on-turquoise) !important;
+}
+.module-card.qw *,.page-head.qw *,.recommendation-card * {
+  color: var(--ui-text-on-turquoise) !important;
+}
+.module-card.ww,.page-head.ww {
+  background: var(--color-blue) !important;
+  color: var(--ui-text-on-blue) !important;
+}
+.module-card.ww *,.page-head.ww * { color: var(--ui-text-on-blue) !important; }
+
+/* Black cards stay black. In dark mode turquoise outlines separate them. */
+.continue-card,.module-card.qg,.page-head.qg,.recommendation-card__icon,
+.button:not(.button--light):not(.button--secondary),.circle-button {
+  background: var(--color-black) !important;
+  color: var(--ui-text-on-strong) !important;
+}
+html[data-theme="dark"] .continue-card,
+html[data-theme="dark"] .module-card.qg,
+html[data-theme="dark"] .page-head.qg,
+html[data-theme="dark"] .recommendation-card__icon,
+html[data-theme="dark"] .button:not(.button--light):not(.button--secondary),
+html[data-theme="dark"] .circle-button {
+  border: 1px solid var(--color-turquoise) !important;
+}
+.module-card.qg,.module-card.qg *,.page-head.qg,.page-head.qg * {
+  color: var(--color-turquoise) !important;
+}
+
+/* The single grey role powers Galaxy Guide and inactive surfaces. */
+.module-card.gg,.page-head.gg {
+  background: var(--color-gray) !important;
+  color: var(--color-turquoise) !important;
+}
+.module-card.gg *,.page-head.gg * { color: var(--color-turquoise) !important; }
+
+/* Continue / next / previous controls are neutral surfaces, not white islands. */
+.continue-inline,
+.topic-boundary-nav .button,
+.topic-boundary-nav button,
+.pager button[data-topic-direction],
+.pager>span {
+  background: var(--ui-surface-muted) !important;
+  color: var(--ui-text) !important;
+  border: 1px solid var(--ui-border) !important;
+}
+
+/* Turquoise and calm icons keep their source colour. */
+.mindfulness-icon,.accordion-icon,.topic-icon,.grounding-icon,
+.mindfulness-complete__icon,[class*="turq"],[data-accent="turquoise"] {
+  color: var(--color-turquoise) !important;
+}
+.mindfulness-icon svg,.accordion-icon svg,.topic-icon svg,.grounding-icon svg,
+[data-accent="turquoise"] svg {
+  color: var(--color-turquoise) !important;
+  fill: currentColor;
+  stroke: currentColor;
+}
+.grounding-dots span.is-on,.body-scan-progress i,.guided-controls .guided-play,
+.step-counter i {
+  background: #14e8c9 !important;
+  border-color: #14e8c9 !important;
+}
+
+/* Subpage hero rail fades inherit the page instead of introducing white. */
+.journey-tabs-shell::before {
+  background: linear-gradient(90deg, var(--ui-page), color-mix(in srgb,var(--ui-page) 94%,transparent) 34%, transparent) !important;
+}
+.journey-tabs-shell::after {
+  background: linear-gradient(270deg, var(--ui-page), color-mix(in srgb,var(--ui-page) 94%,transparent) 34%, transparent) !important;
+}
+
+/* Theme-aware browser chrome. */
+html[data-theme="dark"] .hero__cloud { color: var(--ui-page); }
+.menu-button { background: var(--color-black) !important; color: #fff !important; }
+.menu-button span { background: #fff !important; }
+
+.grounding-icon.grounding-icon--outline svg,
+html[data-theme="dark"] .grounding-icon.grounding-icon--outline svg{fill:none!important;stroke:currentColor!important;}

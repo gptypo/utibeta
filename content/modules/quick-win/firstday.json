@@ -1,0 +1,299 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "firstday",
+  "title": "Első nap",
+  "data": {
+    "firstDayChecklist": [
+      {
+        "id": 1,
+        "text": "Érkezz időben! Lehetőleg 10–15 perccel korábban."
+      },
+      {
+        "id": 2,
+        "text": "Tudd, hová kell menned! Előre ellenőrizd a pontos helyszínt."
+      },
+      {
+        "id": 3,
+        "text": "Tudd, kit kell keresned! Legyen meg a kapcsolattartód vagy vezetőd neve."
+      },
+      {
+        "id": 4,
+        "text": "Vidd magaddal, amire szükséged lehet! Dokumentumok, jegyzetfüzet, toll."
+      },
+      {
+        "id": 5,
+        "text": "Öltözz a munkahelyhez illően!"
+      },
+      {
+        "id": 6,
+        "text": "Mutatkozz be magabiztosan és természetesen!"
+      },
+      {
+        "id": 7,
+        "text": "Figyelj és jegyzetelj! Teljesen rendben van, ha felírod a fontos dolgokat."
+      },
+      {
+        "id": 8,
+        "text": "Merj kérdezni! Ha valami nem világos, pontosíts."
+      },
+      {
+        "id": 9,
+        "text": "Ismerd meg a legfontosabb szabályokat! Munkaidő, szünetek, kijárás."
+      },
+      {
+        "id": 10,
+        "text": "Figyeld meg, hogyan működik a csapat!"
+      },
+      {
+        "id": 11,
+        "text": "Tisztázd az első feladataidat és az elvárásokat!"
+      },
+      {
+        "id": 12,
+        "text": "A nap végén gondold át: Mit tanultam ma? Mit szeretnék holnap jobban csinálni?"
+      }
+    ],
+    "firstDayQuiz": [
+      {
+        "situation": "Nem tudod pontosan, hány perccel érdemes előbb érkezni az első napon. Mit döntesz?",
+        "options": [
+          {
+            "text": "Pontosan a megadott időre érkezem – ez a precizitás jele.",
+            "isOptimal": false,
+            "feedback": "Az első napon a pontosság plusz 10–15 perc. Ha valami késlelteti (dugó, parkolás), még így is időben érkezel. Az első benyomás számít."
+          },
+          {
+            "text": "30–40 perccel korábban érkezem, hogy biztosan jó benyomást keltsek.",
+            "isOptimal": false,
+            "feedback": "Ennyivel korábban érkezni kínos lehet – nem tudnak mit kezdeni veled, és zavarban hozhatod a fogadó személyt."
+          },
+          {
+            "text": "10–15 perccel korábban érkezem, hogy nyugodtan megtaláljam a helyszínt és berendezkedjem.",
+            "isOptimal": true,
+            "feedback": "Ez jó választás. Kicsit korábban érni megmutatja az elkötelezettségedet, és megkímél a stressztől, ha valami váratlan akadály kerül elő."
+          }
+        ]
+      },
+      {
+        "situation": "Már az első napon olyasvalamit kérsz, amihez nem tudod biztosan, ki a megfelelő személy. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Megvárom, amíg magától kiderül, kitől kell kérni.",
+            "isOptimal": false,
+            "feedback": "Ez elhúzza a dolgot. Az első napok tele vannak ismeretlen személyekkel – egyszerűen kérdezz rá, ki a megfelelő személy."
+          },
+          {
+            "text": "Megkérdezem a legközelebbi kollégát, ki a megfelelő személy, és megköszönöm a segítséget.",
+            "isOptimal": true,
+            "feedback": "Ez jó megoldás. A kérdezés az első napokon elvárt és természetes. Egy egyszerű „Kérdezhetem, kihez fordulhatok X ügyben?” teljesen rendben van."
+          },
+          {
+            "text": "A főnökömet keresem minden apró kérdéssel – ő biztosan tud mindent.",
+            "isOptimal": false,
+            "feedback": "A főnök nem mindig a legjobb forrás minden napi gyakorlati kérdésre. Kollégák, HR, titkárság – ők az első megkérdezendők."
+          }
+        ]
+      },
+      {
+        "situation": "Az első napon kapsz egy feladatot, amit részben értesz, de van egy részlet, ami nem egyértelmű. Mit teszel?",
+        "options": [
+          {
+            "text": "Megkérdezem, pontosan mit takar az a rész, mielőtt elkezdek dolgozni.",
+            "isOptimal": true,
+            "feedback": "Ez jó megközelítés. Egy rövid pontosítás megelőz egy nagy hibát. „Jól értem, hogy X-et Y formában kell leadnom Z-ig?” – pontosan ilyen kérdések kellenek."
+          },
+          {
+            "text": "Megpróbálom kitalálni a hiányzó részt – nem akarom, hogy buta benyomást keltsek.",
+            "isOptimal": false,
+            "feedback": "Az első napok tele vannak ismeretlen részletekkel – senki nem vár tőled mindentudást. A kitalálás kockázatosabb, mint a kérdezés."
+          },
+          {
+            "text": "Mindent lejegyzetelek és este otthon utánanézek.",
+            "isOptimal": false,
+            "feedback": "Az otthoni utánanézés hasznos, de ha a feladathoz szükséges most a pontosítás, ne halaszd estére. Kérdezz időben."
+          }
+        ]
+      },
+      {
+        "situation": "Az első napon az egyik kolléga hív egy közös ebédre, de még nem fejezted be a feladatot, amit kaptál. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Lemondom az ebédet – a feladat az első.",
+            "isOptimal": false,
+            "feedback": "A közös ebéd az első napon értékes ismerkedési lehetőség. Az ebéd utáni folytatás teljesen rendben van – kérdezd meg a főnöködet."
+          },
+          {
+            "text": "Megeszem az ebédet, de elmondom, hogy ez kivétel, mert általában nem szoktam ebédelni.",
+            "isOptimal": false,
+            "feedback": "Felesleges magyarázkodás, ami kínos benyomást kelthet. Egyszerűen gyere el és legyél természetes."
+          },
+          {
+            "text": "Elmegyek az ebédre, és elmondom a kollégáknak, hogy még nem végzett – majd ebéd után folytatom.",
+            "isOptimal": true,
+            "feedback": "Helyes! A szocializáció az első napon legalább annyira fontos, mint a feladatvégzés. Az őszinteség és a természetes hozzáállás jó benyomást kelt."
+          }
+        ]
+      },
+      {
+        "situation": "Bemutatkozáskor ideges vagy és elfelejted az egyik kolléga nevét, akivel már találkoztál. Mit teszel?",
+        "options": [
+          {
+            "text": "Teszek, mintha emlékeznék – nem akarom, hogy kínos legyen.",
+            "isOptimal": false,
+            "feedback": "A tettetés hamar kiderül, és az is kínos. Egy egyszerű bocsánatkérés természetes és elfogadott."
+          },
+          {
+            "text": "Bocsánatot kérek és megkérdezem újra a nevét – „Elnézést, megismételné a nevét? Szeretném megjegyezni.”",
+            "isOptimal": true,
+            "feedback": "Ez emberies és szimpatikus! Senki nem vár tőled azonnali névmegjegyzést, ha sok emberrel találkozol egyszerre. A nyíltság jó benyomást kelt."
+          },
+          {
+            "text": "Elkerülöm az adott kolléga névhasználatát az egész nap folyamán.",
+            "isOptimal": false,
+            "feedback": "Ez nehézkes és nem oldja meg a problémát. Kérdezd meg bátran – természetesebb és hatékonyabb."
+          }
+        ]
+      },
+      {
+        "situation": "A nap végén a főnököd megkérdezi: „Hogy ment az első nap?” Mit mondasz?",
+        "options": [
+          {
+            "text": "„Nagyon jó volt, sokat tanultam. Volt egy-két dolog, amiben még bizonytalan vagyok, de erről szeretnék majd kérdezni.”",
+            "isOptimal": true,
+            "feedback": "Tökéletes! Őszinte, pozitív, és megmutatja, hogy gondolkodó és fejlődésre nyitott vagy. Ez pontosan az, amit a főnök hallani akar."
+          },
+          {
+            "text": "„Minden tökéletes volt!” – nem akarom, hogy problémásnak lássanak.",
+            "isOptimal": false,
+            "feedback": "A túlzott pozitív kép nem hiteles. A főnök érdeklőjik az igazi tapasztalataidról is."
+          },
+          {
+            "text": "„Nehéz volt, sok mindent nem értettem.” – az őszinteség a legjobb.",
+            "isOptimal": false,
+            "feedback": "Az első nap nehézségeit érdemes megemlíteni, de a tónus számít. Negatív hangsúly nélkül: „Sokat tanultam, még vannak kérdéseim” – ez pozitívabb keret."
+          }
+        ]
+      },
+      {
+        "situation": "Megkapod a beléptető kártyád és a jelszavakat. Mit csinálsz velük?",
+        "options": [
+          {
+            "text": "Egy papírra felírom az összes jelszót és a tárcámban tartom.",
+            "isOptimal": false,
+            "feedback": "A jelszó papíron tartása biztonsági kockázat. Jegyezd meg, vagy használj biztonságos jelszókezelőt."
+          },
+          {
+            "text": "Biztonságosan eltárolom, lehetőleg fejből megjegyzem a fontosabbakat, és lejegyzeteltem a belépési folyamatot.",
+            "isOptimal": true,
+            "feedback": "Ez az ideális hozzáállás. A jelszavak kezelése munkahelyi biztonsági kérdés – kezeld felelősen."
+          },
+          {
+            "text": "Elküldöm magamnak e-mailben, hogy mindig elérhessem.",
+            "isOptimal": false,
+            "feedback": "A jelszavak e-mailben való tárolása biztonsági kockázat. Kérdezz a munkahely ajánlott módszeréről."
+          }
+        ]
+      },
+      {
+        "situation": "Az első nap végén, hazafelé a buszon azon gondolkodsz, mit tanultál ma. Mi a legjobb, amit tehetsz?",
+        "options": [
+          {
+            "text": "Nem gondolkodok munka után – az egyensúly fontos.",
+            "isOptimal": false,
+            "feedback": "Az egyensúly fontos, de egy rövid átgondolás az első nap után nem ártalmas, hanem hasznos. Segít feldolgozni és megtartani a tapasztalatot."
+          },
+          {
+            "text": "Azonnal mesélem a barátaimnak az egész napot minden részlettel.",
+            "isOptimal": false,
+            "feedback": "A mesélés természetes, de vigyázz a munkahelyi adatokkal és belsős információkkal – ezek bizalmasak lehetnek."
+          },
+          {
+            "text": "Átgondolom, mi volt ma jó, mi volt nehéz, és mi az, amit holnap másképp csinálnék.",
+            "isOptimal": true,
+            "feedback": "Ez az önreflexió kulcsa! A nap végi rövid átgondolás az egyik legjobb tanulási eszköz, és ezt az app is ajánlja a checklist utolsó pontjaként."
+          }
+        ]
+      },
+      {
+        "situation": "Nem találod azt a helyiséget, ahol az ebédlő van. Már 10 perce keresed. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Megkérdezem az első kolléga, akivel találkozok.",
+            "isOptimal": true,
+            "feedback": "Ez jó megoldás. Az első napokon mindenki elvár, hogy kérdezz. Ez teljesen természetes, hanem természetes és hatékony."
+          },
+          {
+            "text": "Folytatom a keresést egyedül – majd megtalálom.",
+            "isOptimal": false,
+            "feedback": "Tíz perc keresés után felesleges büszkéségből tovább keresni. Egy egyszerű kérdéssel pillanatok alatt megvan a megoldás."
+          },
+          {
+            "text": "Kihagyom az ebédet – nem akarom kínos helyzetbe hozni magam.",
+            "isOptimal": false,
+            "feedback": "Ez szükségtelen önfeláldozás. Kérd meg bátran a segítséget – erre az emberek örömmel vállalkoznak az első napokon."
+          }
+        ]
+      },
+      {
+        "situation": "Az első nap végeztével a közvetlen felettesed azt kéri, hogy holnap adj egy rövid szóbeli összefoglalót a kapott feladatokról. Hogyan készülsz?",
+        "options": [
+          {
+            "text": "Nem készülök külön – majd fejből elmondom.",
+            "isOptimal": false,
+            "feedback": "Egy rövid felkészülés megmutatja a komolyságodat. A fejből mondás kockázatos, ha sok új információt kaptál aznap."
+          },
+          {
+            "text": "Megnézem az aznapi jegyzeteimet, összeszedek 3–4 fő pontot, és felkészülök a kérdésekre is.",
+            "isOptimal": true,
+            "feedback": "Ez a profi hozzáállás! A felkészülés megmutatja, hogy komolyan vetted a napot és készen állsz a kommunikációra."
+          },
+          {
+            "text": "Megkérem a kollégámat, hogy ő mondja el helyettem, mert jobban ismeri a feladatokat.",
+            "isOptimal": false,
+            "feedback": "Ez a te feladatod, nem a kollégádé. A saját tapasztalataidról te tudsz a legjobban beszámolni."
+          }
+        ]
+      },
+      {
+        "situation": "Kapasz egy belső céges szoftvert, amit nem ismersz. Az oktatás 5 perces volt és nem elég. Mit teszel?",
+        "options": [
+          {
+            "text": "Megkérem a betanítómat vagy kollégámat, hogy mutassa meg részletesebben a szükséges funkciókat.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes lépés! Egy szoftver megfelelő ismerete munkafeltétel – ha az oktatás nem volt elégséges, jelezd és kérd a kiegészítést."
+          },
+          {
+            "text": "Megpróbálom egyedül kikísérletezni – majd rájövök.",
+            "isOptimal": false,
+            "feedback": "A kísérletezés rendben van rövid ideig, de ha munkát blokkolja az ismerethiány, kérd a segítséget."
+          },
+          {
+            "text": "Elkerülöm a szoftver használatát amíg meg nem tanulom magamtól.",
+            "isOptimal": false,
+            "feedback": "Ha a szoftver a munkáddal kapcsolatos, az elkerülés nem opció. Kérd a segítséget időben."
+          }
+        ]
+      },
+      {
+        "situation": "Az első nap végén egy kolléga azt kérdezi: „Bejössz holnap is?” Hogyan reagálsz?",
+        "options": [
+          {
+            "text": "Nevetek és azt mondom: „Meglátjuk!” – vicces és laza benyomást kelt.",
+            "isOptimal": false,
+            "feedback": "Az első napok nem a viccek ideje az ilyen kérdéseknél. A határozottság és az elkötelezettség jobb benyomást kelt."
+          },
+          {
+            "text": "Azt mondom, hogy függ a holnapi közlekedéstől – őszintén jelzem a bizonytalanságot.",
+            "isOptimal": false,
+            "feedback": "Ha nincs valódi ok a bizonytalanságra, ez szükségtelen aggályokat kelthet. A határozottság itt általában ezt várják válasz."
+          },
+          {
+            "text": "Határozottan igent mondok, és hozzáteszem, hogy örülök az első napnak.",
+            "isOptimal": true,
+            "feedback": "Tökéletes! Az egyenes, pozitív válasz megmutatja az elköteleződésedet. „Igen, holnap is itt leszek!” – egyszerű és erős."
+          }
+        ]
+      }
+    ]
+  }
+}

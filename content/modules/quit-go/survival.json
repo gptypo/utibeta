@@ -1,0 +1,81 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "survival",
+  "title": "Első év",
+  "data": {
+    "survivalGuideData": [
+      {
+        "month": 1,
+        "title": "Mit tegyél, ha bizonytalan vagy?",
+        "content": "Teljesen rendben van, ha még nem tudsz mindent. Gondold végig, meddig jutottál, és pontosan hol akadtál el. Ezután konkrét kérdéssel fordulj a mentorodhoz vagy a vezetődhöz.",
+        "takeaway": "Nem az számít, hogy mindent tudj, hanem hogy merj kérdezni és keresd a megoldást."
+      },
+      {
+        "month": 2,
+        "title": "Hogyan kérj segítséget?",
+        "content": "Mondd el pontosan, hol akadtál el, és kérdezz bátran. Például: „Az X résznél elakadtam, mert Y nem világos. Tudnál segíteni?” A segítségkérés a tanulás része, teljesen természetes.",
+        "takeaway": "Ha pontosan meg tudod mondani, hol akadtál el, már félúton vagy a megoldás felé."
+      },
+      {
+        "month": 3,
+        "title": "Mit tegyél, ha valami nem sikerül elsőre?",
+        "content": "Ne kudarcként nézz rá, hanem tapasztalatként. Gondold végig, mi nem működött, változtass rajta, majd próbáld újra. A fejlődés próbálkozásokból épül fel.",
+        "takeaway": "Nem az számít, hogy elsőre sikerült-e, hanem az, hogy mit tanultál belőle."
+      },
+      {
+        "month": 4,
+        "title": "Hogyan fogadd a kritikát és a visszajelzést?",
+        "content": "Hallgasd végig, kérdezz vissza, ha valami nem világos, és keresd meg benne azt, amit fel tudsz használni. Nem kell rögtön védekezned: a jó visszajelzés abban segít, hogy fejlődj.",
+        "takeaway": "A visszajelzés nem ítélet, hanem kapaszkodó a fejlődéshez."
+      },
+      {
+        "month": 5,
+        "title": "Hogyan építs önbizalmat?",
+        "content": "Ne csak azt nézd, amit még nem tudsz. Vedd észre a kisebb sikereidet és azt is, mennyit fejlődtél. Készíthetsz egy „büszkeséglistát”, ahová felírod, mire vagy büszke az adott héten.",
+        "takeaway": "Az önbizalom a kisebb sikerek észrevételével épül."
+      },
+      {
+        "month": 6,
+        "title": "Mit tegyél, ha hibázol?",
+        "content": "Vállald a hibát, szólj időben, és keresd a megoldást. Nem maga a hiba határoz meg, hanem az, ahogyan reagálsz rá. Az őszinte felelősségvállalás bizalmat épít.",
+        "takeaway": "Hibázni emberi dolog. A felelősségvállalásból viszont erősség lehet."
+      },
+      {
+        "month": 7,
+        "title": "Mit tegyél, ha túl sok a feladat?",
+        "content": "Ne próbálj mindent egyszerre megoldani. Állíts fel sorrendet, és tisztázd, mi a legsürgősebb. Kérdezd meg a vezetődet, ha nem vagy biztos – jobb előre egyeztetni, mint kapkodni.",
+        "takeaway": "Ha sok a feladat, ne egyszerre próbálj mindennel végezni. Haladj fontossági sorrendben, egy lépéssel egyszerre."
+      },
+      {
+        "month": 8,
+        "title": "Hogyan kezeld, ha összehasonlítod magad másokkal?",
+        "content": "Ne más pályájához mérd a saját indulásodat. Figyeld inkább azt, hogy te honnan indultál, és mennyit fejlődtél. Mindenki más tempóban, más úton jár.",
+        "takeaway": "A saját fejlődésedet a korábbi önmagadhoz érdemes mérned, nem másokhoz."
+      },
+      {
+        "month": 9,
+        "title": "Mit tegyél, ha konfliktusba kerülsz?",
+        "content": "Ne reagálj azonnal indulatból. Tisztázd a helyzetet, mondd el a saját nézőpontodat, és keresd a közös megoldást. A legtöbb munkahelyi konfliktus félreértésből vagy tisztázatlan elvárásokból fakad.",
+        "takeaway": "Konfliktusban az első reakciódat ne kövesd – állj meg, tisztázz, keress közös megoldást."
+      },
+      {
+        "month": 10,
+        "title": "Mit tegyél, ha elveszíted a motivációdat?",
+        "content": "Gondold végig, miért kezdted el, mit szeretnél elérni, és keress egyetlen kis lépést, amit még ma meg tudsz tenni. A motiváció nem mindig érzelem – néha döntés kérdése.",
+        "takeaway": "Ha elveszted a motivációt, keress egyetlen kis lépést, amit most meg tudsz tenni."
+      },
+      {
+        "month": 11,
+        "title": "Mit tegyél, ha úgy érzed, nem vagy elég jó?",
+        "content": "Pályakezdőként nem az a feladatod, hogy mindent tudj. Az a fontos, hogy képes és hajlandó legyél tanulni és fejlődni. Mindenki érezte ezt az érzést – ez azt jelzi, hogy számodra is fontos a munkád minősége.",
+        "takeaway": "Pályakezdőként tanulni a feladatod, nem mindent tudni – a fejlődési hajlandóság többet ér a tudásnál."
+      },
+      {
+        "month": 12,
+        "title": "Hogyan állj fel egy nehéz helyzet után?",
+        "content": "Gondold végig: Mi történt? Mit tanultál belőle? Mit csinálnál másképp? Mi legyen a következő lépésed? Aki képes visszanézni és levonni a következtetést, az minden nehézségből erősebben jön ki.",
+        "takeaway": "Minden nehéz helyzet tart egy tanulságot – aki képes visszanézni és tanulni, az erősebb lesz tőle."
+      }
+    ]
+  }
+}

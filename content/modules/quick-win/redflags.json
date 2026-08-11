@@ -1,0 +1,310 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "redflags",
+  "title": "Vészjelek",
+  "data": {
+    "redFlags": [
+      {
+        "title": "Tiszteletlen vagy megalázó kommunikáció",
+        "action": "Húzd meg a határaidat nyugodtan, de határozottan. Ha ismétlődik, dokumentáld (képernyőkép, e-mail) és jelezd a HR-nek vagy egy bizalmi személynek. A tisztelet munkahelyi alapjog."
+      },
+      {
+        "title": "Zaklatás vagy diszkriminatív bánásmód",
+        "action": "Azonnal jelezd HR-nek, felettesednek vagy egy bizalmi személynek. Dokumentálj mindent időpontokkal. A törvény véd: a munkahelyi zaklatás büntetőjogi kategória. Ne maradj csendben – kérj segítséget."
+      },
+      {
+        "title": "Veszélyes munkavégzés vagy a munkavédelmi szabályok figyelmen kívül hagyása",
+        "action": "Tagadd meg a munkát, ha nincs megfelelő védőfelszerelés vagy betanítás, és az egészséged forog kockán. A munkavédelmi törvény alapján ezt megteheted. Jelezd felettesednek és munkavédelmi felelősnek."
+      },
+      {
+        "title": "Nem egyértelmű munkafeltételek",
+        "action": "Kérj írásos szerződést és egyértelmű tájékoztatást a bérről, a munkakörről, a munkaidőről és más fontos feltételekről. A szóbeli ígéretet érdemes e-mailben is visszaigazolni."
+      },
+      {
+        "title": "Feketemunka vagy be nem jelentett munkavégzés",
+        "action": "Ha a szerződésed nem fedi a valóságot, az rád is jogi kockázatot jelent. Kérj tiszta, írásos feltételeket, vagy fordulj a munkaügyi hatósághoz, esetleg munkajogi tanácsadóhoz."
+      },
+      {
+        "title": "A fizetéssel kapcsolatos visszatérő problémák",
+        "action": "Egy-egy késés előfordul, de ha rendszeres, az komoly piros zászló. Kérdezz rá írásban. Ha nem változik, fontold meg a váltást, vagy kérj segítséget munkajogi tanácsadótól."
+      },
+      {
+        "title": "Elszigetelés, kirekesztés a csapatból",
+        "action": "Ha szándékosan kizárnak az infóáramlásból vagy csapateseményekről, az mobbingra utalhat. Kérj egyenes magyarázatot, dokumentálj és szükség esetén fordulj HR-hez vagy munkajogi szakértőhöz."
+      },
+      {
+        "title": "Rendszeresen elvárt, nem megfelelően kezelt túlmunka",
+        "action": "Írd fel a plusz órákat, és kérdezd meg, hogyan számolják el őket. Ha még nem vagy 18 éves, rendkívüli munkaidő nem rendelhető el. Felnőttként is jogod van az elszámolás tisztázásához."
+      },
+      {
+        "title": "Nem kapsz megfelelő betanítást, mégis számon kérik rajtad a feladatot",
+        "action": "Kérd írásban a szükséges betanítást és a feladatleírást. Ha nem kapod meg, jelezd a közvetlen vezetőnek. Senki nem születik tapasztalattal – a betanítás a munkáltató felelőssége."
+      },
+      {
+        "title": "Nem merhetsz kérdezni vagy hibát jelezni",
+        "action": "Egy egészséges munkahelyen lehet kérdezni és hibát jelezni. Ha rettegés van, az mérgező közeg. Jelezd egy bizalmi személynek, vagy kérj tanácsot egy külső szervezettől (Például munkajogi segélyszolgálat)."
+      },
+      {
+        "title": "Etikátlan vagy szabálytalan tevékenységre próbálnak rávenni",
+        "action": "Ne menj bele! Mondd el határozottan, hogy nem vállalod. Dokumentálj mindent. Ha nyomás alatt állsz, fordulj bizalmi személyhez, HR-hez, vagy súlyos esetben a hatóságokhoz."
+      },
+      {
+        "title": "Tartósan azt érzed, hogy a munkakörnyezet nem biztonságos számodra",
+        "action": "Ne normalizáld a tartós stresszt vagy félelmet. Keress segítséget: bizalmi személy, HR, munkajogi tanácsadó, Foglalkozás-egészségügyi szolgálat, vagy ha szükséges, a rendőrség. A biztonságod az első."
+      }
+    ],
+    "redFlagQuiz": [
+      {
+        "situation": "A főnököd rendszeresen emelt hangon, lekicsinylően szól hozzád a kollégák előtt. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Egy nyugodt pillanatban négyszemközt jelzem a főnöknek, hogy ez a kommunikáció nem megfelelő számomra, és jelezd, hogyan szeretnél szót kapni.",
+            "isOptimal": true,
+            "feedback": "Ez az érett, professzionális lépés. Ha nem változik, dokumentálj és kérd a HR segítségét. A tisztelet alapjog."
+          },
+          {
+            "text": "Benyelem – pályakezdőként ezt el kell viselni.",
+            "isOptimal": false,
+            "feedback": "A tiszteletlen kommunikáció nem elfogadható, és nem „pályakezdő adag”. Húzd meg a határt, és ha nem változik, dokumentálj és jelezz."
+          },
+          {
+            "text": "Azonnal visszakiabálok – megmutatom, hogy nem tűröm.",
+            "isOptimal": false,
+            "feedback": "A nyilvános konfrontáció ritkán vezet jó eredményre. A négyszemközti, nyugodt jelzés hatékonyabb."
+          }
+        ]
+      },
+      {
+        "situation": "Azt veszed észre, hogy az egyik kolléga szexuális megjegyzéseket tesz a csapatban, és te is jelen voltál. Mit teszel?",
+        "options": [
+          {
+            "text": "Nevetek én is – nem akarom elrontani a hangulatot.",
+            "isOptimal": false,
+            "feedback": "A diszkriminatív megjegyzések hallgatólagos elfogadása is hozzájárul a mérgező légkörhöz. Van felelősséged jelezni."
+          },
+          {
+            "text": "A kolléga felé egyértelműen jelzem, hogy nem tartom ezt helyénvalónak, és ha szükséges, HR-nek is jelzem.",
+            "isOptimal": true,
+            "feedback": "Bátran! A szexuális zaklatás munkahelyi tiltott magatartás. Egy határozott, visszafogott jelzés az első lépés – ha nem változik, a HR az illetékes."
+          },
+          {
+            "text": "Nem szólok, de kerülöm a kollégát ezentúl.",
+            "isOptimal": false,
+            "feedback": "A kerülés nem oldja meg a problémát, és nem védi meg a többi kollégát sem. Jelezd a helyzetet."
+          }
+        ]
+      },
+      {
+        "situation": "Egyedül küldenek dolgozni egy olyan helyszínre, ahol nincs megfelelő védőfelszerelés, és az elvégzendő munka veszélyes. Mit teszel?",
+        "options": [
+          {
+            "text": "Megpróbálom megcsinálni – nem akarok problémás lenni az első hónapokban.",
+            "isOptimal": false,
+            "feedback": "A munkavédelmi szabályok be nem tartása komoly balesetveszélyt jelent. A veszélyes munka megtagadása TÖRVÉNYES JOG, és kötelességed."
+          },
+          {
+            "text": "Elvégzem a feladatot, de utána jelzem a főnöknek a problémát.",
+            "isOptimal": false,
+            "feedback": "Ha már elvégezted, a káresemény megtörtént. A jelzésnek ELŐTTE kell megtörténnie, nem utána."
+          },
+          {
+            "text": "Megtagadom a munkát, azonnal értesítem a közvetlen felettesem, és jelzem, hogy megfelelő felszerelés nélkül nem tudom elvégezni.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes és törvényes eljárás! A munkavédelmi törvény véd téged – a veszélyes munka megtagadása nem kirúgási ok."
+          }
+        ]
+      },
+      {
+        "situation": "Két hete dolgozol, és még mindig nem kaptad kézhez az aláírt munkaszerződésedet, csak szóbeli ígéretet. Mit teszel?",
+        "options": [
+          {
+            "text": "Megvárom – biztosan elfoglaltak.",
+            "isOptimal": false,
+            "feedback": "A munkaszerződést írásba kell foglalni. Kérj aláírt példányt, és ne hagyd rendezetlenül a helyzetet."
+          },
+          {
+            "text": "Nem szólok, de ezentúl nem dolgozom keményen, amíg meg nem kapom.",
+            "isOptimal": false,
+            "feedback": "Ez nem oldja meg a problémát és rád nézve is kedvezőtlen. Jelezd egyenesen az igényedet."
+          },
+          {
+            "text": "Írásban (e-mailben) megkérem, hogy mikor kapom meg az aláírt szerződésemet.",
+            "isOptimal": true,
+            "feedback": "Helyes! Az írásos megkeresés dokumentált, és megmutatja, hogy tisztában vagy a jogaiddal. Ha továbbra sem kapod meg, tájékozódj jogi segítségről."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd rendszeresen kér túlmunkát, de soha nem kompenzálja – sem pénzben, sem szabadnapban. Mit teszel?",
+        "options": [
+          {
+            "text": "Feljegyzem a plusz órákat, majd írásban kérem a kompenzáció tisztázását a főnöktől.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes lépés! Dokumentált kérés, írásos nyom. Ha nincs eredmény, munkajogi segítséget kérhetsz."
+          },
+          {
+            "text": "Elvégzem – pályakezdőként be kell bizonyítanom.",
+            "isOptimal": false,
+            "feedback": "A kompenzálatlan, rendszeres túlmunka törvényellenes. „Be kell bizonyítanom” nem jelenti azt, hogy lemondok a jogaimról."
+          },
+          {
+            "text": "Megtagadom a túlmunkát azonnal és határozottan, anélkül, hogy bármit megindokolnék.",
+            "isOptimal": false,
+            "feedback": "Ez jó első lépés. Kérj írásos elszámolást, és tartsd nyilván a plusz órákat. Ha még nem vagy 18 éves, jelezd, hogy túlóra nem rendelhető el."
+          }
+        ]
+      },
+      {
+        "situation": "A fizetésedet már harmadszor nem kapod meg a megbeszélt napon. A főnök „technikai problémát” emleget. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Elfogadom a magyarázatot – nyilván nem szándékos.",
+            "isOptimal": false,
+            "feedback": "Egyszer talán nem szándékos, de háromszor már minta. A törvény szerint a munkabért a megállapodott határidőre kell kifizetni."
+          },
+          {
+            "text": "Írásban kérem a fizetés azonnali rendezését, és jelzem, hogy a törvényes határidő be nem tartása jogi következményekkel járhat.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes és határozott lépés. Dokumentálj, kérd írásban, és ha nem oldódik meg, kérd munkajogi tanácsadó segítségét."
+          },
+          {
+            "text": "Azonnal felmondok – ez elfogadhatatlan.",
+            "isOptimal": false,
+            "feedback": "Jól teszed, ha írásban jelzed. A munkabért a jogszabály és a megállapodás szerinti határidőben kell kifizetni; az ismétlődő késés komoly probléma."
+          }
+        ]
+      },
+      {
+        "situation": "Betanítás nélkül kapsz egy olyan feladatot, ami speciális gép kezelésével jár, és számon kérik, ha rosszul csinálod. Mit teszel?",
+        "options": [
+          {
+            "text": "Megpróbálom kitalálni, hogyan kell működtetni – majd rájövök.",
+            "isOptimal": false,
+            "feedback": "Ismeretlen gép esetén a találgatás balesetveszélyes lehet. A betanítás a munkáltató kötelezettsége."
+          },
+          {
+            "text": "Jelzem, hogy nem kaptam betanítást, és kérem, hogy valaki mutassa meg, mielőtt elvégzem.",
+            "isOptimal": true,
+            "feedback": "Pontosan helyes! A betanítás jogi kötelezettség a munkáltató részéről. A kérés teljesen természetes – ez felelős magatartás."
+          },
+          {
+            "text": "Elvégzem és utólag kérek betanítást, ha valami nem jött össze.",
+            "isOptimal": false,
+            "feedback": "Az „utólagos” betanítás elveszíti az értelmét, ha a hiba már megtörtént. Kérd előre."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd azt kéri, hogy írj alá egy dokumentumot, ami nem fedi a valóságot (Például hamis munkaidő-nyilvántartás). Mit csinálsz?",
+        "options": [
+          {
+            "text": "Aláírom – nem akarom elveszíteni a munkámat.",
+            "isOptimal": false,
+            "feedback": "Hamis dokumentum aláírása jogi felelősséget is rád hárít. Nem szabad! Ez komoly red flag és etikai határ."
+          },
+          {
+            "text": "Aláírom, de erről szólok egy megbízható kollégának.",
+            "isOptimal": false,
+            "feedback": "Az aláírás megtörtént – a kolléga értesítése nem véd meg a jogi következményektől. Utasítsd el előre."
+          },
+          {
+            "text": "Határozottan visszautasítom, és jelzem, hogy ezt nem tudom vállalni.",
+            "isOptimal": true,
+            "feedback": "Ez az egyetlen helyes válasz. Ha ezért fenyegetnek, dokumentálj és kérj jogi vagy hatósági segítséget."
+          }
+        ]
+      },
+      {
+        "situation": "Észreveszed, hogy az egyik kolléga rendszeresen kifejezetten negatív hangnemben szól hozzád és csak hozzád a csapatból. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Ha megismétlődik, négyszemközt jelzem a kollégának, majd ha nem változik, HR-t értesítem.",
+            "isOptimal": true,
+            "feedback": "Ez az érett és hatékony megközelítés. A négyszemközti jelzés az első lépés, dokumentálással és HR-értesítéssel ha szükséges."
+          },
+          {
+            "text": "figyelmen kívül hagyom – majd elmúlik.",
+            "isOptimal": false,
+            "feedback": "A tartós kirekesztés vagy bántalmazás ritkán múlik el magától. A korai jelzés megelőzi az eszkalálódást."
+          },
+          {
+            "text": "Visszafizetek neki ugyanolyan hangnemben – megmutatom, hogy én sem tűröm.",
+            "isOptimal": false,
+            "feedback": "A viszonzás eszkalálja a konflikust és téged is érinthet fegyelmileg. A felnőtt, professzionális jelzés hatékonyabb."
+          }
+        ]
+      },
+      {
+        "situation": "A munkahelyed kéri, hogy a személyes céljaidat ne hozd nyilvánosságra a csapatban (Például ne mondd el, hogy továbbtanulsz vagy más munkát keresel). Hogyan viszonyulsz ehhez?",
+        "options": [
+          {
+            "text": "Teljes mértékben betartom – a munkáltató dönt, mit mondhatnak a munkavállalók.",
+            "isOptimal": false,
+            "feedback": "A magánélet kérdéseiben a munkáltató nem korlátozhatja a magánszférádat. A „ne mondd, hogy tanulsz” iránymutatás határsértő lehet."
+          },
+          {
+            "text": "Megkérdezem, mi ennek az oka, és ha a kérés ésszerű (Például NDA), betartom, de ha jogaimba ütközik, tájékozódom.",
+            "isOptimal": true,
+            "feedback": "Ez a kiegyensúlyozott megközelítés. Egyes titoktartási kérések jogosak (üzleti titok), mások viszont a munkavállalói jogokat sérthetik."
+          },
+          {
+            "text": "Azonnal elmondok mindent minden kollégának – nem fogom korlátozni magam.",
+            "isOptimal": false,
+            "feedback": "Az azonnali ellenakció is szélsőséges. Értsd meg a kérés okát, és ha szükséges, kérj jogi tájékoztatást."
+          }
+        ]
+      },
+      {
+        "situation": "Tartósan rossz érzésed van a munkahely légköréről, de semmi konkrétat nem tudsz mondani. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Figyelmen kívül hagyom az érzést – konkrétum nélkül nem érvényes.",
+            "isOptimal": false,
+            "feedback": "A tartós rossz közérzet komoly jelzés lehet. Érdemes megfigyelni, mi váltja ki, és egy bizalmi személlyel megbeszélni."
+          },
+          {
+            "text": "Azonnal felmondok, mert a megérzések ritkán tévednek.",
+            "isOptimal": false,
+            "feedback": "A megérzések értékesek, de a döntés előtt érdemes konkretizálni. Azonnali felmondás nélkül is megtehetsz lépéseket."
+          },
+          {
+            "text": "Megpróbálom azonosítani, mi konkrétan zavar, és egy bizalmi személlyel vagy tanácsadóval megbeszélem.",
+            "isOptimal": true,
+            "feedback": "Ez az érett és önvédelmi megközelítés. A mérgező légkör ritkán javul magától – megér rá figyelni és cselekedni."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd azt mondja: „Ha ezt nem csinálod meg, kapsz egyet.” Hogyan értelmezed és mit teszel?",
+        "options": [
+          {
+            "text": "Megkérdezem, mire gondolt, és ha fenyegetés volt, egyértelművé teszem, hogy ezt nem fogadom el, és dokumentálok.",
+            "isOptimal": true,
+            "feedback": "Helyes! A tisztázás és a határok megvonása az első lépés. Ha ismétlődik, ez HR-kérdés és jogi következményei lehetnek."
+          },
+          {
+            "text": "Viccelődés, nem veszem komolyan.",
+            "isOptimal": false,
+            "feedback": "Ha valaki rendszeresen fenyeget, az nem viccelődés, hanem munkahelyi megfélemlítés. Az első alkalomtól érdemes figyelni és dokumentálni."
+          },
+          {
+            "text": "Azonnal elhagyom a munkahelyet és bejelentem a rendőrségen.",
+            "isOptimal": false,
+            "feedback": "Ez túlreagálás egy elsőre kétértelmű helyzetnél. A tisztázás és dokumentálás az első lépés."
+          }
+        ]
+      }
+    ]
+  },
+  "expertReview": {
+    "version": "7.1",
+    "reviewedAt": "2026-07-27",
+    "scope": [
+      "munkaszerződés",
+      "túlmunka",
+      "bérfizetés",
+      "munkavédelem"
+    ],
+    "notice": "Közérthető általános tájékoztatás; egyedi ügyben nem helyettesít jogi tanácsot."
+  }
+}

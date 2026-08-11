@@ -1,0 +1,45 @@
+{
+  "schema": "utiterv-module-v5",
+  "id": "kapcsolataim",
+  "slug": "win-win",
+  "title": "Kapcsolataim",
+  "code": "win<br><em>WIN</em>",
+  "className": "ww",
+  "icon": "WW_BIG_ICON.svg",
+  "thin": "WW_BIG_ICON_thin.svg",
+  "lead": "Együttműködés, ahol mindenki nyer",
+  "time": 20,
+  "sections": [
+    {
+      "id": "twosides",
+      "title": "Két oldal",
+      "file": "twosides.json"
+    },
+    {
+      "id": "generations",
+      "title": "Generációk",
+      "file": "generations.json"
+    },
+    {
+      "id": "communication",
+      "title": "Kommunikáció",
+      "file": "communication.json"
+    },
+    {
+      "id": "phrases",
+      "title": "Pro mondatok",
+      "file": "phrases.json"
+    },
+    {
+      "id": "digital",
+      "title": "Digitális tér",
+      "file": "digital.json"
+    },
+    {
+      "id": "glossary",
+      "title": "Fogalomtár",
+      "file": "glossary.json"
+    }
+  ],
+  "heroIconMode": "auto"
+}

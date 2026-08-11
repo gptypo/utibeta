@@ -1,0 +1,58 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "marketfacts",
+  "title": "Tudtad-e?",
+  "data": {
+    "marketFacts": [
+      {
+        "front": "💡 Tudtad-e, hogy a legtöbb állást soha nem hirdetik meg?",
+        "back": "A pozíciók jelentős része ajánlások, kapcsolatok és belső jelölések útján telik be. Ezért fontos a networking."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy egy toborzó átlagosan néhány másodperc alatt átnézi a CV-det?",
+        "back": "Az első benyomás gyorsan kialakul. A jól strukturált, átlátható önéletrajz előnyt jelenthet."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a LinkedIn nem csak vezetőknek való?",
+        "back": "Egyre több pályakezdőt és gyakornokot is ezen a platformon keresnek meg a munkáltatók."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy ma már sok állásinterjú online zajlik?",
+        "back": "A videós interjú ugyanúgy számít, mint a személyes találkozó. A technikai felkészültség fontos."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a soft skillek egyre értékesebbek?",
+        "back": "A kommunikáció, együttműködés és problémamegoldás sokszor legalább olyan fontos, mint a szakmai tudás."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a tanulás nem ér véget a diploma megszerzésével?",
+        "back": "A legtöbb szakmában folyamatos fejlődésre és új készségek elsajátítására van szükség."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy egy hobbi is lehet előny az álláskeresésnél?",
+        "back": "A sport, önkéntesség vagy kreatív projektek olyan készségeket mutathatnak meg, amelyek értékesek a munkahelyen is."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy az első munkahely nem határozza meg az egész karrieredet?",
+        "back": "A legtöbb ember több alkalommal is vált munkakört vagy akár teljes szakmát karrierje során."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a munkáltatók gyakran a hozzáállást keresik?",
+        "back": "A motiváció és a tanulási hajlandóság sok pozícióban ugyanolyan fontos lehet, mint a tapasztalat."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a mesterséges intelligencia új szakmákat is teremt?",
+        "back": "Miközben egyes munkakörök átalakulnak, számos új karrierlehetőség jelenik meg a technológia fejlődésével."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a visszajelzés karriergyorsító lehet?",
+        "back": "Az építő kritikák segítenek felismerni az erősségeidet és fejlesztendő területeidet."
+      },
+      {
+        "front": "💡 Tudtad-e, hogy a legfontosabb készség a változáshoz való alkalmazkodás?",
+        "back": "A gyorsan változó munkaerőpiacon azok a munkavállalók sikeresek, akik nyitottak az új ismeretekre és lehetőségekre."
+      }
+    ],
+    "marketFactsClosing": "A munkaerőpiac folyamatosan változik. Minél többet tudsz róla, annál magabiztosabban tudsz dönteni a saját karrieredről."
+  }
+}

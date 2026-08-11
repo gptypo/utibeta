@@ -1,0 +1,13 @@
+import {project} from './project-content.js';
+const data=project.modules.kapcsolataim;
+export const ketOldalData=data.ketOldalData;
+export const communicationFlips=data.communicationFlips;
+export const proPhrases=data.proPhrases;
+export const digitalBehavior=data.digitalBehavior;
+export const glossary=data.glossary;
+export const komunikációQuiz=data.komunikációQuiz;
+export const proSzóhasználatQuiz=data.proSzóhasználatQuiz;
+export const digitálisViselkedésQuiz=data.digitálisViselkedésQuiz;
+export const fogalomtárQuiz=data.fogalomtárQuiz;
+export const generationCards=data.generationCards||[];
+export const generationClosing=data.generationClosing||null;

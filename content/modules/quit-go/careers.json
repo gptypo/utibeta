@@ -1,0 +1,393 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "careers",
+  "title": "Karrierutak",
+  "data": {
+    "blueCollarExamples": [
+      {
+        "icon": "ChefHat",
+        "from": "Szakács",
+        "steps": [
+          "Szakács",
+          "Mesterszakács",
+          "Michelin-séf / saját étterem"
+        ],
+        "motivation": "A konyha a kreativitás és a precizitás találkozási pontja – aki szeret kísérletezni és tanulni, az a csúcsra is felkerülhet.",
+        "skills": [
+          "Precizitás",
+          "Csapatmunka",
+          "Stressztűrés"
+        ],
+        "competencies": [
+          {
+            "name": "Precizitás",
+            "description": "Pontosan követi a recepteket, technológiai előírásokat és adagolási szabályokat – a konyhai minőség a milligrammon és a másodpercen múlik.",
+            "example": "Egy nagyobb rendezvény előkészítésekor minden fogásnál pontosan betartja az előírt mennyiségeket és elkészítési időket, hogy a vendégek minden tányéron azonos minőségű ételt kapjanak."
+          },
+          {
+            "name": "Csapatmunka",
+            "description": "A konyhai csapattal összehangoltan, egymást segítve dolgozik a forgalmas szolgálat idején is – a jó csapat szó nélkül is érti egymást.",
+            "example": "Csúcsforgalom alatt a séf és a szakácsok szótlanul is összehangoltan dolgoznak: ki a salátának segít, ki a tálalást viszi – mindenki tudja a szerepét, és senki sem marad le."
+          },
+          {
+            "name": "Stressztűrés",
+            "description": "Nyomás alatt is megőrzi a nyugalmát és a minőségét – akkor is, amikor egyszerre több asztal rendelése fut be, és a konyhán minden perc számít.",
+            "example": "Szombat este, teli étteremben egyszerre hat asztal rendel főfogást – a jó szakács ilyenkor nem kapkod, hanem priorizál, kommunikál, és minden fogást időre küld ki."
+          }
+        ]
+      },
+      {
+        "icon": "Zap",
+        "from": "Villanyszerelő",
+        "steps": [
+          "Villanyszerelő",
+          "Vezető szerelő",
+          "Saját vállalkozás"
+        ],
+        "motivation": "A digitalizáció és az okosotthonok kora az elektromos szakértőket a jövő nélkülözhetetlen embereivé teszi.",
+        "skills": [
+          "Biztonsági tudatosság",
+          "Problémamegoldás",
+          "Digitális kompetencia"
+        ],
+        "competencies": [
+          {
+            "name": "Biztonsági tudatosság",
+            "description": "Minden munkafázisban automatikusan betartja az elektromos biztonsági előírásokat, és sietség vagy ügyfélnyomás hatására sem vállal kockázatot.",
+            "example": "Áramtalanítás előtt mindig elvégzi a feszültségmérést, és nem engedélyezi a munka megkezdését – még akkor sem, ha az ügyfél sürgeti, mert az élet fontosabb a határidőnél."
+          },
+          {
+            "name": "Problémamegoldás",
+            "description": "Egy hibás áramkörben rendszeresen és logikusan azonosítja a hibaforrást – nem találgat, hanem mérőeszközzel lépésről lépésre szűkíti a lehetőségeket.",
+            "example": "Egy lakásban nem működik néhány aljzat – nem cseréli ki vakon az összeset, hanem mérővel azonosítja a hibás biztosítéki ágat, majd pontosan azt a szakaszt javítja."
+          },
+          {
+            "name": "Digitális kompetencia",
+            "description": "Magabiztosan kezeli az okosotthon-vezérlőket, digitális mérőeszközöket és elektromos tervező szoftvereket – a jövő szereléseinek alapja a digitális tudás.",
+            "example": "Okosotthon kiépítésekor digitális tervrajzon tervezi meg a kapcsolókat és vezérlési pontokat, majd beprogramozza az automatizált jeleneteket a lámpavezérlő rendszerben."
+          }
+        ]
+      },
+      {
+        "icon": "Hammer",
+        "from": "Asztalos",
+        "steps": [
+          "Asztalos",
+          "Egyedi mestertervező",
+          "Saját márka & ügyfélkör"
+        ],
+        "motivation": "A kézművesség sosem megy ki a divatból – az egyedi faalkotások iránti igény folyamatosan nő, itthon és külföldön.",
+        "skills": [
+          "Kézügyesség",
+          "Precizitás",
+          "Kreativitás"
+        ],
+        "competencies": [
+          {
+            "name": "Kézügyesség",
+            "description": "Precízen és biztonságosan kezeli a kéziszerszámokat és gépeket – a kéz és a szem összehangoltsága a minőségi famunka alapja.",
+            "example": "Egy egyedi fiókos szekrény illesztésekor kézzel gyalulja be a keret réseit, hogy a fiókok tökéletesen záródjanak."
+          },
+          {
+            "name": "Precizitás",
+            "description": "A méretek, illesztések és felületek pontosságát milliméternyi hibával sem fogadja el magától.",
+            "example": "Egy egyedi könyvespolc összeszerelésekor minden csatlakozást ellenőriz mérőszalaggal, mielőtt ragaszt."
+          },
+          {
+            "name": "Kreativitás",
+            "description": "Az ügyfél igényeit egyedi, esztétikus és funkcionális ötletté formálja.",
+            "example": "Egy kis nappaliba falba épített kombinált állványt tervez, amelyben könyvespolc, tároló és rejtett fiókrendszer is helyet kap."
+          }
+        ]
+      },
+      {
+        "icon": "Flame",
+        "from": "Hegesztő",
+        "steps": [
+          "Hegesztő",
+          "Nemzetközi specialista",
+          "Automatizálási szakértő"
+        ],
+        "motivation": "Az ipar 4.0 a hegesztőkből is tech-szakértőket nevel – aki lépést tart, az a legjobban fizetett szakemberek közé kerül.",
+        "skills": [
+          "Precizitás",
+          "Minőségtudatosság",
+          "Tanulási képesség"
+        ],
+        "competencies": [
+          {
+            "name": "Precizitás",
+            "description": "A hegesztési varratot pontosan, egyenletesen és a technológiai előírásoknak megfelelően végzi.",
+            "example": "Acélszerkezet összehegesztésekor minden varratnál megtartja az előírt szöget, sebességet és hőmérsékletet."
+          },
+          {
+            "name": "Minőségtudatosság",
+            "description": "A kész munka ellenőrzését komolyan veszi, a közel megfelelő varratot sem fogadja el.",
+            "example": "Minden kész csomópontnál ellenőrzi a varrat tömörségét, mielőtt továbbengedné a terméket."
+          },
+          {
+            "name": "Tanulási képesség",
+            "description": "Nyitott az új hegesztési technológiákra, és folyamatosan fejleszti magát.",
+            "example": "A robotizált ívhegesztés megjelenésekor elvégzi a szükséges képzést, majd betanítja kollégáit."
+          }
+        ]
+      },
+      {
+        "icon": "Wrench",
+        "from": "Autószerelő",
+        "steps": [
+          "Autószerelő",
+          "EV & hibrid szakértő",
+          "Műhelyvezető"
+        ],
+        "motivation": "Az elektromos forradalom az autószerelőket a legkeresettebb és legjobban fizetett szakemberek közé emelte.",
+        "skills": [
+          "Műszaki érzék",
+          "Problémamegoldás",
+          "Precizitás"
+        ],
+        "competencies": [
+          {
+            "name": "Műszaki érzék",
+            "description": "A jármű viselkedéséből és hangjából következtet a hiba típusára.",
+            "example": "Az ügyfél által említett kattogó hang alapján már a diagnosztika előtt a starter hibájára gyanakszik."
+          },
+          {
+            "name": "Problémamegoldás",
+            "description": "Összetett járműhibákat logikai lépésekkel azonosít.",
+            "example": "Hibakód nélküli motorhibánál módszeresen kizárja a lehetséges okokat."
+          },
+          {
+            "name": "Precizitás",
+            "description": "Minden műveletet a gyári előírások szerint végez.",
+            "example": "Kerékcsere után minden csavart nyomatékkulccsal húz meg az előírt értékre."
+          }
+        ]
+      },
+      {
+        "icon": "Scissors",
+        "from": "Fodrász",
+        "steps": [
+          "Fodrász",
+          "Mester-fodrász & oktató",
+          "Saját szalon"
+        ],
+        "motivation": "Egy jó fodrász több mint hajat vág – bizalmat épít, és emberek önbizalmát erősíti napról napra.",
+        "skills": [
+          "Ügyfélorientáltság",
+          "Kézügyesség",
+          "Empátia"
+        ],
+        "competencies": [
+          {
+            "name": "Ügyfélorientáltság",
+            "description": "Megérti az ügyfél igényeit, félelmeit és elvárásait.",
+            "example": "Bizonytalan ügyfél esetén referenciaképeket mutat és részletesen átbeszéli a lehetőségeket."
+          },
+          {
+            "name": "Kézügyesség",
+            "description": "Képes milliméterpontosan és esztétikusan kialakítani a kívánt formát.",
+            "example": "Pixie frizura vágásakor mindkét oldal szimmetriájára kiemelten figyel."
+          },
+          {
+            "name": "Empátia",
+            "description": "Érzékeli az ügyfél hangulatát és ehhez igazítja a kommunikációját.",
+            "example": "Nehéz élethelyzetben lévő ügyféllel csendesebb, támogató légkört teremt."
+          }
+        ]
+      },
+      {
+        "icon": "Wheat",
+        "from": "Pék",
+        "steps": [
+          "Pék",
+          "Kézműves pék",
+          "Saját pékség"
+        ],
+        "motivation": "A kovász és a kreativitás kombinációja életre szóló mesterséget jelent – a jó pék termékei reggeltől estig emberek napját indítják el.",
+        "skills": [
+          "Kreativitás",
+          "Minőségtudatosság",
+          "Időgazdálkodás"
+        ],
+        "competencies": [
+          {
+            "name": "Kreativitás",
+            "description": "Saját ötletekkel gazdagítja a kínálatot.",
+            "example": "Egyedi kovászos-termékcsaládot fejleszt, amely megkülönbözteti a pékséget."
+          },
+          {
+            "name": "Minőségtudatosság",
+            "description": "Csak kifogástalan minőségű terméket ad ki a kezéből.",
+            "example": "A túlsütött cipót nem értékesíti, hanem újrasüti az adagot."
+          },
+          {
+            "name": "Időgazdálkodás",
+            "description": "Több párhuzamos folyamatot hangol össze precízen.",
+            "example": "Kelesztést, sütést és formázást egyszerre koordinál a reggeli nyitás előtt."
+          }
+        ]
+      },
+      {
+        "icon": "Cake",
+        "from": "Cukrász",
+        "steps": [
+          "Cukrász",
+          "Mestercukrász",
+          "Saját cukrászda / márka"
+        ],
+        "motivation": "A cukrászatban a tudomány és a művészet találkozik – egy jó cukrász alkotásai emberek legemlékezetesebb pillanatait ékesítik.",
+        "skills": [
+          "Precizitás",
+          "Kreativitás",
+          "Esztétikai érzék"
+        ],
+        "competencies": [
+          {
+            "name": "Precizitás",
+            "description": "Pontosan mér, időzít és figyeli a hőmérsékletet.",
+            "example": "Fondant készítésénél grammra és fokra pontosan követi az előírásokat."
+          },
+          {
+            "name": "Kreativitás",
+            "description": "Egyedi desszerteket és tortakompozíciókat alkot.",
+            "example": "A megrendelő történetéből inspirálódva készít személyre szabott esküvői tortát."
+          },
+          {
+            "name": "Esztétikai érzék",
+            "description": "A megjelenést ugyanolyan fontosnak tartja, mint az ízt.",
+            "example": "A torta színeit, arányait és díszítését tudatosan tervezi meg."
+          }
+        ]
+      },
+      {
+        "icon": "Sparkles",
+        "from": "Kozmetikus",
+        "steps": [
+          "Kozmetikus",
+          "Speciális területi szakértő",
+          "Saját stúdió"
+        ],
+        "motivation": "A bőrápolástól az egyedi szépségprotokollokig: aki szeret emberekkel foglalkozni és folyamatosan fejlődni, a saját stúdió a következő lépés.",
+        "skills": [
+          "Empátia",
+          "Kézügyesség",
+          "Szakmai kommunikáció"
+        ],
+        "competencies": [
+          {
+            "name": "Empátia",
+            "description": "Biztonságos és elfogadó légkört teremt az ügyfél számára.",
+            "example": "Érzékeny bőrproblémával érkező vendéget először meghallgat és megnyugtat."
+          },
+          {
+            "name": "Kézügyesség",
+            "description": "Finom, precíz mozdulatokkal dolgozik.",
+            "example": "Arcmasszázs során a bőrtípushoz igazítja a nyomást és a technikát."
+          },
+          {
+            "name": "Szakmai kommunikáció",
+            "description": "Érthetően és szakmailag pontosan kommunikál.",
+            "example": "A kezelés után részletes otthoni bőrápolási útmutatót ad."
+          }
+        ]
+      },
+      {
+        "icon": "Settings2",
+        "from": "Gépésztechnikus",
+        "steps": [
+          "Gépésztechnikus",
+          "CNC / robotikai specialista",
+          "Termelési vezető"
+        ],
+        "motivation": "Az ipar 4.0 forradalma a gépésztechnikust robotikai specialistává és gyártásoptimalizálóvá teszi – a jövő gyárainak kulcsfigurája.",
+        "skills": [
+          "Digitális kompetencia",
+          "Kritikai gondolkodás",
+          "Precizitás"
+        ],
+        "competencies": [
+          {
+            "name": "Digitális kompetencia",
+            "description": "Magabiztosan használ CNC és gyártástámogató rendszereket.",
+            "example": "CNC programhibát azonosít és javít a szoftverfelületen."
+          },
+          {
+            "name": "Kritikai gondolkodás",
+            "description": "Elemzi a folyamatokat és fejlesztési lehetőségeket keres.",
+            "example": "Gyártási szűk keresztmetszetet azonosít és optimalizálási javaslatot tesz."
+          },
+          {
+            "name": "Precizitás",
+            "description": "Pontosan kezeli a gépbeállításokat és méréseket.",
+            "example": "Sorozatgyártás előtt minden paramétert dokumentáltan ellenőriz."
+          }
+        ]
+      },
+      {
+        "icon": "Package",
+        "from": "Logisztikai munkatárs",
+        "steps": [
+          "Logisztikai munkatárs",
+          "Műszakvezető",
+          "Logisztikai vezető"
+        ],
+        "motivation": "Minden termék, amit megrendelsz, átmegy egy logisztikai szakemberen – a jó szervezőből csapatvezető, majd menedzser lehet.",
+        "skills": [
+          "Szervezőkészség",
+          "Együttműködés",
+          "Digitális kompetencia"
+        ],
+        "competencies": [
+          {
+            "name": "Szervezőkészség",
+            "description": "Átlátja és rendszerezi a logisztikai folyamatokat.",
+            "example": "Nagy rendeléshullám előtt optimalizálja a raktári zónákat."
+          },
+          {
+            "name": "Együttműködés",
+            "description": "Hatékonyan dolgozik együtt kollégákkal és partnerekkel.",
+            "example": "Szállítási késés esetén összehangolja a fuvarozó, a raktár és az iroda munkáját."
+          },
+          {
+            "name": "Digitális kompetencia",
+            "description": "Magabiztosan használ raktárkezelő rendszereket.",
+            "example": "Vonalkódolvasóval és digitális nyilvántartással kezeli a készleteket."
+          }
+        ]
+      },
+      {
+        "icon": "Video",
+        "from": "Tartalomkészítő",
+        "steps": [
+          "Tartalomkészítő / influenszer",
+          "Professzionális digitális alkotó",
+          "Saját márka / kreatív vállalkozás"
+        ],
+        "motivation": "A valódi digitális alkotó nem a követők számát hajtja, hanem értéket teremt: kreativitás, videókészítés, storytelling, marketing és vállalkozói szemlélet – ez a digitális kézművesség.",
+        "skills": [
+          "Kreativitás",
+          "Kommunikáció",
+          "Digitális kompetencia"
+        ],
+        "competencies": [
+          {
+            "name": "Kreativitás",
+            "description": "Egyedi és figyelemfelkeltő tartalmakat készít.",
+            "example": "Saját formátumot fejleszt egy egészséges életmódot népszerűsítő csatornán."
+          },
+          {
+            "name": "Kommunikáció",
+            "description": "Tudatosan és hitelesen szólítja meg a közönségét.",
+            "example": "Bonyolult szoftverhasználatot mutat be egyszerű és érthető videóban."
+          },
+          {
+            "name": "Digitális kompetencia",
+            "description": "Magabiztosan használ digitális tartalomgyártó eszközöket.",
+            "example": "Videót vág, feliratoz, bélyegképet készít és optimalizálja a publikálást."
+          }
+        ]
+      }
+    ]
+  }
+}

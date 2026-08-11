@@ -1,0 +1,81 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "twosides",
+  "title": "Két oldal",
+  "data": {
+    "ketOldalData": [
+      {
+        "zTitle": "Rugalmasság",
+        "zText": "A Z generáció rugalmas munkaidőt és munkavégzési helyszínt vár. Számukra a teljesítmény fontosabb, mint a merev 9–17 óra beosztás.",
+        "employerTitle": "Megbízhatóság",
+        "employerText": "A munkáltató kiszámítható munkavégzést vár. A határidők, a jelenlét és a vállalások betartása az együttműködés alapja."
+      },
+      {
+        "zTitle": "Rendszeres visszajelzés",
+        "zText": "A Z generáció folyamatos, valós idejű visszajelzést vár – nem elégszik meg az éves értékeléssel. Tudni akarják, jó irányba haladnak-e.",
+        "employerTitle": "Nyitottság a visszajelzésre",
+        "employerText": "A munkáltató azt várja, hogy a visszajelzést ne védekezéssel, hanem nyitottsággal fogadja a munkavállaló, és ténylegesen változtasson."
+      },
+      {
+        "zTitle": "Értelmes, motiváló munka",
+        "zText": "A Z generáció fontosnak tartja, hogy munkájának értelme és hatása legyen. Nem csak a fizetés, hanem a cél is motivál.",
+        "employerTitle": "Felelősségteljes munkavégzés",
+        "employerText": "A munkáltató azt várja, hogy az értelmes munkát ne csak igényeljék, hanem megbízható, minőségi teljesítménnyel igazolják is."
+      },
+      {
+        "zTitle": "Gyors fejlődési lehetőség",
+        "zText": "A Z generáció gyors szakmai előrelépést és folyamatos tanulási lehetőséget vár. A stagnálással nem tudnak azonosulni.",
+        "employerTitle": "Tanulási hajlandóság és kitartás",
+        "employerText": "A munkáltató azt várja, hogy a fejlődési vágy kitartással és rendszeres tanulással párosuljon – ne csak az igény, hanem az erőfeszítés is meglegyen."
+      },
+      {
+        "zTitle": "Munka–magánélet egyensúlya",
+        "zText": "A Z generáció számára a pihenés, a szabadidő és a személyes élet védelme ugyanolyan fontos, mint a karrier.",
+        "employerTitle": "Munkaidő és vállalások betartása",
+        "employerText": "A munkáltató azt várja, hogy a munkavállaló a munkaidőre és a vállalt feladataira koncentráljon, és azokat rendesen teljesítse."
+      },
+      {
+        "zTitle": "Modern digitális környezet",
+        "zText": "A Z generáció elvárja a korszerű eszközöket, a hatékony digitális munkafolyamatokat és a naprakész technológiát.",
+        "employerTitle": "Tudatos és felelős digitális viselkedés",
+        "employerText": "A munkáltató azt várja, hogy a munkavállaló a digitális eszközöket szakszerűen, adatbiztonsági és etikai elvárásoknak megfelelően használja."
+      },
+      {
+        "zTitle": "Önállóság és bizalom",
+        "zText": "A Z generáció azt várja, hogy a munkáltatója bízzon bennük, és hagyjon teret az önálló döntéseknek.",
+        "employerTitle": "Felelősségvállalás",
+        "employerText": "A munkáltató azt várja, hogy az önállóság felelősséggel járjon: a munkavállaló a döntések következményeit is vállalja."
+      },
+      {
+        "zTitle": "Nyílt kommunikáció",
+        "zText": "A Z generáció közvetlen, őszinte és transzparens kommunikációt vár – hierarchikus akadályok nélkül.",
+        "employerTitle": "Professzionális és tiszteletteljes kommunikáció",
+        "employerText": "A munkáltató elvárja, hogy a nyíltság ne menjen a szakmaiság és a kölcsönös tisztelet rovására."
+      },
+      {
+        "zTitle": "Elismerés és megbecsülés",
+        "zText": "A Z generáció rendszeres elismerést vár a jó munkájáért – nemcsak pénzben, hanem szóban és figyelem formájában is.",
+        "employerTitle": "Minőségi teljesítmény és elkötelezettség",
+        "employerText": "A munkáltató azt várja, hogy az elismerés kiérdemelt legyen: következetes, minőségi munkával párosuljon."
+      },
+      {
+        "zTitle": "Jó munkahelyi közösség",
+        "zText": "A Z generáció összetartó, támogató munkahelyi közösséget vár, ahol az együttműködés és az emberi kapcsolatok is értékek.",
+        "employerTitle": "Együttműködés és csapatmunka",
+        "employerText": "A munkáltató azt várja, hogy a közösség iránti igény aktív részvétellel párosuljon: a munkavállaló maga is hozzájáruljon a csapat kohéziójához."
+      },
+      {
+        "zTitle": "Gyors előrelépés",
+        "zText": "A Z generáció elvárja, hogy rövid idő alatt is látható karrierlehetőségei legyenek – nem szívesen vár évekig.",
+        "employerTitle": "Teljesítmény, tapasztalatszerzés és türelem",
+        "employerText": "A munkáltató azt várja, hogy az előrelépés iránti igény tapasztalatszerzéssel és türelemmel párosuljon – az előléptetés teljesítményen alapul."
+      },
+      {
+        "zTitle": "Biztonságos, jövőálló munkahely",
+        "zText": "A Z generáció stabil, fenntartható munkahelyet vár, ahol hosszú távon is biztonságban érezheti magát.",
+        "employerTitle": "Alkalmazkodóképesség és folyamatos fejlődés",
+        "employerText": "A munkáltató azt várja, hogy a stabilitás igénye aktív alkalmazkodással és önfejlesztéssel párosuljon – a munkaerőpiac folyamatosan változik."
+      }
+    ]
+  }
+}

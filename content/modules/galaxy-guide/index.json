@@ -1,0 +1,25 @@
+{
+  "schema": "utiterv-module-v5",
+  "id": "bonus",
+  "slug": "galaxy-guide",
+  "title": "Bónusz tudástár",
+  "code": "galaxy<br>GUIDE",
+  "className": "gg",
+  "icon": "GG_BIG_ICON.svg",
+  "thin": "GG_BIG_ICON_thin.svg",
+  "lead": "Útikalauz a karrier-galaxishoz",
+  "time": 12,
+  "sections": [
+    {
+      "id": "materials",
+      "title": "Tudástár",
+      "file": "materials.json"
+    },
+    {
+      "id": "videos",
+      "title": "Videók",
+      "file": "videos.json"
+    }
+  ],
+  "heroIconMode": "auto"
+}

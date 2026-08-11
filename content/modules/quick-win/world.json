@@ -1,0 +1,303 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "world",
+  "title": "A munka világa",
+  "data": {
+    "workWorldCards": [
+      {
+        "title": "Hogyan működik egy munkahely?",
+        "content": "Minden cég egy kis társadalom. Vannak írott és íratlan szabályok, hierarchia és saját szóhasználat. Az első hetekben figyelj és tanulj, minél hamarabb átlátod a rendszert, annál hatékonyabb lehetsz."
+      },
+      {
+        "title": "Kommunikáció a digitális világban",
+        "content": "A munkahelyi chat, e-mail és online meeting ugyanolyan fontos, mint a személyes beszélgetések. Mindig kommunikálj tiszteletteljesen, válaszolj időben, és ha valami nem világos, inkább kérdezz rá, mint hogy feltételezésekre építs."
+      },
+      {
+        "title": "Szervezeti kultúra",
+        "content": "Figyeld meg, hogyan kommunikálnak, működnek együtt és oldanak meg helyzeteket a munkahelyeden. Nem mindegy, hogy startup lazaság vagy vállalati szigor van. Alkalmazkodj, de tartsd meg önmagad."
+      },
+      {
+        "title": "Munka és magánélet egyensúlya",
+        "content": "A teljesítmény fontos, de a hosszú távú sikerhez szükség van pihenésre is. Tanuld meg kezelni az idődet, húzz egészséges határokat, és merj segítséget kérni, ha túlterheltnek érzed magad."
+      },
+      {
+        "title": "Kihez fordulj problémával?",
+        "content": "Szakmai kérdésekben a mentorhoz vagy közvetlen vezetőhöz, HR és adminisztrációs ügyekben a HR-hez, személyes konfliktus esetén egy bizalmi személyhez fordulj. Tudd előre, ki a mentorod és a közvetlen felettesed."
+      },
+      {
+        "title": "Mit várhatnak el egy pályakezdőtől?",
+        "content": "Pontosságot, megbízhatóságot, tanulási hajlandóságot és együttműködést. Nem azt várják el, hogy mindent tudj, hanem hogy akarj fejlődni és vállalj felelősséget."
+      },
+      {
+        "title": "Íratlan szabályok – a nem látható hierarchia",
+        "content": "Minden cégnél vannak olyan munkatársak, akikhez mindenki tanácsért fordul. Figyeld meg a szokásokat, kommunikációs mintákat és viselkedési normákat, mert ezeket ritkán írják le, mégis elvárják."
+      },
+      {
+        "title": "Feladatok és felelősség",
+        "content": "Legyen világos, mi tartozik a munkakörödbe és miért vagy felelős. Ha valami nem egyértelmű, kérdezz rá. Ez nem gyengeség, hanem tudatosság."
+      },
+      {
+        "title": "Határidők és prioritások",
+        "content": "Tanuld meg megkülönböztetni a sürgős és a fontos feladatokat. Ha több feladatot kapsz egyszerre, kérdezd meg a sorrendet. A jó priorizálás csökkenti a hibalehetőségeket."
+      },
+      {
+        "title": "Csapatmunka",
+        "content": "A munkahelyi siker gyakran közös eredmény. Légy megbízható csapattag: tartsd a határidőket, jelezd, ha elakadtál, és segíts másoknak, ha szükségük van rá."
+      },
+      {
+        "title": "Építs kapcsolatokat!",
+        "content": "Kérj és fogadj visszajelzést, mert ebből tudsz a leggyorsabban fejlődni. Ha kritikát kapsz, először értsd meg, és csak utána reagálj."
+      },
+      {
+        "title": "Fejlődési lehetőségek",
+        "content": "Keresd, mit tanulhatsz, miben fejlődhetsz, és merre léphetsz tovább. Egy szakma nem végállomás, hanem egy fejlődési út. Kérdezd meg a vezetődet, mi lehet a következő lépés."
+      }
+    ],
+    "workWorldQuiz": [
+      {
+        "situation": "Az első hetedben a kollégád azt mondja: „Itt nálunk nem szólunk szóba a főnöknek, ha probléma van – majd megoldódik magától.” Mit csinálsz?",
+        "options": [
+          {
+            "text": "Hallgatok és alkalmazkodom – biztosan tudják, mi a legjobb.",
+            "isOptimal": false,
+            "feedback": "A „majd megoldódik magától” szemlélet a problémákat elhúzza és eszkalálja. Figyeld az íratlan szabályokat, de ne add fel a kommunikáció elvét."
+          },
+          {
+            "text": "Megfigyelem, hogyan oldják meg a problémákat általában, de ha valami fontos, én szólok a főnöknek.",
+            "isOptimal": true,
+            "feedback": "Helyes! Az íratlan szabályokat érdemes megérteni, de az egyenes kommunikáció hosszú távon mindig jobban működik. Tapintatosan, de bátran jelezz."
+          },
+          {
+            "text": "Azonnal elmegyek a főnökhöz és megmondom, hogy a kollégám rosszat tanácsolt.",
+            "isOptimal": false,
+            "feedback": "Ez konfliktusos és felesleges. Az első hetekben inkább figyelj és értsd meg a kultúrát, mielőtt „javítanád” a csapatot."
+          }
+        ]
+      },
+      {
+        "situation": "Kettő hete dolgozol, és nem egyértelmű számodra, mi tartozik pontosan a munkakörödbe. Mit teszel?",
+        "options": [
+          {
+            "text": "Megkérem a közvetlen felettesem, hogy tisztázzuk a feladatkörömet egy rövid megbeszélésen.",
+            "isOptimal": true,
+            "feedback": "Pontosan jó! Egy rövid egyeztetés eloszlatja a bizonytalanságot, és megmutatja, hogy figyelsz a minőségre. „Meg tudnánk nézni együtt, mi tartozik az én felelősségi körömbe?” – így szólj."
+          },
+          {
+            "text": "Bármit megcsinálok, amit kérnek – pályakezdőként nem illendő kérdezgetni.",
+            "isOptimal": false,
+            "feedback": "A bizonytalan munkaköri határ félreértésekhez és felesleges munkához vezet. A kérdezés teljesen természetes, hanem szükséges lépés."
+          },
+          {
+            "text": "Megkérdezem az egyik régi kolléga véleményét a saját feladataimról.",
+            "isOptimal": false,
+            "feedback": "A kollégák véleménye hasznos, de a munkakört a vezető tudja pontosan meghatározni. Egyezz a főnököddel."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd és az egyik kolléga egymásnak ellentmondó utasítást adott ugyanarról a feladatról. Mit csinálsz?",
+        "options": [
+          {
+            "text": "A kolléga utasítását követem – ő ismeri jobban a folyamatokat.",
+            "isOptimal": false,
+            "feedback": "Ha van konfliktus a vezető és egy kolléga utasítása között, a vezető döntése az irányadó. Jelezd a helyzetet."
+          },
+          {
+            "text": "A saját megítélésem szerint döntök, és remélem, jól választok.",
+            "isOptimal": false,
+            "feedback": "Saját döntéssel kockáztatod, hogy az egyiket megsérti. Inkább kérd a tisztázást."
+          },
+          {
+            "text": "Visszamegyek a főnökhöz, jelzem a helyzetet, és megkérem, hogy pontosítson.",
+            "isOptimal": true,
+            "feedback": "Kiváló megoldás! „X kolléga azt mondta Y-t, de te Z-t. Melyiket kövessem?” – ez egyértelmű, profi kérdés."
+          }
+        ]
+      },
+      {
+        "situation": "Tíz perce ülsz a meetingen és nem érted, miről van szó. Mit teszel?",
+        "options": [
+          {
+            "text": "Megszakítom a meetinget és azonnal megkérdezem.",
+            "isOptimal": false,
+            "feedback": "A meeting közben való közbeszólás zavaró lehet. Jegyezd le a kérdésedet, és a meeting után kérdezz."
+          },
+          {
+            "text": "Figyelem és jegyzetelek – a meeting után megkérdezem a kollégámat vagy felettesem a nem értett részekről.",
+            "isOptimal": true,
+            "feedback": "Helyes! Aktív figyelem és meeting utáni pontosítás – így tanulsz legtöbbet és nem zavarod meg a többi résztvevőt."
+          },
+          {
+            "text": "Kicsúszom és felteszem a kérdést a szervezőnek privátban a meeting után.",
+            "isOptimal": false,
+            "feedback": "Ha fontos, megéri a meetingen maradni, de valóban a meeting utáni kérdezés a jobb módszer, mint a közbeszólás."
+          }
+        ]
+      },
+      {
+        "situation": "Próbaidőd első hónapjában azt veszed észre, hogy a légkör és a csapat nem illik hozzád. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Próbálom megérteni, mi konkrétan zavar, és gondolkodom, hogy ez változhat-e az idő múlásával.",
+            "isOptimal": true,
+            "feedback": "Okos hozzáállás! Egy-két konkrét probléma (Például kommunikáció stílusa) javulhat – a rendszerszintű, értékbeli eltérés viszont ritkán. Figyelj és mérlegeld."
+          },
+          {
+            "text": "Azonnal felmondok – az első benyomás mindig helyes.",
+            "isOptimal": false,
+            "feedback": "Egy hónap alatt még nem ismersz meg egy munkahelyet. Adj magadnak és a helynek esélyt – 3 hónap a próbaidő oka is részben ez."
+          },
+          {
+            "text": "Nem szólok semmit, csak várom, hogy elmúljon – mindenütt ugyanilyen.",
+            "isOptimal": false,
+            "feedback": "„Mindenütt ugyanilyen” egyszerűen nem igaz. Ha tartósan rosszul érzed magad, az jel, nem kivétel. Gondold át nyíltan."
+          }
+        ]
+      },
+      {
+        "situation": "Rájössz, hogy egy régi kolléga más módszerrel csinálja a munkát, mint ahogy neked betanították. Mit teszel?",
+        "options": [
+          {
+            "text": "Azonnal jelzem a főnöknek, hogy a kolléga nem úgy csinálja, ahogy kellene.",
+            "isOptimal": false,
+            "feedback": "Pályakezdőként ne „feljelentős” legyél – először érts meg, miért van eltérés. Lehet, hogy te vagy az újabb, nem a helytelen."
+          },
+          {
+            "text": "Nem foglalkozom vele, én a betanított módszert követem.",
+            "isOptimal": false,
+            "feedback": "Ez rendben van rövid távon, de a kíváncsiság és a jobb megoldások keresése előnyöd lesz. Kérdezd meg a kolléga logikáját."
+          },
+          {
+            "text": "Megkérdezem a kolléga módszerét és okát – lehet, hogy van oka vagy jobb megközelítés.",
+            "isOptimal": true,
+            "feedback": "Ez a legjobb megközelítés! Tanulhatsz, és ha valóban jobb módszer, azt a megfelelő csatornán javasolhatod."
+          }
+        ]
+      },
+      {
+        "situation": "Reggel betegnek érzed magad, de azt gondolod, „majd elmúlik”. Mit teszel a munkával kapcsolatban?",
+        "options": [
+          {
+            "text": "Értesítem a munkahelyemet még a munkaidő kezdete előtt, és elmegyek orvoshoz.",
+            "isOptimal": true,
+            "feedback": "Ez a helyes eljárás. Az időben értesítés és az orvosi igazolás szerzése a te felelősséged – ez is professzionális viselkedés."
+          },
+          {
+            "text": "Elmegyek munkába – nem akarom, hogy a pályakezdő rossz benyomást keltsen.",
+            "isOptimal": false,
+            "feedback": "Betegen menni különösen kékgalléros környezetben kockázat (magadra és másokra). Értesítsd a munkahelyed és maradj otthon, ha nem vagy képes dolgozni."
+          },
+          {
+            "text": "Megvárom, hogy elmúljon, és csak akkor szólok, ha tényleg nem tudok bemenni.",
+            "isOptimal": false,
+            "feedback": "Minél korábban szólsz, annál könnyebb a munkahelyednek szervezni. Az időben jelzés megmutatja, hogy megbízható vagy."
+          }
+        ]
+      },
+      {
+        "situation": "A főnököd visszajelzést ad, amiből kiderül, hogy nem csináltad jól az egyik feladatot. Hogyan reagálsz?",
+        "options": [
+          {
+            "text": "Azonnal védekezem és elmagyarázom, miért csináltam úgy.",
+            "isOptimal": false,
+            "feedback": "A védekezés lezárja a tanulás lehetőségét. Először hallgasd meg az egész visszajelzést, aztán kérdezz – ne magyarázkodj."
+          },
+          {
+            "text": "Nem szólok semmit, és remélem, hogy majd eltűnik a probléma.",
+            "isOptimal": false,
+            "feedback": "A csend nem megoldás. Ha nem értesz valamit a visszajelzésből, kérdezz rá – különben ugyanazt a hibát ismétled meg."
+          },
+          {
+            "text": "Meghallgatom, megköszönöm, megkérdezem, hogyan csináljam jobban legközelebb.",
+            "isOptimal": true,
+            "feedback": "Tökéletes reakció! A visszajelzés ingyenes fejlesztés. „Köszönöm. Mit csináljak másképp legközelebb?” – ez a leghatékonyabb válasz."
+          }
+        ]
+      },
+      {
+        "situation": "Egy határidőre hirtelen kiderül, hogy nem fogod tudni befejezni időre a feladatot. Mit teszel?",
+        "options": [
+          {
+            "text": "Megvárom a határidőt és akkor közlöm, hogy nem sikerült – legalább megpróbáltam.",
+            "isOptimal": false,
+            "feedback": "Ez a legrosszabb opció. A vezető elveszíti az esélyt, hogy segítsen vagy átrendezze a fontossági sorrendokat. Az előre jelzés elengedhetetlen."
+          },
+          {
+            "text": "Azonnal jelzem a főnökömnek, meddig tudom befejezni, és megkérdezem, mit tegyek.",
+            "isOptimal": true,
+            "feedback": "Helyes! Az időben jelzett csúszás kezelhető, az utólag kiderülő nem. „Nem fogom tudni befejezni X-ig – mi a legjobb lépés?” – így szólj."
+          },
+          {
+            "text": "Megkérem az egyik kolléga, hogy fejezze be helyettem és ne szóljon senkinek.",
+            "isOptimal": false,
+            "feedback": "Ez nem megoldás – a felelősség nem szűnik meg azzal, hogy valaki mást kérsz fel. Jelezd a helyzetet a főnöködnek."
+          }
+        ]
+      },
+      {
+        "situation": "Végre kapsz egy bonyolultabb, önálló feladatot. Elkezded, de hamar elakadsz. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Jelzem a főnökömnek vagy a mentornak, hogy elakadtam, megmutatom, meddig jutottam, és kérdezek.",
+            "isOptimal": true,
+            "feedback": "Pontosan helyes! Megmutatja, hogy megpróbáltad, és segítséget kérsz a szükséges ponton. Így is tanulsz, és a feladat is halad."
+          },
+          {
+            "text": "Küzdök tovább egyedül – nem akarom, hogy azt higgyék, nem tudom megcsinálni.",
+            "isOptimal": false,
+            "feedback": "Az önálló kísérlet értékes, de ha órák óta elakadtál, a segítségkérés hatékonyabb, és nem szégyen."
+          },
+          {
+            "text": "Feladom a feladatot és visszaadom a főnöknek, mondván, hogy túl nehéz.",
+            "isOptimal": false,
+            "feedback": "Egy feladat visszaadása magyarázat nélkül nem mutat erőfeszítést. Inkább kérd a segítséget és folytasd."
+          }
+        ]
+      },
+      {
+        "situation": "Észreveszed, hogy egy folyamatot hatékonyabban lehetne csinálni, mint ahogy most csinálják. Mit teszel?",
+        "options": [
+          {
+            "text": "Azonnal elkezdek a saját fejem szerint csinálni, nem mondom el senkinek.",
+            "isOptimal": false,
+            "feedback": "Egyoldalú változtatás a csapat tudta nélkül konfliktusos. A javaslat jobb – tedd meg rendesen."
+          },
+          {
+            "text": "Megvárom, amíg tapasztaltabb leszek – pályakezdőként nem a dolgom javaslatot tenni.",
+            "isOptimal": false,
+            "feedback": "A friss szemnek értéke van! Az ötleteidet el lehet mondani finoman, például egy team meeting után, megfelelő tónusban."
+          },
+          {
+            "text": "Megemlítem a javaslatom a főnöknek vagy egy csapatmegbeszélésen, és megkérdezem, mit gondolnak.",
+            "isOptimal": true,
+            "feedback": "Helyes! A jó ötletek értékesek – a kulcs az, hogyan mondod el. Kérdezd meg a véleményüket, ne add elő parancsként."
+          }
+        ]
+      },
+      {
+        "situation": "Első munkahelyeden megismerkedsz egy kolléga informális hálózatával – azokkal, akik „mindent tudnak”, bár nincs magas beosztásuk. Mit csinálsz?",
+        "options": [
+          {
+            "text": "Nem foglalkozom velük – csak a főnökömmel tartok kapcsolatot.",
+            "isOptimal": false,
+            "feedback": "Az informális hálózat kulcsfontosságú. Ezek az emberek gyors tájékoztatást, segítséget és bevezetést nyújtanak, amit a főnök nem mindig tud megadni."
+          },
+          {
+            "text": "Megismerkedem velük, udvarias és természetes kapcsolatot ápolok – tanulok tőlük.",
+            "isOptimal": true,
+            "feedback": "Bravó! Az informális hálózat az egyik legjobb tanulási forrás. Természetesen és becsületesen ápold a kapcsolatot."
+          },
+          {
+            "text": "Kihasználom a kapcsolataikat, hogy előnyhöz jussak a munkahelyen.",
+            "isOptimal": false,
+            "feedback": "A kihasználás hamar kiderül és bizalomvesztéshez vezet. Az egyenrangú, tiszteletteljes kapcsolat sokkal értékesebb."
+          }
+        ]
+      }
+    ],
+    "workWorldClosing": {
+      "front": "A munka világa tanulható",
+      "back": "Senki sem születik kész munkavállalónak. A munkahelyi szabályok, kapcsolatok és működési elvek megismerése ugyanolyan fontos, mint a szakmai tudás. Minél jobban érted a munka világát, annál magabiztosabban tudsz benne eligazodni."
+    }
+  }
+}

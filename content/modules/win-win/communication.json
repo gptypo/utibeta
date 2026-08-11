@@ -1,0 +1,311 @@
+{
+  "schema": "utiterv-section-v5",
+  "id": "communication",
+  "title": "Kommunikáció",
+  "data": {
+    "communicationFlips": [
+      {
+        "amateur": "Nem tudom.",
+        "pro": "Ennek utánanézek, és visszajelzek neked."
+      },
+      {
+        "amateur": "Nem értem.",
+        "pro": "Meg tudnád mutatni még egyszer, lépésről lépésre?"
+      },
+      {
+        "amateur": "Nem az én dolgom.",
+        "pro": "Ez kicsit kívül esik a feladatkörömön, de megnézem, ki tud ebben segíteni."
+      },
+      {
+        "amateur": "Késni fogok.",
+        "pro": "Sajnálom, kb. X percet késni fogok. Amint megérkezem, bepótolom a lemaradásomat."
+      },
+      {
+        "amateur": "Ez így van, kész.",
+        "pro": "Megértem, hogyan látod. Szerintem erre lenne egy lehetséges megoldás – mit gondolsz?"
+      },
+      {
+        "amateur": "Az előző főnököm mindig ezt csinálta.",
+        "pro": "Az előző munkahelyemen másképp ment – meg tudod mutatni, hogyan csináljátok itt?"
+      },
+      {
+        "amateur": "Nem az én hibám volt.",
+        "pro": "A folyamatban volt egy félreértés – legközelebb így kerüljük el."
+      },
+      {
+        "amateur": "Majd megcsinálom valamikor.",
+        "pro": "Mikor kellene készen lennie? Beütemezem, és értesítlek, ha kész."
+      },
+      {
+        "amateur": "Ez a határidő lehetetlen.",
+        "pro": "Megnézem, mi a legfontosabb rész. Ha nem tartható a teljes feladat, jelzem előre, és megbeszéljük a lehetőségeket."
+      },
+      {
+        "amateur": "Senki nem mondta el, hogy ezt hogyan kell.",
+        "pro": "Tudnád megmutatni, hogyan csináljátok általában? Szívesen tanulom a helyi módszert."
+      },
+      {
+        "amateur": "Miért én csináljam?",
+        "pro": "Szívesen átveszem – szükségem van-e valamire hozzá, hogy jól elvégezzem?"
+      },
+      {
+        "amateur": "Ez teljesen fölösleges feladat.",
+        "pro": "Nem látom pontosan a célját – meg tudod mondani, mire számítasz, hogy a legjobb eredményt hozzam ki belőle?"
+      }
+    ],
+    "komunikációQuiz": [
+      {
+        "situation": "Az első héten úgy érzed, a munkaidőd rögzített, de te jobban tudnál teljesíteni rugalmasabb beosztással. Szólsz?",
+        "options": [
+          {
+            "text": "Megkérdezem: „Hogyan szokott ez működni nálatok? Van lehetőség rugalmasságra, ha a teljesítmény megvan?”",
+            "isOptimal": true,
+            "feedback": "Ez a kezdeményező, de tisztelettudó hozzáállás. Jelzed az igényedet, miközben elfogadod a cég kereteit. A válasz egyszerre képviseli azt, hogy a fiatal rugalmas munkavégzést szeretne – ahol és amikor a legjobb a teljesítménye., és figyelembe veszi, hogy a munkáltató kiszámítható, megbízható jelenlétet vár – különösen az első időszakban."
+          },
+          {
+            "text": "Nem szólok – majd ha beilleszkedem, akkor hozom fel.",
+            "isOptimal": false,
+            "feedback": "A várakozás érthető, de ha nem jelzed az igényedet, a vezető nem tud segíteni. Egy jól időzített kérdés teljesen természetes."
+          },
+          {
+            "text": "Azonnali rugalmasságot kérek – elvégre az eredmény számít, nem a jelenlét.",
+            "isOptimal": false,
+            "feedback": "Ez jogos elv, de az első hetekben még nem alapozhatsz erre. A bizalom előbb épül, mint a rugalmasság."
+          }
+        ],
+        "winWin": "Először mutasd meg, hogy megbízható vagy. Ha a teljesítményed látható, akkor elérkezett a pillanat megbeszélni a rugalmas lehetőségeket. A legtöbb munkáltató nyitott erre – ha az alap már rendben van."
+      },
+      {
+        "situation": "Egy hete dolgozol, és nem kaptál visszajelzést. Nem tudod, jól csinálod-e a munkádat.",
+        "options": [
+          {
+            "text": "Várok – majd szólnak, ha probléma van.",
+            "isOptimal": false,
+            "feedback": "A csend nem feltétlenül jelent jót. Ha nem kérdezed, előfordulhat, hogy észrevétlenül csúszik valami."
+          },
+          {
+            "text": "Jelzem, hogy ha nem kapok folyamatos visszajelzést, nem tudom hatékonyan végezni a munkám.",
+            "isOptimal": false,
+            "feedback": "Ez igaz, de ultimátumként hangzik. Inkább kérd a visszajelzést pozitívan, ne feltételként."
+          },
+          {
+            "text": "Megkérdezem: „Van 10 perced a héten átnézni velem, hogyan haladok? Szeretném tudni, jó irányban megyek-e.”",
+            "isOptimal": true,
+            "feedback": "Ez kezdeményező és professzionális. A visszajelzés kérése teljesen természetes – a fejlődési szándék jele. A válasz egyszerre képviseli azt, hogy a fiatal gyakori, konkrét visszajelzést szeretne – tudni akarja, hogyan áll., és figyelembe veszi, hogy a munkáltató önálló munkavégzést vár – a napi megerősítés nem mindig lehetséges."
+          }
+        ],
+        "winWin": "Kérd a visszajelzést – ne várd, hogy jöjjön. Egy rövid heti rövid egyeztetés kérése mutatja a fejlődési szándékot, és leveszi a terhet a vezető válláról is. Sok vezető értékeli, ha nem mindent nekik kell kezdeményezni."
+      },
+      {
+        "situation": "Úgy érzed, gyorsan tanulsz, és már több felelősséget szeretnél. De csak 3 hónapja vagy itt.",
+        "options": [
+          {
+            "text": "Nem szólok – majd idővel úgyis meglátják, mire vagyok képes.",
+            "isOptimal": false,
+            "feedback": "A láthatóság nem jön automatikusan. Ha nem jelzed az ambícióidat, senki nem fogja kitalálni."
+          },
+          {
+            "text": "Megkérdezem: „Mik azok a területek, ahol több felelősséget vállalhatnék? Mire lenne szükség, hogy ez megtörténjen?”",
+            "isOptimal": true,
+            "feedback": "Ez érett és célirányos kérdés. Megmutatja az ambíciódat, de a vezető kezébe adja a döntést, és konkrét fejlődési irányt is kapsz. A válasz egyszerre képviseli azt, hogy a fiatal gyors előrelépést és több önállóságot szeretne, mert úgy érzi, készen áll rá., és figyelembe veszi, hogy a munkáltató tapasztalatot és bizonyított, megbízható teljesítményt vár az előrelépés előtt."
+          },
+          {
+            "text": "Jelzem, hogy hamarabb szeretnék előrelépni, mint ahogy általában szokás.",
+            "isOptimal": false,
+            "feedback": "Az igény jogos, de a határidő kijelölése nélkül ez elvárásnak hangzik. Inkább kérdezd, mi szükséges az előrelépéshez."
+          }
+        ],
+        "winWin": "A fejlődési vágy értékes, és a legtöbb vezető örül neki. De az előrelépés alapja a bizalom, amit teljesítménnyel kell megalapozni. Kérdezz konkrétan: „Mit kellene elérnem ahhoz, hogy X irányba fejlődjek?” Ez egyértelmű célokat ad mindkét félnek."
+      },
+      {
+        "situation": "A vezető elvár valamit a munkaidőd után is (gyors válasz üzenetekre, sürgős feladat). Hogyan kezeled?",
+        "options": [
+          {
+            "text": "Megkérdezem: „Melyek azok a helyzetek, amikor elvárható a munkaidőn kívüli elérhetőség? Szeretném előre tudni, mire számítsak.”",
+            "isOptimal": true,
+            "feedback": "Ez a profi megközelítés. Nem zárkózol el, de tisztázod a kereteket – így mindkét fél tudja, mire számíthat. A válasz egyszerre képviseli azt, hogy a fiatal fontosnak tartja a munka és magánélet határát – az állandó elérhetőség nem fenntartható., és figyelembe veszi, hogy a munkáltató rugalmasságot vár sürgős helyzetekben – bizonyos esetekben elvárható a hozzájárulás."
+          },
+          {
+            "text": "Mindig elérhető vagyok – nem akarom azt a benyomást kelteni, hogy nem elkötelezett vagyok.",
+            "isOptimal": false,
+            "feedback": "Az állandó elérhetőség fenntarthatatlan és kiégéshez vezet. Határok nélkül nem tudsz hosszú távon teljesíteni."
+          },
+          {
+            "text": "Teljesen figyelmen kívül hagyom a munkaidőn kívüli üzeneteket – ez az én időm.",
+            "isOptimal": false,
+            "feedback": "Ez jogos elv, de ha soha nem reagálsz sürgős helyzetekben, az megbízhatatlannak tűnik. Fontos a kommunikáció."
+          }
+        ],
+        "winWin": "Az elvárások előzetes tisztázása megakadályozza a félreértéseket. Ha tudod, mikor számíthat rád a munkáltató, könnyebb tudatosan kezelni a saját határaidat. Az alkalmi rugalmasság nem a határok feladása – hanem a kölcsönös bizalom alapja."
+      },
+      {
+        "situation": "Egy fontos döntést chatben tárgyaltatok, de a vezető e-mailben dokumentálást vár. Szerinted a chat elég.",
+        "options": [
+          {
+            "text": "Nem küldöm el e-mailben – ha fontosnak érezte volna, ő mondta volna.",
+            "isOptimal": false,
+            "feedback": "A hallgatólagos elvárások félreértésekhez vezetnek. Ha az e-mail szokás, tartsd be – kérdezés nélkül."
+          },
+          {
+            "text": "e-mailben küldöm, még ha feleslegesnek is tartom – inkább így van nyom.",
+            "isOptimal": false,
+            "feedback": "Nem rossz megoldás, de ha nem érted a miértjét, hamar rutinszerűvé válik, és nem tanulsz belőle. Érdemes rákérdezni."
+          },
+          {
+            "text": "Megkérdezem: „Szokás nálatok e-mailben is összefoglalni az ilyen döntéseket, vagy a chat elég?”",
+            "isOptimal": true,
+            "feedback": "Ez a helyes hozzáállás az első időszakban. Mindenki más kommunikációs szokáshoz van szokva – kérdezéssel elkerülöd a hibákat. A válasz egyszerre képviseli azt, hogy a fiatal a gyors, közvetlen chatüzenetet természetesnek tartja minden helyzetben., és figyelembe veszi, hogy a munkáltató bizonyos témáknál formálisabb, dokumentált kommunikációt vár."
+          }
+        ],
+        "winWin": "A különböző kommunikációs eszközök különböző célokra valók. Egy egyszerű kérdés – „Mi a ti szokásotok?” – megakadályoz sok félreértést. A hatékony munkahely azért dolgozik ki szabályokat, hogy mindenki ugyanarra számítsonn."
+      },
+      {
+        "situation": "Érzed, hogy több iránymutatásra lenne szükséged, de a vezető azt várja, hogy önállóan dolgozz.",
+        "options": [
+          {
+            "text": "Megvárom, amíg a vezető észreveszi, hogy elakadtam.",
+            "isOptimal": false,
+            "feedback": "A passzív várakozás frusztrációhoz vezet – mindkét oldalon. A jelzés a te felelősséged is."
+          },
+          {
+            "text": "Jelzem: „Elakadtam X résznél – megpróbálom Y módon megoldani. Oké, ha visszajelzek, ha nem sikerül?”",
+            "isOptimal": true,
+            "feedback": "Ez az egyensúly: önállóan próbálkozol, de nem buksz el csendben. A vezető látja a szándékot és segíthet időben. A válasz egyszerre képviseli azt, hogy a fiatal több instrukciót és visszajelzést szeretne, mert még ismerkedik a feladatokkal., és figyelembe veszi, hogy a munkáltató önálló döntéshozatalt és kezdeményező megoldáskeresést vár."
+          },
+          {
+            "text": "Minden kicsi kérdésnél megkérdezem a vezetőmet – biztos, ami biztos.",
+            "isOptimal": false,
+            "feedback": "A túl sok kérdés éppúgy problémás, mint a túl kevés. Próbálkozz előbb önállóan – aztán kérdezz, ha valóban elakadsz."
+          }
+        ],
+        "winWin": "Az önállóság nem azt jelenti, hogy soha nem kérhetsz segítséget. Azt jelenti, hogy előbb magad próbálod megoldani, és ha elakadsz, konkrétan jelzed, hol és miért. Ez a kombináció pontosan az, amit a munkáltatók is elvárnakak."
+      },
+      {
+        "situation": "Egy feladatot kapsz, amelynek célját nem érted – csak azt tudod, mit kell csinálni, de miért, nem.",
+        "options": [
+          {
+            "text": "Elvégzem a feladatot, de motiválatlanul – ha nem értem a célját, nem teszek bele energiát.",
+            "isOptimal": false,
+            "feedback": "A motiváció megérthető, de a feladat elvégzése akkor is elvárás. Ha ezt mondanád, az nem mutatna jól."
+          },
+          {
+            "text": "Elvégzem – nem akarom zavarni a vezetőt felesleges kérdésekkel.",
+            "isOptimal": false,
+            "feedback": "A háttér megértése nem felesleges – segít jobb döntéseket hozni a végrehajtás közben. Kérdezni szabad."
+          },
+          {
+            "text": "Megkérdezem: „Meg tudnád mondani, mi a célja ennek a feladatnak? Jobban tudok dolgozni, ha értem a nagyobb képet.”",
+            "isOptimal": true,
+            "feedback": "Ez őszinte és fejlesztő szándékú kérdés. Sok vezető értékeli, ha valaki nem csak a gondolkodás nélküli végrehajtást keresi. A válasz egyszerre képviseli azt, hogy a fiatal szeretné látni munkájának célját és értelmét – ez motiválja a legjobban., és figyelembe veszi, hogy a munkáltató a napi feladatok megbízható elvégzését várja – nem mindig van idő minden hátteret elmagyarázni."
+          }
+        ],
+        "winWin": "A „miért” ismerete jobb eredményhez vezet – ez a munkáltatónak is érdeke. Egy egyszerű kérdés – „Mi a célja ennek?” – megmutatja, hogy a nagy képben gondolkodsz. Ez kezdeményező hozzáállás, nem kényelmetlenség."
+      },
+      {
+        "situation": "Egy nehéz projektet sikeresen lezártál, de senki nem szólt semmit. Mit teszel?",
+        "options": [
+          {
+            "text": "Lezárom a projektet és jelzem: „Befejeztem az X projektet – kaptam belőle néhány tanulságot, szívesen megbeszélném.”",
+            "isOptimal": true,
+            "feedback": "Ez kezdeményező és értéket mutat: nem csak befejezted, hanem átgondolod a tanulságait. Természetes alkalmat teremt a visszajelzésre. A válasz egyszerre képviseli azt, hogy a fiatal szeretné, ha észrevennék a teljesítményét – az elismerés fontos motiváló tényező., és figyelembe veszi, hogy a munkáltató a folyamatos, stabil teljesítményt tartja természetesnek – az elismerés nem mindig automatikus."
+          },
+          {
+            "text": "Semmit – ha nem szólnak, biztosan nem volt elég jó.",
+            "isOptimal": false,
+            "feedback": "A csend nem feltétlenül kritika. Sok vezető elfoglalt, és a dicséretet nem mindig mondja ki, de ez nem jelent értékelést."
+          },
+          {
+            "text": "Jelzem a vezetőnek, hogy elvárom az elismerést – a teljesítmény ezt indokolja.",
+            "isOptimal": false,
+            "feedback": "Az elvárás megfogalmazása visszafelé sülhet el. Inkább hozd létre a visszajelzés lehetőségét magad."
+          }
+        ],
+        "winWin": "Ne várd, hogy az elismerés automatikusan jöjjön. Hozz létre természetes alkalmakat a visszajelzésre – lezárás, összefoglaló, tanulságok megosztása. Ez nem dicsekvés, hanem profi kommunikáció, és mindkét félnek jót tesz."
+      },
+      {
+        "situation": "Fontos neked a szakmai fejlődés, de a munkáltató inkább hosszabb távú elköteleződést vár. Hogyan egyezteted össze?",
+        "options": [
+          {
+            "text": "Ha nem látok fejlődési lehetőséget, hamarabb váltok – a fejlődés az első.",
+            "isOptimal": false,
+            "feedback": "Ez jogos szempont, de ha az első jelére váltasz, az megbízhatatlannak tűnik. Érdemes először kommunikálni."
+          },
+          {
+            "text": "Megkérdezem: „Milyen fejlődési lehetőségek vannak itt? Mik az elvárások, hogy ezt elérjem?”",
+            "isOptimal": true,
+            "feedback": "Ez pontosan az, amit egy munkáltató hall hallani akar: ambíció + elkötelezettség. Kérdésből stratégiává válik. A válasz egyszerre képviseli azt, hogy a fiatal fejlődési lehetőségeket keres – képzést, tanulást, karrierépítést., és figyelembe veszi, hogy a munkáltató hosszabb távú elköteleződést és stabilitást szeretne – a betanítás befektetés."
+          },
+          {
+            "text": "Csendben maradok – ha egyszer nincs fejlődési lehetőség, majd döntök akkor.",
+            "isOptimal": false,
+            "feedback": "A passzív várakozás nem épít karriert. Ha kérdezed, talán megvan a lehetőség – csak nem mondják el maguktól."
+          }
+        ],
+        "winWin": "A fejlődési igény és a stabilitás iránti elvárás nem ellentétes – ha kommunikálod. Kérdezd meg a fejlődési lehetőségeket, majd mutasd meg, hogy el is kötelezed magad mellettük. Ez a kölcsönös befektetés alapja."
+      },
+      {
+        "situation": "Hibáztál egy feladatnál, és a vezető tudja. Belül biztonságos tanulási teret szeretnél – kívülről felelősségvállalást várnak.",
+        "options": [
+          {
+            "text": "Magyarázom, miért esett meg a hiba – a körülmények nem segítettek.",
+            "isOptimal": false,
+            "feedback": "A körülmények szerepe érthető, de a magyarázat védekezésnek hat. A megoldásra fókuszálj, ne az okokra."
+          },
+          {
+            "text": "Csendben maradok és igyekszem gyorsan kijavítani – hátha észre sem veszik.",
+            "isOptimal": false,
+            "feedback": "A hiba eltitkolása rontja a bizalmat. A nyílt kezelés – még ha nehéz is – hosszú távon jobb benyomást kelt."
+          },
+          {
+            "text": "Elnézést kérek, vállalom a felelősséget, elmondom, mit tanultam belőle, és hogyan kerülöm el legközelebb.",
+            "isOptimal": true,
+            "feedback": "Ez az érett hozzáállás: felelősség + tanulás + terv. Pontosan ez az, amit a munkáltató is szeretne látni. A válasz egyszerre képviseli azt, hogy a fiatal biztonságos tanulási környezetet szeretne – ahol a hiba lehetőség, nem ítélet., és figyelembe veszi, hogy a munkáltató felelősségvállalást és a hibából való konkrét tanulást vár."
+          }
+        ],
+        "winWin": "A biztonságos tanulási környezet nem adottság – azt te is megteremted a hozzáállásoddal. Ha hibáztál: jelezd, vállald, tanulj belőle, és mutasd meg, hogy következő alkalommal másképp csinálod. Ez pontosan az, amit a munkáltató is meg akar látni."
+      },
+      {
+        "situation": "Közvetlenebb, személyesebb kommunikációra vágysz a vezetőddel – ő formálisabb kereteket tart.",
+        "options": [
+          {
+            "text": "Megkérdezem: „Hogyan szeretsz kommunikálni – inkább formálisabb vagy lazább hangvételt preferálsz?”",
+            "isOptimal": true,
+            "feedback": "Ez bátrak kérdés, és pontosan a kölcsönös megértés alapja. A vezető is értékelni fogja, hogy kérdezed. A válasz egyszerre képviseli azt, hogy a fiatal közvetlenebb, nyíltabb kommunikációt szeretne a vezetőjével., és figyelembe veszi, hogy a munkáltató elvárja, hogy a szakmai keretek és hierarchia tiszteletben legyenek tartva."
+          },
+          {
+            "text": "A vezető stílusához igazodom teljesen – biztonságosabb.",
+            "isOptimal": false,
+            "feedback": "Az alkalmazkodás fontos, de ha soha nem hozod be a saját stílusodat, az hiteltelen és fárasztó hosszú távon."
+          },
+          {
+            "text": "Közvetlenül kommunikálok – ha valakinek nem tetszik, jelzi.",
+            "isOptimal": false,
+            "feedback": "Bizonyos helyzetekben ez jól működhet, de a munkahely hierarchikus viszonyokat is tart fenn. Jobb előbb kérdezni."
+          }
+        ],
+        "winWin": "A kommunikációs stílus nem állandó, és nem is kell tökéletesen illeszkedni egymáshoz. Egy egyszerű kérdés megnyitja az ajtót a kölcsönös alkalmazkodáshoz. A legjobb munkakapcsolatok ott épülnek, ahol mindkét fél tud egy lépést tenni a másik felé."
+      },
+      {
+        "situation": "Úgy érzed, te és a munkáltatód különböző célokat követnek. Hogyan közelítetek egymáshoz?",
+        "options": [
+          {
+            "text": "Nem szólok – ha elegem lesz, majd váltok.",
+            "isOptimal": false,
+            "feedback": "A hallgatás nem old meg semmit. Ha az elvárások eltérnek, a kommunikáció az egyetlen út az összehangoláshoz."
+          },
+          {
+            "text": "Megbeszéljük: „Mit vársz te tőlem? Én ezt és ezt szeretném elérni – hogyan tudunk ebben egymásnak segíteni?”",
+            "isOptimal": true,
+            "feedback": "Ez a WIN–WIN gondolkodás lényege: mindkét fél elmondom az elvárásait, és közösen keresik az átfedést. A válasz egyszerre képviseli azt, hogy a fiatal értelmes, fejlődést hozó munkát szeretne, amelyből látja a saját növekedését., és figyelembe veszi, hogy a munkáltató megbízható, stabil teljesítményt vár, amelyre hosszú távon számíthat."
+          },
+          {
+            "text": "Megadom, amit a munkáltató vár, és feladom a saját céljaimat – ők fizetnek.",
+            "isOptimal": false,
+            "feedback": "Ez rövid távon működhet, de a motiváció elvesztése hosszú távon minőségveszteséget okoz – mindkét fél számára."
+          }
+        ],
+        "winWin": "Más elvárások. Közös cél. A WIN–WIN ott kezdődik, ahol megértjük egymást. Ha mindkét fél kimondja, mit vár és mit tud adni – a különbségek nem akadályok, hanem tárgyalási alapok. A legtöbb elvárás összehangolható, ha van rá nyitottság."
+      }
+    ]
+  }
+}
