@@ -18,7 +18,8 @@ const elements={
  result:$('#agent-result'),resultVersion:$('#agent-result-version'),summary:$('#agent-summary'),
  changes:$('#agent-changes'),checks:$('#agent-checks'),preview:$('#agent-preview'),
  download:$('#agent-download'),release:$('#agent-release'),reject:$('#agent-reject'),
- releaseStatus:$('#agent-release-status')
+ releaseStatus:$('#agent-release-status'),
+ usageCard:$('#agent-usage-card'),usageModel:$('#agent-usage-model'),usageInput:$('#agent-usage-input'),usageOutput:$('#agent-usage-output'),usageTotal:$('#agent-usage-total'),usageCost:$('#agent-usage-cost')
 };
 
 function endpoint(){return 'netlify'}
@@ -115,6 +116,8 @@ function renderResult(job,failed=false){
  elements.changes.innerHTML=changes.length?changes.map(c=>`<div class="agent-change">${escapeHtml(typeof c==='string'?c:(c.description||c.title||JSON.stringify(c)))}</div>`).join(''):'<div class="agent-change">A backend nem adott részletes változáslistát.</div>';
  const checks=job.checks||[];
  elements.checks.innerHTML=checks.length?checks.map(c=>`<div class="agent-check-result ${c.ok===false?'is-fail':'is-ok'}"><strong>${c.ok===false?'✕':'✓'} ${escapeHtml(c.name||'Ellenőrzés')}</strong>${c.message?`<br><span>${escapeHtml(c.message)}</span>`:''}</div>`).join(''):'<div class="agent-check-result">Nincs ellenőrzési adat.</div>';
+ const usage=job.aiUsage;
+ if(usage){elements.usageCard.hidden=false;elements.usageModel.textContent=usage.model||'AI modell';elements.usageInput.textContent=Number(usage.inputTokens||0).toLocaleString('hu-HU');elements.usageOutput.textContent=Number(usage.outputTokens||0).toLocaleString('hu-HU');elements.usageTotal.textContent=Number(usage.totalTokens||0).toLocaleString('hu-HU');const usd=usage.cost?.estimatedUsd;elements.usageCost.textContent=typeof usd==='number'?`$${usd<0.01?usd.toFixed(4):usd.toFixed(3)}`:'n/a';}else{elements.usageCard.hidden=true;}
  if(job.previewUrl){elements.preview.href=job.previewUrl;elements.preview.hidden=false}else elements.preview.hidden=true;
  if(job.artifactUrl){elements.download.href=job.artifactUrl;elements.download.hidden=false}else elements.download.hidden=true;
  elements.release.disabled=failed||job.status==='released'||!elements.protect.checked===false&&false;
@@ -143,7 +146,7 @@ function runDemo(){
  if(!elements.prompt.value.trim())elements.prompt.value='A csatolt tartalmi észrevételeket vezesd át az alkalmazásban. Tartsd meg a jelenlegi arculatot, frissítsd a verziót, majd ellenőrizd a projektet.';
  state.demo=true;state.jobId='demo-'+Date.now();resetSteps();elements.result.hidden=true;setBadge('Demó fut…','working');
  const stages=['analyze','edit','test','build','review'];let i=0;
- const next=()=>{if(i>0)setStep(stages[i-1],'done');if(i>=stages.length){applyJob({jobId:state.jobId,status:'ready',stage:'review',version:elements.version.value,summary:'Demó workflow elkészült. Ez csak a felület működését mutatja; AI-modell és valódi build nem futott.',changes:['A kérés elemzése megtörtént (demó).','Projektmódosítás szimulálva (demó).','Automatikus ellenőrzések szimulálva (demó).','Új build előkészítve (demó).'],checks:[{name:'JavaScript szintaxis',ok:true,message:'Demó eredmény'},{name:'Projektvalidáció',ok:true,message:'Demó eredmény'},{name:'Regressziós ellenőrzés',ok:true,message:'Demó eredmény'}]});return}setStep(stages[i],'active');i++;setTimeout(next,650)};next();
+ const next=()=>{if(i>0)setStep(stages[i-1],'done');if(i>=stages.length){applyJob({jobId:state.jobId,status:'ready',stage:'review',version:elements.version.value,summary:'Demó workflow elkészült. Ez csak a felület működését mutatja; AI-modell és valódi build nem futott.',changes:['A kérés elemzése megtörtént (demó).','Projektmódosítás szimulálva (demó).','Automatikus ellenőrzések szimulálva (demó).','Új build előkészítve (demó).'],checks:[{name:'JavaScript szintaxis',ok:true,message:'Demó eredmény'},{name:'Projektvalidáció',ok:true,message:'Demó eredmény'},{name:'Regressziós ellenőrzés',ok:true,message:'Demó eredmény'}],aiUsage:{model:'gpt-5-mini (demó)',inputTokens:24000,outputTokens:5200,totalTokens:29200,cost:{estimatedUsd:0.0164}}});return}setStep(stages[i],'active');i++;setTimeout(next,650)};next();
 }
 function init(){
  $('#agent-year').textContent=new Date().getFullYear();
