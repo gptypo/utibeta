@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Útiterv Studio – AI Content Editor</title>
+<link rel="stylesheet" href="css/ai-content.css">
+</head>
+<body>
+<main class="ai-page">
+<header class="ai-topbar">
+  <div>
+    <span class="ai-kicker">ÚTITERV STUDIO</span>
+    <h1>AI Content Editor</h1>
+    <p>BETA 3.6 · egyszerű, egyhívásos Gemini workflow</p>
+  </div>
+  <a href="editor.html" class="ai-link">Vissza az Editorhoz</a>
+</header>
+
+<section class="ai-card">
+  <div class="ai-step"><span>1</span><div><strong>Tartalom kiválasztása</strong><small>Az AI csak egy valós JSON tartalomfájlt kap meg.</small></div></div>
+
+  <label class="ai-field">
+    <span>Tartalomfájl</span>
+    <select id="ai-file"></select>
+  </label>
+
+  <label class="ai-field">
+    <span>Módosítási kérés</span>
+    <textarea id="ai-prompt" rows="6" placeholder="Pl. A CV tippeknél legyen rövidebb és közvetlenebb a második bekezdés."></textarea>
+  </label>
+
+  <div class="ai-actions">
+    <button id="ai-run" type="button" class="ai-primary">AI módosítás</button>
+    <button id="ai-reload" type="button" class="ai-secondary">Eredeti újratöltése</button>
+  </div>
+  <div id="ai-status" class="ai-status" aria-live="polite">Tartalomlista betöltése…</div>
+</section>
+
+<section class="ai-card" id="ai-result" hidden>
+  <div class="ai-step"><span>2</span><div><strong>Ellenőrzés és előnézet</strong><small>A publikus fájl még nem változott.</small></div></div>
+
+  <div class="ai-result-meta">
+    <span id="ai-model">Gemini</span>
+    <span id="ai-changes">–</span>
+  </div>
+
+  <details class="ai-diff" open>
+    <summary>Módosított mezők</summary>
+    <div id="ai-diff-list"></div>
+  </details>
+
+  <div class="ai-preview-toolbar">
+    <strong>PWA előnézet</strong>
+    <button id="ai-preview-refresh" class="ai-secondary" type="button">Előnézet frissítése</button>
+  </div>
+  <iframe id="ai-preview" title="PWA AI tartalom előnézet"></iframe>
+
+  <div class="ai-actions ai-actions--approve">
+    <button id="ai-approve" type="button" class="ai-primary">Jóváhagyás / GitHub commit</button>
+    <button id="ai-download" type="button" class="ai-secondary">JSON letöltése</button>
+    <button id="ai-reject" type="button" class="ai-secondary">Elvetés</button>
+  </div>
+  <div id="ai-approve-status" class="ai-status"></div>
+</section>
+
+<section class="ai-card ai-info">
+<strong>Biztonságos tartalmi mód</strong>
+<p>Az AI nem szerkeszt HTML-, CSS- vagy JavaScript-fájlokat. A <code>schema</code> és <code>id</code> mezők védettek, a meglévő kulcsokat nem törölheti. A GitHub commit csak külön jóváhagyás után történik.</p>
+</section>
+</main>
+<script src="js/ai-content.js?v=beta-3.6"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.5.1-quiz-score-progress';
+var VERSION = 'beta-3.6-simple-ai-content';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';
@@ -12,9 +12,9 @@ var APP_FILES = [
   '/',
   '/index.html',
   '/offline.html',
-  '/agent.html',
-  '/css/agent.css',
-  '/js/agent.js',
+  '/',
+  '/',
+  '/',
   '/manifest.webmanifest?v=beta-1.2.6-samsung-install-guard',
   '/manifest.json?v=beta-1.2.6-samsung-install-guard',
   '/css/app.css',

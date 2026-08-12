@@ -1,7 +1,7 @@
 {
   "name": "utiterv-studio",
   "private": true,
-  "version": "3.5.1-beta",
+  "version": "3.6.0-beta",
   "scripts": {
     "serve": "python -m http.server 4173",
     "test": "playwright test",
@@ -16,6 +16,10 @@
   "dependencies": {
     "@netlify/blobs": "^10.0.8",
     "adm-zip": "^0.5.16",
-    "mammoth": "^1.9.1"
+    "mammoth": "^1.9.1",
+    "openai": "^7.4.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

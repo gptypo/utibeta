@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "content/custom/topics.json",
+      "label": "custom · topics"
+    },
+    {
+      "path": "content/home.json",
+      "label": "home"
+    },
+    {
+      "path": "content/modules/galaxy-guide/materials.json",
+      "label": "modules · galaxy guide · materials"
+    },
+    {
+      "path": "content/modules/galaxy-guide/videos.json",
+      "label": "modules · galaxy guide · videos"
+    },
+    {
+      "path": "content/modules/quick-win/cv.json",
+      "label": "modules · quick win · cv"
+    },
+    {
+      "path": "content/modules/quick-win/firstday.json",
+      "label": "modules · quick win · firstday"
+    },
+    {
+      "path": "content/modules/quick-win/interview.json",
+      "label": "modules · quick win · interview"
+    },
+    {
+      "path": "content/modules/quick-win/jobhunt.json",
+      "label": "modules · quick win · jobhunt"
+    },
+    {
+      "path": "content/modules/quick-win/legal.json",
+      "label": "modules · quick win · legal"
+    },
+    {
+      "path": "content/modules/quick-win/linkedin.json",
+      "label": "modules · quick win · linkedin"
+    },
+    {
+      "path": "content/modules/quick-win/redflags.json",
+      "label": "modules · quick win · redflags"
+    },
+    {
+      "path": "content/modules/quick-win/scenarios.json",
+      "label": "modules · quick win · scenarios"
+    },
+    {
+      "path": "content/modules/quick-win/world.json",
+      "label": "modules · quick win · world"
+    },
+    {
+      "path": "content/modules/quit-go/breathing.json",
+      "label": "modules · quit go · breathing"
+    },
+    {
+      "path": "content/modules/quit-go/careers.json",
+      "label": "modules · quit go · careers"
+    },
+    {
+      "path": "content/modules/quit-go/marketfacts.json",
+      "label": "modules · quit go · marketfacts"
+    },
+    {
+      "path": "content/modules/quit-go/mindfulness.json",
+      "label": "modules · quit go · mindfulness"
+    },
+    {
+      "path": "content/modules/quit-go/preboarding.json",
+      "label": "modules · quit go · preboarding"
+    },
+    {
+      "path": "content/modules/quit-go/quiz.json",
+      "label": "modules · quit go · quiz"
+    },
+    {
+      "path": "content/modules/quit-go/survival.json",
+      "label": "modules · quit go · survival"
+    },
+    {
+      "path": "content/modules/win-win/communication.json",
+      "label": "modules · win win · communication"
+    },
+    {
+      "path": "content/modules/win-win/digital.json",
+      "label": "modules · win win · digital"
+    },
+    {
+      "path": "content/modules/win-win/generations.json",
+      "label": "modules · win win · generations"
+    },
+    {
+      "path": "content/modules/win-win/glossary.json",
+      "label": "modules · win win · glossary"
+    },
+    {
+      "path": "content/modules/win-win/phrases.json",
+      "label": "modules · win win · phrases"
+    },
+    {
+      "path": "content/modules/win-win/twosides.json",
+      "label": "modules · win win · twosides"
+    },
+    {
+      "path": "content/shared/competencies.json",
+      "label": "shared · competencies"
+    },
+    {
+      "path": "content/shared/onmagam-data.json",
+      "label": "shared · onmagam data"
+    }
+  ]
+}

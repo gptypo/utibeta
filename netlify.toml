@@ -8,17 +8,21 @@
 
 # Az AI-kulcsot NE írd ebbe a fájlba.
 # Netlify UI → Project configuration → Environment variables:
-# GEMINI_API_KEY = ...
 # Opcionális:
-# GEMINI_MODEL = gemini-3.6-flash
 # NETLIFY_AUTH_TOKEN = ...   # csak automatikus production deployhoz
 # NETLIFY_SITE_ID = ...      # csak automatikus production deployhoz
 
 
-# BETA 3.5 JSON Content Workflow secrets (Netlify UI-ban állítsd be):
+# BETA 3.5.3 JSON Content Workflow secrets (Netlify UI-ban állítsd be):
+
+
+# BETA 3.6 – Simple AI Content Editor
+# Netlify Environment Variables:
 # GEMINI_API_KEY = ...
-# GITHUB_TOKEN = ...        # fine-grained token, Contents: Read and write
+# GEMINI_MODEL = gemini-3.6-flash   # opcionális
+#
+# Opcionális GitHub Approve/commit:
+# GITHUB_TOKEN = ...                # fine-grained PAT, Contents: Read and write
 # GITHUB_OWNER = ...
 # GITHUB_REPO = ...
-# GITHUB_BRANCH = main      # opcionális
-# GEMINI_CONTENT_MODEL = gemini-3.5-flash-lite  # opcionális
+# GITHUB_BRANCH = main              # opcionális
