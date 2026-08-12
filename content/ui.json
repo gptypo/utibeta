@@ -1,0 +1,452 @@
+{
+  "schema": "utiterv-ui-v1",
+  "meta": {
+    "title": "Útiterv a Jövőbe",
+    "description": "Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.",
+    "version": "BETA 3.6.9"
+  },
+  "shell": {
+    "splashAria": "Alkalmazás indítása",
+    "wordmarkAlt": "Útiterv a Jövőbe",
+    "skip": "Ugrás",
+    "homeAria": "Főoldal",
+    "brand": "Útiterv a Jövőbe",
+    "systemAria": "Design system megnyitása",
+    "menuOpenAria": "Főmenü megnyitása",
+    "footer": "© OFA Nonprofit Kft. Minden jog fenntartva.",
+    "privacy": "Adatvédelem és impresszum",
+    "menuAria": "Fő navigáció",
+    "menuEyebrow": "Útiterv",
+    "menuTitle": "Merre tovább?",
+    "menuCloseAria": "Menü bezárása",
+    "menu": {
+      "home": {
+        "strong": "Főoldal",
+        "small": "Vissza a témákhoz"
+      },
+      "onmagam": {
+        "strong": "QUIT & GO",
+        "small": "Önmagam"
+      },
+      "helyzeteim": {
+        "strong": "QUICK WIN",
+        "small": "Helyzeteim"
+      },
+      "kapcsolataim": {
+        "strong": "WIN-WIN",
+        "small": "Kapcsolataim"
+      },
+      "bonus": {
+        "strong": "GALAXY GUIDE",
+        "small": "Tudástár"
+      },
+      "privacy": {
+        "strong": "Adatvédelem",
+        "small": "Helyi adattárolás és jogi információk"
+      }
+    }
+  },
+  "moduleExperience": {
+    "onmagam": {
+      "popupTitle": "QUIT & GO",
+      "cardText": "Minden kihívás egy lehetőség a fejlődésre. Kis lépések, gyors eredmények.",
+      "intro": "Ebben a modulban olyan tippeket és gyakorlati útmutatókat találsz, amelyek segítenek eligazodni a munkahelyi mindennapokban. A cél, hogy magabiztosabban kezeld az első munkahelyed kihívásait, könnyebben beilleszkedj, és sikeresen elindulj szakmai utadon.",
+      "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz."
+    },
+    "helyzeteim": {
+      "popupTitle": "QUICK WIN",
+      "cardText": "A probléma nem végleges kudarc, hanem egy új helyzet kezdete. Kis lépések, gyors eredmények.",
+      "intro": "Ebben a modulban olyan gyakorlati tippeket és útmutatókat találsz, amelyek segítenek eligazodni a munka világában, magabiztosabban állást keresni, felkészülni az állásinterjúkra, valamint tudatosan építeni szakmai jelenlétedet. Cél, hogy megismerd azokat a helyzeteket és figyelmeztető jeleket, amelyekre érdemes odafigyelned a karrierutad során, így felkészültebben és tudatosabban hozhatsz döntéseket.",
+      "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted."
+    },
+    "kapcsolataim": {
+      "popupTitle": "WIN-WIN",
+      "cardText": "Értsd meg a másik oldalt is! Úgy működj, hogy mindenki nyerjen.",
+      "intro": "Ebben a modulban megismerheted a munkavállalói és munkáltatói nézőpontokat, valamint a különböző generációk együttműködésének sajátosságait. Olyan kommunikációs és együttműködési eszközöket kapsz, amelyek segítenek magabiztosan mozogni a munka világában és a digitális térben egyaránt. Cél, hogy megértsd a munkahelyi kapcsolatok működését, tudatosabban kommunikálj, és hatékonyan működj együtt másokkal a közös sikerek érdekében.",
+      "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait."
+    }
+  },
+  "common": {
+    "guideLabel": "Segédlet",
+    "practicalGuide": "Gyakorlati segédlet",
+    "carry": "Vidd magaddal!",
+    "closingThought": "Záró gondolat",
+    "open": "Megnyitás",
+    "minutes": "perc",
+    "continue": "Folytasd ott, ahol abbahagytad",
+    "moduleIntroEyebrow": "Mire számíthatsz?",
+    "moduleIntroButton": "Mehet →",
+    "prevTopic": "Előző téma",
+    "nextTopic": "Következő téma",
+    "topicNavAria": "Témák közötti navigáció"
+  },
+  "home": {
+    "guideEyebrow": "Segédlet",
+    "topicsTitle": "Fedezd fel a témákat",
+    "settingsEyebrow": "Beállítások",
+    "settingsTitle": "Megjelenés és tesztelés",
+    "settingsDescription": "A téma és az alkalmazás állapota ezen az eszközön marad meg.",
+    "themeGroupAria": "Színséma kiválasztása",
+    "light": "Világos",
+    "system": "Automatikus",
+    "dark": "Sötét",
+    "resetTitle": "Alkalmazás alaphelyzetbe állítása",
+    "resetDescription": "Törli a helyben mentett haladást, válaszokat és megjelenési beállításokat.",
+    "resetButton": "Helyi adatok törlése"
+  },
+  "quiz": {
+    "registryLabels": {
+      "workWorldQuiz": "A munka világa",
+      "firstDayQuiz": "Első nap",
+      "redFlagQuiz": "Vészjelek",
+      "helyzetQuiz": "Gyakorlás",
+      "commQuiz": "Kommunikáció",
+      "digitalQuiz": "Digitális tér",
+      "glossaryQuiz": "Fogalomtár",
+      "onmagamQuiz": "Munkahelyi helyzetek",
+      "legalQuiz": "Munkajogi alapok",
+      "phraseQuiz": "Pro mondatok"
+    },
+    "evaluation": {
+      "empty": "Kezdd el a kvízt, és minden válasz után azonnal kapsz visszajelzést.",
+      "skipped": "Jó úton haladsz. A teljes értékeléshez válaszold meg a még kihagyott kérdéseket is.",
+      "perfect": "Nagyszerű! Magabiztosan felismered a helyzetekben a legjobb megoldást.",
+      "great": "Szép eredmény. Nézd át a bizonytalanabb helyzeteket, és próbáld újra, ha szeretnéd.",
+      "good": "Jó alap. A hibás válaszok magyarázatai segítenek pontosítani a döntéseidet.",
+      "practice": "Ez most gyakorlás. Nézd át a visszajelzéseket, majd indítsd újra a kvízt."
+    },
+    "progress": "Haladás",
+    "goodAnswer": "jó válasz",
+    "badAnswer": "hibás válasz",
+    "answered": "megválaszolt kérdés",
+    "review": "Hibás válaszok áttekintése",
+    "yourAnswer": "Válaszod:",
+    "restart": "Kvíz újrakezdése",
+    "overall": "Összesített haladás",
+    "quizzes": "Kvízek"
+  },
+  "bonus": {
+    "materials": {
+      "eyebrow": "Segédlet",
+      "title": "Galaxy Guide",
+      "description": "Gyakorlati anyagok, amikor gyors kapaszkodóra van szükséged."
+    },
+    "videos": {
+      "eyebrow": "Segédlet",
+      "title": "Videós történetek",
+      "description": "Valódi szakmák, valódi utak."
+    },
+    "available": "Elérhető",
+    "soon": "Hamarosan"
+  },
+  "mindfulness": {
+    "groundingSteps": [
+      {
+        "count": 5,
+        "sense": "látsz",
+        "icon": "◉",
+        "prompt": "Nevezz meg 5 dolgot, amit most látsz a körülötted lévő térben."
+      },
+      {
+        "count": 4,
+        "sense": "érzel",
+        "icon": "✋",
+        "prompt": "Nevezz meg 4 dolgot, amit fizikailag érzel: például a széket a hátadon vagy a levegőt a bőrödön."
+      },
+      {
+        "count": 3,
+        "sense": "hallasz",
+        "icon": "◖",
+        "prompt": "Nevezz meg 3 hangot, amit most hallasz: forgalmat, légkondicionálót vagy a saját légzésedet."
+      },
+      {
+        "count": 2,
+        "sense": "szagolsz",
+        "icon": "≈",
+        "prompt": "Nevezz meg 2 illatot, amit most érzékelsz."
+      },
+      {
+        "count": 1,
+        "sense": "ízlelsz",
+        "icon": "●",
+        "prompt": "Nevezz meg 1 ízt, amit a szádban érzel."
+      }
+    ],
+    "bodySteps": [
+      {
+        "zone": "Lábfejek",
+        "cue": "Érezd a talajt a lábad alatt. Engedd el a feszültséget a lábujjaidban."
+      },
+      {
+        "zone": "Lábszár",
+        "cue": "Figyeld a vádlidat és a sípcsontod. Van-e benne feszültség? Engedd lazulni."
+      },
+      {
+        "zone": "Comb és csípő",
+        "cue": "Érezd, hogyan támaszkodik a tested a széken vagy a talajon. Engedd ellazulni."
+      },
+      {
+        "zone": "Has és mellkas",
+        "cue": "Figyeld a légzésedet. Minden kilégzésnél engedd mélyebbre süllyedni a relaxációt."
+      },
+      {
+        "zone": "Hát és váll",
+        "cue": "Sok stresszt hordozunk a vállunkban. Engedd le, lélegezz és lazulj el."
+      },
+      {
+        "zone": "Nyak és állkapocs",
+        "cue": "Engedd le az állkapcsodat. Figyeld meg, mennyire volt összeszorítva."
+      },
+      {
+        "zone": "Arc és homlok",
+        "cue": "Simítsd el a homlokod. Engedd lazulni a szemed körüli izmokat."
+      },
+      {
+        "zone": "Teljes test",
+        "cue": "Figyelj az egész testedre. Nyugodt vagy. Minden izmod ellazult."
+      }
+    ],
+    "guidedAudio": {
+      "3": {
+        "asset": "safePlace",
+        "icon": "☀",
+        "duration": "2:09",
+        "intro": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
+        "done": "Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
+      },
+      "4": {
+        "asset": "goldBubble",
+        "icon": "✦",
+        "duration": "2:20",
+        "intro": "Vezetett vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
+        "done": "Te döntöd el, mit engedsz közel magadhoz."
+      },
+      "5": {
+        "asset": "backpack",
+        "icon": "▱",
+        "duration": "2:35",
+        "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
+        "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
+      }
+    }
+  },
+  "pwa": {
+    "version": "BETA 1.2.6",
+    "installTitle": "Telepítsd az Útitervet",
+    "installText": "Gyorsabb indítás és offline használat.",
+    "installButton": "Telepítés",
+    "close": "Bezárás",
+    "samsungTitle": "Telepítéshez Chrome ajánlott",
+    "samsungText": "Samsung Internetből a Play Protect téves „régi Android-verzió” figyelmeztetést jeleníthet meg. Az alkalmazást nyisd meg Chrome-ban, és onnan telepítsd.",
+    "openChrome": "Megnyitás Chrome-ban",
+    "updateTitle": "Új verzió elérhető",
+    "updateText": "Frissíts, hogy a legújabb Útitervet használd.",
+    "updateButton": "Frissítés",
+    "iosEyebrow": "iPhone és iPad",
+    "iosTitle": "Telepítés a Főképernyőre",
+    "iosSteps": [
+      "Koppints a Safari Megosztás gombjára.",
+      "Válaszd a Hozzáadás a Főképernyőhöz lehetőséget.",
+      "Erősítsd meg a Hozzáadás gombbal."
+    ],
+    "understood": "Értem",
+    "onboardingEyebrow": "Útiterv",
+    "onboardingTitle": "Az útiterved mostantól veled marad.",
+    "onboardingText": "Telepíthető, offline is használható, és automatikusan ott folytatja, ahol abbahagytad.",
+    "onboardingFeatures": [
+      "Offline tartalmak",
+      "Automatikus visszaállítás",
+      "Mobil app élmény"
+    ],
+    "onboardingButton": "Indulhatunk"
+  },
+  "theme": {
+    "lightEnable": "Világos mód bekapcsolása",
+    "darkEnable": "Sötét mód bekapcsolása",
+    "light": "Világos",
+    "dark": "Sötét",
+    "automatic": "Automatikus",
+    "resetConfirm": "Minden ezen az eszközön tárolt alkalmazásadat és beállítás törlődik. Folytatod?"
+  },
+  "privacy": {
+    "eyebrow": "Adatvédelem",
+    "title": "Adatvédelem és impresszum",
+    "description": "Helyi adattárolás és jogi információk.",
+    "html": "<section class=\"privacy-page\" aria-labelledby=\"privacy-title\"><article class=\"privacy-card\"><span class=\"eyebrow eyebrow--dark\">Adatkezelési tájékoztató</span><h2 id=\"privacy-title\">Az alkalmazás adatkezelése</h2><p>Az Útiterv használatához nem szükséges regisztráció vagy felhasználói fiók. Az alkalmazás felülete nem küldi el a kitöltött válaszokat, a haladási adatokat vagy a megjelenési beállításokat az OFA Nonprofit Kft. részére, illetve harmadik félnek.</p><h3>Helyi adattárolás</h3><p>A haladás, a válaszok és a megjelenési beállítások kizárólag a használt böngésző helyi tárhelyén tárolódnak.</p><h3>Offline működés</h3><p>Az alkalmazás a saját fájljait gyorsítótárazhatja az offline használathoz. Nem tartalmaz analitikai, reklám- vagy felhasználókövető kódot.</p><h3>Adatkezelő és impresszum</h3><dl class=\"privacy-details\"><div><dt>Adatkezelő és kiadó</dt><dd>OFA Nonprofit Kft.</dd></div><div><dt>Alkalmazás</dt><dd>Útiterv</dd></div><div><dt>Kapcsolat</dt><dd>Az OFA Nonprofit Kft. hivatalos kapcsolattartási csatornáin.</dd></div></dl></article><button class=\"button button--secondary\" data-route=\"home\">Vissza a főoldalra</button></section>"
+  },
+  "system": {
+    "eyebrow": "Segédlet",
+    "title": "Design System 1.0",
+    "description": "A Beta közös vizuális és interakciós alapjai.",
+    "html": "<section class=\"theme-settings\"><div class=\"theme-settings__row\"><div><span class=\"eyebrow\">Megjelenés</span><h3>Világos és sötét mód</h3><p>A beállítás ezen az eszközön automatikusan megmarad. Jelenleg: <strong data-theme-status></strong>.</p></div><button class=\"theme-toggle\" type=\"button\" data-theme-toggle aria-label=\"Téma váltása\"><span data-theme-icon aria-hidden=\"true\">☾</span></button></div><div class=\"theme-choice\"><button type=\"button\" data-theme-choice=\"light\">Világos</button><button type=\"button\" data-theme-choice=\"dark\">Sötét</button><button type=\"button\" data-theme-choice=\"system\">Rendszer szerint</button></div></section><section class=\"system-section\"><h2>Alapelvek</h2><div class=\"principle-grid\"><article><strong>Whitespace first</strong><span>A levegő a tartalom része.</span></article><article><strong>Egy döntés képernyőnként</strong><span>Nem terhelünk túl.</span></article><article><strong>Segíts, ne vizsgáztass</strong><span>Minden válasz tanít valamit.</span></article></div></section><button class=\"button button--secondary\" data-route=\"home\">Vissza</button>"
+  },
+  "customContent": {
+    "eyebrow": "Bővíthető tartalom",
+    "title": "Saját témák",
+    "defaultDescription": "Saját szerkesztésű tartalom",
+    "empty": "Még nincs saját tartalom.",
+    "editorLink": ""
+  },
+  "dashboard": {
+    "title": "Fejlődésed",
+    "correct": "helyes",
+    "answered": "megválaszolt",
+    "toPerfect": "100%-hoz hátra",
+    "progressAria": "teljesítve",
+    "moduleLabels": {
+      "onmagam": "QUIT & GO",
+      "helyzeteim": "QUICK WIN",
+      "kapcsolataim": "WIN-WIN",
+      "bonus": "GALAXY GUIDE"
+    }
+  },
+  "components": {
+    "flip": {
+      "front": "Előlap",
+      "back": "Hátlap",
+      "flipAria": "Kártya megfordítása",
+      "tapBack": "Érintsd meg a másik oldalért",
+      "tapFront": "Érintsd meg a visszafordításhoz"
+    },
+    "series": {
+      "carry": "Vidd magaddal!",
+      "closing": "Záró gondolat"
+    },
+    "competency": {
+      "close": "Bezárás",
+      "description": "Kompetencia leírása",
+      "example": "Munkahelyi példa"
+    },
+    "accordion": {
+      "fallback": "Vészjel",
+      "action": "Mit tehetsz?"
+    },
+    "audio": {
+      "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
+      "transcriptTitle": "Teljes felolvasási szöveg",
+      "play": "Lejátszás",
+      "stop": "Megállítás"
+    },
+    "actions": {
+      "show": "Mutasd a választ",
+      "hide": "Válasz elrejtése",
+      "saved": "Elmentve ✓",
+      "restart": "Újrakezdés",
+      "stopped": "MEGÁLLÍTVA"
+    }
+  },
+  "sectionCopy": {
+    "onmagam": {
+      "breathing": {
+        "title": "Légzéstechnikák",
+        "description": "Válassz egy technikát. Nyisd le, majd kövesd a kör ritmusát és az aktuális fázist."
+      },
+      "mindfulness": {
+        "title": "Mindfulness technikák",
+        "description": "Rövid gyakorlatok stressz, szorongás és mentális túlterheltség esetére."
+      },
+      "careers": {
+        "title": "Kékgalléros karrierutak",
+        "description": "Egy szakma nem végállomás, hanem fejlődési lehetőség. Érintsd meg a kompetenciákat a részletes leírásért és munkahelyi példáért."
+      },
+      "quiz": {
+        "title": "Munkahelyi helyzetek",
+        "description": "Nézd végig bátran az összes lehetőséget."
+      }
+    },
+    "helyzeteim": {
+      "world": {
+        "title": "A munka világa",
+        "description": "Íratlan szabályok és gyakorlati kapaszkodók.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Valósághű helyzetek az első hetekből."
+      },
+      "jobhunt": {
+        "title": "Állásvadászat Z módra",
+        "description": "12 rövid tipp, hogy tudatosabban és magabiztosabban keress állást."
+      },
+      "interview": {
+        "title": "Interjú kérdés–válasz",
+        "description": "Gyakori interjúkérdések és használható mintaválaszok."
+      },
+      "cv": {
+        "title": "Önéletrajz: mit írj, mit kerülj?",
+        "description": "Forgasd meg a kártyákat, és hasonlítsd össze a jó és kerülendő megoldásokat."
+      },
+      "linkedin": {
+        "title": "LinkedIn tippek",
+        "description": "12 praktikus lépés a hiteles és naprakész szakmai profilhoz."
+      },
+      "firstday": {
+        "title": "Első napi ellenőrzőlista",
+        "description": "Készülj fel nyugodtan, egy lépésben egyszerre.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Gyakorold a nyugodt, felkészült reakciókat."
+      },
+      "redflags": {
+        "title": "Munkahelyi vészjelek",
+        "description": "Minden vészjel áttekinthető; érintésre lenyílik a magyarázat.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Fedezd fel a biztonságos, professzionális reakciókat."
+      },
+      "legal": {
+        "title": "Munkajogi alapok",
+        "description": "A legfontosabb tudnivalók közérthetően.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Mit érdemes tenni aláírás és döntés előtt?"
+      },
+      "scenarios": {
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Minden válasz tanít valamit a helyzetről."
+      }
+    },
+    "kapcsolataim": {
+      "twosides": {
+        "title": "Két oldal, egy megoldás",
+        "description": "Értsd meg egyszerre a saját és a munkaadói nézőpontot."
+      },
+      "generations": {
+        "title": "Generációk együttműködése",
+        "description": "A különböző tapasztalatok és munkastílusok akkor működnek jól, ha kiegészítik egymást."
+      },
+      "communication": {
+        "title": "Kommunikáció",
+        "description": "Ugyanaz a mondat lehet amatőr vagy profi.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Keresd a mindkét fél számára működő megoldást."
+      },
+      "phrases": {
+        "title": "Pro mondatok",
+        "description": "Használható mondatok nehéz helyzetekre.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Válaszd a konkrét és együttműködő megfogalmazást."
+      },
+      "digital": {
+        "title": "Digitális viselkedés",
+        "description": "Chat, e-mail és online jelenlét a munkahelyen.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Találd meg a megfelelő csatornát és hangnemet."
+      },
+      "glossary": {
+        "title": "Munkahelyi fogalomtár",
+        "description": "12 kifejezés, amit jó ismerni az első naptól.",
+        "quizTitle": "Ellenőrző kvíz",
+        "quizDescription": "Használd magabiztosan az alapfogalmakat."
+      }
+    }
+  },
+  "breathing": {
+    "ready": "KÉSZEN ÁLLSZ?",
+    "start": "Kezdés",
+    "stop": "Leállítás",
+    "inhale": "BELÉGZÉS",
+    "hold": "TARTÁS",
+    "exhale": "KILÉGZÉS"
+  },
+  "contentTypeLabels": {
+    "story": "Oldalirányú történet",
+    "accordion": "Lenyíló lista",
+    "flip": "Flip kártyák",
+    "quiz": "Felfedező kvíz"
+  }
+}

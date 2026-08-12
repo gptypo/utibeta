@@ -1,3 +1,5 @@
+import {project} from './project-content.js';
+const themeCopy=project.ui?.theme||{};
 const THEME_KEY='utiterv-theme';
 const root=document.documentElement;
 const media=window.matchMedia('(prefers-color-scheme: dark)');
@@ -13,11 +15,11 @@ function apply(value=preference(),{announce=false}={}){
  document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>meta.content=themeColor(mode));
  document.querySelectorAll('[data-theme-toggle]').forEach(button=>{
   button.setAttribute('aria-pressed',String(mode==='dark'));
-  button.setAttribute('aria-label',mode==='dark'?'Világos mód bekapcsolása':'Sötét mód bekapcsolása');
-  button.title=mode==='dark'?'Világos mód':'Sötét mód';
+  button.setAttribute('aria-label',mode==='dark'?(themeCopy.lightEnable||''):(themeCopy.darkEnable||''));
+  button.title=mode==='dark'?(themeCopy.light||''):(themeCopy.dark||'');
   const icon=button.querySelector('[data-theme-icon]');if(icon)icon.textContent=mode==='dark'?'☀':'☾';
  });
- document.querySelectorAll('[data-theme-status]').forEach(node=>node.textContent=value==='system'?`Automatikus · ${mode==='dark'?'sötét':'világos'}`:(mode==='dark'?'Sötét':'Világos'));
+ document.querySelectorAll('[data-theme-status]').forEach(node=>node.textContent=value==='system'?`${themeCopy.automatic||''} · ${mode==='dark'?(themeCopy.dark||'').toLowerCase():(themeCopy.light||'').toLowerCase()}`:(mode==='dark'?(themeCopy.dark||''):(themeCopy.light||'')));
  document.querySelectorAll('[data-theme-choice]').forEach(button=>{
   const active=button.dataset.themeChoice===value;
   button.classList.toggle('is-active',active);
@@ -36,7 +38,7 @@ document.addEventListener('click',event=>{
  const reset=event.target.closest('[data-app-reset]');
  if(reset){
   event.preventDefault();
-  const confirmed=window.confirm('Minden ezen az eszközön tárolt alkalmazásadat és beállítás törlődik. Folytatod?');
+  const confirmed=window.confirm(themeCopy.resetConfirm||'');
   if(!confirmed)return;
   localStorage.clear();
   window.location.reload();

@@ -1,0 +1,52 @@
+{
+  "schema": "utiterv-assets-v1",
+  "logos": {
+    "main": "assets/SVG_ASSETS/LOGO/LOGO_CON.svg",
+    "container": "assets/SVG_ASSETS/LOGO/LOGO_CONTAINER.svg",
+    "mainV2": "assets/SVG_ASSETS/LOGO/LOGO_CON_v2.svg",
+    "pinpoint": "assets/SVG_ASSETS/LOGO/LOGO_PINPOINT_CON.svg",
+    "rocket": "assets/SVG_ASSETS/LOGO/LOGO_ROCKET_CON.svg",
+    "wordmark": "assets/SVG_ASSETS/LOGO/LOGO_TIPO.svg"
+  },
+  "smallIcons": {
+    "onmagam": "assets/SVG_ASSETS/SML_CONS/QG_SMALL_ICON.svg",
+    "helyzeteim": "assets/SVG_ASSETS/SML_CONS/QW_SMALL_ICON.svg",
+    "kapcsolataim": "assets/SVG_ASSETS/SML_CONS/WW_SMALL_ICON.svg",
+    "bonus": "assets/SVG_ASSETS/SML_CONS/GG_SMALL_ICON.svg"
+  },
+  "bigIcons": {
+    "GG_BIG_ICON.svg": "assets/SVG_ASSETS/BIG_CONS/GG_BIG_ICON.svg",
+    "GG_BIG_ICON_thin.svg": "assets/SVG_ASSETS/BIG_CONS/GG_BIG_ICON_thin.svg",
+    "QG_BIG_ICON.svg": "assets/SVG_ASSETS/BIG_CONS/QG_BIG_ICON.svg",
+    "QG_BIG_ICON_thin.svg": "assets/SVG_ASSETS/BIG_CONS/QG_BIG_ICON_thin.svg",
+    "QW_BIG_ICON.svg": "assets/SVG_ASSETS/BIG_CONS/QW_BIG_ICON.svg",
+    "QW_BIG_ICON_thin.svg": "assets/SVG_ASSETS/BIG_CONS/QW_BIG_ICON_thin.svg",
+    "WW_BIG_ICON.svg": "assets/SVG_ASSETS/BIG_CONS/WW_BIG_ICON.svg",
+    "WW_BIG_ICON_thin.svg": "assets/SVG_ASSETS/BIG_CONS/WW_BIG_ICON_thin.svg"
+  },
+  "intro": {
+    "skyRocket": "assets/SVG_ASSETS/INTRO/SKY_ROCKET.svg",
+    "heroBottom": "assets/SVG_ASSETS/INTRO/hero_bottom.svg",
+    "rocketBackground": "assets/SVG_ASSETS/INTRO/rocket_background.svg",
+    "rocketBig": "assets/SVG_ASSETS/INTRO/rocket_big.svg",
+    "rocketBigBackground": "assets/SVG_ASSETS/INTRO/rocket_big_background.svg",
+    "skyRocketBackground": "assets/SVG_ASSETS/INTRO/sky_rocket_background.svg",
+    "skyRocketHeroBottom": "assets/SVG_ASSETS/INTRO/sky_rocket_hero_bottom.svg",
+    "skyRocketShip": "assets/SVG_ASSETS/INTRO/sky_rocket_ship.svg",
+    "whiteCloud": "assets/SVG_ASSETS/INTRO/white_cloud.svg",
+    "whiteCloudCenter": "assets/SVG_ASSETS/INTRO/white_cloud_center.svg"
+  },
+  "appIcons": {
+    "icon192": "assets/icons/app-icon-192.png",
+    "icon512": "assets/icons/app-icon-512.png",
+    "maskable512": "assets/icons/app-icon-maskable-512.png",
+    "svg": "assets/icons/app-icon.svg",
+    "appleTouch": "assets/icons/apple-touch-icon.png",
+    "favicon": "assets/icons/favicon-32.png"
+  },
+  "audio": {
+    "safePlace": "audio/vizualizacio-biztonsagos-hely.mp3",
+    "goldBubble": "audio/aranybuborek.mp3",
+    "backpack": "audio/tedd-le-a-hatizsakot.mp3"
+  }
+}

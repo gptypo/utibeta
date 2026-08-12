@@ -1,6 +1,6 @@
 {
   "schema": "utiterv-project-manifest-v5",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Adatvezérelt edukációs PWA projekt"
@@ -40,5 +40,7 @@
       "zsargon kerülése",
       "bátorító, nem kioktató megfogalmazás"
     ]
-  }
+  },
+  "ui": "ui.json",
+  "assets": "assets.json"
 }

@@ -14,7 +14,1199 @@ media:
   categories:
   - audio
 content:
-- name: home
+- name: content_ui_json
+  label: Általános feliratok és oldalszövegek
+  type: file
+  path: content/ui.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: meta
+    label: Meta
+    type: object
+    fields:
+    - name: title
+      label: Cím
+      type: string
+    - name: description
+      label: Leírás
+      type: string
+    - name: version
+      label: Version
+      type: string
+  - name: shell
+    label: Shell
+    type: object
+    fields:
+    - name: splashAria
+      label: Splash aria
+      type: string
+    - name: wordmarkAlt
+      label: Wordmark alt
+      type: string
+    - name: skip
+      label: Skip
+      type: string
+    - name: homeAria
+      label: Home aria
+      type: string
+    - name: brand
+      label: Brand
+      type: string
+    - name: systemAria
+      label: System aria
+      type: string
+    - name: menuOpenAria
+      label: Menu open aria
+      type: string
+    - name: footer
+      label: Footer
+      type: string
+    - name: privacy
+      label: Privacy
+      type: string
+    - name: menuAria
+      label: Menu aria
+      type: string
+    - name: menuEyebrow
+      label: Menu eyebrow
+      type: string
+    - name: menuTitle
+      label: Menu title
+      type: string
+    - name: menuCloseAria
+      label: Menu close aria
+      type: string
+    - name: menu
+      label: Menu
+      type: object
+      fields:
+      - name: home
+        label: Home
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+      - name: onmagam
+        label: Onmagam
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+      - name: helyzeteim
+        label: Helyzeteim
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+      - name: kapcsolataim
+        label: Kapcsolataim
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+      - name: bonus
+        label: Bonus
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+      - name: privacy
+        label: Privacy
+        type: object
+        fields:
+        - name: strong
+          label: Strong
+          type: string
+        - name: small
+          label: Small
+          type: string
+  - name: moduleExperience
+    label: Module experience
+    type: object
+    fields:
+    - name: onmagam
+      label: Onmagam
+      type: object
+      fields:
+      - name: popupTitle
+        label: Popup title
+        type: string
+      - name: cardText
+        label: Card text
+        type: string
+      - name: intro
+        label: Intro
+        type: text
+      - name: closing
+        label: Closing
+        type: text
+    - name: helyzeteim
+      label: Helyzeteim
+      type: object
+      fields:
+      - name: popupTitle
+        label: Popup title
+        type: string
+      - name: cardText
+        label: Card text
+        type: string
+      - name: intro
+        label: Intro
+        type: text
+      - name: closing
+        label: Closing
+        type: string
+    - name: kapcsolataim
+      label: Kapcsolataim
+      type: object
+      fields:
+      - name: popupTitle
+        label: Popup title
+        type: string
+      - name: cardText
+        label: Card text
+        type: string
+      - name: intro
+        label: Intro
+        type: text
+      - name: closing
+        label: Closing
+        type: string
+  - name: common
+    label: Common
+    type: object
+    fields:
+    - name: guideLabel
+      label: Guide label
+      type: string
+    - name: practicalGuide
+      label: Practical guide
+      type: string
+    - name: carry
+      label: Carry
+      type: string
+    - name: closingThought
+      label: Closing thought
+      type: string
+    - name: open
+      label: Open
+      type: string
+    - name: minutes
+      label: Minutes
+      type: string
+    - name: continue
+      label: Continue
+      type: string
+    - name: moduleIntroEyebrow
+      label: Module intro eyebrow
+      type: string
+    - name: moduleIntroButton
+      label: Module intro button
+      type: string
+    - name: prevTopic
+      label: Prev topic
+      type: string
+    - name: nextTopic
+      label: Next topic
+      type: string
+    - name: topicNavAria
+      label: Topic nav aria
+      type: string
+  - name: home
+    label: Home
+    type: object
+    fields:
+    - name: guideEyebrow
+      label: Guide eyebrow
+      type: string
+    - name: topicsTitle
+      label: Topics title
+      type: string
+    - name: settingsEyebrow
+      label: Settings eyebrow
+      type: string
+    - name: settingsTitle
+      label: Settings title
+      type: string
+    - name: settingsDescription
+      label: Settings description
+      type: string
+    - name: themeGroupAria
+      label: Theme group aria
+      type: string
+    - name: light
+      label: Light
+      type: string
+    - name: system
+      label: System
+      type: string
+    - name: dark
+      label: Dark
+      type: string
+    - name: resetTitle
+      label: Reset title
+      type: string
+    - name: resetDescription
+      label: Reset description
+      type: string
+    - name: resetButton
+      label: Reset button
+      type: string
+  - name: quiz
+    label: Quiz
+    type: object
+    fields:
+    - name: registryLabels
+      label: Registry labels
+      type: object
+      fields:
+      - name: workWorldQuiz
+        label: Work world quiz
+        type: string
+      - name: firstDayQuiz
+        label: First day quiz
+        type: string
+      - name: redFlagQuiz
+        label: Red flag quiz
+        type: string
+      - name: helyzetQuiz
+        label: Helyzet quiz
+        type: string
+      - name: commQuiz
+        label: Comm quiz
+        type: string
+      - name: digitalQuiz
+        label: Digital quiz
+        type: string
+      - name: glossaryQuiz
+        label: Glossary quiz
+        type: string
+      - name: onmagamQuiz
+        label: Onmagam quiz
+        type: string
+      - name: legalQuiz
+        label: Legal quiz
+        type: string
+      - name: phraseQuiz
+        label: Phrase quiz
+        type: string
+    - name: evaluation
+      label: Evaluation
+      type: object
+      fields:
+      - name: empty
+        label: Empty
+        type: string
+      - name: skipped
+        label: Skipped
+        type: string
+      - name: perfect
+        label: Perfect
+        type: string
+      - name: great
+        label: Great
+        type: string
+      - name: good
+        label: Good
+        type: string
+      - name: practice
+        label: Practice
+        type: string
+    - name: progress
+      label: Progress
+      type: string
+    - name: goodAnswer
+      label: Good answer
+      type: string
+    - name: badAnswer
+      label: Bad answer
+      type: string
+    - name: answered
+      label: Answered
+      type: string
+    - name: review
+      label: Review
+      type: string
+    - name: yourAnswer
+      label: Your answer
+      type: string
+    - name: restart
+      label: Restart
+      type: string
+    - name: overall
+      label: Overall
+      type: string
+    - name: quizzes
+      label: Quizzes
+      type: string
+  - name: bonus
+    label: Bonus
+    type: object
+    fields:
+    - name: materials
+      label: Materials
+      type: object
+      fields:
+      - name: eyebrow
+        label: Eyebrow
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+    - name: videos
+      label: Videos
+      type: object
+      fields:
+      - name: eyebrow
+        label: Eyebrow
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+    - name: available
+      label: Available
+      type: string
+    - name: soon
+      label: Soon
+      type: string
+  - name: mindfulness
+    label: Mindfulness
+    type: object
+    fields:
+    - name: groundingSteps
+      label: Grounding steps
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: count
+        label: Count
+        type: number
+      - name: sense
+        label: Sense
+        type: string
+      - name: icon
+        label: Ikon
+        type: string
+      - name: prompt
+        label: Prompt
+        type: string
+    - name: bodySteps
+      label: Body steps
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: zone
+        label: Zone
+        type: string
+      - name: cue
+        label: Cue
+        type: string
+    - name: guidedAudio
+      label: Guided audio
+      type: object
+      fields:
+      - name: '3'
+        label: '3'
+        type: object
+        fields:
+        - name: asset
+          label: Asset
+          type: string
+        - name: icon
+          label: Ikon
+          type: string
+        - name: duration
+          label: Duration
+          type: string
+        - name: intro
+          label: Intro
+          type: string
+        - name: done
+          label: Done
+          type: string
+      - name: '4'
+        label: '4'
+        type: object
+        fields:
+        - name: asset
+          label: Asset
+          type: string
+        - name: icon
+          label: Ikon
+          type: string
+        - name: duration
+          label: Duration
+          type: string
+        - name: intro
+          label: Intro
+          type: string
+        - name: done
+          label: Done
+          type: string
+      - name: '5'
+        label: '5'
+        type: object
+        fields:
+        - name: asset
+          label: Asset
+          type: string
+        - name: icon
+          label: Ikon
+          type: string
+        - name: duration
+          label: Duration
+          type: string
+        - name: intro
+          label: Intro
+          type: string
+        - name: done
+          label: Done
+          type: string
+  - name: pwa
+    label: Pwa
+    type: object
+    fields:
+    - name: version
+      label: Version
+      type: string
+    - name: installTitle
+      label: Install title
+      type: string
+    - name: installText
+      label: Install text
+      type: string
+    - name: installButton
+      label: Install button
+      type: string
+    - name: close
+      label: Close
+      type: string
+    - name: samsungTitle
+      label: Samsung title
+      type: string
+    - name: samsungText
+      label: Samsung text
+      type: text
+    - name: openChrome
+      label: Open chrome
+      type: string
+    - name: updateTitle
+      label: Update title
+      type: string
+    - name: updateText
+      label: Update text
+      type: string
+    - name: updateButton
+      label: Update button
+      type: string
+    - name: iosEyebrow
+      label: Ios eyebrow
+      type: string
+    - name: iosTitle
+      label: Ios title
+      type: string
+    - name: iosSteps
+      label: Ios steps
+      type: string
+      list: true
+    - name: understood
+      label: Understood
+      type: string
+    - name: onboardingEyebrow
+      label: Onboarding eyebrow
+      type: string
+    - name: onboardingTitle
+      label: Onboarding title
+      type: string
+    - name: onboardingText
+      label: Onboarding text
+      type: string
+    - name: onboardingFeatures
+      label: Onboarding features
+      type: string
+      list: true
+    - name: onboardingButton
+      label: Onboarding button
+      type: string
+  - name: theme
+    label: Theme
+    type: object
+    fields:
+    - name: lightEnable
+      label: Light enable
+      type: string
+    - name: darkEnable
+      label: Dark enable
+      type: string
+    - name: light
+      label: Light
+      type: string
+    - name: dark
+      label: Dark
+      type: string
+    - name: automatic
+      label: Automatic
+      type: string
+    - name: resetConfirm
+      label: Reset confirm
+      type: string
+  - name: privacy
+    label: Privacy
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: title
+      label: Cím
+      type: string
+    - name: description
+      label: Leírás
+      type: string
+    - name: html
+      label: Html
+      type: text
+  - name: system
+    label: System
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: title
+      label: Cím
+      type: string
+    - name: description
+      label: Leírás
+      type: string
+    - name: html
+      label: Html
+      type: text
+  - name: customContent
+    label: Custom content
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: title
+      label: Cím
+      type: string
+    - name: defaultDescription
+      label: Default description
+      type: string
+    - name: empty
+      label: Empty
+      type: string
+    - name: editorLink
+      label: Editor link
+      type: string
+  - name: dashboard
+    label: Dashboard
+    type: object
+    fields:
+    - name: title
+      label: Cím
+      type: string
+    - name: correct
+      label: Correct
+      type: string
+    - name: answered
+      label: Answered
+      type: string
+    - name: toPerfect
+      label: To perfect
+      type: string
+    - name: progressAria
+      label: Progress aria
+      type: string
+    - name: moduleLabels
+      label: Module labels
+      type: object
+      fields:
+      - name: onmagam
+        label: Onmagam
+        type: string
+      - name: helyzeteim
+        label: Helyzeteim
+        type: string
+      - name: kapcsolataim
+        label: Kapcsolataim
+        type: string
+      - name: bonus
+        label: Bonus
+        type: string
+  - name: components
+    label: Components
+    type: object
+    fields:
+    - name: flip
+      label: Flip
+      type: object
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: string
+      - name: flipAria
+        label: Flip aria
+        type: string
+      - name: tapBack
+        label: Tap back
+        type: string
+      - name: tapFront
+        label: Tap front
+        type: string
+    - name: series
+      label: Series
+      type: object
+      fields:
+      - name: carry
+        label: Carry
+        type: string
+      - name: closing
+        label: Closing
+        type: string
+    - name: competency
+      label: Competency
+      type: object
+      fields:
+      - name: close
+        label: Close
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+      - name: example
+        label: Example
+        type: string
+    - name: accordion
+      label: Accordion
+      type: object
+      fields:
+      - name: fallback
+        label: Fallback
+        type: string
+      - name: action
+        label: Action
+        type: string
+    - name: audio
+      label: Audio
+      type: object
+      fields:
+      - name: fallbackTitle
+        label: Fallback title
+        type: string
+      - name: transcriptTitle
+        label: Transcript title
+        type: string
+      - name: play
+        label: Play
+        type: string
+      - name: stop
+        label: Stop
+        type: string
+    - name: actions
+      label: Actions
+      type: object
+      fields:
+      - name: show
+        label: Show
+        type: string
+      - name: hide
+        label: Hide
+        type: string
+      - name: saved
+        label: Saved
+        type: string
+      - name: restart
+        label: Restart
+        type: string
+      - name: stopped
+        label: Stopped
+        type: string
+  - name: sectionCopy
+    label: Section copy
+    type: object
+    fields:
+    - name: onmagam
+      label: Onmagam
+      type: object
+      fields:
+      - name: breathing
+        label: Breathing
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: mindfulness
+        label: Mindfulness
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: careers
+        label: Careers
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Quiz
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+    - name: helyzeteim
+      label: Helyzeteim
+      type: object
+      fields:
+      - name: world
+        label: World
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: jobhunt
+        label: Jobhunt
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: interview
+        label: Interview
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: cv
+        label: Cv
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: linkedin
+        label: Linkedin
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: firstday
+        label: Firstday
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: redflags
+        label: Redflags
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: legal
+        label: Legal
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: scenarios
+        label: Scenarios
+        type: object
+        fields:
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+    - name: kapcsolataim
+      label: Kapcsolataim
+      type: object
+      fields:
+      - name: twosides
+        label: Twosides
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: generations
+        label: Generations
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+      - name: communication
+        label: Communication
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: phrases
+        label: Phrases
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: digital
+        label: Digital
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+      - name: glossary
+        label: Glossary
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: string
+        - name: quizTitle
+          label: Quiz title
+          type: string
+        - name: quizDescription
+          label: Quiz description
+          type: string
+  - name: breathing
+    label: Breathing
+    type: object
+    fields:
+    - name: ready
+      label: Ready
+      type: string
+    - name: start
+      label: Start
+      type: string
+    - name: stop
+      label: Stop
+      type: string
+    - name: inhale
+      label: Inhale
+      type: string
+    - name: hold
+      label: Hold
+      type: string
+    - name: exhale
+      label: Exhale
+      type: string
+  - name: contentTypeLabels
+    label: Content type labels
+    type: object
+    fields:
+    - name: story
+      label: Story
+      type: string
+    - name: accordion
+      label: Accordion
+      type: string
+    - name: flip
+      label: Flip
+      type: string
+    - name: quiz
+      label: Quiz
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_assets_json
+  label: Ikonok, képek és hanganyagok
+  type: file
+  path: content/assets.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: logos
+    label: Logos
+    type: object
+    fields:
+    - name: main
+      label: Main
+      type: image
+    - name: container
+      label: Container
+      type: image
+    - name: mainV2
+      label: Main v2
+      type: image
+    - name: pinpoint
+      label: Pinpoint
+      type: image
+    - name: rocket
+      label: Rocket
+      type: image
+    - name: wordmark
+      label: Wordmark
+      type: image
+  - name: smallIcons
+    label: Small icons
+    type: object
+    fields:
+    - name: onmagam
+      label: Onmagam
+      type: image
+    - name: helyzeteim
+      label: Helyzeteim
+      type: image
+    - name: kapcsolataim
+      label: Kapcsolataim
+      type: image
+    - name: bonus
+      label: Bonus
+      type: image
+  - name: bigIcons
+    label: Big icons
+    type: object
+    fields:
+    - name: GG_BIG_ICON.svg
+      label: Gg big icon.svg
+      type: image
+    - name: GG_BIG_ICON_thin.svg
+      label: Gg big icon thin.svg
+      type: image
+    - name: QG_BIG_ICON.svg
+      label: Qg big icon.svg
+      type: image
+    - name: QG_BIG_ICON_thin.svg
+      label: Qg big icon thin.svg
+      type: image
+    - name: QW_BIG_ICON.svg
+      label: Qw big icon.svg
+      type: image
+    - name: QW_BIG_ICON_thin.svg
+      label: Qw big icon thin.svg
+      type: image
+    - name: WW_BIG_ICON.svg
+      label: Ww big icon.svg
+      type: image
+    - name: WW_BIG_ICON_thin.svg
+      label: Ww big icon thin.svg
+      type: image
+  - name: intro
+    label: Intro
+    type: object
+    fields:
+    - name: skyRocket
+      label: Sky rocket
+      type: image
+    - name: heroBottom
+      label: Hero bottom
+      type: image
+    - name: rocketBackground
+      label: Rocket background
+      type: image
+    - name: rocketBig
+      label: Rocket big
+      type: image
+    - name: rocketBigBackground
+      label: Rocket big background
+      type: image
+    - name: skyRocketBackground
+      label: Sky rocket background
+      type: image
+    - name: skyRocketHeroBottom
+      label: Sky rocket hero bottom
+      type: image
+    - name: skyRocketShip
+      label: Sky rocket ship
+      type: image
+    - name: whiteCloud
+      label: White cloud
+      type: image
+    - name: whiteCloudCenter
+      label: White cloud center
+      type: image
+  - name: appIcons
+    label: App icons
+    type: object
+    fields:
+    - name: icon192
+      label: Icon192
+      type: image
+    - name: icon512
+      label: Icon512
+      type: image
+    - name: maskable512
+      label: Maskable512
+      type: image
+    - name: svg
+      label: Svg
+      type: image
+    - name: appleTouch
+      label: Apple touch
+      type: image
+    - name: favicon
+      label: Favicon
+      type: image
+  - name: audio
+    label: Audio
+    type: object
+    fields:
+    - name: safePlace
+      label: Safe place
+      type: string
+    - name: goldBubble
+      label: Gold bubble
+      type: string
+    - name: backpack
+      label: Backpack
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_home_json
   label: Főoldal
   type: file
   path: content/home.json
@@ -29,2252 +1221,2347 @@ content:
     type: object
     fields:
     - name: heroEyebrow
-      label: Felső címke
+      label: Hero eyebrow
       type: string
     - name: heroTitle
-      label: Főcím
+      label: Hero title
       type: string
     - name: heroDescription
-      label: Bevezető szöveg
+      label: Hero description
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_galaxy_guide_index_json
+  label: Galaxy Guide · Modulbeállítások
+  type: file
+  path: content/modules/galaxy-guide/index.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: slug
+    label: Slug
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: code
+    label: Code
+    type: text
+  - name: className
+    label: Class name
+    type: string
+    hidden: true
+  - name: icon
+    label: Ikon
+    type: image
+  - name: thin
+    label: Hero ikon
+    type: image
+  - name: lead
+    label: Bevezető
+    type: string
+  - name: time
+    label: Időtartam
+    type: number
+  - name: sections
+    label: Aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title}'
+    fields:
+    - name: id
+      label: Id
+      type: string
+      hidden: true
+    - name: title
+      label: Cím
+      type: string
+    - name: file
+      label: File
+      type: string
+      hidden: true
+    readonly: true
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
+  - name: heroIconMode
+    label: Hero icon mode
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_index_json
+  label: Quick Win · Modulbeállítások
+  type: file
+  path: content/modules/quick-win/index.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: slug
+    label: Slug
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: code
+    label: Code
+    type: text
+  - name: className
+    label: Class name
+    type: string
+    hidden: true
+  - name: icon
+    label: Ikon
+    type: image
+  - name: thin
+    label: Hero ikon
+    type: image
+  - name: lead
+    label: Bevezető
+    type: string
+  - name: time
+    label: Időtartam
+    type: number
+  - name: sections
+    label: Aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title}'
+    fields:
+    - name: id
+      label: Id
+      type: string
+      hidden: true
+    - name: title
+      label: Cím
+      type: string
+    - name: file
+      label: File
+      type: string
+      hidden: true
+    readonly: true
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
+  - name: heroIconMode
+    label: Hero icon mode
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_index_json
+  label: Quit Go · Modulbeállítások
+  type: file
+  path: content/modules/quit-go/index.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: slug
+    label: Slug
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: code
+    label: Code
+    type: text
+  - name: className
+    label: Class name
+    type: string
+    hidden: true
+  - name: icon
+    label: Ikon
+    type: image
+  - name: thin
+    label: Hero ikon
+    type: image
+  - name: lead
+    label: Bevezető
+    type: string
+  - name: time
+    label: Időtartam
+    type: number
+  - name: sections
+    label: Aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title}'
+    fields:
+    - name: id
+      label: Id
+      type: string
+      hidden: true
+    - name: title
+      label: Cím
+      type: string
+    - name: file
+      label: File
+      type: string
+      hidden: true
+    readonly: true
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
+  - name: heroIconMode
+    label: Hero icon mode
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_index_json
+  label: Win Win · Modulbeállítások
+  type: file
+  path: content/modules/win-win/index.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: slug
+    label: Slug
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: code
+    label: Code
+    type: text
+  - name: className
+    label: Class name
+    type: string
+    hidden: true
+  - name: icon
+    label: Ikon
+    type: image
+  - name: thin
+    label: Hero ikon
+    type: image
+  - name: lead
+    label: Bevezető
+    type: string
+  - name: time
+    label: Időtartam
+    type: number
+  - name: sections
+    label: Aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title}'
+    fields:
+    - name: id
+      label: Id
+      type: string
+      hidden: true
+    - name: title
+      label: Cím
+      type: string
+    - name: file
+      label: File
+      type: string
+      hidden: true
+    readonly: true
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
+  - name: heroIconMode
+    label: Hero icon mode
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_galaxy_guide_materials_json
+  label: Galaxy Guide · Materials
+  type: file
+  path: content/modules/galaxy-guide/materials.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: bonusMaterials
+      label: Bonus materials
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: id
+        label: Id
+        type: string
+        hidden: true
+      - name: category
+        label: Category
+        type: string
+      - name: icon
+        label: Ikon
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+      - name: status
+        label: Status
+        type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_galaxy_guide_videos_json
+  label: Galaxy Guide · Videos
+  type: file
+  path: content/modules/galaxy-guide/videos.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: videoStories
+      label: Video stories
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: id
+        label: Id
+        type: string
+        hidden: true
+      - name: profession
+        label: Profession
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+      - name: status
+        label: Status
+        type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_cv_json
+  label: Quick Win · Cv
+  type: file
+  path: content/modules/quick-win/cv.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: cvCards
+      label: Cv cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: topic
+        label: Topic
+        type: string
+      - name: do
+        label: Do
+        type: string
+      - name: dont
+        label: Dont
+        type: string
+    - name: cvTips
+      label: Cv tips
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: do
+        label: Do
+        type: string
+      - name: dont
+        label: Dont
+        type: string
+    - name: cvQuickRule
+      label: Cv quick rule
+      type: object
+      fields:
+      - name: do
+        label: Do
+        type: string
+      - name: dont
+        label: Dont
+        type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_firstday_json
+  label: Quick Win · Firstday
+  type: file
+  path: content/modules/quick-win/firstday.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: firstDayChecklist
+      label: First day checklist
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: id
+        label: Id
+        type: string
+        hidden: true
+      - name: text
+        label: Text
+        type: string
+    - name: firstDayQuiz
+      label: First day quiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_interview_json
+  label: Quick Win · Interview
+  type: file
+  path: content/modules/quick-win/interview.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: interviewCards
+      label: Interview cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: text
+    - name: interviewClosing
+      label: Interview closing
+      type: object
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_jobhunt_json
+  label: Quick Win · Jobhunt
+  type: file
+  path: content/modules/quick-win/jobhunt.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: jobHuntCards
+      label: Job hunt cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: string
+    - name: jobHuntClosing
+      label: Job hunt closing
       type: text
   operations:
     delete: false
     rename: false
-- name: onmagam
-  label: Önmagam
-  type: group
-  items:
-  - name: onmagam_module
-    label: Önmagam – modulbeállítások
-    type: file
-    path: content/modules/quit-go/index.json
-    format: json
+- name: content_modules_quick_win_legal_json
+  label: Quick Win · Legal
+  type: file
+  path: content/modules/quick-win/legal.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
     fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: slug
-      label: Slug
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: code
-      label: Code
-      type: string
-      hidden: true
-    - name: className
-      label: Class Name
-      type: string
-      hidden: true
-    - name: icon
-      label: Ikon
-      type: string
-    - name: thin
-      label: Rövid cím
-      type: string
-    - name: lead
-      label: Bevezető
-      type: text
-    - name: time
-      label: Időtartam (perc)
-      type: number
-    - name: sections
-      label: Aloldalak
+    - name: legalBasics
+      label: Legal basics
       type: object
       list:
         collapsible:
           collapsed: true
           summary: '{title}'
       fields:
-      - name: id
-        label: Id
-        type: string
-        hidden: true
       - name: title
         label: Cím
         type: string
-      - name: file
-        label: File
+      - name: subtitle
+        label: Subtitle
         type: string
-        hidden: true
-      readonly: true
-      description: Az aloldalak szerkezetét itt biztonsági okból nem módosítjuk; a tartalom külön menüpontokban szerkeszthető.
-    - name: heroIconMode
-      label: Hero Icon Mode
-      type: string
-      hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_breathing
-    label: Nyugalom
-    type: file
-    path: content/modules/quit-go/breathing.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields: []
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_careers
-    label: Karrierutak
-    type: file
-    path: content/modules/quit-go/careers.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: blueCollarExamples
-        label: Blue Collar Examples
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: 'Elem #{index}'
-        fields:
-        - name: icon
-          label: Ikon
-          type: string
-        - name: from
-          label: Kiindulás
-          type: string
-        - name: steps
-          label: Lépések
-          type: string
-          list: true
-        - name: motivation
-          label: Motiváció
-          type: text
-        - name: skills
-          label: Készségek
-          type: string
-          list: true
-        - name: competencies
-          label: Kompetenciák
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: 'Elem #{index}'
-          fields:
-          - name: name
-            label: Name
-            type: string
-          - name: description
-            label: Leírás
-            type: text
-          - name: example
-            label: Example
-            type: text
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_marketfacts
-    label: Tudtad-e?
-    type: file
-    path: content/modules/quit-go/marketfacts.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: marketFacts
-        label: Market Facts
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{front}'
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-      - name: marketFactsClosing
-        label: Market Facts Closing
+      - name: content
+        label: Content
         type: text
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_mindfulness
-    label: Mindfulness
-    type: file
-    path: content/modules/quit-go/mindfulness.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: mindfulnessExercises
-        label: Mindfulness Exercises
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: icon
-          label: Ikon
-          type: string
-        - name: title
-          label: Cím
-          type: string
-        - name: tag
-          label: Címke
-          type: string
-        - name: description
-          label: Leírás
-          type: text
-        - name: steps
-          label: Lépések
-          type: string
-          list: true
-        - name: takeaway
-          label: Útravaló
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_preboarding
-    label: Első nap
-    type: file
-    path: content/modules/quit-go/preboarding.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: preboardingData
-        label: Preboarding Data
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{question}'
-        fields:
-        - name: question
-          label: Kérdés
-          type: string
-        - name: answer
-          label: Válasz
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_quiz
-    label: Helyzetek
-    type: file
-    path: content/modules/quit-go/quiz.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: onmagamQuizItems
-        label: Onmagam Quiz Items
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-      - name: onmagamQuiz
-        label: Onmagam Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{question}'
-        fields:
-        - name: question
-          label: Kérdés
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: string
-          list: true
-        - name: correctAnswer
-          label: Helyes válasz
-          type: number
-        - name: explanation
-          label: Magyarázat
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: onmagam_survival
-    label: Első év
-    type: file
-    path: content/modules/quit-go/survival.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: survivalGuideData
-        label: Survival Guide Data
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: month
-          label: Időszak
-          type: number
-        - name: title
-          label: Cím
-          type: string
-        - name: content
-          label: Tartalom
-          type: text
-        - name: takeaway
-          label: Útravaló
-          type: text
-    operations:
-      delete: false
-      rename: false
-- name: helyzeteim
-  label: Helyzeteim
-  type: group
-  items:
-  - name: helyzeteim_module
-    label: Helyzeteim – modulbeállítások
-    type: file
-    path: content/modules/quick-win/index.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: slug
-      label: Slug
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: code
-      label: Code
-      type: string
-      hidden: true
-    - name: className
-      label: Class Name
-      type: string
-      hidden: true
-    - name: icon
-      label: Ikon
-      type: string
-    - name: thin
-      label: Rövid cím
-      type: string
-    - name: lead
-      label: Bevezető
-      type: text
-    - name: time
-      label: Időtartam (perc)
-      type: number
-    - name: sections
-      label: Aloldalak
+      - name: goodToKnow
+        label: Good to know
+        type: text
+    - name: legalBasicsQuiz
+      label: Legal basics quiz
       type: object
       list:
         collapsible:
           collapsed: true
-          summary: '{title}'
+          summary: 'Elem #{index}'
       fields:
-      - name: id
-        label: Id
+      - name: situation
+        label: Situation
         type: string
-        hidden: true
-      - name: title
-        label: Cím
-        type: string
-      - name: file
-        label: File
-        type: string
-        hidden: true
-      readonly: true
-      description: Az aloldalak szerkezetét itt biztonsági okból nem módosítjuk; a tartalom külön menüpontokban szerkeszthető.
-    - name: heroIconMode
-      label: Hero Icon Mode
-      type: string
-      hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_cv
-    label: 'CV: mit írj?'
-    type: file
-    path: content/modules/quick-win/cv.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: cvCards
-        label: Cv Cards
+      - name: options
+        label: Options
         type: object
         list:
           collapsible:
             collapsed: true
             summary: 'Elem #{index}'
         fields:
-        - name: topic
-          label: Topic
-          type: string
-        - name: do
-          label: Ezt írd / tedd
-          type: string
-        - name: dont
-          label: Ezt ne írd / tedd
-          type: text
-      - name: cvTips
-        label: Cv Tips
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: 'Elem #{index}'
-        fields:
-        - name: do
-          label: Ezt írd / tedd
-          type: string
-        - name: dont
-          label: Ezt ne írd / tedd
-          type: text
-      - name: cvQuickRule
-        label: Cv Quick Rule
-        type: object
-        fields:
-        - name: do
-          label: Ezt írd / tedd
-          type: string
-        - name: dont
-          label: Ezt ne írd / tedd
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_firstday
-    label: Első nap
-    type: file
-    path: content/modules/quick-win/firstday.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: firstDayChecklist
-        label: First Day Checklist
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{text}'
-        fields:
-        - name: id
-          label: Id
-          type: number
-          hidden: true
         - name: text
-          label: Szöveg
-          type: text
-      - name: firstDayQuiz
-        label: First Day Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
+          label: Text
           type: string
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_interview
-    label: Interjú Q&A
-    type: file
-    path: content/modules/quick-win/interview.json
-    format: json
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+  - name: expertReview
+    label: Expert review
+    type: object
     fields:
-    - name: schema
-      label: Schema
+    - name: version
+      label: Version
       type: string
-      hidden: true
-    - name: id
-      label: Id
+    - name: reviewedAt
+      label: Reviewed at
       type: string
-      hidden: true
-    - name: title
-      label: Cím
+    - name: scope
+      label: Scope
       type: string
-    - name: data
-      label: Data
+      list: true
+    - name: notice
+      label: Notice
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_linkedin_json
+  label: Quick Win · Linkedin
+  type: file
+  path: content/modules/quick-win/linkedin.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: linkedinCards
+      label: Linkedin cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: string
+    - name: linkedinClosing
+      label: Linkedin closing
       type: object
       fields:
-      - name: interviewCards
-        label: Interview Cards
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{front}'
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-      - name: interviewClosing
-        label: Interview Closing
-        type: object
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_jobhunt
-    label: Állásvadászat Z módra
-    type: file
-    path: content/modules/quick-win/jobhunt.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: jobHuntCards
-        label: Job Hunt Cards
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{front}'
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-      - name: jobHuntClosing
-        label: Job Hunt Closing
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
         type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_legal
-    label: Munkajogi alapok
-    type: file
-    path: content/modules/quick-win/legal.json
-    format: json
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_redflags_json
+  label: Quick Win · Redflags
+  type: file
+  path: content/modules/quick-win/redflags.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
     fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: legalBasics
-        label: Jogi alapok
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: subtitle
-          label: Alcím
-          type: text
-        - name: content
-          label: Tartalom
-          type: text
-        - name: goodToKnow
-          label: Jó tudni
-          type: text
-      - name: legalBasicsQuiz
-        label: Legal Basics Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-    - name: expertReview
-      label: Expert Review
-      type: object
-      hidden: true
-      fields:
-      - name: version
-        label: Version
-        type: string
-        hidden: true
-      - name: reviewedAt
-        label: Reviewed At
-        type: string
-        hidden: true
-      - name: scope
-        label: Scope
-        type: string
-        list: true
-        hidden: true
-      - name: notice
-        label: Notice
-        type: string
-        hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_linkedin
-    label: LinkedIn tippek
-    type: file
-    path: content/modules/quick-win/linkedin.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: linkedinCards
-        label: Linkedin Cards
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{front}'
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-      - name: linkedinClosing
-        label: Linkedin Closing
-        type: object
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_redflags
-    label: Vészjelek
-    type: file
-    path: content/modules/quick-win/redflags.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: redFlags
-        label: Red flagek
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: action
-          label: Teendő
-          type: text
-      - name: redFlagQuiz
-        label: Red Flag Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-    - name: expertReview
-      label: Expert Review
-      type: object
-      hidden: true
-      fields:
-      - name: version
-        label: Version
-        type: string
-        hidden: true
-      - name: reviewedAt
-        label: Reviewed At
-        type: string
-        hidden: true
-      - name: scope
-        label: Scope
-        type: string
-        list: true
-        hidden: true
-      - name: notice
-        label: Notice
-        type: string
-        hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_scenarios
-    label: Gyakorlás
-    type: file
-    path: content/modules/quick-win/scenarios.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: helyzeteiScenarios
-        label: Helyzetei Scenarios
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: situation
-          label: Helyzet
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-    operations:
-      delete: false
-      rename: false
-  - name: helyzeteim_world
-    label: A munka világa
-    type: file
-    path: content/modules/quick-win/world.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: workWorldCards
-        label: Work World Cards
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: content
-          label: Tartalom
-          type: text
-      - name: workWorldQuiz
-        label: Work World Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-      - name: workWorldClosing
-        label: Work World Closing
-        type: object
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-    operations:
-      delete: false
-      rename: false
-- name: kapcsolataim
-  label: Kapcsolataim
-  type: group
-  items:
-  - name: kapcsolataim_module
-    label: Kapcsolataim – modulbeállítások
-    type: file
-    path: content/modules/win-win/index.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: slug
-      label: Slug
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: code
-      label: Code
-      type: string
-      hidden: true
-    - name: className
-      label: Class Name
-      type: string
-      hidden: true
-    - name: icon
-      label: Ikon
-      type: string
-    - name: thin
-      label: Rövid cím
-      type: string
-    - name: lead
-      label: Bevezető
-      type: text
-    - name: time
-      label: Időtartam (perc)
-      type: number
-    - name: sections
-      label: Aloldalak
+    - name: redFlags
+      label: Red flags
       type: object
       list:
         collapsible:
           collapsed: true
           summary: '{title}'
       fields:
-      - name: id
-        label: Id
-        type: string
-        hidden: true
       - name: title
         label: Cím
         type: string
-      - name: file
-        label: File
-        type: string
-        hidden: true
-      readonly: true
-      description: Az aloldalak szerkezetét itt biztonsági okból nem módosítjuk; a tartalom külön menüpontokban szerkeszthető.
-    - name: heroIconMode
-      label: Hero Icon Mode
-      type: string
-      hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_communication
-    label: Kommunikáció
-    type: file
-    path: content/modules/win-win/communication.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
+      - name: action
+        label: Action
+        type: text
+    - name: redFlagQuiz
+      label: Red flag quiz
       type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
       fields:
-      - name: communicationFlips
-        label: Communication Flips
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
         type: object
         list:
           collapsible:
             collapsed: true
             summary: 'Elem #{index}'
         fields:
-        - name: amateur
-          label: Amatőr
-          type: string
-        - name: pro
-          label: Profi
-          type: string
-      - name: komunikációQuiz
-        label: KomunikációQuiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
+        - name: text
+          label: Text
           type: text
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-        - name: winWin
-          label: Win-win válasz
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_digital
-    label: Digitális tér
-    type: file
-    path: content/modules/win-win/digital.json
-    format: json
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: string
+  - name: expertReview
+    label: Expert review
+    type: object
     fields:
-    - name: schema
-      label: Schema
+    - name: version
+      label: Version
       type: string
-      hidden: true
-    - name: id
-      label: Id
+    - name: reviewedAt
+      label: Reviewed at
       type: string
-      hidden: true
-    - name: title
-      label: Cím
+    - name: scope
+      label: Scope
       type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: digitalBehavior
-        label: Digital Behavior
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: content
-          label: Tartalom
-          type: text
-      - name: digitálisViselkedésQuiz
-        label: Digitális Viselkedés Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: string
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: text
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_generations
-    label: Generációk
-    type: file
-    path: content/modules/win-win/generations.json
-    format: json
+      list: true
+    - name: notice
+      label: Notice
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_scenarios_json
+  label: Quick Win · Scenarios
+  type: file
+  path: content/modules/quick-win/scenarios.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
     fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: generationCards
-        label: Generation Cards
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{front}'
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-      - name: generationClosing
-        label: Generation Closing
-        type: object
-        fields:
-        - name: front
-          label: Előlap
-          type: string
-        - name: back
-          label: Hátlap
-          type: text
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_glossary
-    label: Fogalomtár
-    type: file
-    path: content/modules/win-win/glossary.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: glossary
-        label: Glossary
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{term}'
-        fields:
-        - name: term
-          label: Kifejezés
-          type: string
-        - name: definition
-          label: Jelentés
-          type: text
-        - name: when
-          label: Mikor használják?
-          type: text
-        - name: tip
-          label: Tipp
-          type: text
-      - name: fogalomtárQuiz
-        label: Fogalomtár Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: string
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: string
-    - name: expertReview
-      label: Expert Review
-      type: object
-      hidden: true
-      fields:
-      - name: version
-        label: Version
-        type: string
-        hidden: true
-      - name: reviewedAt
-        label: Reviewed At
-        type: string
-        hidden: true
-      - name: scope
-        label: Scope
-        type: string
-        list: true
-        hidden: true
-      - name: notice
-        label: Notice
-        type: string
-        hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_phrases
-    label: Pro mondatok
-    type: file
-    path: content/modules/win-win/phrases.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: proPhrases
-        label: Pro Phrases
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: string
-        - name: phrase
-          label: Mondat
-          type: text
-      - name: proSzóhasználatQuiz
-        label: Pro Szóhasználat Quiz
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{situation}'
-        fields:
-        - name: situation
-          label: Helyzet
-          type: string
-        - name: options
-          label: Válaszlehetőségek
-          type: object
-          list:
-            collapsible:
-              collapsed: true
-              summary: '{text}'
-          fields:
-          - name: text
-            label: Szöveg
-            type: text
-          - name: isOptimal
-            label: Is Optimal
-            type: boolean
-          - name: feedback
-            label: Feedback
-            type: string
-    operations:
-      delete: false
-      rename: false
-  - name: kapcsolataim_twosides
-    label: Két oldal
-    type: file
-    path: content/modules/win-win/twosides.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
-      type: object
-      fields:
-      - name: ketOldalData
-        label: Ket Oldal Data
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: 'Elem #{index}'
-        fields:
-        - name: zTitle
-          label: Fiatal nézőpont címe
-          type: string
-        - name: zText
-          label: Fiatal nézőpont
-          type: text
-        - name: employerTitle
-          label: Munkáltatói nézőpont címe
-          type: string
-        - name: employerText
-          label: Munkáltatói nézőpont
-          type: text
-    operations:
-      delete: false
-      rename: false
-- name: galaxy
-  label: Galaxy Guide
-  type: group
-  items:
-  - name: galaxy_module
-    label: Galaxy Guide – modulbeállítások
-    type: file
-    path: content/modules/galaxy-guide/index.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: slug
-      label: Slug
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: code
-      label: Code
-      type: string
-      hidden: true
-    - name: className
-      label: Class Name
-      type: string
-      hidden: true
-    - name: icon
-      label: Ikon
-      type: string
-    - name: thin
-      label: Rövid cím
-      type: string
-    - name: lead
-      label: Bevezető
-      type: text
-    - name: time
-      label: Időtartam (perc)
-      type: number
-    - name: sections
-      label: Aloldalak
+    - name: helyzeteiScenarios
+      label: Helyzetei scenarios
       type: object
       list:
         collapsible:
           collapsed: true
           summary: '{title}'
       fields:
-      - name: id
-        label: Id
-        type: string
-        hidden: true
       - name: title
         label: Cím
         type: string
-      - name: file
-        label: File
+      - name: situation
+        label: Situation
+        type: text
+      - name: options
+        label: Options
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quick_win_world_json
+  label: Quick Win · World
+  type: file
+  path: content/modules/quick-win/world.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: workWorldCards
+      label: Work world cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Cím
         type: string
-        hidden: true
-      readonly: true
-      description: Az aloldalak szerkezetét itt biztonsági okból nem módosítjuk; a tartalom külön menüpontokban szerkeszthető.
-    - name: heroIconMode
-      label: Hero Icon Mode
-      type: string
-      hidden: true
-    operations:
-      delete: false
-      rename: false
-  - name: galaxy_materials
-    label: Tudástár
-    type: file
-    path: content/modules/galaxy-guide/materials.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
+      - name: content
+        label: Content
+        type: text
+    - name: workWorldQuiz
+      label: Work world quiz
       type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
       fields:
-      - name: bonusMaterials
-        label: Anyagok
+      - name: situation
+        label: Situation
+        type: text
+      - name: options
+        label: Options
         type: object
         list:
           collapsible:
             collapsed: true
-            summary: '{title}'
+            summary: 'Elem #{index}'
         fields:
-        - name: id
-          label: Id
+        - name: text
+          label: Text
           type: string
-          hidden: true
-        - name: category
-          label: Kategória
-          type: string
-        - name: icon
-          label: Ikon
-          type: string
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
           type: text
-        - name: status
-          label: Állapot
-          type: string
-    operations:
-      delete: false
-      rename: false
-  - name: galaxy_videos
-    label: Videók
-    type: file
-    path: content/modules/galaxy-guide/videos.json
-    format: json
-    fields:
-    - name: schema
-      label: Schema
-      type: string
-      hidden: true
-    - name: id
-      label: Id
-      type: string
-      hidden: true
-    - name: title
-      label: Cím
-      type: string
-    - name: data
-      label: Data
+    - name: workWorldClosing
+      label: Work world closing
       type: object
       fields:
-      - name: videoStories
-        label: Videók
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_breathing_json
+  label: Quit Go · Breathing
+  type: file
+  path: content/modules/quit-go/breathing.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields: []
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_careers_json
+  label: Quit Go · Careers
+  type: file
+  path: content/modules/quit-go/careers.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: blueCollarExamples
+      label: Blue collar examples
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: icon
+        label: Ikon
+        type: string
+      - name: from
+        label: From
+        type: string
+      - name: steps
+        label: Steps
+        type: string
+        list: true
+      - name: motivation
+        label: Motivation
+        type: text
+      - name: skills
+        label: Skills
+        type: string
+        list: true
+      - name: competencies
+        label: Competencies
         type: object
         list:
           collapsible:
             collapsed: true
-            summary: '{title}'
+            summary: 'Elem #{index}'
         fields:
-        - name: id
-          label: Id
-          type: string
-          hidden: true
-        - name: profession
-          label: Szakma
-          type: string
-        - name: title
-          label: Cím
+        - name: name
+          label: Name
           type: string
         - name: description
           label: Leírás
           type: text
-        - name: status
-          label: Állapot
-          type: string
-    operations:
-      delete: false
-      rename: false
-- name: shared
-  label: Közös tartalmak
-  type: group
-  items:
-  - name: competencies
-    label: Kompetenciák
-    type: file
-    path: content/shared/competencies.json
-    format: json
+        - name: example
+          label: Example
+          type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_marketfacts_json
+  label: Quit Go · Marketfacts
+  type: file
+  path: content/modules/quit-go/marketfacts.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
     fields:
-    - name: schema
-      label: Schema
+    - name: marketFacts
+      label: Market facts
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: string
+    - name: marketFactsClosing
+      label: Market facts closing
       type: string
-      hidden: true
-    - name: competencyInfo
-      label: Competency Info
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_mindfulness_json
+  label: Quit Go · Mindfulness
+  type: file
+  path: content/modules/quit-go/mindfulness.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: mindfulnessExercises
+      label: Mindfulness exercises
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: icon
+        label: Ikon
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: tag
+        label: Tag
+        type: string
+      - name: description
+        label: Leírás
+        type: string
+      - name: steps
+        label: Steps
+        type: string
+        list: true
+      - name: takeaway
+        label: Takeaway
+        type: string
+      - name: fallbackTitle
+        label: Fallback title
+        type: string
+      - name: fallbackHelp
+        label: Fallback help
+        type: text
+      - name: transcriptTitle
+        label: Transcript title
+        type: string
+      - name: transcript
+        label: Transcript
+        type: string
+        list: true
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_preboarding_json
+  label: Quit Go · Preboarding
+  type: file
+  path: content/modules/quit-go/preboarding.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: preboardingData
+      label: Preboarding data
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: question
+        label: Question
+        type: string
+      - name: answer
+        label: Answer
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_quiz_json
+  label: Quit Go · Quiz
+  type: file
+  path: content/modules/quit-go/quiz.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: onmagamQuizItems
+      label: Onmagam quiz items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+    - name: onmagamQuiz
+      label: Onmagam quiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: question
+        label: Question
+        type: string
+      - name: options
+        label: Options
+        type: string
+        list: true
+      - name: correctAnswer
+        label: Correct answer
+        type: number
+      - name: explanation
+        label: Explanation
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_quit_go_survival_json
+  label: Quit Go · Survival
+  type: file
+  path: content/modules/quit-go/survival.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: survivalGuideData
+      label: Survival guide data
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: month
+        label: Month
+        type: number
+      - name: title
+        label: Cím
+        type: string
+      - name: content
+        label: Content
+        type: text
+      - name: takeaway
+        label: Takeaway
+        type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_communication_json
+  label: Win Win · Communication
+  type: file
+  path: content/modules/win-win/communication.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: communicationFlips
+      label: Communication flips
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: amateur
+        label: Amateur
+        type: string
+      - name: pro
+        label: Pro
+        type: string
+    - name: komunikációQuiz
+      label: Komunikációquiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+      - name: winWin
+        label: Win win
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_digital_json
+  label: Win Win · Digital
+  type: file
+  path: content/modules/win-win/digital.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: digitalBehavior
+      label: Digital behavior
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Cím
+        type: string
+      - name: content
+        label: Content
+        type: text
+    - name: digitálisViselkedésQuiz
+      label: Digitális viselkedés quiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_generations_json
+  label: Win Win · Generations
+  type: file
+  path: content/modules/win-win/generations.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: generationCards
+      label: Generation cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: string
+    - name: generationClosing
+      label: Generation closing
       type: object
       fields:
-      - name: Kreativitás
-        label: Kreativitás
+      - name: front
+        label: Front
+        type: string
+      - name: back
+        label: Back
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_glossary_json
+  label: Win Win · Glossary
+  type: file
+  path: content/modules/win-win/glossary.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: glossary
+      label: Glossary
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: term
+        label: Term
+        type: string
+      - name: definition
+        label: Definition
+        type: text
+      - name: when
+        label: When
+        type: text
+      - name: tip
+        label: Tip
+        type: text
+    - name: fogalomtárQuiz
+      label: Fogalomtár quiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
         type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
         fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Csapatvezetés
-        label: Csapatvezetés
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: string
+  - name: expertReview
+    label: Expert review
+    type: object
+    fields:
+    - name: version
+      label: Version
+      type: string
+    - name: reviewedAt
+      label: Reviewed at
+      type: string
+    - name: scope
+      label: Scope
+      type: string
+      list: true
+    - name: notice
+      label: Notice
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_phrases_json
+  label: Win Win · Phrases
+  type: file
+  path: content/modules/win-win/phrases.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: proPhrases
+      label: Pro phrases
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: phrase
+        label: Phrase
+        type: string
+    - name: proSzóhasználatQuiz
+      label: Pro szóhasználat quiz
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
         type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
         fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Minőségtudatosság
-        label: Minőségtudatosság
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_modules_win_win_twosides_json
+  label: Win Win · Twosides
+  type: file
+  path: content/modules/win-win/twosides.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: id
+    label: Id
+    type: string
+    hidden: true
+  - name: title
+    label: Cím
+    type: string
+  - name: data
+    label: Tartalom
+    type: object
+    fields:
+    - name: ketOldalData
+      label: Ket oldal data
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: zTitle
+        label: Z title
+        type: string
+      - name: zText
+        label: Z text
+        type: text
+      - name: employerTitle
+        label: Employer title
+        type: string
+      - name: employerText
+        label: Employer text
+        type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_shared_competencies_json
+  label: Közös · Competencies
+  type: file
+  path: content/shared/competencies.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: competencyInfo
+    label: Competency info
+    type: object
+    fields:
+    - name: Kreativitás
+      label: Kreativitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Csapatvezetés
+      label: Csapatvezetés
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Minőségtudatosság
+      label: Minőségtudatosság
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Digitális kompetencia
+      label: Digitális kompetencia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Problémamegoldás
+      label: Problémamegoldás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Szervezőkészség
+      label: Szervezőkészség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Precizitás
+      label: Precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kezdeményezőkészség
+      label: Kezdeményezőkészség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Tanulási képesség
+      label: Tanulási képesség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Szakmai kommunikáció
+      label: Szakmai kommunikáció
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Időgazdálkodás
+      label: Időgazdálkodás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Üzleti szemlélet
+      label: Üzleti szemlélet
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Önprezentáció
+      label: Önprezentáció
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kritikai gondolkodás
+      label: Kritikai gondolkodás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Együttműködés
+      label: Együttműködés
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kommunikáció
+      label: Kommunikáció
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Szakács::Precizitás
+      label: Szakács::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Szakács::Csapatmunka
+      label: Szakács::csapatmunka
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Szakács::Stressztűrés
+      label: Szakács::stressztűrés
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Villanyszerelő::Biztonsági tudatosság
+      label: Villanyszerelő::biztonsági tudatosság
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Villanyszerelő::Problémamegoldás
+      label: Villanyszerelő::problémamegoldás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Villanyszerelő::Digitális kompetencia
+      label: Villanyszerelő::digitális kompetencia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Asztalos::Kézügyesség
+      label: Asztalos::kézügyesség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Asztalos::Precizitás
+      label: Asztalos::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Asztalos::Kreativitás
+      label: Asztalos::kreativitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Hegesztő::Precizitás
+      label: Hegesztő::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Hegesztő::Minőségtudatosság
+      label: Hegesztő::minőségtudatosság
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Hegesztő::Tanulási képesség
+      label: Hegesztő::tanulási képesség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Autószerelő::Műszaki érzék
+      label: Autószerelő::műszaki érzék
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Autószerelő::Problémamegoldás
+      label: Autószerelő::problémamegoldás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Autószerelő::Precizitás
+      label: Autószerelő::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Fodrász::Ügyfélorientáltság
+      label: Fodrász::ügyfélorientáltság
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Fodrász::Kézügyesség
+      label: Fodrász::kézügyesség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Fodrász::Empátia
+      label: Fodrász::empátia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Pék::Kreativitás
+      label: Pék::kreativitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Pék::Minőségtudatosság
+      label: Pék::minőségtudatosság
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Pék::Időgazdálkodás
+      label: Pék::időgazdálkodás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Cukrász::Precizitás
+      label: Cukrász::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Cukrász::Kreativitás
+      label: Cukrász::kreativitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Cukrász::Esztétikai érzék
+      label: Cukrász::esztétikai érzék
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kozmetikus::Empátia
+      label: Kozmetikus::empátia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kozmetikus::Kézügyesség
+      label: Kozmetikus::kézügyesség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Kozmetikus::Szakmai kommunikáció
+      label: Kozmetikus::szakmai kommunikáció
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Gépésztechnikus::Digitális kompetencia
+      label: Gépésztechnikus::digitális kompetencia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Gépésztechnikus::Kritikai gondolkodás
+      label: Gépésztechnikus::kritikai gondolkodás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Gépésztechnikus::Precizitás
+      label: Gépésztechnikus::precizitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Logisztikai munkatárs::Szervezőkészség
+      label: Logisztikai munkatárs::szervezőkészség
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Logisztikai munkatárs::Együttműködés
+      label: Logisztikai munkatárs::együttműködés
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Logisztikai munkatárs::Digitális kompetencia
+      label: Logisztikai munkatárs::digitális kompetencia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Tartalomkészítő::Kreativitás
+      label: Tartalomkészítő::kreativitás
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Tartalomkészítő::Kommunikáció
+      label: Tartalomkészítő::kommunikáció
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+    - name: Tartalomkészítő::Digitális kompetencia
+      label: Tartalomkészítő::digitális kompetencia
+      type: object
+      fields:
+      - name: description
+        label: Leírás
+        type: text
+      - name: example
+        label: Example
+        type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_shared_onmagam_data_json
+  label: Közös · Onmagam Data
+  type: file
+  path: content/shared/onmagam-data.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: onmagamData
+    label: Onmagam data
+    type: object
+    fields:
+    - name: preboardingData
+      label: Preboarding data
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: question
+        label: Question
+        type: string
+      - name: answer
+        label: Answer
+        type: text
+    - name: survivalGuideData
+      label: Survival guide data
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: month
+        label: Month
+        type: number
+      - name: title
+        label: Cím
+        type: string
+      - name: content
+        label: Content
+        type: text
+      - name: takeaway
+        label: Takeaway
+        type: string
+    - name: blueCollarExamples
+      label: Blue collar examples
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: icon
+        label: Ikon
+        type: string
+      - name: from
+        label: From
+        type: string
+      - name: steps
+        label: Steps
+        type: string
+        list: true
+      - name: motivation
+        label: Motivation
+        type: text
+      - name: skills
+        label: Skills
+        type: string
+        list: true
+    - name: onmagamQuizItems
+      label: Onmagam quiz items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: situation
+        label: Situation
+        type: string
+      - name: options
+        label: Options
         type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
         fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Digitális kompetencia
-        label: Digitális kompetencia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Problémamegoldás
-        label: Problémamegoldás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Szervezőkészség
-        label: Szervezőkészség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Precizitás
-        label: Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kezdeményezőkészség
-        label: Kezdeményezőkészség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Tanulási képesség
-        label: Tanulási képesség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Szakmai kommunikáció
-        label: Szakmai kommunikáció
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Időgazdálkodás
-        label: Időgazdálkodás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Üzleti szemlélet
-        label: Üzleti szemlélet
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Önprezentáció
-        label: Önprezentáció
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kritikai gondolkodás
-        label: Kritikai gondolkodás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Együttműködés
-        label: Együttműködés
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kommunikáció
-        label: Kommunikáció
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Szakács::Precizitás
-        label: Szakács::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Szakács::Csapatmunka
-        label: Szakács::Csapatmunka
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Szakács::Stressztűrés
-        label: Szakács::Stressztűrés
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Villanyszerelő::Biztonsági tudatosság
-        label: Villanyszerelő::Biztonsági tudatosság
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Villanyszerelő::Problémamegoldás
-        label: Villanyszerelő::Problémamegoldás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Villanyszerelő::Digitális kompetencia
-        label: Villanyszerelő::Digitális kompetencia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Asztalos::Kézügyesség
-        label: Asztalos::Kézügyesség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Asztalos::Precizitás
-        label: Asztalos::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Asztalos::Kreativitás
-        label: Asztalos::Kreativitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Hegesztő::Precizitás
-        label: Hegesztő::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Hegesztő::Minőségtudatosság
-        label: Hegesztő::Minőségtudatosság
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Hegesztő::Tanulási képesség
-        label: Hegesztő::Tanulási képesség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Autószerelő::Műszaki érzék
-        label: Autószerelő::Műszaki érzék
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Autószerelő::Problémamegoldás
-        label: Autószerelő::Problémamegoldás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Autószerelő::Precizitás
-        label: Autószerelő::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Fodrász::Ügyfélorientáltság
-        label: Fodrász::Ügyfélorientáltság
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Fodrász::Kézügyesség
-        label: Fodrász::Kézügyesség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Fodrász::Empátia
-        label: Fodrász::Empátia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Pék::Kreativitás
-        label: Pék::Kreativitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Pék::Minőségtudatosság
-        label: Pék::Minőségtudatosság
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Pék::Időgazdálkodás
-        label: Pék::Időgazdálkodás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Cukrász::Precizitás
-        label: Cukrász::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Cukrász::Kreativitás
-        label: Cukrász::Kreativitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Cukrász::Esztétikai érzék
-        label: Cukrász::Esztétikai érzék
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kozmetikus::Empátia
-        label: Kozmetikus::Empátia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kozmetikus::Kézügyesség
-        label: Kozmetikus::Kézügyesség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Kozmetikus::Szakmai kommunikáció
-        label: Kozmetikus::Szakmai kommunikáció
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Gépésztechnikus::Digitális kompetencia
-        label: Gépésztechnikus::Digitális kompetencia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Gépésztechnikus::Kritikai gondolkodás
-        label: Gépésztechnikus::Kritikai gondolkodás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Gépésztechnikus::Precizitás
-        label: Gépésztechnikus::Precizitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Logisztikai munkatárs::Szervezőkészség
-        label: Logisztikai munkatárs::Szervezőkészség
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Logisztikai munkatárs::Együttműködés
-        label: Logisztikai munkatárs::Együttműködés
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Logisztikai munkatárs::Digitális kompetencia
-        label: Logisztikai munkatárs::Digitális kompetencia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Tartalomkészítő::Kreativitás
-        label: Tartalomkészítő::Kreativitás
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Tartalomkészítő::Kommunikáció
-        label: Tartalomkészítő::Kommunikáció
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-      - name: Tartalomkészítő::Digitális kompetencia
-        label: Tartalomkészítő::Digitális kompetencia
-        type: object
-        fields:
-        - name: description
-          label: Leírás
-          type: text
-        - name: example
-          label: Example
-          type: text
-    operations:
-      delete: false
-      rename: false
+        - name: text
+          label: Text
+          type: string
+        - name: isOptimal
+          label: Is optimal
+          type: boolean
+        - name: feedback
+          label: Feedback
+          type: text
+  operations:
+    delete: false
+    rename: false
+- name: content_custom_topics_json
+  label: Egyedi · Topics
+  type: file
+  path: content/custom/topics.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: items
+    label: Elemek
+    type: string
+    list: true
+  operations:
+    delete: false
+    rename: false

@@ -1,5 +1,5 @@
 import {project,baseProject,saveProject} from './project-content.js';
-export const defaultSettings={...(baseProject.settings||{heroEyebrow:'Beta 4.0',heroTitle:'Az első munkahely elérési távolságban!',heroDescription:'Gyakorlati segédlet az első munkahelyhez és a tudatos szakmai életút építéséhez.'})};
+export const defaultSettings={...(baseProject.settings||{})};
 const clone=value=>JSON.parse(JSON.stringify(value));
 export function getCustomContent(){return project.customContent||(project.customContent=[])}
 export function saveCustomContent(items){project.customContent=clone(items);saveProject();window.dispatchEvent(new CustomEvent('utiterv-content-changed'))}
@@ -11,4 +11,4 @@ export function getContentSettings(){return {...defaultSettings,...(project.sett
 export function saveContentSettings(settings){project.settings={...defaultSettings,...settings};saveProject();window.dispatchEvent(new CustomEvent('utiterv-content-changed'))}
 export function exportCustomContent(){return JSON.stringify({schema:'utiterv-content-v4',exportedAt:new Date().toISOString(),settings:getContentSettings(),items:getCustomContent()},null,2)}
 export function importCustomContent(raw){const parsed=JSON.parse(raw),items=Array.isArray(parsed)?parsed:parsed.items;if(!Array.isArray(items))throw new Error('A fájl nem tartalmaz érvényes tartalomlistát.');saveCustomContent(items);if(parsed.settings)saveContentSettings(parsed.settings);return items.length}
-export const contentTypeLabels={story:'Oldalirányú történet',accordion:'Lenyíló lista',flip:'Flip kártyák',quiz:'Felfedező kvíz'};
+export const contentTypeLabels=baseProject.ui?.contentTypeLabels||{story:'story',accordion:'accordion',flip:'flip',quiz:'quiz'};

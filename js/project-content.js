@@ -47,12 +47,14 @@ async function fetchBaseProject(){
   const competencies=await fetchJson(resolveFrom(MANIFEST_URL,manifest.shared.competencies));
   const onmagamData=await fetchJson(resolveFrom(MANIFEST_URL,manifest.shared.onmagamData));
   const custom=await fetchJson(resolveFrom(MANIFEST_URL,manifest.custom));
+  const ui=await fetchJson(resolveFrom(MANIFEST_URL,manifest.ui));
+  const assets=await fetchJson(resolveFrom(MANIFEST_URL,manifest.assets));
   modules.competencies={competencyInfo:clone(competencies.competencyInfo||{})};
   modules.onmagamData={onmagamData:clone(onmagamData.onmagamData||{})};
   return {
     schema:'utiterv-project-v5',version:manifest.version||'5.0.0',updatedAt:new Date().toISOString(),
     meta:clone(manifest.meta||{}),navigation,contentTree,modules,
-    settings:clone(home.settings||{}),customContent:clone(custom.items||[]),manifest:clone(manifest)
+    settings:clone(home.settings||{}),customContent:clone(custom.items||[]),ui:clone(ui||{}),assets:clone(assets||{}),manifest:clone(manifest)
   };
 }
 
