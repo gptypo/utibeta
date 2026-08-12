@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.6.5-block-editor';
+var VERSION = 'beta-3.6.7-editor-cleanup';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';

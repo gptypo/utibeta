@@ -1,4 +1,4 @@
-import {getStudio,patchStyle,setAsset,addInsertion,removeInsertion,setText,setClass,setCustomCss,setTheme,resetSelector,resetStudio,resetEverything,exportStudio,importStudio,getMedia,addMedia,removeMedia,undoStudio,redoStudio,getHistoryState,updateElement,addComponent,moveInsertion} from './studio-engine.js';
+import {getStudio,patchStyle,setAsset,addInsertion,removeInsertion,setText,setClass,setCustomCss,setTheme,resetSelector,resetStudio,resetEverything,exportStudio,importStudio,getMedia,addMedia,removeMedia,undoStudio,redoStudio,getHistoryState,updateElement,addComponent,moveInsertion,deleteElement} from './studio-engine.js';
 const $=s=>document.querySelector(s), preview=$('#studio-preview'), tree=$('#studio-tree'), form=$('#studio-style-form');
 let selected=null,nodes=[],fieldBaseline={},dirtyFields=new Set();
 const currentDevice=()=>$('#studio-style-device')?.value||'base';
@@ -15,21 +15,19 @@ function cssEscape(value){
 function selectorForPreview(el){
   if(el.dataset?.studioInsertId)return `[data-studio-insert-id="${cssEscape(el.dataset.studioInsertId)}"]`;
   if(el.id)return `#${cssEscape(el.id)}`;
+  const doc=el.ownerDocument;
   const path=[];
   let n=el;
-  while(n&&n!==n.ownerDocument.body&&path.length<6){
+  while(n&&n.nodeType===1&&n!==doc.body){
+    if(n.id){path.unshift(`#${cssEscape(n.id)}`);break}
     let part=n.tagName.toLowerCase();
-    const useful=[...n.classList]
-      .filter(c=>!c.startsWith('is-')&&!c.startsWith('studio-'))
-      .slice(0,2);
-    if(useful.length){
-      part+='.'+useful.map(cssEscape).join('.');
-    }else if(n.parentElement){
-      const same=[...n.parentElement.children].filter(x=>x.tagName===n.tagName);
+    const parent=n.parentElement;
+    if(parent){
+      const same=[...parent.children].filter(x=>x.tagName===n.tagName);
       if(same.length>1)part+=`:nth-of-type(${same.indexOf(n)+1})`;
     }
     path.unshift(part);
-    n=n.parentElement;
+    n=parent;
   }
   return path.join(' > ');
 }
@@ -49,6 +47,7 @@ function rebuildDirectTree(doc){
 }
 function directSelect(el){
   const doc=el.ownerDocument;
+  const search=$('#studio-tree-search');if(search&&search.value)search.value='';
   doc.querySelectorAll('.studio-selected').forEach(x=>x.classList.remove('studio-selected'));
   el.classList.add('studio-selected');
   loadProperties(previewInfo(el));
@@ -62,7 +61,7 @@ function bindDirectInspector(){
   if(!style){
     style=doc.createElement('style');
     style.id='utiterv-studio-direct-inspector';
-    style.textContent='.studio-selected{outline:3px solid #14e8c9!important;outline-offset:3px!important}.studio-hover{outline:2px dashed #14e8c9!important;outline-offset:2px!important;cursor:crosshair!important}';
+    style.textContent='.studio-selected{outline:3px solid #14e8c9!important;outline-offset:3px!important}.studio-hover{outline:2px dashed #14e8c9!important;outline-offset:2px!important;cursor:crosshair!important}[data-studio-insert-id]:empty:not(img){min-height:28px!important;min-width:56px!important;outline:1px dashed rgba(20,232,201,.75)!important;outline-offset:2px!important}';
     doc.head.append(style);
   }
   doc.addEventListener('pointerover',e=>{
@@ -95,10 +94,12 @@ function renderTree(q=''){
  const f=q.toLowerCase().trim();
  const rows=nodes.filter(n=>!f||`${n.label} ${n.tag}`.toLowerCase().includes(f)).map(n=>{
   const insertId=n.insertId||insertionIdFromSelector(n.selector);
-  const controls=insertId?`<span class="studio-tree-actions"><button type="button" data-structure-action="up" data-insert-id="${esc(insertId)}" title="Felfelé" aria-label="Felfelé">↑</button><button type="button" data-structure-action="down" data-insert-id="${esc(insertId)}" title="Lefelé" aria-label="Lefelé">↓</button><button type="button" data-structure-action="indent" data-insert-id="${esc(insertId)}" title="Beljebb" aria-label="Beljebb">→</button><button type="button" data-structure-action="outdent" data-insert-id="${esc(insertId)}" title="Kijjebb" aria-label="Kijjebb">←</button></span>`:'';
+  const moveControls=insertId?`<button type="button" data-structure-action="up" data-insert-id="${esc(insertId)}" title="Felfelé" aria-label="Felfelé">↑</button><button type="button" data-structure-action="down" data-insert-id="${esc(insertId)}" title="Lefelé" aria-label="Lefelé">↓</button><button type="button" data-structure-action="indent" data-insert-id="${esc(insertId)}" title="Beljebb" aria-label="Beljebb">→</button><button type="button" data-structure-action="outdent" data-insert-id="${esc(insertId)}" title="Kijjebb" aria-label="Kijjebb">←</button>`:'';
+  const controls=`<span class="studio-tree-actions">${moveControls}<button type="button" class="studio-tree-delete" data-delete-selector="${esc(n.selector)}" data-delete-insert-id="${esc(insertId)}" title="Törlés" aria-label="Törlés">×</button></span>`;
   return `<div class="studio-tree-row ${selected?.selector===n.selector?'is-active':''}" style="--tree-depth:${n.depth||0}"><button type="button" class="studio-tree-main" data-selector="${esc(n.selector)}"><span>${n.tag}</span>${esc(n.label||n.selector)}</button>${controls}</div>`
  }).join('');
- tree.innerHTML=rows||'<p class="empty-state">Nincs találat.</p>'
+ tree.innerHTML=rows||'<p class="empty-state">Nincs találat.</p>';
+ requestAnimationFrame(()=>{const row=tree.querySelector('.studio-tree-row.is-active');if(row)row.scrollIntoView({behavior:'smooth',block:'nearest'})});
 }
 
 
@@ -123,7 +124,7 @@ function loadProperties(info){
  const a=d.assets?.[info.selector];$('#studio-current-asset').textContent=a?`Hozzárendelve: ${a.name||'grafika'} (${a.mode})`:'Nincs grafika hozzárendelve.';if(a){$('#studio-asset-mode').value=a.mode||'background';$('#studio-asset-size').value=a.size||'contain'}
  renderBreadcrumb(computed.__parents||[]);renderTree($('#studio-tree-search').value)
 }
-window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select')loadProperties(e.data)});
+window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select'){const search=$('#studio-tree-search');if(search&&search.value)search.value='';loadProperties(e.data)}});
 tree.addEventListener('click',e=>{const b=e.target.closest('[data-selector]');if(!b)return;preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:b.dataset.selector},'*');try{const el=preview.contentDocument.querySelector(b.dataset.selector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}}catch{}});
 function moveStudioBlock(id,action){
  let el;try{el=preview.contentDocument?.querySelector(`[data-studio-insert-id="${CSS.escape(id)}"]`)}catch{}
@@ -145,6 +146,7 @@ function moveStudioBlock(id,action){
  $('#studio-selected-label').textContent={up:'Elem feljebb mozgatva.',down:'Elem lejjebb mozgatva.',indent:'Elem beljebb helyezve.',outdent:'Elem kijjebb helyezve.'}[action]||'Struktúra frissítve.';
 }
 tree.addEventListener('click',e=>{const a=e.target.closest('[data-structure-action]');if(!a)return;e.preventDefault();e.stopPropagation();moveStudioBlock(a.dataset.insertId,a.dataset.structureAction)});
+tree.addEventListener('click',e=>{const b=e.target.closest('[data-delete-selector]');if(!b)return;e.preventDefault();e.stopPropagation();const label=b.closest('.studio-tree-row')?.querySelector('.studio-tree-main')?.textContent?.trim()||'elemet';if(!confirm(`Biztosan törlöd ezt az elemet?\n\n${label}`))return;const insertId=b.dataset.deleteInsertId;if(insertId)removeInsertion(insertId);else deleteElement(b.dataset.deleteSelector);if(selected?.selector===b.dataset.deleteSelector){selected=null;form.hidden=true;$('#studio-empty-properties').hidden=false;$('#studio-selected-label').textContent='Elem törölve.'}refresh();});
 $('#studio-tree-search').addEventListener('input',e=>renderTree(e.target.value));$('#studio-reload-tree').addEventListener('click',refresh);
 $('#studio-breadcrumb')?.addEventListener('click',e=>{const b=e.target.closest('[data-crumb-selector]');if(!b)return;const el=currentPreviewElement(b.dataset.crumbSelector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}});
 document.querySelectorAll('[data-auto-layout]').forEach(b=>b.addEventListener('click',()=>{if(!selected)return;const mode=b.dataset.autoLayout,patch=mode==='row'?{display:'flex',flexDirection:'row',alignItems:'center',gap:'16px'}:mode==='column'?{display:'flex',flexDirection:'column',alignItems:'stretch',gap:'16px'}:{display:'grid',gap:'16px'};Object.entries(patch).forEach(([k,v])=>{setFieldValue(k,v);dirtyFields.add(k)});saveSelectedLive()}));

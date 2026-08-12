@@ -9,3 +9,12 @@
 
 /index.html
   Cache-Control: no-cache
+
+/editor.html
+  Cache-Control: no-cache
+
+/js/studio-editor.js
+  Cache-Control: no-cache
+
+/js/studio-engine.js
+  Cache-Control: no-cache

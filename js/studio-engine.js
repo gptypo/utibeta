@@ -1,8 +1,8 @@
 const KEY='utiterv_studio_v1';
 const MEDIA_KEY='utiterv_studio_media_v1';
-const defaults={styles:{},responsiveStyles:{mobile:{},tablet:{},desktop:{}},assets:{},insertions:[],texts:{},classes:{},customCss:'',theme:{primary:'#007fff',accent:'#14e8c9',text:'#050505',surface:'#ffffff'},version:1};
+const defaults={styles:{},responsiveStyles:{mobile:{},tablet:{},desktop:{}},assets:{},insertions:[],deletedSelectors:[],texts:{},classes:{},customCss:'',theme:{primary:'#007fff',accent:'#14e8c9',text:'#050505',surface:'#ffffff'},version:1};
 const clone=x=>JSON.parse(JSON.stringify(x));
-export function getStudio(){try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');const data={...clone(defaults),...saved,theme:{...clone(defaults.theme),...(saved.theme||{})}};if(['#14e8c9','#14e8c9'].includes(String(data.theme.accent).toLowerCase()))data.theme.accent='#14e8c9';if(String(data.theme.primary).toLowerCase()==='#14e8c9')data.theme.primary='#007fff';if(String(data.theme.text).toLowerCase()==='#172126')data.theme.text='#050505';data.insertions=data.insertions||[];return data}catch{return clone(defaults)}}
+export function getStudio(){try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');const data={...clone(defaults),...saved,theme:{...clone(defaults.theme),...(saved.theme||{})}};if(['#14e8c9','#14e8c9'].includes(String(data.theme.accent).toLowerCase()))data.theme.accent='#14e8c9';if(String(data.theme.primary).toLowerCase()==='#14e8c9')data.theme.primary='#007fff';if(String(data.theme.text).toLowerCase()==='#172126')data.theme.text='#050505';data.insertions=data.insertions||[];data.deletedSelectors=data.deletedSelectors||[];return data}catch{return clone(defaults)}}
 const HISTORY_KEY='utiterv_studio_history_v1';
 function readHistory(){try{return JSON.parse(sessionStorage.getItem(HISTORY_KEY)||'{\"undo\":[],\"redo\":[]}')}catch{return {undo:[],redo:[]}}}
 function baselineSnapshot(){return JSON.stringify(clone(defaults))}
@@ -16,6 +16,7 @@ export function setAsset(selector,asset){const d=getStudio();if(asset)d.assets[s
 
 export function addInsertion(insertion){const d=getStudio();d.insertions=d.insertions||[];d.insertions.push({...insertion,id:insertion.id||`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`});return saveStudio(d)}
 export function removeInsertion(id){const d=getStudio();d.insertions=(d.insertions||[]).filter(x=>x.id!==id);return saveStudio(d)}
+export function deleteElement(selector){const d=getStudio();d.deletedSelectors=d.deletedSelectors||[];if(!d.deletedSelectors.includes(selector))d.deletedSelectors.push(selector);delete d.styles[selector];delete d.assets[selector];delete d.texts[selector];delete d.classes[selector];for(const bucket of Object.values(d.responsiveStyles||{}))delete bucket?.[selector];return saveStudio(d)}
 export function moveInsertion(id,patch={}){const d=getStudio();d.insertions=d.insertions||[];const item=d.insertions.find(x=>x.id===id);if(!item)return d;Object.assign(item,patch);return saveStudio(d)}
 export function setText(selector,text){const d=getStudio();if(text!=null)d.texts[selector]=text;else delete d.texts[selector];return saveStudio(d)}
 export function setClass(selector,className){const d=getStudio();if(className)d.classes[selector]=className;else delete d.classes[selector];return saveStudio(d)}
