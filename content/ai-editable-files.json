@@ -2,6 +2,10 @@
   "version": 1,
   "files": [
     {
+      "path": "content/modules/galaxy-guide/index.json",
+      "label": "modules · galaxy guide · aloldalak / struktúra"
+    },
+    {
       "path": "content/custom/topics.json",
       "label": "custom · topics"
     },

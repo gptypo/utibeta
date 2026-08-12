@@ -1,4 +1,4 @@
-import {getStudio,patchStyle,setAsset,addInsertion,removeInsertion,setText,setClass,setCustomCss,setTheme,resetSelector,resetStudio,resetEverything,exportStudio,importStudio,getMedia,addMedia,removeMedia,undoStudio,redoStudio,getHistoryState,updateElement,addComponent} from './studio-engine.js';
+import {getStudio,patchStyle,setAsset,addInsertion,removeInsertion,setText,setClass,setCustomCss,setTheme,resetSelector,resetStudio,resetEverything,exportStudio,importStudio,getMedia,addMedia,removeMedia,undoStudio,redoStudio,getHistoryState,updateElement,addComponent,moveInsertion} from './studio-engine.js';
 const $=s=>document.querySelector(s), preview=$('#studio-preview'), tree=$('#studio-tree'), form=$('#studio-style-form');
 let selected=null,nodes=[],fieldBaseline={},dirtyFields=new Set();
 const currentDevice=()=>$('#studio-style-device')?.value||'base';
@@ -113,7 +113,7 @@ function loadProperties(info){
  const a=d.assets?.[info.selector];$('#studio-current-asset').textContent=a?`Hozzárendelve: ${a.name||'grafika'} (${a.mode})`:'Nincs grafika hozzárendelve.';if(a){$('#studio-asset-mode').value=a.mode||'background';$('#studio-asset-size').value=a.size||'contain'}
  renderBreadcrumb(computed.__parents||[]);renderTree($('#studio-tree-search').value)
 }
-window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select')loadProperties(e.data)});
+window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select')loadProperties(e.data);if(e.data?.type==='utiterv-studio-reorder'){moveInsertion(e.data.id,{targetSelector:e.data.parentSelector,position:'child-index',childIndex:Number(e.data.index)||0});refresh();setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id=\"${e.data.id}\"]`},'*'),120);$('#studio-selected-label').textContent='Elem áthelyezve a konténeren belül.'}});
 tree.addEventListener('click',e=>{const b=e.target.closest('[data-selector]');if(!b)return;preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:b.dataset.selector},'*');try{const el=preview.contentDocument.querySelector(b.dataset.selector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}}catch{}});
 $('#studio-tree-search').addEventListener('input',e=>renderTree(e.target.value));$('#studio-reload-tree').addEventListener('click',refresh);
 $('#studio-breadcrumb')?.addEventListener('click',e=>{const b=e.target.closest('[data-crumb-selector]');if(!b)return;const el=currentPreviewElement(b.dataset.crumbSelector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}});
@@ -169,8 +169,10 @@ updateHistoryButtons();
 document.querySelector('.studio-component-grid')?.addEventListener('click',e=>{
  const b=e.target.closest('[data-component]');if(!b)return;if(!selected){alert('Előbb válassz ki egy befogadó elemet.');return}
  const type=b.dataset.component;const tags={heading:'h2',text:'p',button:'button',card:'article',spacer:'div'};
- addComponent({targetSelector:selected.selector,position:$('#studio-component-position').value,componentType:type,tag:tags[type],text:{heading:'Új címsor',text:'Írd át ezt a szöveget a Tartalom panelen.',button:'Új gomb',card:'Új kártya'}[type]||''});
- refresh();$('#studio-selected-label').textContent='Új komponens beszúrva.';
+ const position=$('#studio-component-position').value;const id=`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+ addComponent({id,targetSelector:selected.selector,position,componentType:type,tag:tags[type],text:{heading:'Új címsor',text:'',button:'',card:'Új kártya'}[type]??''});
+ refresh();$('#studio-selected-label').textContent=position==='append'?'Új elem a kijelölt konténerben – húzd a kívánt helyre.':'Új komponens beszúrva.';
+ setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id=\"${id}\"]`},'*'),160);
 });
 
 $('#studio-build-export')?.addEventListener('click',()=>{

@@ -16,6 +16,7 @@ export function setAsset(selector,asset){const d=getStudio();if(asset)d.assets[s
 
 export function addInsertion(insertion){const d=getStudio();d.insertions=d.insertions||[];d.insertions.push({...insertion,id:insertion.id||`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`});return saveStudio(d)}
 export function removeInsertion(id){const d=getStudio();d.insertions=(d.insertions||[]).filter(x=>x.id!==id);return saveStudio(d)}
+export function moveInsertion(id,patch={}){const d=getStudio();d.insertions=d.insertions||[];const item=d.insertions.find(x=>x.id===id);if(!item)return d;Object.assign(item,patch);return saveStudio(d)}
 export function setText(selector,text){const d=getStudio();if(text!=null)d.texts[selector]=text;else delete d.texts[selector];return saveStudio(d)}
 export function setClass(selector,className){const d=getStudio();if(className)d.classes[selector]=className;else delete d.classes[selector];return saveStudio(d)}
 export function setCustomCss(css){const d=getStudio();d.customCss=css;return saveStudio(d)}

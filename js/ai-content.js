@@ -63,9 +63,26 @@ function writePreview(){
   ui.preview.src=`index.html?aiPreview=1&t=${Date.now()}`;
 }
 
+function structuralTargetForPrompt(prompt){
+  const q=String(prompt||"").toLocaleLowerCase("hu-HU");
+  const galaxy=/(galaxy\s*guide|galaxy-guide|galaxy guide)/.test(q);
+  const structural=/(új\s+(aloldal|fül|szekció)|aloldal\s+(hozzáad|létrehoz)|fül\s+(hozzáad|létrehoz)|szekció\s+(hozzáad|létrehoz))/.test(q);
+  if(galaxy&&structural)return "content/modules/galaxy-guide/index.json";
+  return null;
+}
+
 async function runAI(){
   const prompt=ui.prompt.value.trim();
   if(!prompt)return status("Írd le, mit szeretnél módosítani.","error");
+
+  const structuralTarget=structuralTargetForPrompt(prompt);
+  if(structuralTarget&&state.filePath!==structuralTarget){
+    const option=[...ui.file.options].find(x=>x.value===structuralTarget);
+    if(option){
+      ui.file.value=structuralTarget;
+      await loadSelected();
+    }
+  }
   if(!state.original)return status("Nincs betöltött tartalom.","error");
 
   ui.run.disabled=true;

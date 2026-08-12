@@ -66,11 +66,12 @@ SZABÁLYOK:
 2. Ne használj markdownot vagy kódblokkot.
 3. Minden meglévő JSON kulcsot tarts meg.
 4. A meglévő objektum/tömb struktúrát ne alakítsd át más típussá.
-5. A "schema" és "id" mezőket soha ne módosítsd.
+5. A "schema" és a meglévő "id" mezőket soha ne módosítsd.
 6. Csak a kéréshez szükséges értékeket módosítsd; minden más maradjon változatlan.
 7. Új tartalmi elemet csak akkor adj hozzá, ha a felhasználó ezt kifejezetten kéri.
-8. Ha a kérés HTML-, CSS-, JavaScript-, animáció-, funkció- vagy UI-módosítás, a JSON-t változtatás nélkül add vissza.
-9. A célközönség 13–18 éves fiatal; a hangnem közvetlen, támogató és könnyen érthető legyen.`
+8. Ha a szerkesztett fájl egy modul index.json fájlja, a "sections" tömb új elemmel BŐVÍTHETŐ. Új szekciónál adj stabil, kisbetűs ASCII id-t, a kért címet és az id alapján egy .json fájlnevet. Példa: {"id":"uj-szekcio","title":"Új szekció","file":"uj-szekcio.json"}. Meglévő szekciót ne törölj.
+9. Ha a kérés HTML-, CSS-, JavaScript- vagy animációmódosítás, a JSON-t változtatás nélkül add vissza. Egy modul új aloldala/füle/szekciója viszont index.json tartalmi-struktúra módosításnak számít, tehát végezd el.
+10. A célközönség 13–18 éves fiatal; a hangnem közvetlen, támogató és könnyen érthető legyen.`
         },
         {
           role:"user",

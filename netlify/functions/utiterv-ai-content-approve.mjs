@@ -4,8 +4,8 @@ const reply=(statusCode,payload)=>({statusCode,headers,body:JSON.stringify(paylo
 const allowedPath=path=>
   typeof path==="string" &&
   /^content\/.+\.json$/.test(path) &&
-  !path.endsWith("/index.json") &&
-  !["content/project.json","content/content.json","content/content.schema.json","content/ai-editable-files.json"].includes(path);
+  !["content/project.json","content/content.json","content/content.schema.json","content/ai-editable-files.json"].includes(path) &&
+  (!path.endsWith("/index.json") || /^content\/modules\/[^/]+\/index\.json$/.test(path));
 
 async function github(url,options={}){
   const response=await fetch(`https://api.github.com${url}`,{
@@ -41,8 +41,35 @@ export const handler=async(event)=>{
     const encodedPath=filePath.split("/").map(encodeURIComponent).join("/");
 
     const current=await github(`/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`);
-    const content=Buffer.from(JSON.stringify(updatedContent,null,2)+"\n","utf8").toString("base64");
 
+    // Modul index bővítésnél az új section JSON fájlokat is létrehozzuk,
+    // különben a következő deployban a modul betöltése 404-gyel elhasalna.
+    const createdFiles=[];
+    if(filePath.endsWith("/index.json") && Array.isArray(updatedContent.sections)){
+      let currentJson={};
+      try{currentJson=JSON.parse(Buffer.from(current.content||"","base64").toString("utf8"))}catch{}
+      const oldFiles=new Set((currentJson.sections||[]).map(x=>x?.file).filter(Boolean));
+      const baseDir=filePath.slice(0,filePath.lastIndexOf("/")+1);
+      for(const section of updatedContent.sections){
+        if(!section?.file || oldFiles.has(section.file)) continue;
+        if(!/^[A-Za-z0-9_-]+\.json$/.test(section.file)) throw new Error(`Érvénytelen új szekciófájl: ${section.file}`);
+        const childPath=baseDir+section.file;
+        const childEncoded=childPath.split("/").map(encodeURIComponent).join("/");
+        const childJson={schema:"utiterv-section-v5",id:String(section.id||section.file.replace(/\.json$/,"")),title:String(section.title||section.id||"Új oldal"),data:{}};
+        const childContent=Buffer.from(JSON.stringify(childJson,null,2)+"\n","utf8").toString("base64");
+        await github(`/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${childEncoded}`,{
+          method:"PUT",
+          body:JSON.stringify({
+            message:`content: új aloldal – ${String(section.title||section.id||"section").slice(0,80)}`,
+            content:childContent,
+            branch
+          })
+        });
+        createdFiles.push(childPath);
+      }
+    }
+
+    const content=Buffer.from(JSON.stringify(updatedContent,null,2)+"\n","utf8").toString("base64");
     const result=await github(`/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${encodedPath}`,{
       method:"PUT",
       body:JSON.stringify({
@@ -57,7 +84,10 @@ export const handler=async(event)=>{
       ok:true,
       commitUrl:result?.commit?.html_url||null,
       commitSha:result?.commit?.sha||null,
-      message:"A módosított JSON GitHub commitja elkészült. A Netlify deploy automatikusan elindulhat."
+      createdFiles,
+      message:createdFiles.length
+        ? `A módosítás GitHubra került, és ${createdFiles.length} új üres aloldalfájl létrejött.`
+        : "A módosított JSON GitHub commitja elkészült. A Netlify deploy automatikusan elindulhat."
     });
   }catch(error){
     console.error("Útiterv AI Approve hiba:",error);
