@@ -115,7 +115,10 @@ export default async (req, context) => {
       return;
     }
 
-    const model=process.env.GEMINI_MODEL||"gemini-2.5-flash";
+    const requestedModel=(process.env.GEMINI_MODEL||"gemini-2.5-flash")
+      .trim()
+      .replace(/^models\//,"");
+    let model=requestedModel;
     const usageTotal={input_tokens:0,output_tokens:0,total_tokens:0};
 
     function addGeminiUsage(data){
@@ -136,10 +139,68 @@ export default async (req, context) => {
       const msg=body?.error?.message||body?.message||`HTTP ${status}`;
       if(status===400) return `Gemini API kérési hiba: ${msg}`;
       if(status===401 || status===403) return `Gemini API kulcs/jogosultsági hiba: ${msg}`;
-      if(status===404) return `A beállított Gemini modell nem érhető el: ${model}.`;
+      if(status===404) return `Gemini API 404: ${msg} (kért modell: ${model})`;
       if(status===429) return `A Gemini Free Tier ideiglenes limitjét elértük. Próbáld újra később. (${msg})`;
       if(status>=500) return `A Gemini szolgáltatás átmenetileg hibázik. (${msg})`;
       return `Gemini API hiba: ${msg}`;
+    }
+
+    async function listGeminiModels(){
+      const response=await fetch(
+        "https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
+        {headers:{"x-goog-api-key":process.env.GEMINI_API_KEY}}
+      );
+      const raw=await response.text();
+      let data;
+      try{data=JSON.parse(raw)}catch{data={raw}}
+      if(!response.ok){
+        const msg=data?.error?.message||raw||`HTTP ${response.status}`;
+        throw new Error(`Gemini modell-listázási hiba (${response.status}): ${msg}`);
+      }
+      return (data.models||[])
+        .filter(m=>(m.supportedGenerationMethods||[]).includes("generateContent"))
+        .map(m=>({
+          id:String(m.name||"").replace(/^models\//,""),
+          name:m.displayName||m.name||"",
+          methods:m.supportedGenerationMethods||[]
+        }))
+        .filter(m=>m.id);
+    }
+
+    function chooseGeminiModel(available,requested){
+      const ids=available.map(m=>m.id);
+      if(ids.includes(requested)) return requested;
+
+      const preferred=[
+        "gemini-2.5-flash",
+        "gemini-flash-latest",
+        "gemini-2.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.5-flash",
+        "gemini-3.6-flash"
+      ];
+      for(const id of preferred){
+        if(ids.includes(id)) return id;
+      }
+
+      const flash=ids.find(id=>/^gemini-.*flash/i.test(id) && !/image|tts|audio/i.test(id));
+      if(flash) return flash;
+
+      return ids.find(id=>/^gemini-/i.test(id))||null;
+    }
+
+    const availableModels=await listGeminiModels();
+    console.log(`[${jobId}] Gemini generateContent modellek (${availableModels.length}): ${availableModels.map(m=>m.id).join(", ")}`);
+
+    const resolvedModel=chooseGeminiModel(availableModels,requestedModel);
+    if(!resolvedModel){
+      throw new Error("A Gemini API-kulcshoz nem található generateContent-et támogató Gemini modell.");
+    }
+    model=resolvedModel;
+    if(model!==requestedModel){
+      console.warn(`[${jobId}] A kért modell (${requestedModel}) nem érhető el ezzel a kulccsal; automatikus fallback: ${model}`);
+    }else{
+      console.log(`[${jobId}] Gemini modell ellenőrizve: ${model}`);
     }
 
     async function geminiJson({system,prompt,schema,label}){
