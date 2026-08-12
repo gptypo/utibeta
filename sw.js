@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.3-gemini-agent';
+var VERSION = 'beta-3.3.1-gemini-schema-hotfix';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';

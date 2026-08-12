@@ -162,12 +162,8 @@ export default async (req, context) => {
                 parts:[{text:`${system}\n\n--- FELADAT ---\n${prompt}`}]
               }],
               generationConfig:{
-                responseFormat:{
-                  text:{
-                    mimeType:"application/json",
-                    schema
-                  }
-                }
+                responseMimeType:"application/json",
+                responseSchema:schema
               }
             })
           }
