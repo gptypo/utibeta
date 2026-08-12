@@ -72,15 +72,13 @@ function migrateProjectStorage(base){
  return next;
 }
 function normalizeStored(stored,base){
+  // CMS-ready core: packaged JSON is authoritative for built-in content.
   if(!stored)return clone(base);
   const next=clone(base);
-  for(const [group,ns] of Object.entries(stored.modules||{})){
-    if(!next.modules[group]||!ns||typeof ns!=='object')continue;
-    Object.assign(next.modules[group],clone(ns));
-  }
-  if(stored.settings)next.settings={...next.settings,...clone(stored.settings)};
-  if(Array.isArray(stored.customContent))next.customContent=clone(stored.customContent);
-  next.updatedAt=stored.updatedAt||new Date().toISOString();
+  // Keep only user-owned custom topics. Built-in modules and home settings
+  // always come from the freshly fetched repository JSON files.
+  if(Array.isArray(stored.customContent)&&stored.customContent.length)next.customContent=clone(stored.customContent);
+  next.updatedAt=new Date().toISOString();
   return next;
 }
 function applyLegacyOverrides(project){
