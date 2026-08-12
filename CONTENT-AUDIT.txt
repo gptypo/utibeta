@@ -1,0 +1,23 @@
+ÚTITERV PAGES CMS JSON AUDIT
+============================
+
+Állapot: PASS
+
+- A régi content/content.json duplikált központi tartalomforrás eltávolítva.
+- A content-fetch-bridge/content-state/content-bootstrap réteg eltávolítva: a moduláris JSON fájlok az egyetlen tartalmi forrás.
+- Minden content/**/*.json fájl és a manifest.webmanifest szerepel a .pages.yml-ben.
+- A Pages CMS konfiguráció minden JSON-kulcsot/mezőt lefed.
+- A felhasználói UI-szövegek, témafeliratok, menüjelek, PWA-feliratok és hibaüzenetek JSON-ból jönnek.
+- Kép- és ikonútvonalak: content/assets.json -> Pages CMS image mezők.
+- Hanganyagok: content/assets.json -> Pages CMS file/audio mezők.
+- A service worker az assets.json alapján automatikusan begyűjti a médiákat offline cache-be.
+- A repository JSON tartalom elsőbbséget élvez a régi localStorage tartalmi snapshotokkal szemben.
+
+Ellenőrzések:
+- JSON parse: OK
+- .pages.yml parse: OK
+- JS syntax (node --check): OK
+- JSON fájlok CMS-regisztrációja: OK
+- JSON mezők CMS-lefedettsége: OK
+- Projekt JSON fájlhivatkozások: OK
+- Hivatkozott médiafájlok: OK

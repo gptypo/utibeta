@@ -10,7 +10,7 @@ let deferredInstall=null;
 function shell(){
  if(document.querySelector('#pwa-layer'))return;
  document.body.insertAdjacentHTML('beforeend',`<div id="pwa-layer" class="pwa-layer" aria-live="polite">
- <section class="pwa-banner" data-install-banner hidden><div><strong>${pwaCopy.installTitle||''}</strong><span>${pwaCopy.installText||''}</span></div><div><button class="pwa-button" data-install>${pwaCopy.installButton||''}</button><button class="pwa-icon-button" data-install-dismiss aria-label="${pwaCopy.close||''}">×</button></div></section>
+ <section class="pwa-banner" data-install-banner hidden><div><strong>${pwaCopy.installTitle||''}</strong><span>${pwaCopy.installText||''}</span></div><div><button class="pwa-button" data-install>${pwaCopy.installButton||''}</button><button class="pwa-icon-button" data-install-dismiss aria-label="${pwaCopy.close||''}">${pwaCopy.closeSymbol||''}</button></div></section>
  <section class="pwa-banner pwa-banner--samsung" data-samsung-install hidden>
    <div>
      <strong>${pwaCopy.samsungTitle||''}</strong>
@@ -18,12 +18,12 @@ function shell(){
    </div>
    <div>
      <button class="pwa-button" data-open-chrome type="button">${pwaCopy.openChrome||''}</button>
-     <button class="pwa-icon-button" data-samsung-dismiss type="button" aria-label="${pwaCopy.close||''}">×</button>
+     <button class="pwa-icon-button" data-samsung-dismiss type="button" aria-label="${pwaCopy.close||''}">${pwaCopy.closeSymbol||''}</button>
    </div>
  </section>
  <section class="pwa-toast" data-update-toast hidden><div><strong>${pwaCopy.updateTitle||''}</strong><span>${pwaCopy.updateText||''}</span></div><button class="pwa-button" data-update>${pwaCopy.updateButton||''}</button></section>
- <dialog class="pwa-dialog" data-ios-dialog><button class="pwa-dialog__close" data-ios-close aria-label="${pwaCopy.close||''}">×</button><span class="pwa-dialog__eyebrow">${pwaCopy.iosEyebrow||''}</span><h2>${pwaCopy.iosTitle||''}</h2><ol>${(pwaCopy.iosSteps||[]).map(x=>`<li>${x}</li>`).join('')}</ol><button class="pwa-button" data-ios-done>${pwaCopy.understood||''}</button></dialog>
- <dialog class="pwa-dialog pwa-onboarding" data-onboarding><div class="pwa-onboarding__mark">↗</div><span class="pwa-dialog__eyebrow">${pwaCopy.onboardingEyebrow||''}</span><h2>${pwaCopy.onboardingTitle||''}</h2><p>${pwaCopy.onboardingText||''}</p><div class="pwa-onboarding__features">${(pwaCopy.onboardingFeatures||[]).map(x=>`<span>✓ ${x}</span>`).join('')}</div><button class="pwa-button" data-onboarding-done>${pwaCopy.onboardingButton||''}</button></dialog>
+ <dialog class="pwa-dialog" data-ios-dialog><button class="pwa-dialog__close" data-ios-close aria-label="${pwaCopy.close||''}">${pwaCopy.closeSymbol||''}</button><span class="pwa-dialog__eyebrow">${pwaCopy.iosEyebrow||''}</span><h2>${pwaCopy.iosTitle||''}</h2><ol>${(pwaCopy.iosSteps||[]).map(x=>`<li>${x}</li>`).join('')}</ol><button class="pwa-button" data-ios-done>${pwaCopy.understood||''}</button></dialog>
+ <dialog class="pwa-dialog pwa-onboarding" data-onboarding><div class="pwa-onboarding__mark">${pwaCopy.onboardingMark||''}</div><span class="pwa-dialog__eyebrow">${pwaCopy.onboardingEyebrow||''}</span><h2>${pwaCopy.onboardingTitle||''}</h2><p>${pwaCopy.onboardingText||''}</p><div class="pwa-onboarding__features">${(pwaCopy.onboardingFeatures||[]).map(x=>`<span>${pwaCopy.featureMark||''} ${x}</span>`).join('')}</div><button class="pwa-button" data-onboarding-done>${pwaCopy.onboardingButton||''}</button></dialog>
  </div>`);
  document.querySelector('[data-install]')?.addEventListener('click',async()=>{if(!deferredInstall)return;deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;hide('[data-install-banner]')});
  document.querySelector('[data-install-dismiss]')?.addEventListener('click',()=>hide('[data-install-banner]'));

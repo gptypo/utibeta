@@ -1,0 +1,6 @@
+{
+  "schema": "utiterv-errors-v1",
+  "contentLoad": "A tartalomfájl nem tölthető be: {url} ({status}).",
+  "invalidManifest": "Érvénytelen Útiterv manifest.",
+  "invalidProject": "Érvénytelen Útiterv projektfájl."
+}

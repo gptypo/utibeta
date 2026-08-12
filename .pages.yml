@@ -144,6 +144,15 @@ content:
         - name: small
           label: Small
           type: string
+    - name: menuCloseSymbol
+      label: Menu Close Symbol
+      type: string
+    - name: menuHomeSymbol
+      label: Menu Home Symbol
+      type: string
+    - name: menuPrivacySymbol
+      label: Menu Privacy Symbol
+      type: string
   - name: moduleExperience
     label: Module experience
     type: object
@@ -275,6 +284,15 @@ content:
       type: string
     - name: resetButton
       label: Reset button
+      type: string
+    - name: lightAria
+      label: Light ARIA
+      type: string
+    - name: systemAria
+      label: System ARIA
+      type: string
+    - name: darkAria
+      label: Dark ARIA
       type: string
   - name: quiz
     label: Quiz
@@ -498,6 +516,9 @@ content:
         - name: done
           label: Done
           type: string
+    - name: bodyScanSeconds
+      label: Body Scan Seconds
+      type: number
   - name: pwa
     label: Pwa
     type: object
@@ -563,6 +584,15 @@ content:
       list: true
     - name: onboardingButton
       label: Onboarding button
+      type: string
+    - name: closeSymbol
+      label: Close Symbol
+      type: string
+    - name: onboardingMark
+      label: Onboarding Mark
+      type: string
+    - name: featureMark
+      label: Feature Mark
       type: string
   - name: theme
     label: Theme
@@ -1325,6 +1355,9 @@ content:
     - name: redFlagFallback
       label: redFlagFallback
       type: string
+    - name: and
+      label: És kötőszó
+      type: string
   - name: startupError
     label: Indítási hiba szövegei
     type: object
@@ -1343,6 +1376,16 @@ content:
       type: string
     - name: unknown
       label: unknown
+      type: string
+  - name: editor
+    label: Editor
+    type: object
+    fields:
+    - name: invalidContentList
+      label: Invalid Content List
+      type: string
+    - name: copySuffix
+      label: Copy suffix
       type: string
   operations:
     delete: false
@@ -1433,6 +1476,68 @@ content:
     - name: purpose
       label: Purpose
       type: string
+  - name: id
+    label: ID
+    type: string
+  - name: scope
+    label: Scope
+    type: string
+  - name: display_override
+    label: Display Override
+    type: string
+    list: true
+  - name: orientation
+    label: Orientation
+    type: string
+  - name: lang
+    label: Lang
+    type: string
+  - name: dir
+    label: Dir
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: prefer_related_applications
+    label: Prefer Related Applications
+    type: boolean
+  - name: shortcuts
+    label: Shortcuts
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: 'Elem #{index}'
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: short_name
+      label: Short Name
+      type: string
+    - name: url
+      label: URL
+      type: string
+    - name: icons
+      label: Icons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Elem #{index}'
+      fields:
+      - name: src
+        label: Src
+        type: image
+        options:
+          media: images
+      - name: sizes
+        label: Sizes
+        type: string
+      - name: type
+        label: Type
+        type: string
   operations:
     delete: false
     rename: false
@@ -3952,6 +4057,105 @@ content:
     label: Elemek
     type: string
     list: true
+  operations:
+    delete: false
+    rename: false
+- name: content_project_json
+  label: Projekt és tartalmi struktúra
+  type: file
+  path: content/project.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+  - name: version
+    label: Version
+    type: string
+  - name: meta
+    label: Meta
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+  - name: home
+    label: Home
+    type: string
+  - name: modules
+    label: Modules
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: 'Elem #{index}'
+    fields:
+    - name: id
+      label: ID
+      type: string
+    - name: file
+      label: File
+      type: string
+  - name: shared
+    label: Shared
+    type: object
+    fields:
+    - name: competencies
+      label: Competencies
+      type: string
+    - name: onmagamData
+      label: Onmagam Data
+      type: string
+  - name: custom
+    label: Custom
+    type: string
+  - name: editorial
+    label: Editorial
+    type: object
+    fields:
+    - name: version
+      label: Version
+      type: string
+    - name: audience
+      label: Audience
+      type: string
+    - name: voice
+      label: Voice
+      type: string
+    - name: principles
+      label: Principles
+      type: string
+      list: true
+  - name: ui
+    label: UI
+    type: string
+  - name: assets
+    label: Assets
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_errors_json
+  label: Hibaüzenetek
+  type: file
+  path: content/errors.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+  - name: contentLoad
+    label: Content load
+    type: text
+  - name: invalidManifest
+    label: Invalid manifest
+    type: string
+  - name: invalidProject
+    label: Invalid project
+    type: string
   operations:
     delete: false
     rename: false

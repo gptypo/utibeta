@@ -1,4 +1,5 @@
 const MANIFEST_URL = new URL('../content/project.json', import.meta.url);
+const ERRORS_URL = new URL('../content/errors.json', import.meta.url);
 const PROJECT_KEY = 'utiterv-project-v7';
 const LEGACY_V6_KEY = 'utiterv-project-v6';
 const LEGACY_V5_KEY = 'utiterv-project-v5';
@@ -9,16 +10,18 @@ const LEGACY_CUSTOM_KEY_V1='utiterv-custom-content-v1';
 const LEGACY_SETTINGS_KEY='utiterv-content-settings-v1';
 
 const clone = value => JSON.parse(JSON.stringify(value));
+const errorCopy = await fetch(ERRORS_URL,{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
+const tpl=(value,vars={})=>String(value??'').replace(/\{(\w+)\}/g,(_,key)=>vars[key]??'');
 const fetchJson = async url => {
   const response=await fetch(url,{cache:'no-store'});
-  if(!response.ok) throw new Error(`A tartalomfájl nem tölthető be: ${url} (${response.status}).`);
+  if(!response.ok) throw new Error(tpl(errorCopy.contentLoad,{url,status:response.status}));
   return response.json();
 };
 const resolveFrom=(base,path)=>new URL(path,base);
 
 async function fetchBaseProject(){
   const manifest=await fetchJson(MANIFEST_URL);
-  if(manifest?.schema!=='utiterv-project-manifest-v5'||!Array.isArray(manifest.modules)) throw new Error('Érvénytelen Útiterv manifest.');
+  if(manifest?.schema!=='utiterv-project-manifest-v5'||!Array.isArray(manifest.modules)) throw new Error(errorCopy.invalidManifest||'');
   const modules={},navigation=[] ,contentTree=[];
   for(const moduleRef of manifest.modules){
     const indexUrl=resolveFrom(MANIFEST_URL,moduleRef.file);
@@ -74,22 +77,11 @@ function migrateProjectStorage(base){
  return next;
 }
 function normalizeStored(stored,base){
-  // CMS-ready core: packaged JSON is authoritative for built-in content.
-  if(!stored)return clone(base);
-  const next=clone(base);
-  // Keep only user-owned custom topics. Built-in modules and home settings
-  // always come from the freshly fetched repository JSON files.
-  if(Array.isArray(stored.customContent)&&stored.customContent.length)next.customContent=clone(stored.customContent);
-  next.updatedAt=new Date().toISOString();
-  return next;
+  // Pages CMS-ready core: repository JSON is authoritative for all editable content.
+  return clone(base);
 }
-function applyLegacyOverrides(project){
- let changed=false;
- try{const custom=JSON.parse(localStorage.getItem(LEGACY_CUSTOM_KEY)||localStorage.getItem(LEGACY_CUSTOM_KEY_V1)||'null');if(Array.isArray(custom)&&!project.customContent?.length){project.customContent=clone(custom);changed=true}}catch{}
- try{const settings=JSON.parse(localStorage.getItem(LEGACY_SETTINGS_KEY)||'null');if(settings&&typeof settings==='object'){project.settings={...project.settings,...settings};changed=true}}catch{}
- if(changed)project.updatedAt=new Date().toISOString();
- return project;
-}
+function applyLegacyOverrides(project){return project}
+
 
 export const baseProject=await fetchBaseProject();
 export const project=applyLegacyOverrides(migrateProjectStorage(baseProject));
@@ -98,7 +90,7 @@ if(!localStorage.getItem(PROJECT_KEY)) localStorage.setItem(PROJECT_KEY,JSON.str
 export function getProject(){return project}
 export function getBaseProject(){return clone(baseProject)}
 export function saveProject(){project.updatedAt=new Date().toISOString();localStorage.setItem(PROJECT_KEY,JSON.stringify(project));window.dispatchEvent(new CustomEvent('utiterv-project-changed',{detail:{project}}))}
-export function replaceProject(next){if(!next?.modules)throw new Error('Érvénytelen Útiterv projektfájl.');for(const key of Object.keys(project))delete project[key];Object.assign(project,normalizeStored(next,baseProject));saveProject()}
+export function replaceProject(next){if(!next?.modules)throw new Error(errorCopy.invalidProject||'');for(const key of Object.keys(project))delete project[key];Object.assign(project,normalizeStored(next,baseProject));saveProject()}
 export function resetProject(){[PROJECT_KEY,LEGACY_V6_KEY,LEGACY_V5_KEY,LEGACY_V4_KEY,LEGACY_KEY,LEGACY_CUSTOM_KEY,LEGACY_CUSTOM_KEY_V1,LEGACY_SETTINGS_KEY].forEach(k=>localStorage.removeItem(k))}
 export function exportProject(){return JSON.stringify({...clone(project),schema:'utiterv-project-v5',exportedAt:new Date().toISOString()},null,2)}
 export function exportModularBundle(){

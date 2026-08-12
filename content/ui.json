@@ -44,7 +44,10 @@
         "strong": "Adatvédelem",
         "small": "Helyi adattárolás és jogi információk"
       }
-    }
+    },
+    "menuCloseSymbol": "×",
+    "menuHomeSymbol": "⌂",
+    "menuPrivacySymbol": "⌁"
   },
   "moduleExperience": {
     "onmagam": {
@@ -92,7 +95,10 @@
     "dark": "Sötét",
     "resetTitle": "Alkalmazás alaphelyzetbe állítása",
     "resetDescription": "Törli a helyben mentett haladást, válaszokat és megjelenési beállításokat.",
-    "resetButton": "Helyi adatok törlése"
+    "resetButton": "Helyi adatok törlése",
+    "lightAria": "Világos mód",
+    "systemAria": "Automatikus színséma",
+    "darkAria": "Sötét mód"
   },
   "quiz": {
     "registryLabels": {
@@ -228,7 +234,8 @@
         "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
         "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
       }
-    }
+    },
+    "bodyScanSeconds": 20
   },
   "pwa": {
     "version": "BETA 1.2.6",
@@ -258,7 +265,10 @@
       "Automatikus visszaállítás",
       "Mobil app élmény"
     ],
-    "onboardingButton": "Indulhatunk"
+    "onboardingButton": "Indulhatunk",
+    "closeSymbol": "×",
+    "onboardingMark": "↗",
+    "featureMark": "✓"
   },
   "theme": {
     "lightEnable": "Világos mód bekapcsolása",
@@ -555,7 +565,8 @@
     "again": "Újra",
     "bodyScanIntro": "Végigpásztázod a tested, zónáról zónára oldva a feszültséget. Minden állomás 20 másodpercig tart, és automatikusan lép tovább.",
     "letsStart": "Kezdjük",
-    "redFlagFallback": "Vészjel {index}"
+    "redFlagFallback": "Vészjel {index}",
+    "and": "és"
   },
   "startupError": {
     "eyebrow": "Indítási hiba",
@@ -563,5 +574,9 @@
     "text": "Frissítsd az oldalt. Ha a hiba továbbra is fennáll, töröld az alkalmazás webhelyadatait, majd nyisd meg újra.",
     "details": "Technikai részletek",
     "unknown": "Ismeretlen hiba"
+  },
+  "editor": {
+    "invalidContentList": "A fájl nem tartalmaz érvényes tartalomlistát.",
+    "copySuffix": "másolat"
   }
 }
