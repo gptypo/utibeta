@@ -1,187 +1,43 @@
 <!doctype html>
-<html lang="hu">
+<html lang="hu" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
-  <title>Útiterv Studio · AI kiadási ügynök</title>
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/agent.css?v=beta-3.0">
-  <link rel="stylesheet" href="css/theme.css?v=beta-3.0">
-  <script>
-    try{
-      const t=localStorage.getItem('utiterv-theme');
-      const d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);
-      document.documentElement.dataset.theme=d?'dark':'light';
-      document.documentElement.style.colorScheme=d?'dark':'light';
-    }catch{}
-  </script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Útiterv Studio – AI tartalomszerkesztő</title>
+<link rel="stylesheet" href="css/agent.css">
 </head>
-<body class="agent-body">
-  <main class="agent-shell">
-    <header class="agent-head">
-      <div>
-        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.4.2</span>
-        <h1>AI kiadási ügynök</h1>
-        <p>Írd le közérthetően, mit szeretnél módosítani. Az ügynök előkészíti az új verziót, lefuttatja az ellenőrzéseket, majd jóváhagyás után kiadható.</p>
-      </div>
-      <div class="agent-head__actions">
-        <a class="button button--secondary" href="editor.html">Haladó szerkesztő</a>
-        <a class="button button--secondary" href="index.html">← Vissza az apphoz</a>
-      </div>
-    </header>
+<body>
+<main class="agent-page">
+<header class="agent-topbar">
+<div><span class="agent-kicker">ÚTITERV STUDIO</span><h1>AI tartalomszerkesztő</h1><p>BETA 3.5.1 · JSON Content Workflow</p></div>
+<a class="agent-back" href="index.html">Vissza az apphoz</a>
+</header>
 
-    <section class="agent-grid">
-      <section class="agent-panel agent-request">
-        <div class="agent-panel__head">
-          <div>
-            <span class="eyebrow eyebrow--dark">1 · Kérés</span>
-            <h2>Mit módosítsunk?</h2>
-          </div>
-          <span class="agent-badge">Nem kell kódolni</span>
-        </div>
+<section class="agent-card">
+<div class="agent-card__head"><div><span class="agent-eyebrow">1 · Kérés</span><h2>Mit módosítsunk?</h2></div><span id="agent-badge" class="agent-badge">Kész</span></div>
+<textarea id="content-prompt" rows="6" placeholder="Például: A QUICK WIN / CV részben a „Mit ne írj!” cím legyen „Mit ne írj a CV-be!”."></textarea>
+<div class="agent-actions">
+<button id="content-run" class="agent-primary" type="button">Tartalom módosítása</button>
+<a class="agent-secondary" href="editor.html">Developer mód</a>
+</div>
+<div id="content-status" class="agent-status-detail" aria-live="polite">A központi content.json betöltése…</div>
+</section>
 
-        <label class="agent-field">
-          <span>Utasítás az AI-nak</span>
-          <textarea id="agent-prompt" rows="9" placeholder="Például: A QUICK WIN / CV részhez adj hozzá 6 új Z generációs tippet. A meglévő Ne tedd / Tedd flip-kártyás formát kövesd, és ne változtass más modulon."></textarea>
-        </label>
+<section class="agent-card" id="preview-section" hidden>
+<div class="agent-card__head"><div><span class="agent-eyebrow">2 · Előnézet</span><h2>Nézd át a módosítást</h2></div><span id="preview-model" class="agent-badge">Gemini</span></div>
+<p id="content-summary"></p>
+<div class="agent-preview-wrap"><iframe id="preview-frame" src="preview.html" title="Útiterv előnézet"></iframe></div>
+<div class="agent-actions">
+<button id="content-approve" class="agent-primary" type="button">Jóváhagyás és GitHub commit</button>
+<button id="content-reject" class="agent-secondary" type="button">Elvetés</button>
+</div>
+<div id="approve-status" class="agent-status-detail"></div>
+</section>
 
-        <div class="agent-suggestions" aria-label="Példautasítások">
-          <button type="button" data-example="A csatolt Word dokumentum tartalmi módosításait vezesd át az alkalmazásban. Tartsd meg a jelenlegi arculatot és komponenslogikát.">Word alapján módosítás</button>
-          <button type="button" data-example="Adj hozzá új tartalmat a megadott modulhoz a meglévő kártyák szerkezetét és stílusát követve.">Új tartalom</button>
-          <button type="button" data-example="Javítsd a megadott hibát úgy, hogy más működő funkció ne változzon. Futtass regressziós ellenőrzést is.">Hibajavítás</button>
-        </div>
-
-        <div class="agent-upload">
-          <div>
-            <strong>Dokumentumok és mellékletek</strong>
-            <p>Word, PDF, TXT, JSON vagy képek. A csatolmányokat az AI a kérés részeként kapja meg.</p>
-          </div>
-          <label class="button button--secondary file-button">
-            + Fájl csatolása
-            <input id="agent-files" type="file" multiple accept=".doc,.docx,.pdf,.txt,.md,.json,image/*">
-          </label>
-        </div>
-        <div id="agent-file-list" class="agent-file-list" aria-live="polite"></div>
-
-        <div class="agent-fields-row">
-          <label class="agent-field">
-            <span>Célverzió</span>
-            <input id="agent-version" value="BETA 3.0.1" placeholder="BETA 3.0.1">
-          </label>
-          <label class="agent-field">
-            <span>Módosítás típusa</span>
-            <select id="agent-scope">
-              <option value="content">Tartalmi frissítés</option>
-              <option value="bugfix">Hibajavítás</option>
-              <option value="feature">Új funkció</option>
-              <option value="mixed">Vegyes módosítás</option>
-            </select>
-          </label>
-        </div>
-
-        <label class="agent-check">
-          <input id="agent-protect" type="checkbox" checked>
-          <span><strong>Védett kiadás</strong> — az AI nem teheti automatikusan élesbe; előbb emberi jóváhagyás szükséges.</span>
-        </label>
-
-        <div class="agent-actions">
-          <button id="agent-start" class="button" type="button">AI munka indítása →</button>
-          <button id="agent-package" class="button button--secondary" type="button">Kéréscsomag mentése</button>
-        </div>
-        <p class="agent-help">Az AI-kulcs soha nem kerül a PWA-ba. A felület egy szerveroldali AI-végponthoz kapcsolódik.</p>
-      </section>
-
-      <aside class="agent-panel agent-status">
-        <div class="agent-panel__head">
-          <div>
-            <span class="eyebrow eyebrow--dark">2 · Folyamat</span>
-            <h2>Kiadási állapot</h2>
-          </div>
-          <span id="agent-state-badge" class="agent-state-badge">Várakozik</span>
-        </div>
-
-        <div id="agent-status-detail" class="agent-status-detail" aria-live="polite">A háttérfolyamat indulásra kész.</div>
-
-        <ol class="agent-steps" id="agent-steps">
-          <li data-step="analyze"><span>1</span><div><strong>Kérés elemzése</strong><small>Modulok és érintett fájlok azonosítása</small></div></li>
-          <li data-step="edit"><span>2</span><div><strong>AI módosítja a projektet</strong><small>Tartalom / kód / assetek frissítése</small></div></li>
-          <li data-step="test"><span>3</span><div><strong>Automatikus ellenőrzés</strong><small>Szintaxis, projektvalidáció és regresszió</small></div></li>
-          <li data-step="build"><span>4</span><div><strong>Új build készítése</strong><small>Verzió, cache és kiadási jegyzet</small></div></li>
-          <li data-step="review"><span>5</span><div><strong>Emberi jóváhagyás</strong><small>Előnézet és változások áttekintése</small></div></li>
-          <li data-step="release"><span>6</span><div><strong>Kiadás</strong><small>Jóváhagyott verzió publikálása</small></div></li>
-        </ol>
-
-        <div id="agent-connection" class="agent-connection">
-          <strong>Netlify példa backend beépítve.</strong>
-          <p>A backend ebben a csomagban benne van. A Netlify-on csak az GEMINI_API_KEY környezeti változót kell megadni.</p>
-          <button id="agent-settings-toggle" class="text-button" type="button">Kapcsolat beállítása</button>
-        </div>
-
-        <details id="agent-settings" class="agent-settings">
-          <summary>Technikai beállítások</summary>
-          <label class="agent-field">
-            <span>Netlify backend</span>
-            <input id="agent-endpoint" value="Netlify Functions (beépítve)" disabled>
-          </label>
-          <p><strong>Minimum beállítás:</strong> Netlify → Project configuration → Environment variables → <code>GEMINI_API_KEY</code>.<br>
-Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gemini-3.6-flash</code>, a költségtakarékos működéshez. Automatikus production feltöltéshez még <code>NETLIFY_AUTH_TOKEN</code> és <code>NETLIFY_SITE_ID</code> kell; ezek nélkül a jóváhagyott új ZIP egyszerűen letölthető.</p>
-          <div class="agent-settings__actions">
-            <button id="agent-save-settings" class="button button--secondary" type="button">Mentés</button>
-            <button id="agent-demo" class="button button--secondary" type="button">Demó folyamat</button>
-          </div>
-        </details>
-      </aside>
-    </section>
-
-    <section id="agent-result" class="agent-panel agent-result" hidden>
-      <div class="agent-panel__head">
-        <div>
-          <span class="eyebrow eyebrow--dark">3 · Ellenőrzés</span>
-          <h2>Elkészült az új verzió</h2>
-        </div>
-        <span id="agent-result-version" class="agent-badge"></span>
-      </div>
-
-      <div class="agent-result-grid">
-        <article>
-          <h3>AI összefoglaló</h3>
-          <p id="agent-summary"></p>
-          <div id="agent-changes" class="agent-change-list"></div>
-        </article>
-        <article>
-          <h3>Ellenőrzések</h3>
-          <div id="agent-checks" class="agent-check-list"></div>
-          <div class="agent-usage-card" id="agent-usage-card" hidden>
-            <div class="agent-usage-card__head"><strong>AI használat</strong><span id="agent-usage-model"></span></div>
-            <div class="agent-usage-grid">
-              <div><span>Input</span><strong id="agent-usage-input">–</strong></div>
-              <div><span>Output</span><strong id="agent-usage-output">–</strong></div>
-              <div><span>Összes token</span><strong id="agent-usage-total">–</strong></div>
-              <div class="agent-usage-cost"><span>Becsült API-költség</span><strong id="agent-usage-cost">–</strong></div>
-            </div>
-            <small>* A Gemini Free Tier limiteken belül várhatóan nincs API-költség. A tényleges kvótát és számlázást mindig a Google AI Studio mutatja.</small>
-          </div>
-        </article>
-      </div>
-
-      <div class="agent-review-actions">
-        <a id="agent-preview" class="button button--secondary" href="#" target="_blank" rel="noopener" hidden>Előnézet megnyitása</a>
-        <a id="agent-download" class="button button--secondary" href="#" hidden>Build letöltése</a>
-        <button id="agent-release" class="button" type="button">Jóváhagyás és kiadás</button>
-        <button id="agent-reject" class="text-button text-button--danger" type="button">Elvetés</button>
-      </div>
-      <p id="agent-release-status" class="agent-help" aria-live="polite"></p>
-    </section>
-
-    <footer class="agent-footer">
-      <p>© OFA Nonprofit Kft. Minden jog fenntartva. <span id="agent-year"></span></p>
-      <span>BETA 3.4.2 · Gemini Interactions API backend</span>
-    </footer>
-  </main>
-
-  <script src="js/agent.js?v=beta-3.4.2" type="module"></script>
-  <script type="module" src="js/theme.js?v=beta-3.0"></script>
-</body>
-</html>
+<section class="agent-card agent-note">
+<strong>Hogyan működik?</strong>
+<p>A PWA tartalma a <code>content/content.json</code> központi állapotból töltődik. A Gemini csak ezt a JSON-t módosítja. Jóváhagyásig semmi nem kerül GitHubra. Approve után a Netlify Function commitolja a JSON-t, a GitHub push pedig automatikusan új Netlify deployt indít.</p>
+</section>
+</main>
+<script src="js/content-state.js?v=beta-3.5"></script>
+<script src="js/agent-content.js?v=beta-3.5"></script>
+</body></html>

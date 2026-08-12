@@ -44,3 +44,8 @@ html[data-theme="dark"] .agent-body{background:#0f171b;color:#f5faf9}html[data-t
 .agent-status-detail.is-warning{background:#fff4d7;color:#6f5300;border:1px solid #ead183}
 html[data-theme="dark"] .agent-status-detail{background:#111a1e;color:#b9c8c8}
 html[data-theme="dark"] .agent-status-detail.is-warning{background:#302a18;color:#f2d77e;border-color:#5d512a}
+
+/* BETA 3.5 — JSON content workflow */
+.agent-preview-wrap{margin-top:14px;border:1px solid #26383e;border-radius:16px;overflow:hidden;background:#111a1e}
+.agent-preview-wrap iframe{display:block;width:100%;height:70vh;min-height:520px;border:0;background:#fff}
+.agent-note code{font-weight:800}

@@ -1,7 +1,7 @@
 {
   "name": "utiterv-studio",
   "private": true,
-  "version": "3.3.0-beta",
+  "version": "3.5.1-beta",
   "scripts": {
     "serve": "python -m http.server 4173",
     "test": "playwright test",

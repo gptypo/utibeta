@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.4.2-stability';
+var VERSION = 'beta-3.5.1-quiz-score-progress';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';

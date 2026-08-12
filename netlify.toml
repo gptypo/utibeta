@@ -13,3 +13,12 @@
 # GEMINI_MODEL = gemini-3.6-flash
 # NETLIFY_AUTH_TOKEN = ...   # csak automatikus production deployhoz
 # NETLIFY_SITE_ID = ...      # csak automatikus production deployhoz
+
+
+# BETA 3.5 JSON Content Workflow secrets (Netlify UI-ban állítsd be):
+# GEMINI_API_KEY = ...
+# GITHUB_TOKEN = ...        # fine-grained token, Contents: Read and write
+# GITHUB_OWNER = ...
+# GITHUB_REPO = ...
+# GITHUB_BRANCH = main      # opcionális
+# GEMINI_CONTENT_MODEL = gemini-3.5-flash-lite  # opcionális
