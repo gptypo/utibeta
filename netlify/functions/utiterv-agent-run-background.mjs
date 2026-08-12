@@ -115,7 +115,7 @@ export default async (req, context) => {
       return;
     }
 
-    const requestedModel=(process.env.GEMINI_MODEL||"gemini-2.5-flash")
+    const requestedModel=(process.env.GEMINI_MODEL||"gemini-3.6-flash")
       .trim()
       .replace(/^models\//,"");
     let model=requestedModel;
@@ -155,61 +155,48 @@ export default async (req, context) => {
       try{data=JSON.parse(raw)}catch{data={raw}}
       if(!response.ok){
         const msg=data?.error?.message||raw||`HTTP ${response.status}`;
-        throw new Error(`Gemini modell-listázási hiba (${response.status}): ${msg}`);
+        console.warn(`[${jobId}] Gemini models.list hiba (${response.status}): ${msg}`);
+        return [];
       }
       return (data.models||[])
-        .filter(m=>(m.supportedGenerationMethods||[]).includes("generateContent"))
-        .map(m=>({
-          id:String(m.name||"").replace(/^models\//,""),
-          name:m.displayName||m.name||"",
-          methods:m.supportedGenerationMethods||[]
-        }))
-        .filter(m=>m.id);
+        .map(m=>String(m.name||"").replace(/^models\//,""))
+        .filter(Boolean);
     }
 
     function chooseGeminiModel(available,requested){
-      const ids=available.map(m=>m.id);
-      if(ids.includes(requested)) return requested;
-
+      if(available.includes(requested)) return requested;
       const preferred=[
-        "gemini-2.5-flash",
-        "gemini-flash-latest",
-        "gemini-2.5-flash-lite",
-        "gemini-3.1-flash-lite",
+        "gemini-3.6-flash",
         "gemini-3.5-flash",
-        "gemini-3.6-flash"
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite"
       ];
       for(const id of preferred){
-        if(ids.includes(id)) return id;
+        if(available.includes(id)) return id;
       }
-
-      const flash=ids.find(id=>/^gemini-.*flash/i.test(id) && !/image|tts|audio/i.test(id));
-      if(flash) return flash;
-
-      return ids.find(id=>/^gemini-/i.test(id))||null;
+      const flash=available.find(id=>/^gemini-3.*flash/i.test(id) && !/image|tts|audio/i.test(id));
+      return flash||requested;
     }
 
     const availableModels=await listGeminiModels();
-    console.log(`[${jobId}] Gemini generateContent modellek (${availableModels.length}): ${availableModels.map(m=>m.id).join(", ")}`);
-
-    const resolvedModel=chooseGeminiModel(availableModels,requestedModel);
-    if(!resolvedModel){
-      throw new Error("A Gemini API-kulcshoz nem található generateContent-et támogató Gemini modell.");
-    }
-    model=resolvedModel;
-    if(model!==requestedModel){
-      console.warn(`[${jobId}] A kért modell (${requestedModel}) nem érhető el ezzel a kulccsal; automatikus fallback: ${model}`);
+    if(availableModels.length){
+      console.log(`[${jobId}] Gemini modellek (${availableModels.length}): ${availableModels.join(", ")}`);
+      const resolvedModel=chooseGeminiModel(availableModels,requestedModel);
+      if(resolvedModel!==requestedModel){
+        console.warn(`[${jobId}] A kért modell (${requestedModel}) nem látható; fallback: ${resolvedModel}`);
+      }
+      model=resolvedModel;
     }else{
-      console.log(`[${jobId}] Gemini modell ellenőrizve: ${model}`);
+      console.warn(`[${jobId}] A models.list nem adott használható listát; próbálkozás közvetlenül: ${model}`);
     }
 
     async function geminiJson({system,prompt,schema,label}){
       const controller=new AbortController();
       const timeout=setTimeout(()=>controller.abort(),90000);
       try{
-        console.log(`[${jobId}] Gemini indul: ${label} | model=${model}`);
+        console.log(`[${jobId}] Gemini Interactions indul: ${label} | model=${model}`);
         const response=await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
+          "https://generativelanguage.googleapis.com/v1beta/interactions",
           {
             method:"POST",
             headers:{
@@ -218,30 +205,55 @@ export default async (req, context) => {
             },
             signal:controller.signal,
             body:JSON.stringify({
-              contents:[{
-                role:"user",
-                parts:[{text:`${system}\n\n--- FELADAT ---\n${prompt}`}]
-              }],
-              generationConfig:{
-                responseMimeType:"application/json",
-                responseSchema:schema
-              }
+              model,
+              system_instruction:system,
+              input:prompt,
+              response_format:{
+                type:"text",
+                mime_type:"application/json",
+                schema
+              },
+              store:false
             })
           }
         );
+
         const raw=await response.text();
         let data;
         try{data=JSON.parse(raw)}catch{data={raw}}
+
         if(!response.ok){
-          throw new Error(friendlyGeminiError(response.status,data));
+          const msg=data?.error?.message||data?.message||raw||`HTTP ${response.status}`;
+          if(response.status===400) throw new Error(`Gemini Interactions kérési hiba: ${msg}`);
+          if(response.status===401||response.status===403) throw new Error(`Gemini API kulcs/jogosultsági hiba: ${msg}`);
+          if(response.status===404) throw new Error(`Gemini Interactions 404: ${msg} (modell: ${model})`);
+          if(response.status===429) throw new Error(`A Gemini Free Tier ideiglenes limitjét elértük. Próbáld újra később. (${msg})`);
+          if(response.status>=500) throw new Error(`A Gemini szolgáltatás átmenetileg hibázik. (${msg})`);
+          throw new Error(`Gemini Interactions API hiba: ${msg}`);
         }
-        addGeminiUsage(data);
-        const text=geminiText(data);
-        if(!text) throw new Error(`${label}: a Gemini nem adott szöveges választ.`);
-        console.log(`[${jobId}] Gemini kész: ${label} | tokens=${data?.usageMetadata?.totalTokenCount||"?"}`);
+
+        if(data?.status && data.status!=="completed"){
+          throw new Error(`A Gemini Interactions nem completed állapotban tért vissza: ${data.status}`);
+        }
+
+        const text=(data?.steps||[])
+          .filter(step=>step?.type==="model_output")
+          .flatMap(step=>step?.content||[])
+          .filter(block=>block?.type==="text")
+          .map(block=>block?.text||"")
+          .join("")
+          .trim();
+
+        const usage=data?.usage||{};
+        usageTotal.input_tokens+=(usage.total_input_tokens||0);
+        usageTotal.output_tokens+=(usage.total_output_tokens||0);
+        usageTotal.total_tokens+=(usage.total_tokens||((usage.total_input_tokens||0)+(usage.total_output_tokens||0)));
+
+        if(!text) throw new Error(`${label}: a Gemini Interactions API nem adott szöveges választ.`);
+        console.log(`[${jobId}] Gemini Interactions kész: ${label} | tokens=${usage.total_tokens||"?"}`);
         return parseJson(text,label);
       }catch(error){
-        if(error?.name==="AbortError") throw new Error(`${label}: a Gemini API-hívás 90 másodperc után időtúllépéssel leállt.`);
+        if(error?.name==="AbortError") throw new Error(`${label}: a Gemini Interactions API-hívás 90 másodperc után időtúllépéssel leállt.`);
         throw error;
       }finally{
         clearTimeout(timeout);
@@ -360,7 +372,7 @@ ${sources}`
       artifactUrl:`/.netlify/functions/utiterv-agent-artifact?id=${encodeURIComponent(jobId)}`,
       previewUrl:null,
       aiUsage:{
-        provider:"Gemini",
+        provider:"Gemini Interactions API",
         model,
         inputTokens:usageTotal.input_tokens,
         outputTokens:usageTotal.output_tokens,
@@ -370,7 +382,7 @@ ${sources}`
       }
     });
   }catch(error){
-    console.error(`[${jobId||"no-job"}] AI Agent hiba:`,error);
+    console.error(`[${jobId||"no-job"}] AI Agent / Gemini Interactions hiba:`,error);
     if(jobId){
       await writeJob(jobId,{
         status:"failed",

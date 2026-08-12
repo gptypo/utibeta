@@ -10,6 +10,6 @@
 # Netlify UI → Project configuration → Environment variables:
 # GEMINI_API_KEY = ...
 # Opcionális:
-# GEMINI_MODEL = gemini-2.5-flash
+# GEMINI_MODEL = gemini-3.6-flash
 # NETLIFY_AUTH_TOKEN = ...   # csak automatikus production deployhoz
 # NETLIFY_SITE_ID = ...      # csak automatikus production deployhoz
