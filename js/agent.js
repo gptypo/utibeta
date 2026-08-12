@@ -31,7 +31,7 @@ function setStep(name,status){
 }
 function resetSteps(){$$('.agent-steps li').forEach(el=>el.classList.remove('is-active','is-done','is-error'))}
 function updateConnection(){
- elements.connection.innerHTML=`<strong>Netlify példa backend aktív.</strong><p>A funkciók a <code>/.netlify/functions/</code> útvonalon futnak. A valódi AI használatához csak az <code>OPENAI_API_KEY</code> környezeti változót kell beállítani.</p><button id="agent-settings-toggle" class="text-button" type="button">Beállítási útmutató</button>`;
+ elements.connection.innerHTML=`<strong>Netlify példa backend aktív.</strong><p>A funkciók a <code>/.netlify/functions/</code> útvonalon futnak. A valódi AI használatához a <code>GEMINI_API_KEY</code> környezeti változót kell beállítani.</p><button id="agent-settings-toggle" class="text-button" type="button">Beállítási útmutató</button>`;
  $('#agent-settings-toggle')?.addEventListener('click',()=>elements.settings.open=true);
 }
 function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
@@ -84,7 +84,7 @@ function pollJob(){
    const response=await fetch(`${NETLIFY_BACKEND.status}?id=${encodeURIComponent(state.jobId)}`,{headers:{'Accept':'application/json'}});
    if(!response.ok)throw new Error(`Állapotlekérés: HTTP ${response.status}`);
    const job=await response.json();applyJob(job);
-   if(!['ready','failed','released','rejected'].includes(job.status))state.pollTimer=setTimeout(tick,1800);
+   if(!['ready','approved','failed','released','rejected'].includes(job.status))state.pollTimer=setTimeout(tick,1800);
   }catch(error){failJob(error)}
  };
  state.pollTimer=setTimeout(tick,800);
@@ -93,7 +93,7 @@ function stopPolling(){if(state.pollTimer){clearTimeout(state.pollTimer);state.p
 function normalizedStage(job){
  if(job.status==='failed')return 'failed';
  if(job.status==='ready')return 'review';
- if(job.status==='released')return 'release';
+ if(job.status==='released'||job.status==='approved')return 'release';
  return job.stage||job.status||'analyze';
 }
 function applyJob(job){
@@ -104,9 +104,20 @@ function applyJob(job){
  const current=Math.max(0,order.indexOf(stage));
  order.slice(0,current).forEach(x=>setStep(x,'done'));
  setStep(order[current],state.job.status==='released'?'done':'active');
- if(state.job.status==='ready'){order.slice(0,4).forEach(x=>setStep(x,'done'));setStep('review','active');setBadge('Jóváhagyásra vár','ready');renderResult(state.job)}
- else if(state.job.status==='released'){order.forEach(x=>setStep(x,'done'));setBadge('Kiadva','ready');renderResult(state.job)}
- else setBadge('Dolgozik…','working');
+ if(state.job.status==='ready'){
+  order.slice(0,4).forEach(x=>setStep(x,'done'));
+  setStep('review','active');
+  setBadge('Jóváhagyásra vár','ready');
+  renderResult(state.job);
+ }else if(state.job.status==='approved'){
+  order.forEach(x=>setStep(x,'done'));
+  setBadge('Jóváhagyva','ready');
+  renderResult(state.job);
+ }else if(state.job.status==='released'){
+  order.forEach(x=>setStep(x,'done'));
+  setBadge('Kiadva','ready');
+  renderResult(state.job);
+ }else setBadge('Dolgozik…','working');
 }
 function renderResult(job,failed=false){
  elements.result.hidden=false;
@@ -120,8 +131,12 @@ function renderResult(job,failed=false){
  if(usage){elements.usageCard.hidden=false;elements.usageModel.textContent=usage.model||'AI modell';elements.usageInput.textContent=Number(usage.inputTokens||0).toLocaleString('hu-HU');elements.usageOutput.textContent=Number(usage.outputTokens||0).toLocaleString('hu-HU');elements.usageTotal.textContent=Number(usage.totalTokens||0).toLocaleString('hu-HU');const usd=usage.cost?.estimatedUsd;elements.usageCost.textContent=typeof usd==='number'?`$${usd<0.01?usd.toFixed(4):usd.toFixed(3)}`:'n/a';}else{elements.usageCard.hidden=true;}
  if(job.previewUrl){elements.preview.href=job.previewUrl;elements.preview.hidden=false}else elements.preview.hidden=true;
  if(job.artifactUrl){elements.download.href=job.artifactUrl;elements.download.hidden=false}else elements.download.hidden=true;
- elements.release.disabled=failed||job.status==='released'||!elements.protect.checked===false&&false;
- if(job.status==='released')elements.releaseStatus.textContent='A verzió kiadva.';
+ elements.release.disabled=failed||job.status==='released'||job.status==='approved';
+ if(job.status==='approved'){
+  elements.releaseStatus.textContent=job.releaseMessage||'Jóváhagyva. Töltsd le a build ZIP-et a kézi publikáláshoz.';
+ }else if(job.status==='released'){
+  elements.releaseStatus.textContent=job.releaseMessage||'A verzió kiadva.';
+ }
  elements.result.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function failJob(error){stopPolling();setBadge('Hiba','error');setStep(state.job?.stage||'analyze','error');elements.releaseStatus.textContent=error?.message||String(error);elements.start.disabled=false}
