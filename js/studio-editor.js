@@ -198,15 +198,40 @@ window.addEventListener('utiterv-studio-history-changed',updateHistoryButtons);
 window.addEventListener('utiterv-studio-changed',updateHistoryButtons);
 updateHistoryButtons();
 
+function createPreviewComponent(doc,type,id){
+ const tags={heading:'h2',text:'p',button:'button',card:'article',spacer:'div'};
+ const el=doc.createElement(tags[type]||'div');
+ el.dataset.studioInsertId=id;
+ if(type==='button'){el.className='button';el.type='button';el.setAttribute('aria-label','Üres gomb')}
+ else if(type==='card'){el.className='card';el.style.padding='20px'}
+ else if(type==='spacer'){el.style.height='32px';el.setAttribute('aria-label','Térköz')}
+ return el;
+}
+
 document.querySelector('.studio-component-grid')?.addEventListener('click',e=>{
  const b=e.target.closest('[data-component]');if(!b)return;if(!selected){alert('Előbb válassz ki egy befogadó konténert.');return}
- const target=currentPreviewElement(selected.selector);if(!target){alert('A kijelölt konténer nem található az előnézetben.');return}
+ const target=currentPreviewElement(selected.selector);if(!target){alert('A kijelölt konténer nem található az előnézetben. Kattints rá újra, majd próbáld meg ismét.');return}
+ const forbidden=new Set(['IMG','INPUT','TEXTAREA','SELECT','VIDEO','AUDIO','CANVAS','BR','HR']);
+ if(forbidden.has(target.tagName)){alert('Ez az elem nem lehet befogadó konténer. Válaszd ki a szülő DIV/SECTION/ARTICLE elemet.');return}
  const type=b.dataset.component;const tags={heading:'h2',text:'p',button:'button',card:'article',spacer:'div'};
  const id=`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`;
  const childIndex=target.children.length;
- addComponent({id,targetSelector:selected.selector,position:'child-index',childIndex,componentType:type,tag:tags[type],text:''});
- refresh();$('#studio-selected-label').textContent='Új üres elem a kijelölt konténerben. Az Oldal elemei listában mozgathatod.';
- setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id=\"${id}\"]`},'*'),160);
+ const doc=target.ownerDocument;
+ // Azonnali DOM-beszúrás: a felhasználó rögtön látja az elemet,
+ // a runtime pedig ugyanazzal az ID-val később csak fenntartja a helyét.
+ const el=createPreviewComponent(doc,type,id);
+ target.appendChild(el);
+ const stableTargetSelector=selectorForPreview(target);
+ addComponent({id,targetSelector:stableTargetSelector,position:'child-index',childIndex,componentType:type,tag:tags[type],text:''});
+ rebuildDirectTree(doc);
+ directSelect(el);
+ $('#studio-selected-label').textContent='Új üres elem hozzáadva a kijelölt konténerhez.';
+ // Szinkronizáljuk a runtime-ot, de nem kényszerítjük az egész app újrarenderét.
+ preview.contentWindow?.postMessage({type:'utiterv-studio-refresh'},'*');
+ setTimeout(()=>{
+  const live=doc.querySelector(`[data-studio-insert-id=\"${CSS.escape(id)}\"]`);
+  if(live){rebuildDirectTree(doc);directSelect(live);live.scrollIntoView({behavior:'smooth',block:'center'})}
+ },120);
 });
 
 $('#studio-build-export')?.addEventListener('click',()=>{
