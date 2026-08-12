@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.6.7-editor-cleanup';
+var VERSION = 'beta-3.7.0-simple-editor';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';
@@ -25,7 +25,8 @@ var APP_FILES = [
   '/js/app.js',
   '/js/pwa.js',
   '/js/theme.js',
-  '/js/studio-runtime.js',
+  '/js/simple-runtime.js',
+  '/content/simple-editor-state.json',
   '/js/studio-engine.js',
   '/js/full-content-engine.js',
   '/js/content-engine.js',
