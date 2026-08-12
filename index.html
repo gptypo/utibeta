@@ -8,7 +8,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Útiterv">
+  <meta name="apple-mobile-web-app-title" content="">
   <link rel="apple-touch-icon" href="">
   <meta name="description" content="">
   <link rel="manifest" href="manifest.webmanifest?v=beta-1.2.5-career-competency-polish">
@@ -36,12 +36,12 @@
 
   <div id="app" class="app" hidden>
     <header class="topbar">
-      <button class="brand" type="button" data-route="home" aria-label="Főoldal">
+      <button class="brand" type="button" data-route="home" aria-label="">
         <img src="" alt=""><span></span>
       </button>
       <div class="topbar__actions">
-        <button class="version version--button" type="button" data-route="system" aria-label="Design system megnyitása"></button>
-        <button class="menu-button" type="button" data-menu-open aria-label="Főmenü megnyitása" aria-controls="app-menu" aria-expanded="false" hidden>
+        <button class="version version--button" type="button" data-route="system" aria-label=""></button>
+        <button class="menu-button" type="button" data-menu-open aria-label="" aria-controls="app-menu" aria-expanded="false" hidden>
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -52,10 +52,10 @@
     <footer class="app-footer"><span></span><button type="button" data-route="privacy"></button></footer>
 
     <div class="menu-backdrop" data-menu-close hidden></div>
-    <aside id="app-menu" class="app-menu" aria-label="Fő navigáció" aria-hidden="true" tabindex="-1">
+    <aside id="app-menu" class="app-menu" aria-label="" aria-hidden="true" tabindex="-1">
       <div class="app-menu__head">
         <div><span class="eyebrow eyebrow--dark"></span><h2></h2></div>
-        <button class="menu-close" type="button" data-menu-close aria-label="Menü bezárása">×</button>
+        <button class="menu-close" type="button" data-menu-close aria-label="">×</button>
       </div>
       <nav class="app-menu__nav">
         <button type="button" data-route="home"><span class="app-menu__home">⌂</span><span><strong></strong><small></small></span></button>
@@ -70,14 +70,16 @@
 
   <script>
     (() => {
-      const showStartupError = error => {
+      const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+      const showStartupError = async error => {
         const splash = document.querySelector('#splash');
         const app = document.querySelector('#app');
         if (splash) splash.hidden = true;
         if (app) app.hidden = false;
         const view = document.querySelector('#view');
         if (!view) return;
-        view.innerHTML = `<section class="startup-error"><span class="eyebrow eyebrow--dark">Indítási hiba</span><h1>Az alkalmazás nem tudott elindulni.</h1><p>Frissítsd az oldalt. Ha a hiba továbbra is fennáll, töröld az alkalmazás webhelyadatait, majd nyisd meg újra.</p><details><summary>Technikai részletek</summary><pre>${String(error?.message || error || 'Ismeretlen hiba')}</pre></details></section>`;
+        let c={}; try{const r=await fetch('content/ui.json',{cache:'no-store'});c=(await r.json()).startupError||{}}catch{}
+        view.innerHTML = `<section class="startup-error"><span class="eyebrow eyebrow--dark">${esc(c.eyebrow)}</span><h1>${esc(c.title)}</h1><p>${esc(c.text)}</p><details><summary>${esc(c.details)}</summary><pre>${esc(String(error?.message || error || c.unknown || ''))}</pre></details></section>`;
       };
       window.addEventListener('error', event => showStartupError(event.error || event.message));
       window.addEventListener('unhandledrejection', event => showStartupError(event.reason));

@@ -1,0 +1,11 @@
+{
+  "schema": "utiterv-offline-v1",
+  "title": "Offline – Útiterv",
+  "mark": "↗",
+  "eyebrow": "Offline mód",
+  "heading": "Most nincs internetkapcsolat.",
+  "text": "A korábban megnyitott Útiterv-tartalmak továbbra is elérhetők. Új oldal betöltéséhez csatlakozz újra az internethez.",
+  "retry": "Újrapróbálom",
+  "back": "Vissza az apphoz",
+  "backHref": "./index.html"
+}

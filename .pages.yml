@@ -1039,6 +1039,32 @@ content:
     - name: exhale
       label: Exhale
       type: string
+    - name: techniques
+      label: Légzéstechnikák
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+      fields:
+      - name: name
+        label: Név
+        type: string
+      - name: inhale
+        label: Belégzés (mp)
+        type: number
+      - name: hold
+        label: Bent tartás (mp)
+        type: number
+      - name: exhale
+        label: Kilégzés (mp)
+        type: number
+      - name: ratio
+        label: Ritmus
+        type: string
+      - name: description
+        label: Leírás
+        type: text
   - name: contentTypeLabels
     label: Content type labels
     type: object
@@ -1054,6 +1080,358 @@ content:
       type: string
     - name: quiz
       label: Quiz
+      type: string
+  - name: runtime
+    label: Minden egyéb felirat
+    type: object
+    fields:
+    - name: progressAria
+      label: progressAria
+      type: string
+    - name: questionFallback
+      label: questionFallback
+      type: string
+    - name: moduleSwipeAria
+      label: moduleSwipeAria
+      type: string
+    - name: moduleContentsAria
+      label: moduleContentsAria
+      type: string
+    - name: pagerAria
+      label: pagerAria
+      type: string
+    - name: previousPageAria
+      label: previousPageAria
+      type: string
+    - name: previousPage
+      label: previousPage
+      type: string
+    - name: nextPageAria
+      label: nextPageAria
+      type: string
+    - name: nextPage
+      label: nextPage
+      type: string
+    - name: quizLabel
+      label: quizLabel
+      type: string
+    - name: quizSuccess
+      label: quizSuccess
+      type: string
+    - name: quizGuidance
+      label: quizGuidance
+      type: string
+    - name: quizFeedbackFallback
+      label: quizFeedbackFallback
+      type: string
+    - name: quizNext
+      label: quizNext
+      type: string
+    - name: quizFinishTitle
+      label: quizFinishTitle
+      type: string
+    - name: quizFinishText
+      label: quizFinishText
+      type: string
+    - name: selected
+      label: selected
+      type: string
+    - name: flipAria
+      label: flipAria
+      type: string
+    - name: situation
+      label: situation
+      type: string
+    - name: phraseThink
+      label: phraseThink
+      type: string
+    - name: tapForSolution
+      label: tapForSolution
+      type: string
+    - name: youCanSay
+      label: youCanSay
+      type: string
+    - name: digitalThink
+      label: digitalThink
+      type: string
+    - name: tapForGuideline
+      label: tapForGuideline
+      type: string
+    - name: consciousDirection
+      label: consciousDirection
+      type: string
+    - name: cardAria
+      label: cardAria
+      type: string
+    - name: monthSuffix
+      label: monthSuffix
+      type: string
+    - name: thoughtLabel
+      label: thoughtLabel
+      type: string
+    - name: thoughtPlaceholder
+      label: thoughtPlaceholder
+      type: string
+    - name: saveThoughts
+      label: saveThoughts
+      type: string
+    - name: guidedAudioEyebrow
+      label: guidedAudioEyebrow
+      type: string
+    - name: audioPositionAria
+      label: audioPositionAria
+      type: string
+    - name: restartAria
+      label: restartAria
+      type: string
+    - name: volume
+      label: volume
+      type: string
+    - name: exerciseFallback
+      label: exerciseFallback
+      type: string
+    - name: carry
+      label: carry
+      type: string
+    - name: preboardingTitle
+      label: preboardingTitle
+      type: string
+    - name: preboardingDescription
+      label: preboardingDescription
+      type: string
+    - name: survivalTitle
+      label: survivalTitle
+      type: string
+    - name: survivalDescription
+      label: survivalDescription
+      type: string
+    - name: marketFactsTitle
+      label: marketFactsTitle
+      type: string
+    - name: marketFactsDescription
+      label: marketFactsDescription
+      type: string
+    - name: marketFactsBack
+      label: marketFactsBack
+      type: string
+    - name: workplaceSituationsTitle
+      label: workplaceSituationsTitle
+      type: string
+    - name: workplaceSituationsDescription
+      label: workplaceSituationsDescription
+      type: string
+    - name: tip
+      label: tip
+      type: string
+    - name: meaning
+      label: meaning
+      type: string
+    - name: interviewQuestion
+      label: interviewQuestion
+      type: string
+    - name: sampleAnswer
+      label: sampleAnswer
+      type: string
+    - name: whatToDo
+      label: whatToDo
+      type: string
+    - name: essence
+      label: essence
+      type: string
+    - name: goodToKnow
+      label: goodToKnow
+      type: string
+    - name: youngPerspective
+      label: youngPerspective
+      type: string
+    - name: employerPerspective
+      label: employerPerspective
+      type: string
+    - name: genZExpectation
+      label: genZExpectation
+      type: string
+    - name: employerExpectation
+      label: employerExpectation
+      type: string
+    - name: topic
+      label: topic
+      type: string
+    - name: message
+      label: message
+      type: string
+    - name: amateur
+      label: amateur
+      type: string
+    - name: professional
+      label: professional
+      type: string
+    - name: whatMeans
+      label: whatMeans
+      type: string
+    - name: whenYouMeet
+      label: whenYouMeet
+      type: string
+    - name: cvFlipAria
+      label: cvFlipAria
+      type: string
+    - name: cvDont
+      label: cvDont
+      type: string
+    - name: cvDo
+      label: cvDo
+      type: string
+    - name: cvTapReplacement
+      label: cvTapReplacement
+      type: string
+    - name: cvGenFlipAria
+      label: cvGenFlipAria
+      type: string
+    - name: dontDo
+      label: dontDo
+      type: string
+    - name: doIt
+      label: doIt
+      type: string
+    - name: cvTapDoInstead
+      label: cvTapDoInstead
+      type: string
+    - name: cvTipsTitle
+      label: cvTipsTitle
+      type: string
+    - name: quickRule
+      label: quickRule
+      type: string
+    - name: whatWrite
+      label: whatWrite
+      type: string
+    - name: whatNotWrite
+      label: whatNotWrite
+      type: string
+    - name: bodyScanDoneTitle
+      label: bodyScanDoneTitle
+      type: string
+    - name: bodyScanDoneText
+      label: bodyScanDoneText
+      type: string
+    - name: again
+      label: again
+      type: string
+    - name: bodyScanIntro
+      label: bodyScanIntro
+      type: text
+    - name: letsStart
+      label: letsStart
+      type: string
+    - name: redFlagFallback
+      label: redFlagFallback
+      type: string
+  - name: startupError
+    label: Indítási hiba szövegei
+    type: object
+    fields:
+    - name: eyebrow
+      label: eyebrow
+      type: string
+    - name: title
+      label: title
+      type: string
+    - name: text
+      label: text
+      type: text
+    - name: details
+      label: details
+      type: string
+    - name: unknown
+      label: unknown
+      type: string
+  operations:
+    delete: false
+    rename: false
+- name: content_offline_json
+  label: Offline oldal
+  type: file
+  path: content/offline.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: title
+    label: Böngészőcím
+    type: string
+  - name: mark
+    label: Jel
+    type: string
+  - name: eyebrow
+    label: Kis cím
+    type: string
+  - name: heading
+    label: Főcím
+    type: string
+  - name: text
+    label: Szöveg
+    type: text
+  - name: retry
+    label: Újrapróbálás gomb
+    type: string
+  - name: back
+    label: Vissza gomb
+    type: string
+  - name: backHref
+    label: Vissza link
+    type: string
+  operations:
+    delete: false
+    rename: false
+- name: pwa_manifest
+  label: PWA · Név és alkalmazásikonok
+  type: file
+  path: manifest.webmanifest
+  format: json
+  fields:
+  - name: name
+    label: Alkalmazás neve
+    type: string
+  - name: short_name
+    label: Rövid név
+    type: string
+  - name: description
+    label: Leírás
+    type: text
+  - name: start_url
+    label: Indítási URL
+    type: string
+  - name: display
+    label: Megjelenítési mód
+    type: string
+  - name: background_color
+    label: Háttérszín
+    type: string
+  - name: theme_color
+    label: Témaszín
+    type: string
+  - name: icons
+    label: Alkalmazásikonok
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{sizes} · {purpose}'
+    fields:
+    - name: src
+      label: Ikonfájl
+      type: image
+      options:
+        media: images
+    - name: sizes
+      label: Méret
+      type: string
+    - name: type
+      label: MIME típus
+      type: string
+    - name: purpose
+      label: Purpose
       type: string
   operations:
     delete: false
@@ -1196,13 +1574,25 @@ content:
     fields:
     - name: safePlace
       label: Safe place
-      type: string
+      type: file
+      options:
+        media: audio
+        categories:
+        - audio
     - name: goldBubble
       label: Gold bubble
-      type: string
+      type: file
+      options:
+        media: audio
+        categories:
+        - audio
     - name: backpack
       label: Backpack
-      type: string
+      type: file
+      options:
+        media: audio
+        categories:
+        - audio
   operations:
     delete: false
     rename: false

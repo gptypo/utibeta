@@ -46,7 +46,7 @@
   },
   "audio": {
     "safePlace": "audio/vizualizacio-biztonsagos-hely.mp3",
-    "goldBubble": "audio/aranybuborek.mp3",
-    "backpack": "audio/tedd-le-a-hatizsakot.mp3"
+    "goldBubble": "",
+    "backpack": ""
   }
 }
