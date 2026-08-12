@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.6-simple-ai-content';
+var VERSION = 'beta-3.6.2-editor-route-hotfix';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';
@@ -155,7 +155,27 @@ function cachedAppShell() {
   });
 }
 
-function navigationResponse(request) {
+function isEditorNavigation(url) {
+  var path = url.pathname.replace(/\/+$/, '') || '/';
+  return path === '/editor' || path === '/editor.html' ||
+         path === '/ai-content' || path === '/ai-content.html';
+}
+
+function editorNavigationResponse(request, url) {
+  // The editor is an online authoring surface, not part of the cached app shell.
+  // Netlify may serve editor.html through its clean /editor URL, therefore we
+  // must let the network resolve that route instead of falling back to index.html.
+  return fetch(request, { cache: 'no-store' }).catch(function () {
+    var fallback = (url.pathname.indexOf('ai-content') !== -1) ? '/ai-content.html' : '/editor.html';
+    return caches.match(fallback, { ignoreSearch: true }).then(function (cached) {
+      return cached || caches.match(OFFLINE_URL, { ignoreSearch: true });
+    });
+  });
+}
+
+function navigationResponse(request, url) {
+  if (isEditorNavigation(url)) return editorNavigationResponse(request, url);
+
   // The installed PWA must start from the same cached shell even when its
   // start_url contains ?source=pwa or a hash route.
   return caches.match(request, { ignoreSearch: true }).then(function (cached) {
@@ -190,7 +210,7 @@ self.addEventListener('fetch', function (event) {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
-    event.respondWith(navigationResponse(request));
+    event.respondWith(navigationResponse(request, url));
     return;
   }
 
