@@ -90,7 +90,17 @@ function refresh(){
   setTimeout(()=>{bindDirectInspector();try{rebuildDirectTree(preview.contentDocument)}catch{}},80)
 }
 function esc(s){return String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}
-function renderTree(q=''){const f=q.toLowerCase().trim();tree.innerHTML=nodes.filter(n=>!f||`${n.label} ${n.tag}`.toLowerCase().includes(f)).map(n=>`<button type="button" data-selector="${esc(n.selector)}" class="${selected?.selector===n.selector?'is-active':''}" style="padding-left:${8+n.depth*12}px"><span>${n.tag}</span>${esc(n.label||n.selector)}</button>`).join('')||'<p class="empty-state">Nincs találat.</p>'}
+function insertionIdFromSelector(selector=''){const m=String(selector).match(/data-studio-insert-id=[\"']([^\"']+)/);return m?.[1]||''}
+function renderTree(q=''){
+ const f=q.toLowerCase().trim();
+ const rows=nodes.filter(n=>!f||`${n.label} ${n.tag}`.toLowerCase().includes(f)).map(n=>{
+  const insertId=n.insertId||insertionIdFromSelector(n.selector);
+  const controls=insertId?`<span class="studio-tree-actions"><button type="button" data-structure-action="up" data-insert-id="${esc(insertId)}" title="Felfelé" aria-label="Felfelé">↑</button><button type="button" data-structure-action="down" data-insert-id="${esc(insertId)}" title="Lefelé" aria-label="Lefelé">↓</button><button type="button" data-structure-action="indent" data-insert-id="${esc(insertId)}" title="Beljebb" aria-label="Beljebb">→</button><button type="button" data-structure-action="outdent" data-insert-id="${esc(insertId)}" title="Kijjebb" aria-label="Kijjebb">←</button></span>`:'';
+  return `<div class="studio-tree-row ${selected?.selector===n.selector?'is-active':''}" style="--tree-depth:${n.depth||0}"><button type="button" class="studio-tree-main" data-selector="${esc(n.selector)}"><span>${n.tag}</span>${esc(n.label||n.selector)}</button>${controls}</div>`
+ }).join('');
+ tree.innerHTML=rows||'<p class="empty-state">Nincs találat.</p>'
+}
+
 
 function currentPreviewElement(selector){try{return preview.contentDocument?.querySelector(selector)||null}catch{return null}}
 function computedValues(selector){const el=currentPreviewElement(selector);if(!el)return {};const cs=preview.contentWindow.getComputedStyle(el),out={};for(const [field,prop] of Object.entries(computedMap)){let v=cs[prop]||'';if(field==='backgroundImage'&&v==='none')v='';if(field==='boxShadow'&&v==='none')v='none';if(field==='animation'&&v==='none 0s ease 0s 1 normal none running')v='';out[field]=v}const r=el.getBoundingClientRect();out.__rect={width:Math.round(r.width),height:Math.round(r.height)};out.__parents=[];let n=el;while(n&&n!==el.ownerDocument.body&&out.__parents.length<6){out.__parents.unshift({selector:selectorForPreview(n),tag:n.tagName.toLowerCase(),label:previewLabel(n)});n=n.parentElement}return out}
@@ -113,8 +123,28 @@ function loadProperties(info){
  const a=d.assets?.[info.selector];$('#studio-current-asset').textContent=a?`Hozzárendelve: ${a.name||'grafika'} (${a.mode})`:'Nincs grafika hozzárendelve.';if(a){$('#studio-asset-mode').value=a.mode||'background';$('#studio-asset-size').value=a.size||'contain'}
  renderBreadcrumb(computed.__parents||[]);renderTree($('#studio-tree-search').value)
 }
-window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select')loadProperties(e.data);if(e.data?.type==='utiterv-studio-reorder'){moveInsertion(e.data.id,{targetSelector:e.data.parentSelector,position:'child-index',childIndex:Number(e.data.index)||0});refresh();setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id=\"${e.data.id}\"]`},'*'),120);$('#studio-selected-label').textContent='Elem áthelyezve a konténeren belül.'}});
+window.addEventListener('message',e=>{if(e.data?.type==='utiterv-studio-shortcut'){const ok=e.data.key==='y'||(e.data.key==='z'&&e.data.shift)?redoStudio():undoStudio();if(ok){refresh();if(selected)loadProperties(selected)}updateHistoryButtons()}if(e.data?.type==='utiterv-studio-tree'){nodes=e.data.nodes||[];renderTree($('#studio-tree-search').value)}if(e.data?.type==='utiterv-studio-select')loadProperties(e.data)});
 tree.addEventListener('click',e=>{const b=e.target.closest('[data-selector]');if(!b)return;preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:b.dataset.selector},'*');try{const el=preview.contentDocument.querySelector(b.dataset.selector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}}catch{}});
+function moveStudioBlock(id,action){
+ let el;try{el=preview.contentDocument?.querySelector(`[data-studio-insert-id="${CSS.escape(id)}"]`)}catch{}
+ if(!el)return;
+ const parent=el.parentElement;if(!parent)return;
+ const siblings=[...parent.children],index=siblings.indexOf(el);
+ let targetParent=parent,targetIndex=index;
+ if(action==='up'&&index>0)targetIndex=index-1;
+ else if(action==='down'&&index<siblings.length-1)targetIndex=index+1;
+ else if(action==='indent'){
+  const previous=siblings[index-1];if(!previous)return;targetParent=previous;targetIndex=previous.children.length;
+ }else if(action==='outdent'){
+  const grand=parent.parentElement;if(!grand||parent===preview.contentDocument?.body)return;targetParent=grand;targetIndex=[...grand.children].indexOf(parent)+1;
+ }else if(!['up','down'].includes(action))return;
+ if(targetParent===parent&&targetIndex===index)return;
+ moveInsertion(id,{targetSelector:selectorForPreview(targetParent),position:'child-index',childIndex:Math.max(0,targetIndex)});
+ refresh();
+ setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id="${id}"]`},'*'),140);
+ $('#studio-selected-label').textContent={up:'Elem feljebb mozgatva.',down:'Elem lejjebb mozgatva.',indent:'Elem beljebb helyezve.',outdent:'Elem kijjebb helyezve.'}[action]||'Struktúra frissítve.';
+}
+tree.addEventListener('click',e=>{const a=e.target.closest('[data-structure-action]');if(!a)return;e.preventDefault();e.stopPropagation();moveStudioBlock(a.dataset.insertId,a.dataset.structureAction)});
 $('#studio-tree-search').addEventListener('input',e=>renderTree(e.target.value));$('#studio-reload-tree').addEventListener('click',refresh);
 $('#studio-breadcrumb')?.addEventListener('click',e=>{const b=e.target.closest('[data-crumb-selector]');if(!b)return;const el=currentPreviewElement(b.dataset.crumbSelector);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});directSelect(el)}});
 document.querySelectorAll('[data-auto-layout]').forEach(b=>b.addEventListener('click',()=>{if(!selected)return;const mode=b.dataset.autoLayout,patch=mode==='row'?{display:'flex',flexDirection:'row',alignItems:'center',gap:'16px'}:mode==='column'?{display:'flex',flexDirection:'column',alignItems:'stretch',gap:'16px'}:{display:'grid',gap:'16px'};Object.entries(patch).forEach(([k,v])=>{setFieldValue(k,v);dirtyFields.add(k)});saveSelectedLive()}));
@@ -167,11 +197,13 @@ window.addEventListener('utiterv-studio-changed',updateHistoryButtons);
 updateHistoryButtons();
 
 document.querySelector('.studio-component-grid')?.addEventListener('click',e=>{
- const b=e.target.closest('[data-component]');if(!b)return;if(!selected){alert('Előbb válassz ki egy befogadó elemet.');return}
+ const b=e.target.closest('[data-component]');if(!b)return;if(!selected){alert('Előbb válassz ki egy befogadó konténert.');return}
+ const target=currentPreviewElement(selected.selector);if(!target){alert('A kijelölt konténer nem található az előnézetben.');return}
  const type=b.dataset.component;const tags={heading:'h2',text:'p',button:'button',card:'article',spacer:'div'};
- const position=$('#studio-component-position').value;const id=`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`;
- addComponent({id,targetSelector:selected.selector,position,componentType:type,tag:tags[type],text:{heading:'Új címsor',text:'',button:'',card:'Új kártya'}[type]??''});
- refresh();$('#studio-selected-label').textContent=position==='append'?'Új elem a kijelölt konténerben – húzd a kívánt helyre.':'Új komponens beszúrva.';
+ const id=`insert-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+ const childIndex=target.children.length;
+ addComponent({id,targetSelector:selected.selector,position:'child-index',childIndex,componentType:type,tag:tags[type],text:''});
+ refresh();$('#studio-selected-label').textContent='Új üres elem a kijelölt konténerben. Az Oldal elemei listában mozgathatod.';
  setTimeout(()=>preview.contentWindow.postMessage({type:'utiterv-studio-focus',selector:`[data-studio-insert-id=\"${id}\"]`},'*'),160);
 });
 
