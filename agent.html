@@ -22,7 +22,7 @@
   <main class="agent-shell">
     <header class="agent-head">
       <div>
-        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.2.1</span>
+        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.3</span>
         <h1>AI kiadási ügynök</h1>
         <p>Írd le közérthetően, mit szeretnél módosítani. Az ügynök előkészíti az új verziót, lefuttatja az ellenőrzéseket, majd jóváhagyás után kiadható.</p>
       </div>
@@ -113,7 +113,7 @@
 
         <div id="agent-connection" class="agent-connection">
           <strong>Netlify példa backend beépítve.</strong>
-          <p>A backend ebben a csomagban benne van. A Netlify-on csak az OPENAI_API_KEY környezeti változót kell megadni.</p>
+          <p>A backend ebben a csomagban benne van. A Netlify-on csak az GEMINI_API_KEY környezeti változót kell megadni.</p>
           <button id="agent-settings-toggle" class="text-button" type="button">Kapcsolat beállítása</button>
         </div>
 
@@ -123,8 +123,8 @@
             <span>Netlify backend</span>
             <input id="agent-endpoint" value="Netlify Functions (beépítve)" disabled>
           </label>
-          <p><strong>Minimum beállítás:</strong> Netlify → Project configuration → Environment variables → <code>OPENAI_API_KEY</code>.<br>
-Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gpt-5-mini</code>, a költségtakarékos működéshez. Automatikus production feltöltéshez még <code>NETLIFY_AUTH_TOKEN</code> és <code>NETLIFY_SITE_ID</code> kell; ezek nélkül a jóváhagyott új ZIP egyszerűen letölthető.</p>
+          <p><strong>Minimum beállítás:</strong> Netlify → Project configuration → Environment variables → <code>GEMINI_API_KEY</code>.<br>
+Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gemini-2.5-flash</code>, a költségtakarékos működéshez. Automatikus production feltöltéshez még <code>NETLIFY_AUTH_TOKEN</code> és <code>NETLIFY_SITE_ID</code> kell; ezek nélkül a jóváhagyott új ZIP egyszerűen letölthető.</p>
           <div class="agent-settings__actions">
             <button id="agent-save-settings" class="button button--secondary" type="button">Mentés</button>
             <button id="agent-demo" class="button button--secondary" type="button">Demó folyamat</button>
@@ -159,7 +159,7 @@ Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gpt-5-mini</cod
               <div><span>Összes token</span><strong id="agent-usage-total">–</strong></div>
               <div class="agent-usage-cost"><span>Becsült API-költség</span><strong id="agent-usage-cost">–</strong></div>
             </div>
-            <small>Tájékoztató becslés az API által visszaadott tokenhasználat alapján.</small>
+            <small>* A Gemini Free Tier limiteken belül várhatóan nincs API-költség. A tényleges kvótát és számlázást mindig a Google AI Studio mutatja.</small>
           </div>
         </article>
       </div>
@@ -175,7 +175,7 @@ Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gpt-5-mini</cod
 
     <footer class="agent-footer">
       <p>© OFA Nonprofit Kft. Minden jog fenntartva. <span id="agent-year"></span></p>
-      <span>BETA 3.2.1 · Költségtakarékos AI backend</span>
+      <span>BETA 3.3 · Gemini Free API backend</span>
     </footer>
   </main>
 

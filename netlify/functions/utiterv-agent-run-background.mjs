@@ -1,4 +1,3 @@
-import OpenAI from "openai";
 import AdmZip from "adm-zip";
 import mammoth from "mammoth";
 import { readFile } from "node:fs/promises";
@@ -106,63 +105,136 @@ export default async (req, context) => {
     const job=await readJob(jobId);
     if(!job) return;
 
-    if(!process.env.OPENAI_API_KEY){
+    if(!process.env.GEMINI_API_KEY){
       await writeJob(jobId,{
         status:"failed",
         stage:"analyze",
-        summary:"Hiányzik az OPENAI_API_KEY Netlify environment variable.",
-        checks:[{name:"OPENAI_API_KEY",ok:false,message:"Állítsd be a Netlify projekt Environment variables részében."}]
+        summary:"Hiányzik a GEMINI_API_KEY Netlify environment variable.",
+        checks:[{name:"GEMINI_API_KEY",ok:false,message:"Állítsd be a Netlify projekt Environment variables részében."}]
       });
       return;
     }
 
-    const client=new OpenAI({apiKey:process.env.OPENAI_API_KEY});
-    const model=process.env.OPENAI_MODEL||"gpt-5-mini";
-    const PRICE_PER_M={
-      "gpt-5-mini":{input:0.25,cachedInput:0.025,output:2.00},
-      "gpt-5":{input:1.25,cachedInput:0.125,output:10.00},
-      "gpt-5-nano":{input:0.05,cachedInput:0.005,output:0.40}
+    const model=process.env.GEMINI_MODEL||"gemini-2.5-flash";
+    const usageTotal={input_tokens:0,output_tokens:0,total_tokens:0};
+
+    function addGeminiUsage(data){
+      const u=data?.usageMetadata||{};
+      usageTotal.input_tokens+=(u.promptTokenCount||0);
+      usageTotal.output_tokens+=(u.candidatesTokenCount||0);
+      usageTotal.total_tokens+=(u.totalTokenCount||((u.promptTokenCount||0)+(u.candidatesTokenCount||0)));
+    }
+
+    function geminiText(data){
+      return (data?.candidates?.[0]?.content?.parts||[])
+        .map(part=>part?.text||"")
+        .join("")
+        .trim();
+    }
+
+    function friendlyGeminiError(status,body){
+      const msg=body?.error?.message||body?.message||`HTTP ${status}`;
+      if(status===400) return `Gemini API kérési hiba: ${msg}`;
+      if(status===401 || status===403) return `Gemini API kulcs/jogosultsági hiba: ${msg}`;
+      if(status===404) return `A beállított Gemini modell nem érhető el: ${model}.`;
+      if(status===429) return `A Gemini Free Tier ideiglenes limitjét elértük. Próbáld újra később. (${msg})`;
+      if(status>=500) return `A Gemini szolgáltatás átmenetileg hibázik. (${msg})`;
+      return `Gemini API hiba: ${msg}`;
+    }
+
+    async function geminiJson({system,prompt,schema,label}){
+      const controller=new AbortController();
+      const timeout=setTimeout(()=>controller.abort(),90000);
+      try{
+        console.log(`[${jobId}] Gemini indul: ${label} | model=${model}`);
+        const response=await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
+          {
+            method:"POST",
+            headers:{
+              "x-goog-api-key":process.env.GEMINI_API_KEY,
+              "content-type":"application/json"
+            },
+            signal:controller.signal,
+            body:JSON.stringify({
+              contents:[{
+                role:"user",
+                parts:[{text:`${system}\n\n--- FELADAT ---\n${prompt}`}]
+              }],
+              generationConfig:{
+                responseFormat:{
+                  text:{
+                    mimeType:"application/json",
+                    schema
+                  }
+                }
+              }
+            })
+          }
+        );
+        const raw=await response.text();
+        let data;
+        try{data=JSON.parse(raw)}catch{data={raw}}
+        if(!response.ok){
+          throw new Error(friendlyGeminiError(response.status,data));
+        }
+        addGeminiUsage(data);
+        const text=geminiText(data);
+        if(!text) throw new Error(`${label}: a Gemini nem adott szöveges választ.`);
+        console.log(`[${jobId}] Gemini kész: ${label} | tokens=${data?.usageMetadata?.totalTokenCount||"?"}`);
+        return parseJson(text,label);
+      }catch(error){
+        if(error?.name==="AbortError") throw new Error(`${label}: a Gemini API-hívás 90 másodperc után időtúllépéssel leállt.`);
+        throw error;
+      }finally{
+        clearTimeout(timeout);
+      }
+    }
+
+    const selectionSchema={
+      type:"object",
+      properties:{
+        paths:{type:"array",items:{type:"string"}},
+        reason:{type:"string"}
+      },
+      required:["paths","reason"]
     };
-    const usageTotal={input_tokens:0,cached_input_tokens:0,output_tokens:0,total_tokens:0};
-    function addUsage(resp){
-      const u=resp?.usage||{};
-      const cached=u.input_tokens_details?.cached_tokens||0;
-      usageTotal.input_tokens+=(u.input_tokens||0);
-      usageTotal.cached_input_tokens+=cached;
-      usageTotal.output_tokens+=(u.output_tokens||0);
-      usageTotal.total_tokens+=(u.total_tokens||((u.input_tokens||0)+(u.output_tokens||0)));
-    }
-    function costEstimate(){
-      const p=PRICE_PER_M[model];
-      if(!p)return null;
-      const uncached=Math.max(0,usageTotal.input_tokens-usageTotal.cached_input_tokens);
-      const usd=(uncached*p.input+usageTotal.cached_input_tokens*p.cachedInput+usageTotal.output_tokens*p.output)/1_000_000;
-      return {currency:"USD",estimatedUsd:Number(usd.toFixed(6)),pricePerMillion:p};
-    }
+
+    const editSchema={
+      type:"object",
+      properties:{
+        summary:{type:"string"},
+        changes:{type:"array",items:{type:"string"}},
+        files:{
+          type:"array",
+          items:{
+            type:"object",
+            properties:{
+              path:{type:"string"},
+              content:{type:"string"}
+            },
+            required:["path","content"]
+          }
+        }
+      },
+      required:["summary","changes","files"]
+    };
+
     const zip=new AdmZip(await readFile(BASE_ZIP));
     const files=entryIndex(zip);
     const attachments=await attachmentContext(job);
 
     await writeJob(jobId,{status:"running",stage:"analyze",summary:"Az AI azonosítja az érintett fájlokat."});
 
-    const selection=await client.responses.create({
-      model,
-      input:[
-        {
-          role:"developer",
-          content:[{type:"input_text",text:
-`Útiterv Studio kódmódosító ügynök vagy.
+    const picked=await geminiJson({
+      label:"Fájlkiválasztás",
+      schema:selectionSchema,
+      system:`Útiterv Studio kódmódosító ügynök vagy.
 A feladatod első lépése CSAK az érintett forrásfájlok kiválasztása.
 Ne módosíts semmit. Legfeljebb 10 útvonalat válassz.
 Elsősorban content/*.json, js/app.js, css/*.css, index.html fájlokat válassz.
-Kizárólag a megadott fájllistából választhatsz.
-Csak JSON-t adj vissza ebben a formában:
-{"paths":["..."],"reason":"..."}` }]
-        },
-        {
-          role:"user",
-          content:[{type:"input_text",text:
-`Kérés:
+Kizárólag a megadott fájllistából választhatsz.`,
+      prompt:`Kérés:
 ${job.request.prompt}
 
 Módosítás típusa: ${job.request.scope}
@@ -172,41 +244,23 @@ Mellékletek:
 ${attachments||"(nincs)"}
 
 Elérhető fájlok:
-${files.join("\n")}` }]
-        }
-      ]
+${files.join("\n")}`
     });
-    addUsage(selection);
-    const picked=parseJson(selection.output_text,"Fájlkiválasztás");
     const paths=(picked.paths||[]).filter(p=>files.includes(p)&&safePath(p)).slice(0,10);
     if(!paths.length) throw new Error("Az AI nem választott módosítható fájlt.");
 
     await writeJob(jobId,{status:"running",stage:"edit",summary:`Az AI ${paths.length} fájlt vizsgál és módosít.`});
 
     const sources=paths.map(p=>`===== FILE: ${p} =====\n${readText(zip,p)}`).join("\n\n");
-    const editResp=await client.responses.create({
-      model,
-      input:[
-        {
-          role:"developer",
-          content:[{type:"input_text",text:
-`Te az Útiterv Studio kiadási ügynöke vagy.
+    const edit=await geminiJson({
+      label:"Kódmódosítás",
+      schema:editSchema,
+      system:`Te az Útiterv Studio kiadási ügynöke vagy.
 A megadott teljes fájltartalmakból készíts biztonságos módosítást.
 Kövesd pontosan a felhasználó kérését, őrizd meg az app vizuális rendszerét és a működő funkciókat.
 Ne találj ki fájlútvonalat; csak a bemenetben szereplő fájlokat módosíthatod.
-A "files" tömbbe CSAK a ténylegesen módosított fájlok kerüljenek, teljes új tartalmukkal.
-A válasz KIZÁRÓLAG érvényes JSON legyen:
-{
- "summary":"rövid magyar összefoglaló",
- "changes":["..."],
- "files":[{"path":"content/...json","content":"TELJES ÚJ FÁJLTARTALOM"}]
-}
-Ne használj markdown code fence-t.` }]
-        },
-        {
-          role:"user",
-          content:[{type:"input_text",text:
-`Kérés:
+A "files" tömbbe CSAK a ténylegesen módosított fájlok kerüljenek, teljes új tartalmukkal.`,
+      prompt:`Kérés:
 ${job.request.prompt}
 
 Célverzió: ${job.version}
@@ -215,13 +269,8 @@ Mellékletek:
 ${attachments||"(nincs)"}
 
 FORRÁSFÁJLOK:
-${sources}` }]
-        }
-      ]
+${sources}`
     });
-
-    addUsage(editResp);
-    const edit=parseJson(editResp.output_text,"Kódmódosítás");
     const changed=[];
     for(const f of edit.files||[]){
       if(!paths.includes(f.path)||!safePath(f.path)||typeof f.content!=="string")continue;
@@ -253,14 +302,24 @@ ${sources}` }]
       checks,
       artifactUrl:`/.netlify/functions/utiterv-agent-artifact?id=${encodeURIComponent(jobId)}`,
       previewUrl:null,
-      aiUsage:{model,inputTokens:usageTotal.input_tokens,cachedInputTokens:usageTotal.cached_input_tokens,outputTokens:usageTotal.output_tokens,totalTokens:usageTotal.total_tokens,cost:costEstimate()}
+      aiUsage:{
+        provider:"Gemini",
+        model,
+        inputTokens:usageTotal.input_tokens,
+        outputTokens:usageTotal.output_tokens,
+        totalTokens:usageTotal.total_tokens,
+        freeTierEligible:true,
+        cost:null
+      }
     });
   }catch(error){
+    console.error(`[${jobId||"no-job"}] AI Agent hiba:`,error);
     if(jobId){
       await writeJob(jobId,{
         status:"failed",
+        stage:"analyze",
         summary:error?.message||String(error),
-        checks:[{name:"AI kiadási folyamat",ok:false,message:error?.message||String(error)}]
+        checks:[{name:"Gemini AI kiadási folyamat",ok:false,message:error?.message||String(error)}]
       }).catch(()=>{});
     }
   }

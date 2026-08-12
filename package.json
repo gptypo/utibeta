@@ -1,7 +1,7 @@
 {
   "name": "utiterv-studio",
   "private": true,
-  "version": "3.2.0-beta",
+  "version": "3.3.0-beta",
   "scripts": {
     "serve": "python -m http.server 4173",
     "test": "playwright test",
@@ -14,7 +14,6 @@
     "@axe-core/playwright": "^4.10.2"
   },
   "dependencies": {
-    "openai": "^5.12.2",
     "@netlify/blobs": "^10.0.8",
     "adm-zip": "^0.5.16",
     "mammoth": "^1.9.1"
