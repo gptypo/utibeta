@@ -38,3 +38,9 @@ html[data-theme="dark"] .agent-body{background:#0f171b;color:#f5faf9}html[data-t
 
 /* BETA 3.2 — API usage / cost indicator */
 .agent-usage-card{margin-top:14px;padding:14px;border-radius:16px;background:#f3fffb;border:1px solid #c9f3e9}.agent-usage-card__head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.agent-usage-card__head span{font-size:.72rem;font-weight:900;padding:5px 8px;border-radius:999px;background:#14e8c9;color:#07110f}.agent-usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.agent-usage-grid>div{display:grid;gap:2px;padding:9px;border-radius:11px;background:#fff}.agent-usage-grid span{font-size:.68rem;color:#637278;font-weight:800}.agent-usage-grid strong{font-size:.96rem}.agent-usage-cost{grid-column:1/-1}.agent-usage-cost strong{font-size:1.25rem;color:#075d50}.agent-usage-card small{display:block;margin-top:9px;color:#637278;line-height:1.35}html[data-theme="dark"] .agent-usage-card{background:#102520;border-color:#1b5148}html[data-theme="dark"] .agent-usage-grid>div{background:#111a1e}html[data-theme="dark"] .agent-usage-grid span,html[data-theme="dark"] .agent-usage-card small{color:#aebfbd}html[data-theme="dark"] .agent-usage-cost strong{color:#14e8c9}
+
+/* BETA 3.4.2 — stability status */
+.agent-status-detail{margin:-4px 0 14px;padding:11px 12px;border-radius:12px;background:#eef5f4;color:#536369;font-size:.78rem;line-height:1.42;font-weight:700}
+.agent-status-detail.is-warning{background:#fff4d7;color:#6f5300;border:1px solid #ead183}
+html[data-theme="dark"] .agent-status-detail{background:#111a1e;color:#b9c8c8}
+html[data-theme="dark"] .agent-status-detail.is-warning{background:#302a18;color:#f2d77e;border-color:#5d512a}

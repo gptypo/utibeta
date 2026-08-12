@@ -7,7 +7,7 @@ const NETLIFY_BACKEND={
  artifact:'/.netlify/functions/utiterv-agent-artifact',
  release:'/.netlify/functions/utiterv-agent-release'
 };
-const state={files:[],jobId:null,job:null,pollTimer:null,demo:false};
+const state={files:[],jobId:null,job:null,pollTimer:null,demo:false,lastHeartbeatSeen:null,lastProgressAt:0};
 
 const elements={
  prompt:$('#agent-prompt'),files:$('#agent-files'),fileList:$('#agent-file-list'),
@@ -18,7 +18,7 @@ const elements={
  result:$('#agent-result'),resultVersion:$('#agent-result-version'),summary:$('#agent-summary'),
  changes:$('#agent-changes'),checks:$('#agent-checks'),preview:$('#agent-preview'),
  download:$('#agent-download'),release:$('#agent-release'),reject:$('#agent-reject'),
- releaseStatus:$('#agent-release-status'),
+ releaseStatus:$('#agent-release-status'),statusDetail:$('#agent-status-detail'),
  usageCard:$('#agent-usage-card'),usageModel:$('#agent-usage-model'),usageInput:$('#agent-usage-input'),usageOutput:$('#agent-usage-output'),usageTotal:$('#agent-usage-total'),usageCost:$('#agent-usage-cost')
 };
 
@@ -60,7 +60,7 @@ function buildRequestMeta(){
 }
 async function startJob(){
  if(!elements.prompt.value.trim()){elements.prompt.focus();setBadge('Adj meg utasítást','error');return}
- stopPolling(); resetSteps(); elements.result.hidden=true; elements.releaseStatus.textContent='';
+ stopPolling(); resetSteps(); state.lastHeartbeatSeen=null;state.lastProgressAt=Date.now();elements.result.hidden=true; elements.releaseStatus.textContent='';
  setBadge('Dolgozik…','working'); setStep('analyze','active'); elements.start.disabled=true;
  try{
   const form=new FormData();
@@ -84,7 +84,7 @@ function pollJob(){
    const response=await fetch(`${NETLIFY_BACKEND.status}?id=${encodeURIComponent(state.jobId)}`,{headers:{'Accept':'application/json'}});
    if(!response.ok)throw new Error(`Állapotlekérés: HTTP ${response.status}`);
    const job=await response.json();applyJob(job);
-   if(!['ready','approved','failed','released','rejected'].includes(job.status))state.pollTimer=setTimeout(tick,1800);
+   if(!['ready','approved','failed','released','rejected'].includes(job.status))state.pollTimer=setTimeout(tick,2000);
   }catch(error){failJob(error)}
  };
  state.pollTimer=setTimeout(tick,800);
@@ -96,8 +96,33 @@ function normalizedStage(job){
  if(job.status==='released'||job.status==='approved')return 'release';
  return job.stage||job.status||'analyze';
 }
+function updateProgressDetail(job){
+ const detail=elements.statusDetail;
+ if(!detail)return;
+ const msg=job.heartbeatMessage||job.summary||'';
+ const hb=job.heartbeatAt ? new Date(job.heartbeatAt).getTime() : 0;
+ if(hb && hb!==state.lastHeartbeatSeen){
+   state.lastHeartbeatSeen=hb;
+   state.lastProgressAt=Date.now();
+ }
+ if(!state.lastProgressAt)state.lastProgressAt=Date.now();
+
+ const age=Math.max(0,Date.now()-state.lastProgressAt);
+ if(['ready','approved','released','failed','rejected'].includes(job.status)){
+   detail.textContent=msg;
+   detail.classList.remove('is-warning');
+   return;
+ }
+ if(age>120000){
+   detail.textContent='Az AI-válasz a szokásosnál tovább tart. A háttérfolyamat még ellenőrzés alatt van; automatikus újrapróbálás is futhat.';
+   detail.classList.add('is-warning');
+ }else{
+   detail.textContent=msg||'A háttérfolyamat fut…';
+   detail.classList.remove('is-warning');
+ }
+}
 function applyJob(job){
- state.job={...state.job,...job}; const stage=normalizedStage(state.job);
+ state.job={...state.job,...job}; updateProgressDetail(state.job); const stage=normalizedStage(state.job);
  const order=['analyze','edit','test','build','review','release'];
  resetSteps();
  if(stage==='failed'){setBadge('Hiba','error');const failAt=state.job.stage||'analyze';order.slice(0,Math.max(0,order.indexOf(failAt))).forEach(x=>setStep(x,'done'));setStep(failAt,'error');renderResult(state.job,true);return}

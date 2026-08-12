@@ -22,7 +22,7 @@
   <main class="agent-shell">
     <header class="agent-head">
       <div>
-        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.4.1</span>
+        <span class="eyebrow eyebrow--dark">Útiterv Studio · BETA 3.4.2</span>
         <h1>AI kiadási ügynök</h1>
         <p>Írd le közérthetően, mit szeretnél módosítani. Az ügynök előkészíti az új verziót, lefuttatja az ellenőrzéseket, majd jóváhagyás után kiadható.</p>
       </div>
@@ -102,6 +102,8 @@
           <span id="agent-state-badge" class="agent-state-badge">Várakozik</span>
         </div>
 
+        <div id="agent-status-detail" class="agent-status-detail" aria-live="polite">A háttérfolyamat indulásra kész.</div>
+
         <ol class="agent-steps" id="agent-steps">
           <li data-step="analyze"><span>1</span><div><strong>Kérés elemzése</strong><small>Modulok és érintett fájlok azonosítása</small></div></li>
           <li data-step="edit"><span>2</span><div><strong>AI módosítja a projektet</strong><small>Tartalom / kód / assetek frissítése</small></div></li>
@@ -175,11 +177,11 @@ Opcionálisan <code>OPENAI_MODEL</code>. Alapértelmezés: <code>gemini-3.6-flas
 
     <footer class="agent-footer">
       <p>© OFA Nonprofit Kft. Minden jog fenntartva. <span id="agent-year"></span></p>
-      <span>BETA 3.4.1 · Gemini Interactions API backend</span>
+      <span>BETA 3.4.2 · Gemini Interactions API backend</span>
     </footer>
   </main>
 
-  <script src="js/agent.js?v=beta-3.4.1" type="module"></script>
+  <script src="js/agent.js?v=beta-3.4.2" type="module"></script>
   <script type="module" src="js/theme.js?v=beta-3.0"></script>
 </body>
 </html>

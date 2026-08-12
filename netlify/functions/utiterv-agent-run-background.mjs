@@ -118,7 +118,11 @@ export default async (req, context) => {
     const requestedModel=(process.env.GEMINI_MODEL||"gemini-3.6-flash")
       .trim()
       .replace(/^models\//,"");
+    const requestedAnalysisModel=(process.env.GEMINI_ANALYSIS_MODEL||"gemini-3.5-flash-lite")
+      .trim()
+      .replace(/^models\//,"");
     let model=requestedModel;
+    let analysisModel=requestedAnalysisModel;
     const usageTotal={input_tokens:0,output_tokens:0,total_tokens:0};
 
     function addGeminiUsage(data){
@@ -183,81 +187,173 @@ export default async (req, context) => {
       console.log(`[${jobId}] Gemini modellek (${availableModels.length}): ${availableModels.join(", ")}`);
       const resolvedModel=chooseGeminiModel(availableModels,requestedModel);
       if(resolvedModel!==requestedModel){
-        console.warn(`[${jobId}] A kért modell (${requestedModel}) nem látható; fallback: ${resolvedModel}`);
+        console.warn(`[${jobId}] A kért kódmodell (${requestedModel}) nem látható; fallback: ${resolvedModel}`);
       }
       model=resolvedModel;
+
+      if(availableModels.includes(requestedAnalysisModel)){
+        analysisModel=requestedAnalysisModel;
+      }else{
+        analysisModel=availableModels.find(id=>id==="gemini-3.5-flash-lite")
+          || availableModels.find(id=>/flash-lite/i.test(id))
+          || model;
+        if(analysisModel!==requestedAnalysisModel){
+          console.warn(`[${jobId}] A kért elemzőmodell (${requestedAnalysisModel}) nem látható; fallback: ${analysisModel}`);
+        }
+      }
     }else{
-      console.warn(`[${jobId}] A models.list nem adott használható listát; próbálkozás közvetlenül: ${model}`);
+      console.warn(`[${jobId}] A models.list nem adott használható listát; közvetlen modellek: analysis=${analysisModel}, edit=${model}`);
     }
 
-    async function geminiJson({system,prompt,schema,label}){
-      const controller=new AbortController();
-      const timeout=setTimeout(()=>controller.abort(),90000);
-      try{
-        console.log(`[${jobId}] Gemini Interactions indul: ${label} | model=${model}`);
-        const response=await fetch(
-          "https://generativelanguage.googleapis.com/v1beta/interactions",
-          {
-            method:"POST",
-            headers:{
-              "x-goog-api-key":process.env.GEMINI_API_KEY,
-              "content-type":"application/json"
-            },
-            signal:controller.signal,
-            body:JSON.stringify({
-              model,
-              system_instruction:system,
-              input:prompt,
-              response_format:{
-                type:"text",
-                mime_type:"application/json",
-                schema
+    const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+
+    function retryDelayMs(attempt,response,data){
+      const retryAfter=Number(response?.headers?.get?.("retry-after"));
+      if(Number.isFinite(retryAfter) && retryAfter>0) return Math.min(30000,retryAfter*1000);
+      const retryInfo=(data?.error?.details||[]).find(x=>String(x?.["@type"]||"").includes("RetryInfo"));
+      const match=String(retryInfo?.retryDelay||"").match(/^([\d.]+)s$/);
+      if(match) return Math.min(30000,Math.ceil(Number(match[1])*1000));
+      const base=Math.min(16000,2000*(2**attempt));
+      return base+Math.floor(Math.random()*900);
+    }
+
+    async function heartbeat(stage,message,extra={}){
+      await writeJob(jobId,{
+        status:"running",
+        stage,
+        heartbeatAt:new Date().toISOString(),
+        heartbeatMessage:message,
+        ...extra
+      });
+    }
+
+    async function geminiJson({system,prompt,schema,label,useModel=model,stage="analyze"}){
+      const maxAttempts=4;
+      let lastError;
+
+      for(let attempt=0;attempt<maxAttempts;attempt++){
+        const controller=new AbortController();
+        const timeout=setTimeout(()=>controller.abort(),90000);
+        try{
+          const attemptNo=attempt+1;
+          await heartbeat(stage,
+            attempt===0
+              ? `${label}: kapcsolódás a Geminihez…`
+              : `${label}: újrapróbálás ${attemptNo}/${maxAttempts}…`,
+            {retryAttempt:attemptNo,retryMax:maxAttempts,activeModel:useModel}
+          );
+          console.log(`[${jobId}] Gemini Interactions indul: ${label} | model=${useModel} | attempt=${attemptNo}/${maxAttempts}`);
+
+          const response=await fetch(
+            "https://generativelanguage.googleapis.com/v1beta/interactions",
+            {
+              method:"POST",
+              headers:{
+                "x-goog-api-key":process.env.GEMINI_API_KEY,
+                "content-type":"application/json"
               },
-              store:false
-            })
+              signal:controller.signal,
+              body:JSON.stringify({
+                model:useModel,
+                system_instruction:system,
+                input:prompt,
+                response_format:{
+                  type:"text",
+                  mime_type:"application/json",
+                  schema
+                },
+                store:false
+              })
+            }
+          );
+
+          const raw=await response.text();
+          let data;
+          try{data=JSON.parse(raw)}catch{data={raw}}
+
+          if(!response.ok){
+            const msg=data?.error?.message||data?.message||raw||`HTTP ${response.status}`;
+            const transient=response.status===408||response.status===429||response.status>=500;
+            if(transient && attempt<maxAttempts-1){
+              const waitMs=retryDelayMs(attempt,response,data);
+              console.warn(`[${jobId}] ${label}: átmeneti Gemini hiba HTTP ${response.status}; retry ${attemptNo+1}/${maxAttempts} ${waitMs}ms múlva. ${msg}`);
+              await heartbeat(stage,`${label}: átmeneti API-hiba, újrapróbálás ${Math.ceil(waitMs/1000)} mp múlva…`,{
+                retryAttempt:attemptNo,
+                retryMax:maxAttempts,
+                lastHttpStatus:response.status
+              });
+              await sleep(waitMs);
+              continue;
+            }
+            if(response.status===400) throw new Error(`Gemini Interactions kérési hiba: ${msg}`);
+            if(response.status===401||response.status===403) throw new Error(`Gemini API kulcs/jogosultsági hiba: ${msg}`);
+            if(response.status===404) throw new Error(`Gemini Interactions 404: ${msg} (modell: ${useModel})`);
+            if(response.status===429) throw new Error(`A Gemini Free Tier limitje most nem enged újabb kérést. Többszöri automatikus újrapróbálás után is 429 érkezett. (${msg})`);
+            if(response.status>=500) throw new Error(`A Gemini szolgáltatás többszöri automatikus újrapróbálás után is hibázik. (${msg})`);
+            throw new Error(`Gemini Interactions API hiba: ${msg}`);
           }
-        );
 
-        const raw=await response.text();
-        let data;
-        try{data=JSON.parse(raw)}catch{data={raw}}
+          if(data?.status && data.status!=="completed"){
+            throw new Error(`A Gemini Interactions nem completed állapotban tért vissza: ${data.status}`);
+          }
 
-        if(!response.ok){
-          const msg=data?.error?.message||data?.message||raw||`HTTP ${response.status}`;
-          if(response.status===400) throw new Error(`Gemini Interactions kérési hiba: ${msg}`);
-          if(response.status===401||response.status===403) throw new Error(`Gemini API kulcs/jogosultsági hiba: ${msg}`);
-          if(response.status===404) throw new Error(`Gemini Interactions 404: ${msg} (modell: ${model})`);
-          if(response.status===429) throw new Error(`A Gemini Free Tier ideiglenes limitjét elértük. Próbáld újra később. (${msg})`);
-          if(response.status>=500) throw new Error(`A Gemini szolgáltatás átmenetileg hibázik. (${msg})`);
-          throw new Error(`Gemini Interactions API hiba: ${msg}`);
+          const text=(data?.steps||[])
+            .filter(step=>step?.type==="model_output")
+            .flatMap(step=>step?.content||[])
+            .filter(block=>block?.type==="text")
+            .map(block=>block?.text||"")
+            .join("")
+            .trim();
+
+          const usage=data?.usage||{};
+          usageTotal.input_tokens+=(usage.total_input_tokens||0);
+          usageTotal.output_tokens+=(usage.total_output_tokens||0);
+          usageTotal.total_tokens+=(usage.total_tokens||((usage.total_input_tokens||0)+(usage.total_output_tokens||0)));
+
+          if(!text) throw new Error(`${label}: a Gemini Interactions API nem adott szöveges választ.`);
+          console.log(`[${jobId}] Gemini Interactions kész: ${label} | model=${useModel} | tokens=${usage.total_tokens||"?"}`);
+          await heartbeat(stage,`${label}: válasz megérkezett.`,{
+            retryAttempt:attempt+1,
+            retryMax:maxAttempts,
+            activeModel:useModel
+          });
+          return parseJson(text,label);
+
+        }catch(error){
+          lastError=error;
+          if(error?.name==="AbortError"){
+            if(attempt<maxAttempts-1){
+              const waitMs=retryDelayMs(attempt,null,null);
+              console.warn(`[${jobId}] ${label}: 90s timeout; retry ${attempt+2}/${maxAttempts} ${waitMs}ms múlva.`);
+              await heartbeat(stage,`${label}: az AI-válasz késett, újrapróbálás ${Math.ceil(waitMs/1000)} mp múlva…`,{
+                retryAttempt:attempt+1,
+                retryMax:maxAttempts,
+                lastErrorType:"timeout"
+              });
+              await sleep(waitMs);
+              continue;
+            }
+            throw new Error(`${label}: a Gemini négyszer is időtúllépéssel állt le. Próbáld újra később.`);
+          }
+
+          const transientNetwork=/fetch failed|ECONNRESET|ETIMEDOUT|EAI_AGAIN|network/i.test(String(error?.message||error));
+          if(transientNetwork && attempt<maxAttempts-1){
+            const waitMs=retryDelayMs(attempt,null,null);
+            console.warn(`[${jobId}] ${label}: hálózati hiba; retry ${attempt+2}/${maxAttempts} ${waitMs}ms múlva. ${error.message}`);
+            await heartbeat(stage,`${label}: átmeneti hálózati hiba, újrapróbálás…`,{
+              retryAttempt:attempt+1,
+              retryMax:maxAttempts,
+              lastErrorType:"network"
+            });
+            await sleep(waitMs);
+            continue;
+          }
+          throw error;
+        }finally{
+          clearTimeout(timeout);
         }
-
-        if(data?.status && data.status!=="completed"){
-          throw new Error(`A Gemini Interactions nem completed állapotban tért vissza: ${data.status}`);
-        }
-
-        const text=(data?.steps||[])
-          .filter(step=>step?.type==="model_output")
-          .flatMap(step=>step?.content||[])
-          .filter(block=>block?.type==="text")
-          .map(block=>block?.text||"")
-          .join("")
-          .trim();
-
-        const usage=data?.usage||{};
-        usageTotal.input_tokens+=(usage.total_input_tokens||0);
-        usageTotal.output_tokens+=(usage.total_output_tokens||0);
-        usageTotal.total_tokens+=(usage.total_tokens||((usage.total_input_tokens||0)+(usage.total_output_tokens||0)));
-
-        if(!text) throw new Error(`${label}: a Gemini Interactions API nem adott szöveges választ.`);
-        console.log(`[${jobId}] Gemini Interactions kész: ${label} | tokens=${usage.total_tokens||"?"}`);
-        return parseJson(text,label);
-      }catch(error){
-        if(error?.name==="AbortError") throw new Error(`${label}: a Gemini Interactions API-hívás 90 másodperc után időtúllépéssel leállt.`);
-        throw error;
-      }finally{
-        clearTimeout(timeout);
       }
+      throw lastError||new Error(`${label}: ismeretlen Gemini hiba.`);
     }
 
     const selectionSchema={
@@ -293,10 +389,18 @@ export default async (req, context) => {
     const files=entryIndex(zip);
     const attachments=await attachmentContext(job);
 
-    await writeJob(jobId,{status:"running",stage:"analyze",summary:"Az AI azonosítja az érintett fájlokat."});
+    await writeJob(jobId,{
+      status:"running",
+      stage:"analyze",
+      summary:"Az AI azonosítja az érintett fájlokat.",
+      heartbeatAt:new Date().toISOString(),
+      heartbeatMessage:"Elemzés előkészítése…"
+    });
 
     const picked=await geminiJson({
       label:"Fájlkiválasztás",
+      stage:"analyze",
+      useModel:analysisModel,
       schema:selectionSchema,
       system:`Útiterv Studio kódmódosító ügynök vagy.
 A feladatod első lépése CSAK az érintett forrásfájlok kiválasztása.
@@ -318,11 +422,21 @@ ${files.join("\n")}`
     const paths=(picked.paths||[]).filter(p=>files.includes(p)&&safePath(p)).slice(0,10);
     if(!paths.length) throw new Error("Az AI nem választott módosítható fájlt.");
 
-    await writeJob(jobId,{status:"running",stage:"edit",summary:`Az AI ${paths.length} fájlt vizsgál és módosít.`});
+    await writeJob(jobId,{
+      status:"running",
+      stage:"edit",
+      summary:`Az AI ${paths.length} fájlt vizsgál és módosít.`,
+      heartbeatAt:new Date().toISOString(),
+      heartbeatMessage:"A kiválasztott fájlok módosítása következik.",
+      analysisModel,
+      editModel:model
+    });
 
     const sources=paths.map(p=>`===== FILE: ${p} =====\n${readText(zip,p)}`).join("\n\n");
     const edit=await geminiJson({
       label:"Kódmódosítás",
+      stage:"edit",
+      useModel:model,
       schema:editSchema,
       system:`Te az Útiterv Studio kiadási ügynöke vagy.
 A megadott teljes fájltartalmakból készíts biztonságos módosítást.
@@ -350,11 +464,23 @@ ${sources}`
 
     bumpVersionInKnownFiles(zip,job.version);
 
-    await writeJob(jobId,{status:"running",stage:"test",summary:"A módosítások alapellenőrzése fut."});
+    await writeJob(jobId,{
+      status:"running",
+      stage:"test",
+      summary:"A módosítások alapellenőrzése fut.",
+      heartbeatAt:new Date().toISOString(),
+      heartbeatMessage:"Automatikus ellenőrzések futnak."
+    });
     const checks=simpleChecks(zip,changed);
     if(checks.some(c=>c.ok===false)) throw new Error("Az automatikus ellenőrzés hibát talált.");
 
-    await writeJob(jobId,{status:"running",stage:"build",summary:"Az új ZIP build készül."});
+    await writeJob(jobId,{
+      status:"running",
+      stage:"build",
+      summary:"Az új ZIP build készül.",
+      heartbeatAt:new Date().toISOString(),
+      heartbeatMessage:"Az új ZIP build készül."
+    });
     const build=zip.toBuffer();
     const store=artifacts();
     await store.set(`${jobId}/build.zip`,build,{metadata:{version:job.version}});
