@@ -1,6 +1,6 @@
 'use strict';
 
-var VERSION = 'beta-3.2-cost-efficient-ai';
+var VERSION = 'beta-3.2.1-netlify-hotfix';
 var STATIC_CACHE = 'utiterv-static-' + VERSION;
 var RUNTIME_CACHE = 'utiterv-runtime-' + VERSION;
 var APP_SHELL = '/index.html';

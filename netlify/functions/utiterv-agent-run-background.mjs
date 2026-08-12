@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { artifacts, readJob, writeJob, safePath } from "./_shared.mjs";
 
-const __dirname=dirname(fileURLToPath(import.meta.url));
-const BASE_ZIP=join(__dirname,"_assets","utiterv-base.zip");
+const FUNCTION_DIR=dirname(fileURLToPath(import.meta.url));
+const BASE_ZIP=join(FUNCTION_DIR,"_assets","utiterv-base.zip");
 
 const TEXT_EXT=new Set([".js",".mjs",".css",".html",".json",".md",".txt",".webmanifest"]);
 const EDITABLE_PREFIXES=["content/","js/","css/","assets/","index.html","editor.html","agent.html","manifest"];
