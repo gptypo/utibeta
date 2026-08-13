@@ -2,5 +2,8 @@
   "schema": "utiterv-errors-v1",
   "contentLoad": "A tartalomfájl nem tölthető be: {url} ({status}).",
   "invalidManifest": "Érvénytelen Útiterv manifest.",
-  "invalidProject": "Érvénytelen Útiterv projektfájl."
+  "invalidProject": "Érvénytelen Útiterv projektfájl.",
+  "runtimeEyebrow": "Tartalmi hiba",
+  "runtimeTitle": "Ez az oldal most nem jeleníthető meg.",
+  "runtimeText": "Egy szerkesztett tartalmi mező hibás vagy hiányos. A többi oldal továbbra is használható; ellenőrizd ezt az oldalt a Pages CMS-ben."
 }

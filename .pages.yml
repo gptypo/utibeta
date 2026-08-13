@@ -257,7 +257,7 @@ content:
     type: string
     hidden: true
   - name: meta
-    label: Meta
+    label: Alkalmazás adatai
     type: object
     fields:
     - name: title
@@ -270,7 +270,7 @@ content:
       label: Version
       type: string
   - name: shell
-    label: Shell
+    label: Alkalmazás kerete és főmenü
     type: object
     fields:
     - name: homeAria
@@ -308,7 +308,7 @@ content:
       type: object
       fields:
       - name: home
-        label: Home
+        label: Főoldal
         type: object
         fields:
         - name: strong
@@ -381,29 +381,29 @@ content:
     type: object
     fields:
     - name: open
-      label: Open
+      label: Megnyitás gomb
       type: string
     - name: minutes
-      label: Minutes
+      label: Perc rövid felirata
       type: string
     - name: continue
-      label: Continue
+      label: Folytatás gomb
       type: string
     - name: moduleIntroButton
-      label: Module intro button
+      label: Modulbemutató gomb
       type: string
     - name: prevTopic
-      label: Prev topic
+      label: Előző téma
       type: string
     - name: nextTopic
-      label: Next topic
+      label: Következő téma
       type: string
     - name: topicNavAria
-      label: Topic nav aria
+      label: Téma-navigáció akadálymentes felirata
       type: string
     description: Csak valóban több oldalon azonos vezérlőszövegek. Az oldalspecifikus szövegek az adott oldal JSON-jában találhatók.
   - name: home
-    label: Home
+    label: Főoldal
     type: object
     fields:
     - name: guideEyebrow
@@ -452,7 +452,7 @@ content:
       label: Dark ARIA
       type: string
   - name: quiz
-    label: Quiz
+    label: Kvízek közös feliratai
     type: object
     fields:
     - name: registryLabels
@@ -539,7 +539,7 @@ content:
       label: Quizzes
       type: string
   - name: pwa
-    label: Pwa
+    label: Telepítés, frissítés és onboarding
     type: object
     fields:
     - name: version
@@ -614,7 +614,7 @@ content:
       label: Feature Mark
       type: string
   - name: theme
-    label: Theme
+    label: Megjelenés és témaváltás
     type: object
     fields:
     - name: lightEnable
@@ -668,7 +668,7 @@ content:
       label: Html
       type: text
   - name: customContent
-    label: Custom content
+    label: Egyedi tartalmak
     type: object
     fields:
     - name: eyebrow
@@ -687,7 +687,7 @@ content:
       label: Editor link
       type: string
   - name: dashboard
-    label: Dashboard
+    label: Fejlődés / dashboard
     type: object
     fields:
     - name: title
@@ -722,7 +722,7 @@ content:
         label: Bonus
         type: string
   - name: components
-    label: Components
+    label: Közös komponensfeliratok
     type: object
     fields:
     - name: flip
@@ -823,7 +823,7 @@ content:
       label: Flip
       type: string
     - name: quiz
-      label: Quiz
+      label: Kvízek közös feliratai
       type: string
   - name: runtime
     label: Közös komponens- és vezérlőfeliratok
@@ -1668,7 +1668,7 @@ content:
           label: Hamarosan státusz
           type: string
     - name: bonusMaterials
-      label: Bonus materials
+      label: Tudástár kártyák
       type: object
       list:
         collapsible:
@@ -1680,7 +1680,7 @@ content:
         type: string
         hidden: true
       - name: category
-        label: Category
+        label: Kategória
         type: string
       - name: icon
         label: Ikon
@@ -1692,7 +1692,7 @@ content:
         label: Leírás
         type: string
       - name: status
-        label: Status
+        label: Státusz
         type: string
     - name: blocks
       label: Plusz tartalomblokkok
@@ -1752,7 +1752,7 @@ content:
           label: Hamarosan státusz
           type: string
     - name: videoStories
-      label: Video stories
+      label: Videós történetek
       type: object
       list:
         collapsible:
@@ -1773,7 +1773,7 @@ content:
         label: Leírás
         type: string
       - name: status
-        label: Status
+        label: Státusz
         type: string
     - name: blocks
       label: Plusz tartalomblokkok
@@ -4763,7 +4763,7 @@ content:
     label: Version
     type: string
   - name: meta
-    label: Meta
+    label: Alkalmazás adatai
     type: object
     fields:
     - name: title
@@ -4773,7 +4773,7 @@ content:
       label: Description
       type: text
   - name: home
-    label: Home
+    label: Főoldal
     type: string
   - name: modules
     label: Modules
@@ -4844,8 +4844,17 @@ content:
     label: Invalid manifest
     type: string
   - name: invalidProject
-    label: Invalid project
+    label: Érvénytelen projekt hibaüzenete
     type: string
+  - name: runtimeEyebrow
+    label: Tartalmi hiba – felső címke
+    type: string
+  - name: runtimeTitle
+    label: Tartalmi hiba – cím
+    type: string
+  - name: runtimeText
+    label: Tartalmi hiba – magyarázat
+    type: text
   operations:
     delete: false
     rename: false

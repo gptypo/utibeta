@@ -10,7 +10,7 @@ const LEGACY_CUSTOM_KEY_V1='utiterv-custom-content-v1';
 const LEGACY_SETTINGS_KEY='utiterv-content-settings-v1';
 
 const clone = value => JSON.parse(JSON.stringify(value));
-const errorCopy = await fetch(ERRORS_URL,{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
+export const errorCopy = await fetch(ERRORS_URL,{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
 const tpl=(value,vars={})=>String(value??'').replace(/\{(\w+)\}/g,(_,key)=>vars[key]??'');
 const fetchJson = async url => {
   const response=await fetch(url,{cache:'no-store'});
@@ -18,6 +18,8 @@ const fetchJson = async url => {
   return response.json();
 };
 const resolveFrom=(base,path)=>new URL(path,base);
+export const contentLoadWarnings=[];
+const warnContent=(message,detail={})=>{contentLoadWarnings.push({message,...detail});console.warn('[Útiterv content]',message,detail)};
 
 async function fetchBaseProject(){
   const manifest=await fetchJson(MANIFEST_URL);
@@ -29,8 +31,13 @@ async function fetchBaseProject(){
     const namespace={__sections:{}};
     const sectionTree=[];
     for(const sectionRef of moduleIndex.sections||[]){
-      const section=await fetchJson(resolveFrom(indexUrl,sectionRef.file));
-      const sectionData=clone(section.data||{});
+      let sectionData={};
+      try{
+        const section=await fetchJson(resolveFrom(indexUrl,sectionRef.file));
+        sectionData=clone(section.data||{});
+      }catch(error){
+        warnContent('Egy aloldal tartalma nem tölthető be; az app a többi oldallal tovább indul.',{module:moduleIndex.id,section:sectionRef.id,file:sectionRef.file,error:String(error?.message||error)});
+      }
       namespace.__sections[sectionRef.id]=sectionData;
       // Keep the original flat namespace for the legacy renderers, but do not flatten
       // page-builder blocks: every section may have its own `blocks` array.

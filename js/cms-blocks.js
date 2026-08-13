@@ -49,6 +49,7 @@ function blockHeading(block){
 }
 
 function renderBlock(block){
+  try{
   if(!block||typeof block!=='object'||block.hidden)return'';
   const type=String(block.type||'').toLowerCase();
   if(type==='text'){
@@ -89,7 +90,12 @@ function renderBlock(block){
     return `<figure class="cms-block cms-block--quote"><blockquote>${textMarkup(block.quote)}</blockquote>${block.attribution?`<figcaption>${esc(block.attribution)}</figcaption>`:''}</figure>`;
   }
   if(type==='divider')return '<hr class="cms-block cms-block--divider" aria-hidden="true">';
+  console.warn('[Útiterv CMS] Ismeretlen blokktípus kihagyva:', type, block);
   return'';
+  }catch(error){
+    console.warn('[Útiterv CMS] Hibás tartalomblokk kihagyva:', error, block);
+    return'';
+  }
 }
 
 export function getSectionBlocks(project,moduleId,sectionId){

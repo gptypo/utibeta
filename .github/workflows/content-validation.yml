@@ -1,0 +1,28 @@
+name: Content validation
+
+on:
+  push:
+    paths:
+      - 'content/**'
+      - '.pages.yml'
+      - 'tools/validate-content.mjs'
+      - 'package.json'
+  pull_request:
+    paths:
+      - 'content/**'
+      - '.pages.yml'
+      - 'tools/validate-content.mjs'
+      - 'package.json'
+
+jobs:
+  validate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v4
+      - name: Node.js setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate Pages CMS content
+        run: npm run validate:content
