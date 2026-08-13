@@ -1,26 +1,5 @@
 {
   "schema": "utiterv-dynamic-pages-v1",
   "moduleId": "onmagam",
-  "pages": [
-    {
-      "hidden": false,
-      "id": "newContent",
-      "navTitle": "Új tartalom",
-      "page": {
-        "header": {
-          "title": "Uj tartalom",
-          "description": "Ez egy próba tartalom"
-        }
-      },
-      "blocks": [
-        {
-          "type": "text",
-          "hidden": false,
-          "eyebrow": "Mit tud a próba?",
-          "title": "Most kiderül.",
-          "body": "Ez csak egy próba feliratú szöveg."
-        }
-      ]
-    }
-  ]
+  "pages": []
 }
