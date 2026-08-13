@@ -35,3 +35,5 @@ A service worker az összes tartalmi JSON-t átnézi, és a bennük hivatkozott 
 ## 4.1 javítás
 
 A dashboard modulcímke feloldása külön függvényből történik; a korábbi `dashboardModuleLabel is not defined` indítási hiba javítva. A service worker cache-verziója is frissült, hogy a régi JS ne maradjon bent.
+
+Splash exception (4.2): the animated splash rocket is intentionally hardcoded as inline SVG in index.html. It is not editable from Pages CMS, so it is available at the first paint and cannot produce an empty image placeholder.

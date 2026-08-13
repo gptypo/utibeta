@@ -33,3 +33,4 @@ CMS-EXTENSIBLE 4.1 ELLENŐRZÉS
 - Minden JavaScript fájl szintaktikai ellenőrzésen átment.
 - Minden JSON érvényes; nincs hiányzó helyi médiahivatkozás.
 
+Splash exception (4.2): the animated splash rocket is intentionally hardcoded as inline SVG in index.html. It is not editable from Pages CMS, so it is available at the first paint and cannot produce an empty image placeholder.

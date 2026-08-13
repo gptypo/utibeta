@@ -1800,9 +1800,6 @@ content:
     - name: pinpoint
       label: Pinpoint
       type: image
-    - name: rocket
-      label: Rocket
-      type: image
     - name: wordmark
       label: Wordmark
       type: image

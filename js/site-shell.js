@@ -9,7 +9,7 @@ q('meta[name=apple-mobile-web-app-title]')?.setAttribute('content',ui.shell?.bra
 q('link[rel=apple-touch-icon]')?.setAttribute('href',a.appIcons?.appleTouch||'');
 q('link[rel=icon]')?.setAttribute('href',a.appIcons?.favicon||'');
 q('#splash')?.setAttribute('aria-label',ui.shell?.splashAria||'');
-setImg('.splash__pin',a.logos?.pinpoint);setImg('.splash__rocket',a.logos?.rocket);setImg('.splash__wordmark',a.logos?.wordmark,ui.shell?.wordmarkAlt);
+setImg('.splash__pin',a.logos?.pinpoint);setImg('.splash__wordmark',a.logos?.wordmark,ui.shell?.wordmarkAlt);
 setText('[data-skip-splash]',ui.shell?.skip);setImg('.brand img',a.logos?.main);setText('.brand span',ui.shell?.brand);q('.brand')?.setAttribute('aria-label',ui.shell?.homeAria||'');
 setText('.version',ui.meta?.version);q('.version')?.setAttribute('aria-label',ui.shell?.systemAria||'');q('[data-menu-open]')?.setAttribute('aria-label',ui.shell?.menuOpenAria||'');
 setText('.app-footer > span',`${ui.shell?.footer||''} ${new Date().getFullYear()}`);setText('.app-footer button',ui.shell?.privacy);
