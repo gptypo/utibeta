@@ -3,9 +3,7 @@
   "logos": {
     "main": "assets/SVG_ASSETS/LOGO/LOGO_CON.svg",
     "container": "assets/SVG_ASSETS/LOGO/LOGO_CONTAINER.svg",
-    "mainV2": "assets/SVG_ASSETS/LOGO/LOGO_CON_v2.svg",
-    "pinpoint": "assets/SVG_ASSETS/LOGO/LOGO_PINPOINT_CON.svg",
-    "wordmark": "assets/SVG_ASSETS/LOGO/LOGO_TIPO.svg"
+    "mainV2": "assets/SVG_ASSETS/LOGO/LOGO_CON_v2.svg"
   },
   "smallIcons": {
     "onmagam": "assets/SVG_ASSETS/SML_CONS/QG_SMALL_ICON.svg",

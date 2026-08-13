@@ -15,18 +15,31 @@
   <link rel="stylesheet" href="css/pwa.css?v=beta-1.2.6">
   
   <link rel="icon" href="" type="image/png">
-  <link rel="stylesheet" href="css/app.css?v=cms-extensible-4.2">
+  <link rel="stylesheet" href="css/app.css?v=cms-extensible-4.3">
   <link rel="stylesheet" href="css/foundation.css?v=beta-1.0-winwin-integrated">
   <script>try{const t=localStorage.getItem('utiterv-theme');const d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.style.colorScheme=d?'dark':'light'}catch{}</script>
+  <link rel="preload" href="assets/SVG_ASSETS/LOGO/LOGO_PINPOINT_CON.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="assets/SVG_ASSETS/LOGO/LOGO_TIPO.svg" as="image" type="image/svg+xml">
+  <style id="splash-critical">
+    .splash{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#fff;overflow:hidden;transition:opacity .45s ease,visibility .45s ease}
+    .splash[hidden]{display:none!important}.splash.is-leaving{opacity:0;visibility:hidden}
+    .splash__mark{position:relative;width:min(29vw,126px);aspect-ratio:1}
+    .splash__mark img,.splash__mark svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+    .splash__pin{z-index:1}.splash__rocket{z-index:2;animation:splash-launch 4s 1s ease-in-out infinite}
+    .splash__wordmark{display:block;width:min(65vw,310px);height:auto}
+    .splash__skip{position:absolute;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));border:0;background:transparent;color:#777;font:700 14px/1.2 "DM Sans",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;padding:10px}
+    @keyframes splash-launch{0%{transform:translateY(0);opacity:1;filter:blur(0)}35%{transform:translateY(-90vh);opacity:1;filter:blur(20px)}35.1%{opacity:0;transform:translateY(100vh)}35.2%{opacity:1;filter:blur(10px)}70%,100%{transform:translateY(0);filter:blur(0)}}
+    @media (prefers-reduced-motion:reduce){.splash__rocket{animation:none}}
+  </style>
   <title></title>
 <link rel="stylesheet" href="css/theme.css?v=beta-1.2.7">
 <link rel="stylesheet" href="css/color-system.css?v=8.3.0">
 </head>
 <body>
-  <section id="splash" class="splash" aria-label="">
-    <div class="splash__mark">
-      <img class="splash__pin" alt="">
-      <svg class="splash__rocket" aria-hidden="true" viewBox="0 0 79 101" xmlns="http://www.w3.org/2000/svg">
+  <section id="splash" class="splash" aria-label="Alkalmazás indítása">
+    <div class="splash__mark" aria-hidden="true">
+      <img class="splash__pin" src="assets/SVG_ASSETS/LOGO/LOGO_PINPOINT_CON.svg" alt="" width="79" height="101" draggable="false">
+      <svg class="splash__rocket" viewBox="0 0 79 101" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.24,24.98c2.64-2.64,5.71-4.71,9.13-6.16,3.55-1.5,7.31-2.26,11.19-2.26s7.64.76,11.19,2.26c3.42,1.45,6.49,3.52,9.13,6.16.96.96,1.84,1.97,2.65,3.04-5.98-10.64-13.77-20.12-22.97-28.02-9.19,7.9-16.99,17.38-22.96,28.02.81-1.07,1.69-2.08,2.65-3.04Z" fill="#14e8c9"/>
         <path d="M56.45,76.12c1.56.5,3.1,1.07,4.62,1.71,5.26,2.23,10.1,5.22,14.41,8.93.2-2.62.3-5.26.3-7.93,0-14.7-3.06-28.69-8.56-41.36.72,2.54,1.08,5.16,1.08,7.84,0,5.02-1.38,10.71-4.11,16.92-1.92,4.38-4.53,9.05-7.74,13.9Z" fill="#14e8c9"/>
         <path d="M18.06,77.83c1.55-.66,3.13-1.24,4.73-1.75-3.26-4.95-5.9-9.69-7.85-14.11-2.73-6.19-4.11-11.8-4.11-16.68,0-2.68.36-5.3,1.08-7.84-5.51,12.67-8.56,26.66-8.56,41.36,0,2.67.1,5.32.3,7.93,4.32-3.71,9.15-6.7,14.41-8.93h0Z" fill="#14e8c9"/>
@@ -34,9 +47,45 @@
         <path d="M39.56,73.48c4.17,0,8.27.46,12.26,1.36,5.99-8.79,11.93-19.96,11.93-29.55,0-13.36-10.83-24.19-24.19-24.19s-24.19,10.83-24.19,24.19c0,9.33,6.01,20.61,12.04,29.53,3.96-.89,8.02-1.34,12.14-1.34ZM39.56,33.29c6.61,0,11.97,5.36,11.97,11.97s-5.36,11.97-11.97,11.97-11.97-5.36-11.97-11.97,5.36-11.97,11.97-11.97Z" fill="#14e8c9"/>
       </svg>
     </div>
-    <img class="splash__wordmark" alt="">
-    <button class="splash__skip" type="button" data-skip-splash></button>
+    <img class="splash__wordmark" src="assets/SVG_ASSETS/LOGO/LOGO_TIPO.svg" alt="Útiterv a Jövőbe" width="199" height="48" draggable="false">
+    <button class="splash__skip" type="button" data-skip-splash>Ugrás</button>
   </section>
+
+  <script>
+    (() => {
+      const splash = document.querySelector('#splash');
+      const startedAt = performance.now();
+      const minimumVisibleMs = 1800;
+      const fadeMs = 420;
+      let appReady = false;
+      let entered = false;
+      let startApp = null;
+      let timer = 0;
+
+      const leave = (skipDelay = false) => {
+        if (entered || !appReady) return;
+        const wait = skipDelay ? 0 : Math.max(0, minimumVisibleMs - (performance.now() - startedAt));
+        clearTimeout(timer);
+        timer = window.setTimeout(() => {
+          if (entered || !appReady) return;
+          entered = true;
+          splash?.classList.add('is-leaving');
+          window.setTimeout(() => {
+            if (splash) splash.hidden = true;
+            const app = document.querySelector('#app');
+            if (app) app.hidden = false;
+            if (typeof startApp === 'function') startApp();
+          }, fadeMs);
+        }, wait);
+      };
+
+      document.querySelector('[data-skip-splash]')?.addEventListener('click', () => leave(true));
+      window.UtitervSplash = {
+        ready(callback) { appReady = true; startApp = callback; leave(false); },
+        showAppNow(callback) { appReady = true; startApp = callback; leave(true); }
+      };
+    })();
+  </script>
 
   <div id="app" class="app" hidden>
     <header class="topbar">
@@ -77,8 +126,7 @@
       const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
       const showStartupError = async error => {
         const splash = document.querySelector('#splash');
-        const app = document.querySelector('#app');
-        if (splash) splash.hidden = true;
+          if (splash) splash.hidden = true;
         if (app) app.hidden = false;
         const view = document.querySelector('#view');
         if (!view) return;
@@ -89,9 +137,9 @@
       window.addEventListener('unhandledrejection', event => showStartupError(event.reason));
     })();
   </script>
-  <script type="module" src="js/site-shell.js?v=cms-extensible-4.2"></script>
-  <script type="module" src="js/theme.js?v=cms-extensible-4.2"></script>
-  <script type="module" src="js/pwa.js?v=cms-extensible-4.2"></script>
-  <script type="module" src="js/app.js?v=cms-extensible-4.2"></script>
+  <script type="module" src="js/site-shell.js?v=cms-extensible-4.3"></script>
+  <script type="module" src="js/theme.js?v=cms-extensible-4.3"></script>
+  <script type="module" src="js/pwa.js?v=cms-extensible-4.3"></script>
+  <script type="module" src="js/app.js?v=cms-extensible-4.3"></script>
 </body>
 </html>

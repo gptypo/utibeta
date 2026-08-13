@@ -6,9 +6,6 @@
     "version": "BETA 3.6.9"
   },
   "shell": {
-    "splashAria": "Alkalmazás indítása",
-    "wordmarkAlt": "Útiterv a Jövőbe",
-    "skip": "Ugrás",
     "homeAria": "Főoldal",
     "brand": "Útiterv a Jövőbe",
     "systemAria": "Design system megnyitása",

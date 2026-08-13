@@ -274,15 +274,6 @@ content:
     label: Shell
     type: object
     fields:
-    - name: splashAria
-      label: Splash aria
-      type: string
-    - name: wordmarkAlt
-      label: Wordmark alt
-      type: string
-    - name: skip
-      label: Skip
-      type: string
     - name: homeAria
       label: Home aria
       type: string
@@ -1796,12 +1787,6 @@ content:
       type: image
     - name: mainV2
       label: Main v2
-      type: image
-    - name: pinpoint
-      label: Pinpoint
-      type: image
-    - name: wordmark
-      label: Wordmark
       type: image
   - name: smallIcons
     label: Small icons

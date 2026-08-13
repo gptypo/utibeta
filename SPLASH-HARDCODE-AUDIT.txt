@@ -1,0 +1,28 @@
+ÚTITERV – SPLASH HARDCODE AUDIT 4.3
+
+A splash teljesen le van választva a JSON/Pages CMS rendszerről.
+
+Hardcode az index.html-ben:
+- splash aria-label
+- pinpoint/rocket grafika közvetlen fájlútvonala + inline rocket SVG
+- wordmark közvetlen fájlútvonala
+- wordmark alt
+- „Ugrás” gomb felirata
+- kritikus splash CSS
+- launch keyframes animáció
+- minimum megjelenési idő
+- fade időzítés
+- skip esemény
+- app-ready handoff
+
+Eltávolítva a JSON/CMS-ből:
+- ui.shell.splashAria
+- ui.shell.wordmarkAlt
+- ui.shell.skip
+- assets.logos.pinpoint
+- assets.logos.wordmark
+
+A site-shell.js semmilyen splash elemet nem módosít.
+A splash az app.js / project-content / JSON betöltésétől függetlenül azonnal megjelenik és animál.
+Az app csak a ready() handoffon keresztül jelzi, amikor már biztonságosan átadható neki a képernyő.
+A fix splash assetek explicit részei az offline service-worker cache-nek.

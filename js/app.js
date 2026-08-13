@@ -411,7 +411,7 @@ document.addEventListener('pointercancel',()=>{if(drag?.target)drag.target.style
 document.addEventListener('click',e=>{if(suppressFlip&&e.target.closest('[data-flip-card]')){e.preventDefault();e.stopImmediatePropagation()}},true);
 document.addEventListener('input',e=>{if(e.target.matches('[data-audio-volume]')){const a=getAudio(e.target.dataset.audioId);if(a)a.volume=Number(e.target.value);return}if(e.target.matches('[data-gratitude]')){const entries=[...document.querySelectorAll('[data-gratitude]')].map(x=>x.value);const st=state();save({mindfulness:{...(st.mindfulness||{}),entries}})}});
 document.addEventListener('change',e=>{if(e.target.matches('[data-check]')){const st=state(),id=Number(e.target.dataset.check),set=new Set(st.checklist||[]);e.target.checked?set.add(id):set.delete(id);save({checklist:[...set]})}});
-let hasEntered=false;function enter(){if(hasEntered)return;hasEntered=true;splash.classList.add('is-leaving');setTimeout(()=>{splash.hidden=true;app.hidden=false;const remembered=state().route||'home';render(remembered,{preserveScroll:true})},420)};document.querySelector('[data-skip-splash]')?.addEventListener('click',enter);setTimeout(enter,1800);
+const startRenderedApp=()=>{const remembered=state().route||'home';render(remembered,{preserveScroll:true})};if(window.UtitervSplash?.ready){window.UtitervSplash.ready(startRenderedApp)}else{splash.hidden=true;app.hidden=false;startRenderedApp()}
 
 
 /* BETA 1.2.5 — Trigger competency hint only when the career card enters view */
