@@ -5119,7 +5119,13 @@ content:
       label: Technikai azonosító
       type: string
       required: true
-      description: Egyedi, kisbetűs azonosító ékezet és szóköz nélkül, például interju-videok. Létrehozás után lehetőleg ne változtasd.
+      pattern:
+        regex: "^[a-z0-9][a-z0-9-]*$"
+        message: "Csak kisbetű (a-z), szám (0-9) és kötőjel (-) használható. Példa: interju-videok"
+      options:
+        minlength: 2
+        maxlength: 80
+      description: "URL-/kódbarát egyedi azonosító. Ne használj szóközt, ékezetet, nagybetűt vagy aláhúzást. Jó példa: interju-videok. Létrehozás után lehetőleg ne változtasd."
     - name: navTitle
       label: Fül neve
       type: string

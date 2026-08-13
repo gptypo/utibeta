@@ -13,6 +13,14 @@ const ids=new Map();
 const rel=p=>path.relative(root,p).replaceAll(path.sep,'/');
 const addIssue=(file,message)=>issues.push({file,message});
 const addWarning=(file,message)=>warnings.push({file,message});
+const githubEscape=value=>String(value).replaceAll('%','%25').replaceAll('\r','%0D').replaceAll('\n','%0A');
+const githubPropEscape=value=>githubEscape(value).replaceAll(':','%3A').replaceAll(',','%2C');
+const githubAnnotation=(level,file,message,title)=>{
+  if(!process.env.GITHUB_ACTIONS)return;
+  const props=[`file=${githubPropEscape(file)}`];
+  if(title)props.push(`title=${githubPropEscape(title)}`);
+  console.log(`::${level} ${props.join(',')}::${githubEscape(message)}`);
+};
 
 function walk(dir){
   return fs.readdirSync(dir,{withFileTypes:true}).flatMap(entry=>{
@@ -173,10 +181,16 @@ console.log(`✓ ${mediaRefs.length} média-hivatkozás ellenőrizve`);
 console.log(`✓ ${manifest?.modules?.length||0} modul-index ellenőrizve`);
 if(warnings.length){
   console.log(`\nFIGYELMEZTETÉSEK (${warnings.length})`);
-  warnings.forEach(x=>console.log(`! ${x.file}: ${x.message}`));
+  warnings.forEach(x=>{
+    console.log(`! ${x.file}: ${x.message}`);
+    githubAnnotation('warning',x.file,x.message,'Útiterv tartalomfigyelmeztetés');
+  });
 }
 if(issues.length){
   console.error(`\nHIBÁK (${issues.length})`);
-  issues.forEach(x=>console.error(`✗ ${x.file}: ${x.message}`));
+  issues.forEach(x=>{
+    console.error(`✗ ${x.file}: ${x.message}`);
+    githubAnnotation('error',x.file,x.message,'Útiterv tartalomvalidáció');
+  });
   process.exitCode=1;
 }else console.log('\n✓ Nincs blokkoló tartalmi hiba.');
