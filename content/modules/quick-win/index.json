@@ -67,5 +67,6 @@
       "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted.",
       "closingEyebrow": "Vidd magaddal!"
     }
-  }
+  },
+  "dynamic": "dynamic-pages.json"
 }

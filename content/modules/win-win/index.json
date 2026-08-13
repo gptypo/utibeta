@@ -52,5 +52,6 @@
       "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait.",
       "closingEyebrow": "Vidd magaddal!"
     }
-  }
+  },
+  "dynamic": "dynamic-pages.json"
 }

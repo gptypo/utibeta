@@ -3,7 +3,7 @@
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.",
-    "version": "BETA 3.6.9"
+    "version": "BETA 5.0.0"
   },
   "shell": {
     "homeAria": "Főoldal",
@@ -104,7 +104,7 @@
     "quizzes": "Kvízek"
   },
   "pwa": {
-    "version": "BETA 1.2.6",
+    "version": "BETA 5.0.0",
     "installTitle": "Telepítsd az Útitervet",
     "installText": "Gyorsabb indítás és offline használat.",
     "installButton": "Telepítés",

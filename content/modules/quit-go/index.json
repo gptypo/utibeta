@@ -57,5 +57,6 @@
       "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz.",
       "closingEyebrow": "Vidd magaddal!"
     }
-  }
+  },
+  "dynamic": "dynamic-pages.json"
 }

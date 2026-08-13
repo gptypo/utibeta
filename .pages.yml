@@ -1320,6 +1320,11 @@ content:
     readonly: true
     description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
       bővíthetők.
+  - name: dynamic
+    label: Dinamikus aloldalak adatfájlja
+    type: string
+    hidden: true
+    readonly: true
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1417,6 +1422,11 @@ content:
     readonly: true
     description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
       bővíthetők.
+  - name: dynamic
+    label: Dinamikus aloldalak adatfájlja
+    type: string
+    hidden: true
+    readonly: true
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1514,6 +1524,11 @@ content:
     readonly: true
     description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
       bővíthetők.
+  - name: dynamic
+    label: Dinamikus aloldalak adatfájlja
+    type: string
+    hidden: true
+    readonly: true
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1611,6 +1626,11 @@ content:
     readonly: true
     description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
       bővíthetők.
+  - name: dynamic
+    label: Dinamikus aloldalak adatfájlja
+    type: string
+    hidden: true
+    readonly: true
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -4855,6 +4875,146 @@ content:
   - name: runtimeText
     label: Tartalmi hiba – magyarázat
     type: text
+  operations:
+    delete: false
+    rename: false
+- name: dynamic_pages_galaxy_guide
+  label: Galaxy Guide · Új aloldalak
+  type: file
+  path: content/modules/galaxy-guide/dynamic-pages.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: moduleId
+    label: Modulazonosító
+    type: string
+    hidden: true
+  - name: pages
+    label: Dinamikus aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{navTitle}'
+    description: Itt hozhatsz létre új Galaxy Guide aloldalt. Az új oldal automatikusan megjelenik a modul fülei között; kódmódosítás nem szükséges.
+    fields: &dynamic_page_fields
+    - name: hidden
+      label: Piszkozat / elrejtés
+      type: boolean
+      description: Bekapcsolva az oldal megmarad a CMS-ben, de nem jelenik meg az alkalmazásban.
+    - name: id
+      label: Technikai azonosító
+      type: string
+      required: true
+      description: Egyedi, kisbetűs azonosító ékezet és szóköz nélkül, például interju-videok. Létrehozás után lehetőleg ne változtasd.
+    - name: navTitle
+      label: Fül neve
+      type: string
+      required: true
+      description: Ez jelenik meg a modul felső aloldal-navigációjában.
+    - name: page
+      label: Oldal fejléc
+      type: object
+      fields:
+      - name: header
+        label: Fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Oldalcím
+          type: string
+          required: true
+        - name: description
+          label: Bevezető / leírás
+          type: text
+    - name: blocks
+      label: Oldal tartalma
+      component: content_blocks
+      description: Az oldal teljes tartalma tetszőleges sorrendben felépíthető szöveg-, kép-, videó-, hang-, galéria-, kártya- és letöltésblokkokból.
+  operations:
+    delete: false
+    rename: false
+- name: dynamic_pages_quick_win
+  label: Quick Win · Új aloldalak
+  type: file
+  path: content/modules/quick-win/dynamic-pages.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: moduleId
+    label: Modulazonosító
+    type: string
+    hidden: true
+  - name: pages
+    label: Dinamikus aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{navTitle}'
+    description: Új Quick Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
+    fields: *dynamic_page_fields
+  operations:
+    delete: false
+    rename: false
+- name: dynamic_pages_quit_go
+  label: Quit & Go · Új aloldalak
+  type: file
+  path: content/modules/quit-go/dynamic-pages.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: moduleId
+    label: Modulazonosító
+    type: string
+    hidden: true
+  - name: pages
+    label: Dinamikus aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{navTitle}'
+    description: Új Quit & Go aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
+    fields: *dynamic_page_fields
+  operations:
+    delete: false
+    rename: false
+- name: dynamic_pages_win_win
+  label: Win-Win · Új aloldalak
+  type: file
+  path: content/modules/win-win/dynamic-pages.json
+  format: json
+  fields:
+  - name: schema
+    label: Schema
+    type: string
+    hidden: true
+  - name: moduleId
+    label: Modulazonosító
+    type: string
+    hidden: true
+  - name: pages
+    label: Dinamikus aloldalak
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{navTitle}'
+    description: Új Win-Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
+    fields: *dynamic_page_fields
   operations:
     delete: false
     rename: false

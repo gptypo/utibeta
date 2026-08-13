@@ -24,5 +24,6 @@
   "heroIconMode": "auto",
   "page": {
     "eyebrow": "Gyakorlati segédlet"
-  }
+  },
+  "dynamic": "dynamic-pages.json"
 }

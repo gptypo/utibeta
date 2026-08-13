@@ -74,6 +74,25 @@ for(const file of jsonFiles){
       if(!Array.isArray(blocks)) addIssue(name,'data.blocks nem lista.');
       else blocks.forEach((block,i)=>validateBlock(block,name,i,'data'));
     }
+    if(data?.schema==='utiterv-dynamic-pages-v1'){
+      if(!Array.isArray(data.pages)) addIssue(name,'pages nem lista.');
+      else {
+        const localIds=new Set();
+        data.pages.forEach((page,i)=>{
+          if(!page||typeof page!=='object'){addIssue(name,`pages[${i}] nem objektum.`);return;}
+          const id=String(page.id||'').trim();
+          if(!id)addIssue(name,`pages[${i}] id mezője kötelező.`);
+          else if(!/^[a-z0-9][a-z0-9-]*$/.test(id))addIssue(name,`pages[${i}] id csak kisbetűt, számot és kötőjelet tartalmazhat: ${id}.`);
+          else if(localIds.has(id))addIssue(name,`Duplikált dinamikus aloldal id: ${id}.`);
+          else localIds.add(id);
+          if(page.hidden!==true&&!String(page.navTitle||page.page?.header?.title||'').trim())addIssue(name,`pages[${i}] navigációs címe hiányzik.`);
+          if(page.blocks!==undefined){
+            if(!Array.isArray(page.blocks))addIssue(name,`pages[${i}].blocks nem lista.`);
+            else page.blocks.forEach((block,bi)=>validateBlock(block,name,bi,`pages[${i}]`));
+          }
+        });
+      }
+    }
   }catch(error){addIssue(name,`Érvénytelen JSON: ${error.message}`);}
 }
 
@@ -93,6 +112,18 @@ else{
     for(const section of module.sections||[]){
       const sectionTarget=path.posix.normalize(`${moduleDir}/${section.file}`);
       if(!parsed.has(sectionTarget)) addIssue(moduleTarget,`Hiányzó aloldal JSON (${section.id||'?'}): ${sectionTarget}`);
+    }
+    if(module.dynamic){
+      const dynamicTarget=path.posix.normalize(`${moduleDir}/${module.dynamic}`);
+      const dynamic=parsed.get(dynamicTarget);
+      if(!dynamic)addIssue(moduleTarget,`Hiányzó dinamikus aloldal-lista: ${dynamicTarget}`);
+      else {
+        const staticIds=new Set((module.sections||[]).map(section=>String(section.id||'')));
+        for(const page of dynamic.pages||[]){
+          const id=String(page?.id||'');
+          if(id&&staticIds.has(id))addIssue(dynamicTarget,`A dinamikus aloldal id ütközik beépített oldallal: ${id}.`);
+        }
+      }
     }
   }
 }

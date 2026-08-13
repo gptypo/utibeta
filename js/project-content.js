@@ -30,6 +30,7 @@ async function fetchBaseProject(){
     const moduleIndex=await fetchJson(indexUrl);
     const namespace={__sections:{}};
     const sectionTree=[];
+    const navigationSections=[];
     for(const sectionRef of moduleIndex.sections||[]){
       let sectionData={};
       try{
@@ -39,12 +40,30 @@ async function fetchBaseProject(){
         warnContent('Egy aloldal tartalma nem tölthető be; az app a többi oldallal tovább indul.',{module:moduleIndex.id,section:sectionRef.id,file:sectionRef.file,error:String(error?.message||error)});
       }
       namespace.__sections[sectionRef.id]=sectionData;
-      // Keep the original flat namespace for the legacy renderers, but do not flatten
-      // page-builder blocks: every section may have its own `blocks` array.
       const legacyData=clone(sectionData);
       delete legacyData.blocks;
       Object.assign(namespace,legacyData);
-      sectionTree.push({id:sectionRef.id,title:sectionRef.title,file:sectionRef.file,keys:Object.keys(sectionData)});
+      sectionTree.push({id:sectionRef.id,title:sectionRef.title,file:sectionRef.file,dynamic:false,keys:Object.keys(sectionData)});
+      navigationSections.push({id:sectionRef.id,title:sectionRef.title,dynamic:false});
+    }
+    if(moduleIndex.dynamic){
+      try{
+        const dynamicBundle=await fetchJson(resolveFrom(indexUrl,moduleIndex.dynamic));
+        for(const page of dynamicBundle.pages||[]){
+          if(!page||page.hidden===true)continue;
+          const id=String(page.id||'').trim();
+          if(!id){warnContent('Egy dinamikus aloldal id nélkül kimaradt.',{module:moduleIndex.id,file:moduleIndex.dynamic});continue;}
+          if(namespace.__sections[id]){warnContent('Dinamikus aloldal azonosítója ütközik egy meglévő aloldallal; az elem kimaradt.',{module:moduleIndex.id,section:id,file:moduleIndex.dynamic});continue;}
+          const header=clone(page.page?.header||{});
+          const title=String(page.navTitle||header.title||page.title||id);
+          const sectionData={page:{...clone(page.page||{}),header},blocks:clone(page.blocks||[]),dynamic:true};
+          namespace.__sections[id]=sectionData;
+          sectionTree.push({id,title,file:moduleIndex.dynamic,dynamic:true,keys:Object.keys(sectionData)});
+          navigationSections.push({id,title,dynamic:true});
+        }
+      }catch(error){
+        warnContent('A modul dinamikus aloldalai nem tölthetők be; a beépített oldalak tovább működnek.',{module:moduleIndex.id,file:moduleIndex.dynamic,error:String(error?.message||error)});
+      }
     }
     if(moduleIndex.shared){
       const shared=await fetchJson(resolveFrom(indexUrl,moduleIndex.shared));
@@ -55,7 +74,7 @@ async function fetchBaseProject(){
       id:moduleIndex.id,slug:moduleIndex.slug,title:moduleIndex.title,code:moduleIndex.code,
       className:moduleIndex.className,icon:moduleIndex.icon,thin:moduleIndex.thin,
       lead:moduleIndex.lead,time:moduleIndex.time,heroIconMode:moduleIndex.heroIconMode||'auto',page:clone(moduleIndex.page||{}),
-      sections:(moduleIndex.sections||[]).map(({id,title})=>({id,title}))
+      sections:navigationSections
     });
     contentTree.push({id:moduleIndex.id,title:moduleIndex.title,sections:sectionTree});
   }
@@ -114,14 +133,19 @@ export function exportModularBundle(){
   files['shared/onmagam-data.json']={schema:'utiterv-shared-v5',onmagamData:clone(project.modules.onmagamData?.onmagamData||{})};
   for(const module of project.contentTree||[]){
     const nav=project.navigation.find(x=>x.id===module.id),slug=nav?.slug||module.id;
-    const sections=[];
+    const sections=[],dynamicPages=[];
     for(const section of module.sections||[]){
       const data=clone(project.modules[module.id]?.__sections?.[section.id]||{});
+      if(section.dynamic){
+        dynamicPages.push({id:section.id,navTitle:section.title,hidden:false,page:clone(data.page||{}),blocks:clone(data.blocks||[])});
+        continue;
+      }
       const file=`modules/${slug}/${section.id}.json`;
       files[file]={schema:'utiterv-section-v5',id:section.id,title:section.title,data};
       sections.push({id:section.id,title:section.title,file:`${section.id}.json`});
     }
-    files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections};
+    files[`modules/${slug}/dynamic-pages.json`]={schema:'utiterv-dynamic-pages-v1',moduleId:module.id,pages:dynamicPages};
+    files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'};
   }
   files['project.json']=clone(project.manifest||baseProject.manifest);
   return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'5.0.0',files},null,2);
