@@ -1,9 +1,10 @@
 {
   "schema": "utiterv-project-manifest-v5",
-  "version": "5.2.0",
+  "version": "5.3.1",
   "meta": {
     "title": "Útiterv a Jövőbe",
-    "description": "Adatvezérelt edukációs PWA projekt"
+    "description": "Adatvezérelt edukációs PWA projekt",
+    "contentModel": "extensible-blocks-v1"
   },
   "home": "home.json",
   "modules": [

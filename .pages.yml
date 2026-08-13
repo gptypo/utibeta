@@ -13,6 +13,239 @@ media:
   rename: safe
   categories:
   - audio
+- name: videos
+  label: Videók
+  input: video
+  output: /video
+  rename: safe
+  categories:
+  - video
+- name: documents
+  label: Letölthető fájlok
+  input: downloads
+  output: /downloads
+  rename: safe
+  categories:
+  - document
+  - compressed
+components:
+  content_blocks:
+    type: block
+    label: Bővíthető tartalom
+    list: true
+    blockKey: type
+    description: Tetszőleges számú új tartalomblokk adható az aloldal meglévő tartalma után. A blokkok sorrendje
+      átrendezhető.
+    blocks:
+    - name: text
+      label: Szöveg
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: body
+        label: Szöveg
+        type: text
+    - name: image
+      label: Kép
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: src
+        label: Kép
+        type: image
+        required: true
+        options:
+          media: images
+      - name: alt
+        label: Alternatív szöveg
+        type: string
+        description: Akadálymentesség miatt érdemes röviden leírni a képet.
+      - name: caption
+        label: Képaláírás
+        type: string
+    - name: video
+      label: Feltöltött videó
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: title
+        label: Cím
+        type: string
+      - name: src
+        label: Videófájl
+        type: file
+        required: true
+        options:
+          media: videos
+          categories:
+          - video
+      - name: poster
+        label: Borítókép
+        type: image
+        options:
+          media: images
+      - name: caption
+        label: Leírás / képaláírás
+        type: text
+    - name: embed
+      label: YouTube / Vimeo videó
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: title
+        label: Cím
+        type: string
+      - name: url
+        label: YouTube vagy Vimeo URL
+        type: string
+        required: true
+      - name: caption
+        label: Leírás
+        type: text
+    - name: audio
+      label: Hanganyag
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: title
+        label: Cím
+        type: string
+      - name: src
+        label: Hangfájl
+        type: file
+        required: true
+        options:
+          media: audio
+          categories:
+          - audio
+      - name: caption
+        label: Leírás
+        type: text
+    - name: gallery
+      label: Képgaléria
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: images
+        label: Képek
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{caption}'
+        fields:
+        - name: src
+          label: Kép
+          type: image
+          required: true
+          options:
+            media: images
+        - name: alt
+          label: Alternatív szöveg
+          type: string
+        - name: caption
+          label: Képaláírás
+          type: string
+    - name: card
+      label: Kiemelt kártya
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Cím
+        type: string
+      - name: body
+        label: Szöveg
+        type: text
+      - name: image
+        label: Opcionális kép
+        type: image
+        options:
+          media: images
+      - name: imageAlt
+        label: Kép alternatív szövege
+        type: string
+      - name: linkLabel
+        label: Gomb felirata
+        type: string
+      - name: linkUrl
+        label: Gomb URL-je
+        type: string
+    - name: download
+      label: Letölthető anyag
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: title
+        label: Cím
+        type: string
+      - name: description
+        label: Leírás
+        type: text
+      - name: file
+        label: Fájl
+        type: file
+        required: true
+        options:
+          media: documents
+          categories:
+          - document
+          - compressed
+      - name: label
+        label: Letöltés gomb felirata
+        type: string
+    - name: quote
+      label: Idézet / kiemelés
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: quote
+        label: Idézet
+        type: text
+        required: true
+      - name: attribution
+        label: Forrás / név
+        type: string
+    - name: divider
+      label: Elválasztó
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+        description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
 content:
 - name: content_ui_json
   label: Általános feliratok és oldalszövegek
@@ -1787,8 +2020,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
+      és a listák bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1855,8 +2088,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
+      és a listák bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1923,8 +2156,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
+      és a listák bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -1991,8 +2224,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
+      és a listák bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -2047,6 +2280,10 @@ content:
       - name: status
         label: Status
         type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2095,6 +2332,10 @@ content:
       - name: status
         label: Status
         type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2160,6 +2401,10 @@ content:
       - name: dont
         label: Dont
         type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2227,6 +2472,10 @@ content:
         - name: feedback
           label: Feedback
           type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2275,6 +2524,10 @@ content:
       - name: back
         label: Back
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2316,6 +2569,10 @@ content:
     - name: jobHuntClosing
       label: Job hunt closing
       type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2388,6 +2645,10 @@ content:
         - name: feedback
           label: Feedback
           type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   - name: expertReview
     label: Expert review
     type: object
@@ -2453,6 +2714,10 @@ content:
       - name: back
         label: Back
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2519,6 +2784,10 @@ content:
         - name: feedback
           label: Feedback
           type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   - name: expertReview
     label: Expert review
     type: object
@@ -2591,6 +2860,10 @@ content:
         - name: feedback
           label: Feedback
           type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2667,6 +2940,10 @@ content:
       - name: back
         label: Back
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2690,7 +2967,11 @@ content:
   - name: data
     label: Tartalom
     type: object
-    fields: []
+    fields:
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2757,6 +3038,10 @@ content:
         - name: example
           label: Example
           type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2798,6 +3083,10 @@ content:
     - name: marketFactsClosing
       label: Market facts closing
       type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2862,6 +3151,10 @@ content:
         label: Transcript
         type: string
         list: true
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2900,6 +3193,10 @@ content:
       - name: answer
         label: Answer
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -2973,6 +3270,10 @@ content:
       - name: explanation
         label: Explanation
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3017,6 +3318,10 @@ content:
       - name: takeaway
         label: Takeaway
         type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3086,6 +3391,10 @@ content:
       - name: winWin
         label: Win win
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3152,6 +3461,10 @@ content:
         - name: feedback
           label: Feedback
           type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3200,6 +3513,10 @@ content:
       - name: back
         label: Back
         type: text
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3272,6 +3589,10 @@ content:
         - name: feedback
           label: Feedback
           type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   - name: expertReview
     label: Expert review
     type: object
@@ -3355,6 +3676,10 @@ content:
         - name: feedback
           label: Feedback
           type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false
@@ -3399,6 +3724,10 @@ content:
       - name: employerText
         label: Employer text
         type: string
+    - name: blocks
+      label: Plusz tartalomblokkok
+      component: content_blocks
+      description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
   operations:
     delete: false
     rename: false

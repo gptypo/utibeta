@@ -294,7 +294,8 @@
           }
         ]
       }
-    ]
+    ],
+    "blocks": []
   },
   "expertReview": {
     "version": "7.1",

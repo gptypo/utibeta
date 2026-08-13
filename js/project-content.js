@@ -26,12 +26,18 @@ async function fetchBaseProject(){
   for(const moduleRef of manifest.modules){
     const indexUrl=resolveFrom(MANIFEST_URL,moduleRef.file);
     const moduleIndex=await fetchJson(indexUrl);
-    const namespace={};
+    const namespace={__sections:{}};
     const sectionTree=[];
     for(const sectionRef of moduleIndex.sections||[]){
       const section=await fetchJson(resolveFrom(indexUrl,sectionRef.file));
-      Object.assign(namespace,clone(section.data||{}));
-      sectionTree.push({id:sectionRef.id,title:sectionRef.title,file:sectionRef.file,keys:Object.keys(section.data||{})});
+      const sectionData=clone(section.data||{});
+      namespace.__sections[sectionRef.id]=sectionData;
+      // Keep the original flat namespace for the legacy renderers, but do not flatten
+      // page-builder blocks: every section may have its own `blocks` array.
+      const legacyData=clone(sectionData);
+      delete legacyData.blocks;
+      Object.assign(namespace,legacyData);
+      sectionTree.push({id:sectionRef.id,title:sectionRef.title,file:sectionRef.file,keys:Object.keys(sectionData)});
     }
     if(moduleIndex.shared){
       const shared=await fetchJson(resolveFrom(indexUrl,moduleIndex.shared));
@@ -103,7 +109,7 @@ export function exportModularBundle(){
     const nav=project.navigation.find(x=>x.id===module.id),slug=nav?.slug||module.id;
     const sections=[];
     for(const section of module.sections||[]){
-      const data={};for(const key of section.keys||[])data[key]=clone(project.modules[module.id]?.[key]);
+      const data=clone(project.modules[module.id]?.__sections?.[section.id]||{});
       const file=`modules/${slug}/${section.id}.json`;
       files[file]={schema:'utiterv-section-v5',id:section.id,title:section.title,data};
       sections.push({id:section.id,title:section.title,file:`${section.id}.json`});

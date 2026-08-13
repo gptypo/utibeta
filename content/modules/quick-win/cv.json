@@ -117,6 +117,7 @@
     "cvQuickRule": {
       "do": "Olyan információt, ami bizonyítja, hogy alkalmas vagy a pozícióra.",
       "dont": "Olyan információt, ami nem releváns, túl személyes vagy nem ad hozzá értéket a jelentkezésedhez."
-    }
+    },
+    "blocks": []
   }
 }

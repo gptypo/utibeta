@@ -56,6 +56,7 @@
     "interviewClosing": {
       "front": "Az interjú nem vizsga",
       "back": "Az interjú egy kétoldalú beszélgetés. Nemcsak a munkáltató választ munkatársat, hanem te is munkahelyet választasz. Légy felkészült, őszinte és magabiztos!"
-    }
+    },
+    "blocks": []
   }
 }

@@ -21,3 +21,15 @@ Ellenőrzések:
 - JSON mezők CMS-lefedettsége: OK
 - Projekt JSON fájlhivatkozások: OK
 - Hivatkozott médiafájlok: OK
+
+CMS-EXTENSIBLE 4.1 ELLENŐRZÉS
+===============================
+- 24/24 beépített modul-aloldal rendelkezik külön `data.blocks` listával.
+- 24/24 aloldal Pages CMS sémája tartalmazza a `Plusz tartalomblokkok` blokkmezőt.
+- Támogatott új blokkok: szöveg, kép, feltöltött videó, YouTube/Vimeo, hang, galéria, kiemelt kártya, letöltés, idézet, elválasztó.
+- Médiaforrások: images, audio, videos, documents.
+- `dashboardModuleLabel is not defined` javítva.
+- Service worker cache verzió: pagescms-extensible-blocks-4.1.
+- Minden JavaScript fájl szintaktikai ellenőrzésen átment.
+- Minden JSON érvényes; nincs hiányzó helyi médiahivatkozás.
+

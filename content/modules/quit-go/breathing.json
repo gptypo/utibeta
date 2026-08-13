@@ -2,5 +2,7 @@
   "schema": "utiterv-section-v5",
   "id": "breathing",
   "title": "Nyugalom",
-  "data": {}
+  "data": {
+    "blocks": []
+  }
 }
