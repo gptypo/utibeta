@@ -245,6 +245,216 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+    - name: quiz
+      label: Interaktív · Kvíz
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+      - name: id
+        label: Kvíz azonosító
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: Kisbetűt, számot és kötőjelet használj, például kommunikacios-kviz.
+        description: A kitöltési eredmény ehhez az azonosítóhoz kötődik. Létrehozás után ne változtasd meg.
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Kvíz címe
+        type: string
+        required: true
+      - name: description
+        label: Bevezető / instrukció
+        type: text
+      - name: items
+        label: Kérdések
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{question}'
+        fields:
+        - name: question
+          label: Kérdés / helyzet
+          type: text
+          required: true
+        - name: options
+          label: Válaszlehetőségek
+          type: object
+          list:
+            collapsible:
+              collapsed: true
+              summary: '{text}'
+          fields:
+          - name: text
+            label: Válasz
+            type: text
+            required: true
+          - name: isOptimal
+            label: Ez a helyes / optimális válasz
+            type: boolean
+          - name: feedback
+            label: Visszajelzés / magyarázat
+            type: text
+            required: true
+    - name: carousel
+      label: Interaktív · Lapozható kártyák
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+      - name: id
+        label: Kártyasor azonosító
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Blokk címe
+        type: string
+      - name: description
+        label: Bevezető
+        type: text
+      - name: items
+        label: Kártyák
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: eyebrow
+          label: Kártya kis felirata
+          type: string
+        - name: title
+          label: Kártya címe
+          type: string
+          required: true
+        - name: body
+          label: Kártya szövege
+          type: text
+    - name: flipcards
+      label: Interaktív · Fordítós kártyák
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+      - name: id
+        label: Kártyasor azonosító
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Blokk címe
+        type: string
+      - name: description
+        label: Bevezető
+        type: text
+      - name: frontLabel
+        label: Előlap alapértelmezett címkéje
+        type: string
+      - name: backLabel
+        label: Hátlap alapértelmezett címkéje
+        type: string
+      - name: items
+        label: Fordítós kártyák
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: Kártya címe
+          type: string
+        - name: frontLabel
+          label: Előlap saját címkéje
+          type: string
+        - name: front
+          label: Előlap szövege
+          type: text
+          required: true
+        - name: backLabel
+          label: Hátlap saját címkéje
+          type: string
+        - name: back
+          label: Hátlap szövege
+          type: text
+          required: true
+    - name: checklist
+      label: Interaktív · Checklist
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+      - name: id
+        label: Checklist azonosító
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Checklist címe
+        type: string
+      - name: description
+        label: Bevezető
+        type: text
+      - name: items
+        label: Tételek
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{text}'
+        fields:
+        - name: id
+          label: Tétel azonosító
+          type: string
+          description: Opcionális. Ha megadod, később átrendezéskor is biztosan megmarad a kipipált állapot.
+        - name: text
+          label: Szöveg
+          type: text
+          required: true
+    - name: steps
+      label: Tartalom · Lépéssor / folyamat
+      fields:
+      - name: hidden
+        label: Blokk elrejtése
+        type: boolean
+      - name: eyebrow
+        label: Kis felirat
+        type: string
+      - name: title
+        label: Blokk címe
+        type: string
+      - name: description
+        label: Bevezető
+        type: text
+      - name: items
+        label: Lépések
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: Lépés címe
+          type: string
+          required: true
+        - name: body
+          label: Magyarázat
+          type: text
 content:
 - name: content_ui_json
   label: Alkalmazásszintű UI és közös gombok
@@ -4933,10 +5143,28 @@ content:
         - name: description
           label: Bevezető / leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        description: Biztonságos CSS preset az egész aloldalhoz. Nem ír nyers CSS-t, ezért a layout nem rontható el vele.
+        options:
+          values:
+          - name: default
+            label: Alap · a jelenlegi Útiterv stílus
+          - name: cards
+            label: Kártyás · erősebben tagolt tartalom
+          - name: highlight
+            label: Kiemelt · hangsúlyos fejléc és blokkok
+          - name: minimal
+            label: Minimal · levegős, kevés keret
+          - name: dark
+            label: Sötét panel · kontrasztos tartalom
+          - name: module
+            label: Modul-szín · az aktuális főtémához igazodó
     - name: blocks
       label: Oldal tartalma
       component: content_blocks
-      description: Az oldal teljes tartalma tetszőleges sorrendben felépíthető szöveg-, kép-, videó-, hang-, galéria-, kártya- és letöltésblokkokból.
+      description: Az oldal teljes tartalma tetszőleges sorrendben építhető. A média- és szövegblokkok mellett új kvíz, lapozható kártya, fordítós kártya, checklist és lépéssor is hozzáadható.
   operations:
     delete: false
     rename: false

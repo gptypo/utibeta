@@ -48,7 +48,7 @@ function validateBlock(block,file,index,where){
     addIssue(file,`${where}.blocks[${index}] nem objektum.`); return;
   }
   const type=String(block.type||'').trim();
-  const supported=new Set(['text','image','video','embed','audio','gallery','card','download','quote','divider']);
+  const supported=new Set(['text','image','video','embed','audio','gallery','card','download','quote','divider','quiz','carousel','flipcards','checklist','steps']);
   if(!type){addIssue(file,`${where}.blocks[${index}] mezőből hiányzik a type.`);return;}
   if(!supported.has(type)){addIssue(file,`${where}.blocks[${index}] ismeretlen blokktípus: ${type}.`);return;}
   if(block.hidden) return;
@@ -60,6 +60,20 @@ function validateBlock(block,file,index,where){
   }
   if(type==='image'&&block.src&&!String(block.alt||'').trim()) addWarning(file,`${where}.blocks[${index}] kép alt szövege üres.`);
   if(type==='embed'&&block.url&&!/^https?:\/\//i.test(block.url)) addIssue(file,`${where}.blocks[${index}] videó URL-je nem http/https cím.`);
+  if(['quiz','carousel','flipcards','checklist'].includes(type)&&!String(block.id||'').trim())addIssue(file,`${where}.blocks[${index}] (${type}) interaktív blokkból hiányzik az id.`);
+  if(['quiz','carousel','flipcards','checklist'].includes(type)&&block.id&&!/^[a-z0-9-]+$/.test(String(block.id)))addIssue(file,`${where}.blocks[${index}] (${type}) id csak kisbetűt, számot és kötőjelet tartalmazhat.`);
+  if(['quiz','carousel','flipcards','checklist','steps'].includes(type)&&(!Array.isArray(block.items)||!block.items.length))addIssue(file,`${where}.blocks[${index}] (${type}) nem tartalmaz elemet.`);
+  if(type==='quiz'&&Array.isArray(block.items))block.items.forEach((item,qi)=>{
+    if(!String(item?.question||item?.situation||'').trim())addIssue(file,`${where}.blocks[${index}].items[${qi}] kérdése hiányzik.`);
+    if(!Array.isArray(item?.options)||item.options.length<2)addIssue(file,`${where}.blocks[${index}].items[${qi}] legalább 2 válaszlehetőséget igényel.`);
+    else{
+      const optimal=item.options.filter(option=>option?.isOptimal===true).length;
+      if(optimal!==1)addIssue(file,`${where}.blocks[${index}].items[${qi}] pontosan 1 helyes/optimális választ igényel (jelenleg ${optimal}).`);
+      item.options.forEach((option,oi)=>{if(!String(option?.text||'').trim())addIssue(file,`${where}.blocks[${index}].items[${qi}].options[${oi}] válaszszövege hiányzik.`);if(!String(option?.feedback||option?.explanation||'').trim())addWarning(file,`${where}.blocks[${index}].items[${qi}].options[${oi}] visszajelzése üres.`);});
+    }
+  });
+  if(type==='flipcards'&&Array.isArray(block.items))block.items.forEach((item,ci)=>{if(!String(item?.front||'').trim()||!String(item?.back||'').trim())addIssue(file,`${where}.blocks[${index}].items[${ci}] flip-card elő- és hátlapja kötelező.`);});
+  if(type==='checklist'&&Array.isArray(block.items))block.items.forEach((item,ci)=>{if(!String(item?.text||'').trim())addIssue(file,`${where}.blocks[${index}].items[${ci}] checklist szövege hiányzik.`);});
 }
 
 const jsonFiles=walk(path.join(root,'content')).filter(f=>f.endsWith('.json'));
@@ -86,6 +100,8 @@ for(const file of jsonFiles){
           else if(localIds.has(id))addIssue(name,`Duplikált dinamikus aloldal id: ${id}.`);
           else localIds.add(id);
           if(page.hidden!==true&&!String(page.navTitle||page.page?.header?.title||'').trim())addIssue(name,`pages[${i}] navigációs címe hiányzik.`);
+          const style=String(page.page?.stylePreset||'default');
+          if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`pages[${i}] ismeretlen stylePreset: ${style}.`);
           if(page.blocks!==undefined){
             if(!Array.isArray(page.blocks))addIssue(name,`pages[${i}].blocks nem lista.`);
             else page.blocks.forEach((block,bi)=>validateBlock(block,name,bi,`pages[${i}]`));

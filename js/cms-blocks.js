@@ -48,7 +48,7 @@ function blockHeading(block){
   return `${block.eyebrow?`<span class="eyebrow eyebrow--dark cms-block__eyebrow">${esc(block.eyebrow)}</span>`:''}${block.title?`<h3 class="cms-block__title">${esc(block.title)}</h3>`:''}`;
 }
 
-function renderBlock(block){
+export function renderCmsBlock(block){
   try{
   if(!block||typeof block!=='object'||block.hidden)return'';
   const type=String(block.type||'').toLowerCase();
@@ -105,6 +105,6 @@ export function getSectionBlocks(project,moduleId,sectionId){
 
 export function renderCmsBlocks(blocks){
   if(!Array.isArray(blocks)||!blocks.length)return'';
-  const markup=blocks.map(renderBlock).filter(Boolean).join('');
+  const markup=blocks.map(renderCmsBlock).filter(Boolean).join('');
   return markup?`<div class="cms-blocks">${markup}</div>`:'';
 }

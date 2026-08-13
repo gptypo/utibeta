@@ -1177,3 +1177,43 @@ html[data-theme="dark"] [data-competency-modal] section > strong {
 }
 .content-error h1{margin:.45rem 0 .65rem;font-size:clamp(1.7rem,5vw,2.5rem)}
 .content-error p{margin:0;line-height:1.65}
+
+/* BETA 5.1 – reusable CMS interactions + safe page style presets */
+.section-appearance{--section-accent:var(--turq,#14e8c9);margin-top:0}
+.section-appearance--qg{--section-accent:var(--turq,#14e8c9)}
+.section-appearance--qw{--section-accent:var(--turq,#14e8c9)}
+.section-appearance--ww{--section-accent:var(--blue,#007fff)}
+.section-appearance--gg{--section-accent:#696773}
+.section-appearance--default{padding:0}
+.section-appearance--cards{margin:16px 0 8px;padding:18px;border:1px solid rgba(105,103,115,.16);border-radius:28px;background:rgba(255,255,255,.62);box-shadow:0 14px 38px rgba(0,0,0,.05)}
+.section-appearance--cards .cms-blocks{gap:14px;margin-top:18px}
+.section-appearance--cards .cms-block,.section-appearance--cards .cms-interactive{box-shadow:0 10px 28px rgba(0,0,0,.07)}
+.section-appearance--highlight{margin:16px 0 8px;padding:20px;border-radius:28px;background:linear-gradient(180deg,color-mix(in srgb,var(--section-accent) 14%,#fff),#fff 46%);border-top:5px solid var(--section-accent)}
+.section-appearance--highlight>.guide-head:first-child{padding:8px 2px 18px}
+.section-appearance--highlight .cms-block__title,.section-appearance--highlight .guide-head h2{letter-spacing:-.025em}
+.section-appearance--minimal .cms-blocks{gap:10px}
+.section-appearance--minimal .cms-block--text,.section-appearance--minimal .cms-block--card,.section-appearance--minimal .cms-block--download,.section-appearance--minimal .cms-block--quote,.section-appearance--minimal .cms-block--audio,.section-appearance--minimal .cms-block--video,.section-appearance--minimal .cms-block--embed,.section-appearance--minimal .cms-block--gallery{padding:14px 0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.section-appearance--minimal .cms-block--divider{opacity:.55}
+.section-appearance--dark{margin:16px 0 8px;padding:22px;border-radius:28px;background:#182126;color:#f5faf9;box-shadow:0 16px 44px rgba(0,0,0,.16)}
+.section-appearance--dark>.guide-head h2,.section-appearance--dark>.guide-head p,.section-appearance--dark .cms-block__title,.section-appearance--dark .cms-block__body,.section-appearance--dark .cms-block__body p{color:#f5faf9}
+.section-appearance--dark .eyebrow--dark{color:var(--turq,#14e8c9)}
+.section-appearance--dark .cms-block--text,.section-appearance--dark .cms-block--card,.section-appearance--dark .cms-block--download,.section-appearance--dark .cms-block--quote,.section-appearance--dark .cms-block--audio,.section-appearance--dark .cms-block--video,.section-appearance--dark .cms-block--embed,.section-appearance--dark .cms-block--gallery{background:#202d32;border-color:#33434a;color:#f5faf9}
+.section-appearance--module{margin:16px 0 8px;padding:20px;border-radius:28px;border:2px solid color-mix(in srgb,var(--section-accent) 60%,transparent);background:color-mix(in srgb,var(--section-accent) 9%,#fff)}
+.section-appearance--module>.guide-head{border-left:5px solid var(--section-accent);padding-left:16px}
+
+.cms-interactive{min-width:0;margin:0;padding:0}
+.cms-interactive>.guide-head{margin-top:0}
+.cms-interactive-card{margin:0}
+.cms-interactive--quiz .quiz-progress-panel{margin-bottom:0}
+.cms-interactive--checklist .checklist{margin-top:12px}
+.cms-steps{display:grid;gap:12px;margin-top:16px}
+.cms-steps article{display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:start;padding:16px;border:1px solid #dfe9e7;border-radius:18px;background:#fff}
+.cms-steps article>span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--section-accent);color:#07110f;font-weight:900}
+.cms-steps h3{margin:2px 0 6px;font-size:1rem}
+.cms-steps p{margin:0;color:#526168;line-height:1.55}
+html[data-theme="dark"] .section-appearance--cards{background:#202a2f;border-color:#334047}
+html[data-theme="dark"] .section-appearance--highlight{background:linear-gradient(180deg,color-mix(in srgb,var(--section-accent) 12%,#182126),#182126 52%)}
+html[data-theme="dark"] .section-appearance--module{background:color-mix(in srgb,var(--section-accent) 8%,#182126)}
+html[data-theme="dark"] .cms-steps article{background:#202d32;border-color:#33434a;color:#f5faf9}
+html[data-theme="dark"] .cms-steps p{color:#c8d3d0}
+@media(max-width:520px){.section-appearance--cards,.section-appearance--highlight,.section-appearance--dark,.section-appearance--module{padding:16px;border-radius:22px}}

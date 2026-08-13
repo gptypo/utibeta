@@ -1,0 +1,28 @@
+ÚTITERV BETA 5.1 – REUSABLE COMPONENTS AUDIT
+
+Interaktív CMS blokkok:
+- quiz
+- carousel
+- flipcards
+- checklist
+- steps
+
+Már meglévő statikus CMS blokkok:
+- text, image, video, embed, audio, gallery, card, download, quote, divider
+
+Dinamikus oldal style presetek:
+- default
+- cards
+- highlight
+- minimal
+- dark
+- module
+
+Biztonsági szabályok:
+- interaktív komponensek stabil id-val működnek
+- a validátor ellenőrzi az id formátumot
+- kvízkérdésenként pontosan 1 optimális válasz szükséges
+- hiányos interaktív blokk nem állíthatja le a teljes alkalmazást
+- nyers CSS helyett kizárólag ellenőrzött preset class használható
+- dinamikus kvízek a közös progress rendszerbe kerülnek
+- lapozható és flip-card komponensek gombbal és swipe-pal kezelhetők
