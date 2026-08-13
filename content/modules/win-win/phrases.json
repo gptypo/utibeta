@@ -295,6 +295,23 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Pro mondatok",
+        "description": "Használható mondatok nehéz helyzetekre."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Válaszd a konkrét és együttműködő megfogalmazást."
+      },
+      "labels": {
+        "situation": "Helyzet",
+        "phraseThink": "Gondold végig, hogyan fogalmaznád meg professzionálisan.",
+        "tapForSolution": "Érintsd meg a megoldásért",
+        "youCanSay": "Ezt mondhatod"
+      }
+    }
   }
 }

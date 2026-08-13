@@ -319,7 +319,22 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Munkahelyi fogalomtár",
+        "description": "12 kifejezés, amit jó ismerni az első naptól."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Használd magabiztosan az alapfogalmakat."
+      },
+      "labels": {
+        "whatMeans": "Mit jelent?",
+        "whenYouMeet": "Mikor találkozol vele?"
+      }
+    }
   },
   "expertReview": {
     "version": "7.1",

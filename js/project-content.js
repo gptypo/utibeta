@@ -47,7 +47,7 @@ async function fetchBaseProject(){
     navigation.push({
       id:moduleIndex.id,slug:moduleIndex.slug,title:moduleIndex.title,code:moduleIndex.code,
       className:moduleIndex.className,icon:moduleIndex.icon,thin:moduleIndex.thin,
-      lead:moduleIndex.lead,time:moduleIndex.time,heroIconMode:moduleIndex.heroIconMode||'auto',
+      lead:moduleIndex.lead,time:moduleIndex.time,heroIconMode:moduleIndex.heroIconMode||'auto',page:clone(moduleIndex.page||{}),
       sections:(moduleIndex.sections||[]).map(({id,title})=>({id,title}))
     });
     contentTree.push({id:moduleIndex.id,title:moduleIndex.title,sections:sectionTree});

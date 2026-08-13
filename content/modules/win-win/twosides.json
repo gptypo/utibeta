@@ -77,6 +77,19 @@
         "employerText": "A munkáltató azt várja, hogy a stabilitás igénye aktív alkalmazkodással és önfejlesztéssel párosuljon – a munkaerőpiac folyamatosan változik."
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Két oldal, egy megoldás",
+        "description": "Értsd meg egyszerre a saját és a munkaadói nézőpontot."
+      },
+      "labels": {
+        "youngPerspective": "Fiatal nézőpont",
+        "employerPerspective": "Munkaadói nézőpont",
+        "genZExpectation": "Z-generáció elvárása",
+        "employerExpectation": "Munkaadó elvárása"
+      }
+    }
   }
 }

@@ -295,7 +295,21 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Munkahelyi vészjelek",
+        "description": "Minden vészjel áttekinthető; érintésre lenyílik a magyarázat."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Fedezd fel a biztonságos, professzionális reakciókat."
+      },
+      "labels": {
+        "redFlagFallback": "Vészjel {index}"
+      }
+    }
   },
   "expertReview": {
     "version": "7.1",

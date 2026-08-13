@@ -3,6 +3,47 @@
   "id": "breathing",
   "title": "Nyugalom",
   "data": {
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Légzéstechnikák",
+        "description": "Válassz egy technikát. Nyisd le, majd kövesd a kör ritmusát és az aktuális fázist."
+      }
+    },
+    "breathing": {
+      "ready": "KÉSZEN ÁLLSZ?",
+      "start": "Kezdés",
+      "stop": "Leállítás",
+      "inhale": "BELÉGZÉS",
+      "hold": "TARTÁS",
+      "exhale": "KILÉGZÉS",
+      "techniques": [
+        {
+          "name": "Dobozlégzés",
+          "inhale": 4,
+          "hold": 4,
+          "exhale": 4,
+          "ratio": "4–4–4",
+          "description": "Stabil, háromrészes ritmus: belégzés, bent tartás és kilégzés ugyanannyi ideig."
+        },
+        {
+          "name": "Megnyugtató",
+          "inhale": 4,
+          "hold": 7,
+          "exhale": 8,
+          "ratio": "4–7–8",
+          "description": "A hosszú kilégzés segíthet lelassítani a tested stresszreakcióját és megérkezni a jelenbe."
+        },
+        {
+          "name": "Egyensúlyozó",
+          "inhale": 5,
+          "hold": 0,
+          "exhale": 5,
+          "ratio": "5–5",
+          "description": "Egyszerű, egyenletes ritmus bent tartás nélkül: öt másodperc belégzés, öt másodperc kilégzés."
+        }
+      ]
+    }
   }
 }

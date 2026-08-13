@@ -299,6 +299,21 @@
       "front": "A munka világa tanulható",
       "back": "Senki sem születik kész munkavállalónak. A munkahelyi szabályok, kapcsolatok és működési elvek megismerése ugyanolyan fontos, mint a szakmai tudás. Minél jobban érted a munka világát, annál magabiztosabban tudsz benne eligazodni."
     },
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "A munka világa",
+        "description": "Íratlan szabályok és gyakorlati kapaszkodók."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Valósághű helyzetek az első hetekből."
+      },
+      "labels": {
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      }
+    }
   }
 }

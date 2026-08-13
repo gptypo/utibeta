@@ -26,6 +26,17 @@
         "status": "coming-soon"
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Videós történetek",
+        "description": "Valódi szakmák, valódi utak."
+      },
+      "labels": {
+        "available": "Elérhető",
+        "soon": "Hamarosan"
+      }
+    }
   }
 }

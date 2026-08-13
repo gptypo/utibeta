@@ -46,35 +46,10 @@
     "menuHomeSymbol": "⌂",
     "menuPrivacySymbol": "⌁"
   },
-  "moduleExperience": {
-    "onmagam": {
-      "popupTitle": "QUIT & GO",
-      "cardText": "Minden kihívás egy lehetőség a fejlődésre. Kis lépések, gyors eredmények.",
-      "intro": "Ebben a modulban olyan tippeket és gyakorlati útmutatókat találsz, amelyek segítenek eligazodni a munkahelyi mindennapokban. A cél, hogy magabiztosabban kezeld az első munkahelyed kihívásait, könnyebben beilleszkedj, és sikeresen elindulj szakmai utadon.",
-      "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz."
-    },
-    "helyzeteim": {
-      "popupTitle": "QUICK WIN",
-      "cardText": "A probléma nem végleges kudarc, hanem egy új helyzet kezdete. Kis lépések, gyors eredmények.",
-      "intro": "Ebben a modulban olyan gyakorlati tippeket és útmutatókat találsz, amelyek segítenek eligazodni a munka világában, magabiztosabban állást keresni, felkészülni az állásinterjúkra, valamint tudatosan építeni szakmai jelenlétedet. Cél, hogy megismerd azokat a helyzeteket és figyelmeztető jeleket, amelyekre érdemes odafigyelned a karrierutad során, így felkészültebben és tudatosabban hozhatsz döntéseket.",
-      "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted."
-    },
-    "kapcsolataim": {
-      "popupTitle": "WIN-WIN",
-      "cardText": "Értsd meg a másik oldalt is! Úgy működj, hogy mindenki nyerjen.",
-      "intro": "Ebben a modulban megismerheted a munkavállalói és munkáltatói nézőpontokat, valamint a különböző generációk együttműködésének sajátosságait. Olyan kommunikációs és együttműködési eszközöket kapsz, amelyek segítenek magabiztosan mozogni a munka világában és a digitális térben egyaránt. Cél, hogy megértsd a munkahelyi kapcsolatok működését, tudatosabban kommunikálj, és hatékonyan működj együtt másokkal a közös sikerek érdekében.",
-      "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait."
-    }
-  },
   "common": {
-    "guideLabel": "Segédlet",
-    "practicalGuide": "Gyakorlati segédlet",
-    "carry": "Vidd magaddal!",
-    "closingThought": "Záró gondolat",
     "open": "Megnyitás",
     "minutes": "perc",
     "continue": "Folytasd ott, ahol abbahagytad",
-    "moduleIntroEyebrow": "Mire számíthatsz?",
     "moduleIntroButton": "Mehet →",
     "prevTopic": "Előző téma",
     "nextTopic": "Következő téma",
@@ -127,112 +102,6 @@
     "restart": "Kvíz újrakezdése",
     "overall": "Összesített haladás",
     "quizzes": "Kvízek"
-  },
-  "bonus": {
-    "materials": {
-      "eyebrow": "Segédlet",
-      "title": "Galaxy Guide",
-      "description": "Gyakorlati anyagok, amikor gyors kapaszkodóra van szükséged."
-    },
-    "videos": {
-      "eyebrow": "Segédlet",
-      "title": "Videós történetek",
-      "description": "Valódi szakmák, valódi utak."
-    },
-    "available": "Elérhető",
-    "soon": "Hamarosan"
-  },
-  "mindfulness": {
-    "groundingSteps": [
-      {
-        "count": 5,
-        "sense": "látsz",
-        "icon": "◉",
-        "prompt": "Nevezz meg 5 dolgot, amit most látsz a körülötted lévő térben."
-      },
-      {
-        "count": 4,
-        "sense": "érzel",
-        "icon": "✋",
-        "prompt": "Nevezz meg 4 dolgot, amit fizikailag érzel: például a széket a hátadon vagy a levegőt a bőrödön."
-      },
-      {
-        "count": 3,
-        "sense": "hallasz",
-        "icon": "◖",
-        "prompt": "Nevezz meg 3 hangot, amit most hallasz: forgalmat, légkondicionálót vagy a saját légzésedet."
-      },
-      {
-        "count": 2,
-        "sense": "szagolsz",
-        "icon": "≈",
-        "prompt": "Nevezz meg 2 illatot, amit most érzékelsz."
-      },
-      {
-        "count": 1,
-        "sense": "ízlelsz",
-        "icon": "●",
-        "prompt": "Nevezz meg 1 ízt, amit a szádban érzel."
-      }
-    ],
-    "bodySteps": [
-      {
-        "zone": "Lábfejek",
-        "cue": "Érezd a talajt a lábad alatt. Engedd el a feszültséget a lábujjaidban."
-      },
-      {
-        "zone": "Lábszár",
-        "cue": "Figyeld a vádlidat és a sípcsontod. Van-e benne feszültség? Engedd lazulni."
-      },
-      {
-        "zone": "Comb és csípő",
-        "cue": "Érezd, hogyan támaszkodik a tested a széken vagy a talajon. Engedd ellazulni."
-      },
-      {
-        "zone": "Has és mellkas",
-        "cue": "Figyeld a légzésedet. Minden kilégzésnél engedd mélyebbre süllyedni a relaxációt."
-      },
-      {
-        "zone": "Hát és váll",
-        "cue": "Sok stresszt hordozunk a vállunkban. Engedd le, lélegezz és lazulj el."
-      },
-      {
-        "zone": "Nyak és állkapocs",
-        "cue": "Engedd le az állkapcsodat. Figyeld meg, mennyire volt összeszorítva."
-      },
-      {
-        "zone": "Arc és homlok",
-        "cue": "Simítsd el a homlokod. Engedd lazulni a szemed körüli izmokat."
-      },
-      {
-        "zone": "Teljes test",
-        "cue": "Figyelj az egész testedre. Nyugodt vagy. Minden izmod ellazult."
-      }
-    ],
-    "guidedAudio": {
-      "3": {
-        "asset": "safePlace",
-        "icon": "☀",
-        "duration": "2:09",
-        "intro": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
-        "done": "Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
-      },
-      "4": {
-        "asset": "goldBubble",
-        "icon": "✦",
-        "duration": "2:20",
-        "intro": "Vezetett vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
-        "done": "Te döntöd el, mit engedsz közel magadhoz."
-      },
-      "5": {
-        "asset": "backpack",
-        "icon": "▱",
-        "duration": "2:35",
-        "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
-        "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
-      }
-    },
-    "bodyScanSeconds": 20
   },
   "pwa": {
     "version": "BETA 1.2.6",
@@ -316,8 +185,7 @@
       "tapFront": "Érintsd meg a visszafordításhoz"
     },
     "series": {
-      "carry": "Vidd magaddal!",
-      "closing": "Záró gondolat"
+      "carry": "Vidd magaddal!"
     },
     "competency": {
       "close": "Bezárás",
@@ -341,140 +209,6 @@
       "restart": "Újrakezdés",
       "stopped": "MEGÁLLÍTVA"
     }
-  },
-  "sectionCopy": {
-    "onmagam": {
-      "breathing": {
-        "title": "Légzéstechnikák",
-        "description": "Válassz egy technikát. Nyisd le, majd kövesd a kör ritmusát és az aktuális fázist."
-      },
-      "mindfulness": {
-        "title": "Mindfulness technikák",
-        "description": "Rövid gyakorlatok stressz, szorongás és mentális túlterheltség esetére."
-      },
-      "careers": {
-        "title": "Kékgalléros karrierutak",
-        "description": "Egy szakma nem végállomás, hanem fejlődési lehetőség. Érintsd meg a kompetenciákat a részletes leírásért és munkahelyi példáért."
-      },
-      "quiz": {
-        "title": "Munkahelyi helyzetek",
-        "description": "Nézd végig bátran az összes lehetőséget."
-      }
-    },
-    "helyzeteim": {
-      "world": {
-        "title": "A munka világa",
-        "description": "Íratlan szabályok és gyakorlati kapaszkodók.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Valósághű helyzetek az első hetekből."
-      },
-      "jobhunt": {
-        "title": "Állásvadászat Z módra",
-        "description": "12 rövid tipp, hogy tudatosabban és magabiztosabban keress állást."
-      },
-      "interview": {
-        "title": "Interjú kérdés–válasz",
-        "description": "Gyakori interjúkérdések és használható mintaválaszok."
-      },
-      "cv": {
-        "title": "Önéletrajz: mit írj, mit kerülj?",
-        "description": "Forgasd meg a kártyákat, és hasonlítsd össze a jó és kerülendő megoldásokat."
-      },
-      "linkedin": {
-        "title": "LinkedIn tippek",
-        "description": "12 praktikus lépés a hiteles és naprakész szakmai profilhoz."
-      },
-      "firstday": {
-        "title": "Első napi ellenőrzőlista",
-        "description": "Készülj fel nyugodtan, egy lépésben egyszerre.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Gyakorold a nyugodt, felkészült reakciókat."
-      },
-      "redflags": {
-        "title": "Munkahelyi vészjelek",
-        "description": "Minden vészjel áttekinthető; érintésre lenyílik a magyarázat.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Fedezd fel a biztonságos, professzionális reakciókat."
-      },
-      "legal": {
-        "title": "Munkajogi alapok",
-        "description": "A legfontosabb tudnivalók közérthetően.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Mit érdemes tenni aláírás és döntés előtt?"
-      },
-      "scenarios": {
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Minden válasz tanít valamit a helyzetről."
-      }
-    },
-    "kapcsolataim": {
-      "twosides": {
-        "title": "Két oldal, egy megoldás",
-        "description": "Értsd meg egyszerre a saját és a munkaadói nézőpontot."
-      },
-      "generations": {
-        "title": "Generációk együttműködése",
-        "description": "A különböző tapasztalatok és munkastílusok akkor működnek jól, ha kiegészítik egymást."
-      },
-      "communication": {
-        "title": "Kommunikáció",
-        "description": "Ugyanaz a mondat lehet amatőr vagy profi.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Keresd a mindkét fél számára működő megoldást."
-      },
-      "phrases": {
-        "title": "Pro mondatok",
-        "description": "Használható mondatok nehéz helyzetekre.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Válaszd a konkrét és együttműködő megfogalmazást."
-      },
-      "digital": {
-        "title": "Digitális viselkedés",
-        "description": "Chat, e-mail és online jelenlét a munkahelyen.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Találd meg a megfelelő csatornát és hangnemet."
-      },
-      "glossary": {
-        "title": "Munkahelyi fogalomtár",
-        "description": "12 kifejezés, amit jó ismerni az első naptól.",
-        "quizTitle": "Ellenőrző kvíz",
-        "quizDescription": "Használd magabiztosan az alapfogalmakat."
-      }
-    }
-  },
-  "breathing": {
-    "ready": "KÉSZEN ÁLLSZ?",
-    "start": "Kezdés",
-    "stop": "Leállítás",
-    "inhale": "BELÉGZÉS",
-    "hold": "TARTÁS",
-    "exhale": "KILÉGZÉS",
-    "techniques": [
-      {
-        "name": "Dobozlégzés",
-        "inhale": 4,
-        "hold": 4,
-        "exhale": 4,
-        "ratio": "4–4–4",
-        "description": "Stabil, háromrészes ritmus: belégzés, bent tartás és kilégzés ugyanannyi ideig."
-      },
-      {
-        "name": "Megnyugtató",
-        "inhale": 4,
-        "hold": 7,
-        "exhale": 8,
-        "ratio": "4–7–8",
-        "description": "A hosszú kilégzés segíthet lelassítani a tested stresszreakcióját és megérkezni a jelenbe."
-      },
-      {
-        "name": "Egyensúlyozó",
-        "inhale": 5,
-        "hold": 0,
-        "exhale": 5,
-        "ratio": "5–5",
-        "description": "Egyszerű, egyenletes ritmus bent tartás nélkül: öt másodperc belégzés, öt másodperc kilégzés."
-      }
-    ]
   },
   "contentTypeLabels": {
     "story": "Oldalirányú történet",
@@ -501,68 +235,7 @@
     "quizFinishText": "Az eredményed az aktuális kitöltés alapján látható lent.",
     "selected": "Kiválasztva",
     "flipAria": "Kártya megfordítása",
-    "situation": "Helyzet",
-    "phraseThink": "Gondold végig, hogyan fogalmaznád meg professzionálisan.",
-    "tapForSolution": "Érintsd meg a megoldásért",
-    "youCanSay": "Ezt mondhatod",
-    "digitalThink": "Gondold végig, mi lenne a tudatos digitális viselkedés ebben a témában.",
-    "tapForGuideline": "Érintsd meg az irányelvért",
-    "consciousDirection": "Tudatos irány",
     "cardAria": "Kártya {current} / {total}",
-    "monthSuffix": "hónap",
-    "thoughtLabel": "{index}. gondolat",
-    "thoughtPlaceholder": "Írj ide egy rövid gondolatot…",
-    "saveThoughts": "Gondolatok mentése",
-    "guidedAudioEyebrow": "Vezetett hanganyag · ~{duration}",
-    "audioPositionAria": "Lejátszási pozíció",
-    "restartAria": "Újraindítás",
-    "volume": "Hangerő",
-    "exerciseFallback": "Gyakorlat",
-    "carry": "Vidd magaddal!",
-    "preboardingTitle": "Preboarding túlélőkészlet",
-    "preboardingDescription": "12 gyakori kérdés az első munkanap előtt.",
-    "survivalTitle": "Pályakezdő mentőmellény",
-    "survivalDescription": "12 hónap – 12 kapaszkodó az első munkaévhez.",
-    "marketFactsTitle": "Tudtad-e?",
-    "marketFactsDescription": "Munkaerőpiaci érdekességek röviden, egy kártyán egy gondolat.",
-    "marketFactsBack": "Érdekesség",
-    "workplaceSituationsTitle": "Munkahelyi helyzetek",
-    "workplaceSituationsDescription": "Nézd végig bátran az összes lehetőséget.",
-    "tip": "Tipp",
-    "meaning": "Mit jelent?",
-    "interviewQuestion": "Interjúkérdés",
-    "sampleAnswer": "Minta válasz",
-    "whatToDo": "Mit tegyél?",
-    "essence": "Lényeg",
-    "goodToKnow": "Jó tudni",
-    "youngPerspective": "Fiatal nézőpont",
-    "employerPerspective": "Munkaadói nézőpont",
-    "genZExpectation": "Z-generáció elvárása",
-    "employerExpectation": "Munkaadó elvárása",
-    "topic": "Téma",
-    "message": "Üzenet",
-    "amateur": "Amatőr",
-    "professional": "Profi",
-    "whatMeans": "Mit jelent?",
-    "whenYouMeet": "Mikor találkozol vele?",
-    "cvFlipAria": "CV-kártya megfordítása",
-    "cvDont": "Mit ne írj!",
-    "cvDo": "Mit írj!",
-    "cvTapReplacement": "Érintsd meg: mit írj helyette?",
-    "cvGenFlipAria": "Z generációs CV-tipp megfordítása",
-    "dontDo": "Ne tedd!",
-    "doIt": "Tedd!",
-    "cvTapDoInstead": "Érintsd meg: mit tegyél helyette?",
-    "cvTipsTitle": "Z generációs CV-tippek",
-    "quickRule": "Gyors szabály",
-    "whatWrite": "Mit írj?",
-    "whatNotWrite": "Mit ne írj?",
-    "bodyScanDoneTitle": "Kész a pásztázás!",
-    "bodyScanDoneText": "Vidd magaddal ezt a nyugodtabb testi érzetet a nap hátralévő részébe.",
-    "again": "Újra",
-    "bodyScanIntro": "Végigpásztázod a tested, zónáról zónára oldva a feszültséget. Minden állomás 20 másodpercig tart, és automatikusan lép tovább.",
-    "letsStart": "Kezdjük",
-    "redFlagFallback": "Vészjel {index}",
     "and": "és"
   },
   "startupError": {

@@ -161,6 +161,122 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Mindfulness technikák",
+        "description": "Rövid gyakorlatok stressz, szorongás és mentális túlterheltség esetére."
+      },
+      "labels": {
+        "thoughtLabel": "{index}. gondolat",
+        "thoughtPlaceholder": "Írj ide egy rövid gondolatot…",
+        "saveThoughts": "Gondolatok mentése",
+        "guidedAudioEyebrow": "Vezetett hanganyag · ~{duration}",
+        "audioPositionAria": "Lejátszási pozíció",
+        "restartAria": "Újraindítás",
+        "volume": "Hangerő",
+        "exerciseFallback": "Gyakorlat",
+        "bodyScanDoneTitle": "Kész a pásztázás!",
+        "bodyScanDoneText": "Vidd magaddal ezt a nyugodtabb testi érzetet a nap hátralévő részébe.",
+        "again": "Újra",
+        "bodyScanIntro": "Végigpásztázod a tested, zónáról zónára oldva a feszültséget. Minden állomás 20 másodpercig tart, és automatikusan lép tovább.",
+        "letsStart": "Kezdjük",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      }
+    },
+    "mindfulnessUi": {
+      "groundingSteps": [
+        {
+          "count": 5,
+          "sense": "látsz",
+          "icon": "◉",
+          "prompt": "Nevezz meg 5 dolgot, amit most látsz a körülötted lévő térben."
+        },
+        {
+          "count": 4,
+          "sense": "érzel",
+          "icon": "✋",
+          "prompt": "Nevezz meg 4 dolgot, amit fizikailag érzel: például a széket a hátadon vagy a levegőt a bőrödön."
+        },
+        {
+          "count": 3,
+          "sense": "hallasz",
+          "icon": "◖",
+          "prompt": "Nevezz meg 3 hangot, amit most hallasz: forgalmat, légkondicionálót vagy a saját légzésedet."
+        },
+        {
+          "count": 2,
+          "sense": "szagolsz",
+          "icon": "≈",
+          "prompt": "Nevezz meg 2 illatot, amit most érzékelsz."
+        },
+        {
+          "count": 1,
+          "sense": "ízlelsz",
+          "icon": "●",
+          "prompt": "Nevezz meg 1 ízt, amit a szádban érzel."
+        }
+      ],
+      "bodySteps": [
+        {
+          "zone": "Lábfejek",
+          "cue": "Érezd a talajt a lábad alatt. Engedd el a feszültséget a lábujjaidban."
+        },
+        {
+          "zone": "Lábszár",
+          "cue": "Figyeld a vádlidat és a sípcsontod. Van-e benne feszültség? Engedd lazulni."
+        },
+        {
+          "zone": "Comb és csípő",
+          "cue": "Érezd, hogyan támaszkodik a tested a széken vagy a talajon. Engedd ellazulni."
+        },
+        {
+          "zone": "Has és mellkas",
+          "cue": "Figyeld a légzésedet. Minden kilégzésnél engedd mélyebbre süllyedni a relaxációt."
+        },
+        {
+          "zone": "Hát és váll",
+          "cue": "Sok stresszt hordozunk a vállunkban. Engedd le, lélegezz és lazulj el."
+        },
+        {
+          "zone": "Nyak és állkapocs",
+          "cue": "Engedd le az állkapcsodat. Figyeld meg, mennyire volt összeszorítva."
+        },
+        {
+          "zone": "Arc és homlok",
+          "cue": "Simítsd el a homlokod. Engedd lazulni a szemed körüli izmokat."
+        },
+        {
+          "zone": "Teljes test",
+          "cue": "Figyelj az egész testedre. Nyugodt vagy. Minden izmod ellazult."
+        }
+      ],
+      "guidedAudio": {
+        "3": {
+          "asset": "safePlace",
+          "icon": "☀",
+          "duration": "2:09",
+          "intro": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
+          "done": "Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
+        },
+        "4": {
+          "asset": "goldBubble",
+          "icon": "✦",
+          "duration": "2:20",
+          "intro": "Vezetett vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
+          "done": "Te döntöd el, mit engedsz közel magadhoz."
+        },
+        "5": {
+          "asset": "backpack",
+          "icon": "▱",
+          "duration": "2:35",
+          "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
+          "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
+        }
+      },
+      "bodyScanSeconds": 20
+    }
   }
 }

@@ -54,6 +54,19 @@
       }
     ],
     "jobHuntClosing": "Az álláskeresés nem szerencse kérdése, hanem tudatos felkészülésé. Minél több eszközt használsz és minél tudatosabban készülsz, annál közelebb kerülsz a számodra megfelelő munkahelyhe",
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Állásvadászat Z módra",
+        "description": "12 rövid tipp, hogy tudatosabban és magabiztosabban keress állást."
+      },
+      "labels": {
+        "tip": "Tipp",
+        "meaning": "Mit jelent?",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      }
+    }
   }
 }

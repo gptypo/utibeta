@@ -53,6 +53,13 @@
         "answer": "Nem az, hogy az első naptól mindent tudj. Légy kíváncsi, megbízható, tanulj a helyzetekből, merj kérdezni és mutasd meg, hogy szeretnél fejlődni."
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Preboarding túlélőkészlet",
+        "description": "12 gyakori kérdés az első munkanap előtt."
+      }
+    }
   }
 }

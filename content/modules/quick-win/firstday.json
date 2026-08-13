@@ -295,6 +295,17 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Első napi ellenőrzőlista",
+        "description": "Készülj fel nyugodtan, egy lépésben egyszerre."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Gyakorold a nyugodt, felkészült reakciókat."
+      }
+    }
   }
 }

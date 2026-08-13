@@ -54,6 +54,18 @@
       }
     ],
     "marketFactsClosing": "A munkaerőpiac folyamatosan változik. Minél többet tudsz róla, annál magabiztosabban tudsz dönteni a saját karrieredről.",
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "labels": {
+        "marketFactsBack": "Érdekesség",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      },
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Tudtad-e?",
+        "description": "Munkaerőpiaci érdekességek röviden, egy kártyán egy gondolat."
+      }
+    }
   }
 }

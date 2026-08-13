@@ -295,6 +295,22 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Digitális viselkedés",
+        "description": "Chat, e-mail és online jelenlét a munkahelyen."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Találd meg a megfelelő csatornát és hangnemet."
+      },
+      "labels": {
+        "digitalThink": "Gondold végig, mi lenne a tudatos digitális viselkedés ebben a témában.",
+        "tapForGuideline": "Érintsd meg az irányelvért",
+        "consciousDirection": "Tudatos irány"
+      }
+    }
   }
 }

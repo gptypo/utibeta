@@ -46,5 +46,16 @@
       "file": "quiz.json"
     }
   ],
-  "heroIconMode": "auto"
+  "heroIconMode": "auto",
+  "page": {
+    "eyebrow": "Gyakorlati segédlet",
+    "experience": {
+      "eyebrow": "Mire számíthatsz?",
+      "popupTitle": "QUIT & GO",
+      "cardText": "Minden kihívás egy lehetőség a fejlődésre. Kis lépések, gyors eredmények.",
+      "intro": "Ebben a modulban olyan tippeket és gyakorlati útmutatókat találsz, amelyek segítenek eligazodni a munkahelyi mindennapokban. A cél, hogy magabiztosabban kezeld az első munkahelyed kihívásait, könnyebben beilleszkedj, és sikeresen elindulj szakmai utadon.",
+      "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz.",
+      "closingEyebrow": "Vidd magaddal!"
+    }
+  }
 }

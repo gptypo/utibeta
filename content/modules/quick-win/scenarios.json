@@ -257,6 +257,12 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Minden válasz tanít valamit a helyzetről."
+      }
+    }
   }
 }

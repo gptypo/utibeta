@@ -41,5 +41,16 @@
       "file": "glossary.json"
     }
   ],
-  "heroIconMode": "auto"
+  "heroIconMode": "auto",
+  "page": {
+    "eyebrow": "Gyakorlati segédlet",
+    "experience": {
+      "eyebrow": "Mire számíthatsz?",
+      "popupTitle": "WIN-WIN",
+      "cardText": "Értsd meg a másik oldalt is! Úgy működj, hogy mindenki nyerjen.",
+      "intro": "Ebben a modulban megismerheted a munkavállalói és munkáltatói nézőpontokat, valamint a különböző generációk együttműködésének sajátosságait. Olyan kommunikációs és együttműködési eszközöket kapsz, amelyek segítenek magabiztosan mozogni a munka világában és a digitális térben egyaránt. Cél, hogy megértsd a munkahelyi kapcsolatok működését, tudatosabban kommunikálj, és hatékonyan működj együtt másokkal a közös sikerek érdekében.",
+      "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait.",
+      "closingEyebrow": "Vidd magaddal!"
+    }
+  }
 }

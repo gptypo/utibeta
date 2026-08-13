@@ -319,7 +319,22 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Munkajogi alapok",
+        "description": "A legfontosabb tudnivalók közérthetően."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Mit érdemes tenni aláírás és döntés előtt?"
+      },
+      "labels": {
+        "essence": "Lényeg",
+        "goodToKnow": "Jó tudni"
+      }
+    }
   },
   "expertReview": {
     "version": "7.1",

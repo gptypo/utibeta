@@ -34,8 +34,7 @@ components:
     label: Bővíthető tartalom
     list: true
     blockKey: type
-    description: Tetszőleges számú új tartalomblokk adható az aloldal meglévő tartalma után. A blokkok sorrendje
-      átrendezhető.
+    description: Tetszőleges számú új tartalomblokk adható az aloldal meglévő tartalma után. A blokkok sorrendje átrendezhető.
     blocks:
     - name: text
       label: Szöveg
@@ -248,7 +247,7 @@ components:
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
 content:
 - name: content_ui_json
-  label: Általános feliratok és oldalszövegek
+  label: Alkalmazásszintű UI és közös gombok
   type: file
   path: content/ui.json
   format: json
@@ -377,74 +376,10 @@ content:
     - name: menuPrivacySymbol
       label: Menu Privacy Symbol
       type: string
-  - name: moduleExperience
-    label: Module experience
-    type: object
-    fields:
-    - name: onmagam
-      label: Onmagam
-      type: object
-      fields:
-      - name: popupTitle
-        label: Popup title
-        type: string
-      - name: cardText
-        label: Card text
-        type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: closing
-        label: Closing
-        type: text
-    - name: helyzeteim
-      label: Helyzeteim
-      type: object
-      fields:
-      - name: popupTitle
-        label: Popup title
-        type: string
-      - name: cardText
-        label: Card text
-        type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: closing
-        label: Closing
-        type: string
-    - name: kapcsolataim
-      label: Kapcsolataim
-      type: object
-      fields:
-      - name: popupTitle
-        label: Popup title
-        type: string
-      - name: cardText
-        label: Card text
-        type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: closing
-        label: Closing
-        type: string
   - name: common
-    label: Common
+    label: Közös gombok és navigációs feliratok
     type: object
     fields:
-    - name: guideLabel
-      label: Guide label
-      type: string
-    - name: practicalGuide
-      label: Practical guide
-      type: string
-    - name: carry
-      label: Carry
-      type: string
-    - name: closingThought
-      label: Closing thought
-      type: string
     - name: open
       label: Open
       type: string
@@ -453,9 +388,6 @@ content:
       type: string
     - name: continue
       label: Continue
-      type: string
-    - name: moduleIntroEyebrow
-      label: Module intro eyebrow
       type: string
     - name: moduleIntroButton
       label: Module intro button
@@ -469,6 +401,7 @@ content:
     - name: topicNavAria
       label: Topic nav aria
       type: string
+    description: Csak valóban több oldalon azonos vezérlőszövegek. Az oldalspecifikus szövegek az adott oldal JSON-jában találhatók.
   - name: home
     label: Home
     type: object
@@ -605,144 +538,6 @@ content:
     - name: quizzes
       label: Quizzes
       type: string
-  - name: bonus
-    label: Bonus
-    type: object
-    fields:
-    - name: materials
-      label: Materials
-      type: object
-      fields:
-      - name: eyebrow
-        label: Eyebrow
-        type: string
-      - name: title
-        label: Cím
-        type: string
-      - name: description
-        label: Leírás
-        type: string
-    - name: videos
-      label: Videos
-      type: object
-      fields:
-      - name: eyebrow
-        label: Eyebrow
-        type: string
-      - name: title
-        label: Cím
-        type: string
-      - name: description
-        label: Leírás
-        type: string
-    - name: available
-      label: Available
-      type: string
-    - name: soon
-      label: Soon
-      type: string
-  - name: mindfulness
-    label: Mindfulness
-    type: object
-    fields:
-    - name: groundingSteps
-      label: Grounding steps
-      type: object
-      list:
-        collapsible:
-          collapsed: true
-          summary: 'Elem #{index}'
-      fields:
-      - name: count
-        label: Count
-        type: number
-      - name: sense
-        label: Sense
-        type: string
-      - name: icon
-        label: Ikon
-        type: string
-      - name: prompt
-        label: Prompt
-        type: string
-    - name: bodySteps
-      label: Body steps
-      type: object
-      list:
-        collapsible:
-          collapsed: true
-          summary: 'Elem #{index}'
-      fields:
-      - name: zone
-        label: Zone
-        type: string
-      - name: cue
-        label: Cue
-        type: string
-    - name: guidedAudio
-      label: Guided audio
-      type: object
-      fields:
-      - name: '3'
-        label: '3'
-        type: object
-        fields:
-        - name: asset
-          label: Asset
-          type: string
-        - name: icon
-          label: Ikon
-          type: string
-        - name: duration
-          label: Duration
-          type: string
-        - name: intro
-          label: Intro
-          type: string
-        - name: done
-          label: Done
-          type: string
-      - name: '4'
-        label: '4'
-        type: object
-        fields:
-        - name: asset
-          label: Asset
-          type: string
-        - name: icon
-          label: Ikon
-          type: string
-        - name: duration
-          label: Duration
-          type: string
-        - name: intro
-          label: Intro
-          type: string
-        - name: done
-          label: Done
-          type: string
-      - name: '5'
-        label: '5'
-        type: object
-        fields:
-        - name: asset
-          label: Asset
-          type: string
-        - name: icon
-          label: Ikon
-          type: string
-        - name: duration
-          label: Duration
-          type: string
-        - name: intro
-          label: Intro
-          type: string
-        - name: done
-          label: Done
-          type: string
-    - name: bodyScanSeconds
-      label: Body Scan Seconds
-      type: number
   - name: pwa
     label: Pwa
     type: object
@@ -956,9 +751,6 @@ content:
       - name: carry
         label: Carry
         type: string
-      - name: closing
-        label: Closing
-        type: string
     - name: competency
       label: Competency
       type: object
@@ -1017,308 +809,6 @@ content:
       - name: stopped
         label: Stopped
         type: string
-  - name: sectionCopy
-    label: Section copy
-    type: object
-    fields:
-    - name: onmagam
-      label: Onmagam
-      type: object
-      fields:
-      - name: breathing
-        label: Breathing
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: mindfulness
-        label: Mindfulness
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: careers
-        label: Careers
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: text
-      - name: quiz
-        label: Quiz
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-    - name: helyzeteim
-      label: Helyzeteim
-      type: object
-      fields:
-      - name: world
-        label: World
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: jobhunt
-        label: Jobhunt
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: interview
-        label: Interview
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: cv
-        label: Cv
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: linkedin
-        label: Linkedin
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: firstday
-        label: Firstday
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: redflags
-        label: Redflags
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: legal
-        label: Legal
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: scenarios
-        label: Scenarios
-        type: object
-        fields:
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-    - name: kapcsolataim
-      label: Kapcsolataim
-      type: object
-      fields:
-      - name: twosides
-        label: Twosides
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: generations
-        label: Generations
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-      - name: communication
-        label: Communication
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: phrases
-        label: Phrases
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: digital
-        label: Digital
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-      - name: glossary
-        label: Glossary
-        type: object
-        fields:
-        - name: title
-          label: Cím
-          type: string
-        - name: description
-          label: Leírás
-          type: string
-        - name: quizTitle
-          label: Quiz title
-          type: string
-        - name: quizDescription
-          label: Quiz description
-          type: string
-  - name: breathing
-    label: Breathing
-    type: object
-    fields:
-    - name: ready
-      label: Ready
-      type: string
-    - name: start
-      label: Start
-      type: string
-    - name: stop
-      label: Stop
-      type: string
-    - name: inhale
-      label: Inhale
-      type: string
-    - name: hold
-      label: Hold
-      type: string
-    - name: exhale
-      label: Exhale
-      type: string
-    - name: techniques
-      label: Légzéstechnikák
-      type: object
-      list:
-        collapsible:
-          collapsed: true
-          summary: '{name}'
-      fields:
-      - name: name
-        label: Név
-        type: string
-      - name: inhale
-        label: Belégzés (mp)
-        type: number
-      - name: hold
-        label: Bent tartás (mp)
-        type: number
-      - name: exhale
-        label: Kilégzés (mp)
-        type: number
-      - name: ratio
-        label: Ritmus
-        type: string
-      - name: description
-        label: Leírás
-        type: text
   - name: contentTypeLabels
     label: Content type labels
     type: object
@@ -1336,7 +826,7 @@ content:
       label: Quiz
       type: string
   - name: runtime
-    label: Minden egyéb felirat
+    label: Közös komponens- és vezérlőfeliratok
     type: object
     fields:
     - name: progressAria
@@ -1393,191 +883,8 @@ content:
     - name: flipAria
       label: flipAria
       type: string
-    - name: situation
-      label: situation
-      type: string
-    - name: phraseThink
-      label: phraseThink
-      type: string
-    - name: tapForSolution
-      label: tapForSolution
-      type: string
-    - name: youCanSay
-      label: youCanSay
-      type: string
-    - name: digitalThink
-      label: digitalThink
-      type: string
-    - name: tapForGuideline
-      label: tapForGuideline
-      type: string
-    - name: consciousDirection
-      label: consciousDirection
-      type: string
     - name: cardAria
       label: cardAria
-      type: string
-    - name: monthSuffix
-      label: monthSuffix
-      type: string
-    - name: thoughtLabel
-      label: thoughtLabel
-      type: string
-    - name: thoughtPlaceholder
-      label: thoughtPlaceholder
-      type: string
-    - name: saveThoughts
-      label: saveThoughts
-      type: string
-    - name: guidedAudioEyebrow
-      label: guidedAudioEyebrow
-      type: string
-    - name: audioPositionAria
-      label: audioPositionAria
-      type: string
-    - name: restartAria
-      label: restartAria
-      type: string
-    - name: volume
-      label: volume
-      type: string
-    - name: exerciseFallback
-      label: exerciseFallback
-      type: string
-    - name: carry
-      label: carry
-      type: string
-    - name: preboardingTitle
-      label: preboardingTitle
-      type: string
-    - name: preboardingDescription
-      label: preboardingDescription
-      type: string
-    - name: survivalTitle
-      label: survivalTitle
-      type: string
-    - name: survivalDescription
-      label: survivalDescription
-      type: string
-    - name: marketFactsTitle
-      label: marketFactsTitle
-      type: string
-    - name: marketFactsDescription
-      label: marketFactsDescription
-      type: string
-    - name: marketFactsBack
-      label: marketFactsBack
-      type: string
-    - name: workplaceSituationsTitle
-      label: workplaceSituationsTitle
-      type: string
-    - name: workplaceSituationsDescription
-      label: workplaceSituationsDescription
-      type: string
-    - name: tip
-      label: tip
-      type: string
-    - name: meaning
-      label: meaning
-      type: string
-    - name: interviewQuestion
-      label: interviewQuestion
-      type: string
-    - name: sampleAnswer
-      label: sampleAnswer
-      type: string
-    - name: whatToDo
-      label: whatToDo
-      type: string
-    - name: essence
-      label: essence
-      type: string
-    - name: goodToKnow
-      label: goodToKnow
-      type: string
-    - name: youngPerspective
-      label: youngPerspective
-      type: string
-    - name: employerPerspective
-      label: employerPerspective
-      type: string
-    - name: genZExpectation
-      label: genZExpectation
-      type: string
-    - name: employerExpectation
-      label: employerExpectation
-      type: string
-    - name: topic
-      label: topic
-      type: string
-    - name: message
-      label: message
-      type: string
-    - name: amateur
-      label: amateur
-      type: string
-    - name: professional
-      label: professional
-      type: string
-    - name: whatMeans
-      label: whatMeans
-      type: string
-    - name: whenYouMeet
-      label: whenYouMeet
-      type: string
-    - name: cvFlipAria
-      label: cvFlipAria
-      type: string
-    - name: cvDont
-      label: cvDont
-      type: string
-    - name: cvDo
-      label: cvDo
-      type: string
-    - name: cvTapReplacement
-      label: cvTapReplacement
-      type: string
-    - name: cvGenFlipAria
-      label: cvGenFlipAria
-      type: string
-    - name: dontDo
-      label: dontDo
-      type: string
-    - name: doIt
-      label: doIt
-      type: string
-    - name: cvTapDoInstead
-      label: cvTapDoInstead
-      type: string
-    - name: cvTipsTitle
-      label: cvTipsTitle
-      type: string
-    - name: quickRule
-      label: quickRule
-      type: string
-    - name: whatWrite
-      label: whatWrite
-      type: string
-    - name: whatNotWrite
-      label: whatNotWrite
-      type: string
-    - name: bodyScanDoneTitle
-      label: bodyScanDoneTitle
-      type: string
-    - name: bodyScanDoneText
-      label: bodyScanDoneText
-      type: string
-    - name: again
-      label: again
-      type: string
-    - name: bodyScanIntro
-      label: bodyScanIntro
-      type: text
-    - name: letsStart
-      label: letsStart
-      type: string
-    - name: redFlagFallback
-      label: redFlagFallback
       type: string
     - name: and
       label: És kötőszó
@@ -1614,6 +921,8 @@ content:
   operations:
     delete: false
     rename: false
+  description: Globális navigáció, főoldal, gombok és valóban közös komponensfeliratok. Az aloldalak saját szövegei az adott
+    aloldal JSON-jában vannak.
 - name: content_offline_json
   label: Offline oldal
   type: file
@@ -1982,6 +1291,13 @@ content:
   - name: time
     label: Időtartam
     type: number
+  - name: page
+    label: Modul saját megjelenő szövegei
+    type: object
+    fields:
+    - name: eyebrow
+      label: Modul felső címkéje
+      type: string
   - name: sections
     label: Aloldalak
     type: object
@@ -2002,8 +1318,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
-      és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -2050,6 +1366,35 @@ content:
   - name: time
     label: Időtartam
     type: number
+  - name: page
+    label: Modul saját megjelenő szövegei
+    type: object
+    fields:
+    - name: eyebrow
+      label: Modul felső címkéje
+      type: string
+    - name: experience
+      label: Modul bemutatkozás és zárás
+      type: object
+      fields:
+      - name: eyebrow
+        label: Popup felső címke
+        type: string
+      - name: popupTitle
+        label: Popup cím
+        type: string
+      - name: cardText
+        label: Főoldali kártyaszöveg
+        type: text
+      - name: intro
+        label: Bemutatkozó szöveg
+        type: text
+      - name: closingEyebrow
+        label: Záró címke
+        type: string
+      - name: closing
+        label: Záró szöveg
+        type: text
   - name: sections
     label: Aloldalak
     type: object
@@ -2070,8 +1415,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
-      és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -2118,6 +1463,35 @@ content:
   - name: time
     label: Időtartam
     type: number
+  - name: page
+    label: Modul saját megjelenő szövegei
+    type: object
+    fields:
+    - name: eyebrow
+      label: Modul felső címkéje
+      type: string
+    - name: experience
+      label: Modul bemutatkozás és zárás
+      type: object
+      fields:
+      - name: eyebrow
+        label: Popup felső címke
+        type: string
+      - name: popupTitle
+        label: Popup cím
+        type: string
+      - name: cardText
+        label: Főoldali kártyaszöveg
+        type: text
+      - name: intro
+        label: Bemutatkozó szöveg
+        type: text
+      - name: closingEyebrow
+        label: Záró címke
+        type: string
+      - name: closing
+        label: Záró szöveg
+        type: text
   - name: sections
     label: Aloldalak
     type: object
@@ -2138,8 +1512,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
-      és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -2186,6 +1560,35 @@ content:
   - name: time
     label: Időtartam
     type: number
+  - name: page
+    label: Modul saját megjelenő szövegei
+    type: object
+    fields:
+    - name: eyebrow
+      label: Modul felső címkéje
+      type: string
+    - name: experience
+      label: Modul bemutatkozás és zárás
+      type: object
+      fields:
+      - name: eyebrow
+        label: Popup felső címke
+        type: string
+      - name: popupTitle
+        label: Popup cím
+        type: string
+      - name: cardText
+        label: Főoldali kártyaszöveg
+        type: text
+      - name: intro
+        label: Bemutatkozó szöveg
+        type: text
+      - name: closingEyebrow
+        label: Záró címke
+        type: string
+      - name: closing
+        label: Záró szöveg
+        type: text
   - name: sections
     label: Aloldalak
     type: object
@@ -2206,8 +1609,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető
-      és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: heroIconMode
     label: Hero icon mode
     type: string
@@ -2232,9 +1635,38 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: available
+          label: Elérhető státusz
+          type: string
+        - name: soon
+          label: Hamarosan státusz
+          type: string
     - name: bonusMaterials
       label: Bonus materials
       type: object
@@ -2287,9 +1719,38 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: available
+          label: Elérhető státusz
+          type: string
+        - name: soon
+          label: Hamarosan státusz
+          type: string
     - name: videoStories
       label: Video stories
       type: object
@@ -2339,9 +1800,68 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: cvFlipAria
+          label: cvFlipAria
+          type: string
+        - name: cvDont
+          label: cvDont
+          type: string
+        - name: cvDo
+          label: cvDo
+          type: string
+        - name: cvTapReplacement
+          label: cvTapReplacement
+          type: string
+        - name: cvGenFlipAria
+          label: cvGenFlipAria
+          type: string
+        - name: dontDo
+          label: dontDo
+          type: string
+        - name: doIt
+          label: doIt
+          type: string
+        - name: cvTapDoInstead
+          label: cvTapDoInstead
+          type: string
+        - name: cvTipsTitle
+          label: cvTipsTitle
+          type: string
+        - name: quickRule
+          label: quickRule
+          type: string
+        - name: whatWrite
+          label: whatWrite
+          type: string
+        - name: whatNotWrite
+          label: whatNotWrite
+          type: string
     - name: cvCards
       label: Cv cards
       type: object
@@ -2408,9 +1928,37 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
     - name: firstDayChecklist
       label: First day checklist
       type: object
@@ -2479,9 +2027,44 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: interviewQuestion
+          label: Interjúkérdés címke
+          type: string
+        - name: sampleAnswer
+          label: Mintaválasz címke
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: interviewCards
       label: Interview cards
       type: object
@@ -2531,9 +2114,44 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: tip
+          label: Tipp címke
+          type: string
+        - name: meaning
+          label: Jelentés címke
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: jobHuntCards
       label: Job hunt cards
       type: object
@@ -2576,9 +2194,48 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: essence
+          label: Lényeg címke
+          type: string
+        - name: goodToKnow
+          label: Jó tudni címke
+          type: string
     - name: legalBasics
       label: Legal basics
       type: object
@@ -2669,9 +2326,44 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: tip
+          label: Tipp címke
+          type: string
+        - name: whatToDo
+          label: Teendő címke
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: linkedinCards
       label: Linkedin cards
       type: object
@@ -2721,9 +2413,45 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: redFlagFallback
+          label: redFlagFallback
+          type: string
     - name: redFlags
       label: Red flags
       type: object
@@ -2808,9 +2536,24 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
     - name: helyzeteiScenarios
       label: Helyzetei scenarios
       type: object
@@ -2867,9 +2610,47 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        fields:
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: workWorldCards
       label: Work world cards
       type: object
@@ -2947,9 +2728,75 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+    - name: breathing
+      label: Légzéstechnika oldal tartalma
+      type: object
+      fields:
+      - name: ready
+        label: Ready
+        type: string
+      - name: start
+        label: Start
+        type: string
+      - name: stop
+        label: Stop
+        type: string
+      - name: inhale
+        label: Inhale
+        type: string
+      - name: hold
+        label: Hold
+        type: string
+      - name: exhale
+        label: Exhale
+        type: string
+      - name: techniques
+        label: Légzéstechnikák
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{name}'
+        fields:
+        - name: name
+          label: Név
+          type: string
+        - name: inhale
+          label: Belégzés (mp)
+          type: number
+        - name: hold
+          label: Bent tartás (mp)
+          type: number
+        - name: exhale
+          label: Kilégzés (mp)
+          type: number
+        - name: ratio
+          label: Ritmus
+          type: string
+        - name: description
+          label: Leírás
+          type: text
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2975,9 +2822,27 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
     - name: blueCollarExamples
       label: Blue collar examples
       type: object
@@ -3045,9 +2910,40 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        fields:
+        - name: marketFactsBack
+          label: marketFactsBack
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: marketFacts
       label: Market facts
       type: object
@@ -3090,9 +2986,179 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: thoughtLabel
+          label: thoughtLabel
+          type: string
+        - name: thoughtPlaceholder
+          label: thoughtPlaceholder
+          type: string
+        - name: saveThoughts
+          label: saveThoughts
+          type: string
+        - name: guidedAudioEyebrow
+          label: guidedAudioEyebrow
+          type: string
+        - name: audioPositionAria
+          label: audioPositionAria
+          type: string
+        - name: restartAria
+          label: restartAria
+          type: string
+        - name: volume
+          label: volume
+          type: string
+        - name: exerciseFallback
+          label: exerciseFallback
+          type: string
+        - name: bodyScanDoneTitle
+          label: bodyScanDoneTitle
+          type: string
+        - name: bodyScanDoneText
+          label: bodyScanDoneText
+          type: string
+        - name: again
+          label: again
+          type: string
+        - name: bodyScanIntro
+          label: bodyScanIntro
+          type: text
+        - name: letsStart
+          label: letsStart
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
+    - name: mindfulnessUi
+      label: Mindfulness oldal kiegészítő tartalma
+      type: object
+      fields:
+      - name: groundingSteps
+        label: Grounding steps
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: count
+          label: Count
+          type: number
+        - name: sense
+          label: Sense
+          type: string
+        - name: icon
+          label: Ikon
+          type: string
+        - name: prompt
+          label: Prompt
+          type: string
+      - name: bodySteps
+        label: Body steps
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Elem #{index}'
+        fields:
+        - name: zone
+          label: Zone
+          type: string
+        - name: cue
+          label: Cue
+          type: string
+      - name: guidedAudio
+        label: Guided audio
+        type: object
+        fields:
+        - name: '3'
+          label: '3'
+          type: object
+          fields:
+          - name: asset
+            label: Asset
+            type: string
+          - name: icon
+            label: Ikon
+            type: string
+          - name: duration
+            label: Duration
+            type: string
+          - name: intro
+            label: Intro
+            type: string
+          - name: done
+            label: Done
+            type: string
+        - name: '4'
+          label: '4'
+          type: object
+          fields:
+          - name: asset
+            label: Asset
+            type: string
+          - name: icon
+            label: Ikon
+            type: string
+          - name: duration
+            label: Duration
+            type: string
+          - name: intro
+            label: Intro
+            type: string
+          - name: done
+            label: Done
+            type: string
+        - name: '5'
+          label: '5'
+          type: object
+          fields:
+          - name: asset
+            label: Asset
+            type: string
+          - name: icon
+            label: Ikon
+            type: string
+          - name: duration
+            label: Duration
+            type: string
+          - name: intro
+            label: Intro
+            type: string
+          - name: done
+            label: Done
+            type: string
+      - name: bodyScanSeconds
+        label: Body Scan Seconds
+        type: number
     - name: mindfulnessExercises
       label: Mindfulness exercises
       type: object
@@ -3158,9 +3224,27 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
     - name: preboardingData
       label: Preboarding data
       type: object
@@ -3200,9 +3284,38 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: workplaceSituationsTitle
+          label: Főcím
+          type: string
+        - name: workplaceSituationsDescription
+          label: Bevezető
+          type: string
     - name: onmagamQuizItems
       label: Onmagam quiz items
       type: object
@@ -3277,9 +3390,40 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        fields:
+        - name: monthSuffix
+          label: monthSuffix
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: survivalGuideData
       label: Survival guide data
       type: object
@@ -3325,9 +3469,48 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: amateur
+          label: Amatőr címke
+          type: string
+        - name: professional
+          label: Profi címke
+          type: string
     - name: communicationFlips
       label: Communication flips
       type: object
@@ -3398,9 +3581,51 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: digitalThink
+          label: digitalThink
+          type: string
+        - name: tapForGuideline
+          label: tapForGuideline
+          type: string
+        - name: consciousDirection
+          label: consciousDirection
+          type: string
     - name: digitalBehavior
       label: Digital behavior
       type: object
@@ -3468,9 +3693,44 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: topic
+          label: Téma címke
+          type: string
+        - name: message
+          label: Üzenet címke
+          type: string
+        - name: carry
+          label: Vidd magaddal címke
+          type: string
+        - name: closingLabel
+          label: Záró gondolat címke
+          type: string
     - name: generationCards
       label: Generation cards
       type: object
@@ -3520,9 +3780,48 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: whatMeans
+          label: Mit jelent? címke
+          type: string
+        - name: whenYouMeet
+          label: Mikor találkozol vele? címke
+          type: string
     - name: glossary
       label: Glossary
       type: object
@@ -3613,9 +3912,54 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: quiz
+        label: Kvíz fejléc
+        type: object
+        fields:
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: situation
+          label: situation
+          type: string
+        - name: phraseThink
+          label: phraseThink
+          type: string
+        - name: tapForSolution
+          label: tapForSolution
+          type: string
+        - name: youCanSay
+          label: youCanSay
+          type: string
     - name: proPhrases
       label: Pro phrases
       type: object
@@ -3683,9 +4027,44 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Tartalom
+    label: Az oldal teljes tartalma
     type: object
     fields:
+    - name: page
+      label: Oldalon látható fejléc és feliratok
+      type: object
+      description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
+      fields:
+      - name: header
+        label: Oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+        - name: description
+          label: Leírás
+          type: text
+      - name: labels
+        label: Oldal saját feliratai
+        type: object
+        description: Csak ezen az oldalon használt címkék és komponensszövegek.
+        fields:
+        - name: youngPerspective
+          label: Fiatal nézőpont címke
+          type: string
+        - name: employerPerspective
+          label: Munkaadói nézőpont címke
+          type: string
+        - name: genZExpectation
+          label: Z-generáció elvárása címke
+          type: string
+        - name: employerExpectation
+          label: Munkaadó elvárása címke
+          type: string
     - name: ketOldalData
       label: Ket oldal data
       type: object

@@ -101,6 +101,17 @@
         "status": "coming-soon"
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Galaxy Guide",
+        "description": "Gyakorlati anyagok, amikor gyors kapaszkodóra van szükséged."
+      },
+      "labels": {
+        "available": "Elérhető",
+        "soon": "Hamarosan"
+      }
+    }
   }
 }

@@ -56,5 +56,16 @@
       "file": "scenarios.json"
     }
   ],
-  "heroIconMode": "auto"
+  "heroIconMode": "auto",
+  "page": {
+    "eyebrow": "Gyakorlati segédlet",
+    "experience": {
+      "eyebrow": "Mire számíthatsz?",
+      "popupTitle": "QUICK WIN",
+      "cardText": "A probléma nem végleges kudarc, hanem egy új helyzet kezdete. Kis lépések, gyors eredmények.",
+      "intro": "Ebben a modulban olyan gyakorlati tippeket és útmutatókat találsz, amelyek segítenek eligazodni a munka világában, magabiztosabban állást keresni, felkészülni az állásinterjúkra, valamint tudatosan építeni szakmai jelenlétedet. Cél, hogy megismerd azokat a helyzeteket és figyelmeztető jeleket, amelyekre érdemes odafigyelned a karrierutad során, így felkészültebben és tudatosabban hozhatsz döntéseket.",
+      "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted.",
+      "closingEyebrow": "Vidd magaddal!"
+    }
+  }
 }

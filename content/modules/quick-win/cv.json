@@ -118,6 +118,27 @@
       "do": "Olyan információt, ami bizonyítja, hogy alkalmas vagy a pozícióra.",
       "dont": "Olyan információt, ami nem releváns, túl személyes vagy nem ad hozzá értéket a jelentkezésedhez."
     },
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Önéletrajz: mit írj, mit kerülj?",
+        "description": "Forgasd meg a kártyákat, és hasonlítsd össze a jó és kerülendő megoldásokat."
+      },
+      "labels": {
+        "cvFlipAria": "CV-kártya megfordítása",
+        "cvDont": "Mit ne írj!",
+        "cvDo": "Mit írj!",
+        "cvTapReplacement": "Érintsd meg: mit írj helyette?",
+        "cvGenFlipAria": "Z generációs CV-tipp megfordítása",
+        "dontDo": "Ne tedd!",
+        "doIt": "Tedd!",
+        "cvTapDoInstead": "Érintsd meg: mit tegyél helyette?",
+        "cvTipsTitle": "Z generációs CV-tippek",
+        "quickRule": "Gyors szabály",
+        "whatWrite": "Mit írj?",
+        "whatNotWrite": "Mit ne írj?"
+      }
+    }
   }
 }

@@ -57,6 +57,19 @@
       "front": "A generációk nem versenytársak",
       "back": "Minden generáció más tapasztalatot, tudást és nézőpontot hoz a munkahelyre. A valódi WIN-WIN akkor jön létre, amikor ezek az erősségek kiegészítik egymást."
     },
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Generációk együttműködése",
+        "description": "A különböző tapasztalatok és munkastílusok akkor működnek jól, ha kiegészítik egymást."
+      },
+      "labels": {
+        "topic": "Téma",
+        "message": "Üzenet",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      }
+    }
   }
 }

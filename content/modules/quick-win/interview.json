@@ -57,6 +57,19 @@
       "front": "Az interjú nem vizsga",
       "back": "Az interjú egy kétoldalú beszélgetés. Nemcsak a munkáltató választ munkatársat, hanem te is munkahelyet választasz. Légy felkészült, őszinte és magabiztos!"
     },
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Interjú kérdés–válasz",
+        "description": "Gyakori interjúkérdések és használható mintaválaszok."
+      },
+      "labels": {
+        "interviewQuestion": "Interjúkérdés",
+        "sampleAnswer": "Minta válasz",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      }
+    }
   }
 }

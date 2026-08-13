@@ -389,6 +389,13 @@
         ]
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Kékgalléros karrierutak",
+        "description": "Egy szakma nem végállomás, hanem fejlődési lehetőség. Érintsd meg a kompetenciákat a részletes leírásért és munkahelyi példáért."
+      }
+    }
   }
 }

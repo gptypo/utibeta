@@ -21,5 +21,8 @@
       "file": "videos.json"
     }
   ],
-  "heroIconMode": "auto"
+  "heroIconMode": "auto",
+  "page": {
+    "eyebrow": "Gyakorlati segédlet"
+  }
 }

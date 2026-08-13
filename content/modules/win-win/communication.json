@@ -307,6 +307,21 @@
         "winWin": "Más elvárások. Közös cél. A WIN–WIN ott kezdődik, ahol megértjük egymást. Ha mindkét fél kimondja, mit vár és mit tud adni – a különbségek nem akadályok, hanem tárgyalási alapok. A legtöbb elvárás összehangolható, ha van rá nyitottság."
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Kommunikáció",
+        "description": "Ugyanaz a mondat lehet amatőr vagy profi."
+      },
+      "quiz": {
+        "title": "Ellenőrző kvíz",
+        "description": "Keresd a mindkét fél számára működő megoldást."
+      },
+      "labels": {
+        "amateur": "Amatőr",
+        "professional": "Profi"
+      }
+    }
   }
 }

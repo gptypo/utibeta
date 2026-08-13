@@ -77,6 +77,18 @@
         "takeaway": "Minden nehéz helyzet tart egy tanulságot – aki képes visszanézni és tanulni, az erősebb lesz tőle."
       }
     ],
-    "blocks": []
+    "blocks": [],
+    "page": {
+      "labels": {
+        "monthSuffix": "hónap",
+        "carry": "Vidd magaddal!",
+        "closingLabel": "Záró gondolat"
+      },
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Pályakezdő mentőmellény",
+        "description": "12 hónap – 12 kapaszkodó az első munkaévhez."
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 'use strict';
-var VERSION='pagescms-extensible-blocks-4.3';
+var VERSION='pagescms-page-local-4.4';
 var STATIC_CACHE='utiterv-static-'+VERSION;
 var RUNTIME_CACHE='utiterv-runtime-'+VERSION;
 var APP_SHELL='/index.html',OFFLINE_URL='/offline.html';
