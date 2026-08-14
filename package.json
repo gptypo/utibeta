@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "validate": "node tools/validate-content.mjs",
-    "validate:content": "node tools/validate-content.mjs"
+    "validate:content": "node tools/validate-content.mjs",
+    "validate:js": "node tools/validate-js.mjs",
+    "validate:release": "npm run validate:content && npm run validate:js"
   },
-  "version": "5.4.0"
+  "version": "6.0.0",
+  "type": "module"
 }

@@ -224,6 +224,10 @@ for(const file of jsonFiles){
 const manifest=parsed.get('content/project.json');
 if(!manifest) addIssue('content/project.json','A projekt manifest nem olvasható.');
 else{
+  if(String(manifest.version||'')!=='6.0.0') addIssue('content/project.json',`A release verziója nem 6.0.0: ${manifest.version||'hiányzik'}.`);
+  if(!String(manifest.meta?.contentModel||'').includes('embedded-detail-pages-v2')) addIssue('content/project.json','A 6.0 contentModel metaadata hiányos.');
+  const uiData=parsed.get('content/ui.json');
+  for(const key of ['title','placeholder','hint','empty']) if(!String(uiData?.search?.[key]||'').trim()) addIssue('content/ui.json',`A kereső UI mezője hiányzik: search.${key}.`);
   const refs=[manifest.home,manifest.ui,manifest.assets,manifest.custom,manifest.shared?.competencies,manifest.shared?.onmagamData].filter(Boolean);
   for(const ref of refs){
     const target=`content/${String(ref).replace(/^\.\//,'')}`;

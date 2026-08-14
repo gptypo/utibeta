@@ -7,12 +7,20 @@ on:
       - '.pages.yml'
       - 'tools/validate-content.mjs'
       - 'package.json'
+      - 'sw.js'
+      - 'index.html'
+      - 'css/**'
+      - 'js/**'
   pull_request:
     paths:
       - 'content/**'
       - '.pages.yml'
       - 'tools/validate-content.mjs'
       - 'package.json'
+      - 'sw.js'
+      - 'index.html'
+      - 'css/**'
+      - 'js/**'
 
 jobs:
   validate-content:
@@ -25,4 +33,4 @@ jobs:
         with:
           node-version: '24'
       - name: Validate Pages CMS content
-        run: npm run validate:content
+        run: npm run validate:release

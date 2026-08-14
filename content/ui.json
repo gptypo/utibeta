@@ -3,7 +3,7 @@
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.",
-    "version": "BETA 5.4.0"
+    "version": "BETA 6.0.0"
   },
   "shell": {
     "homeAria": "Főoldal",
@@ -105,7 +105,7 @@
     "quizzes": "Kvízek"
   },
   "pwa": {
-    "version": "BETA 5.1.0",
+    "version": "BETA 6.0.0",
     "installTitle": "Telepítsd az Útitervet",
     "installText": "Gyorsabb indítás és offline használat.",
     "installButton": "Telepítés",
@@ -252,6 +252,19 @@
     "copySuffix": "másolat"
   },
   "app": {
-    "version": "BETA 5.4.0"
+    "version": "BETA 6.0.0"
+  },
+  "search": {
+    "eyebrow": "Keresés",
+    "title": "Találd meg gyorsan, amit keresel",
+    "description": "Keress a témák, aloldalak és belső tartalmak között.",
+    "label": "Keresés a tartalomban",
+    "placeholder": "Pl. önéletrajz, kommunikáció, szakács…",
+    "hint": "Írj be legalább 2 karaktert.",
+    "empty": "Nincs találat erre a keresésre."
+  },
+  "debug": {
+    "title": "Útiterv · Content debug",
+    "help": "Csak ?debug=1 esetén látható. A szerkesztői tartalom forrásának ellenőrzésére szolgál."
   }
 }

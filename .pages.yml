@@ -457,7 +457,7 @@ components:
           type: text
 content:
 - name: content_ui_json
-  label: Alkalmazásszintű UI és közös gombok
+  label: 00 · Alkalmazás › Közös UI és gombok
   type: file
   path: content/ui.json
   format: json
@@ -1134,13 +1134,49 @@ content:
     - name: copySuffix
       label: Copy suffix
       type: string
+  - name: search
+    label: Keresés feliratai
+    type: object
+    fields:
+    - name: eyebrow
+      label: Felső címke
+      type: string
+    - name: title
+      label: Cím
+      type: string
+    - name: description
+      label: Leírás
+      type: text
+    - name: label
+      label: Akadálymentes mezőfelirat
+      type: string
+    - name: placeholder
+      label: Keresőmező placeholder
+      type: string
+    - name: hint
+      label: Kezdő súgó
+      type: string
+    - name: empty
+      label: Nincs találat üzenet
+      type: string
+  - name: debug
+    label: Fejlesztői tartalom-debug
+    type: object
+    description: Csak ?debug=1 URL-paraméterrel jelenik meg. Normál felhasználó nem látja.
+    fields:
+    - name: title
+      label: Panel címe
+      type: string
+    - name: help
+      label: Súgó
+      type: text
   operations:
     delete: false
     rename: false
-  description: Globális navigáció, főoldal, gombok és valóban közös komponensfeliratok. Az aloldalak saját szövegei az adott aloldal JSON-jában
-    vannak.
+  description: Globális navigáció, főoldal, gombok és valóban közös komponensfeliratok. Az aloldalak saját szövegei az adott
+    aloldal JSON-jában vannak.
 - name: content_offline_json
-  label: Offline oldal
+  label: 03 · Offline oldal › Tartalom
   type: file
   path: content/offline.json
   format: json
@@ -1177,7 +1213,7 @@ content:
     delete: false
     rename: false
 - name: pwa_manifest
-  label: PWA · Név és alkalmazásikonok
+  label: 04 · PWA › Név és alkalmazásikonok
   type: file
   path: manifest.webmanifest
   format: json
@@ -1296,7 +1332,7 @@ content:
     delete: false
     rename: false
 - name: content_assets_json
-  label: Ikonok, képek és hanganyagok
+  label: 02 · Média › Közös képek és ikonok
   type: file
   path: content/assets.json
   format: json
@@ -1447,7 +1483,7 @@ content:
     delete: false
     rename: false
 - name: content_home_json
-  label: Főoldal
+  label: 01 · Főoldal › Tartalom
   type: file
   path: content/home.json
   format: json
@@ -1473,7 +1509,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_galaxy_guide_index_json
-  label: Galaxy Guide · Modulbeállítások
+  label: 10 · GALAXY GUIDE › Modulbeállítások
   type: file
   path: content/modules/galaxy-guide/index.json
   format: json
@@ -1539,7 +1575,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1552,7 +1589,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_quick_win_index_json
-  label: Quick Win · Modulbeállítások
+  label: 10 · QUICK WIN › Modulbeállítások
   type: file
   path: content/modules/quick-win/index.json
   format: json
@@ -1640,7 +1677,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1653,7 +1691,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_quit_go_index_json
-  label: Quit Go · Modulbeállítások
+  label: 10 · QUIT & GO › Modulbeállítások
   type: file
   path: content/modules/quit-go/index.json
   format: json
@@ -1741,7 +1779,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1754,7 +1793,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_win_win_index_json
-  label: Win Win · Modulbeállítások
+  label: 10 · WIN-WIN › Modulbeállítások
   type: file
   path: content/modules/win-win/index.json
   format: json
@@ -1842,7 +1881,8 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
+      bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1855,7 +1895,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_galaxy_guide_materials_json
-  label: Galaxy Guide · Materials
+  label: 12 · GALAXY GUIDE › Tudástár
   type: file
   path: content/modules/galaxy-guide/materials.json
   format: json
@@ -1872,11 +1912,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -1924,7 +1964,7 @@ content:
           label: Hamarosan státusz
           type: string
     - name: bonusMaterials
-      label: Tudástár kártyák
+      label: 2 · Fő tartalom › Tudástár kártyák
       type: object
       list:
         collapsible:
@@ -1952,14 +1992,15 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_galaxy_guide_videos_json
-  label: Galaxy Guide · Videos
+  label: 12 · GALAXY GUIDE › Videók
   type: file
   path: content/modules/galaxy-guide/videos.json
   format: json
@@ -1976,11 +2017,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2015,19 +2056,21 @@ content:
           label: Hamarosan státusz
           type: string
     - name: videoStories
-      label: Videókártyák
+      label: 2 · Fő tartalom › Videókártyák
       type: object
       list:
         collapsible:
           collapsed: true
           summary: '{profession} · {title}'
-      description: Tetszőleges számú videókártya adható hozzá. A belső oldal közvetlenül a kártyán belül szerkeszthető, nem kell külön ID-kat összekapcsolni.
+      description: A kártyák sorrendje itt megegyezik az oldalon látható sorrenddel. Minden kártya saját opcionális belső
+        oldalt tartalmazhat.
       fields:
       - name: id
         label: Technikai azonosító
         type: string
         required: true
-        description: Egyszer adj neki egy egyedi, kisbetűs, kötőjeles azonosítót (pl. szakacs-1). A belső oldal automatikusan ezt használja; máshol nem kell beírni.
+        description: Egyszer adj neki egy egyedi, kisbetűs, kötőjeles azonosítót (pl. szakacs-1). A belső oldal automatikusan
+          ezt használja; máshol nem kell beírni.
         pattern:
           regex: ^[a-z0-9][a-z0-9-]*$
           message: Csak kisbetű, szám és kötőjel használható.
@@ -2053,17 +2096,17 @@ content:
           - value: live
             label: Elérhető
       - name: detail
-        label: Belső oldal
+        label: Belső oldal · Beállítások és tartalom
         type: object
         description: Opcionális részletes oldal ehhez a kártyához. Nem kell külön oldalt létrehozni vagy technikai ID-t összekapcsolni.
         fields:
         - name: enabled
-          label: Van részletes oldal
+          label: 0 · Belső oldal bekapcsolása
           type: boolean
           default: false
           description: Kapcsold be, ha a kártyára kattintva saját belső oldal nyíljon meg. Kikapcsolva a kártya nem kattintható.
         - name: header
-          label: Belső oldal fejléc
+          label: 1 · Belső oldal fejléce
           type: object
           description: A kártyára kattintás után megjelenő oldal fejléce.
           fields:
@@ -2078,7 +2121,7 @@ content:
             label: Bevezető
             type: text
         - name: stylePreset
-          label: Belső oldal vizuális stílusa
+          label: 2 · Megjelenési stílus
           type: select
           default: default
           options:
@@ -2096,22 +2139,24 @@ content:
             - value: module
               label: Modul-szín
         - name: backLabel
-          label: Vissza gomb felirata
+          label: 3 · Vissza gomb
           type: string
           default: Vissza a videókhoz
         - name: blocks
-          label: Belső oldal tartalma
+          label: 4 · Belső oldal tartalomblokkjai
           component: content_blocks
-          description: Itt adhatsz hozzá szöveget, képet, videót, hangot, kvízt, flip-cardot, checklistet és minden más támogatott blokkot.
+          description: Itt adhatsz hozzá szöveget, képet, videót, hangot, kvízt, flip-cardot, checklistet és minden más támogatott
+            blokkot.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_cv_json
-  label: Quick Win · Cv
+  label: 12 · QUICK WIN › CV
   type: file
   path: content/modules/quick-win/cv.json
   format: json
@@ -2128,11 +2173,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2197,7 +2242,7 @@ content:
           label: whatNotWrite
           type: string
     - name: cvCards
-      label: CV kártyák
+      label: 2 · Fő tartalom › CV kártyák
       type: object
       list:
         collapsible:
@@ -2215,7 +2260,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: cvTips
-      label: CV tippek
+      label: 2 · Fő tartalom › CV tippek
       type: object
       list:
         collapsible:
@@ -2230,7 +2275,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: cvQuickRule
-      label: Cv quick rule
+      label: 2 · Fő tartalom › Cv quick rule
       type: object
       fields:
       - name: do
@@ -2240,14 +2285,15 @@ content:
         label: Dont
         type: string
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_firstday_json
-  label: Quick Win · Firstday
+  label: 12 · QUICK WIN › Első nap
   type: file
   path: content/modules/quick-win/firstday.json
   format: json
@@ -2264,11 +2310,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2302,7 +2348,7 @@ content:
           label: Leírás
           type: text
     - name: firstDayChecklist
-      label: Checklist elemek
+      label: 2 · Fő tartalom › Checklist elemek
       type: object
       list:
         collapsible:
@@ -2322,7 +2368,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: firstDayQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2352,14 +2398,15 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_interview_json
-  label: Quick Win · Interview
+  label: 12 · QUICK WIN › Állásinterjú
   type: file
   path: content/modules/quick-win/interview.json
   format: json
@@ -2376,11 +2423,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2421,7 +2468,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: interviewCards
-      label: Interjú kártyák
+      label: 2 · Fő tartalom › Interjú kártyák
       type: object
       list:
         collapsible:
@@ -2436,7 +2483,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: interviewClosing
-      label: Interview closing
+      label: 2 · Fő tartalom › Interview closing
       type: object
       fields:
       - name: front
@@ -2446,14 +2493,15 @@ content:
         label: Back
         type: text
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_jobhunt_json
-  label: Quick Win · Jobhunt
+  label: 12 · QUICK WIN › Álláskeresés
   type: file
   path: content/modules/quick-win/jobhunt.json
   format: json
@@ -2470,11 +2518,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2515,7 +2563,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: jobHuntCards
-      label: Álláskeresési kártyák
+      label: 2 · Fő tartalom › Álláskeresési kártyák
       type: object
       list:
         collapsible:
@@ -2530,17 +2578,18 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: jobHuntClosing
-      label: Job hunt closing
+      label: 2 · Fő tartalom › Job hunt closing
       type: text
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_legal_json
-  label: Quick Win · Legal
+  label: 12 · QUICK WIN › Munkajog
   type: file
   path: content/modules/quick-win/legal.json
   format: json
@@ -2557,11 +2606,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2606,7 +2655,7 @@ content:
           label: Jó tudni címke
           type: string
     - name: legalBasics
-      label: Jogi alapismeretek
+      label: 2 · Fő tartalom › Jogi alapismeretek
       type: object
       list:
         collapsible:
@@ -2627,7 +2676,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: legalBasicsQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2657,9 +2706,10 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   - name: expertReview
     label: Expert review
     type: object
@@ -2682,7 +2732,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_quick_win_linkedin_json
-  label: Quick Win · Linkedin
+  label: 12 · QUICK WIN › LinkedIn
   type: file
   path: content/modules/quick-win/linkedin.json
   format: json
@@ -2699,11 +2749,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2744,7 +2794,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: linkedinCards
-      label: LinkedIn kártyák
+      label: 2 · Fő tartalom › LinkedIn kártyák
       type: object
       list:
         collapsible:
@@ -2759,7 +2809,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: linkedinClosing
-      label: Linkedin closing
+      label: 2 · Fő tartalom › Linkedin closing
       type: object
       fields:
       - name: front
@@ -2769,14 +2819,15 @@ content:
         label: Back
         type: text
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_redflags_json
-  label: Quick Win · Redflags
+  label: 12 · QUICK WIN › Vészjelek
   type: file
   path: content/modules/quick-win/redflags.json
   format: json
@@ -2793,11 +2844,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2839,7 +2890,7 @@ content:
           label: redFlagFallback
           type: string
     - name: redFlags
-      label: Red flag kártyák
+      label: 2 · Fő tartalom › Red flag kártyák
       type: object
       list:
         collapsible:
@@ -2854,7 +2905,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: redFlagQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2884,9 +2935,10 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   - name: expertReview
     label: Expert review
     type: object
@@ -2909,7 +2961,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_quick_win_scenarios_json
-  label: Quick Win · Scenarios
+  label: 12 · QUICK WIN › Gyakorlás
   type: file
   path: content/modules/quick-win/scenarios.json
   format: json
@@ -2926,11 +2978,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -2951,7 +3003,7 @@ content:
           label: Leírás
           type: text
     - name: helyzeteiScenarios
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2984,14 +3036,15 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quick_win_world_json
-  label: Quick Win · World
+  label: 12 · QUICK WIN › Munka világa
   type: file
   path: content/modules/quick-win/world.json
   format: json
@@ -3008,11 +3061,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3056,7 +3109,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: workWorldCards
-      label: Munka világa kártyák
+      label: 2 · Fő tartalom › Munka világa kártyák
       type: object
       list:
         collapsible:
@@ -3071,7 +3124,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: workWorldQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3101,7 +3154,7 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: workWorldClosing
-      label: Work world closing
+      label: 2 · Fő tartalom › Work world closing
       type: object
       fields:
       - name: front
@@ -3111,14 +3164,15 @@ content:
         label: Back
         type: text
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_breathing_json
-  label: Quit Go · Breathing
+  label: 12 · QUIT & GO › Légzés
   type: file
   path: content/modules/quit-go/breathing.json
   format: json
@@ -3135,11 +3189,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3163,7 +3217,7 @@ content:
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id001
     - name: breathing
-      label: Légzéstechnika oldal tartalma
+      label: 2 · Fő tartalom › Légzéstechnika oldal tartalma
       type: object
       fields:
       - name: ready
@@ -3212,14 +3266,15 @@ content:
           type: text
         description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_careers_json
-  label: Quit Go · Careers
+  label: 12 · QUIT & GO › Karrierutak
   type: file
   path: content/modules/quit-go/careers.json
   format: json
@@ -3236,11 +3291,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3264,7 +3319,7 @@ content:
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id001
     - name: blueCollarExamples
-      label: Karrierpéldák
+      label: 2 · Fő tartalom › Karrierpéldák
       type: object
       list:
         collapsible:
@@ -3310,14 +3365,15 @@ content:
         description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_marketfacts_json
-  label: Quit Go · Marketfacts
+  label: 12 · QUIT & GO › Munkaerőpiac
   type: file
   path: content/modules/quit-go/marketfacts.json
   format: json
@@ -3334,11 +3390,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3375,7 +3431,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: marketFacts
-      label: Munkaerőpiaci tények
+      label: 2 · Fő tartalom › Munkaerőpiaci tények
       type: object
       list:
         collapsible:
@@ -3390,17 +3446,18 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: marketFactsClosing
-      label: Market facts closing
+      label: 2 · Fő tartalom › Market facts closing
       type: string
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_mindfulness_json
-  label: Quit Go · Mindfulness
+  label: 12 · QUIT & GO › Mindfulness
   type: file
   path: content/modules/quit-go/mindfulness.json
   format: json
@@ -3417,11 +3474,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3495,7 +3552,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: mindfulnessUi
-      label: Mindfulness oldal kiegészítő tartalma
+      label: 2 · Fő tartalom › Mindfulness oldal kiegészítő tartalma
       type: object
       fields:
       - name: groundingSteps
@@ -3599,7 +3656,7 @@ content:
         label: Body Scan Seconds
         type: number
     - name: mindfulnessExercises
-      label: Mindfulness gyakorlatok
+      label: 2 · Fő tartalom › Mindfulness gyakorlatok
       type: object
       list:
         collapsible:
@@ -3642,14 +3699,15 @@ content:
         description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_preboarding_json
-  label: Quit Go · Preboarding
+  label: 12 · QUIT & GO › Preboarding
   type: file
   path: content/modules/quit-go/preboarding.json
   format: json
@@ -3666,11 +3724,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3694,7 +3752,7 @@ content:
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id001
     - name: preboardingData
-      label: Preboarding kártyák
+      label: 2 · Fő tartalom › Preboarding kártyák
       type: object
       list:
         collapsible:
@@ -3709,14 +3767,15 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_quiz_json
-  label: Quit Go · Quiz
+  label: 12 · QUIT & GO › Kvíz
   type: file
   path: content/modules/quit-go/quiz.json
   format: json
@@ -3733,11 +3792,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3772,7 +3831,7 @@ content:
           label: Bevezető
           type: string
     - name: onmagamQuizItems
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3802,7 +3861,7 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: onmagamQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3825,14 +3884,15 @@ content:
         type: text
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_quit_go_survival_json
-  label: Quit Go · Survival
+  label: 12 · QUIT & GO › Túlélőkalauz
   type: file
   path: content/modules/quit-go/survival.json
   format: json
@@ -3849,11 +3909,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3890,7 +3950,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: survivalGuideData
-      label: Túlélőkalauz kártyák
+      label: 2 · Fő tartalom › Túlélőkalauz kártyák
       type: object
       list:
         collapsible:
@@ -3911,14 +3971,15 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_win_win_communication_json
-  label: Win Win · Communication
+  label: 12 · WIN-WIN › Kommunikáció
   type: file
   path: content/modules/win-win/communication.json
   format: json
@@ -3935,11 +3996,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -3984,7 +4045,7 @@ content:
           label: Profi címke
           type: string
     - name: communicationFlips
-      label: Fordítós kártyák
+      label: 2 · Fő tartalom › Fordítós kártyák
       type: object
       list:
         collapsible:
@@ -3999,7 +4060,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: komunikációQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4032,14 +4093,15 @@ content:
         type: text
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_win_win_digital_json
-  label: Win Win · Digital
+  label: 12 · WIN-WIN › Digitális tér
   type: file
   path: content/modules/win-win/digital.json
   format: json
@@ -4056,11 +4118,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -4108,7 +4170,7 @@ content:
           label: consciousDirection
           type: string
     - name: digitalBehavior
-      label: Digitális viselkedés kártyák
+      label: 2 · Fő tartalom › Digitális viselkedés kártyák
       type: object
       list:
         collapsible:
@@ -4123,7 +4185,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: digitálisViselkedésQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4153,14 +4215,15 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_win_win_generations_json
-  label: Win Win · Generations
+  label: 12 · WIN-WIN › Generációk
   type: file
   path: content/modules/win-win/generations.json
   format: json
@@ -4177,11 +4240,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -4222,7 +4285,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: generationCards
-      label: Generációs kártyák
+      label: 2 · Fő tartalom › Generációs kártyák
       type: object
       list:
         collapsible:
@@ -4237,7 +4300,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: generationClosing
-      label: Generation closing
+      label: 2 · Fő tartalom › Generation closing
       type: object
       fields:
       - name: front
@@ -4247,14 +4310,15 @@ content:
         label: Back
         type: text
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_win_win_glossary_json
-  label: Win Win · Glossary
+  label: 12 · WIN-WIN › Fogalomtár
   type: file
   path: content/modules/win-win/glossary.json
   format: json
@@ -4271,11 +4335,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -4320,7 +4384,7 @@ content:
           label: Mikor találkozol vele? címke
           type: string
     - name: glossary
-      label: Fogalomtár elemek
+      label: 2 · Fő tartalom › Fogalomtár elemek
       type: object
       list:
         collapsible:
@@ -4341,7 +4405,7 @@ content:
         type: text
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: fogalomtárQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4371,9 +4435,10 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   - name: expertReview
     label: Expert review
     type: object
@@ -4396,7 +4461,7 @@ content:
     delete: false
     rename: false
 - name: content_modules_win_win_phrases_json
-  label: Win Win · Phrases
+  label: 12 · WIN-WIN › Pro mondatok
   type: file
   path: content/modules/win-win/phrases.json
   format: json
@@ -4413,11 +4478,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -4468,7 +4533,7 @@ content:
           label: youCanSay
           type: string
     - name: proPhrases
-      label: Szóhasználati kártyák
+      label: 2 · Fő tartalom › Szóhasználati kártyák
       type: object
       list:
         collapsible:
@@ -4483,7 +4548,7 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: proSzóhasználatQuiz
-      label: Kvízkérdések
+      label: 2 · Fő tartalom › Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4513,14 +4578,15 @@ content:
         description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_modules_win_win_twosides_json
-  label: Win Win · Twosides
+  label: 12 · WIN-WIN › Két oldal
   type: file
   path: content/modules/win-win/twosides.json
   format: json
@@ -4537,11 +4603,11 @@ content:
     label: Cím
     type: string
   - name: data
-    label: Az oldal teljes tartalma
+    label: Szerkeszthető oldal
     type: object
     fields:
     - name: page
-      label: Oldalon látható fejléc és feliratok
+      label: 1 · Oldalfejléc és megjelenés
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
@@ -4582,7 +4648,7 @@ content:
           label: Munkaadó elvárása címke
           type: string
     - name: ketOldalData
-      label: Két oldal kártyák
+      label: 2 · Fő tartalom › Két oldal kártyák
       type: object
       list:
         collapsible:
@@ -4603,14 +4669,15 @@ content:
         type: string
       description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
-      label: Plusz tartalomblokkok
+      label: 9 · Plusz tartalomblokkok
       component: content_blocks
       description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
+    description: Az itt látható csoportok a tényleges oldal szerkezetét követik, felülről lefelé.
   operations:
     delete: false
     rename: false
 - name: content_shared_competencies_json
-  label: Közös · Competencies
+  label: 80 · Közös adatok › Competencies
   type: file
   path: content/shared/competencies.json
   format: json
@@ -5147,7 +5214,7 @@ content:
     delete: false
     rename: false
 - name: content_shared_onmagam_data_json
-  label: Közös · Onmagam Data
+  label: 80 · Közös adatok › Onmagam Data
   type: file
   path: content/shared/onmagam-data.json
   format: json
@@ -5258,7 +5325,7 @@ content:
     delete: false
     rename: false
 - name: content_custom_topics_json
-  label: Egyedi · Topics
+  label: 81 · Egyedi témák
   type: file
   path: content/custom/topics.json
   format: json
@@ -5276,7 +5343,7 @@ content:
     delete: false
     rename: false
 - name: content_project_json
-  label: Projekt és tartalmi struktúra
+  label: 90 · Projekt › Tartalmi struktúra
   type: file
   path: content/project.json
   format: json
@@ -5356,7 +5423,7 @@ content:
     delete: false
     rename: false
 - name: content_errors_json
-  label: Hibaüzenetek
+  label: 91 · Projekt › Hibaüzenetek
   type: file
   path: content/errors.json
   format: json
@@ -5386,7 +5453,7 @@ content:
     delete: false
     rename: false
 - name: dynamic_pages_galaxy_guide
-  label: Galaxy Guide · Új aloldalak
+  label: 19 · GALAXY GUIDE › Új aloldalak
   type: file
   path: content/modules/galaxy-guide/dynamic-pages.json
   format: json
@@ -5406,7 +5473,8 @@ content:
       collapsible:
         collapsed: true
         summary: '{navTitle}'
-    description: Itt hozhatsz létre új Galaxy Guide aloldalt. Az új oldal automatikusan megjelenik a modul fülei között; kódmódosítás nem szükséges.
+    description: Itt hozhatsz létre új Galaxy Guide aloldalt. Az új oldal automatikusan megjelenik a modul fülei között; kódmódosítás
+      nem szükséges.
     fields: &id002
     - name: hidden
       label: Piszkozat / elrejtés
@@ -5422,8 +5490,8 @@ content:
       options:
         minlength: 2
         maxlength: 80
-      description: 'URL-/kódbarát egyedi azonosító. Ne használj szóközt, ékezetet, nagybetűt vagy aláhúzást. Jó példa: interju-videok. Létrehozás
-        után lehetőleg ne változtasd.'
+      description: 'URL-/kódbarát egyedi azonosító. Ne használj szóközt, ékezetet, nagybetűt vagy aláhúzást. Jó példa: interju-videok.
+        Létrehozás után lehetőleg ne változtasd.'
     - name: navTitle
       label: Fül neve
       type: string
@@ -5468,13 +5536,13 @@ content:
     - name: blocks
       label: Oldal tartalma
       component: content_blocks
-      description: Az oldal teljes tartalma tetszőleges sorrendben építhető. A média- és szövegblokkok mellett új kvíz, lapozható kártya, fordítós
-        kártya, checklist és lépéssor is hozzáadható.
+      description: Az oldal teljes tartalma tetszőleges sorrendben építhető. A média- és szövegblokkok mellett új kvíz, lapozható
+        kártya, fordítós kártya, checklist és lépéssor is hozzáadható.
   operations:
     delete: false
     rename: false
 - name: dynamic_pages_quick_win
-  label: Quick Win · Új aloldalak
+  label: 19 · QUICK WIN › Új aloldalak
   type: file
   path: content/modules/quick-win/dynamic-pages.json
   format: json
@@ -5500,7 +5568,7 @@ content:
     delete: false
     rename: false
 - name: dynamic_pages_quit_go
-  label: Quit & Go · Új aloldalak
+  label: 19 · QUIT & GO › Új aloldalak
   type: file
   path: content/modules/quit-go/dynamic-pages.json
   format: json
@@ -5526,7 +5594,7 @@ content:
     delete: false
     rename: false
 - name: dynamic_pages_win_win
-  label: Win-Win · Új aloldalak
+  label: 19 · WIN-WIN › Új aloldalak
   type: file
   path: content/modules/win-win/dynamic-pages.json
   format: json

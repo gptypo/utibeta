@@ -1,6 +1,7 @@
 const MANIFEST_URL = new URL('../content/project.json', import.meta.url);
 const ERRORS_URL = new URL('../content/errors.json', import.meta.url);
-const PROJECT_KEY = 'utiterv-project-v7';
+const PROJECT_KEY = 'utiterv-project-v8';
+const LEGACY_V7_KEY = 'utiterv-project-v7';
 const LEGACY_V6_KEY = 'utiterv-project-v6';
 const LEGACY_V5_KEY = 'utiterv-project-v5';
 const LEGACY_V4_KEY = 'utiterv-project-v4';
@@ -87,7 +88,7 @@ async function fetchBaseProject(){
   modules.competencies={competencyInfo:clone(competencies.competencyInfo||{})};
   modules.onmagamData={onmagamData:clone(onmagamData.onmagamData||{})};
   return {
-    schema:'utiterv-project-v5',version:manifest.version||'5.4.0',updatedAt:new Date().toISOString(),
+    schema:'utiterv-project-v5',version:manifest.version||'6.0.0',updatedAt:new Date().toISOString(),
     meta:clone(manifest.meta||{}),navigation,contentTree,modules,
     settings:clone(home.settings||{}),customContent:clone(custom.items||[]),ui:clone(ui||{}),assets:clone(assets||{}),manifest:clone(manifest)
   };
@@ -97,7 +98,7 @@ function parseStored(key){try{return JSON.parse(localStorage.getItem(key)||'null
 function readStoredProject(){const parsed=parseStored(PROJECT_KEY);return parsed?.modules?parsed:null}
 function migrateProjectStorage(base){
  const existing=readStoredProject();if(existing)return normalizeStored(existing,base);
- const legacy=parseStored(LEGACY_V6_KEY)||parseStored(LEGACY_V5_KEY);
+ const legacy=parseStored(LEGACY_V7_KEY)||parseStored(LEGACY_V6_KEY)||parseStored(LEGACY_V5_KEY);
  const next=clone(base);
  // BETA 1.1 deliberately refreshes built-in module content from the packaged JSON files.
  // Only editor-owned settings and custom topics are carried forward, so stale snapshots
@@ -123,7 +124,7 @@ export function getProject(){return project}
 export function getBaseProject(){return clone(baseProject)}
 export function saveProject(){project.updatedAt=new Date().toISOString();localStorage.setItem(PROJECT_KEY,JSON.stringify(project));window.dispatchEvent(new CustomEvent('utiterv-project-changed',{detail:{project}}))}
 export function replaceProject(next){if(!next?.modules)throw new Error(errorCopy.invalidProject||'');for(const key of Object.keys(project))delete project[key];Object.assign(project,normalizeStored(next,baseProject));saveProject()}
-export function resetProject(){[PROJECT_KEY,LEGACY_V6_KEY,LEGACY_V5_KEY,LEGACY_V4_KEY,LEGACY_KEY,LEGACY_CUSTOM_KEY,LEGACY_CUSTOM_KEY_V1,LEGACY_SETTINGS_KEY].forEach(k=>localStorage.removeItem(k))}
+export function resetProject(){[PROJECT_KEY,LEGACY_V7_KEY,LEGACY_V6_KEY,LEGACY_V5_KEY,LEGACY_V4_KEY,LEGACY_KEY,LEGACY_CUSTOM_KEY,LEGACY_CUSTOM_KEY_V1,LEGACY_SETTINGS_KEY].forEach(k=>localStorage.removeItem(k))}
 export function exportProject(){return JSON.stringify({...clone(project),schema:'utiterv-project-v5',exportedAt:new Date().toISOString()},null,2)}
 export function exportModularBundle(){
   const files={};
@@ -148,6 +149,6 @@ export function exportModularBundle(){
     files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'};
   }
   files['project.json']=clone(project.manifest||baseProject.manifest);
-  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'5.4.0',files},null,2);
+  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'6.0.0',files},null,2);
 }
 export {PROJECT_KEY};
