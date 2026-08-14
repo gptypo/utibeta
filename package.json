@@ -5,8 +5,10 @@
     "validate": "node tools/validate-content.mjs",
     "validate:content": "node tools/validate-content.mjs",
     "validate:js": "node tools/validate-js.mjs",
-    "validate:release": "npm run validate:content && npm run validate:js"
+    "validate:release": "npm run validate:content && npm run validate:js && npm run validate:a11y && npm run validate:navigation",
+    "validate:a11y": "node tools/validate-a11y.mjs",
+    "validate:navigation": "node tools/validate-navigation.mjs"
   },
-  "version": "6.1.1",
+  "version": "7.0.0",
   "type": "module"
 }

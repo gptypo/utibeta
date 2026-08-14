@@ -1,11 +1,12 @@
 {
   "schema": "utiterv-project-manifest-v5",
-  "version": "6.1.1",
+  "version": "7.0.0",
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Adatvezérelt edukációs PWA projekt",
-    "contentModel": "page-local-v2 + reusable-components-v2 + embedded-detail-pages-v2 + deep-links-v1 + search-index-v1 + element-style-presets-v1",
-    "cmsLayout": "structured-page-local-v1"
+    "contentModel": "page-local-v3 + reusable-components-v2 + embedded-detail-pages-v2 + deep-links-v1 + search-index-v2 + content-lifecycle-v1 + progress-platform-v1 + element-style-presets-v1",
+    "cmsLayout": "structured-page-local-v2",
+    "releaseChannel": "beta"
   },
   "home": "home.json",
   "modules": [

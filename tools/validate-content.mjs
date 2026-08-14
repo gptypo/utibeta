@@ -24,6 +24,21 @@ function validatePresentation(value,file,keyPath=''){
   }
 }
 
+
+const PUBLICATION_STATUSES=new Set(['published','draft','archived']);
+function validateLifecycle(value,file,keyPath=''){
+  if(Array.isArray(value)){value.forEach((item,i)=>validateLifecycle(item,file,`${keyPath}[${i}]`));return;}
+  if(!value||typeof value!=='object')return;
+  if(Object.prototype.hasOwnProperty.call(value,'publicationStatus')){
+    const status=String(value.publicationStatus||'published');
+    if(!PUBLICATION_STATUSES.has(status))addIssue(file,`${keyPath}.publicationStatus érvénytelen: ${status}.`);
+  }
+  for(const key of ['publishedAt','unpublishAt'])if(value[key]){
+    const time=Date.parse(String(value[key]));if(!Number.isFinite(time))addIssue(file,`${keyPath}.${key} nem érvényes dátum/idő: ${value[key]}.`);
+  }
+  if(value.tags!==undefined&&(!Array.isArray(value.tags)||value.tags.some(x=>typeof x!=='string')))addIssue(file,`${keyPath}.tags csak szöveges lista lehet.`);
+  for(const [key,child] of Object.entries(value))if(child&&typeof child==='object')validateLifecycle(child,file,keyPath?`${keyPath}.${key}`:key);
+}
 const rel=p=>path.relative(root,p).replaceAll(path.sep,'/');
 const addIssue=(file,message)=>issues.push({file,message});
 const addWarning=(file,message)=>warnings.push({file,message});
@@ -206,6 +221,7 @@ for(const file of jsonFiles){
     const data=JSON.parse(fs.readFileSync(file,'utf8'));
     parsed.set(name,data);
     validatePresentation(data,name);
+    validateLifecycle(data,name);
     visit(data,name);
     const blocks=data?.data?.blocks;
     if(blocks!==undefined){
@@ -245,7 +261,7 @@ for(const file of jsonFiles){
 const manifest=parsed.get('content/project.json');
 if(!manifest) addIssue('content/project.json','A projekt manifest nem olvasható.');
 else{
-  if(String(manifest.version||'')!=='6.1.1') addIssue('content/project.json',`A release verziója nem 6.1.1: ${manifest.version||'hiányzik'}.`);
+  if(String(manifest.version||'')!=='7.0.0') addIssue('content/project.json',`A release verziója nem 7.0.0: ${manifest.version||'hiányzik'}.`);
   if(!String(manifest.meta?.contentModel||'').includes('element-style-presets-v1')) addIssue('content/project.json','A 6.1 contentModel metaadata hiányos: element-style-presets-v1 hiányzik.');
   const uiData=parsed.get('content/ui.json');
   for(const key of ['title','placeholder','hint','empty']) if(!String(uiData?.search?.[key]||'').trim()) addIssue('content/ui.json',`A kereső UI mezője hiányzik: search.${key}.`);

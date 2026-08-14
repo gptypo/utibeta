@@ -1,3 +1,4 @@
+import {isPublished} from './content-lifecycle.js';
 const MANIFEST_URL = new URL('../content/project.json', import.meta.url);
 const ERRORS_URL = new URL('../content/errors.json', import.meta.url);
 const PROJECT_KEY = 'utiterv-project-v8';
@@ -51,7 +52,7 @@ async function fetchBaseProject(){
       try{
         const dynamicBundle=await fetchJson(resolveFrom(indexUrl,moduleIndex.dynamic));
         for(const page of dynamicBundle.pages||[]){
-          if(!page||page.hidden===true)continue;
+          if(!page||!isPublished(page))continue;
           const id=String(page.id||'').trim();
           if(!id){warnContent('Egy dinamikus aloldal id nélkül kimaradt.',{module:moduleIndex.id,file:moduleIndex.dynamic});continue;}
           if(namespace.__sections[id]){warnContent('Dinamikus aloldal azonosítója ütközik egy meglévő aloldallal; az elem kimaradt.',{module:moduleIndex.id,section:id,file:moduleIndex.dynamic});continue;}
@@ -88,7 +89,7 @@ async function fetchBaseProject(){
   modules.competencies={competencyInfo:clone(competencies.competencyInfo||{})};
   modules.onmagamData={onmagamData:clone(onmagamData.onmagamData||{})};
   return {
-    schema:'utiterv-project-v5',version:manifest.version||'6.0.0',updatedAt:new Date().toISOString(),
+    schema:'utiterv-project-v5',version:manifest.version||'7.0.0',updatedAt:new Date().toISOString(),
     meta:clone(manifest.meta||{}),navigation,contentTree,modules,
     settings:clone(home.settings||{}),customContent:clone(custom.items||[]),ui:clone(ui||{}),assets:clone(assets||{}),manifest:clone(manifest)
   };
@@ -149,6 +150,6 @@ export function exportModularBundle(){
     files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'};
   }
   files['project.json']=clone(project.manifest||baseProject.manifest);
-  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'6.0.0',files},null,2);
+  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'7.0.0',files},null,2);
 }
 export {PROJECT_KEY};

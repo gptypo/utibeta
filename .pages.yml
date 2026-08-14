@@ -43,6 +43,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -93,6 +115,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -127,6 +171,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -167,6 +233,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -198,6 +286,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -233,6 +343,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -280,6 +412,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -324,6 +478,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -363,6 +539,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -391,6 +589,28 @@ components:
         label: Blokk elrejtése
         type: boolean
         description: Bekapcsolva a blokk megmarad a JSON-ban, de nem jelenik meg az alkalmazásban.
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -411,6 +631,28 @@ components:
       - name: hidden
         label: Blokk elrejtése
         type: boolean
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -480,6 +722,28 @@ components:
       - name: hidden
         label: Blokk elrejtése
         type: boolean
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -532,6 +796,28 @@ components:
       - name: hidden
         label: Blokk elrejtése
         type: boolean
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -597,6 +883,28 @@ components:
       - name: hidden
         label: Blokk elrejtése
         type: boolean
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -647,6 +955,28 @@ components:
       - name: hidden
         label: Blokk elrejtése
         type: boolean
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: stylePreset
         label: Megjelenési stílus
         type: select
@@ -687,7 +1017,7 @@ components:
           type: text
 content:
 - name: content_ui_json
-  label: 1.1 · APP BEÁLLÍTÁSAI › Közös UI és gombok
+  label: 1.1 · APP BEÁLLÍTÁSAI › Feliratok és működés
   type: file
   path: content/ui.json
   format: json
@@ -1163,6 +1493,12 @@ content:
       - name: bonus
         label: Bonus
         type: string
+    - name: visited
+      label: Megnyitott tartalmak felirata
+      type: string
+    - name: completed
+      label: Befejezett aktivitások felirata
+      type: string
   - name: components
     label: Közös komponensfeliratok
     type: object
@@ -1389,6 +1725,18 @@ content:
     - name: empty
       label: Nincs találat üzenet
       type: string
+    - name: category
+      label: Kategória mező felirata
+      type: string
+    - name: tag
+      label: Címke mező felirata
+      type: string
+    - name: allCategories
+      label: Összes kategória opció
+      type: string
+    - name: allTags
+      label: Összes címke opció
+      type: string
   - name: debug
     label: Fejlesztői tartalom-debug
     type: object
@@ -1432,7 +1780,7 @@ content:
     delete: false
     rename: false
 - name: pwa_manifest
-  label: 1.3 · APP BEÁLLÍTÁSAI › PWA és alkalmazásikonok
+  label: 1.3 · APP BEÁLLÍTÁSAI › PWA és telepítés
   type: file
   path: manifest.webmanifest
   format: json
@@ -1710,6 +2058,36 @@ content:
             label: Sötét panel
           - value: module
             label: Modul-szín
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -1816,6 +2194,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -1940,6 +2348,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2049,6 +2487,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2306,6 +2774,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2397,6 +2895,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2472,6 +3000,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2548,6 +3106,36 @@ content:
       label: Piszkozat / elrejtés
       type: boolean
       description: Bekapcsolva az oldal megmarad a CMS-ben, de nem jelenik meg az alkalmazásban.
+    - name: publicationStatus
+      label: Publikálási állapot
+      type: select
+      default: published
+      description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+      options:
+        values:
+        - value: published
+          label: Publikált
+        - value: draft
+          label: Piszkozat
+        - value: archived
+          label: Archivált
+    - name: publishedAt
+      label: Megjelenés ettől
+      type: string
+      description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+    - name: unpublishAt
+      label: Elrejtés ettől
+      type: string
+      description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+    - name: category
+      label: Kategória
+      type: string
+      description: Opcionális. A kereső/szűrés használja.
+    - name: tags
+      label: Címkék / tagek
+      type: string
+      list: true
+      description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
     - name: id
       label: Technikai azonosító
       type: string
@@ -2763,6 +3351,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -2907,6 +3525,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3014,6 +3662,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3117,6 +3795,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3219,6 +3927,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3354,6 +4092,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3504,6 +4272,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3645,6 +4443,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3747,6 +4575,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -3970,6 +4828,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4099,6 +4987,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4249,6 +5167,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4351,6 +5299,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4480,6 +5458,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4578,6 +5586,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4816,6 +5854,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -4950,6 +6018,36 @@ content:
         default: default
         description: Az egész aloldal biztonságos CSS megjelenési presetje.
         options: *id002
+      - name: publicationStatus
+        label: Publikálási állapot
+        type: select
+        default: published
+        description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+        options:
+          values:
+          - value: published
+            label: Publikált
+          - value: draft
+            label: Piszkozat
+          - value: archived
+            label: Archivált
+      - name: publishedAt
+        label: Megjelenés ettől
+        type: string
+        description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+      - name: unpublishAt
+        label: Elrejtés ettől
+        type: string
+        description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+      - name: category
+        label: Kategória
+        type: string
+        description: Opcionális. A kereső/szűrés használja.
+      - name: tags
+        label: Címkék / tagek
+        type: string
+        list: true
+        description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
       - name: customClass
         label: Egyedi CSS osztály
         type: string
@@ -5029,6 +6127,36 @@ content:
           type: boolean
           default: false
           description: Kapcsold be, ha a kártyára kattintva saját belső oldal nyíljon meg. Kikapcsolva a kártya nem kattintható.
+        - name: publicationStatus
+          label: Publikálási állapot
+          type: select
+          default: published
+          description: 'Publikált: látható. Piszkozat/Archivált: megmarad a CMS-ben, de az app és a kereső nem mutatja.'
+          options:
+            values:
+            - value: published
+              label: Publikált
+            - value: draft
+              label: Piszkozat
+            - value: archived
+              label: Archivált
+        - name: publishedAt
+          label: Megjelenés ettől
+          type: string
+          description: Opcionális ISO dátum/idő (pl. 2026-09-01T08:00:00+02:00). Üresen azonnal megjelenhet.
+        - name: unpublishAt
+          label: Elrejtés ettől
+          type: string
+          description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
+        - name: category
+          label: Kategória
+          type: string
+          description: Opcionális. A kereső/szűrés használja.
+        - name: tags
+          label: Címkék / tagek
+          type: string
+          list: true
+          description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
         - name: header
           label: 1 · Belső oldal fejléce
           type: object

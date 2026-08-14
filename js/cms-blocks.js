@@ -1,3 +1,4 @@
+import {isPublished} from './content-lifecycle.js';
 const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
 
 const ELEMENT_STYLE_PRESETS=new Set(['default','card','highlight','minimal','dark','module','wide','compact','outline','soft']);
@@ -54,7 +55,7 @@ function blockHeading(block){
 
 export function renderCmsBlock(block){
   try{
-  if(!block||typeof block!=='object'||block.hidden)return'';
+  if(!block||typeof block!=='object'||!isPublished(block))return'';
   const type=String(block.type||'').toLowerCase();
   if(type==='text'){
     return `<article class="cms-block cms-block--text ${cmsPresentationClass(block)}">${blockHeading(block)}<div class="cms-block__body">${textMarkup(block.body)}</div></article>`;
