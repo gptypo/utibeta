@@ -89,7 +89,7 @@ async function fetchBaseProject(){
   modules.competencies={competencyInfo:clone(competencies.competencyInfo||{})};
   modules.onmagamData={onmagamData:clone(onmagamData.onmagamData||{})};
   return {
-    schema:'utiterv-project-v5',version:manifest.version||'7.0.1',updatedAt:new Date().toISOString(),
+    schema:'utiterv-project-v5',version:manifest.version||'7.0.2',updatedAt:new Date().toISOString(),
     meta:clone(manifest.meta||{}),navigation,contentTree,modules,
     settings:clone(home.settings||{}),customContent:clone(custom.items||[]),ui:clone(ui||{}),assets:clone(assets||{}),manifest:clone(manifest)
   };
@@ -150,6 +150,6 @@ export function exportModularBundle(){
     files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'};
   }
   files['project.json']=clone(project.manifest||baseProject.manifest);
-  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'7.0.1',files},null,2);
+  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'7.0.2',files},null,2);
 }
 export {PROJECT_KEY};

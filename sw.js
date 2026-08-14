@@ -1,5 +1,5 @@
 'use strict';
-var VERSION='pagescms-content-platform-7.0.1';
+var VERSION='pagescms-content-platform-7.0.2';
 var STATIC_CACHE='utiterv-static-'+VERSION;
 var RUNTIME_CACHE='utiterv-runtime-'+VERSION;
 var APP_SHELL='/index.html',OFFLINE_URL='/offline.html';
