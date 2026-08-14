@@ -33,4 +33,4 @@ for(const moduleName of fs.readdirSync(modules)){
     }
   }
 }
-if(issues.length){for(const {file,msg} of issues)console.error(`::error file=${file}::${msg}`);process.exit(1);}console.log('✓ 7.1 recursive content schema valid');
+if(issues.length){for(const {file,msg} of issues)console.error(`::error file=${file}::${msg}`);process.exit(1);}console.log('✓ 7.1.1 recursive content schema valid');

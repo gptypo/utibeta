@@ -5,14 +5,15 @@
     "validate": "node tools/validate-content.mjs",
     "validate:content": "node tools/validate-content.mjs",
     "validate:js": "node tools/validate-js.mjs",
-    "validate:release": "npm run validate:content && npm run validate:recursive && npm run validate:js && npm run validate:a11y && npm run validate:navigation && npm run validate:cms && npm run validate:cms-editor-tree",
+    "validate:release": "npm run validate:content && npm run validate:recursive && npm run validate:js && npm run validate:a11y && npm run validate:navigation && npm run validate:cms && npm run validate:cms-editor-tree && npm run validate:cms-visual",
     "validate:a11y": "node tools/validate-a11y.mjs",
     "validate:navigation": "node tools/validate-navigation.mjs",
     "validate:cms": "node tools/validate-cms-hierarchy.mjs",
     "validate:cms-editor-tree": "node tools/validate-cms-editor-tree.mjs",
     "validate:recursive": "node tools/validate-recursive-content.mjs",
-    "migrate:recursive": "node tools/migrate-recursive-content.mjs"
+    "migrate:recursive": "node tools/migrate-recursive-content.mjs",
+    "validate:cms-visual": "node tools/validate-cms-visual-hierarchy.mjs"
   },
-  "version": "7.1.0",
+  "version": "7.1.1",
   "type": "module"
 }

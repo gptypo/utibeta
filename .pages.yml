@@ -859,7 +859,7 @@ components:
         label: Hátlap alapértelmezett címkéje
         type: string
       - name: items
-        label: Fordítós kártyák
+        label: '  ▸ FORDÍTÓS KÁRTYÁK'
         type: object
         list:
           collapsible:
@@ -2013,7 +2013,7 @@ content:
             type: string
             hidden: true
         - name: appearance
-          label: 2. Megjelenés
+          label: '   ② MEGJELENÉS'
           type: object
           fields:
           - name: icon
@@ -2116,11 +2116,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -2132,11 +2132,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -2149,7 +2149,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -2180,7 +2180,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -2206,7 +2206,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -2221,11 +2221,11 @@ content:
               description: Kategória és keresési címkék.
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: blueCollarExamples
-              label: Fő tartalom › Karrierpéldák
+              label: '  ▸ Karrierpéldák'
               type: object
               list:
                 collapsible:
@@ -2272,11 +2272,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -2297,11 +2297,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -2313,11 +2313,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -2330,7 +2330,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -2348,7 +2348,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -2374,7 +2374,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -2388,7 +2388,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -2400,11 +2400,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: onmagamQuizItems
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -2434,7 +2434,7 @@ content:
                 description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             - name: onmagamQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -2458,11 +2458,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -2483,11 +2483,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -2499,11 +2499,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -2516,7 +2516,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -2534,7 +2534,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -2560,7 +2560,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -2575,11 +2575,11 @@ content:
               description: Kategória és keresési címkék.
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: breathing
-              label: Fő tartalom › Légzéstechnika oldal tartalma
+              label: '  ▸ Légzéstechnika oldal tartalma'
               type: object
               fields:
               - name: ready
@@ -2629,11 +2629,11 @@ content:
                 description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -2654,11 +2654,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -2670,11 +2670,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -2687,7 +2687,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -2705,7 +2705,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -2731,7 +2731,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -2745,7 +2745,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -2796,11 +2796,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: mindfulnessUi
-              label: Fő tartalom › Mindfulness oldal kiegészítő tartalma
+              label: '  ▸ Mindfulness oldal kiegészítő tartalma'
               type: object
               fields:
               - name: groundingSteps
@@ -2904,7 +2904,7 @@ content:
                 label: Body Scan Seconds
                 type: number
             - name: mindfulnessExercises
-              label: Fő tartalom › Mindfulness gyakorlatok
+              label: '  ▸ Mindfulness gyakorlatok'
               type: object
               list:
                 collapsible:
@@ -2948,11 +2948,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -2973,11 +2973,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -2989,11 +2989,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3006,7 +3006,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3024,7 +3024,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -3050,7 +3050,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -3064,7 +3064,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               fields:
               - name: marketFactsBack
@@ -3078,11 +3078,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: marketFacts
-              label: Fő tartalom › Munkaerőpiaci tények
+              label: '  ▸ Munkaerőpiaci tények'
               type: object
               list:
                 collapsible:
@@ -3097,15 +3097,15 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: marketFactsClosing
-              label: Fő tartalom › Market facts closing
+              label: '  ▸ Market facts closing'
               type: string
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -3126,11 +3126,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -3142,11 +3142,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3159,7 +3159,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3177,7 +3177,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -3203,7 +3203,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -3218,11 +3218,11 @@ content:
               description: Kategória és keresési címkék.
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: preboardingData
-              label: Fő tartalom › Preboarding kártyák
+              label: '  ▸ Preboarding kártyák'
               type: object
               list:
                 collapsible:
@@ -3238,11 +3238,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -3263,11 +3263,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -3279,11 +3279,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3296,7 +3296,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3314,7 +3314,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -3340,7 +3340,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -3354,7 +3354,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               fields:
               - name: monthSuffix
@@ -3368,11 +3368,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: survivalGuideData
-              label: Fő tartalom › Túlélőkalauz kártyák
+              label: '  ▸ Túlélőkalauz kártyák'
               type: object
               list:
                 collapsible:
@@ -3394,11 +3394,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -3409,7 +3409,7 @@ content:
         description: A jobb oldali panel valódi rekurzív oldalstruktúrát mutat; a behúzás a JSON-objektumok tényleges egymásba
           ágyazását követi.
     - name: dynamic_pages_quit_go
-      label: Új aloldalak
+      label: ' ▸ ÚJ ALOLDALAK'
       type: file
       path: content/modules/quit-go/dynamic-pages.json
       format: json
@@ -3419,11 +3419,11 @@ content:
         type: string
         hidden: true
       - name: editor
-        label: Dinamikus aloldalak
+        label: '▰ DINAMIKUS ALOLDALAK'
         type: object
         fields:
         - name: identity
-          label: Modulkapcsolat
+          label: ' ⓪ MODULKAPCSOLAT'
           type: object
           fields:
           - name: moduleId
@@ -3431,7 +3431,7 @@ content:
             type: string
             hidden: true
         - name: pages
-          label: Új aloldalak
+          label: ' ▸ ÚJ ALOLDALAK'
           type: object
           list:
             collapsible:
@@ -3440,7 +3440,7 @@ content:
           description: Új Quit & Go aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
           fields:
           - name: identity
-            label: 1. Azonosítás
+            label: ' ① AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -3461,7 +3461,7 @@ content:
               required: true
               description: Ez jelenik meg a modul felső aloldal-navigációjában.
           - name: visibility
-            label: 2. Publikálás
+            label: ' ② PUBLIKÁLÁS'
             type: object
             fields:
             - name: hidden
@@ -3490,7 +3490,7 @@ content:
               type: string
               description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
           - name: discovery
-            label: 3. Keresés és besorolás
+            label: ' ③ KERESÉS ÉS BESOROLÁS'
             type: object
             fields:
             - name: category
@@ -3503,11 +3503,11 @@ content:
               list: true
               description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
           - name: page
-            label: 4. Oldal
+            label: ' ④ OLDAL'
             type: object
             fields:
             - name: header
-              label: Fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3521,7 +3521,7 @@ content:
                 label: Bevezető / leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3607,7 +3607,7 @@ content:
             type: string
             hidden: true
         - name: appearance
-          label: 2. Megjelenés
+          label: '   ② MEGJELENÉS'
           type: object
           fields:
           - name: icon
@@ -3710,11 +3710,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -3726,11 +3726,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3743,7 +3743,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3761,7 +3761,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -3787,7 +3787,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -3801,7 +3801,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -3843,11 +3843,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: cvCards
-              label: Fő tartalom › CV kártyák
+              label: '  ▸ CV kártyák'
               type: object
               list:
                 collapsible:
@@ -3865,7 +3865,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: cvTips
-              label: Fő tartalom › CV tippek
+              label: '  ▸ CV tippek'
               type: object
               list:
                 collapsible:
@@ -3880,7 +3880,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: cvQuickRule
-              label: Fő tartalom › Cv quick rule
+              label: '  ▸ Cv quick rule'
               type: object
               fields:
               - name: do
@@ -3891,11 +3891,11 @@ content:
                 type: string
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -3916,11 +3916,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -3932,11 +3932,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -3949,7 +3949,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -3967,7 +3967,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -3993,7 +3993,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4018,11 +4018,11 @@ content:
                 type: text
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: firstDayChecklist
-              label: Fő tartalom › Checklist elemek
+              label: '  ▸ Checklist elemek'
               type: object
               list:
                 collapsible:
@@ -4042,7 +4042,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: firstDayQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -4073,11 +4073,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4098,11 +4098,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -4114,11 +4114,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -4136,7 +4136,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -4162,7 +4162,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4187,11 +4187,11 @@ content:
                 type: text
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: helyzeteiScenarios
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -4225,11 +4225,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4250,11 +4250,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -4266,11 +4266,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -4283,7 +4283,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -4301,7 +4301,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -4327,7 +4327,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4341,7 +4341,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -4359,11 +4359,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: linkedinCards
-              label: Fő tartalom › LinkedIn kártyák
+              label: '  ▸ LinkedIn kártyák'
               type: object
               list:
                 collapsible:
@@ -4378,7 +4378,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: linkedinClosing
-              label: Fő tartalom › Linkedin closing
+              label: '  ▸ Linkedin closing'
               type: object
               fields:
               - name: front
@@ -4389,11 +4389,11 @@ content:
                 type: text
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4414,11 +4414,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -4430,11 +4430,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -4447,7 +4447,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -4465,7 +4465,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -4491,7 +4491,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4515,7 +4515,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               fields:
               - name: carry
@@ -4526,11 +4526,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: workWorldCards
-              label: Fő tartalom › Munka világa kártyák
+              label: '  ▸ Munka világa kártyák'
               type: object
               list:
                 collapsible:
@@ -4545,7 +4545,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: workWorldQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -4575,7 +4575,7 @@ content:
                 description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             - name: workWorldClosing
-              label: Fő tartalom › Work world closing
+              label: '  ▸ Work world closing'
               type: object
               fields:
               - name: front
@@ -4586,11 +4586,11 @@ content:
                 type: text
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4611,11 +4611,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -4627,11 +4627,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -4644,7 +4644,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -4662,7 +4662,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -4688,7 +4688,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4712,7 +4712,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -4724,11 +4724,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: legalBasics
-              label: Fő tartalom › Jogi alapismeretek
+              label: '  ▸ Jogi alapismeretek'
               type: object
               list:
                 collapsible:
@@ -4749,7 +4749,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: legalBasicsQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -4780,11 +4780,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4805,11 +4805,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -4821,11 +4821,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -4838,7 +4838,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -4856,7 +4856,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -4882,7 +4882,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -4906,7 +4906,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -4915,11 +4915,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: redFlags
-              label: Fő tartalom › Red flag kártyák
+              label: '  ▸ Red flag kártyák'
               type: object
               list:
                 collapsible:
@@ -4934,7 +4934,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: redFlagQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -4965,11 +4965,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -4990,11 +4990,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5006,11 +5006,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5023,7 +5023,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -5041,7 +5041,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -5067,7 +5067,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -5081,7 +5081,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -5099,11 +5099,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: interviewCards
-              label: Fő tartalom › Interjú kártyák
+              label: '  ▸ Interjú kártyák'
               type: object
               list:
                 collapsible:
@@ -5118,7 +5118,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: interviewClosing
-              label: Fő tartalom › Interview closing
+              label: '  ▸ Interview closing'
               type: object
               fields:
               - name: front
@@ -5129,11 +5129,11 @@ content:
                 type: text
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -5154,11 +5154,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5170,11 +5170,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5187,7 +5187,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -5205,7 +5205,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -5231,7 +5231,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -5245,7 +5245,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -5263,11 +5263,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: jobHuntCards
-              label: Fő tartalom › Álláskeresési kártyák
+              label: '  ▸ Álláskeresési kártyák'
               type: object
               list:
                 collapsible:
@@ -5282,15 +5282,15 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: jobHuntClosing
-              label: Fő tartalom › Job hunt closing
+              label: '  ▸ Job hunt closing'
               type: text
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -5301,7 +5301,7 @@ content:
         description: A jobb oldali panel valódi rekurzív oldalstruktúrát mutat; a behúzás a JSON-objektumok tényleges egymásba
           ágyazását követi.
     - name: dynamic_pages_quick_win
-      label: Új aloldalak
+      label: ' ▸ ÚJ ALOLDALAK'
       type: file
       path: content/modules/quick-win/dynamic-pages.json
       format: json
@@ -5311,11 +5311,11 @@ content:
         type: string
         hidden: true
       - name: editor
-        label: Dinamikus aloldalak
+        label: '▰ DINAMIKUS ALOLDALAK'
         type: object
         fields:
         - name: identity
-          label: Modulkapcsolat
+          label: ' ⓪ MODULKAPCSOLAT'
           type: object
           fields:
           - name: moduleId
@@ -5323,7 +5323,7 @@ content:
             type: string
             hidden: true
         - name: pages
-          label: Új aloldalak
+          label: ' ▸ ÚJ ALOLDALAK'
           type: object
           list:
             collapsible:
@@ -5332,7 +5332,7 @@ content:
           description: Új Quick Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
           fields:
           - name: identity
-            label: 1. Azonosítás
+            label: ' ① AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5349,7 +5349,7 @@ content:
               required: true
               description: Ez jelenik meg a modul felső aloldal-navigációjában.
           - name: visibility
-            label: 2. Publikálás
+            label: ' ② PUBLIKÁLÁS'
             type: object
             fields:
             - name: hidden
@@ -5371,7 +5371,7 @@ content:
               type: string
               description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
           - name: discovery
-            label: 3. Keresés és besorolás
+            label: ' ③ KERESÉS ÉS BESOROLÁS'
             type: object
             fields:
             - name: category
@@ -5384,11 +5384,11 @@ content:
               list: true
               description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
           - name: page
-            label: 4. Oldal
+            label: ' ④ OLDAL'
             type: object
             fields:
             - name: header
-              label: Fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5402,7 +5402,7 @@ content:
                 label: Bevezető / leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -5473,7 +5473,7 @@ content:
             type: string
             hidden: true
         - name: appearance
-          label: 2. Megjelenés
+          label: '   ② MEGJELENÉS'
           type: object
           fields:
           - name: icon
@@ -5576,11 +5576,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5592,11 +5592,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5609,7 +5609,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -5627,7 +5627,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -5653,7 +5653,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -5677,7 +5677,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -5692,11 +5692,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: digitalBehavior
-              label: Fő tartalom › Digitális viselkedés kártyák
+              label: '  ▸ Digitális viselkedés kártyák'
               type: object
               list:
                 collapsible:
@@ -5711,7 +5711,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: digitálisViselkedésQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -5742,11 +5742,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -5767,11 +5767,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5783,11 +5783,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5800,7 +5800,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -5818,7 +5818,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -5844,7 +5844,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -5868,7 +5868,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -5880,11 +5880,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: glossary
-              label: Fő tartalom › Fogalomtár elemek
+              label: '  ▸ Fogalomtár elemek'
               type: object
               list:
                 collapsible:
@@ -5905,7 +5905,7 @@ content:
                 type: text
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: fogalomtárQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -5936,11 +5936,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -5961,11 +5961,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -5977,11 +5977,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -5994,7 +5994,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6012,7 +6012,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -6038,7 +6038,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -6052,7 +6052,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -6070,11 +6070,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: generationCards
-              label: Fő tartalom › Generációs kártyák
+              label: '  ▸ Generációs kártyák'
               type: object
               list:
                 collapsible:
@@ -6089,7 +6089,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: generationClosing
-              label: Fő tartalom › Generation closing
+              label: '  ▸ Generation closing'
               type: object
               fields:
               - name: front
@@ -6100,11 +6100,11 @@ content:
                 type: text
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -6125,11 +6125,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -6141,11 +6141,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -6158,7 +6158,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6176,7 +6176,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -6202,7 +6202,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -6226,7 +6226,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -6238,11 +6238,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: communicationFlips
-              label: Fő tartalom › Fordítós kártyák
+              label: '  ▸ Fordítós kártyák'
               type: object
               list:
                 collapsible:
@@ -6257,7 +6257,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: komunikációQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -6291,11 +6291,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -6316,11 +6316,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -6332,11 +6332,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -6349,7 +6349,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6367,7 +6367,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -6393,7 +6393,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -6407,7 +6407,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -6425,11 +6425,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: ketOldalData
-              label: Fő tartalom › Két oldal kártyák
+              label: '  ▸ Két oldal kártyák'
               type: object
               list:
                 collapsible:
@@ -6451,11 +6451,11 @@ content:
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -6476,11 +6476,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -6492,11 +6492,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -6509,7 +6509,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6527,7 +6527,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -6553,7 +6553,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -6577,7 +6577,7 @@ content:
                 label: Leírás
                 type: text
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -6595,11 +6595,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: proPhrases
-              label: Fő tartalom › Szóhasználati kártyák
+              label: '  ▸ Szóhasználati kártyák'
               type: object
               list:
                 collapsible:
@@ -6614,7 +6614,7 @@ content:
                 type: string
               description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
             - name: proSzóhasználatQuiz
-              label: Fő tartalom › Kvízkérdések
+              label: '  ▸ Kvízkérdések'
               type: object
               list:
                 collapsible:
@@ -6645,11 +6645,11 @@ content:
               description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -6660,7 +6660,7 @@ content:
         description: A jobb oldali panel valódi rekurzív oldalstruktúrát mutat; a behúzás a JSON-objektumok tényleges egymásba
           ágyazását követi.
     - name: dynamic_pages_win_win
-      label: Új aloldalak
+      label: ' ▸ ÚJ ALOLDALAK'
       type: file
       path: content/modules/win-win/dynamic-pages.json
       format: json
@@ -6670,11 +6670,11 @@ content:
         type: string
         hidden: true
       - name: editor
-        label: Dinamikus aloldalak
+        label: '▰ DINAMIKUS ALOLDALAK'
         type: object
         fields:
         - name: identity
-          label: Modulkapcsolat
+          label: ' ⓪ MODULKAPCSOLAT'
           type: object
           fields:
           - name: moduleId
@@ -6682,7 +6682,7 @@ content:
             type: string
             hidden: true
         - name: pages
-          label: Új aloldalak
+          label: ' ▸ ÚJ ALOLDALAK'
           type: object
           list:
             collapsible:
@@ -6691,7 +6691,7 @@ content:
           description: Új Win-Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
           fields:
           - name: identity
-            label: 1. Azonosítás
+            label: ' ① AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -6708,7 +6708,7 @@ content:
               required: true
               description: Ez jelenik meg a modul felső aloldal-navigációjában.
           - name: visibility
-            label: 2. Publikálás
+            label: ' ② PUBLIKÁLÁS'
             type: object
             fields:
             - name: hidden
@@ -6730,7 +6730,7 @@ content:
               type: string
               description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
           - name: discovery
-            label: 3. Keresés és besorolás
+            label: ' ③ KERESÉS ÉS BESOROLÁS'
             type: object
             fields:
             - name: category
@@ -6743,11 +6743,11 @@ content:
               list: true
               description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
           - name: page
-            label: 4. Oldal
+            label: ' ④ OLDAL'
             type: object
             fields:
             - name: header
-              label: Fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -6761,7 +6761,7 @@ content:
                 label: Bevezető / leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6832,7 +6832,7 @@ content:
             type: string
             hidden: true
         - name: appearance
-          label: 2. Megjelenés
+          label: '   ② MEGJELENÉS'
           type: object
           fields:
           - name: icon
@@ -6913,11 +6913,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -6929,11 +6929,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -6946,7 +6946,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -6964,7 +6964,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -6990,7 +6990,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -7004,7 +7004,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -7016,11 +7016,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: bonusMaterials
-              label: Tudástár kártyák
+              label: '  ▸ TUDÁSTÁR KÁRTYÁK'
               type: object
               list:
                 collapsible:
@@ -7032,7 +7032,7 @@ content:
                 type: string
                 hidden: true
               - name: card
-                label: 1. Kártya
+                label: '   ① KÁRTYA'
                 type: object
                 fields:
                 - name: category
@@ -7051,7 +7051,7 @@ content:
                   label: Státusz
                   type: string
               - name: appearance
-                label: 2. Megjelenés
+                label: '   ② MEGJELENÉS'
                 type: object
                 fields:
                 - name: stylePreset
@@ -7092,11 +7092,11 @@ content:
                 preset és opcionális egyedi CSS osztály választható.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -7117,11 +7117,11 @@ content:
           type: string
           hidden: true
         - name: editor
-          label: Oldalstruktúra
+          label: '▰ OLDALSTRUKTÚRA'
           type: object
           fields:
           - name: identity
-            label: 0. Azonosítás
+            label: ' ⓪ AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -7133,11 +7133,11 @@ content:
               type: string
             description: Technikai azonosító és az aloldal neve.
           - name: page
-            label: 1. Oldal
+            label: ' ① OLDAL'
             type: object
             fields:
             - name: header
-              label: Oldal fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -7150,7 +7150,7 @@ content:
                 label: Leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -7168,7 +7168,7 @@ content:
                   message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
               description: Az oldal vizuális beállításai.
             - name: publication
-              label: Publikálás
+              label: '  ↳ Publikálás'
               type: object
               fields:
               - name: publicationStatus
@@ -7194,7 +7194,7 @@ content:
                 description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
               description: Láthatóság és időzítés.
             - name: discovery
-              label: Keresés és besorolás
+              label: '  ↳ Keresés és besorolás'
               type: object
               fields:
               - name: category
@@ -7208,7 +7208,7 @@ content:
                 description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
               description: Kategória és keresési címkék.
             - name: labels
-              label: Oldal saját feliratai
+              label: '  ↳ Oldal saját feliratai'
               type: object
               description: Csak ezen az oldalon használt címkék és komponensszövegek.
               fields:
@@ -7220,11 +7220,11 @@ content:
                 type: string
             description: Az aloldal saját fejléce, megjelenése és feliratai.
           - name: content
-            label: 2. Fő tartalom
+            label: ' ② FŐ TARTALOM'
             type: object
             fields:
             - name: videoStories
-              label: Videókártyák
+              label: '  ▸ VIDEÓKÁRTYÁK'
               type: object
               list:
                 collapsible:
@@ -7243,7 +7243,7 @@ content:
                   regex: ^[a-z0-9][a-z0-9-]*$
                   message: Csak kisbetű, szám és kötőjel használható.
               - name: card
-                label: 1. Kártya
+                label: '   ① KÁRTYA'
                 type: object
                 fields:
                 - name: profession
@@ -7269,7 +7269,7 @@ content:
                       label: Elérhető
                 description: A listában látható kártya tartalma.
               - name: appearance
-                label: 2. Megjelenés
+                label: '   ② MEGJELENÉS'
                 type: object
                 fields:
                 - name: stylePreset
@@ -7285,11 +7285,11 @@ content:
                   pattern: *id009
                 description: A kártya saját vizuális beállításai.
               - name: detail
-                label: Belső oldal
+                label: '   ▾ BELSŐ OLDAL'
                 type: object
                 fields:
                 - name: settings
-                  label: 1. Beállítások
+                  label: '    ① BEÁLLÍTÁSOK'
                   type: object
                   fields:
                   - name: enabled
@@ -7304,11 +7304,11 @@ content:
                     default: Vissza a videókhoz
                   description: A belső oldal megnyitásának vezérlése.
                 - name: page
-                  label: 2. Belső oldal
+                  label: '    ② OLDAL'
                   type: object
                   fields:
                   - name: header
-                    label: Belső oldal fejléce
+                    label: '     ↳ Fejléc'
                     type: object
                     description: A kártyára kattintás után megjelenő oldal fejléce.
                     fields:
@@ -7324,7 +7324,7 @@ content:
                       label: Bevezető
                       type: text
                   - name: appearance
-                    label: Megjelenés
+                    label: '  ↳ Megjelenés'
                     type: object
                     fields:
                     - name: stylePreset
@@ -7354,7 +7354,7 @@ content:
                         message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
                     description: Az oldal vizuális beállításai.
                   - name: publication
-                    label: Publikálás
+                    label: '  ↳ Publikálás'
                     type: object
                     fields:
                     - name: publicationStatus
@@ -7381,7 +7381,7 @@ content:
                       description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
                     description: Láthatóság és időzítés.
                   - name: discovery
-                    label: Keresés és besorolás
+                    label: '  ↳ Keresés és besorolás'
                     type: object
                     fields:
                     - name: category
@@ -7396,11 +7396,11 @@ content:
                     description: Kategória és keresési címkék.
                   description: Az aloldal saját fejléce, megjelenése és feliratai.
                 - name: content
-                  label: 3. Tartalom
+                  label: '    ③ TARTALOM'
                   type: object
                   fields:
                   - name: blocks
-                    label: Belső oldal tartalomblokkjai
+                    label: '     ▸ Tartalomblokkok'
                     component: content_blocks
                     description: Itt adhatsz hozzá szöveget, képet, videót, hangot, kvízt, flip-cardot, checklistet és minden
                       más támogatott blokkot.
@@ -7408,11 +7408,11 @@ content:
                 description: A kártyából megnyíló saját aloldal valódi, beágyazott szerkezete.
             description: Az oldal tényleges, sorrendben megjelenő tartalma.
           - name: extensions
-            label: 3. Bővítések
+            label: ' ③ BŐVÍTÉSEK'
             type: object
             fields:
             - name: blocks
-              label: Plusz tartalomblokkok
+              label: '  ▸ Tartalomblokkok hozzáadása'
               component: content_blocks
               description: Új szöveg, kép, videó, hang, galéria, kártya vagy letöltés hozzáadása a meglévő tartalom után.
             description: Az oldal végére szabadon hozzáadható komponensek.
@@ -7423,7 +7423,7 @@ content:
         description: A jobb oldali panel valódi rekurzív oldalstruktúrát mutat; a behúzás a JSON-objektumok tényleges egymásba
           ágyazását követi.
     - name: dynamic_pages_galaxy_guide
-      label: Új aloldalak
+      label: ' ▸ ÚJ ALOLDALAK'
       type: file
       path: content/modules/galaxy-guide/dynamic-pages.json
       format: json
@@ -7433,11 +7433,11 @@ content:
         type: string
         hidden: true
       - name: editor
-        label: Dinamikus aloldalak
+        label: '▰ DINAMIKUS ALOLDALAK'
         type: object
         fields:
         - name: identity
-          label: Modulkapcsolat
+          label: ' ⓪ MODULKAPCSOLAT'
           type: object
           fields:
           - name: moduleId
@@ -7445,7 +7445,7 @@ content:
             type: string
             hidden: true
         - name: pages
-          label: Új aloldalak
+          label: ' ▸ ÚJ ALOLDALAK'
           type: object
           list:
             collapsible:
@@ -7455,7 +7455,7 @@ content:
             kódmódosítás nem szükséges.
           fields:
           - name: identity
-            label: 1. Azonosítás
+            label: ' ① AZONOSÍTÁS'
             type: object
             fields:
             - name: id
@@ -7472,7 +7472,7 @@ content:
               required: true
               description: Ez jelenik meg a modul felső aloldal-navigációjában.
           - name: visibility
-            label: 2. Publikálás
+            label: ' ② PUBLIKÁLÁS'
             type: object
             fields:
             - name: hidden
@@ -7494,7 +7494,7 @@ content:
               type: string
               description: Opcionális ISO dátum/idő. Ettől az időponttól az elem nem jelenik meg.
           - name: discovery
-            label: 3. Keresés és besorolás
+            label: ' ③ KERESÉS ÉS BESOROLÁS'
             type: object
             fields:
             - name: category
@@ -7507,11 +7507,11 @@ content:
               list: true
               description: Opcionális keresési címkék. Új címke külön sorban adható hozzá.
           - name: page
-            label: 4. Oldal
+            label: ' ④ OLDAL'
             type: object
             fields:
             - name: header
-              label: Fejléc
+              label: '  ↳ Fejléc'
               type: object
               fields:
               - name: eyebrow
@@ -7525,7 +7525,7 @@ content:
                 label: Bevezető / leírás
                 type: text
             - name: appearance
-              label: Megjelenés
+              label: '  ↳ Megjelenés'
               type: object
               fields:
               - name: stylePreset
@@ -8415,7 +8415,7 @@ content:
 
             CMS útvonal: 3. Többi → Közös adatok → ÖNMAGAM adatok → Onmagam data → Túlélőkalauz kártyák.'
         - name: blueCollarExamples
-          label: Karrierpéldák
+          label: '  ▸ KARRIERPÉLDÁK'
           type: object
           list:
             collapsible:
@@ -8446,7 +8446,7 @@ content:
 
             CMS útvonal: 3. Többi → Közös adatok → ÖNMAGAM adatok → Onmagam data → Karrierpéldák.'
         - name: onmagamQuizItems
-          label: Kvízkérdések
+          label: '  ▸ KVÍZKÉRDÉSEK'
           type: object
           list:
             collapsible:

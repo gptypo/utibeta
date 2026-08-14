@@ -1,0 +1,55 @@
+ÚTITERV BETA 7.1.1 – validation summary
+
+
+> utiterv-pwa-content@7.1.1 validate:release
+> npm run validate:content && npm run validate:recursive && npm run validate:js && npm run validate:a11y && npm run validate:navigation && npm run validate:cms && npm run validate:cms-editor-tree && npm run validate:cms-visual
+
+
+> utiterv-pwa-content@7.1.1 validate:content
+> node tools/validate-content.mjs
+
+ÚTITERV – CONTENT VALIDATION
+✓ 41/41 JSON parse-olható
+✓ 64 média-hivatkozás ellenőrizve
+✓ 4 modul-index ellenőrizve
+
+✓ Nincs blokkoló tartalmi hiba.
+
+> utiterv-pwa-content@7.1.1 validate:recursive
+> node tools/validate-recursive-content.mjs
+
+✓ 7.1.1 recursive content schema valid
+
+> utiterv-pwa-content@7.1.1 validate:js
+> node tools/validate-js.mjs
+
+ÚTITERV – JAVASCRIPT VALIDATION
+✓ 15/15 JavaScript fájl szintaktikailag valid
+
+> utiterv-pwa-content@7.1.1 validate:a11y
+> node tools/validate-a11y.mjs
+
+ÚTITERV – ACCESSIBILITY SMOKE
+✓ alap akadálymentességi ellenőrzések rendben
+
+> utiterv-pwa-content@7.1.1 validate:navigation
+> node tools/validate-navigation.mjs
+
+ÚTITERV – NAVIGATION / PLATFORM SMOKE
+✓ routing, modulindexek és platform modulok rendben
+
+> utiterv-pwa-content@7.1.1 validate:cms
+> node tools/validate-cms-hierarchy.mjs
+
+✓ CMS hierarchy: 3 root groups, 4 module groups, nested page groups
+✓ CMS paths unique: 42
+
+> utiterv-pwa-content@7.1.1 validate:cms-editor-tree
+> node tools/validate-cms-editor-tree.mjs
+
+✓ Pages CMS valódi rekurzív szerkesztőfa valid
+
+> utiterv-pwa-content@7.1.1 validate:cms-visual
+> node tools/validate-cms-visual-hierarchy.mjs
+
+✓ Pages CMS visual hierarchy valid (24 recursive page roots)
