@@ -9,6 +9,6 @@
     "validate:a11y": "node tools/validate-a11y.mjs",
     "validate:navigation": "node tools/validate-navigation.mjs"
   },
-  "version": "7.0.0",
+  "version": "7.0.1",
   "type": "module"
 }

@@ -97,7 +97,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: eyebrow
         label: Kis felirat
@@ -149,7 +149,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: src
         label: Kép
@@ -205,7 +205,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: title
         label: Cím
@@ -267,7 +267,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: title
         label: Cím
@@ -320,7 +320,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: title
         label: Cím
@@ -377,7 +377,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: eyebrow
         label: Kis felirat
@@ -446,7 +446,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: eyebrow
         label: Kis felirat
@@ -512,7 +512,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: title
         label: Cím
@@ -573,7 +573,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: quote
         label: Idézet
@@ -623,7 +623,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
     - name: quiz
       label: Interaktív · Kvíz
@@ -665,7 +665,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: id
         label: Kvíz azonosító
@@ -756,7 +756,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: id
         label: Kártyasor azonosító
@@ -830,7 +830,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: id
         label: Kártyasor azonosító
@@ -917,7 +917,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: id
         label: Checklist azonosító
@@ -989,7 +989,7 @@ components:
         type: string
         description: 'Opcionális. Példa: szakacs-hero. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Kisbetűvel kezdődő CSS osztálynév kell; csak a-z, 0-9 és kötőjel használható.
       - name: eyebrow
         label: Kis felirat
@@ -2093,7 +2093,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
     - name: blueCollarExamples
       label: 2 · Fő tartalom › Karrierpéldák
@@ -2229,7 +2229,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -2383,7 +2383,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
     - name: breathing
       label: 2 · Fő tartalom › Légzéstechnika oldal tartalma
@@ -2522,7 +2522,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -2809,7 +2809,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -2930,7 +2930,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
     - name: preboardingData
       label: 2 · Fő tartalom › Preboarding kártyák
@@ -3035,7 +3035,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -3194,7 +3194,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
     - name: blocks
       label: Oldal tartalma
@@ -3386,7 +3386,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -3560,7 +3560,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -3697,7 +3697,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -3830,7 +3830,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -3962,7 +3962,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -4127,7 +4127,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -4307,7 +4307,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -4478,7 +4478,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -4610,7 +4610,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -4863,7 +4863,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -5022,7 +5022,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -5202,7 +5202,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -5334,7 +5334,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -5493,7 +5493,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -5621,7 +5621,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: quiz
         label: Kvíz fejléc
@@ -5889,7 +5889,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -5946,7 +5946,7 @@ content:
         type: string
         description: 'Opcionális. Példa: szakacs-kartya. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
         pattern: &id005
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: category
         label: Kategória
@@ -6053,7 +6053,7 @@ content:
         type: string
         description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
         pattern:
-          regex: ^[a-z][a-z0-9-]{0,63}$
+          regex: ^([a-z][a-z0-9-]{0,63})?$
           message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: labels
         label: Oldal saját feliratai
@@ -6195,7 +6195,7 @@ content:
           type: string
           description: 'Opcionális extra CSS osztály ehhez az oldalhoz/elemhez. Példa: szakacs-detail.'
           pattern:
-            regex: ^[a-z][a-z0-9-]{0,63}$
+            regex: ^([a-z][a-z0-9-]{0,63})?$
             message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
         - name: backLabel
           label: 3 · Vissza gomb
