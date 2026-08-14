@@ -4846,6 +4846,40 @@ content:
         label: Id
         type: string
         hidden: true
+      - name: stylePreset
+        label: Megjelenési stílus
+        type: select
+        default: default
+        description: A kártya saját vizuális presetje. A konkrét megjelenést a CSS határozza meg.
+        options: &id004
+          values:
+          - value: default
+            label: Alap
+          - value: card
+            label: Kártyás
+          - value: highlight
+            label: Kiemelt
+          - value: minimal
+            label: Minimal
+          - value: dark
+            label: Sötét
+          - value: module
+            label: Modul-szín
+          - value: wide
+            label: Széles
+          - value: compact
+            label: Kompakt
+          - value: outline
+            label: Keretes
+          - value: soft
+            label: Lágy háttér
+      - name: customClass
+        label: Egyedi CSS osztály
+        type: string
+        description: 'Opcionális. Példa: szakacs-kartya. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
+        pattern: &id005
+          regex: ^[a-z][a-z0-9-]{0,63}$
+          message: Csak kisbetű, szám és kötőjel használható; kisbetűvel kezdődjön.
       - name: category
         label: Kategória
         type: string
@@ -4861,7 +4895,8 @@ content:
       - name: status
         label: Státusz
         type: string
-      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető. Minden kártyához külön megjelenési preset
+        és opcionális egyedi CSS osztály választható.
     - name: blocks
       label: 9 · Plusz tartalomblokkok
       component: content_blocks
@@ -4941,7 +4976,7 @@ content:
           collapsed: true
           summary: '{profession} · {title}'
       description: A kártyák sorrendje itt megegyezik az oldalon látható sorrenddel. Minden kártya saját opcionális belső
-        oldalt tartalmazhat.
+        oldalt tartalmazhat. Minden kártyához külön megjelenési preset és opcionális egyedi CSS osztály választható.
       fields:
       - name: id
         label: Technikai azonosító
@@ -4952,6 +4987,17 @@ content:
         pattern:
           regex: ^[a-z0-9][a-z0-9-]*$
           message: Csak kisbetű, szám és kötőjel használható.
+      - name: stylePreset
+        label: Megjelenési stílus
+        type: select
+        default: default
+        description: A kártya saját vizuális presetje. A konkrét megjelenést a CSS határozza meg.
+        options: *id004
+      - name: customClass
+        label: Egyedi CSS osztály
+        type: string
+        description: 'Opcionális. Példa: szakacs-kartya. Csak kisbetű, szám és kötőjel; CSS-kódot ne írj ide.'
+        pattern: *id005
       - name: profession
         label: Szakma / kártya felső címe
         type: string

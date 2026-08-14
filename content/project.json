@@ -1,6 +1,6 @@
 {
   "schema": "utiterv-project-manifest-v5",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Adatvezérelt edukációs PWA projekt",

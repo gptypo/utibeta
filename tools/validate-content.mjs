@@ -11,6 +11,7 @@ const mediaRefs=[];
 const ids=new Map();
 
 const ELEMENT_STYLE_PRESETS=new Set(['default','card','highlight','minimal','dark','module','wide','compact','outline','soft']);
+function validateStyledItems(file,items,where){if(!Array.isArray(items))return;items.forEach((item,index)=>{if(!item||typeof item!=='object')return;const style=String(item.stylePreset||'default');if(!ELEMENT_STYLE_PRESETS.has(style))addIssue(file,`${where}[${index}] ismeretlen stylePreset: ${style}.`);const custom=String(item.customClass||'').trim();if(custom&&!/^[a-z][a-z0-9-]{0,63}$/.test(custom))addIssue(file,`${where}[${index}] customClass érvénytelen: ${custom}.`);});}
 const PAGE_STYLE_PRESETS=new Set(['default','cards','highlight','minimal','dark','module']);
 function validatePresentation(value,file,keyPath=''){
   if(!value||typeof value!=='object'||Array.isArray(value))return;
@@ -215,6 +216,8 @@ for(const file of jsonFiles){
     validateEmbeddedDetails(data?.data,name,'data');
     validateExtensibleCollections(data,name);
     if(data?.schema==='utiterv-section-v5'){const style=String(data?.data?.page?.stylePreset||'default');if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`data.page.stylePreset ismeretlen: ${style}.`);}
+    if(name.endsWith('content/modules/galaxy-guide/videos.json'))validateStyledItems(name,data?.data?.videoStories,'data.videoStories');
+    if(name.endsWith('content/modules/galaxy-guide/materials.json'))validateStyledItems(name,data?.data?.bonusMaterials,'data.bonusMaterials');
     if(data?.schema==='utiterv-dynamic-pages-v1'){
       if(!Array.isArray(data.pages)) addIssue(name,'pages nem lista.');
       else {
@@ -242,7 +245,7 @@ for(const file of jsonFiles){
 const manifest=parsed.get('content/project.json');
 if(!manifest) addIssue('content/project.json','A projekt manifest nem olvasható.');
 else{
-  if(String(manifest.version||'')!=='6.1.0') addIssue('content/project.json',`A release verziója nem 6.1.0: ${manifest.version||'hiányzik'}.`);
+  if(String(manifest.version||'')!=='6.1.1') addIssue('content/project.json',`A release verziója nem 6.1.1: ${manifest.version||'hiányzik'}.`);
   if(!String(manifest.meta?.contentModel||'').includes('element-style-presets-v1')) addIssue('content/project.json','A 6.1 contentModel metaadata hiányos: element-style-presets-v1 hiányzik.');
   const uiData=parsed.get('content/ui.json');
   for(const key of ['title','placeholder','hint','empty']) if(!String(uiData?.search?.[key]||'').trim()) addIssue('content/ui.json',`A kereső UI mezője hiányzik: search.${key}.`);

@@ -10,7 +10,9 @@
         "icon": "Newspaper",
         "title": "Az első béralku – így csináld",
         "description": "Hogyan kérj fizetést úgy, hogy meg is kapd? Taktikák és mondatok pályakezdőknek az első tárgyaláshoz.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "article-career-z-gen",
@@ -18,7 +20,9 @@
         "icon": "Newspaper",
         "title": "Karrierút tervezés Z generációsoknak",
         "description": "Hogyan építs karriert anélkül, hogy kiégnél 30 éves korodra? Életutak, váltások, tudatos döntések.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "article-linkedin",
@@ -26,7 +30,9 @@
         "icon": "Newspaper",
         "title": "LinkedIn profil – így keresnek majd téged",
         "description": "Profilépítési tippek, amivel a HR-esek és fejvadászok aktívan téged fognak keresni.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "article-top5-mistakes",
@@ -34,7 +40,9 @@
         "icon": "Newspaper",
         "title": "A pályakezdő 5 leggyakoribb hibája",
         "description": "Amit majdnem mindenki elront az első munkahelyen, és hogyan kerüld el ezeket te is.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "guide-cv",
@@ -42,7 +50,9 @@
         "icon": "FileText",
         "title": "Önéletrajz, ami átjut a szűrőn",
         "description": "A HR-esek 6 másodpercet szánnak egy CV-re. Így tedd ütőssé a tiédet – ATS-kompatibilis formátumban.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "video-interview",
@@ -50,7 +60,9 @@
         "icon": "Video",
         "title": "Sikeres állásinterjú – mit keresnek valójában?",
         "description": "Szakértői tippek és tipikus kérdések. Felkészítő anyag az első és a sokadik interjúhoz egyaránt.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "video-feedback",
@@ -58,7 +70,9 @@
         "icon": "Video",
         "title": "Hogyan kérj visszajelzést a főnöködtől?",
         "description": "Konkrét technikák és mondatok arra, hogyan kapj fejlesztő visszajelzést rendszeres értékelőkön kívül is.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "download-weekly-planner",
@@ -66,7 +80,9 @@
         "icon": "Download",
         "title": "Heti tervező és fókusz sablon",
         "description": "Nyomtasd ki vagy használd digitálisan, hogy rendszerezd a teendőidet és megmaradj a pályán.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "download-labor-law",
@@ -74,7 +90,9 @@
         "icon": "Download",
         "title": "Munkajogi gyorstalpaló PDF",
         "description": "Minden fontos szabályozás – minimálbér, próbaidő, túlóra, felmondás – egy rövid, érthető dokumentumban.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "story-first-mistake",
@@ -82,7 +100,9 @@
         "icon": "MessageCircle",
         "title": "Ezt rontottam el az első munkahelyemen",
         "description": "Valós történetek arról, hogyan álltak fel fiatalok egy-egy nagyobb hiba után. Tanulságos és bátorító.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "calc-salary",
@@ -90,7 +110,9 @@
         "icon": "Calculator",
         "title": "Bruttó–nettó bér kalkulátor",
         "description": "Tudd meg, mennyi marad a fizetésedből adók és járulékok után. Gyors, ingyenes, naprakész.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       },
       {
         "id": "ofa-utiterv",
@@ -98,7 +120,9 @@
         "icon": "Target",
         "title": "Útiterv a Jövőbe – programinformáció",
         "description": "Az OFA Nonprofit Kft. pályaorientációs programjának részletei, képzési lehetőségek és kapcsolatfelvétel.",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "stylePreset": "default",
+        "customClass": ""
       }
     ],
     "blocks": [],
