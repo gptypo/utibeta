@@ -5,5 +5,5 @@
     "validate": "node tools/validate-content.mjs",
     "validate:content": "node tools/validate-content.mjs"
   },
-  "version": "5.3.0"
+  "version": "5.4.0"
 }

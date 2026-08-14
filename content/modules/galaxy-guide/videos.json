@@ -10,7 +10,24 @@
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
         "status": "coming-soon",
-        "detailPage": "szakacs"
+        "detail": {
+          "enabled": true,
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Szakács",
+            "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "eyebrow": "Hamarosan",
+              "title": "Ismerd meg a szakmát",
+              "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
+            }
+          ]
+        }
       },
       {
         "id": "video-story-placeholder-2",
@@ -18,7 +35,17 @@
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
         "status": "coming-soon",
-        "detailPage": ""
+        "detail": {
+          "enabled": false,
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Villanyszerelő",
+            "description": ""
+          },
+          "blocks": []
+        }
       },
       {
         "id": "video-story-placeholder-3",
@@ -26,7 +53,17 @@
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
         "status": "coming-soon",
-        "detailPage": ""
+        "detail": {
+          "enabled": false,
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Hegesztő",
+            "description": ""
+          },
+          "blocks": []
+        }
       }
     ],
     "blocks": [],
@@ -41,27 +78,6 @@
         "soon": "Hamarosan"
       },
       "stylePreset": "default"
-    },
-    "detailPages": [
-      {
-        "id": "szakacs",
-        "hidden": false,
-        "stylePreset": "default",
-        "backLabel": "Vissza a videókhoz",
-        "header": {
-          "eyebrow": "Galaxy Guide · Videók",
-          "title": "Szakács",
-          "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
-        },
-        "blocks": [
-          {
-            "type": "text",
-            "eyebrow": "Hamarosan",
-            "title": "Ismerd meg a szakmát",
-            "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
-          }
-        ]
-      }
-    ]
+    }
   }
 }

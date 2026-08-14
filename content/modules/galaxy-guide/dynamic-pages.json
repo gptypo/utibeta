@@ -1,48 +1,5 @@
 {
   "schema": "utiterv-dynamic-pages-v1",
   "moduleId": "bonus",
-  "pages": [
-    {
-      "hidden": false,
-      "id": "newContent_1",
-      "navTitle": "Új tartalom",
-      "page": {
-        "header": {
-          "title": "Új tartalom",
-          "description": "egy gyors új kvíz"
-        },
-        "stylePreset": "cards"
-      },
-      "blocks": [
-        {
-          "type": "quiz",
-          "hidden": false,
-          "id": "kommunikacios-kviz-2",
-          "title": "Gyors új kíz próba",
-          "items": [
-            {
-              "question": "Mit tennél ha te lennél?",
-              "options": [
-                {
-                  "text": "Semmit.",
-                  "isOptimal": true,
-                  "feedback": "Mert miért?"
-                },
-                {
-                  "text": "Mindenti",
-                  "isOptimal": false,
-                  "feedback": "Naná"
-                },
-                {
-                  "text": "Hogy?",
-                  "isOptimal": false,
-                  "feedback": "Miért is ne?"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "pages": []
 }

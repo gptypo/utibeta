@@ -134,6 +134,30 @@ function validateExtensibleCollections(value,file,keyPath=''){
 }
 
 
+function validateEmbeddedDetails(value,file,keyPath='data',seen=new Set()){
+  if(Array.isArray(value)){value.forEach((item,i)=>validateEmbeddedDetails(item,file,`${keyPath}[${i}]`,seen));return;}
+  if(!value||typeof value!=='object')return;
+  if(Object.prototype.hasOwnProperty.call(value,'detail')){
+    const id=String(value.id||'').trim(),detail=value.detail;
+    if(!id)addIssue(file,`${keyPath} belső oldalhoz a szülő elem id mezője kötelező.`);
+    else if(!/^[a-z0-9][a-z0-9-]*$/.test(id))addIssue(file,`${keyPath}.id csak kisbetűt, számot és kötőjelet tartalmazhat: ${id}.`);
+    else if(seen.has(id))addIssue(file,`${keyPath}.id duplikált beágyazott oldal-azonosító: ${id}.`);
+    else seen.add(id);
+    if(detail!==undefined&&detail!==null&&(typeof detail!=='object'||Array.isArray(detail))){addIssue(file,`${keyPath}.detail nem objektum.`);}
+    else if(detail&&typeof detail==='object'){
+      if(detail.enabled!==undefined&&typeof detail.enabled!=='boolean')addIssue(file,`${keyPath}.detail.enabled csak true/false lehet.`);
+      const style=String(detail.stylePreset||'default');
+      if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(file,`${keyPath}.detail ismeretlen stylePreset: ${style}.`);
+      if(detail.enabled===true&&!String(detail.header?.title||'').trim())addIssue(file,`${keyPath}.detail belső oldal címe hiányzik.`);
+      if(detail.blocks!==undefined){
+        if(!Array.isArray(detail.blocks))addIssue(file,`${keyPath}.detail.blocks nem lista.`);
+        else detail.blocks.forEach((block,bi)=>validateBlock(block,file,bi,`${keyPath}.detail`));
+      }
+    }
+  }
+  for(const [key,child] of Object.entries(value))if(key!=='detail'&&key!=='detailPages')validateEmbeddedDetails(child,file,keyPath?`${keyPath}.${key}`:key,seen);
+}
+
 function validateDetailPages(data,file){
   const pages=data?.data?.detailPages;
   if(pages===undefined)return;
@@ -170,6 +194,7 @@ for(const file of jsonFiles){
       else blocks.forEach((block,i)=>validateBlock(block,name,i,'data'));
     }
     validateDetailPages(data,name);
+    validateEmbeddedDetails(data?.data,name,'data');
     validateExtensibleCollections(data,name);
     if(data?.schema==='utiterv-section-v5'){const style=String(data?.data?.page?.stylePreset||'default');if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`data.page.stylePreset ismeretlen: ${style}.`);}
     if(data?.schema==='utiterv-dynamic-pages-v1'){

@@ -2020,96 +2020,89 @@ content:
       list:
         collapsible:
           collapsed: true
-          summary: '{title}'
+          summary: '{profession} · {title}'
+      description: Tetszőleges számú videókártya adható hozzá. A belső oldal közvetlenül a kártyán belül szerkeszthető, nem kell külön ID-kat összekapcsolni.
       fields:
       - name: id
         label: Technikai azonosító
         type: string
         required: true
-        description: Egyedi azonosító. Új elemnél adj meg kisbetűs, kötőjeles nevet (pl. uj-elem).
+        description: Egyszer adj neki egy egyedi, kisbetűs, kötőjeles azonosítót (pl. szakacs-1). A belső oldal automatikusan ezt használja; máshol nem kell beírni.
         pattern:
           regex: ^[a-z0-9][a-z0-9-]*$
           message: Csak kisbetű, szám és kötőjel használható.
       - name: profession
-        label: Profession
-        type: string
-      - name: title
-        label: Cím
-        type: string
-      - name: description
-        label: Leírás
-        type: string
-      - name: status
-        label: Státusz
-        type: string
-      - name: detailPage
-        label: Megnyitandó részletes tartalom ID-ja
-        type: string
-        description: Ha üres, a kártya nem nyit részletes oldalt. Ha megadsz egy ID-t, annak egyeznie kell az alábbi „Részletes tartalmak” egyik
-          azonosítójával.
-        pattern:
-          regex: ^[a-z0-9-]*$
-          message: Csak kisbetű, szám és kötőjel használható.
-      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
-    - name: detailPages
-      label: Részletes tartalmak
-      type: object
-      description: A Videók kártyáiról megnyitható belső oldalak. Itt a Szakács oldal és további részletes tartalmak is létrehozhatók.
-      list:
-        collapsible:
-          collapsed: true
-          summary: '{header.title}'
-      fields:
-      - name: id
-        label: Technikai azonosító
+        label: Szakma / kártya felső címe
         type: string
         required: true
-        description: Ezt az ID-t kell kiválasztani/beírni a kártya „Megnyitandó részletes tartalom ID-ja” mezőjébe.
-        pattern:
-          regex: ^[a-z0-9][a-z0-9-]*$
-          message: Kisbetűvel vagy számmal kezdődjön; csak kisbetű, szám és kötőjel használható.
-      - name: hidden
-        label: Részletes oldal elrejtése
-        type: boolean
-      - name: backLabel
-        label: Vissza gomb felirata
+      - name: title
+        label: Kártya címe
         type: string
-      - name: stylePreset
-        label: Vizuális stílus
+        required: true
+      - name: description
+        label: Kártya leírása
+        type: text
+      - name: status
+        label: Státusz
         type: select
-        default: default
+        default: coming-soon
         options:
           values:
-          - value: default
-            label: Alap
-          - value: cards
-            label: Kártyás
-          - value: highlight
-            label: Kiemelt
-          - value: minimal
-            label: Minimal
-          - value: dark
-            label: Sötét panel
-          - value: module
-            label: Modul-szín
-      - name: header
-        label: Részletes oldal fejléc
+          - value: coming-soon
+            label: Hamarosan
+          - value: live
+            label: Elérhető
+      - name: detail
+        label: Belső oldal
         type: object
+        description: Opcionális részletes oldal ehhez a kártyához. Nem kell külön oldalt létrehozni vagy technikai ID-t összekapcsolni.
         fields:
-        - name: eyebrow
-          label: Felső címke
+        - name: enabled
+          label: Van részletes oldal
+          type: boolean
+          default: false
+          description: Kapcsold be, ha a kártyára kattintva saját belső oldal nyíljon meg. Kikapcsolva a kártya nem kattintható.
+        - name: header
+          label: Belső oldal fejléc
+          type: object
+          description: A kártyára kattintás után megjelenő oldal fejléce.
+          fields:
+          - name: eyebrow
+            label: Felső címke
+            type: string
+          - name: title
+            label: Cím
+            type: string
+            description: Ha a belső oldal be van kapcsolva, ezt érdemes kitölteni. A validátor figyelmeztet, ha hiányzik.
+          - name: description
+            label: Bevezető
+            type: text
+        - name: stylePreset
+          label: Belső oldal vizuális stílusa
+          type: select
+          default: default
+          options:
+            values:
+            - value: default
+              label: Alap
+            - value: cards
+              label: Kártyás
+            - value: highlight
+              label: Kiemelt
+            - value: minimal
+              label: Minimal
+            - value: dark
+              label: Sötét panel
+            - value: module
+              label: Modul-szín
+        - name: backLabel
+          label: Vissza gomb felirata
           type: string
-        - name: title
-          label: Cím
-          type: string
-          required: true
-        - name: description
-          label: Bevezető
-          type: text
-      - name: blocks
-        label: Részletes oldal tartalma
-        component: content_blocks
-        description: Szöveg, kép, videó, hang, kvíz, flip-card, checklist és minden más újrahasznosítható blokk hozzáadható.
+          default: Vissza a videókhoz
+        - name: blocks
+          label: Belső oldal tartalma
+          component: content_blocks
+          description: Itt adhatsz hozzá szöveget, képet, videót, hangot, kvízt, flip-cardot, checklistet és minden más támogatott blokkot.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks

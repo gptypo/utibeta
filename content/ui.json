@@ -3,7 +3,7 @@
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.",
-    "version": "BETA 5.3.0"
+    "version": "BETA 5.4.0"
   },
   "shell": {
     "homeAria": "Főoldal",
@@ -252,6 +252,6 @@
     "copySuffix": "másolat"
   },
   "app": {
-    "version": "BETA 5.3.0"
+    "version": "BETA 5.4.0"
   }
 }
