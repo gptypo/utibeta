@@ -29,7 +29,7 @@
             "title": "Szakács",
             "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
           },
-          "stylePreset": "minimal",
+          "stylePreset": "module",
           "backLabel": "Vissza a videókhoz",
           "blocks": [
             {
