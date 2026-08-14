@@ -39,7 +39,7 @@
               "type": "text",
               "hidden": false,
               "publicationStatus": "published",
-              "stylePreset": "module",
+              "stylePreset": "minimal",
               "eyebrow": "Hamarosan",
               "title": "Ismerd meg a szakmát",
               "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
