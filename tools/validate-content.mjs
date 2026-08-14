@@ -10,6 +10,19 @@ const parsed=new Map();
 const mediaRefs=[];
 const ids=new Map();
 
+const ELEMENT_STYLE_PRESETS=new Set(['default','card','highlight','minimal','dark','module','wide','compact','outline','soft']);
+const PAGE_STYLE_PRESETS=new Set(['default','cards','highlight','minimal','dark','module']);
+function validatePresentation(value,file,keyPath=''){
+  if(!value||typeof value!=='object'||Array.isArray(value))return;
+  if(Object.prototype.hasOwnProperty.call(value,'customClass')){
+    const custom=String(value.customClass||'').trim();
+    if(custom&&!/^[a-z][a-z0-9-]{0,63}$/.test(custom))addIssue(file,`${keyPath}.customClass érvénytelen CSS osztály: ${custom}. Csak kisbetű, szám és kötőjel használható, kisbetűvel kezdve.`);
+  }
+  for(const [key,child] of Object.entries(value)){
+    if(child&&typeof child==='object')validatePresentation(child,file,keyPath?`${keyPath}.${key}`:key);
+  }
+}
+
 const rel=p=>path.relative(root,p).replaceAll(path.sep,'/');
 const addIssue=(file,message)=>issues.push({file,message});
 const addWarning=(file,message)=>warnings.push({file,message});
@@ -60,6 +73,10 @@ function validateBlock(block,file,index,where){
   if(!type){addIssue(file,`${where}.blocks[${index}] mezőből hiányzik a type.`);return;}
   if(!supported.has(type)){addIssue(file,`${where}.blocks[${index}] ismeretlen blokktípus: ${type}.`);return;}
   if(block.hidden) return;
+  const elementStyle=String(block.stylePreset||'default');
+  if(!ELEMENT_STYLE_PRESETS.has(elementStyle))addIssue(file,`${where}.blocks[${index}] ismeretlen elem stylePreset: ${elementStyle}.`);
+  const custom=String(block.customClass||'').trim();
+  if(custom&&!/^[a-z][a-z0-9-]{0,63}$/.test(custom))addIssue(file,`${where}.blocks[${index}] customClass érvénytelen: ${custom}.`);
   const required={image:['src'],video:['src'],embed:['url'],audio:['src'],download:['file'],quote:['quote']};
   for(const key of required[type]||[]) if(!String(block[key]??'').trim()) addIssue(file,`${where}.blocks[${index}] (${type}) kötelező mezője üres: ${key}.`);
   if(type==='gallery'){
@@ -187,6 +204,7 @@ for(const file of jsonFiles){
   try{
     const data=JSON.parse(fs.readFileSync(file,'utf8'));
     parsed.set(name,data);
+    validatePresentation(data,name);
     visit(data,name);
     const blocks=data?.data?.blocks;
     if(blocks!==undefined){
@@ -224,8 +242,8 @@ for(const file of jsonFiles){
 const manifest=parsed.get('content/project.json');
 if(!manifest) addIssue('content/project.json','A projekt manifest nem olvasható.');
 else{
-  if(String(manifest.version||'')!=='6.0.0') addIssue('content/project.json',`A release verziója nem 6.0.0: ${manifest.version||'hiányzik'}.`);
-  if(!String(manifest.meta?.contentModel||'').includes('embedded-detail-pages-v2')) addIssue('content/project.json','A 6.0 contentModel metaadata hiányos.');
+  if(String(manifest.version||'')!=='6.1.0') addIssue('content/project.json',`A release verziója nem 6.1.0: ${manifest.version||'hiányzik'}.`);
+  if(!String(manifest.meta?.contentModel||'').includes('element-style-presets-v1')) addIssue('content/project.json','A 6.1 contentModel metaadata hiányos: element-style-presets-v1 hiányzik.');
   const uiData=parsed.get('content/ui.json');
   for(const key of ['title','placeholder','hint','empty']) if(!String(uiData?.search?.[key]||'').trim()) addIssue('content/ui.json',`A kereső UI mezője hiányzik: search.${key}.`);
   const refs=[manifest.home,manifest.ui,manifest.assets,manifest.custom,manifest.shared?.competencies,manifest.shared?.onmagamData].filter(Boolean);
