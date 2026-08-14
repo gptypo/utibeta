@@ -1,76 +1,84 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "interview",
-  "title": "Interjú Q&A",
-  "data": {
-    "interviewCards": [
-      {
-        "front": "Mesélj magadról!",
-        "back": "„Pályakezdőként/fiatal szakemberként olyan lehetőséget keresek, ahol fejlődhetek és hasznosíthatom a meglévő tudásomat. Nyitott vagyok az új kihívásokra és szeretem a tanulási lehetőségeket.”"
-      },
-      {
-        "front": "Miért jelentkeztél erre a pozícióra?",
-        "back": "„A pozíció feladatai és a cég tevékenysége összhangban van az érdeklődésemmel és a karriercéljaimmal. Úgy érzem, itt tovább fejlődhetek szakmailag.”"
-      },
-      {
-        "front": "Mik az erősségeid?",
-        "back": "„Gyorsan tanulok, jól alkalmazkodom az új helyzetekhez, és szeretek együttműködni másokkal. A rám bízott feladatokat igyekszem mindig a legjobb tudásom szerint elvégezni.”"
-      },
-      {
-        "front": "Mi a fejlesztendő területed?",
-        "back": "„Korábban hajlamos voltam túl sok feladatot egyszerre vállalni. Azóta tudatosan fejlesztem az időgazdálkodásomat és a priorizálási készségeimet.”"
-      },
-      {
-        "front": "Miért téged válasszunk?",
-        "back": "„Motivált vagyok, gyorsan tanulok, és szívesen vállalok új kihívásokat. Hiszem, hogy pozitív hozzáállásommal és fejlődési szándékommal értéket teremthetek a csapat számára.”"
-      },
-      {
-        "front": "Hogyan kezeled a stresszes helyzeteket?",
-        "back": "„Ilyenkor igyekszem a feladatokat fontossági sorrendbe rendezni, nyugodtan átgondolni a lehetőségeket és a megoldásra koncentrálni.”"
-      },
-      {
-        "front": "Mesélj egy sikeredről!",
-        "back": "„Egy projekt során szoros határidő mellett dolgoztunk, mégis sikerült időben és jó minőségben teljesítenünk a feladatot. Büszke vagyok arra, hogy aktívan hozzájárultam a sikerhez.”"
-      },
-      {
-        "front": "Hogyan dolgozol csapatban?",
-        "back": "„Fontosnak tartom az együttműködést, meghallgatom mások véleményét és szívesen segítek a közös célok elérésében.”"
-      },
-      {
-        "front": "Hol látod magad 3–5 év múlva?",
-        "back": "„Szeretnék szakmailag fejlődni, tapasztalatot szerezni, és fokozatosan egyre nagyobb felelősséget vállalni.”"
-      },
-      {
-        "front": "Mit tudsz a cégünkről?",
-        "back": "„Utánanéztem a vállalatnak, és különösen érdekesnek találom a tevékenységi területüket, valamint a fejlődésre és innovációra való törekvésüket.”"
-      },
-      {
-        "front": "Mekkora fizetésre számítasz?",
-        "back": "„Tájékozódtam a piaci bérekről, és a pozícióhoz illeszkedő, versenyképes juttatási csomagot tartok reálisnak. Természetesen nyitott vagyok az egyeztetésre.”"
-      },
-      {
-        "front": "Van kérdésed hozzánk?",
-        "back": "„Igen. Milyen lenne egy sikeres első három hónap ebben a pozícióban? Milyen fejlődési lehetőségek állnak rendelkezésre a munkatársak számára?”"
-      }
-    ],
-    "interviewClosing": {
-      "front": "Az interjú nem vizsga",
-      "back": "Az interjú egy kétoldalú beszélgetés. Nemcsak a munkáltató választ munkatársat, hanem te is munkahelyet választasz. Légy felkészült, őszinte és magabiztos!"
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "interview",
+      "title": "Interjú Q&A"
     },
-    "blocks": [],
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Interjú kérdés–válasz",
         "description": "Gyakori interjúkérdések és használható mintaválaszok."
       },
+      "appearance": {
+        "stylePreset": "default"
+      },
       "labels": {
         "interviewQuestion": "Interjúkérdés",
         "sampleAnswer": "Minta válasz",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      },
-      "stylePreset": "default"
+      }
+    },
+    "content": {
+      "interviewCards": [
+        {
+          "front": "Mesélj magadról!",
+          "back": "„Pályakezdőként/fiatal szakemberként olyan lehetőséget keresek, ahol fejlődhetek és hasznosíthatom a meglévő tudásomat. Nyitott vagyok az új kihívásokra és szeretem a tanulási lehetőségeket.”"
+        },
+        {
+          "front": "Miért jelentkeztél erre a pozícióra?",
+          "back": "„A pozíció feladatai és a cég tevékenysége összhangban van az érdeklődésemmel és a karriercéljaimmal. Úgy érzem, itt tovább fejlődhetek szakmailag.”"
+        },
+        {
+          "front": "Mik az erősségeid?",
+          "back": "„Gyorsan tanulok, jól alkalmazkodom az új helyzetekhez, és szeretek együttműködni másokkal. A rám bízott feladatokat igyekszem mindig a legjobb tudásom szerint elvégezni.”"
+        },
+        {
+          "front": "Mi a fejlesztendő területed?",
+          "back": "„Korábban hajlamos voltam túl sok feladatot egyszerre vállalni. Azóta tudatosan fejlesztem az időgazdálkodásomat és a priorizálási készségeimet.”"
+        },
+        {
+          "front": "Miért téged válasszunk?",
+          "back": "„Motivált vagyok, gyorsan tanulok, és szívesen vállalok új kihívásokat. Hiszem, hogy pozitív hozzáállásommal és fejlődési szándékommal értéket teremthetek a csapat számára.”"
+        },
+        {
+          "front": "Hogyan kezeled a stresszes helyzeteket?",
+          "back": "„Ilyenkor igyekszem a feladatokat fontossági sorrendbe rendezni, nyugodtan átgondolni a lehetőségeket és a megoldásra koncentrálni.”"
+        },
+        {
+          "front": "Mesélj egy sikeredről!",
+          "back": "„Egy projekt során szoros határidő mellett dolgoztunk, mégis sikerült időben és jó minőségben teljesítenünk a feladatot. Büszke vagyok arra, hogy aktívan hozzájárultam a sikerhez.”"
+        },
+        {
+          "front": "Hogyan dolgozol csapatban?",
+          "back": "„Fontosnak tartom az együttműködést, meghallgatom mások véleményét és szívesen segítek a közös célok elérésében.”"
+        },
+        {
+          "front": "Hol látod magad 3–5 év múlva?",
+          "back": "„Szeretnék szakmailag fejlődni, tapasztalatot szerezni, és fokozatosan egyre nagyobb felelősséget vállalni.”"
+        },
+        {
+          "front": "Mit tudsz a cégünkről?",
+          "back": "„Utánanéztem a vállalatnak, és különösen érdekesnek találom a tevékenységi területüket, valamint a fejlődésre és innovációra való törekvésüket.”"
+        },
+        {
+          "front": "Mekkora fizetésre számítasz?",
+          "back": "„Tájékozódtam a piaci bérekről, és a pozícióhoz illeszkedő, versenyképes juttatási csomagot tartok reálisnak. Természetesen nyitott vagyok az egyeztetésre.”"
+        },
+        {
+          "front": "Van kérdésed hozzánk?",
+          "back": "„Igen. Milyen lenne egy sikeres első három hónap ebben a pozícióban? Milyen fejlődési lehetőségek állnak rendelkezésre a munkatársak számára?”"
+        }
+      ],
+      "interviewClosing": {
+        "front": "Az interjú nem vizsga",
+        "back": "Az interjú egy kétoldalú beszélgetés. Nemcsak a munkáltató választ munkatársat, hanem te is munkahelyet választasz. Légy felkészült, őszinte és magabiztos!"
+      }
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

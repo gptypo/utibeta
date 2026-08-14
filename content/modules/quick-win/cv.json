@@ -1,129 +1,18 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "cv",
-  "title": "CV: mit írj?",
-  "data": {
-    "cvCards": [
-      {
-        "topic": "Személyes adatok",
-        "do": "Név, telefonszám, e-mail cím, LinkedIn-profil",
-        "dont": "Személyi igazolvány szám, TAJ-szám, anyja neve"
-      },
-      {
-        "topic": "E-mail cím",
-        "do": "Professzionális e-mail (pl. vezeteknev.keresztnev@gmail.com)",
-        "dont": "Vicces vagy gyerekes címek (pl. cicaninja99@gmail.com)"
-      },
-      {
-        "topic": "Fotó",
-        "do": "Igényes, üzleti megjelenésű fotó (ha kérik vagy szokás az adott országban)",
-        "dont": "Szelfi, nyaralós, bulis vagy erősen szerkesztett kép"
-      },
-      {
-        "topic": "Profil / Bemutatkozás",
-        "do": "3-4 mondat arról, ki vagy és milyen területen keresel munkát",
-        "dont": "Túl hosszú önéletrajzi történet"
-      },
-      {
-        "topic": "Tanulmányok",
-        "do": "Releváns iskola, végzettség, szak",
-        "dont": "Általános iskola (ha már van középiskolai vagy felsőfokú végzettség)"
-      },
-      {
-        "topic": "Munkatapasztalat",
-        "do": "Feladatok, eredmények, projektek",
-        "dont": "Csak a munkakör megnevezése magyarázat nélkül"
-      },
-      {
-        "topic": "Eredmények",
-        "do": "Konkrét sikerek, projektek, versenyek",
-        "dont": "„Minden feladatot jól végeztem.”"
-      },
-      {
-        "topic": "Készségek",
-        "do": "Nyelvtudás, digitális készségek, szakmai kompetenciák",
-        "dont": "Olyan készségek, amelyekkel valójában nem rendelkezel"
-      },
-      {
-        "topic": "Nyelvismeret",
-        "do": "Valós nyelvi szint (pl. B2 angol)",
-        "dont": "Nyelvtudás túlértékelése"
-      },
-      {
-        "topic": "IT készségek",
-        "do": "Programok, rendszerek, szoftverek ismerete",
-        "dont": "„Jól kezelem a számítógépet.”"
-      },
-      {
-        "topic": "Hobbik",
-        "do": "Releváns, személyiséget bemutató hobbik",
-        "dont": "Túl sok vagy vitatható tartalom"
-      },
-      {
-        "topic": "Hossz",
-        "do": "1 oldal (pályakezdőként) vagy max. 2 oldal",
-        "dont": "3-4 oldalas részletes élettörténet"
-      },
-      {
-        "topic": "Elrendezés",
-        "do": "Átlátható, könnyen olvasható formátum",
-        "dont": "Színes, zsúfolt, nehezen áttekinthető dizájn"
-      },
-      {
-        "topic": "Helyesírás",
-        "do": "Ellenőrzött, hibamentes szöveg",
-        "dont": "Helyesírási és nyelvtani hibák"
-      },
-      {
-        "topic": "Referencia",
-        "do": "„Igény esetén biztosítok referenciát”",
-        "dont": "Referenciák személyes adatainak kiírása engedély nélkül"
-      }
-    ],
-    "cvTips": [
-      {
-        "do": "Használj LinkedIn-profilt",
-        "dont": "Ne legyen üres a LinkedIn-profilod"
-      },
-      {
-        "do": "Emelj ki projekteket és gyakorlati tapasztalatokat",
-        "dont": "Ne csak a tantárgyakat sorold fel"
-      },
-      {
-        "do": "Mutasd meg a portfóliódat, GitHub-odat vagy projektjeidet",
-        "dont": "Ne állíts olyat, amit nem tudsz bizonyítani"
-      },
-      {
-        "do": "Testreszabd a CV-t az álláshoz",
-        "dont": "Ne küldd ugyanazt minden pozícióra"
-      },
-      {
-        "do": "Használj kulcsszavakat a hirdetésből",
-        "dont": "Ne másold be szó szerint az álláshirdetést"
-      },
-      {
-        "do": "Törekedj az egyszerűségre",
-        "dont": "Ne használj túl sok grafikát és ikont"
-      },
-      {
-        "do": "Mentsd PDF formátumban",
-        "dont": "Ne Word verzióban küldd, ha PDF-et kérnek"
-      },
-      {
-        "do": "Legyen naprakész",
-        "dont": "Ne küldj elavult információkat"
-      }
-    ],
-    "cvQuickRule": {
-      "do": "Olyan információt, ami bizonyítja, hogy alkalmas vagy a pozícióra.",
-      "dont": "Olyan információt, ami nem releváns, túl személyes vagy nem ad hozzá értéket a jelentkezésedhez."
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "cv",
+      "title": "CV: mit írj?"
     },
-    "blocks": [],
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Önéletrajz: mit írj, mit kerülj?",
         "description": "Forgasd meg a kártyákat, és hasonlítsd össze a jó és kerülendő megoldásokat."
+      },
+      "appearance": {
+        "stylePreset": "default"
       },
       "labels": {
         "cvFlipAria": "CV-kártya megfordítása",
@@ -138,8 +27,127 @@
         "quickRule": "Gyors szabály",
         "whatWrite": "Mit írj?",
         "whatNotWrite": "Mit ne írj?"
-      },
-      "stylePreset": "default"
+      }
+    },
+    "content": {
+      "cvCards": [
+        {
+          "topic": "Személyes adatok",
+          "do": "Név, telefonszám, e-mail cím, LinkedIn-profil",
+          "dont": "Személyi igazolvány szám, TAJ-szám, anyja neve"
+        },
+        {
+          "topic": "E-mail cím",
+          "do": "Professzionális e-mail (pl. vezeteknev.keresztnev@gmail.com)",
+          "dont": "Vicces vagy gyerekes címek (pl. cicaninja99@gmail.com)"
+        },
+        {
+          "topic": "Fotó",
+          "do": "Igényes, üzleti megjelenésű fotó (ha kérik vagy szokás az adott országban)",
+          "dont": "Szelfi, nyaralós, bulis vagy erősen szerkesztett kép"
+        },
+        {
+          "topic": "Profil / Bemutatkozás",
+          "do": "3-4 mondat arról, ki vagy és milyen területen keresel munkát",
+          "dont": "Túl hosszú önéletrajzi történet"
+        },
+        {
+          "topic": "Tanulmányok",
+          "do": "Releváns iskola, végzettség, szak",
+          "dont": "Általános iskola (ha már van középiskolai vagy felsőfokú végzettség)"
+        },
+        {
+          "topic": "Munkatapasztalat",
+          "do": "Feladatok, eredmények, projektek",
+          "dont": "Csak a munkakör megnevezése magyarázat nélkül"
+        },
+        {
+          "topic": "Eredmények",
+          "do": "Konkrét sikerek, projektek, versenyek",
+          "dont": "„Minden feladatot jól végeztem.”"
+        },
+        {
+          "topic": "Készségek",
+          "do": "Nyelvtudás, digitális készségek, szakmai kompetenciák",
+          "dont": "Olyan készségek, amelyekkel valójában nem rendelkezel"
+        },
+        {
+          "topic": "Nyelvismeret",
+          "do": "Valós nyelvi szint (pl. B2 angol)",
+          "dont": "Nyelvtudás túlértékelése"
+        },
+        {
+          "topic": "IT készségek",
+          "do": "Programok, rendszerek, szoftverek ismerete",
+          "dont": "„Jól kezelem a számítógépet.”"
+        },
+        {
+          "topic": "Hobbik",
+          "do": "Releváns, személyiséget bemutató hobbik",
+          "dont": "Túl sok vagy vitatható tartalom"
+        },
+        {
+          "topic": "Hossz",
+          "do": "1 oldal (pályakezdőként) vagy max. 2 oldal",
+          "dont": "3-4 oldalas részletes élettörténet"
+        },
+        {
+          "topic": "Elrendezés",
+          "do": "Átlátható, könnyen olvasható formátum",
+          "dont": "Színes, zsúfolt, nehezen áttekinthető dizájn"
+        },
+        {
+          "topic": "Helyesírás",
+          "do": "Ellenőrzött, hibamentes szöveg",
+          "dont": "Helyesírási és nyelvtani hibák"
+        },
+        {
+          "topic": "Referencia",
+          "do": "„Igény esetén biztosítok referenciát”",
+          "dont": "Referenciák személyes adatainak kiírása engedély nélkül"
+        }
+      ],
+      "cvTips": [
+        {
+          "do": "Használj LinkedIn-profilt",
+          "dont": "Ne legyen üres a LinkedIn-profilod"
+        },
+        {
+          "do": "Emelj ki projekteket és gyakorlati tapasztalatokat",
+          "dont": "Ne csak a tantárgyakat sorold fel"
+        },
+        {
+          "do": "Mutasd meg a portfóliódat, GitHub-odat vagy projektjeidet",
+          "dont": "Ne állíts olyat, amit nem tudsz bizonyítani"
+        },
+        {
+          "do": "Testreszabd a CV-t az álláshoz",
+          "dont": "Ne küldd ugyanazt minden pozícióra"
+        },
+        {
+          "do": "Használj kulcsszavakat a hirdetésből",
+          "dont": "Ne másold be szó szerint az álláshirdetést"
+        },
+        {
+          "do": "Törekedj az egyszerűségre",
+          "dont": "Ne használj túl sok grafikát és ikont"
+        },
+        {
+          "do": "Mentsd PDF formátumban",
+          "dont": "Ne Word verzióban küldd, ha PDF-et kérnek"
+        },
+        {
+          "do": "Legyen naprakész",
+          "dont": "Ne küldj elavult információkat"
+        }
+      ],
+      "cvQuickRule": {
+        "do": "Olyan információt, ami bizonyítja, hogy alkalmas vagy a pozícióra.",
+        "dont": "Olyan információt, ami nem releváns, túl személyes vagy nem ad hozzá értéket a jelentkezésedhez."
+      }
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

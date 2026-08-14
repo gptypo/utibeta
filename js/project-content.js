@@ -1,4 +1,5 @@
 import {isPublished} from './content-lifecycle.js';
+import {normalizeSectionDocument,normalizeModuleIndexDocument,normalizeDynamicBundleDocument,toRecursiveSectionDocument,toRecursiveModuleIndexDocument,toRecursiveDynamicBundleDocument} from './content-schema.js';
 const MANIFEST_URL = new URL('../content/project.json', import.meta.url);
 const ERRORS_URL = new URL('../content/errors.json', import.meta.url);
 const PROJECT_KEY = 'utiterv-project-v8';
@@ -29,7 +30,7 @@ async function fetchBaseProject(){
   const modules={},navigation=[] ,contentTree=[];
   for(const moduleRef of manifest.modules){
     const indexUrl=resolveFrom(MANIFEST_URL,moduleRef.file);
-    const moduleIndex=await fetchJson(indexUrl);
+    const moduleIndex=normalizeModuleIndexDocument(await fetchJson(indexUrl));
     const namespace={__sections:{}};
     const sectionTree=[];
     const navigationSections=[];
@@ -37,7 +38,7 @@ async function fetchBaseProject(){
       let sectionData={};
       try{
         const section=await fetchJson(resolveFrom(indexUrl,sectionRef.file));
-        sectionData=clone(section.data||{});
+        sectionData=normalizeSectionDocument(section);
       }catch(error){
         warnContent('Egy aloldal tartalma nem tölthető be; az app a többi oldallal tovább indul.',{module:moduleIndex.id,section:sectionRef.id,file:sectionRef.file,error:String(error?.message||error)});
       }
@@ -50,7 +51,7 @@ async function fetchBaseProject(){
     }
     if(moduleIndex.dynamic){
       try{
-        const dynamicBundle=await fetchJson(resolveFrom(indexUrl,moduleIndex.dynamic));
+        const dynamicBundle=normalizeDynamicBundleDocument(await fetchJson(resolveFrom(indexUrl,moduleIndex.dynamic)));
         for(const page of dynamicBundle.pages||[]){
           if(!page||!isPublished(page))continue;
           const id=String(page.id||'').trim();
@@ -89,7 +90,7 @@ async function fetchBaseProject(){
   modules.competencies={competencyInfo:clone(competencies.competencyInfo||{})};
   modules.onmagamData={onmagamData:clone(onmagamData.onmagamData||{})};
   return {
-    schema:'utiterv-project-v5',version:manifest.version||'7.0.2',updatedAt:new Date().toISOString(),
+    schema:'utiterv-project-v5',version:manifest.version||'7.1.0',updatedAt:new Date().toISOString(),
     meta:clone(manifest.meta||{}),navigation,contentTree,modules,
     settings:clone(home.settings||{}),customContent:clone(custom.items||[]),ui:clone(ui||{}),assets:clone(assets||{}),manifest:clone(manifest)
   };
@@ -143,13 +144,13 @@ export function exportModularBundle(){
         continue;
       }
       const file=`modules/${slug}/${section.id}.json`;
-      files[file]={schema:'utiterv-section-v5',id:section.id,title:section.title,data};
+      files[file]=toRecursiveSectionDocument({id:section.id,title:section.title,data});
       sections.push({id:section.id,title:section.title,file:`${section.id}.json`});
     }
-    files[`modules/${slug}/dynamic-pages.json`]={schema:'utiterv-dynamic-pages-v1',moduleId:module.id,pages:dynamicPages};
-    files[`modules/${slug}/index.json`]={schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'};
+    files[`modules/${slug}/dynamic-pages.json`]=toRecursiveDynamicBundleDocument({schema:'utiterv-dynamic-pages-v1',moduleId:module.id,pages:dynamicPages});
+    files[`modules/${slug}/index.json`]=toRecursiveModuleIndexDocument({schema:'utiterv-module-v5',...clone(nav),sections,dynamic:'dynamic-pages.json'});
   }
   files['project.json']=clone(project.manifest||baseProject.manifest);
-  return JSON.stringify({schema:'utiterv-modular-bundle-v5',version:'7.0.2',files},null,2);
+  return JSON.stringify({schema:'utiterv-modular-bundle-v6',version:'7.1.0',files},null,2);
 }
 export {PROJECT_KEY};

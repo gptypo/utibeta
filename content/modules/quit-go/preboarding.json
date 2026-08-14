@@ -1,66 +1,74 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "preboarding",
-  "title": "Első nap",
-  "data": {
-    "preboardingData": [
-      {
-        "question": "Mire számíts az első munkanapodon?",
-        "answer": "Az első nap leginkább az ismerkedésről szól. Megmutatják a munkahelyet, bemutatnak a kollégáknak, és elmondják a legfontosabb tudnivalókat. Teljesen rendben van, ha elsőre nem jegyzel meg mindent. Figyelj, kérdezz nyugodtan, és írd fel, ami fontos lehet."
-      },
-      {
-        "question": "Mikor érkezz az első munkanapodon?",
-        "answer": "Érdemes 10–15 perccel korábban odaérni. Így nem kell kapkodnod, és már az első napon látszik, hogy komolyan veszed a munkát."
-      },
-      {
-        "question": "Hogyan mutatkozz be?",
-        "answer": "Elég egy rövid, természetes bemutatkozás: mondd el a nevedet, hogy hol dolgozol, és hogy most kezdtél. Például: „Szia, Anna vagyok, ma kezdtem a logisztikai csapatban. Örülök, hogy megismerhetlek!”"
-      },
-      {
-        "question": "Mit érdemes megkérdezned az első napokban?",
-        "answer": "Érdemes tisztázni, mi lesz a feladatod, kitől kérhetsz segítséget, milyen szabályokra figyelj, és mit várnak tőled az első időszakban."
-      },
-      {
-        "question": "Hogyan kommunikálj a vezetőddel?",
-        "answer": "Beszélj tisztelettel, egyértelműen és röviden. Ha problémát jelzel, mondd el azt is, mire jutottál eddig, vagy milyen megoldás jöhet szóba."
-      },
-      {
-        "question": "Mit tegyél, ha nem értesz egy feladatot?",
-        "answer": "Kérdezz nyugodtan. Egy rövid pontosítás sokkal jobb, mint rosszul megcsinálni a feladatot. Mondhatod például: „Szeretném jól megcsinálni. Megmutatnád még egyszer, mire figyeljek?”"
-      },
-      {
-        "question": "Mit tegyél, ha hibázol?",
-        "answer": "Ne próbáld eltitkolni. Szólj időben, vállald a felelősséget, és koncentrálj arra, hogyan lehet kijavítani. A hibából akkor lesz tapasztalat, ha tanulsz belőle."
-      },
-      {
-        "question": "Mit tegyél, ha túl sok feladatot kapsz egyszerre?",
-        "answer": "Először állíts fel egy sorrendet. Ha nem egyértelmű, melyik feladat a legsürgősebb, kérdezd meg: „Melyikkel kezdjek? Melyik a legfontosabb?”"
-      },
-      {
-        "question": "Hogyan kérj segítséget?",
-        "answer": "Először gondold át, pontosan hol akadtál el, majd fogalmazd meg konkrétan a kérdésedet. A segítségkérés teljesen természetes – pályakezdőként a tanulási folyamat része."
-      },
-      {
-        "question": "Hogyan fogadd a kritikát vagy a visszajelzést?",
-        "answer": "Hallgasd végig, ne reagálj azonnal védekezően. Gondold át, mit tudsz belőle hasznosítani, és ha valami nem világos, kérdezz vissza."
-      },
-      {
-        "question": "Mit tegyél, ha konfliktusod van egy kollégával?",
-        "answer": "Beszélj vele nyugodtan és négyszemközt. A személyeskedés helyett a konkrét helyzetről beszélj, és próbáljatok olyan megoldást találni, amely mindkettőtök számára elfogadható."
-      },
-      {
-        "question": "Mi a legfontosabb pályakezdőként?",
-        "answer": "Nem az, hogy az első naptól mindent tudj. Légy kíváncsi, megbízható, tanulj a helyzetekből, merj kérdezni és mutasd meg, hogy szeretnél fejlődni."
-      }
-    ],
-    "blocks": [],
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "preboarding",
+      "title": "Első nap"
+    },
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Preboarding túlélőkészlet",
         "description": "12 gyakori kérdés az első munkanap előtt."
       },
-      "stylePreset": "default"
+      "appearance": {
+        "stylePreset": "default"
+      }
+    },
+    "content": {
+      "preboardingData": [
+        {
+          "question": "Mire számíts az első munkanapodon?",
+          "answer": "Az első nap leginkább az ismerkedésről szól. Megmutatják a munkahelyet, bemutatnak a kollégáknak, és elmondják a legfontosabb tudnivalókat. Teljesen rendben van, ha elsőre nem jegyzel meg mindent. Figyelj, kérdezz nyugodtan, és írd fel, ami fontos lehet."
+        },
+        {
+          "question": "Mikor érkezz az első munkanapodon?",
+          "answer": "Érdemes 10–15 perccel korábban odaérni. Így nem kell kapkodnod, és már az első napon látszik, hogy komolyan veszed a munkát."
+        },
+        {
+          "question": "Hogyan mutatkozz be?",
+          "answer": "Elég egy rövid, természetes bemutatkozás: mondd el a nevedet, hogy hol dolgozol, és hogy most kezdtél. Például: „Szia, Anna vagyok, ma kezdtem a logisztikai csapatban. Örülök, hogy megismerhetlek!”"
+        },
+        {
+          "question": "Mit érdemes megkérdezned az első napokban?",
+          "answer": "Érdemes tisztázni, mi lesz a feladatod, kitől kérhetsz segítséget, milyen szabályokra figyelj, és mit várnak tőled az első időszakban."
+        },
+        {
+          "question": "Hogyan kommunikálj a vezetőddel?",
+          "answer": "Beszélj tisztelettel, egyértelműen és röviden. Ha problémát jelzel, mondd el azt is, mire jutottál eddig, vagy milyen megoldás jöhet szóba."
+        },
+        {
+          "question": "Mit tegyél, ha nem értesz egy feladatot?",
+          "answer": "Kérdezz nyugodtan. Egy rövid pontosítás sokkal jobb, mint rosszul megcsinálni a feladatot. Mondhatod például: „Szeretném jól megcsinálni. Megmutatnád még egyszer, mire figyeljek?”"
+        },
+        {
+          "question": "Mit tegyél, ha hibázol?",
+          "answer": "Ne próbáld eltitkolni. Szólj időben, vállald a felelősséget, és koncentrálj arra, hogyan lehet kijavítani. A hibából akkor lesz tapasztalat, ha tanulsz belőle."
+        },
+        {
+          "question": "Mit tegyél, ha túl sok feladatot kapsz egyszerre?",
+          "answer": "Először állíts fel egy sorrendet. Ha nem egyértelmű, melyik feladat a legsürgősebb, kérdezd meg: „Melyikkel kezdjek? Melyik a legfontosabb?”"
+        },
+        {
+          "question": "Hogyan kérj segítséget?",
+          "answer": "Először gondold át, pontosan hol akadtál el, majd fogalmazd meg konkrétan a kérdésedet. A segítségkérés teljesen természetes – pályakezdőként a tanulási folyamat része."
+        },
+        {
+          "question": "Hogyan fogadd a kritikát vagy a visszajelzést?",
+          "answer": "Hallgasd végig, ne reagálj azonnal védekezően. Gondold át, mit tudsz belőle hasznosítani, és ha valami nem világos, kérdezz vissza."
+        },
+        {
+          "question": "Mit tegyél, ha konfliktusod van egy kollégával?",
+          "answer": "Beszélj vele nyugodtan és négyszemközt. A személyeskedés helyett a konkrét helyzetről beszélj, és próbáljatok olyan megoldást találni, amely mindkettőtök számára elfogadható."
+        },
+        {
+          "question": "Mi a legfontosabb pályakezdőként?",
+          "answer": "Nem az, hogy az első naptól mindent tudj. Légy kíváncsi, megbízható, tanulj a helyzetekből, merj kérdezni és mutasd meg, hogy szeretnél fejlődni."
+        }
+      ]
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

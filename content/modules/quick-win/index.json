@@ -1,72 +1,82 @@
 {
-  "schema": "utiterv-module-v5",
-  "id": "helyzeteim",
-  "slug": "quick-win",
-  "title": "Helyzeteim",
-  "code": "quick<br>WIN",
-  "className": "qw",
-  "icon": "QW_BIG_ICON.svg",
-  "thin": "QW_BIG_ICON_thin.svg",
-  "lead": "Kis lépések, gyors eredmények",
-  "time": 18,
-  "sections": [
-    {
-      "id": "world",
-      "title": "A munka világa",
-      "file": "world.json"
+  "schema": "utiterv-module-v6",
+  "editor": {
+    "identity": {
+      "id": "helyzeteim",
+      "slug": "quick-win",
+      "title": "Helyzeteim",
+      "code": "quick<br>WIN",
+      "className": "qw"
     },
-    {
-      "id": "jobhunt",
-      "title": "Állásvadászat",
-      "file": "jobhunt.json"
+    "appearance": {
+      "icon": "QW_BIG_ICON.svg",
+      "thin": "QW_BIG_ICON_thin.svg",
+      "heroIconMode": "auto"
     },
-    {
-      "id": "interview",
-      "title": "Interjú Q&A",
-      "file": "interview.json"
+    "introduction": {
+      "lead": "Kis lépések, gyors eredmények",
+      "time": 18,
+      "page": {
+        "eyebrow": "Gyakorlati segédlet",
+        "experience": {
+          "eyebrow": "Mire számíthatsz?",
+          "popupTitle": "QUICK WIN",
+          "cardText": "A probléma nem végleges kudarc, hanem egy új helyzet kezdete. Kis lépések, gyors eredmények.",
+          "intro": "Ebben a modulban olyan gyakorlati tippeket és útmutatókat találsz, amelyek segítenek eligazodni a munka világában, magabiztosabban állást keresni, felkészülni az állásinterjúkra, valamint tudatosan építeni szakmai jelenlétedet. Cél, hogy megismerd azokat a helyzeteket és figyelmeztető jeleket, amelyekre érdemes odafigyelned a karrierutad során, így felkészültebben és tudatosabban hozhatsz döntéseket.",
+          "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted.",
+          "closingEyebrow": "Vidd magaddal!"
+        }
+      }
     },
-    {
-      "id": "cv",
-      "title": "CV",
-      "file": "cv.json"
-    },
-    {
-      "id": "linkedin",
-      "title": "LinkedIn",
-      "file": "linkedin.json"
-    },
-    {
-      "id": "firstday",
-      "title": "Első nap",
-      "file": "firstday.json"
-    },
-    {
-      "id": "redflags",
-      "title": "Vészjelek",
-      "file": "redflags.json"
-    },
-    {
-      "id": "legal",
-      "title": "Munkajogi alapok",
-      "file": "legal.json"
-    },
-    {
-      "id": "scenarios",
-      "title": "Gyakorlás",
-      "file": "scenarios.json"
+    "navigation": {
+      "sections": [
+        {
+          "id": "world",
+          "title": "A munka világa",
+          "file": "world.json"
+        },
+        {
+          "id": "jobhunt",
+          "title": "Állásvadászat",
+          "file": "jobhunt.json"
+        },
+        {
+          "id": "interview",
+          "title": "Interjú Q&A",
+          "file": "interview.json"
+        },
+        {
+          "id": "cv",
+          "title": "CV",
+          "file": "cv.json"
+        },
+        {
+          "id": "linkedin",
+          "title": "LinkedIn",
+          "file": "linkedin.json"
+        },
+        {
+          "id": "firstday",
+          "title": "Első nap",
+          "file": "firstday.json"
+        },
+        {
+          "id": "redflags",
+          "title": "Vészjelek",
+          "file": "redflags.json"
+        },
+        {
+          "id": "legal",
+          "title": "Munkajogi alapok",
+          "file": "legal.json"
+        },
+        {
+          "id": "scenarios",
+          "title": "Gyakorlás",
+          "file": "scenarios.json"
+        }
+      ],
+      "dynamic": "dynamic-pages.json"
     }
-  ],
-  "heroIconMode": "auto",
-  "page": {
-    "eyebrow": "Gyakorlati segédlet",
-    "experience": {
-      "eyebrow": "Mire számíthatsz?",
-      "popupTitle": "QUICK WIN",
-      "cardText": "A probléma nem végleges kudarc, hanem egy új helyzet kezdete. Kis lépések, gyors eredmények.",
-      "intro": "Ebben a modulban olyan gyakorlati tippeket és útmutatókat találsz, amelyek segítenek eligazodni a munka világában, magabiztosabban állást keresni, felkészülni az állásinterjúkra, valamint tudatosan építeni szakmai jelenlétedet. Cél, hogy megismerd azokat a helyzeteket és figyelmeztető jeleket, amelyekre érdemes odafigyelned a karrierutad során, így felkészültebben és tudatosabban hozhatsz döntéseket.",
-      "closing": "Ne feledd: a tudás önbizalmat ad, az önbizalom pedig új lehetőségeket nyit meg előtted.",
-      "closingEyebrow": "Vidd magaddal!"
-    }
-  },
-  "dynamic": "dynamic-pages.json"
+  }
 }

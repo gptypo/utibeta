@@ -1,0 +1,40 @@
+BETA 7.1 recursive migration round-trip audit
+
+OK  dynamic  content/modules/galaxy-guide/dynamic-pages.json
+OK  index    content/modules/galaxy-guide/index.json
+OK  section  content/modules/galaxy-guide/materials.json
+OK  section  content/modules/galaxy-guide/videos.json
+OK  section  content/modules/quick-win/cv.json
+OK  dynamic  content/modules/quick-win/dynamic-pages.json
+OK  section  content/modules/quick-win/firstday.json
+OK  index    content/modules/quick-win/index.json
+OK  section  content/modules/quick-win/interview.json
+OK  section  content/modules/quick-win/jobhunt.json
+OK  section  content/modules/quick-win/legal.json
+OK  section  content/modules/quick-win/linkedin.json
+OK  section  content/modules/quick-win/redflags.json
+OK  section  content/modules/quick-win/scenarios.json
+OK  section  content/modules/quick-win/world.json
+OK  section  content/modules/quit-go/breathing.json
+OK  section  content/modules/quit-go/careers.json
+OK  dynamic  content/modules/quit-go/dynamic-pages.json
+OK  index    content/modules/quit-go/index.json
+OK  section  content/modules/quit-go/marketfacts.json
+OK  section  content/modules/quit-go/mindfulness.json
+OK  section  content/modules/quit-go/preboarding.json
+OK  section  content/modules/quit-go/quiz.json
+OK  section  content/modules/quit-go/survival.json
+OK  section  content/modules/win-win/communication.json
+OK  section  content/modules/win-win/digital.json
+OK  dynamic  content/modules/win-win/dynamic-pages.json
+OK  section  content/modules/win-win/generations.json
+OK  section  content/modules/win-win/glossary.json
+OK  index    content/modules/win-win/index.json
+OK  section  content/modules/win-win/phrases.json
+OK  section  content/modules/win-win/twosides.json
+
+Összes migrált modul JSON: 32
+Sikeres round-trip: 32/32
+
+JavaScript runtime adapter deep round-trip: 32/32
+Pages CMS recursive key coverage: 3152 checked keys, 0 missing mappings

@@ -1,25 +1,9 @@
 import fs from 'node:fs';
 import process from 'node:process';
-
-const raw = fs.readFileSync('.pages.yml','utf8');
+const raw=fs.readFileSync('.pages.yml','utf8');
 const errors=[];
-const checks = [
-  ['jobb oldali fa gyökér', /label:\s*["']?▾ Szerkeszthető oldal/],
-  ['fa ág jelölés', /label:\s*["']?.*├─/],
-  ['fa záró ág jelölés', /label:\s*["']?.*└─/],
-  ['CMS útvonal súgó', /CMS útvonal:/],
-  ['összecsukható listák', /collapsible:/],
-  ['hierarchikus bal oldali modulok', /label:\s*["']?2\. Tartalom modulok/],
-];
-for (const [name,re] of checks) if(!re.test(raw)) errors.push(`Hiányzik: ${name}`);
-
-// Ensure the known Galaxy Guide chain remains visible in both sidebar and editor schema.
-for (const token of ['Galaxy Guide','Aloldalak','Videók','Videókártyák','Belső oldal']) {
-  if(!raw.includes(token)) errors.push(`A CMS-struktúrából hiányzik: ${token}`);
-}
-
-if(errors.length){
-  for(const e of errors) console.error(`::error file=.pages.yml::${e}`);
-  process.exit(1);
-}
-console.log('✓ Pages CMS jobb oldali szerkesztőfa valid');
+for(const token of ['name: editor','name: identity','name: page','name: content','name: extensions'])if(!raw.includes(token))errors.push(`Hiányzik a rekurzív editor ág: ${token}`);
+for(const token of ['name: appearance','name: publication','name: discovery'])if(!raw.includes(token))errors.push(`Hiányzik a szemantikus alág: ${token}`);
+if(!raw.includes('summary: \'{fields.card.profession} · {fields.card.title}\''))errors.push('A Galaxy Guide videókártyák nested summary-ja hiányzik.');
+if(!raw.includes('summary: \'{fields.identity.navTitle}\''))errors.push('A dinamikus oldalak nested summary-ja hiányzik.');
+if(errors.length){for(const e of errors)console.error(`::error file=.pages.yml::${e}`);process.exit(1);}console.log('✓ Pages CMS valódi rekurzív szerkesztőfa valid');

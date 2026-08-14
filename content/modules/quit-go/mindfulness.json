@@ -1,172 +1,18 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "mindfulness",
-  "title": "Mindfulness",
-  "data": {
-    "mindfulnessExercises": [
-      {
-        "icon": "⚓",
-        "title": "5-4-3-2-1 Horgonyzás",
-        "tag": "Pánik és szorongás",
-        "description": "Az öt érzékszerven keresztül néhány perc alatt visszahoz a jelenbe.",
-        "steps": [
-          "Nevezz meg 5 dolgot, amit most látsz.",
-          "Nevezz meg 4 dolgot, amit fizikailag érzel.",
-          "Nevezz meg 3 hangot, amit most hallasz.",
-          "Nevezz meg 2 illatot, amit érzékelsz.",
-          "Nevezz meg 1 ízt, amit a szádban érzel."
-        ],
-        "takeaway": "Haladj lassan. Nem kell különleges dolgot találnod: a legegyszerűbb érzékelés is segít visszatérni a jelenbe."
-      },
-      {
-        "icon": "🧍",
-        "title": "Testpásztázás",
-        "tag": "Feszültség és stressz",
-        "description": "Háromperces, zónáról zónára haladó relaxáció a testi feszültség oldására.",
-        "steps": [
-          "Figyeld meg a lábfejedet és a talaj érintését.",
-          "Haladj tovább a lábszár, a comb és a csípő felé.",
-          "Figyeld meg a hasad és a mellkasod mozgását légzés közben.",
-          "Engedd le a válladat, lazítsd el a nyakad és az állkapcsod.",
-          "Végül érzékeld egyszerre az egész testedet."
-        ],
-        "takeaway": "Ne próbáld erővel ellazítani magad. Elég észrevenni a feszültséget, majd minden kilégzésnél egy kicsit elengedni."
-      },
-      {
-        "icon": "💚",
-        "title": "Hálanapló",
-        "tag": "Hangulat és motiváció",
-        "description": "Három rövid pozitív gondolat, amely segít tudatosítani, mi működött jól a napodban.",
-        "steps": [
-          "Írj le egy apró dolgot, ami ma jólesett.",
-          "Írj le valakit, akinek vagy amiért hálás vagy.",
-          "Írj le valamit, amit ma megtanultál vagy jól csináltál."
-        ],
-        "takeaway": "Nem kell nagy eseményekre gondolnod. Egy nyugodt reggel, egy kedves mondat vagy egy befejezett feladat is számít."
-      },
-      {
-        "icon": "☀️",
-        "title": "Biztonságos hely vizualizáció",
-        "tag": "Stressz és kimerültség",
-        "description": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
-        "steps": [
-          "Hunyd le a szemed, és képzelj el egy nyugodt helyet.",
-          "Figyeld meg a színeket, fényeket és formákat.",
-          "Képzeld el a hangokat, az illatokat és a levegő érzetét.",
-          "Maradj ott néhány lassú légzésig.",
-          "Nyisd ki a szemed, és őrizz meg egy részletet ebből a helyből."
-        ],
-        "takeaway": "Ez lehet valós vagy teljesen elképzelt hely. A fontos az, hogy számodra biztonságot és nyugalmat jelentsen.",
-        "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
-        "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
-        "transcriptTitle": "Teljes felolvasási szöveg",
-        "transcript": [
-          "Helyezkedj el kényelmesen. Vedd észre, hogyan érinti a tested a széket, a talajt.",
-          "[Tarts 5 másodperc szünetet.]",
-          "Lélegezz be mélyen, lassan…",
-          "[Olvasd lassan – várj a lélegzetvételre.]",
-          "…és fújd ki nyugodtan. Még egyszer be… és ki. Engedd el a feszültséget.",
-          "[Tarts 8 másodperc szünetet.]",
-          "Most képzelj el egy helyet, ahol teljesen biztonságban és nyugodtan érzed magad. Ez lehet egy valódi hely a múltadból – egy kedves szoba, egy kert, a tengerpart – vagy egy teljesen elképzelt, tökéletes hely. Mindegy. Ez csak a tiéd.",
-          "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
-          "Nézd meg ennek a helynek a részleteit. Mit látsz magad körül? Milyen a fény – meleg és arany, vagy hűvös és kékes? Vannak-e fák, vizek, épületek? Figyeld a részleteket lassan.",
-          "[Olvasd lassan. Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
-          "Hallgasd most a hangokat. Van-e szél, amely susog? Hallasz-e vizet csörögni, madarakat énekelni? Vagy talán teljes, mély csönd vesz körül? Engedd, hogy ezek a hangok mélyebbre vigyenek.",
-          "[Tarts 8 másodperc szünetet.]",
-          "Szagold meg a levegőt. Milyen illat vesz körül? Friss fű, tengeri só, fenyő, virágok? Engedd, hogy ez az illat jelezze a testednek: biztonságban vagy.",
-          "[Tarts 8 másodperc szünetet.]",
-          "Ez a te helyed. Senki és semmi nem zavarhat meg itt. Bármikor visszajöhetsz ide – csak csukd be a szemed, és máris itt vagy.",
-          "[Tarts 15 másodperc szünetet. Csendben maradj.]",
-          "Most lassan, nagyon lassan kezdd visszahozni a figyelmedet a valóságba. Érezd a tested. Hallgasd a körülötted lévő hangokat. Mozgasd meg lassan az ujjaidat, a kezeidet.",
-          "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
-          "Amikor készen állsz, nyisd ki a szemed. Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
-        ]
-      },
-      {
-        "icon": "✨",
-        "title": "Aranybuborék",
-        "tag": "Határok és védelem",
-        "description": "Vezérelt vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
-        "steps": [
-          "Képzelj el magad körül egy meleg, aranyló fényt.",
-          "Lásd, ahogy a fény lassan buborékká tágul körülötted.",
-          "A buborék átengedi azt, ami támogató, és kívül tartja azt, ami bántó.",
-          "Gondolj egy helyzetre, amelyben szeretnéd jobban tartani a határaidat.",
-          "Vegyél három lassú levegőt ebben a biztonságos térben."
-        ],
-        "takeaway": "A gyakorlat nem választ el másoktól; arra emlékeztet, hogy te döntöd el, mit engedsz közel magadhoz.",
-        "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
-        "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
-        "transcriptTitle": "Teljes felolvasási szöveg",
-        "transcript": [
-          "Ülj kényelmesen, és csukd be a szemed.",
-          "[Tarts 3 másodperc szünetet.]",
-          "Lélegezz be mélyen… és fújd ki lassan. Még egyszer… be… és ki. Engedd a tested egyre nyugodtabbá válni.",
-          "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
-          "Most képzelj el egy fényt, amely a szíved közepéből indul. Meleg, aranyszínű fény. Lassan terjed… felfelé, lefelé, oldalra… egyre nagyobb és nagyobb lesz. Már az egész tested körülöleli.",
-          "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
-          "Most ez a fény lassan buborékká alakul. Áttetsző, meleg, aranyszínű buborék, amely teljesen körülvesz téged. Érezd a buborék melegét, biztonságát. Ez a buborék erős. Stabil.",
-          "[Tarts 8 másodperc szünetet.]",
-          "Semmi nem tud belépni rajta, amit te nem engedsz be. Minden, ami kívül van… a zaj, a stressz, mások elvárásai, az aggodalmak… megáll a buborék határán. Ott van, de nem ér téged el.",
-          "[Olvasd lassan. Tarts 5 másodperc szünetet.]",
-          "Gondolj most valamire, ami stresszel vagy nyomaszt. Látod, ahogy lassan közeledik a buborékodhoz. Megáll. Kívül marad. Nem tudja átlépni a határt.",
-          "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
-          "Te döntöd el, mit engedsz közel. Te döntöd el, minek adsz teret magadban. Érezd ezt a hatalmat és ezt a szabadságot.",
-          "[Tarts 10 másodperc szünetet. Csendben maradj.]",
-          "Lassan hozd vissza a figyelmedet. Érezd a tested, a légzésedet. Nyisd ki a szemed lassan, amikor készen állsz.",
-          "[Olvasd lassan. Tarts 5 másodperc szünetet.]"
-        ]
-      },
-      {
-        "icon": "🎒",
-        "title": "Tedd le a hátizsákot!",
-        "tag": "Tehermentesítés",
-        "description": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
-        "steps": [
-          "Képzeld el, hogy minden aggodalmad egy tárgy a hátizsákodban.",
-          "Nevezd meg, mi nehezíti most leginkább a táskát.",
-          "Kérdezd meg: ezzel most kell foglalkoznom?",
-          "Ami nem sürgős vagy nem rajtad múlik, képzeletben tedd le.",
-          "Válassz egyetlen következő, megtehető lépést."
-        ],
-        "takeaway": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég; a többi terhet egyelőre leteheted.",
-        "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
-        "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
-        "transcriptTitle": "Teljes felolvasási szöveg",
-        "transcript": [
-          "Ülj kényelmesen, és csukd be a szemed. Vegyél néhány mély lélegzetet. Be… és ki. Lassan… és nyugodtan.",
-          "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
-          "Képzelj el most, hogy a hátadon egy hátizsákot cipelsz. Érezd a súlyát. Ez a hátizsák tartalmazza mindazt, amit ma magaddal cipeltél. Minden feszültséget. Minden aggodalmat. Megoldatlan problémákat, el nem mondott szavakat, el nem végzett feladatokat.",
-          "[Adj időt az elképzelésre. Tarts 8 másodperc szünetet.]",
-          "Gondolj lassan végig… mi lehet most a zsákban? Talán egy hiba, amit elkövettél? Egy konfliktus, ami megoldatlan? Egy határidő, ami nyomaszt? Egy aggodalom, amely visszatér újra és újra?",
-          "[Olvasd lassan, adj időt minden kérdésnél. Tarts 10 másodperc szünetet.]",
-          "Vedd észre, milyen nehéz ez a zsák. Most képzeld el, hogy lassan leveszed a vállaidról. Egyetlen mozdulat. Le.",
-          "[Tarts 5 másodperc szünetet.]",
-          "A zsák ott van melletted a földön. Nem tűnt el… de most nem kell cipelned.",
-          "[Tarts 5 másodperc szünetet.]",
-          "Nyiss ki mentálisan egyet a tételek közül. Nézd meg nyugodtan, ítélkezés nélkül. Tedd fel magadnak a kérdést csendben:",
-          "[Tarts 3 másodperc szünetet.]",
-          "„Ezzel most kell foglalkoznom?”",
-          "[Tarts 8 másodperc szünetet. Adj időt a döntésre.]",
-          "Ha igen:",
-          "„Mi az az egyetlen, legkisebb lépés, amit megtehetek? Csak egy lépés. Nem az egész megoldás.”",
-          "[Tarts 8 másodperc szünetet.]",
-          "Ha nem most kell foglalkoznod vele:",
-          "„Ezt most le tudom tenni. Visszatérhetek hozzá, amikor eljön az ideje.”",
-          "[Tarts 8 másodperc szünetet.]",
-          "Érezd, mennyivel könnyebb a vállad most. Milyen könnyű a tested.",
-          "[Tarts 10 másodperc szünetet. Csendben maradj.]",
-          "Lassan vegyél egy mély lélegzetet. Nyisd ki a szemed lassan. Emlékezz erre az érzésre.",
-          "[Olvasd lassan. Tarts 5 másodperc szünetet.]"
-        ]
-      }
-    ],
-    "blocks": [],
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "mindfulness",
+      "title": "Mindfulness"
+    },
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Mindfulness technikák",
         "description": "Rövid gyakorlatok stressz, szorongás és mentális túlterheltség esetére."
+      },
+      "appearance": {
+        "stylePreset": "default"
       },
       "labels": {
         "thoughtLabel": "{index}. gondolat",
@@ -184,100 +30,262 @@
         "letsStart": "Kezdjük",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      },
-      "stylePreset": "default"
+      }
     },
-    "mindfulnessUi": {
-      "groundingSteps": [
+    "content": {
+      "mindfulnessExercises": [
         {
-          "count": 5,
-          "sense": "látsz",
-          "icon": "◉",
-          "prompt": "Nevezz meg 5 dolgot, amit most látsz a körülötted lévő térben."
+          "icon": "⚓",
+          "title": "5-4-3-2-1 Horgonyzás",
+          "tag": "Pánik és szorongás",
+          "description": "Az öt érzékszerven keresztül néhány perc alatt visszahoz a jelenbe.",
+          "steps": [
+            "Nevezz meg 5 dolgot, amit most látsz.",
+            "Nevezz meg 4 dolgot, amit fizikailag érzel.",
+            "Nevezz meg 3 hangot, amit most hallasz.",
+            "Nevezz meg 2 illatot, amit érzékelsz.",
+            "Nevezz meg 1 ízt, amit a szádban érzel."
+          ],
+          "takeaway": "Haladj lassan. Nem kell különleges dolgot találnod: a legegyszerűbb érzékelés is segít visszatérni a jelenbe."
         },
         {
-          "count": 4,
-          "sense": "érzel",
-          "icon": "✋",
-          "prompt": "Nevezz meg 4 dolgot, amit fizikailag érzel: például a széket a hátadon vagy a levegőt a bőrödön."
+          "icon": "🧍",
+          "title": "Testpásztázás",
+          "tag": "Feszültség és stressz",
+          "description": "Háromperces, zónáról zónára haladó relaxáció a testi feszültség oldására.",
+          "steps": [
+            "Figyeld meg a lábfejedet és a talaj érintését.",
+            "Haladj tovább a lábszár, a comb és a csípő felé.",
+            "Figyeld meg a hasad és a mellkasod mozgását légzés közben.",
+            "Engedd le a válladat, lazítsd el a nyakad és az állkapcsod.",
+            "Végül érzékeld egyszerre az egész testedet."
+          ],
+          "takeaway": "Ne próbáld erővel ellazítani magad. Elég észrevenni a feszültséget, majd minden kilégzésnél egy kicsit elengedni."
         },
         {
-          "count": 3,
-          "sense": "hallasz",
-          "icon": "◖",
-          "prompt": "Nevezz meg 3 hangot, amit most hallasz: forgalmat, légkondicionálót vagy a saját légzésedet."
+          "icon": "💚",
+          "title": "Hálanapló",
+          "tag": "Hangulat és motiváció",
+          "description": "Három rövid pozitív gondolat, amely segít tudatosítani, mi működött jól a napodban.",
+          "steps": [
+            "Írj le egy apró dolgot, ami ma jólesett.",
+            "Írj le valakit, akinek vagy amiért hálás vagy.",
+            "Írj le valamit, amit ma megtanultál vagy jól csináltál."
+          ],
+          "takeaway": "Nem kell nagy eseményekre gondolnod. Egy nyugodt reggel, egy kedves mondat vagy egy befejezett feladat is számít."
         },
         {
-          "count": 2,
-          "sense": "szagolsz",
-          "icon": "≈",
-          "prompt": "Nevezz meg 2 illatot, amit most érzékelsz."
+          "icon": "☀️",
+          "title": "Biztonságos hely vizualizáció",
+          "tag": "Stressz és kimerültség",
+          "description": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
+          "steps": [
+            "Hunyd le a szemed, és képzelj el egy nyugodt helyet.",
+            "Figyeld meg a színeket, fényeket és formákat.",
+            "Képzeld el a hangokat, az illatokat és a levegő érzetét.",
+            "Maradj ott néhány lassú légzésig.",
+            "Nyisd ki a szemed, és őrizz meg egy részletet ebből a helyből."
+          ],
+          "takeaway": "Ez lehet valós vagy teljesen elképzelt hely. A fontos az, hogy számodra biztonságot és nyugalmat jelentsen.",
+          "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
+          "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
+          "transcriptTitle": "Teljes felolvasási szöveg",
+          "transcript": [
+            "Helyezkedj el kényelmesen. Vedd észre, hogyan érinti a tested a széket, a talajt.",
+            "[Tarts 5 másodperc szünetet.]",
+            "Lélegezz be mélyen, lassan…",
+            "[Olvasd lassan – várj a lélegzetvételre.]",
+            "…és fújd ki nyugodtan. Még egyszer be… és ki. Engedd el a feszültséget.",
+            "[Tarts 8 másodperc szünetet.]",
+            "Most képzelj el egy helyet, ahol teljesen biztonságban és nyugodtan érzed magad. Ez lehet egy valódi hely a múltadból – egy kedves szoba, egy kert, a tengerpart – vagy egy teljesen elképzelt, tökéletes hely. Mindegy. Ez csak a tiéd.",
+            "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
+            "Nézd meg ennek a helynek a részleteit. Mit látsz magad körül? Milyen a fény – meleg és arany, vagy hűvös és kékes? Vannak-e fák, vizek, épületek? Figyeld a részleteket lassan.",
+            "[Olvasd lassan. Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
+            "Hallgasd most a hangokat. Van-e szél, amely susog? Hallasz-e vizet csörögni, madarakat énekelni? Vagy talán teljes, mély csönd vesz körül? Engedd, hogy ezek a hangok mélyebbre vigyenek.",
+            "[Tarts 8 másodperc szünetet.]",
+            "Szagold meg a levegőt. Milyen illat vesz körül? Friss fű, tengeri só, fenyő, virágok? Engedd, hogy ez az illat jelezze a testednek: biztonságban vagy.",
+            "[Tarts 8 másodperc szünetet.]",
+            "Ez a te helyed. Senki és semmi nem zavarhat meg itt. Bármikor visszajöhetsz ide – csak csukd be a szemed, és máris itt vagy.",
+            "[Tarts 15 másodperc szünetet. Csendben maradj.]",
+            "Most lassan, nagyon lassan kezdd visszahozni a figyelmedet a valóságba. Érezd a tested. Hallgasd a körülötted lévő hangokat. Mozgasd meg lassan az ujjaidat, a kezeidet.",
+            "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
+            "Amikor készen állsz, nyisd ki a szemed. Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
+          ]
         },
         {
-          "count": 1,
-          "sense": "ízlelsz",
-          "icon": "●",
-          "prompt": "Nevezz meg 1 ízt, amit a szádban érzel."
+          "icon": "✨",
+          "title": "Aranybuborék",
+          "tag": "Határok és védelem",
+          "description": "Vezérelt vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
+          "steps": [
+            "Képzelj el magad körül egy meleg, aranyló fényt.",
+            "Lásd, ahogy a fény lassan buborékká tágul körülötted.",
+            "A buborék átengedi azt, ami támogató, és kívül tartja azt, ami bántó.",
+            "Gondolj egy helyzetre, amelyben szeretnéd jobban tartani a határaidat.",
+            "Vegyél három lassú levegőt ebben a biztonságos térben."
+          ],
+          "takeaway": "A gyakorlat nem választ el másoktól; arra emlékeztet, hogy te döntöd el, mit engedsz közel magadhoz.",
+          "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
+          "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
+          "transcriptTitle": "Teljes felolvasási szöveg",
+          "transcript": [
+            "Ülj kényelmesen, és csukd be a szemed.",
+            "[Tarts 3 másodperc szünetet.]",
+            "Lélegezz be mélyen… és fújd ki lassan. Még egyszer… be… és ki. Engedd a tested egyre nyugodtabbá válni.",
+            "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
+            "Most képzelj el egy fényt, amely a szíved közepéből indul. Meleg, aranyszínű fény. Lassan terjed… felfelé, lefelé, oldalra… egyre nagyobb és nagyobb lesz. Már az egész tested körülöleli.",
+            "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
+            "Most ez a fény lassan buborékká alakul. Áttetsző, meleg, aranyszínű buborék, amely teljesen körülvesz téged. Érezd a buborék melegét, biztonságát. Ez a buborék erős. Stabil.",
+            "[Tarts 8 másodperc szünetet.]",
+            "Semmi nem tud belépni rajta, amit te nem engedsz be. Minden, ami kívül van… a zaj, a stressz, mások elvárásai, az aggodalmak… megáll a buborék határán. Ott van, de nem ér téged el.",
+            "[Olvasd lassan. Tarts 5 másodperc szünetet.]",
+            "Gondolj most valamire, ami stresszel vagy nyomaszt. Látod, ahogy lassan közeledik a buborékodhoz. Megáll. Kívül marad. Nem tudja átlépni a határt.",
+            "[Adj időt az elképzelésre. Tarts 10 másodperc szünetet.]",
+            "Te döntöd el, mit engedsz közel. Te döntöd el, minek adsz teret magadban. Érezd ezt a hatalmat és ezt a szabadságot.",
+            "[Tarts 10 másodperc szünetet. Csendben maradj.]",
+            "Lassan hozd vissza a figyelmedet. Érezd a tested, a légzésedet. Nyisd ki a szemed lassan, amikor készen állsz.",
+            "[Olvasd lassan. Tarts 5 másodperc szünetet.]"
+          ]
+        },
+        {
+          "icon": "🎒",
+          "title": "Tedd le a hátizsákot!",
+          "tag": "Tehermentesítés",
+          "description": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
+          "steps": [
+            "Képzeld el, hogy minden aggodalmad egy tárgy a hátizsákodban.",
+            "Nevezd meg, mi nehezíti most leginkább a táskát.",
+            "Kérdezd meg: ezzel most kell foglalkoznom?",
+            "Ami nem sürgős vagy nem rajtad múlik, képzeletben tedd le.",
+            "Válassz egyetlen következő, megtehető lépést."
+          ],
+          "takeaway": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég; a többi terhet egyelőre leteheted.",
+          "fallbackTitle": "Nem működik a hang? Olvasd el a gyakorlatot!",
+          "fallbackHelp": "Ha a hanganyag nem elérhető, a gyakorlatot így is elvégezheted. Olvasd végig előre az instrukciókat, vagy kérj meg egy barátot, osztálytársat, hogy lassan, nyugodt tempóban olvassa fel neked. Ezután cseréljetek szerepet, és vezesd végig te is őt a gyakorlaton. A teljes felolvasási szöveg olvasható legyen.",
+          "transcriptTitle": "Teljes felolvasási szöveg",
+          "transcript": [
+            "Ülj kényelmesen, és csukd be a szemed. Vegyél néhány mély lélegzetet. Be… és ki. Lassan… és nyugodtan.",
+            "[Olvasd lassan. Tarts 8 másodperc szünetet.]",
+            "Képzelj el most, hogy a hátadon egy hátizsákot cipelsz. Érezd a súlyát. Ez a hátizsák tartalmazza mindazt, amit ma magaddal cipeltél. Minden feszültséget. Minden aggodalmat. Megoldatlan problémákat, el nem mondott szavakat, el nem végzett feladatokat.",
+            "[Adj időt az elképzelésre. Tarts 8 másodperc szünetet.]",
+            "Gondolj lassan végig… mi lehet most a zsákban? Talán egy hiba, amit elkövettél? Egy konfliktus, ami megoldatlan? Egy határidő, ami nyomaszt? Egy aggodalom, amely visszatér újra és újra?",
+            "[Olvasd lassan, adj időt minden kérdésnél. Tarts 10 másodperc szünetet.]",
+            "Vedd észre, milyen nehéz ez a zsák. Most képzeld el, hogy lassan leveszed a vállaidról. Egyetlen mozdulat. Le.",
+            "[Tarts 5 másodperc szünetet.]",
+            "A zsák ott van melletted a földön. Nem tűnt el… de most nem kell cipelned.",
+            "[Tarts 5 másodperc szünetet.]",
+            "Nyiss ki mentálisan egyet a tételek közül. Nézd meg nyugodtan, ítélkezés nélkül. Tedd fel magadnak a kérdést csendben:",
+            "[Tarts 3 másodperc szünetet.]",
+            "„Ezzel most kell foglalkoznom?”",
+            "[Tarts 8 másodperc szünetet. Adj időt a döntésre.]",
+            "Ha igen:",
+            "„Mi az az egyetlen, legkisebb lépés, amit megtehetek? Csak egy lépés. Nem az egész megoldás.”",
+            "[Tarts 8 másodperc szünetet.]",
+            "Ha nem most kell foglalkoznod vele:",
+            "„Ezt most le tudom tenni. Visszatérhetek hozzá, amikor eljön az ideje.”",
+            "[Tarts 8 másodperc szünetet.]",
+            "Érezd, mennyivel könnyebb a vállad most. Milyen könnyű a tested.",
+            "[Tarts 10 másodperc szünetet. Csendben maradj.]",
+            "Lassan vegyél egy mély lélegzetet. Nyisd ki a szemed lassan. Emlékezz erre az érzésre.",
+            "[Olvasd lassan. Tarts 5 másodperc szünetet.]"
+          ]
         }
       ],
-      "bodySteps": [
-        {
-          "zone": "Lábfejek",
-          "cue": "Érezd a talajt a lábad alatt. Engedd el a feszültséget a lábujjaidban."
+      "mindfulnessUi": {
+        "groundingSteps": [
+          {
+            "count": 5,
+            "sense": "látsz",
+            "icon": "◉",
+            "prompt": "Nevezz meg 5 dolgot, amit most látsz a körülötted lévő térben."
+          },
+          {
+            "count": 4,
+            "sense": "érzel",
+            "icon": "✋",
+            "prompt": "Nevezz meg 4 dolgot, amit fizikailag érzel: például a széket a hátadon vagy a levegőt a bőrödön."
+          },
+          {
+            "count": 3,
+            "sense": "hallasz",
+            "icon": "◖",
+            "prompt": "Nevezz meg 3 hangot, amit most hallasz: forgalmat, légkondicionálót vagy a saját légzésedet."
+          },
+          {
+            "count": 2,
+            "sense": "szagolsz",
+            "icon": "≈",
+            "prompt": "Nevezz meg 2 illatot, amit most érzékelsz."
+          },
+          {
+            "count": 1,
+            "sense": "ízlelsz",
+            "icon": "●",
+            "prompt": "Nevezz meg 1 ízt, amit a szádban érzel."
+          }
+        ],
+        "bodySteps": [
+          {
+            "zone": "Lábfejek",
+            "cue": "Érezd a talajt a lábad alatt. Engedd el a feszültséget a lábujjaidban."
+          },
+          {
+            "zone": "Lábszár",
+            "cue": "Figyeld a vádlidat és a sípcsontod. Van-e benne feszültség? Engedd lazulni."
+          },
+          {
+            "zone": "Comb és csípő",
+            "cue": "Érezd, hogyan támaszkodik a tested a széken vagy a talajon. Engedd ellazulni."
+          },
+          {
+            "zone": "Has és mellkas",
+            "cue": "Figyeld a légzésedet. Minden kilégzésnél engedd mélyebbre süllyedni a relaxációt."
+          },
+          {
+            "zone": "Hát és váll",
+            "cue": "Sok stresszt hordozunk a vállunkban. Engedd le, lélegezz és lazulj el."
+          },
+          {
+            "zone": "Nyak és állkapocs",
+            "cue": "Engedd le az állkapcsodat. Figyeld meg, mennyire volt összeszorítva."
+          },
+          {
+            "zone": "Arc és homlok",
+            "cue": "Simítsd el a homlokod. Engedd lazulni a szemed körüli izmokat."
+          },
+          {
+            "zone": "Teljes test",
+            "cue": "Figyelj az egész testedre. Nyugodt vagy. Minden izmod ellazult."
+          }
+        ],
+        "guidedAudio": {
+          "3": {
+            "asset": "safePlace",
+            "icon": "☀",
+            "duration": "2:09",
+            "intro": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
+            "done": "Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
+          },
+          "4": {
+            "asset": "goldBubble",
+            "icon": "✦",
+            "duration": "2:20",
+            "intro": "Vezetett vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
+            "done": "Te döntöd el, mit engedsz közel magadhoz."
+          },
+          "5": {
+            "asset": "backpack",
+            "icon": "▱",
+            "duration": "2:35",
+            "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
+            "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
+          }
         },
-        {
-          "zone": "Lábszár",
-          "cue": "Figyeld a vádlidat és a sípcsontod. Van-e benne feszültség? Engedd lazulni."
-        },
-        {
-          "zone": "Comb és csípő",
-          "cue": "Érezd, hogyan támaszkodik a tested a széken vagy a talajon. Engedd ellazulni."
-        },
-        {
-          "zone": "Has és mellkas",
-          "cue": "Figyeld a légzésedet. Minden kilégzésnél engedd mélyebbre süllyedni a relaxációt."
-        },
-        {
-          "zone": "Hát és váll",
-          "cue": "Sok stresszt hordozunk a vállunkban. Engedd le, lélegezz és lazulj el."
-        },
-        {
-          "zone": "Nyak és állkapocs",
-          "cue": "Engedd le az állkapcsodat. Figyeld meg, mennyire volt összeszorítva."
-        },
-        {
-          "zone": "Arc és homlok",
-          "cue": "Simítsd el a homlokod. Engedd lazulni a szemed körüli izmokat."
-        },
-        {
-          "zone": "Teljes test",
-          "cue": "Figyelj az egész testedre. Nyugodt vagy. Minden izmod ellazult."
-        }
-      ],
-      "guidedAudio": {
-        "3": {
-          "asset": "safePlace",
-          "icon": "☀",
-          "duration": "2:09",
-          "intro": "Rövid mentális utazás egy olyan elképzelt helyre, ahol nyugodtnak és biztonságban érzed magad.",
-          "done": "Hozd magaddal ezt a nyugalmat és biztonságérzetet a napod hátralévő részébe."
-        },
-        "4": {
-          "asset": "goldBubble",
-          "icon": "✦",
-          "duration": "2:20",
-          "intro": "Vezetett vizualizáció, amely segít kialakítani a saját mentális védelmi teredet.",
-          "done": "Te döntöd el, mit engedsz közel magadhoz."
-        },
-        "5": {
-          "asset": "backpack",
-          "icon": "▱",
-          "duration": "2:35",
-          "intro": "Segít szétválasztani, mivel kell most foglalkoznod, és mit tehetsz félre későbbre.",
-          "done": "Nem kell mindent egyszerre megoldanod. A következő kis lépés elég."
-        }
-      },
-      "bodyScanSeconds": 20
+        "bodyScanSeconds": 20
+      }
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

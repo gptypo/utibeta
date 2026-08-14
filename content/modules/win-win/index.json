@@ -1,57 +1,67 @@
 {
-  "schema": "utiterv-module-v5",
-  "id": "kapcsolataim",
-  "slug": "win-win",
-  "title": "Kapcsolataim",
-  "code": "win<br><em>WIN</em>",
-  "className": "ww",
-  "icon": "WW_BIG_ICON.svg",
-  "thin": "WW_BIG_ICON_thin.svg",
-  "lead": "Együttműködés, ahol mindenki nyer",
-  "time": 20,
-  "sections": [
-    {
-      "id": "twosides",
-      "title": "Két oldal",
-      "file": "twosides.json"
+  "schema": "utiterv-module-v6",
+  "editor": {
+    "identity": {
+      "id": "kapcsolataim",
+      "slug": "win-win",
+      "title": "Kapcsolataim",
+      "code": "win<br><em>WIN</em>",
+      "className": "ww"
     },
-    {
-      "id": "generations",
-      "title": "Generációk",
-      "file": "generations.json"
+    "appearance": {
+      "icon": "WW_BIG_ICON.svg",
+      "thin": "WW_BIG_ICON_thin.svg",
+      "heroIconMode": "auto"
     },
-    {
-      "id": "communication",
-      "title": "Kommunikáció",
-      "file": "communication.json"
+    "introduction": {
+      "lead": "Együttműködés, ahol mindenki nyer",
+      "time": 20,
+      "page": {
+        "eyebrow": "Gyakorlati segédlet",
+        "experience": {
+          "eyebrow": "Mire számíthatsz?",
+          "popupTitle": "WIN-WIN",
+          "cardText": "Értsd meg a másik oldalt is! Úgy működj, hogy mindenki nyerjen.",
+          "intro": "Ebben a modulban megismerheted a munkavállalói és munkáltatói nézőpontokat, valamint a különböző generációk együttműködésének sajátosságait. Olyan kommunikációs és együttműködési eszközöket kapsz, amelyek segítenek magabiztosan mozogni a munka világában és a digitális térben egyaránt. Cél, hogy megértsd a munkahelyi kapcsolatok működését, tudatosabban kommunikálj, és hatékonyan működj együtt másokkal a közös sikerek érdekében.",
+          "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait.",
+          "closingEyebrow": "Vidd magaddal!"
+        }
+      }
     },
-    {
-      "id": "phrases",
-      "title": "Pro mondatok",
-      "file": "phrases.json"
-    },
-    {
-      "id": "digital",
-      "title": "Digitális tér",
-      "file": "digital.json"
-    },
-    {
-      "id": "glossary",
-      "title": "Fogalomtár",
-      "file": "glossary.json"
+    "navigation": {
+      "sections": [
+        {
+          "id": "twosides",
+          "title": "Két oldal",
+          "file": "twosides.json"
+        },
+        {
+          "id": "generations",
+          "title": "Generációk",
+          "file": "generations.json"
+        },
+        {
+          "id": "communication",
+          "title": "Kommunikáció",
+          "file": "communication.json"
+        },
+        {
+          "id": "phrases",
+          "title": "Pro mondatok",
+          "file": "phrases.json"
+        },
+        {
+          "id": "digital",
+          "title": "Digitális tér",
+          "file": "digital.json"
+        },
+        {
+          "id": "glossary",
+          "title": "Fogalomtár",
+          "file": "glossary.json"
+        }
+      ],
+      "dynamic": "dynamic-pages.json"
     }
-  ],
-  "heroIconMode": "auto",
-  "page": {
-    "eyebrow": "Gyakorlati segédlet",
-    "experience": {
-      "eyebrow": "Mire számíthatsz?",
-      "popupTitle": "WIN-WIN",
-      "cardText": "Értsd meg a másik oldalt is! Úgy működj, hogy mindenki nyerjen.",
-      "intro": "Ebben a modulban megismerheted a munkavállalói és munkáltatói nézőpontokat, valamint a különböző generációk együttműködésének sajátosságait. Olyan kommunikációs és együttműködési eszközöket kapsz, amelyek segítenek magabiztosan mozogni a munka világában és a digitális térben egyaránt. Cél, hogy megértsd a munkahelyi kapcsolatok működését, tudatosabban kommunikálj, és hatékonyan működj együtt másokkal a közös sikerek érdekében.",
-      "closing": "A sikeres együttműködés azzal kezdődik, hogy megértjük egymás szempontjait.",
-      "closingEyebrow": "Vidd magaddal!"
-    }
-  },
-  "dynamic": "dynamic-pages.json"
+  }
 }

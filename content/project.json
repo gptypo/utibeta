@@ -1,11 +1,11 @@
 {
   "schema": "utiterv-project-manifest-v5",
-  "version": "7.0.2",
+  "version": "7.1.0",
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Adatvezérelt edukációs PWA projekt",
-    "contentModel": "page-local-v3 + reusable-components-v2 + embedded-detail-pages-v2 + deep-links-v1 + search-index-v2 + content-lifecycle-v1 + progress-platform-v1 + element-style-presets-v1",
-    "cmsLayout": "structured-page-local-v2",
+    "contentModel": "page-local-v3 + reusable-components-v2 + embedded-detail-pages-v2 + deep-links-v1 + search-index-v2 + content-lifecycle-v1 + progress-platform-v1 + element-style-presets-v1 + recursive-content-schema-v1",
+    "cmsLayout": "recursive-page-tree-v1",
     "releaseChannel": "beta"
   },
   "home": "home.json",
@@ -33,7 +33,7 @@
   },
   "custom": "custom/topics.json",
   "editorial": {
-    "version": "7.0",
+    "version": "7.1",
     "audience": "13–18 éves fiatalok",
     "voice": "közvetlen, támogató, hiteles fiatal mentor",
     "principles": [

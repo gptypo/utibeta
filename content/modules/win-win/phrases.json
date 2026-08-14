@@ -1,306 +1,18 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "phrases",
-  "title": "Pro mondatok",
-  "data": {
-    "proPhrases": [
-      {
-        "situation": "Segítségkérés",
-        "phrase": "Elakadtam ezzel a feladattal – konkrétan X résznél. Tudnál rászánni 5 percet, hogy ránézzünk együtt?"
-      },
-      {
-        "situation": "Visszajelzés fogadása",
-        "phrase": "Köszönöm az észrevételt – legközelebb erre jobban odafigyelek. Lenne bármilyen konkrét javaslat, hogyan csináljam másképp?"
-      },
-      {
-        "situation": "Hibázás után",
-        "phrase": "Ezt sajnos elrontottam – vállalom a felelősséget. Már dolgozom a megoldáson: így tudjuk kijavítani..."
-      },
-      {
-        "situation": "Konfliktus esetén",
-        "phrase": "Értem az álláspontodat. Nézzük meg, hogyan találunk mindkettőnknek megfelelő megoldást – mire lenne szükséged?"
-      },
-      {
-        "situation": "Határidő csúszáskor",
-        "phrase": "Látom, hogy a feladat időigényesebb a vártnál. Holnap reggelre tudom leadni a végleges verziót – megfelelő ez neked?"
-      },
-      {
-        "situation": "Feladat pontosítása",
-        "phrase": "Hogy biztosan jót csináljak: jól értem, hogy a csütörtöki meetingre kéred a prezentációt, és az A és B részt kell belerakni?"
-      },
-      {
-        "situation": "Nem értesz egyet",
-        "phrase": "Van egy felvetésem – ha van rá idő, szívesen megosztanám a nézőpontomat. Mikor lenne erre alkalmas?"
-      },
-      {
-        "situation": "Túl sok feladat egyszerre",
-        "phrase": "Jelenleg X, Y és Z feladaton dolgozom. Melyiket tartod a legfontosabbnak? Hogy a fontossági sorrendokat jól állítsam be."
-      },
-      {
-        "situation": "Egyeztetés kérése",
-        "phrase": "Lenne 15 perced a héten megbeszélni a projekt állását? Szeretném, hogy egy oldalon legyünk az elvárásokkal kapcsolatban."
-      },
-      {
-        "situation": "Visszajelzés kérése",
-        "phrase": "Szívesen hallanám, hogyan látod az elmúlt hetek munkámat. Lenne rá lehetőség egy rövid megbeszélésre?"
-      },
-      {
-        "situation": "Bemutatkozás új kollégának",
-        "phrase": "Szia, [Név] vagyok, épp kezdtem itt. Szívesen megismerlek – mivel foglalkozol a csapatban?"
-      },
-      {
-        "situation": "Félreértés tisztázása",
-        "phrase": "Azt hittem, [X-et] értesz alatta – csak pontosítani szeretném, hogy biztosan jót csináljak."
-      }
-    ],
-    "proSzóhasználatQuiz": [
-      {
-        "situation": "Elakadtál egy feladatnál és segítséget kell kérned. Melyik mondatot használod?",
-        "options": [
-          {
-            "text": "Segítség, nem tudom, mit csináljak.",
-            "isOptimal": false,
-            "feedback": "Ez pánikszerű és nem mutatja, hogy próbáltál megoldani – ami bizonytalanságot kelt."
-          },
-          {
-            "text": "Elakadtam X résznél – tudnál segíteni 5 percben ránézni együtt?",
-            "isOptimal": true,
-            "feedback": "Konkrét, meghatározott idő, kész stratégiával. Így könnyű igent mondani."
-          },
-          {
-            "text": "Ezt nem lehet megcsinálni.",
-            "isOptimal": false,
-            "feedback": "A feladat visszadobása kapituláció. Mindig kérdezz segítséget, ne adj fel előre."
-          }
-        ]
-      },
-      {
-        "situation": "A vezető nem érthetően adott meg egy feladatot. Mit mondasz?",
-        "options": [
-          {
-            "text": "Jól értem, hogy X-et kéred, és Y a várható eredmény? Csak biztosítani akarom, hogy jól csináljam.",
-            "isOptimal": true,
-            "feedback": "A visszakérdezés professzionális. Mutatja, hogy odafigyelsz és nem akarod elrontani."
-          },
-          {
-            "text": "Oké, megcsinálom – majd kitalálom.",
-            "isOptimal": false,
-            "feedback": "Ha félreértesz valamit és rosszul csinálod, az több munkát jelent mindkettőtöknek."
-          },
-          {
-            "text": "Ez nem volt egyértelmű – mondj el mindent újra.",
-            "isOptimal": false,
-            "feedback": "Ez követelőző. Pontosítani igen, de nem úgy, mintha a vezető hibázott volna."
-          }
-        ]
-      },
-      {
-        "situation": "Késni fogol egy meetingre. Mit írsz?",
-        "options": [
-          {
-            "text": "Sry, kés:)",
-            "isOptimal": false,
-            "feedback": "Ez informális és szakmaiatlan. A bocsánatkérés és az ok megjelölése elvárt."
-          },
-          {
-            "text": "Nem tudok ott lenni – lemondja a meetinget.",
-            "isOptimal": false,
-            "feedback": "Ha csak 10 perc késésről van szó, ez aránytalanul nagy lépés. Érkezz és vegyél részt utólag."
-          },
-          {
-            "text": "Sajnálom, kb. 10 percet késni fogok – forgalmi dugó. Amint megérkezem, bepótolom.",
-            "isOptimal": true,
-            "feedback": "Konkrét, udvarias és kezdeményező. Így a többiek dönthetnek, hogyan haladnak nélküled."
-          }
-        ]
-      },
-      {
-        "situation": "Nem értesz egyet a vezető döntésével. Mit mondasz?",
-        "options": [
-          {
-            "text": "Ez rossz döntés és nem értem, miért csináljuk így.",
-            "isOptimal": false,
-            "feedback": "A nyílt elutasítás konfrontatív. Ha van nézőpontod, vidd be konstruktívan."
-          },
-          {
-            "text": "Nem szólok – majd megmutatja az idő, hogy igazam van.",
-            "isOptimal": false,
-            "feedback": "A passzív kivárás nem segít. Ha van fontos nézőpontod, jogod van elmondani – konstruktívan."
-          },
-          {
-            "text": "Van egy felvetésem – ha van rá idő, szívesen megosztanám a nézőpontomat. Mikor lenne erre alkalmas?",
-            "isOptimal": true,
-            "feedback": "Így jelezsz szándékot és respect-et egyszerre. A vezető dönthet, mikor és hogyan hallgat meg."
-          }
-        ]
-      },
-      {
-        "situation": "Egyszerre három feladatot kaptál és fontossági sorrendet állít felni kellene. Mit mondasz a vezetőnek?",
-        "options": [
-          {
-            "text": "Jelenleg X, Y és Z feladaton dolgozom. Melyiket tartod a legfontosabbnak?",
-            "isOptimal": true,
-            "feedback": "Így a vezető lát belülre a terhelésébe és segít fontossági sorrendet állít felni – mindenki nyer."
-          },
-          {
-            "text": "Rendben, mindent megcsinálok.",
-            "isOptimal": false,
-            "feedback": "Ha három egyformán sürgős feladatot kapsz, valami biztosan csúszik. Jobb előre jelezni."
-          },
-          {
-            "text": "Túl sok a feladat – ezt nem lehet elvégezni.",
-            "isOptimal": false,
-            "feedback": "Ez panasz, nem megoldás. Inkább kérd a fontossági sorrendok tisztázását."
-          }
-        ]
-      },
-      {
-        "situation": "Elrontottál egy feladatot és a vezető tudja. Hogyan kezded a mondatot?",
-        "options": [
-          {
-            "text": "Igen, de azért mert…",
-            "isOptimal": false,
-            "feedback": "A „de” már védekezésre utal. A felelősség vállalása előbbre való a magyarázatnál."
-          },
-          {
-            "text": "Ezt sajnos elrontottam – vállalom a felelősséget. Már dolgozom a megoldáson.",
-            "isOptimal": true,
-            "feedback": "Szimpatikus, érett hozzáállás. Nem mentegetőzöl, hanem megoldásban gondolkodol."
-          },
-          {
-            "text": "Nem tudtam, hogy így kellett volna csinálni.",
-            "isOptimal": false,
-            "feedback": "Ez is védekezés. Ha nem tudtad, azt korábban kellett volna jelezni – most a megoldásra fókuszálj."
-          }
-        ]
-      },
-      {
-        "situation": "Egy kollégával konfliktusod van. Hogyan kezdeményezed a megbeszélést?",
-        "options": [
-          {
-            "text": "Megkérdezem: „Van 10 perced, hogy négyszemközt megbeszéljük, ami köztünk van? Szeretném rendezni.”",
-            "isOptimal": true,
-            "feedback": "Direkt, baráti és megoldásorientált. A közvetlen kommunikáció az első és legjobb eszköz."
-          },
-          {
-            "text": "Szólnék HR-nek – nem akarok konfliktusos helyzetbe kerülni.",
-            "isOptimal": false,
-            "feedback": "A HR bevonása legelső lépésként aránytalannak tűnik. Próbáld meg négyszemközt megoldani."
-          },
-          {
-            "text": "Nem szólok semmit és igyekszem kerülni a kollégát.",
-            "isOptimal": false,
-            "feedback": "A kerülés feszültséget tart fenn és a munka minőségére is hatással lehet."
-          }
-        ]
-      },
-      {
-        "situation": "Visszajelzést kérsz a vezetőtől az elmúlt hónapodról. Hogyan fogalmazod meg?",
-        "options": [
-          {
-            "text": "Jól dolgoztam eddig?",
-            "isOptimal": false,
-            "feedback": "Ez zárt kérdés – igen/nem a válasz, és nem ad hasznos információt a fejlődéshez."
-          },
-          {
-            "text": "Kaphatok fizetésemelést?",
-            "isOptimal": false,
-            "feedback": "Ez idő előtti és háttér nélküli. A fizetésről akkor érdemes tárgyalni, ha az eredményeid azt alátámasztják."
-          },
-          {
-            "text": "Szívesen hallanám, hogyan látod az elmúlt időszak munkámat – miben fejlődhetnék a legtöbbet?",
-            "isOptimal": true,
-            "feedback": "Nyitott kérdés, fejlődésorientált. Mutatja, hogy komolyan veszed a munkádat."
-          }
-        ]
-      },
-      {
-        "situation": "Egy feladat leírása hiányos, de a vezető éppen nem elérhető. Mit teszel?",
-        "options": [
-          {
-            "text": "Megvárom, amíg a vezető visszaér – addig nem csinálok semmit.",
-            "isOptimal": false,
-            "feedback": "Ha soká tart, ez blokkolja a haladást. Próbálj legalább a biztos részeket elkezdeni."
-          },
-          {
-            "text": "Nekikezdem az egyértelmű részeknek, és jelzem üzenetben, hogy megerősítésre várok az X pontnál.",
-            "isOptimal": true,
-            "feedback": "Ez kezdeményező és nem blokkolsz teljesen. A vezető visszaérve látja, hogy dolgoztál és pontosan mi a kérdés."
-          },
-          {
-            "text": "Megcsinálom ahogyan szerintem jó – majd szólok, ha kész.",
-            "isOptimal": false,
-            "feedback": "Ha félreéted a feladatot, az több munkát jelent. Jobb egyeztetni, mint vakon haladni."
-          }
-        ]
-      },
-      {
-        "situation": "Egy hosszú e-mailt kapsz, aminek a lényegét szeretnéd gyorsan megérteni. Mi a legjobb megközelítés?",
-        "options": [
-          {
-            "text": "Elolvasom és megkérdezem, ha valami nem világos: „Jól értem, hogy a lényeg X és Y?”",
-            "isOptimal": true,
-            "feedback": "Ez aktív olvasást és visszakérdezést kombinál – megmutatja, hogy odafigyeltél."
-          },
-          {
-            "text": "Visszaírok: „Ez túl hosszú – röviden összefoglalod?”",
-            "isOptimal": false,
-            "feedback": "Ez sértő lehet. Próbáld elolvasni, mielőtt ilyen kérést küldesz."
-          },
-          {
-            "text": "Kitörlöm, ha nincs „TO:” a nevemmel – csak akkor olvasom el.",
-            "isOptimal": false,
-            "feedback": "Ez kockázatos. Fontos info kerülheti el a figyelmedet, ha szelektíven szűröd az emaileket."
-          }
-        ]
-      },
-      {
-        "situation": "Bemutatkozol egy új kollégának. Mit mondasz?",
-        "options": [
-          {
-            "text": "Hi, [Név]. Jó nap.",
-            "isOptimal": false,
-            "feedback": "Rövid és nem nyit ajtót ismerkedésre. Az első találkozás meghatározza a kapcsolat alapját."
-          },
-          {
-            "text": "Szia, én vagyok az új. Majd megismerünk egymást idővel.",
-            "isOptimal": false,
-            "feedback": "Passzív hozzáállás. Proaktívan bemutatkozni mutatja a nyitottságot és motivációt."
-          },
-          {
-            "text": "Szia, [Név] vagyok. Épp kezdtem. Szívesen megismerlek – mivel foglalkozol?",
-            "isOptimal": true,
-            "feedback": "Barátságos, személyes, és mutatja az érdeklődésedet. A jó kapcsolat az első benyomáson múlik."
-          }
-        ]
-      },
-      {
-        "situation": "Egy feladatra 3 napot kaptál, de úgy látod, legalább 5 kell. Mit teszel?",
-        "options": [
-          {
-            "text": "Megpróbálom 3 nap alatt megcsinálni – majd valahogy sikerül.",
-            "isOptimal": false,
-            "feedback": "Ha nem sikerül, az váratlan csúszást okoz. Jobb előre jelezni, mint utólag magyarázkodni."
-          },
-          {
-            "text": "Jelzem időben: „Megnéztem a feladatot – reálisan 5 nap szükséges. Oké, ha egyeztetünk a határidőről?”",
-            "isOptimal": true,
-            "feedback": "A korai, tényeken alapuló jelzés profi. Lehetőséget ad a vezetődnek az újratervezésre."
-          },
-          {
-            "text": "Nem szólok, és ha csúszik, majd akkor megmagyarázom.",
-            "isOptimal": false,
-            "feedback": "A késő magyarázkodás rontja a megbízhatóságot. Előre kell jelezni, ha probléma van."
-          }
-        ]
-      }
-    ],
-    "blocks": [],
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "phrases",
+      "title": "Pro mondatok"
+    },
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Pro mondatok",
         "description": "Használható mondatok nehéz helyzetekre."
+      },
+      "appearance": {
+        "stylePreset": "default"
       },
       "quiz": {
         "title": "Ellenőrző kvíz",
@@ -311,8 +23,304 @@
         "phraseThink": "Gondold végig, hogyan fogalmaznád meg professzionálisan.",
         "tapForSolution": "Érintsd meg a megoldásért",
         "youCanSay": "Ezt mondhatod"
-      },
-      "stylePreset": "default"
+      }
+    },
+    "content": {
+      "proPhrases": [
+        {
+          "situation": "Segítségkérés",
+          "phrase": "Elakadtam ezzel a feladattal – konkrétan X résznél. Tudnál rászánni 5 percet, hogy ránézzünk együtt?"
+        },
+        {
+          "situation": "Visszajelzés fogadása",
+          "phrase": "Köszönöm az észrevételt – legközelebb erre jobban odafigyelek. Lenne bármilyen konkrét javaslat, hogyan csináljam másképp?"
+        },
+        {
+          "situation": "Hibázás után",
+          "phrase": "Ezt sajnos elrontottam – vállalom a felelősséget. Már dolgozom a megoldáson: így tudjuk kijavítani..."
+        },
+        {
+          "situation": "Konfliktus esetén",
+          "phrase": "Értem az álláspontodat. Nézzük meg, hogyan találunk mindkettőnknek megfelelő megoldást – mire lenne szükséged?"
+        },
+        {
+          "situation": "Határidő csúszáskor",
+          "phrase": "Látom, hogy a feladat időigényesebb a vártnál. Holnap reggelre tudom leadni a végleges verziót – megfelelő ez neked?"
+        },
+        {
+          "situation": "Feladat pontosítása",
+          "phrase": "Hogy biztosan jót csináljak: jól értem, hogy a csütörtöki meetingre kéred a prezentációt, és az A és B részt kell belerakni?"
+        },
+        {
+          "situation": "Nem értesz egyet",
+          "phrase": "Van egy felvetésem – ha van rá idő, szívesen megosztanám a nézőpontomat. Mikor lenne erre alkalmas?"
+        },
+        {
+          "situation": "Túl sok feladat egyszerre",
+          "phrase": "Jelenleg X, Y és Z feladaton dolgozom. Melyiket tartod a legfontosabbnak? Hogy a fontossági sorrendokat jól állítsam be."
+        },
+        {
+          "situation": "Egyeztetés kérése",
+          "phrase": "Lenne 15 perced a héten megbeszélni a projekt állását? Szeretném, hogy egy oldalon legyünk az elvárásokkal kapcsolatban."
+        },
+        {
+          "situation": "Visszajelzés kérése",
+          "phrase": "Szívesen hallanám, hogyan látod az elmúlt hetek munkámat. Lenne rá lehetőség egy rövid megbeszélésre?"
+        },
+        {
+          "situation": "Bemutatkozás új kollégának",
+          "phrase": "Szia, [Név] vagyok, épp kezdtem itt. Szívesen megismerlek – mivel foglalkozol a csapatban?"
+        },
+        {
+          "situation": "Félreértés tisztázása",
+          "phrase": "Azt hittem, [X-et] értesz alatta – csak pontosítani szeretném, hogy biztosan jót csináljak."
+        }
+      ],
+      "proSzóhasználatQuiz": [
+        {
+          "situation": "Elakadtál egy feladatnál és segítséget kell kérned. Melyik mondatot használod?",
+          "options": [
+            {
+              "text": "Segítség, nem tudom, mit csináljak.",
+              "isOptimal": false,
+              "feedback": "Ez pánikszerű és nem mutatja, hogy próbáltál megoldani – ami bizonytalanságot kelt."
+            },
+            {
+              "text": "Elakadtam X résznél – tudnál segíteni 5 percben ránézni együtt?",
+              "isOptimal": true,
+              "feedback": "Konkrét, meghatározott idő, kész stratégiával. Így könnyű igent mondani."
+            },
+            {
+              "text": "Ezt nem lehet megcsinálni.",
+              "isOptimal": false,
+              "feedback": "A feladat visszadobása kapituláció. Mindig kérdezz segítséget, ne adj fel előre."
+            }
+          ]
+        },
+        {
+          "situation": "A vezető nem érthetően adott meg egy feladatot. Mit mondasz?",
+          "options": [
+            {
+              "text": "Jól értem, hogy X-et kéred, és Y a várható eredmény? Csak biztosítani akarom, hogy jól csináljam.",
+              "isOptimal": true,
+              "feedback": "A visszakérdezés professzionális. Mutatja, hogy odafigyelsz és nem akarod elrontani."
+            },
+            {
+              "text": "Oké, megcsinálom – majd kitalálom.",
+              "isOptimal": false,
+              "feedback": "Ha félreértesz valamit és rosszul csinálod, az több munkát jelent mindkettőtöknek."
+            },
+            {
+              "text": "Ez nem volt egyértelmű – mondj el mindent újra.",
+              "isOptimal": false,
+              "feedback": "Ez követelőző. Pontosítani igen, de nem úgy, mintha a vezető hibázott volna."
+            }
+          ]
+        },
+        {
+          "situation": "Késni fogol egy meetingre. Mit írsz?",
+          "options": [
+            {
+              "text": "Sry, kés:)",
+              "isOptimal": false,
+              "feedback": "Ez informális és szakmaiatlan. A bocsánatkérés és az ok megjelölése elvárt."
+            },
+            {
+              "text": "Nem tudok ott lenni – lemondja a meetinget.",
+              "isOptimal": false,
+              "feedback": "Ha csak 10 perc késésről van szó, ez aránytalanul nagy lépés. Érkezz és vegyél részt utólag."
+            },
+            {
+              "text": "Sajnálom, kb. 10 percet késni fogok – forgalmi dugó. Amint megérkezem, bepótolom.",
+              "isOptimal": true,
+              "feedback": "Konkrét, udvarias és kezdeményező. Így a többiek dönthetnek, hogyan haladnak nélküled."
+            }
+          ]
+        },
+        {
+          "situation": "Nem értesz egyet a vezető döntésével. Mit mondasz?",
+          "options": [
+            {
+              "text": "Ez rossz döntés és nem értem, miért csináljuk így.",
+              "isOptimal": false,
+              "feedback": "A nyílt elutasítás konfrontatív. Ha van nézőpontod, vidd be konstruktívan."
+            },
+            {
+              "text": "Nem szólok – majd megmutatja az idő, hogy igazam van.",
+              "isOptimal": false,
+              "feedback": "A passzív kivárás nem segít. Ha van fontos nézőpontod, jogod van elmondani – konstruktívan."
+            },
+            {
+              "text": "Van egy felvetésem – ha van rá idő, szívesen megosztanám a nézőpontomat. Mikor lenne erre alkalmas?",
+              "isOptimal": true,
+              "feedback": "Így jelezsz szándékot és respect-et egyszerre. A vezető dönthet, mikor és hogyan hallgat meg."
+            }
+          ]
+        },
+        {
+          "situation": "Egyszerre három feladatot kaptál és fontossági sorrendet állít felni kellene. Mit mondasz a vezetőnek?",
+          "options": [
+            {
+              "text": "Jelenleg X, Y és Z feladaton dolgozom. Melyiket tartod a legfontosabbnak?",
+              "isOptimal": true,
+              "feedback": "Így a vezető lát belülre a terhelésébe és segít fontossági sorrendet állít felni – mindenki nyer."
+            },
+            {
+              "text": "Rendben, mindent megcsinálok.",
+              "isOptimal": false,
+              "feedback": "Ha három egyformán sürgős feladatot kapsz, valami biztosan csúszik. Jobb előre jelezni."
+            },
+            {
+              "text": "Túl sok a feladat – ezt nem lehet elvégezni.",
+              "isOptimal": false,
+              "feedback": "Ez panasz, nem megoldás. Inkább kérd a fontossági sorrendok tisztázását."
+            }
+          ]
+        },
+        {
+          "situation": "Elrontottál egy feladatot és a vezető tudja. Hogyan kezded a mondatot?",
+          "options": [
+            {
+              "text": "Igen, de azért mert…",
+              "isOptimal": false,
+              "feedback": "A „de” már védekezésre utal. A felelősség vállalása előbbre való a magyarázatnál."
+            },
+            {
+              "text": "Ezt sajnos elrontottam – vállalom a felelősséget. Már dolgozom a megoldáson.",
+              "isOptimal": true,
+              "feedback": "Szimpatikus, érett hozzáállás. Nem mentegetőzöl, hanem megoldásban gondolkodol."
+            },
+            {
+              "text": "Nem tudtam, hogy így kellett volna csinálni.",
+              "isOptimal": false,
+              "feedback": "Ez is védekezés. Ha nem tudtad, azt korábban kellett volna jelezni – most a megoldásra fókuszálj."
+            }
+          ]
+        },
+        {
+          "situation": "Egy kollégával konfliktusod van. Hogyan kezdeményezed a megbeszélést?",
+          "options": [
+            {
+              "text": "Megkérdezem: „Van 10 perced, hogy négyszemközt megbeszéljük, ami köztünk van? Szeretném rendezni.”",
+              "isOptimal": true,
+              "feedback": "Direkt, baráti és megoldásorientált. A közvetlen kommunikáció az első és legjobb eszköz."
+            },
+            {
+              "text": "Szólnék HR-nek – nem akarok konfliktusos helyzetbe kerülni.",
+              "isOptimal": false,
+              "feedback": "A HR bevonása legelső lépésként aránytalannak tűnik. Próbáld meg négyszemközt megoldani."
+            },
+            {
+              "text": "Nem szólok semmit és igyekszem kerülni a kollégát.",
+              "isOptimal": false,
+              "feedback": "A kerülés feszültséget tart fenn és a munka minőségére is hatással lehet."
+            }
+          ]
+        },
+        {
+          "situation": "Visszajelzést kérsz a vezetőtől az elmúlt hónapodról. Hogyan fogalmazod meg?",
+          "options": [
+            {
+              "text": "Jól dolgoztam eddig?",
+              "isOptimal": false,
+              "feedback": "Ez zárt kérdés – igen/nem a válasz, és nem ad hasznos információt a fejlődéshez."
+            },
+            {
+              "text": "Kaphatok fizetésemelést?",
+              "isOptimal": false,
+              "feedback": "Ez idő előtti és háttér nélküli. A fizetésről akkor érdemes tárgyalni, ha az eredményeid azt alátámasztják."
+            },
+            {
+              "text": "Szívesen hallanám, hogyan látod az elmúlt időszak munkámat – miben fejlődhetnék a legtöbbet?",
+              "isOptimal": true,
+              "feedback": "Nyitott kérdés, fejlődésorientált. Mutatja, hogy komolyan veszed a munkádat."
+            }
+          ]
+        },
+        {
+          "situation": "Egy feladat leírása hiányos, de a vezető éppen nem elérhető. Mit teszel?",
+          "options": [
+            {
+              "text": "Megvárom, amíg a vezető visszaér – addig nem csinálok semmit.",
+              "isOptimal": false,
+              "feedback": "Ha soká tart, ez blokkolja a haladást. Próbálj legalább a biztos részeket elkezdeni."
+            },
+            {
+              "text": "Nekikezdem az egyértelmű részeknek, és jelzem üzenetben, hogy megerősítésre várok az X pontnál.",
+              "isOptimal": true,
+              "feedback": "Ez kezdeményező és nem blokkolsz teljesen. A vezető visszaérve látja, hogy dolgoztál és pontosan mi a kérdés."
+            },
+            {
+              "text": "Megcsinálom ahogyan szerintem jó – majd szólok, ha kész.",
+              "isOptimal": false,
+              "feedback": "Ha félreéted a feladatot, az több munkát jelent. Jobb egyeztetni, mint vakon haladni."
+            }
+          ]
+        },
+        {
+          "situation": "Egy hosszú e-mailt kapsz, aminek a lényegét szeretnéd gyorsan megérteni. Mi a legjobb megközelítés?",
+          "options": [
+            {
+              "text": "Elolvasom és megkérdezem, ha valami nem világos: „Jól értem, hogy a lényeg X és Y?”",
+              "isOptimal": true,
+              "feedback": "Ez aktív olvasást és visszakérdezést kombinál – megmutatja, hogy odafigyeltél."
+            },
+            {
+              "text": "Visszaírok: „Ez túl hosszú – röviden összefoglalod?”",
+              "isOptimal": false,
+              "feedback": "Ez sértő lehet. Próbáld elolvasni, mielőtt ilyen kérést küldesz."
+            },
+            {
+              "text": "Kitörlöm, ha nincs „TO:” a nevemmel – csak akkor olvasom el.",
+              "isOptimal": false,
+              "feedback": "Ez kockázatos. Fontos info kerülheti el a figyelmedet, ha szelektíven szűröd az emaileket."
+            }
+          ]
+        },
+        {
+          "situation": "Bemutatkozol egy új kollégának. Mit mondasz?",
+          "options": [
+            {
+              "text": "Hi, [Név]. Jó nap.",
+              "isOptimal": false,
+              "feedback": "Rövid és nem nyit ajtót ismerkedésre. Az első találkozás meghatározza a kapcsolat alapját."
+            },
+            {
+              "text": "Szia, én vagyok az új. Majd megismerünk egymást idővel.",
+              "isOptimal": false,
+              "feedback": "Passzív hozzáállás. Proaktívan bemutatkozni mutatja a nyitottságot és motivációt."
+            },
+            {
+              "text": "Szia, [Név] vagyok. Épp kezdtem. Szívesen megismerlek – mivel foglalkozol?",
+              "isOptimal": true,
+              "feedback": "Barátságos, személyes, és mutatja az érdeklődésedet. A jó kapcsolat az első benyomáson múlik."
+            }
+          ]
+        },
+        {
+          "situation": "Egy feladatra 3 napot kaptál, de úgy látod, legalább 5 kell. Mit teszel?",
+          "options": [
+            {
+              "text": "Megpróbálom 3 nap alatt megcsinálni – majd valahogy sikerül.",
+              "isOptimal": false,
+              "feedback": "Ha nem sikerül, az váratlan csúszást okoz. Jobb előre jelezni, mint utólag magyarázkodni."
+            },
+            {
+              "text": "Jelzem időben: „Megnéztem a feladatot – reálisan 5 nap szükséges. Oké, ha egyeztetünk a határidőről?”",
+              "isOptimal": true,
+              "feedback": "A korai, tényeken alapuló jelzés profi. Lehetőséget ad a vezetődnek az újratervezésre."
+            },
+            {
+              "text": "Nem szólok, és ha csúszik, majd akkor megmagyarázom.",
+              "isOptimal": false,
+              "feedback": "A késő magyarázkodás rontja a megbízhatóságot. Előre kell jelezni, ha probléma van."
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

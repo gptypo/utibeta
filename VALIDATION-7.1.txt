@@ -1,0 +1,15 @@
+ÚTITERV BETA 7.1 – validation summary
+
+✓ 41/41 JSON parse-olható
+✓ 64 média-hivatkozás ellenőrizve
+✓ 4 modul-index ellenőrizve
+✓ 7.1 recursive content schema valid
+✓ 15/15 JavaScript szintaktikailag valid
+✓ accessibility smoke valid
+✓ navigation/platform smoke valid
+✓ CMS hierarchy: 3 root groups, 4 module groups
+✓ 42 CMS path egyedi
+✓ Pages CMS rekurzív szerkesztőfa valid
+✓ JavaScript runtime adapter deep round-trip: 32/32
+✓ Pages CMS recursive key coverage: 3152 checked keys, 0 missing mappings
+✓ legacy rajzolt tree-glyph label: 0

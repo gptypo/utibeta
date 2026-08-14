@@ -1,62 +1,72 @@
 {
-  "schema": "utiterv-module-v5",
-  "id": "onmagam",
-  "slug": "quit-go",
-  "title": "Önmagam",
-  "code": "quit<br><em>&</em>GO",
-  "className": "qg",
-  "icon": "QG_BIG_ICON.svg",
-  "thin": "QG_BIG_ICON_thin.svg",
-  "lead": "Állj meg és gondold újra!",
-  "time": 14,
-  "sections": [
-    {
-      "id": "preboarding",
-      "title": "Első nap",
-      "file": "preboarding.json"
+  "schema": "utiterv-module-v6",
+  "editor": {
+    "identity": {
+      "id": "onmagam",
+      "slug": "quit-go",
+      "title": "Önmagam",
+      "code": "quit<br><em>&</em>GO",
+      "className": "qg"
     },
-    {
-      "id": "survival",
-      "title": "Első év",
-      "file": "survival.json"
+    "appearance": {
+      "icon": "QG_BIG_ICON.svg",
+      "thin": "QG_BIG_ICON_thin.svg",
+      "heroIconMode": "auto"
     },
-    {
-      "id": "marketfacts",
-      "title": "Tudtad-e?",
-      "file": "marketfacts.json"
+    "introduction": {
+      "lead": "Állj meg és gondold újra!",
+      "time": 14,
+      "page": {
+        "eyebrow": "Gyakorlati segédlet",
+        "experience": {
+          "eyebrow": "Mire számíthatsz?",
+          "popupTitle": "QUIT & GO",
+          "cardText": "Minden kihívás egy lehetőség a fejlődésre. Kis lépések, gyors eredmények.",
+          "intro": "Ebben a modulban olyan tippeket és gyakorlati útmutatókat találsz, amelyek segítenek eligazodni a munkahelyi mindennapokban. A cél, hogy magabiztosabban kezeld az első munkahelyed kihívásait, könnyebben beilleszkedj, és sikeresen elindulj szakmai utadon.",
+          "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz.",
+          "closingEyebrow": "Vidd magaddal!"
+        }
+      }
     },
-    {
-      "id": "breathing",
-      "title": "Nyugalom",
-      "file": "breathing.json"
-    },
-    {
-      "id": "mindfulness",
-      "title": "Mindfulness",
-      "file": "mindfulness.json"
-    },
-    {
-      "id": "careers",
-      "title": "Karrierutak",
-      "file": "careers.json"
-    },
-    {
-      "id": "quiz",
-      "title": "Helyzetek",
-      "file": "quiz.json"
+    "navigation": {
+      "sections": [
+        {
+          "id": "preboarding",
+          "title": "Első nap",
+          "file": "preboarding.json"
+        },
+        {
+          "id": "survival",
+          "title": "Első év",
+          "file": "survival.json"
+        },
+        {
+          "id": "marketfacts",
+          "title": "Tudtad-e?",
+          "file": "marketfacts.json"
+        },
+        {
+          "id": "breathing",
+          "title": "Nyugalom",
+          "file": "breathing.json"
+        },
+        {
+          "id": "mindfulness",
+          "title": "Mindfulness",
+          "file": "mindfulness.json"
+        },
+        {
+          "id": "careers",
+          "title": "Karrierutak",
+          "file": "careers.json"
+        },
+        {
+          "id": "quiz",
+          "title": "Helyzetek",
+          "file": "quiz.json"
+        }
+      ],
+      "dynamic": "dynamic-pages.json"
     }
-  ],
-  "heroIconMode": "auto",
-  "page": {
-    "eyebrow": "Gyakorlati segédlet",
-    "experience": {
-      "eyebrow": "Mire számíthatsz?",
-      "popupTitle": "QUIT & GO",
-      "cardText": "Minden kihívás egy lehetőség a fejlődésre. Kis lépések, gyors eredmények.",
-      "intro": "Ebben a modulban olyan tippeket és gyakorlati útmutatókat találsz, amelyek segítenek eligazodni a munkahelyi mindennapokban. A cél, hogy magabiztosabban kezeld az első munkahelyed kihívásait, könnyebben beilleszkedj, és sikeresen elindulj szakmai utadon.",
-      "closing": "Ne feledd: nem kell mindent tudnod az első napon. A fejlődés egy folyamat, minden tapasztalat közelebb visz a céljaidhoz.",
-      "closingEyebrow": "Vidd magaddal!"
-    }
-  },
-  "dynamic": "dynamic-pages.json"
+  }
 }

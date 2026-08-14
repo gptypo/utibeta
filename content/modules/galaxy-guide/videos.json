@@ -1,89 +1,133 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "videos",
-  "title": "Videók",
-  "data": {
-    "videoStories": [
-      {
-        "id": "video-story-placeholder-1",
-        "profession": "Szakács",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": true,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Szakács",
-            "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
-          },
-          "blocks": [
-            {
-              "type": "text",
-              "eyebrow": "Hamarosan",
-              "title": "Ismerd meg a szakmát",
-              "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
-            }
-          ]
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      },
-      {
-        "id": "video-story-placeholder-2",
-        "profession": "Villanyszerelő",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Villanyszerelő",
-            "description": ""
-          },
-          "blocks": []
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      },
-      {
-        "id": "video-story-placeholder-3",
-        "profession": "Hegesztő",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Hegesztő",
-            "description": ""
-          },
-          "blocks": []
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      }
-    ],
-    "blocks": [],
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "videos",
+      "title": "Videók"
+    },
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Videós történetek",
         "description": "Valódi szakmák, valódi utak."
       },
+      "appearance": {
+        "stylePreset": "default"
+      },
       "labels": {
         "available": "Elérhető",
         "soon": "Hamarosan"
-      },
-      "stylePreset": "default"
+      }
+    },
+    "content": {
+      "videoStories": [
+        {
+          "id": "video-story-placeholder-1",
+          "card": {
+            "profession": "Szakács",
+            "title": "Hamarosan érkezik",
+            "description": "Hamarosan érkezik",
+            "status": "coming-soon"
+          },
+          "appearance": {
+            "stylePreset": "default",
+            "customClass": ""
+          },
+          "detail": {
+            "settings": {
+              "enabled": true,
+              "backLabel": "Vissza a videókhoz"
+            },
+            "page": {
+              "header": {
+                "eyebrow": "Galaxy Guide · Videók",
+                "title": "Szakács",
+                "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
+              },
+              "appearance": {
+                "stylePreset": "default"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "eyebrow": "Hamarosan",
+                  "title": "Ismerd meg a szakmát",
+                  "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "video-story-placeholder-2",
+          "card": {
+            "profession": "Villanyszerelő",
+            "title": "Hamarosan érkezik",
+            "description": "Hamarosan érkezik",
+            "status": "coming-soon"
+          },
+          "appearance": {
+            "stylePreset": "default",
+            "customClass": ""
+          },
+          "detail": {
+            "settings": {
+              "enabled": false,
+              "backLabel": "Vissza a videókhoz"
+            },
+            "page": {
+              "header": {
+                "eyebrow": "Galaxy Guide · Videók",
+                "title": "Villanyszerelő",
+                "description": ""
+              },
+              "appearance": {
+                "stylePreset": "default"
+              }
+            },
+            "content": {
+              "blocks": []
+            }
+          }
+        },
+        {
+          "id": "video-story-placeholder-3",
+          "card": {
+            "profession": "Hegesztő",
+            "title": "Hamarosan érkezik",
+            "description": "Hamarosan érkezik",
+            "status": "coming-soon"
+          },
+          "appearance": {
+            "stylePreset": "default",
+            "customClass": ""
+          },
+          "detail": {
+            "settings": {
+              "enabled": false,
+              "backLabel": "Vissza a videókhoz"
+            },
+            "page": {
+              "header": {
+                "eyebrow": "Galaxy Guide · Videók",
+                "title": "Hegesztő",
+                "description": ""
+              },
+              "appearance": {
+                "stylePreset": "default"
+              }
+            },
+            "content": {
+              "blocks": []
+            }
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

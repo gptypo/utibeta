@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {fileURLToPath} from 'node:url';
+import {normalizeSectionDocument,normalizeDynamicBundleDocument,normalizeModuleIndexDocument} from '../js/content-schema.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const issues=[];
@@ -223,22 +224,24 @@ for(const file of jsonFiles){
     validatePresentation(data,name);
     validateLifecycle(data,name);
     visit(data,name);
-    const blocks=data?.data?.blocks;
+    const normalizedSection=data?.schema==='utiterv-section-v6'?normalizeSectionDocument(data):(data?.data||null);
+    const normalizedDynamic=data?.schema==='utiterv-dynamic-pages-v2'?normalizeDynamicBundleDocument(data):data;
+    const blocks=normalizedSection?.blocks;
     if(blocks!==undefined){
       if(!Array.isArray(blocks)) addIssue(name,'data.blocks nem lista.');
       else blocks.forEach((block,i)=>validateBlock(block,name,i,'data'));
     }
-    validateDetailPages(data,name);
-    validateEmbeddedDetails(data?.data,name,'data');
+    validateDetailPages({data:normalizedSection},name);
+    validateEmbeddedDetails(normalizedSection,name,'editor');
     validateExtensibleCollections(data,name);
-    if(data?.schema==='utiterv-section-v5'){const style=String(data?.data?.page?.stylePreset||'default');if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`data.page.stylePreset ismeretlen: ${style}.`);}
-    if(name.endsWith('content/modules/galaxy-guide/videos.json'))validateStyledItems(name,data?.data?.videoStories,'data.videoStories');
-    if(name.endsWith('content/modules/galaxy-guide/materials.json'))validateStyledItems(name,data?.data?.bonusMaterials,'data.bonusMaterials');
-    if(data?.schema==='utiterv-dynamic-pages-v1'){
-      if(!Array.isArray(data.pages)) addIssue(name,'pages nem lista.');
+    if(['utiterv-section-v5','utiterv-section-v6'].includes(data?.schema)){const style=String(normalizedSection?.page?.stylePreset||'default');if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`page.stylePreset ismeretlen: ${style}.`);}
+    if(name.endsWith('content/modules/galaxy-guide/videos.json'))validateStyledItems(name,normalizedSection?.videoStories,'editor.content.videoStories');
+    if(name.endsWith('content/modules/galaxy-guide/materials.json'))validateStyledItems(name,normalizedSection?.bonusMaterials,'editor.content.bonusMaterials');
+    if(['utiterv-dynamic-pages-v1','utiterv-dynamic-pages-v2'].includes(data?.schema)){
+      if(!Array.isArray(normalizedDynamic.pages)) addIssue(name,'pages nem lista.');
       else {
         const localIds=new Set();
-        data.pages.forEach((page,i)=>{
+        normalizedDynamic.pages.forEach((page,i)=>{
           if(!page||typeof page!=='object'){addIssue(name,`pages[${i}] nem objektum.`);return;}
           const id=String(page.id||'').trim();
           if(!id)addIssue(name,`pages[${i}] id mezője kötelező.`);
@@ -261,7 +264,7 @@ for(const file of jsonFiles){
 const manifest=parsed.get('content/project.json');
 if(!manifest) addIssue('content/project.json','A projekt manifest nem olvasható.');
 else{
-  if(String(manifest.version||'')!=='7.0.2') addIssue('content/project.json',`A release verziója nem 7.0.2: ${manifest.version||'hiányzik'}.`);
+  if(String(manifest.version||'')!=='7.1.0') addIssue('content/project.json',`A release verziója nem 7.1.0: ${manifest.version||'hiányzik'}.`);
   if(!String(manifest.meta?.contentModel||'').includes('element-style-presets-v1')) addIssue('content/project.json','A 6.1 contentModel metaadata hiányos: element-style-presets-v1 hiányzik.');
   const uiData=parsed.get('content/ui.json');
   for(const key of ['title','placeholder','hint','empty']) if(!String(uiData?.search?.[key]||'').trim()) addIssue('content/ui.json',`A kereső UI mezője hiányzik: search.${key}.`);
@@ -272,8 +275,9 @@ else{
   }
   for(const moduleRef of manifest.modules||[]){
     const moduleTarget=`content/${String(moduleRef.file||'').replace(/^\.\//,'')}`;
-    const module=parsed.get(moduleTarget);
-    if(!module){addIssue('content/project.json',`Hiányzó modul index: ${moduleTarget}`);continue;}
+    const moduleRaw=parsed.get(moduleTarget);
+    if(!moduleRaw){addIssue('content/project.json',`Hiányzó modul index: ${moduleTarget}`);continue;}
+    const module=normalizeModuleIndexDocument(moduleRaw);
     const moduleDir=path.posix.dirname(moduleTarget);
     for(const section of module.sections||[]){
       const sectionTarget=path.posix.normalize(`${moduleDir}/${section.file}`);
@@ -281,7 +285,8 @@ else{
     }
     if(module.dynamic){
       const dynamicTarget=path.posix.normalize(`${moduleDir}/${module.dynamic}`);
-      const dynamic=parsed.get(dynamicTarget);
+      const dynamicRaw=parsed.get(dynamicTarget);
+      const dynamic=dynamicRaw?normalizeDynamicBundleDocument(dynamicRaw):null;
       if(!dynamic)addIssue(moduleTarget,`Hiányzó dinamikus aloldal-lista: ${dynamicTarget}`);
       else {
         const staticIds=new Set((module.sections||[]).map(section=>String(section.id||'')));
@@ -302,7 +307,7 @@ for(const ref of mediaRefs){
 for(const [id,places] of ids){
   if(places.length>1){
     // Root section/module ids and module-index section references are structural and may repeat.
-    const structural=p=>p.keyPath==='id'||(/content\/modules\/[^/]+\/index\.json$/.test(p.file)&&/sections\[\d+\]\.id$/.test(p.keyPath));
+    const structural=p=>p.keyPath==='id'||(/content\/modules\/[^/]+\/index\.json$/.test(p.file)&&(/editor\.identity\.id$/.test(p.keyPath)||/sections\[\d+\]\.id$/.test(p.keyPath)))||(p.file==='content/project.json'&&/modules\[\d+\]\.id$/.test(p.keyPath));
     const meaningful=places.filter(p=>!structural(p));
     if(meaningful.length>1) addWarning(meaningful[0].file,`Többször használt tartalmi id: "${id}" (${meaningful.length} előfordulás).`);
   }

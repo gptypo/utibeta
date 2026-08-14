@@ -1,76 +1,84 @@
 {
-  "schema": "utiterv-section-v5",
-  "id": "linkedin",
-  "title": "LinkedIn tippek",
-  "data": {
-    "linkedinCards": [
-      {
-        "front": "Az első benyomás a profilképnél kezdődik",
-        "back": "Használj jó minőségű, mosolygós, professzionális profilképet. Nem kell öltöny, de legyen igényes és hiteles."
-      },
-      {
-        "front": "Ne hagyd üresen a címsorodat!",
-        "back": "A neved alatti sorban ne csak a tanulmányaid szerepeljenek. Mutasd meg, milyen terület érdekel és merre tartasz."
-      },
-      {
-        "front": "Töltsd ki a „Rólam” részt!",
-        "back": "Röviden mutasd be, ki vagy, mi érdekel, milyen céljaid vannak és miben vagy jó."
-      },
-      {
-        "front": "Emeld ki az eredményeidet!",
-        "back": "Ne csak a pozíciókat sorold fel. Írd le, milyen projektekben vettél részt és mit értél el."
-      },
-      {
-        "front": "Mutasd meg a projektjeidet!",
-        "back": "Tölts fel prezentációt, portfóliót, weboldalt vagy GitHub-linket, hogy látható legyen a tudásod."
-      },
-      {
-        "front": "Építs kapcsolatokat tudatosan!",
-        "back": "Csatlakozz oktatókhoz, volt diáktársakhoz, szakmai kapcsolatokhoz és toborzókhoz."
-      },
-      {
-        "front": "Sorold fel a készségeidet!",
-        "back": "Add meg a legfontosabb szakmai és digitális készségeidet, hogy könnyebben megtaláljanak."
-      },
-      {
-        "front": "Legyél aktív!",
-        "back": "Reagálj szakmai bejegyzésekre, kommentelj és oszd meg a számodra érdekes tartalmakat."
-      },
-      {
-        "front": "Kapcsold be az „Open to Work” funkciót",
-        "back": "Jelezd a toborzóknak, hogy nyitott vagy új álláslehetőségekre."
-      },
-      {
-        "front": "Kövesd a számodra érdekes cégeket",
-        "back": "Így elsőként értesülhetsz az új állásokról, programokról és gyakornoki lehetőségekről."
-      },
-      {
-        "front": "Frissítsd rendszeresen a profilodat!",
-        "back": "Új tanfolyam, projekt vagy készség megszerzése után frissítsd a profilodat."
-      },
-      {
-        "front": "A LinkedIn több, mint egy online CV",
-        "back": "Használd kapcsolatok építésére, tanulásra, szakmai inspirációra és álláskeresésre is."
-      }
-    ],
-    "linkedinClosing": {
-      "front": "A LinkedIn a személyes márkád része",
-      "back": "Nem kell tökéletesnek lennie, de legyen naprakész, hiteles és mutassa meg, miben vagy jó. Egy jól felépített profil új lehetőségekhez vezethet."
+  "schema": "utiterv-section-v6",
+  "editor": {
+    "identity": {
+      "id": "linkedin",
+      "title": "LinkedIn tippek"
     },
-    "blocks": [],
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "LinkedIn tippek",
         "description": "12 praktikus lépés a hiteles és naprakész szakmai profilhoz."
       },
+      "appearance": {
+        "stylePreset": "default"
+      },
       "labels": {
         "tip": "Tipp",
         "whatToDo": "Mit tegyél?",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      },
-      "stylePreset": "default"
+      }
+    },
+    "content": {
+      "linkedinCards": [
+        {
+          "front": "Az első benyomás a profilképnél kezdődik",
+          "back": "Használj jó minőségű, mosolygós, professzionális profilképet. Nem kell öltöny, de legyen igényes és hiteles."
+        },
+        {
+          "front": "Ne hagyd üresen a címsorodat!",
+          "back": "A neved alatti sorban ne csak a tanulmányaid szerepeljenek. Mutasd meg, milyen terület érdekel és merre tartasz."
+        },
+        {
+          "front": "Töltsd ki a „Rólam” részt!",
+          "back": "Röviden mutasd be, ki vagy, mi érdekel, milyen céljaid vannak és miben vagy jó."
+        },
+        {
+          "front": "Emeld ki az eredményeidet!",
+          "back": "Ne csak a pozíciókat sorold fel. Írd le, milyen projektekben vettél részt és mit értél el."
+        },
+        {
+          "front": "Mutasd meg a projektjeidet!",
+          "back": "Tölts fel prezentációt, portfóliót, weboldalt vagy GitHub-linket, hogy látható legyen a tudásod."
+        },
+        {
+          "front": "Építs kapcsolatokat tudatosan!",
+          "back": "Csatlakozz oktatókhoz, volt diáktársakhoz, szakmai kapcsolatokhoz és toborzókhoz."
+        },
+        {
+          "front": "Sorold fel a készségeidet!",
+          "back": "Add meg a legfontosabb szakmai és digitális készségeidet, hogy könnyebben megtaláljanak."
+        },
+        {
+          "front": "Legyél aktív!",
+          "back": "Reagálj szakmai bejegyzésekre, kommentelj és oszd meg a számodra érdekes tartalmakat."
+        },
+        {
+          "front": "Kapcsold be az „Open to Work” funkciót",
+          "back": "Jelezd a toborzóknak, hogy nyitott vagy új álláslehetőségekre."
+        },
+        {
+          "front": "Kövesd a számodra érdekes cégeket",
+          "back": "Így elsőként értesülhetsz az új állásokról, programokról és gyakornoki lehetőségekről."
+        },
+        {
+          "front": "Frissítsd rendszeresen a profilodat!",
+          "back": "Új tanfolyam, projekt vagy készség megszerzése után frissítsd a profilodat."
+        },
+        {
+          "front": "A LinkedIn több, mint egy online CV",
+          "back": "Használd kapcsolatok építésére, tanulásra, szakmai inspirációra és álláskeresésre is."
+        }
+      ],
+      "linkedinClosing": {
+        "front": "A LinkedIn a személyes márkád része",
+        "back": "Nem kell tökéletesnek lennie, de legyen naprakész, hiteles és mutassa meg, miben vagy jó. Egy jól felépített profil új lehetőségekhez vezethet."
+      }
+    },
+    "extensions": {
+      "blocks": []
     }
   }
 }

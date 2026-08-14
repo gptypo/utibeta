@@ -1,29 +1,39 @@
 {
-  "schema": "utiterv-module-v5",
-  "id": "bonus",
-  "slug": "galaxy-guide",
-  "title": "Bónusz tudástár",
-  "code": "galaxy<br>GUIDE",
-  "className": "gg",
-  "icon": "GG_BIG_ICON.svg",
-  "thin": "GG_BIG_ICON_thin.svg",
-  "lead": "Útikalauz a karrier-galaxishoz",
-  "time": 12,
-  "sections": [
-    {
-      "id": "materials",
-      "title": "Tudástár",
-      "file": "materials.json"
+  "schema": "utiterv-module-v6",
+  "editor": {
+    "identity": {
+      "id": "bonus",
+      "slug": "galaxy-guide",
+      "title": "Bónusz tudástár",
+      "code": "galaxy<br>GUIDE",
+      "className": "gg"
     },
-    {
-      "id": "videos",
-      "title": "Videók",
-      "file": "videos.json"
+    "appearance": {
+      "icon": "GG_BIG_ICON.svg",
+      "thin": "GG_BIG_ICON_thin.svg",
+      "heroIconMode": "auto"
+    },
+    "introduction": {
+      "lead": "Útikalauz a karrier-galaxishoz",
+      "time": 12,
+      "page": {
+        "eyebrow": "Gyakorlati segédlet"
+      }
+    },
+    "navigation": {
+      "sections": [
+        {
+          "id": "materials",
+          "title": "Tudástár",
+          "file": "materials.json"
+        },
+        {
+          "id": "videos",
+          "title": "Videók",
+          "file": "videos.json"
+        }
+      ],
+      "dynamic": "dynamic-pages.json"
     }
-  ],
-  "heroIconMode": "auto",
-  "page": {
-    "eyebrow": "Gyakorlati segédlet"
-  },
-  "dynamic": "dynamic-pages.json"
+  }
 }

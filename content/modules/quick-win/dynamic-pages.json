@@ -1,5 +1,9 @@
 {
-  "schema": "utiterv-dynamic-pages-v1",
-  "moduleId": "helyzeteim",
-  "pages": []
+  "schema": "utiterv-dynamic-pages-v2",
+  "editor": {
+    "identity": {
+      "moduleId": "helyzeteim"
+    },
+    "pages": []
+  }
 }
