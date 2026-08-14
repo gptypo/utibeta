@@ -3,87 +3,86 @@
   "id": "videos",
   "title": "Videók",
   "data": {
-    "videoStories": [
-      {
-        "id": "video-story-placeholder-1",
-        "profession": "Szakács",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": true,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Szakács",
-            "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
-          },
-          "blocks": [
-            {
-              "type": "text",
-              "eyebrow": "Hamarosan",
-              "title": "Ismerd meg a szakmát",
-              "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
-            }
-          ]
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      },
-      {
-        "id": "video-story-placeholder-2",
-        "profession": "Villanyszerelő",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Villanyszerelő",
-            "description": ""
-          },
-          "blocks": []
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      },
-      {
-        "id": "video-story-placeholder-3",
-        "profession": "Hegesztő",
-        "title": "Hamarosan érkezik",
-        "description": "Hamarosan érkezik",
-        "status": "coming-soon",
-        "detail": {
-          "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
-          "header": {
-            "eyebrow": "Galaxy Guide · Videók",
-            "title": "Hegesztő",
-            "description": ""
-          },
-          "blocks": []
-        },
-        "stylePreset": "default",
-        "customClass": ""
-      }
-    ],
-    "blocks": [],
     "page": {
       "header": {
         "eyebrow": "Segédlet",
         "title": "Videós történetek",
         "description": "Valódi szakmák, valódi utak."
       },
+      "stylePreset": "default",
+      "publicationStatus": "published",
       "labels": {
         "available": "Elérhető",
         "soon": "Hamarosan"
+      }
+    },
+    "videoStories": [
+      {
+        "id": "video-story-placeholder-1",
+        "stylePreset": "default",
+        "profession": "Szakács",
+        "title": "Hamarosan érkezik",
+        "description": "Hamarosan érkezik",
+        "status": "coming-soon",
+        "detail": {
+          "enabled": true,
+          "publicationStatus": "published",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Szakács",
+            "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
+          },
+          "stylePreset": "module",
+          "backLabel": "Vissza a videókhoz",
+          "blocks": [
+            {
+              "type": "text",
+              "hidden": false,
+              "publicationStatus": "published",
+              "stylePreset": "default",
+              "eyebrow": "Hamarosan",
+              "title": "Ismerd meg a szakmát",
+              "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
+            }
+          ]
+        }
       },
-      "stylePreset": "default"
-    }
+      {
+        "id": "video-story-placeholder-2",
+        "stylePreset": "default",
+        "profession": "Villanyszerelő",
+        "title": "Hamarosan érkezik",
+        "description": "Hamarosan érkezik",
+        "status": "coming-soon",
+        "detail": {
+          "enabled": false,
+          "publicationStatus": "published",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Villanyszerelő"
+          },
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz"
+        }
+      },
+      {
+        "id": "video-story-placeholder-3",
+        "stylePreset": "default",
+        "profession": "Hegesztő",
+        "title": "Hamarosan érkezik",
+        "description": "Hamarosan érkezik",
+        "status": "coming-soon",
+        "detail": {
+          "enabled": false,
+          "publicationStatus": "published",
+          "header": {
+            "eyebrow": "Galaxy Guide · Videók",
+            "title": "Hegesztő"
+          },
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz"
+        }
+      }
+    ]
   }
 }
