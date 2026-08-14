@@ -89,7 +89,8 @@
         "employerPerspective": "Munkaadói nézőpont",
         "genZExpectation": "Z-generáció elvárása",
         "employerExpectation": "Munkaadó elvárása"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

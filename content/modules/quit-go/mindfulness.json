@@ -184,7 +184,8 @@
         "letsStart": "Kezdjük",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      }
+      },
+      "stylePreset": "default"
     },
     "mindfulnessUi": {
       "groundingSteps": [

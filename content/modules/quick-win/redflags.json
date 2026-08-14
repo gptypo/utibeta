@@ -308,7 +308,8 @@
       },
       "labels": {
         "redFlagFallback": "Vészjel {index}"
-      }
+      },
+      "stylePreset": "default"
     }
   },
   "expertReview": {

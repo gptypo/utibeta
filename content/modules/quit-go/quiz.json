@@ -377,7 +377,8 @@
       "labels": {
         "workplaceSituationsTitle": "Munkahelyi helyzetek",
         "workplaceSituationsDescription": "Nézd végig bátran az összes lehetőséget."
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

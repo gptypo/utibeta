@@ -310,7 +310,8 @@
         "digitalThink": "Gondold végig, mi lenne a tudatos digitális viselkedés ebben a témában.",
         "tapForGuideline": "Érintsd meg az irányelvért",
         "consciousDirection": "Tudatos irány"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

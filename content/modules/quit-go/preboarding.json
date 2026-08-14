@@ -59,7 +59,8 @@
         "eyebrow": "Segédlet",
         "title": "Preboarding túlélőkészlet",
         "description": "12 gyakori kérdés az első munkanap előtt."
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

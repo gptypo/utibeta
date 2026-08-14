@@ -321,7 +321,8 @@
       "labels": {
         "amateur": "Amatőr",
         "professional": "Profi"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

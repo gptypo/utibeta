@@ -69,7 +69,8 @@
         "whatToDo": "Mit tegyél?",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

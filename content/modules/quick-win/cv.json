@@ -138,7 +138,8 @@
         "quickRule": "Gyors szabály",
         "whatWrite": "Mit írj?",
         "whatNotWrite": "Mit ne írj?"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

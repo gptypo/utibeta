@@ -84,6 +84,79 @@ function validateBlock(block,file,index,where){
   if(type==='checklist'&&Array.isArray(block.items))block.items.forEach((item,ci)=>{if(!String(item?.text||'').trim())addIssue(file,`${where}.blocks[${index}].items[${ci}] checklist szövege hiányzik.`);});
 }
 
+
+function validateBuiltInQuizCollection(items,file,keyPath){
+  if(!Array.isArray(items))return;
+  items.forEach((item,qi)=>{
+    if(!item||typeof item!=='object'||Array.isArray(item)){addIssue(file,`${keyPath}[${qi}] nem objektum.`);return;}
+    const question=String(item.situation||item.question||'').trim();
+    if(!question)addIssue(file,`${keyPath}[${qi}] kérdésszövege hiányzik.`);
+    const options=item.options;
+    if(!Array.isArray(options)||options.length<2){addIssue(file,`${keyPath}[${qi}] legalább 2 válaszlehetőséget igényel.`);return;}
+    if(options.every(option=>typeof option==='string')){
+      const correct=Number(item.correctAnswer);
+      if(!Number.isInteger(correct)||correct<0||correct>=options.length)addIssue(file,`${keyPath}[${qi}].correctAnswer érvénytelen (${item.correctAnswer}); 0 és ${options.length-1} közötti index szükséges.`);
+      options.forEach((option,oi)=>{if(!String(option||'').trim())addIssue(file,`${keyPath}[${qi}].options[${oi}] válaszszövege üres.`);});
+      return;
+    }
+    if(options.some(option=>!option||typeof option!=='object'||Array.isArray(option))){addIssue(file,`${keyPath}[${qi}].options vegyes/érvénytelen szerkezetű.`);return;}
+    const optimal=options.filter(option=>option.isOptimal===true).length;
+    if(optimal!==1)addIssue(file,`${keyPath}[${qi}] pontosan 1 helyes/optimális választ igényel (jelenleg ${optimal}).`);
+    options.forEach((option,oi)=>{
+      if(!String(option.text||'').trim())addIssue(file,`${keyPath}[${qi}].options[${oi}] válaszszövege hiányzik.`);
+      if(!String(option.feedback||option.explanation||'').trim())addWarning(file,`${keyPath}[${qi}].options[${oi}] visszajelzése üres.`);
+    });
+  });
+}
+
+function validateExtensibleCollections(value,file,keyPath=''){
+  if(!value||typeof value!=='object')return;
+  if(Array.isArray(value)){
+    value.forEach((item,i)=>validateExtensibleCollections(item,file,`${keyPath}[${i}]`));
+    return;
+  }
+  for(const [key,val] of Object.entries(value)){
+    const next=keyPath?`${keyPath}.${key}`:key;
+    if(Array.isArray(val)&&/quiz(?:items)?$/i.test(key))validateBuiltInQuizCollection(val,file,next);
+    if(Array.isArray(val)&&key==='firstDayChecklist'){
+      const seen=new Set();
+      val.forEach((item,i)=>{
+        const id=String(item?.id??'').trim();
+        if(!id)addIssue(file,`${next}[${i}] technikai azonosítója hiányzik.`);
+        else if(!/^[a-z0-9][a-z0-9-]*$/.test(id))addIssue(file,`${next}[${i}] id csak kisbetűt, számot és kötőjelet tartalmazhat: ${id}.`);
+        else if(seen.has(id))addIssue(file,`${next}[${i}] duplikált id: ${id}.`);
+        else seen.add(id);
+        if(!String(item?.text||'').trim())addIssue(file,`${next}[${i}] checklist szövege hiányzik.`);
+      });
+    }
+    validateExtensibleCollections(val,file,next);
+  }
+}
+
+
+function validateDetailPages(data,file){
+  const pages=data?.data?.detailPages;
+  if(pages===undefined)return;
+  if(!Array.isArray(pages)){addIssue(file,'data.detailPages nem lista.');return;}
+  const ids=new Set();
+  pages.forEach((page,i)=>{
+    if(!page||typeof page!=='object'){addIssue(file,`data.detailPages[${i}] nem objektum.`);return;}
+    const id=String(page.id||'').trim();
+    if(!id)addIssue(file,`data.detailPages[${i}] id mezője kötelező.`);
+    else if(!/^[a-z0-9][a-z0-9-]*$/.test(id))addIssue(file,`data.detailPages[${i}] id csak kisbetűt, számot és kötőjelet tartalmazhat: ${id}.`);
+    else if(ids.has(id))addIssue(file,`Duplikált részletes oldal id: ${id}.`);
+    else ids.add(id);
+    const style=String(page.stylePreset||'default');
+    if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(file,`data.detailPages[${i}] ismeretlen stylePreset: ${style}.`);
+    if(page.hidden!==true&&!String(page.header?.title||'').trim())addIssue(file,`data.detailPages[${i}] címe hiányzik.`);
+    if(page.blocks!==undefined){if(!Array.isArray(page.blocks))addIssue(file,`data.detailPages[${i}].blocks nem lista.`);else page.blocks.forEach((block,bi)=>validateBlock(block,file,bi,`data.detailPages[${i}]`));}
+  });
+  const linked=[];
+  const collect=value=>{if(Array.isArray(value))return value.forEach(collect);if(!value||typeof value!=='object')return;for(const [k,val] of Object.entries(value)){if(k==='detailPage'&&String(val||'').trim())linked.push(String(val).trim());collect(val);}};
+  collect(data?.data||{});
+  for(const id of linked)if(!ids.has(id))addIssue(file,`Nem létező részletes oldalra mutató detailPage hivatkozás: ${id}.`);
+}
+
 const jsonFiles=walk(path.join(root,'content')).filter(f=>f.endsWith('.json'));
 for(const file of jsonFiles){
   const name=rel(file);
@@ -96,6 +169,9 @@ for(const file of jsonFiles){
       if(!Array.isArray(blocks)) addIssue(name,'data.blocks nem lista.');
       else blocks.forEach((block,i)=>validateBlock(block,name,i,'data'));
     }
+    validateDetailPages(data,name);
+    validateExtensibleCollections(data,name);
+    if(data?.schema==='utiterv-section-v5'){const style=String(data?.data?.page?.stylePreset||'default');if(!['default','cards','highlight','minimal','dark','module'].includes(style))addIssue(name,`data.page.stylePreset ismeretlen: ${style}.`);}
     if(data?.schema==='utiterv-dynamic-pages-v1'){
       if(!Array.isArray(data.pages)) addIssue(name,'pages nem lista.');
       else {

@@ -9,21 +9,24 @@
         "profession": "Szakács",
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "detailPage": "szakacs"
       },
       {
         "id": "video-story-placeholder-2",
         "profession": "Villanyszerelő",
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "detailPage": ""
       },
       {
         "id": "video-story-placeholder-3",
         "profession": "Hegesztő",
         "title": "Hamarosan érkezik",
         "description": "Hamarosan érkezik",
-        "status": "coming-soon"
+        "status": "coming-soon",
+        "detailPage": ""
       }
     ],
     "blocks": [],
@@ -36,7 +39,29 @@
       "labels": {
         "available": "Elérhető",
         "soon": "Hamarosan"
+      },
+      "stylePreset": "default"
+    },
+    "detailPages": [
+      {
+        "id": "szakacs",
+        "hidden": false,
+        "stylePreset": "default",
+        "backLabel": "Vissza a videókhoz",
+        "header": {
+          "eyebrow": "Galaxy Guide · Videók",
+          "title": "Szakács",
+          "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
+        },
+        "blocks": [
+          {
+            "type": "text",
+            "eyebrow": "Hamarosan",
+            "title": "Ismerd meg a szakmát",
+            "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
+          }
+        ]
       }
-    }
+    ]
   }
 }

@@ -256,7 +256,7 @@ components:
         type: string
         required: true
         pattern:
-          regex: "^[a-z0-9-]+$"
+          regex: ^[a-z0-9-]+$
           message: Kisbetűt, számot és kötőjelet használj, például kommunikacios-kviz.
         description: A kitöltési eredmény ehhez az azonosítóhoz kötődik. Létrehozás után ne változtasd meg.
       - name: eyebrow
@@ -310,7 +310,7 @@ components:
         label: Kártyasor azonosító
         type: string
         required: true
-        pattern: "^[a-z0-9-]+$"
+        pattern: ^[a-z0-9-]+$
       - name: eyebrow
         label: Kis felirat
         type: string
@@ -348,7 +348,7 @@ components:
         label: Kártyasor azonosító
         type: string
         required: true
-        pattern: "^[a-z0-9-]+$"
+        pattern: ^[a-z0-9-]+$
       - name: eyebrow
         label: Kis felirat
         type: string
@@ -399,7 +399,7 @@ components:
         label: Checklist azonosító
         type: string
         required: true
-        pattern: "^[a-z0-9-]+$"
+        pattern: ^[a-z0-9-]+$
       - name: eyebrow
         label: Kis felirat
         type: string
@@ -795,6 +795,7 @@ content:
       label: Ios steps
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: understood
       label: Understood
       type: string
@@ -811,6 +812,7 @@ content:
       label: Onboarding features
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: onboardingButton
       label: Onboarding button
       type: string
@@ -1019,6 +1021,10 @@ content:
       - name: stopped
         label: Stopped
         type: string
+    - name: emptyList
+      label: Üres lista üzenete
+      type: string
+      description: Akkor jelenik meg, ha egy bővíthető tartalomlistából minden elemet töröltek.
   - name: contentTypeLabels
     label: Content type labels
     type: object
@@ -1131,8 +1137,8 @@ content:
   operations:
     delete: false
     rename: false
-  description: Globális navigáció, főoldal, gombok és valóban közös komponensfeliratok. Az aloldalak saját szövegei az adott
-    aloldal JSON-jában vannak.
+  description: Globális navigáció, főoldal, gombok és valóban közös komponensfeliratok. Az aloldalak saját szövegei az adott aloldal JSON-jában
+    vannak.
 - name: content_offline_json
   label: Offline oldal
   type: file
@@ -1219,6 +1225,7 @@ content:
     - name: purpose
       label: Purpose
       type: string
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   - name: id
     label: ID
     type: string
@@ -1229,6 +1236,7 @@ content:
     label: Display Override
     type: string
     list: true
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   - name: orientation
     label: Orientation
     type: string
@@ -1242,6 +1250,7 @@ content:
     label: Categories
     type: string
     list: true
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   - name: prefer_related_applications
     label: Prefer Related Applications
     type: boolean
@@ -1281,6 +1290,8 @@ content:
       - name: type
         label: Type
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   operations:
     delete: false
     rename: false
@@ -1528,8 +1539,7 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1630,8 +1640,7 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1732,8 +1741,7 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1834,8 +1842,7 @@ content:
       type: string
       hidden: true
     readonly: true
-    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák
-      bővíthetők.
+    description: Az aloldalak routingja védett. Az aloldalak tartalma külön menüpontokban szabadon szerkeszthető és a listák bővíthetők.
   - name: dynamic
     label: Dinamikus aloldalak adatfájlja
     type: string
@@ -1886,6 +1893,25 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: &id001
+          values:
+          - value: default
+            label: Alap
+          - value: cards
+            label: Kártyás
+          - value: highlight
+            label: Kiemelt
+          - value: minimal
+            label: Minimal
+          - value: dark
+            label: Sötét panel
+          - value: module
+            label: Modul-szín
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -1924,6 +1950,7 @@ content:
       - name: status
         label: Státusz
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -1970,6 +1997,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -1982,7 +2015,7 @@ content:
           label: Hamarosan státusz
           type: string
     - name: videoStories
-      label: Videós történetek
+      label: Videókártyák
       type: object
       list:
         collapsible:
@@ -1990,9 +2023,13 @@ content:
           summary: '{title}'
       fields:
       - name: id
-        label: Id
+        label: Technikai azonosító
         type: string
-        hidden: true
+        required: true
+        description: Egyedi azonosító. Új elemnél adj meg kisbetűs, kötőjeles nevet (pl. uj-elem).
+        pattern:
+          regex: ^[a-z0-9][a-z0-9-]*$
+          message: Csak kisbetű, szám és kötőjel használható.
       - name: profession
         label: Profession
         type: string
@@ -2005,6 +2042,74 @@ content:
       - name: status
         label: Státusz
         type: string
+      - name: detailPage
+        label: Megnyitandó részletes tartalom ID-ja
+        type: string
+        description: Ha üres, a kártya nem nyit részletes oldalt. Ha megadsz egy ID-t, annak egyeznie kell az alábbi „Részletes tartalmak” egyik
+          azonosítójával.
+        pattern:
+          regex: ^[a-z0-9-]*$
+          message: Csak kisbetű, szám és kötőjel használható.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+    - name: detailPages
+      label: Részletes tartalmak
+      type: object
+      description: A Videók kártyáiról megnyitható belső oldalak. Itt a Szakács oldal és további részletes tartalmak is létrehozhatók.
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{header.title}'
+      fields:
+      - name: id
+        label: Technikai azonosító
+        type: string
+        required: true
+        description: Ezt az ID-t kell kiválasztani/beírni a kártya „Megnyitandó részletes tartalom ID-ja” mezőjébe.
+        pattern:
+          regex: ^[a-z0-9][a-z0-9-]*$
+          message: Kisbetűvel vagy számmal kezdődjön; csak kisbetű, szám és kötőjel használható.
+      - name: hidden
+        label: Részletes oldal elrejtése
+        type: boolean
+      - name: backLabel
+        label: Vissza gomb felirata
+        type: string
+      - name: stylePreset
+        label: Vizuális stílus
+        type: select
+        default: default
+        options:
+          values:
+          - value: default
+            label: Alap
+          - value: cards
+            label: Kártyás
+          - value: highlight
+            label: Kiemelt
+          - value: minimal
+            label: Minimal
+          - value: dark
+            label: Sötét panel
+          - value: module
+            label: Modul-szín
+      - name: header
+        label: Részletes oldal fejléc
+        type: object
+        fields:
+        - name: eyebrow
+          label: Felső címke
+          type: string
+        - name: title
+          label: Cím
+          type: string
+          required: true
+        - name: description
+          label: Bevezető
+          type: text
+      - name: blocks
+        label: Részletes oldal tartalma
+        component: content_blocks
+        description: Szöveg, kép, videó, hang, kvíz, flip-card, checklist és minden más újrahasznosítható blokk hozzáadható.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2051,6 +2156,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -2093,7 +2204,7 @@ content:
           label: whatNotWrite
           type: string
     - name: cvCards
-      label: Cv cards
+      label: CV kártyák
       type: object
       list:
         collapsible:
@@ -2109,8 +2220,9 @@ content:
       - name: dont
         label: Dont
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: cvTips
-      label: Cv tips
+      label: CV tippek
       type: object
       list:
         collapsible:
@@ -2123,6 +2235,7 @@ content:
       - name: dont
         label: Dont
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: cvQuickRule
       label: Cv quick rule
       type: object
@@ -2179,6 +2292,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -2190,7 +2309,7 @@ content:
           label: Leírás
           type: text
     - name: firstDayChecklist
-      label: First day checklist
+      label: Checklist elemek
       type: object
       list:
         collapsible:
@@ -2198,14 +2317,19 @@ content:
           summary: 'Elem #{index}'
       fields:
       - name: id
-        label: Id
+        label: Technikai azonosító
         type: string
-        hidden: true
+        required: true
+        description: Egyedi azonosító. Új elemnél adj meg kisbetűs, kötőjeles nevet (pl. uj-elem).
+        pattern:
+          regex: ^[a-z0-9][a-z0-9-]*$
+          message: Csak kisbetű, szám és kötőjel használható.
       - name: text
         label: Text
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: firstDayQuiz
-      label: First day quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2216,7 +2340,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -2232,6 +2356,8 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2278,6 +2404,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -2296,7 +2428,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: interviewCards
-      label: Interview cards
+      label: Interjú kártyák
       type: object
       list:
         collapsible:
@@ -2309,6 +2441,7 @@ content:
       - name: back
         label: Back
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: interviewClosing
       label: Interview closing
       type: object
@@ -2365,6 +2498,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -2383,7 +2522,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: jobHuntCards
-      label: Job hunt cards
+      label: Álláskeresési kártyák
       type: object
       list:
         collapsible:
@@ -2396,6 +2535,7 @@ content:
       - name: back
         label: Back
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: jobHuntClosing
       label: Job hunt closing
       type: text
@@ -2445,6 +2585,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -2467,7 +2613,7 @@ content:
           label: Jó tudni címke
           type: string
     - name: legalBasics
-      label: Legal basics
+      label: Jogi alapismeretek
       type: object
       list:
         collapsible:
@@ -2486,8 +2632,9 @@ content:
       - name: goodToKnow
         label: Good to know
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: legalBasicsQuiz
-      label: Legal basics quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2498,7 +2645,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -2514,6 +2661,8 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2529,9 +2678,10 @@ content:
       label: Reviewed at
       type: string
     - name: scope
-      label: Scope
+      label: Ellenőrzési pontok
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: notice
       label: Notice
       type: string
@@ -2577,6 +2727,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -2595,7 +2751,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: linkedinCards
-      label: Linkedin cards
+      label: LinkedIn kártyák
       type: object
       list:
         collapsible:
@@ -2608,6 +2764,7 @@ content:
       - name: back
         label: Back
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: linkedinClosing
       label: Linkedin closing
       type: object
@@ -2664,6 +2821,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -2683,7 +2846,7 @@ content:
           label: redFlagFallback
           type: string
     - name: redFlags
-      label: Red flags
+      label: Red flag kártyák
       type: object
       list:
         collapsible:
@@ -2696,8 +2859,9 @@ content:
       - name: action
         label: Action
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: redFlagQuiz
-      label: Red flag quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2708,7 +2872,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -2724,6 +2888,8 @@ content:
         - name: feedback
           label: Feedback
           type: string
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2739,9 +2905,10 @@ content:
       label: Reviewed at
       type: string
     - name: scope
-      label: Scope
+      label: Ellenőrzési pontok
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: notice
       label: Notice
       type: string
@@ -2774,6 +2941,12 @@ content:
       type: object
       description: A tényleges oldalon megjelenő, ehhez az aloldalhoz tartozó szövegek.
       fields:
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -2785,7 +2958,7 @@ content:
           label: Leírás
           type: text
     - name: helyzeteiScenarios
-      label: Helyzetei scenarios
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2799,7 +2972,7 @@ content:
         label: Situation
         type: text
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -2815,6 +2988,8 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -2861,6 +3036,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -2882,7 +3063,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: workWorldCards
-      label: Work world cards
+      label: Munka világa kártyák
       type: object
       list:
         collapsible:
@@ -2895,8 +3076,9 @@ content:
       - name: content
         label: Content
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: workWorldQuiz
-      label: Work world quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -2907,7 +3089,7 @@ content:
         label: Situation
         type: text
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -2923,6 +3105,8 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: workWorldClosing
       label: Work world closing
       type: object
@@ -2979,6 +3163,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
     - name: breathing
       label: Légzéstechnika oldal tartalma
       type: object
@@ -3027,6 +3217,7 @@ content:
         - name: description
           label: Leírás
           type: text
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3073,8 +3264,14 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
     - name: blueCollarExamples
-      label: Blue collar examples
+      label: Karrierpéldák
       type: object
       list:
         collapsible:
@@ -3088,9 +3285,10 @@ content:
         label: From
         type: string
       - name: steps
-        label: Steps
+        label: Lépések
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: motivation
         label: Motivation
         type: text
@@ -3098,8 +3296,9 @@ content:
         label: Skills
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: competencies
-        label: Competencies
+        label: Kompetenciák
         type: object
         list:
           collapsible:
@@ -3115,6 +3314,8 @@ content:
         - name: example
           label: Example
           type: text
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3161,6 +3362,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -3175,7 +3382,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: marketFacts
-      label: Market facts
+      label: Munkaerőpiaci tények
       type: object
       list:
         collapsible:
@@ -3188,6 +3395,7 @@ content:
       - name: back
         label: Back
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: marketFactsClosing
       label: Market facts closing
       type: string
@@ -3237,6 +3445,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -3292,7 +3506,7 @@ content:
       type: object
       fields:
       - name: groundingSteps
-        label: Grounding steps
+        label: Grounding lépések
         type: object
         list:
           collapsible:
@@ -3311,8 +3525,9 @@ content:
         - name: prompt
           label: Prompt
           type: string
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: bodySteps
-        label: Body steps
+        label: Body scan lépések
         type: object
         list:
           collapsible:
@@ -3325,6 +3540,7 @@ content:
         - name: cue
           label: Cue
           type: string
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: guidedAudio
         label: Guided audio
         type: object
@@ -3390,7 +3606,7 @@ content:
         label: Body Scan Seconds
         type: number
     - name: mindfulnessExercises
-      label: Mindfulness exercises
+      label: Mindfulness gyakorlatok
       type: object
       list:
         collapsible:
@@ -3410,9 +3626,10 @@ content:
         label: Leírás
         type: string
       - name: steps
-        label: Steps
+        label: Lépések
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: takeaway
         label: Takeaway
         type: string
@@ -3426,9 +3643,11 @@ content:
         label: Transcript title
         type: string
       - name: transcript
-        label: Transcript
+        label: Leirat sorai
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3475,8 +3694,14 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
     - name: preboardingData
-      label: Preboarding data
+      label: Preboarding kártyák
       type: object
       list:
         collapsible:
@@ -3489,6 +3714,7 @@ content:
       - name: answer
         label: Answer
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3535,6 +3761,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -3547,7 +3779,7 @@ content:
           label: Bevezető
           type: string
     - name: onmagamQuizItems
-      label: Onmagam quiz items
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3558,7 +3790,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -3574,8 +3806,10 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: onmagamQuiz
-      label: Onmagam quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3586,15 +3820,17 @@ content:
         label: Question
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: string
         list: true
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       - name: correctAnswer
         label: Correct answer
         type: number
       - name: explanation
         label: Explanation
         type: text
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3641,6 +3877,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -3655,7 +3897,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: survivalGuideData
-      label: Survival guide data
+      label: Túlélőkalauz kártyák
       type: object
       list:
         collapsible:
@@ -3674,6 +3916,7 @@ content:
       - name: takeaway
         label: Takeaway
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3720,6 +3963,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -3742,7 +3991,7 @@ content:
           label: Profi címke
           type: string
     - name: communicationFlips
-      label: Communication flips
+      label: Fordítós kártyák
       type: object
       list:
         collapsible:
@@ -3755,8 +4004,9 @@ content:
       - name: pro
         label: Pro
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: komunikációQuiz
-      label: Komunikációquiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3767,7 +4017,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -3783,9 +4033,11 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
       - name: winWin
         label: Win win
         type: text
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3832,6 +4084,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -3857,7 +4115,7 @@ content:
           label: consciousDirection
           type: string
     - name: digitalBehavior
-      label: Digital behavior
+      label: Digitális viselkedés kártyák
       type: object
       list:
         collapsible:
@@ -3870,8 +4128,9 @@ content:
       - name: content
         label: Content
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: digitálisViselkedésQuiz
-      label: Digitális viselkedés quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -3882,7 +4141,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -3898,6 +4157,8 @@ content:
         - name: feedback
           label: Feedback
           type: string
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -3944,6 +4205,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -3962,7 +4229,7 @@ content:
           label: Záró gondolat címke
           type: string
     - name: generationCards
-      label: Generation cards
+      label: Generációs kártyák
       type: object
       list:
         collapsible:
@@ -3975,6 +4242,7 @@ content:
       - name: back
         label: Back
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: generationClosing
       label: Generation closing
       type: object
@@ -4031,6 +4299,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -4053,7 +4327,7 @@ content:
           label: Mikor találkozol vele? címke
           type: string
     - name: glossary
-      label: Glossary
+      label: Fogalomtár elemek
       type: object
       list:
         collapsible:
@@ -4072,8 +4346,9 @@ content:
       - name: tip
         label: Tip
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: fogalomtárQuiz
-      label: Fogalomtár quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4084,7 +4359,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -4100,6 +4375,8 @@ content:
         - name: feedback
           label: Feedback
           type: string
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -4115,9 +4392,10 @@ content:
       label: Reviewed at
       type: string
     - name: scope
-      label: Scope
+      label: Ellenőrzési pontok
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: notice
       label: Notice
       type: string
@@ -4163,6 +4441,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: quiz
         label: Kvíz fejléc
         type: object
@@ -4191,7 +4475,7 @@ content:
           label: youCanSay
           type: string
     - name: proPhrases
-      label: Pro phrases
+      label: Szóhasználati kártyák
       type: object
       list:
         collapsible:
@@ -4204,8 +4488,9 @@ content:
       - name: phrase
         label: Phrase
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: proSzóhasználatQuiz
-      label: Pro szóhasználat quiz
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4216,7 +4501,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -4232,6 +4517,8 @@ content:
         - name: feedback
           label: Feedback
           type: string
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -4278,6 +4565,12 @@ content:
         - name: description
           label: Leírás
           type: text
+      - name: stylePreset
+        label: Oldal vizuális stílusa
+        type: select
+        default: default
+        description: Az egész aloldal biztonságos CSS megjelenési presetje.
+        options: *id001
       - name: labels
         label: Oldal saját feliratai
         type: object
@@ -4296,7 +4589,7 @@ content:
           label: Munkaadó elvárása címke
           type: string
     - name: ketOldalData
-      label: Ket oldal data
+      label: Két oldal kártyák
       type: object
       list:
         collapsible:
@@ -4315,6 +4608,7 @@ content:
       - name: employerText
         label: Employer text
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blocks
       label: Plusz tartalomblokkok
       component: content_blocks
@@ -4874,7 +5168,7 @@ content:
     type: object
     fields:
     - name: preboardingData
-      label: Preboarding data
+      label: Preboarding kártyák
       type: object
       list:
         collapsible:
@@ -4887,8 +5181,9 @@ content:
       - name: answer
         label: Answer
         type: text
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: survivalGuideData
-      label: Survival guide data
+      label: Túlélőkalauz kártyák
       type: object
       list:
         collapsible:
@@ -4907,8 +5202,9 @@ content:
       - name: takeaway
         label: Takeaway
         type: string
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: blueCollarExamples
-      label: Blue collar examples
+      label: Karrierpéldák
       type: object
       list:
         collapsible:
@@ -4922,9 +5218,10 @@ content:
         label: From
         type: string
       - name: steps
-        label: Steps
+        label: Lépések
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
       - name: motivation
         label: Motivation
         type: text
@@ -4932,8 +5229,10 @@ content:
         label: Skills
         type: string
         list: true
+        description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
     - name: onmagamQuizItems
-      label: Onmagam quiz items
+      label: Kvízkérdések
       type: object
       list:
         collapsible:
@@ -4944,7 +5243,7 @@ content:
         label: Situation
         type: string
       - name: options
-        label: Options
+        label: Válaszlehetőségek
         type: object
         list:
           collapsible:
@@ -4960,6 +5259,8 @@ content:
         - name: feedback
           label: Feedback
           type: text
+        description: Tetszőleges számú válaszlehetőség adható a kérdéshez. Kvíznél pontosan egy legyen optimális/helyes.
+      description: Tetszőleges számú kérdést adhatsz hozzá, törölhetsz vagy átrendezhetsz.
   operations:
     delete: false
     rename: false
@@ -4977,6 +5278,7 @@ content:
     label: Elemek
     type: string
     list: true
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   operations:
     delete: false
     rename: false
@@ -5019,6 +5321,7 @@ content:
     - name: file
       label: File
       type: string
+    description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   - name: shared
     label: Shared
     type: object
@@ -5049,6 +5352,7 @@ content:
       label: Principles
       type: string
       list: true
+      description: Tetszőleges számú elem hozzáadható, törölhető és átrendezhető.
   - name: ui
     label: UI
     type: string
@@ -5103,14 +5407,14 @@ content:
     type: string
     hidden: true
   - name: pages
-    label: Dinamikus aloldalak
+    label: Új aloldalak
     type: object
     list:
       collapsible:
         collapsed: true
         summary: '{navTitle}'
     description: Itt hozhatsz létre új Galaxy Guide aloldalt. Az új oldal automatikusan megjelenik a modul fülei között; kódmódosítás nem szükséges.
-    fields: &dynamic_page_fields
+    fields: &id002
     - name: hidden
       label: Piszkozat / elrejtés
       type: boolean
@@ -5120,12 +5424,13 @@ content:
       type: string
       required: true
       pattern:
-        regex: "^[a-z0-9][a-z0-9-]*$"
-        message: "Csak kisbetű (a-z), szám (0-9) és kötőjel (-) használható. Példa: interju-videok"
+        regex: ^[a-z0-9][a-z0-9-]*$
+        message: 'Csak kisbetű (a-z), szám (0-9) és kötőjel (-) használható. Példa: interju-videok'
       options:
         minlength: 2
         maxlength: 80
-      description: "URL-/kódbarát egyedi azonosító. Ne használj szóközt, ékezetet, nagybetűt vagy aláhúzást. Jó példa: interju-videok. Létrehozás után lehetőleg ne változtasd."
+      description: 'URL-/kódbarát egyedi azonosító. Ne használj szóközt, ékezetet, nagybetűt vagy aláhúzást. Jó példa: interju-videok. Létrehozás
+        után lehetőleg ne változtasd.'
     - name: navTitle
       label: Fül neve
       type: string
@@ -5170,7 +5475,8 @@ content:
     - name: blocks
       label: Oldal tartalma
       component: content_blocks
-      description: Az oldal teljes tartalma tetszőleges sorrendben építhető. A média- és szövegblokkok mellett új kvíz, lapozható kártya, fordítós kártya, checklist és lépéssor is hozzáadható.
+      description: Az oldal teljes tartalma tetszőleges sorrendben építhető. A média- és szövegblokkok mellett új kvíz, lapozható kártya, fordítós
+        kártya, checklist és lépéssor is hozzáadható.
   operations:
     delete: false
     rename: false
@@ -5189,14 +5495,14 @@ content:
     type: string
     hidden: true
   - name: pages
-    label: Dinamikus aloldalak
+    label: Új aloldalak
     type: object
     list:
       collapsible:
         collapsed: true
         summary: '{navTitle}'
     description: Új Quick Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
-    fields: *dynamic_page_fields
+    fields: *id002
   operations:
     delete: false
     rename: false
@@ -5215,14 +5521,14 @@ content:
     type: string
     hidden: true
   - name: pages
-    label: Dinamikus aloldalak
+    label: Új aloldalak
     type: object
     list:
       collapsible:
         collapsed: true
         summary: '{navTitle}'
     description: Új Quit & Go aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
-    fields: *dynamic_page_fields
+    fields: *id002
   operations:
     delete: false
     rename: false
@@ -5241,14 +5547,14 @@ content:
     type: string
     hidden: true
   - name: pages
-    label: Dinamikus aloldalak
+    label: Új aloldalak
     type: object
     list:
       collapsible:
         collapsed: true
         summary: '{navTitle}'
     description: Új Win-Win aloldalak. Mentés után automatikusan bekerülnek a modul navigációjába.
-    fields: *dynamic_page_fields
+    fields: *id002
   operations:
     delete: false
     rename: false

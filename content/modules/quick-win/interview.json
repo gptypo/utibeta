@@ -69,7 +69,8 @@
         "sampleAnswer": "Minta válasz",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

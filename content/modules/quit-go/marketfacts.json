@@ -65,7 +65,8 @@
         "eyebrow": "Segédlet",
         "title": "Tudtad-e?",
         "description": "Munkaerőpiaci érdekességek röviden, egy kártyán egy gondolat."
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

@@ -262,7 +262,8 @@
       "quiz": {
         "title": "Ellenőrző kvíz",
         "description": "Minden válasz tanít valamit a helyzetről."
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

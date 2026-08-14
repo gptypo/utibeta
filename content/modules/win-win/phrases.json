@@ -311,7 +311,8 @@
         "phraseThink": "Gondold végig, hogyan fogalmaznád meg professzionálisan.",
         "tapForSolution": "Érintsd meg a megoldásért",
         "youCanSay": "Ezt mondhatod"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

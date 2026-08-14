@@ -3,7 +3,7 @@
   "meta": {
     "title": "Útiterv a Jövőbe",
     "description": "Útiterv a Jövőbe – gyakorlati tudás az első munkahelyhez.",
-    "version": "BETA 5.1.0"
+    "version": "BETA 5.3.0"
   },
   "shell": {
     "homeAria": "Főoldal",
@@ -53,7 +53,8 @@
     "moduleIntroButton": "Mehet →",
     "prevTopic": "Előző téma",
     "nextTopic": "Következő téma",
-    "topicNavAria": "Témák közötti navigáció"
+    "topicNavAria": "Témák közötti navigáció",
+    "backToParent": "Vissza"
   },
   "home": {
     "guideEyebrow": "Segédlet",
@@ -208,7 +209,8 @@
       "saved": "Elmentve ✓",
       "restart": "Újrakezdés",
       "stopped": "MEGÁLLÍTVA"
-    }
+    },
+    "emptyList": "Ehhez a részhez még nincs tartalom hozzáadva."
   },
   "contentTypeLabels": {
     "story": "Oldalirányú történet",
@@ -248,5 +250,8 @@
   "editor": {
     "invalidContentList": "A fájl nem tartalmaz érvényes tartalomlistát.",
     "copySuffix": "másolat"
+  },
+  "app": {
+    "version": "BETA 5.3.0"
   }
 }

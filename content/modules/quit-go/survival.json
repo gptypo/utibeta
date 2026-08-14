@@ -88,7 +88,8 @@
         "eyebrow": "Segédlet",
         "title": "Pályakezdő mentőmellény",
         "description": "12 hónap – 12 kapaszkodó az első munkaévhez."
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }

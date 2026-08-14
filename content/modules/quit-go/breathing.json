@@ -9,7 +9,8 @@
         "eyebrow": "Segédlet",
         "title": "Légzéstechnikák",
         "description": "Válassz egy technikát. Nyisd le, majd kövesd a kör ritmusát és az aktuális fázist."
-      }
+      },
+      "stylePreset": "default"
     },
     "breathing": {
       "ready": "KÉSZEN ÁLLSZ?",

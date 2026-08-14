@@ -69,7 +69,8 @@
         "message": "Üzenet",
         "carry": "Vidd magaddal!",
         "closingLabel": "Záró gondolat"
-      }
+      },
+      "stylePreset": "default"
     }
   }
 }
