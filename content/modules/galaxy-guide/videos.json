@@ -3,6 +3,18 @@
   "id": "videos",
   "title": "Videók",
   "data": {
+    "page": {
+      "header": {
+        "eyebrow": "Segédlet",
+        "title": "Videós történetek",
+        "description": "Valódi szakmák, valódi utak."
+      },
+      "stylePreset": "default",
+      "labels": {
+        "available": "Elérhető",
+        "soon": "Hamarosan"
+      }
+    },
     "videoStories": [
       {
         "id": "video-story-placeholder-1",
@@ -12,16 +24,17 @@
         "status": "coming-soon",
         "detail": {
           "enabled": true,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
           "header": {
             "eyebrow": "Galaxy Guide · Videók",
             "title": "Szakács",
             "description": "Placeholder részletes tartalom. Ezt az oldalt a Pages CMS-ben szabadon felépítheted képpel, videóval, szöveggel, kvízzel és más blokkokkal."
           },
+          "stylePreset": "module",
+          "backLabel": "Vissza a videókhoz",
           "blocks": [
             {
               "type": "text",
+              "hidden": false,
               "eyebrow": "Hamarosan",
               "title": "Ismerd meg a szakmát",
               "body": "Ide kerülhet a szakács szakmát bemutató szöveg. A Pages CMS-ben további képet, videót, hangot, kvízt vagy más tartalomblokkot is hozzáadhatsz."
@@ -37,14 +50,12 @@
         "status": "coming-soon",
         "detail": {
           "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
           "header": {
             "eyebrow": "Galaxy Guide · Videók",
-            "title": "Villanyszerelő",
-            "description": ""
+            "title": "Villanyszerelő"
           },
-          "blocks": []
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz"
         }
       },
       {
@@ -55,29 +66,14 @@
         "status": "coming-soon",
         "detail": {
           "enabled": false,
-          "stylePreset": "default",
-          "backLabel": "Vissza a videókhoz",
           "header": {
             "eyebrow": "Galaxy Guide · Videók",
-            "title": "Hegesztő",
-            "description": ""
+            "title": "Hegesztő"
           },
-          "blocks": []
+          "stylePreset": "default",
+          "backLabel": "Vissza a videókhoz"
         }
       }
-    ],
-    "blocks": [],
-    "page": {
-      "header": {
-        "eyebrow": "Segédlet",
-        "title": "Videós történetek",
-        "description": "Valódi szakmák, valódi utak."
-      },
-      "labels": {
-        "available": "Elérhető",
-        "soon": "Hamarosan"
-      },
-      "stylePreset": "default"
-    }
+    ]
   }
 }
